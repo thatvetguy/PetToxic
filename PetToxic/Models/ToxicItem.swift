@@ -20,6 +20,7 @@ struct ToxicItem: Identifiable, Codable, Hashable {
     let onsetTime: OnsetTime?
     let symptoms: [String]
     let speciesRisks: [SpeciesRisk]
+    let preventionTips: [String]?
     let sources: [String]
 
     // MARK: - Hashable
@@ -63,6 +64,12 @@ extension ToxicItem {
         speciesRisks: [
             SpeciesRisk(species: .dog, severity: .high, notes: "Dogs are commonly affected due to indiscriminate eating habits. Hospitalization is often required for treatment."),
             SpeciesRisk(species: .cat, severity: .severe, notes: "Cats are more sensitive to methylxanthines than dogs, though they rarely consume chocolate voluntarily.")
+        ],
+        preventionTips: [
+            "Store all chocolate products in closed cabinets out of pet reach",
+            "Be especially vigilant during holidays when chocolate is abundant",
+            "Educate children not to share chocolate with pets",
+            "Remember that baking chocolate and dark chocolate are most dangerous"
         ],
         sources: ["ASPCA Animal Poison Control Center", "Merck Veterinary Manual", "Veterinary Information Network (VIN)", "VCA Animal Hospitals"]
     )

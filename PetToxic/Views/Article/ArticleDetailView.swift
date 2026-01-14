@@ -39,6 +39,11 @@ struct ArticleDetailView: View {
                     onsetTimeSection(onsetTime)
                 }
 
+                // Prevention tips (if available)
+                if let preventionTips = item.preventionTips, !preventionTips.isEmpty {
+                    preventionTipsSection(preventionTips)
+                }
+
                 // Emergency contacts
                 emergencySection
 
@@ -126,6 +131,30 @@ struct ArticleDetailView: View {
                             .font(.headline)
                             .foregroundStyle(.orange)
                         Text(delayed)
+                            .font(.body)
+                    }
+                }
+            }
+            .padding()
+            .background(Color(.secondarySystemBackground))
+            .clipShape(RoundedRectangle(cornerRadius: 12))
+        }
+        .padding(.vertical, 4)
+    }
+
+    private func preventionTipsSection(_ tips: [String]) -> some View {
+        VStack(alignment: .leading, spacing: 12) {
+            Text("Prevention Tips")
+                .font(.title2)
+                .fontWeight(.semibold)
+
+            VStack(alignment: .leading, spacing: 8) {
+                ForEach(tips, id: \.self) { tip in
+                    HStack(alignment: .top, spacing: 12) {
+                        Image(systemName: "checkmark.shield.fill")
+                            .foregroundStyle(.green)
+                            .frame(width: 20)
+                        Text(tip)
                             .font(.body)
                     }
                 }
