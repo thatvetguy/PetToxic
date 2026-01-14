@@ -6,10 +6,10 @@ struct HistoryListView: View {
     var body: some View {
         Group {
             if viewModel.recentlyViewed.isEmpty && viewModel.recentSearches.isEmpty {
-                ContentUnavailableView(
+                EmptyStateView(
                     "No History",
                     systemImage: "clock",
-                    description: Text("Your recent searches and viewed items will appear here.")
+                    description: "Your recent searches and viewed items will appear here."
                 )
             } else {
                 List {

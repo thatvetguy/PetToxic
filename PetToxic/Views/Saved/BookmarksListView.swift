@@ -6,10 +6,10 @@ struct BookmarksListView: View {
     var body: some View {
         Group {
             if viewModel.bookmarks.isEmpty {
-                ContentUnavailableView(
+                EmptyStateView(
                     "No Bookmarks",
                     systemImage: "bookmark",
-                    description: Text("Tap the bookmark icon on any article to save it here.")
+                    description: "Tap the bookmark icon on any article to save it here."
                 )
             } else {
                 List {

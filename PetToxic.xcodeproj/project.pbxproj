@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		047D61DFD0831C22C171B07C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4892A0DA69F9D82CF1D8373B /* Assets.xcassets */; };
+		0A35A2B438F7FE2009ABCC3C /* EmptyStateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24B2882F5F5387A02F14DC1B /* EmptyStateView.swift */; };
 		0ED8DF5F0BC3B56D614CF741 /* SpeciesFilterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81DA312D440067CFD3E192A8 /* SpeciesFilterView.swift */; };
 		17B80370F698B2819590C349 /* SavedViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CBB1717EB5134FC9FB2784A /* SavedViewModel.swift */; };
 		28656B569411963894CA0019 /* PetToxicApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4287B0389C9E01E7BF8C74A2 /* PetToxicApp.swift */; };
@@ -66,6 +67,7 @@
 		1E1A648E35297523A4222EE2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		207482A283C5391FDFEFAFC1 /* PoisonControlButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoisonControlButton.swift; sourceTree = "<group>"; };
 		237521FB4875580645396715 /* BookmarkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarkService.swift; sourceTree = "<group>"; };
+		24B2882F5F5387A02F14DC1B /* EmptyStateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyStateView.swift; sourceTree = "<group>"; };
 		322031EFC0545ED5E7D81414 /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
 		3F222F1B00290D1DB61D22D2 /* ArticleDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleDetailView.swift; sourceTree = "<group>"; };
 		4287B0389C9E01E7BF8C74A2 /* PetToxicApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetToxicApp.swift; sourceTree = "<group>"; };
@@ -150,6 +152,7 @@
 			isa = PBXGroup;
 			children = (
 				CA5A3886892E1B5E6CAF9D5F /* DisclaimerView.swift */,
+				24B2882F5F5387A02F14DC1B /* EmptyStateView.swift */,
 				F4AF21A98F3346F34930A106 /* LoadingView.swift */,
 				207482A283C5391FDFEFAFC1 /* PoisonControlButton.swift */,
 				9D0A536DAB60D4A56FC6C6B9 /* SeverityBadge.swift */,
@@ -418,6 +421,7 @@
 				D44528F6CE6C54C2BD5B0EE0 /* DatabaseService.swift in Sources */,
 				F31D053BA08F486404401C7A /* DisclaimerView.swift in Sources */,
 				EFB4BACA347E9C89515BEDED /* EmergencyView.swift in Sources */,
+				0A35A2B438F7FE2009ABCC3C /* EmptyStateView.swift in Sources */,
 				301692FECB5521C59819B49F /* Enums.swift in Sources */,
 				ECDBACA38D7B65E4448BB719 /* HistoryListView.swift in Sources */,
 				FA855506E3D8A1DB2CC6BA80 /* LoadingView.swift in Sources */,

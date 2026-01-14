@@ -34,10 +34,10 @@ struct SearchView: View {
     private var recentSearchesView: some View {
         VStack {
             if viewModel.recentSearches.isEmpty {
-                ContentUnavailableView(
+                EmptyStateView(
                     "Start Searching",
                     systemImage: "magnifyingglass",
-                    description: Text("Search for foods, plants, medications, and other substances to check their toxicity.")
+                    description: "Search for foods, plants, medications, and other substances to check their toxicity."
                 )
             } else {
                 List {
@@ -60,10 +60,10 @@ struct SearchView: View {
     }
 
     private var emptyResultsView: some View {
-        ContentUnavailableView(
+        EmptyStateView(
             "No Results",
             systemImage: "magnifyingglass",
-            description: Text("No results found for \"\(viewModel.searchText)\". Try a different search term.")
+            description: "No results found for \"\(viewModel.searchText)\". Try a different search term."
         )
     }
 
