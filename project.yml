@@ -1,0 +1,99 @@
+name: PetToxic
+options:
+  bundleIdPrefix: com.thatvetguy
+  deploymentTarget:
+    iOS: "16.0"
+  xcodeVersion: "15.0"
+  generateEmptyDirectories: true
+
+settings:
+  base:
+    MARKETING_VERSION: "1.0.0"
+    CURRENT_PROJECT_VERSION: "1"
+    SWIFT_VERSION: "5.9"
+    DEVELOPMENT_TEAM: ""
+
+targets:
+  PetToxic:
+    type: application
+    platform: iOS
+    sources:
+      - path: PetToxic
+        excludes:
+          - "**/.DS_Store"
+    settings:
+      base:
+        INFOPLIST_FILE: PetToxic/Resources/Info.plist
+        PRODUCT_BUNDLE_IDENTIFIER: com.thatvetguy.PetToxic
+        ASSETCATALOG_COMPILER_APPICON_NAME: AppIcon
+        ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME: AccentColor
+        GENERATE_INFOPLIST_FILE: false
+        CODE_SIGN_STYLE: Automatic
+        TARGETED_DEVICE_FAMILY: "1"
+        SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD: false
+    info:
+      path: PetToxic/Resources/Info.plist
+      properties:
+        CFBundleDevelopmentRegion: en
+        CFBundleExecutable: $(EXECUTABLE_NAME)
+        CFBundleIdentifier: $(PRODUCT_BUNDLE_IDENTIFIER)
+        CFBundleInfoDictionaryVersion: "6.0"
+        CFBundleName: $(PRODUCT_NAME)
+        CFBundlePackageType: APPL
+        CFBundleShortVersionString: $(MARKETING_VERSION)
+        CFBundleVersion: $(CURRENT_PROJECT_VERSION)
+        LSRequiresIPhoneOS: true
+        UIApplicationSceneManifest:
+          UIApplicationSupportsMultipleScenes: false
+          UISceneConfigurations: {}
+        UILaunchScreen: {}
+        UISupportedInterfaceOrientations:
+          - UIInterfaceOrientationPortrait
+        UIRequiresFullScreen: true
+
+  PetToxicTests:
+    type: bundle.unit-test
+    platform: iOS
+    sources:
+      - path: PetToxicTests
+        excludes:
+          - "**/.DS_Store"
+    dependencies:
+      - target: PetToxic
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.thatvetguy.PetToxicTests
+
+  PetToxicUITests:
+    type: bundle.ui-testing
+    platform: iOS
+    sources:
+      - path: PetToxicUITests
+        excludes:
+          - "**/.DS_Store"
+    dependencies:
+      - target: PetToxic
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.thatvetguy.PetToxicUITests
+
+schemes:
+  PetToxic:
+    build:
+      targets:
+        PetToxic: all
+        PetToxicTests: [test]
+        PetToxicUITests: [test]
+    run:
+      config: Debug
+    test:
+      config: Debug
+      targets:
+        - PetToxicTests
+        - PetToxicUITests
+    profile:
+      config: Release
+    analyze:
+      config: Debug
+    archive:
+      config: Release

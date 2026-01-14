@@ -1,0 +1,746 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		047D61DFD0831C22C171B07C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4892A0DA69F9D82CF1D8373B /* Assets.xcassets */; };
+		0ED8DF5F0BC3B56D614CF741 /* SpeciesFilterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81DA312D440067CFD3E192A8 /* SpeciesFilterView.swift */; };
+		17B80370F698B2819590C349 /* SavedViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CBB1717EB5134FC9FB2784A /* SavedViewModel.swift */; };
+		28656B569411963894CA0019 /* PetToxicApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4287B0389C9E01E7BF8C74A2 /* PetToxicApp.swift */; };
+		2C6EF40350EE9264A0C5267E /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58C075EC2898DE2A6C54CB66 /* SearchView.swift */; };
+		301692FECB5521C59819B49F /* Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CEADD8856CCEA9B7022E31F /* Enums.swift */; };
+		315314F5C314F8DF1D589D6A /* BrowseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D9C35BFC5F34211851F5060 /* BrowseView.swift */; };
+		3B01471FEB78A195C78968FB /* BookmarksListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2AFADFF0244619952F5FC07 /* BookmarksListView.swift */; };
+		3E9354778A379742342A0E5D /* SearchResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E7D85BEF0AE7656DF48FD15 /* SearchResult.swift */; };
+		4646AE231055E3C7AD2D1590 /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6CE357649A1298A4A9761B2 /* MainTabView.swift */; };
+		4E934701319A0D79525B5FC1 /* SymptomsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7B0E075A2786B63F29BED4 /* SymptomsListView.swift */; };
+		57A1C02F3A6667A7E948CBD6 /* BookmarkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 237521FB4875580645396715 /* BookmarkService.swift */; };
+		6C18E8975926D8C0099F3AE6 /* BrowseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F04351C3DD8FA41399338545 /* BrowseViewModel.swift */; };
+		833289444FE091B4D966C6C4 /* PoisonControlButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 207482A283C5391FDFEFAFC1 /* PoisonControlButton.swift */; };
+		87607B5E4C9D996650A8561D /* SearchService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 754F9D537CBB611A07FF9E8E /* SearchService.swift */; };
+		8DD5DCCAA60B3B1A47FA0426 /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 322031EFC0545ED5E7D81414 /* SearchViewModel.swift */; };
+		906D5BAF057ED35D8BAD06FB /* PetToxicTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDE88C278EF8FA0A290DE262 /* PetToxicTests.swift */; };
+		9CCFBBE79A93F89E39AC3DFE /* PetToxicUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CC831E76E0F0F17894ADA65 /* PetToxicUITests.swift */; };
+		AAEF5C9F73EAA218C18A2A85 /* Color+Hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = C55E1542D6E35B1F63CDED27 /* Color+Hex.swift */; };
+		B4943E52DD3BFB9C5C556F3E /* CategoryGridItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2A1F327069C6F80D711B112 /* CategoryGridItem.swift */; };
+		BD101F4DBB5A92DCFD01C09D /* ToxicItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA6BC59CB914FF0A323C3DCC /* ToxicItem.swift */; };
+		BD7DB52CAC570F013059A80F /* SearchResultRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD01A1755E279E4482FD79C5 /* SearchResultRow.swift */; };
+		BEEF53A1E3402DA7D0C365E5 /* SeverityBadge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D0A536DAB60D4A56FC6C6B9 /* SeverityBadge.swift */; };
+		C36B4977AA78A0B98A512B6A /* SeveritySection.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC88BF3EB74D97FF8EF70C32 /* SeveritySection.swift */; };
+		CA79B1FBAA2D70C587CD81B9 /* ArticleDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F222F1B00290D1DB61D22D2 /* ArticleDetailView.swift */; };
+		D44528F6CE6C54C2BD5B0EE0 /* DatabaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A373A23CBFA6D1C7461960B /* DatabaseService.swift */; };
+		DE84CAE9804BECF59AED1636 /* ArticleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 558D0A98607D43A5C5878676 /* ArticleViewModel.swift */; };
+		ECDBACA38D7B65E4448BB719 /* HistoryListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1B02F5CCAC1245C9103DF3A /* HistoryListView.swift */; };
+		EF977BE44A1CA4C9CE80A128 /* SavedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5C6C094D6B35157F81D7872 /* SavedView.swift */; };
+		EFB4BACA347E9C89515BEDED /* EmergencyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B85A0BAA5B698970D8F9ADA /* EmergencyView.swift */; };
+		F03D63A2599562E0A66DEB2E /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5D4123DE87463A4CF858927 /* Constants.swift */; };
+		F1372C807BFFDC33BCD4A18F /* SpeciesRisk.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F4998CA510A72304A62AC03 /* SpeciesRisk.swift */; };
+		F31D053BA08F486404401C7A /* DisclaimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA5A3886892E1B5E6CAF9D5F /* DisclaimerView.swift */; };
+		FA855506E3D8A1DB2CC6BA80 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4AF21A98F3346F34930A106 /* LoadingView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		0AE3164DF6471ABA1AAB4EBB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C5A78DFFA6EB2D7EEFD5C4B4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4997CE3AD1B9F84DD8CC6B02;
+			remoteInfo = PetToxic;
+		};
+		63FD7532EEDEDEC1B865EB1D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C5A78DFFA6EB2D7EEFD5C4B4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4997CE3AD1B9F84DD8CC6B02;
+			remoteInfo = PetToxic;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0B85A0BAA5B698970D8F9ADA /* EmergencyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmergencyView.swift; sourceTree = "<group>"; };
+		1CC831E76E0F0F17894ADA65 /* PetToxicUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetToxicUITests.swift; sourceTree = "<group>"; };
+		1E1A648E35297523A4222EE2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		207482A283C5391FDFEFAFC1 /* PoisonControlButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoisonControlButton.swift; sourceTree = "<group>"; };
+		237521FB4875580645396715 /* BookmarkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarkService.swift; sourceTree = "<group>"; };
+		322031EFC0545ED5E7D81414 /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
+		3F222F1B00290D1DB61D22D2 /* ArticleDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleDetailView.swift; sourceTree = "<group>"; };
+		4287B0389C9E01E7BF8C74A2 /* PetToxicApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetToxicApp.swift; sourceTree = "<group>"; };
+		43492A46C658B52393AA5BA7 /* PetToxic.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = PetToxic.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4892A0DA69F9D82CF1D8373B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		48FB23F604DBF891410A2F23 /* PetToxicTests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = PetToxicTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		48FD14B94E272939D2281BD1 /* PetToxicUITests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = PetToxicUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4A373A23CBFA6D1C7461960B /* DatabaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseService.swift; sourceTree = "<group>"; };
+		4CEADD8856CCEA9B7022E31F /* Enums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enums.swift; sourceTree = "<group>"; };
+		4D9C35BFC5F34211851F5060 /* BrowseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrowseView.swift; sourceTree = "<group>"; };
+		4F4998CA510A72304A62AC03 /* SpeciesRisk.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeciesRisk.swift; sourceTree = "<group>"; };
+		558D0A98607D43A5C5878676 /* ArticleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleViewModel.swift; sourceTree = "<group>"; };
+		58C075EC2898DE2A6C54CB66 /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
+		6CBB1717EB5134FC9FB2784A /* SavedViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedViewModel.swift; sourceTree = "<group>"; };
+		754F9D537CBB611A07FF9E8E /* SearchService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchService.swift; sourceTree = "<group>"; };
+		7E7D85BEF0AE7656DF48FD15 /* SearchResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResult.swift; sourceTree = "<group>"; };
+		81DA312D440067CFD3E192A8 /* SpeciesFilterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeciesFilterView.swift; sourceTree = "<group>"; };
+		9D0A536DAB60D4A56FC6C6B9 /* SeverityBadge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeverityBadge.swift; sourceTree = "<group>"; };
+		AD01A1755E279E4482FD79C5 /* SearchResultRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultRow.swift; sourceTree = "<group>"; };
+		AF7B0E075A2786B63F29BED4 /* SymptomsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SymptomsListView.swift; sourceTree = "<group>"; };
+		C1B02F5CCAC1245C9103DF3A /* HistoryListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryListView.swift; sourceTree = "<group>"; };
+		C2A1F327069C6F80D711B112 /* CategoryGridItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryGridItem.swift; sourceTree = "<group>"; };
+		C2AFADFF0244619952F5FC07 /* BookmarksListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarksListView.swift; sourceTree = "<group>"; };
+		C55E1542D6E35B1F63CDED27 /* Color+Hex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Hex.swift"; sourceTree = "<group>"; };
+		C5C6C094D6B35157F81D7872 /* SavedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedView.swift; sourceTree = "<group>"; };
+		CA5A3886892E1B5E6CAF9D5F /* DisclaimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisclaimerView.swift; sourceTree = "<group>"; };
+		D6CE357649A1298A4A9761B2 /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
+		E5D4123DE87463A4CF858927 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		EA6BC59CB914FF0A323C3DCC /* ToxicItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToxicItem.swift; sourceTree = "<group>"; };
+		EC88BF3EB74D97FF8EF70C32 /* SeveritySection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeveritySection.swift; sourceTree = "<group>"; };
+		EDE88C278EF8FA0A290DE262 /* PetToxicTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetToxicTests.swift; sourceTree = "<group>"; };
+		F04351C3DD8FA41399338545 /* BrowseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrowseViewModel.swift; sourceTree = "<group>"; };
+		F4AF21A98F3346F34930A106 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		125F1AE6F07965CBD1787E27 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				4892A0DA69F9D82CF1D8373B /* Assets.xcassets */,
+				1E1A648E35297523A4222EE2 /* Info.plist */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		13D3A560E1B2E0E19F2EFA43 /* Emergency */ = {
+			isa = PBXGroup;
+			children = (
+				0B85A0BAA5B698970D8F9ADA /* EmergencyView.swift */,
+			);
+			path = Emergency;
+			sourceTree = "<group>";
+		};
+		19B1243262C65E98537E7913 /* Article */ = {
+			isa = PBXGroup;
+			children = (
+				3F222F1B00290D1DB61D22D2 /* ArticleDetailView.swift */,
+				EC88BF3EB74D97FF8EF70C32 /* SeveritySection.swift */,
+				AF7B0E075A2786B63F29BED4 /* SymptomsListView.swift */,
+			);
+			path = Article;
+			sourceTree = "<group>";
+		};
+		3EDEFBF614C4F962BAB7E768 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				4287B0389C9E01E7BF8C74A2 /* PetToxicApp.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		5391024E9B0E8F0AB0B8B7F9 /* Browse */ = {
+			isa = PBXGroup;
+			children = (
+				4D9C35BFC5F34211851F5060 /* BrowseView.swift */,
+				C2A1F327069C6F80D711B112 /* CategoryGridItem.swift */,
+			);
+			path = Browse;
+			sourceTree = "<group>";
+		};
+		5A9CF302EBC890FA4F624CA1 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				CA5A3886892E1B5E6CAF9D5F /* DisclaimerView.swift */,
+				F4AF21A98F3346F34930A106 /* LoadingView.swift */,
+				207482A283C5391FDFEFAFC1 /* PoisonControlButton.swift */,
+				9D0A536DAB60D4A56FC6C6B9 /* SeverityBadge.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		5FE2C516FEEFABE91F5E3445 /* Saved */ = {
+			isa = PBXGroup;
+			children = (
+				C2AFADFF0244619952F5FC07 /* BookmarksListView.swift */,
+				C1B02F5CCAC1245C9103DF3A /* HistoryListView.swift */,
+				C5C6C094D6B35157F81D7872 /* SavedView.swift */,
+			);
+			path = Saved;
+			sourceTree = "<group>";
+		};
+		64ECA8F6237FA1CB55E2CD68 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				4CEADD8856CCEA9B7022E31F /* Enums.swift */,
+				7E7D85BEF0AE7656DF48FD15 /* SearchResult.swift */,
+				4F4998CA510A72304A62AC03 /* SpeciesRisk.swift */,
+				EA6BC59CB914FF0A323C3DCC /* ToxicItem.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		8713C68E09EC3C55BD1B45C6 /* PetToxic */ = {
+			isa = PBXGroup;
+			children = (
+				3EDEFBF614C4F962BAB7E768 /* App */,
+				5A9CF302EBC890FA4F624CA1 /* Components */,
+				64ECA8F6237FA1CB55E2CD68 /* Models */,
+				125F1AE6F07965CBD1787E27 /* Resources */,
+				DC0E80D79B23D7496641FC90 /* Services */,
+				CECABF525E2613D46CE9FECC /* Utilities */,
+				D59E14F0D3681EF19FD825BB /* ViewModels */,
+				DBA2C9489FCBF717DF3F4F30 /* Views */,
+			);
+			path = PetToxic;
+			sourceTree = "<group>";
+		};
+		89DF736139B2CB886DC317BF /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				AD01A1755E279E4482FD79C5 /* SearchResultRow.swift */,
+				58C075EC2898DE2A6C54CB66 /* SearchView.swift */,
+				81DA312D440067CFD3E192A8 /* SpeciesFilterView.swift */,
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
+		B839DF5B43840F6B6DE7DAC9 /* PetToxicUITests */ = {
+			isa = PBXGroup;
+			children = (
+				1CC831E76E0F0F17894ADA65 /* PetToxicUITests.swift */,
+			);
+			path = PetToxicUITests;
+			sourceTree = "<group>";
+		};
+		C08C35041316CF3EF2790DFA /* PetToxicTests */ = {
+			isa = PBXGroup;
+			children = (
+				EDE88C278EF8FA0A290DE262 /* PetToxicTests.swift */,
+			);
+			path = PetToxicTests;
+			sourceTree = "<group>";
+		};
+		CECABF525E2613D46CE9FECC /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				E5D4123DE87463A4CF858927 /* Constants.swift */,
+				E08EFB4AE6B798B385DB4A05 /* Extensions */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		D59E14F0D3681EF19FD825BB /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				558D0A98607D43A5C5878676 /* ArticleViewModel.swift */,
+				F04351C3DD8FA41399338545 /* BrowseViewModel.swift */,
+				6CBB1717EB5134FC9FB2784A /* SavedViewModel.swift */,
+				322031EFC0545ED5E7D81414 /* SearchViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		DBA2C9489FCBF717DF3F4F30 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				D6CE357649A1298A4A9761B2 /* MainTabView.swift */,
+				19B1243262C65E98537E7913 /* Article */,
+				5391024E9B0E8F0AB0B8B7F9 /* Browse */,
+				13D3A560E1B2E0E19F2EFA43 /* Emergency */,
+				5FE2C516FEEFABE91F5E3445 /* Saved */,
+				89DF736139B2CB886DC317BF /* Search */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		DC0E80D79B23D7496641FC90 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				237521FB4875580645396715 /* BookmarkService.swift */,
+				4A373A23CBFA6D1C7461960B /* DatabaseService.swift */,
+				754F9D537CBB611A07FF9E8E /* SearchService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		E08EFB4AE6B798B385DB4A05 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				C55E1542D6E35B1F63CDED27 /* Color+Hex.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		EE5DA48B16C54F453B1773CE = {
+			isa = PBXGroup;
+			children = (
+				8713C68E09EC3C55BD1B45C6 /* PetToxic */,
+				C08C35041316CF3EF2790DFA /* PetToxicTests */,
+				B839DF5B43840F6B6DE7DAC9 /* PetToxicUITests */,
+				F95BFEAAE9F71A6F51F04D61 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F95BFEAAE9F71A6F51F04D61 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				43492A46C658B52393AA5BA7 /* PetToxic.app */,
+				48FB23F604DBF891410A2F23 /* PetToxicTests.xctest */,
+				48FD14B94E272939D2281BD1 /* PetToxicUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		350D2BBF4FD2E7691867BBEF /* PetToxicUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C5BA4AF209AEA9C3266C7697 /* Build configuration list for PBXNativeTarget "PetToxicUITests" */;
+			buildPhases = (
+				F587EE2F8AAEE6DB0223E31D /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D69DC659D90E3E1752C9CF6D /* PBXTargetDependency */,
+			);
+			name = PetToxicUITests;
+			packageProductDependencies = (
+			);
+			productName = PetToxicUITests;
+			productReference = 48FD14B94E272939D2281BD1 /* PetToxicUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+		4997CE3AD1B9F84DD8CC6B02 /* PetToxic */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 44966C18A6945C18F4F60D7E /* Build configuration list for PBXNativeTarget "PetToxic" */;
+			buildPhases = (
+				4549DB3331E9E05F64AB39A8 /* Sources */,
+				0DF7CB39F8A7EF37C6D3E456 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PetToxic;
+			packageProductDependencies = (
+			);
+			productName = PetToxic;
+			productReference = 43492A46C658B52393AA5BA7 /* PetToxic.app */;
+			productType = "com.apple.product-type.application";
+		};
+		4E2D792F5DB455D34D4A0EE0 /* PetToxicTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B8F2F3A8DA8D094D85FF943A /* Build configuration list for PBXNativeTarget "PetToxicTests" */;
+			buildPhases = (
+				97FD6A03DA93CF3D9F3D841C /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6E10F7E84681E74775604C76 /* PBXTargetDependency */,
+			);
+			name = PetToxicTests;
+			packageProductDependencies = (
+			);
+			productName = PetToxicTests;
+			productReference = 48FB23F604DBF891410A2F23 /* PetToxicTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C5A78DFFA6EB2D7EEFD5C4B4 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1500;
+				TargetAttributes = {
+					350D2BBF4FD2E7691867BBEF = {
+						DevelopmentTeam = "";
+						TestTargetID = 4997CE3AD1B9F84DD8CC6B02;
+					};
+					4997CE3AD1B9F84DD8CC6B02 = {
+						DevelopmentTeam = "";
+						ProvisioningStyle = Automatic;
+					};
+					4E2D792F5DB455D34D4A0EE0 = {
+						DevelopmentTeam = "";
+					};
+				};
+			};
+			buildConfigurationList = 2B3D951C95775923ABC74C14 /* Build configuration list for PBXProject "PetToxic" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = EE5DA48B16C54F453B1773CE;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				4997CE3AD1B9F84DD8CC6B02 /* PetToxic */,
+				4E2D792F5DB455D34D4A0EE0 /* PetToxicTests */,
+				350D2BBF4FD2E7691867BBEF /* PetToxicUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		0DF7CB39F8A7EF37C6D3E456 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				047D61DFD0831C22C171B07C /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		4549DB3331E9E05F64AB39A8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CA79B1FBAA2D70C587CD81B9 /* ArticleDetailView.swift in Sources */,
+				DE84CAE9804BECF59AED1636 /* ArticleViewModel.swift in Sources */,
+				57A1C02F3A6667A7E948CBD6 /* BookmarkService.swift in Sources */,
+				3B01471FEB78A195C78968FB /* BookmarksListView.swift in Sources */,
+				315314F5C314F8DF1D589D6A /* BrowseView.swift in Sources */,
+				6C18E8975926D8C0099F3AE6 /* BrowseViewModel.swift in Sources */,
+				B4943E52DD3BFB9C5C556F3E /* CategoryGridItem.swift in Sources */,
+				AAEF5C9F73EAA218C18A2A85 /* Color+Hex.swift in Sources */,
+				F03D63A2599562E0A66DEB2E /* Constants.swift in Sources */,
+				D44528F6CE6C54C2BD5B0EE0 /* DatabaseService.swift in Sources */,
+				F31D053BA08F486404401C7A /* DisclaimerView.swift in Sources */,
+				EFB4BACA347E9C89515BEDED /* EmergencyView.swift in Sources */,
+				301692FECB5521C59819B49F /* Enums.swift in Sources */,
+				ECDBACA38D7B65E4448BB719 /* HistoryListView.swift in Sources */,
+				FA855506E3D8A1DB2CC6BA80 /* LoadingView.swift in Sources */,
+				4646AE231055E3C7AD2D1590 /* MainTabView.swift in Sources */,
+				28656B569411963894CA0019 /* PetToxicApp.swift in Sources */,
+				833289444FE091B4D966C6C4 /* PoisonControlButton.swift in Sources */,
+				EF977BE44A1CA4C9CE80A128 /* SavedView.swift in Sources */,
+				17B80370F698B2819590C349 /* SavedViewModel.swift in Sources */,
+				3E9354778A379742342A0E5D /* SearchResult.swift in Sources */,
+				BD7DB52CAC570F013059A80F /* SearchResultRow.swift in Sources */,
+				87607B5E4C9D996650A8561D /* SearchService.swift in Sources */,
+				2C6EF40350EE9264A0C5267E /* SearchView.swift in Sources */,
+				8DD5DCCAA60B3B1A47FA0426 /* SearchViewModel.swift in Sources */,
+				BEEF53A1E3402DA7D0C365E5 /* SeverityBadge.swift in Sources */,
+				C36B4977AA78A0B98A512B6A /* SeveritySection.swift in Sources */,
+				0ED8DF5F0BC3B56D614CF741 /* SpeciesFilterView.swift in Sources */,
+				F1372C807BFFDC33BCD4A18F /* SpeciesRisk.swift in Sources */,
+				4E934701319A0D79525B5FC1 /* SymptomsListView.swift in Sources */,
+				BD101F4DBB5A92DCFD01C09D /* ToxicItem.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		97FD6A03DA93CF3D9F3D841C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				906D5BAF057ED35D8BAD06FB /* PetToxicTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F587EE2F8AAEE6DB0223E31D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9CCFBBE79A93F89E39AC3DFE /* PetToxicUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		6E10F7E84681E74775604C76 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4997CE3AD1B9F84DD8CC6B02 /* PetToxic */;
+			targetProxy = 63FD7532EEDEDEC1B865EB1D /* PBXContainerItemProxy */;
+		};
+		D69DC659D90E3E1752C9CF6D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4997CE3AD1B9F84DD8CC6B02 /* PetToxic */;
+			targetProxy = 0AE3164DF6471ABA1AAB4EBB /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		47F4193D37B5BD456F6C76D2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.thatvetguy.PetToxicTests;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PetToxic.app/PetToxic";
+			};
+			name = Debug;
+		};
+		5088607D26AECE7D9CF9151D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.thatvetguy.PetToxicTests;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PetToxic.app/PetToxic";
+			};
+			name = Release;
+		};
+		7F381EDE8D3C3B3E016321D1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = PetToxic/Resources/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.thatvetguy.PetToxic;
+				SDKROOT = iphoneos;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		9602D3058F10A4A3DCA0961F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.thatvetguy.PetToxicUITests;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = PetToxic;
+			};
+			name = Release;
+		};
+		97CF17A952001656092D3710 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = "";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MARKETING_VERSION = 1.0.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.9;
+			};
+			name = Release;
+		};
+		AFD57DE293A2E5C6A3F6CCF9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.thatvetguy.PetToxicUITests;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = PetToxic;
+			};
+			name = Debug;
+		};
+		B86790A7477510A12ED1EF15 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = "";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"DEBUG=1",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MARKETING_VERSION = 1.0.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.9;
+			};
+			name = Debug;
+		};
+		F434899204988FA657B71889 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = PetToxic/Resources/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.thatvetguy.PetToxic;
+				SDKROOT = iphoneos;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2B3D951C95775923ABC74C14 /* Build configuration list for PBXProject "PetToxic" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B86790A7477510A12ED1EF15 /* Debug */,
+				97CF17A952001656092D3710 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		44966C18A6945C18F4F60D7E /* Build configuration list for PBXNativeTarget "PetToxic" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7F381EDE8D3C3B3E016321D1 /* Debug */,
+				F434899204988FA657B71889 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		B8F2F3A8DA8D094D85FF943A /* Build configuration list for PBXNativeTarget "PetToxicTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				47F4193D37B5BD456F6C76D2 /* Debug */,
+				5088607D26AECE7D9CF9151D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		C5BA4AF209AEA9C3266C7697 /* Build configuration list for PBXNativeTarget "PetToxicUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AFD57DE293A2E5C6A3F6CCF9 /* Debug */,
+				9602D3058F10A4A3DCA0961F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C5A78DFFA6EB2D7EEFD5C4B4 /* Project object */;
+}
