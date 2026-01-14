@@ -15,6 +15,7 @@ struct ToxicItem: Identifiable, Codable {
     let imageAsset: String?
     let description: String
     let toxicityInfo: String
+    let onsetTime: OnsetTime?     // NEW: Timing of symptom onset
     let symptoms: [String]
     let speciesRisks: [SpeciesRisk]
     let sources: [String]
@@ -24,6 +25,14 @@ struct ToxicItem: Identifiable, Codable {
 ---
 
 ## Supporting Types
+
+### OnsetTime
+```swift
+struct OnsetTime: Codable {
+    let early: String?   // When early symptoms typically appear
+    let delayed: String? // When delayed/serious symptoms may develop
+}
+```
 
 ### SpeciesRisk
 ```swift

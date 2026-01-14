@@ -34,6 +34,11 @@ struct ArticleDetailView: View {
                     SymptomsListView(symptoms: item.symptoms)
                 }
 
+                // Onset time (if available)
+                if let onsetTime = item.onsetTime {
+                    onsetTimeSection(onsetTime)
+                }
+
                 // Emergency contacts
                 emergencySection
 
@@ -96,6 +101,40 @@ struct ArticleDetailView: View {
                 .font(.subheadline)
                 .foregroundStyle(.secondary)
         }
+    }
+
+    private func onsetTimeSection(_ onsetTime: OnsetTime) -> some View {
+        VStack(alignment: .leading, spacing: 12) {
+            Text("When Symptoms Appear")
+                .font(.title2)
+                .fontWeight(.semibold)
+
+            VStack(alignment: .leading, spacing: 16) {
+                if let early = onsetTime.early {
+                    VStack(alignment: .leading, spacing: 4) {
+                        Text("Early signs")
+                            .font(.headline)
+                            .foregroundStyle(Color("AccentColor"))
+                        Text(early)
+                            .font(.body)
+                    }
+                }
+
+                if let delayed = onsetTime.delayed {
+                    VStack(alignment: .leading, spacing: 4) {
+                        Text("Delayed signs")
+                            .font(.headline)
+                            .foregroundStyle(.orange)
+                        Text(delayed)
+                            .font(.body)
+                    }
+                }
+            }
+            .padding()
+            .background(Color(.secondarySystemBackground))
+            .clipShape(RoundedRectangle(cornerRadius: 12))
+        }
+        .padding(.vertical, 4)
     }
 
     private var emergencySection: some View {

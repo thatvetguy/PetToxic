@@ -1,5 +1,14 @@
 import Foundation
 
+// MARK: - OnsetTime
+
+struct OnsetTime: Codable, Hashable {
+    let early: String?
+    let delayed: String?
+}
+
+// MARK: - ToxicItem
+
 struct ToxicItem: Identifiable, Codable, Hashable {
     let id: UUID
     let name: String
@@ -8,6 +17,7 @@ struct ToxicItem: Identifiable, Codable, Hashable {
     let imageAsset: String?
     let description: String
     let toxicityInfo: String
+    let onsetTime: OnsetTime?
     let symptoms: [String]
     let speciesRisks: [SpeciesRisk]
     let sources: [String]
@@ -29,27 +39,31 @@ extension ToxicItem {
     static let sample = ToxicItem(
         id: UUID(),
         name: "Chocolate",
-        alternateNames: ["cocoa", "cacao", "dark chocolate", "milk chocolate", "baking chocolate"],
+        alternateNames: ["cocoa", "cacao", "dark chocolate", "milk chocolate", "baking chocolate", "white chocolate", "cocoa powder", "chocolate chips", "cocoa bean mulch"],
         categories: [.foods, .holidayHazards],
         imageAsset: "chocolate",
-        description: "Chocolate is a food product made from roasted cacao beans, commonly found in candy, baked goods, and beverages.",
-        toxicityInfo: "Chocolate contains theobromine and caffeine, both methylxanthines that dogs and cats cannot metabolize efficiently. Dark chocolate and baking chocolate contain higher concentrations and pose greater risk.",
+        description: "Chocolate is made from roasted cacao beans and is commonly found in candy, baked goods, beverages, and desserts. Cocoa bean hull mulch used in gardens also poses a risk.",
+        toxicityInfo: "Chocolate contains theobromine and caffeine, both methylxanthines that dogs and cats cannot metabolize efficiently. Toxicity risk varies significantly by chocolate type — darker and more bitter chocolates are far more dangerous. In order of risk: cocoa powder and cacao beans are most dangerous, followed by unsweetened baking chocolate, semisweet chocolate, milk chocolate, and white chocolate (minimal risk). The high fat and sugar content in some chocolate products can also trigger pancreatitis.",
+        onsetTime: OnsetTime(
+            early: "Caffeine effects begin within 30-60 minutes. Theobromine effects may take 2+ hours to appear. Initial signs include vomiting, restlessness, bloating, and increased thirst.",
+            delayed: "Theobromine is metabolized slowly (17.5-hour half-life in dogs). Effects can persist for several days. Signs may progress to cardiac arrhythmias, seizures, and other serious complications."
+        ),
         symptoms: [
             "Vomiting",
-            "Diarrhea",
-            "Increased thirst and urination",
-            "Restlessness or hyperactivity",
+            "Restlessness and hyperexcitability",
+            "Bloating",
+            "Increased thirst",
+            "Rapid heart rate or abnormal heart rhythm",
             "Rapid breathing",
-            "Muscle tremors",
-            "Seizures (in severe cases)"
+            "Elevated body temperature",
+            "Muscle tremors or rigidity",
+            "Seizures (severe cases)",
+            "Very high doses: low blood pressure, slow heart rate, coma"
         ],
         speciesRisks: [
-            SpeciesRisk(species: .dog, severity: .high, notes: "Dogs are particularly sensitive to theobromine"),
-            SpeciesRisk(species: .cat, severity: .high, notes: "Cats rarely consume chocolate but are equally sensitive")
+            SpeciesRisk(species: .dog, severity: .high, notes: "Dogs are commonly affected due to indiscriminate eating habits. Hospitalization is often required for treatment."),
+            SpeciesRisk(species: .cat, severity: .severe, notes: "Cats are more sensitive to methylxanthines than dogs, though they rarely consume chocolate voluntarily.")
         ],
-        sources: [
-            "ASPCA Animal Poison Control Center",
-            "Merck Veterinary Manual"
-        ]
+        sources: ["ASPCA Animal Poison Control Center", "Merck Veterinary Manual", "Veterinary Information Network (VIN)", "VCA Animal Hospitals"]
     )
 }
