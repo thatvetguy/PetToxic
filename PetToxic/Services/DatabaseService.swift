@@ -486,6 +486,121 @@ class DatabaseService {
                     "Never use salt to induce vomiting—this can cause salt poisoning"
                 ],
                 sources: ["Veterinary Information Network (VIN)", "ASPCA Animal Poison Control Center", "Pet Poison Helpline"]
+            ),
+
+            // MARK: - Fatty Foods & Grease
+            ToxicItem(
+                id: UUID(),
+                name: "Fatty Foods & Grease",
+                alternateNames: ["fat trimmings", "grease", "bacon grease", "meat drippings", "turkey skin", "chicken skin", "gravy", "fried foods", "greasy foods", "table scraps", "lard", "cooking oil", "butter", "bacon", "pork fat", "beef fat", "schmaltz", "duck fat"],
+                categories: [.foods, .holidayHazards],
+                imageAsset: "fatty_foods",
+                description: "Fatty foods include meat trimmings, poultry skin, bacon, gravy, fried foods, butter, and cooking grease. While commonly shared as table scraps or treats, high-fat foods pose significant health risks to pets even though they are not technically toxic.",
+                toxicityInfo: "Fatty foods are not poisonous in the traditional sense, but they can cause serious gastrointestinal problems. High-fat meals can trigger gastroenteritis (inflammation of the stomach and intestines) or pancreatitis (inflammation of the pancreas). Pancreatitis occurs when digestive enzymes activate prematurely within the pancreas, causing the organ to essentially digest itself. This can lead to severe pain, organ damage, diabetes, and in serious cases, death. Certain breeds are genetically predisposed to pancreatitis.",
+                onsetTime: OnsetTime(
+                    early: "Vomiting and diarrhea may occur within hours of ingestion",
+                    delayed: "Pancreatitis symptoms typically develop 1-4 days after a fatty meal; some cases may not show signs until several days later"
+                ),
+                symptoms: [
+                    "Vomiting",
+                    "Diarrhea (may contain blood)",
+                    "Loss of appetite",
+                    "Abdominal pain",
+                    "Lethargy or weakness",
+                    "Hunched posture or 'praying position' (front legs down, rear end up)",
+                    "Fever",
+                    "Dehydration"
+                ],
+                speciesRisks: [
+                    SpeciesRisk(species: .dog, severity: .moderate, notes: "Dogs are commonly affected; miniature schnauzers, Yorkshire terriers, cocker spaniels, and poodles are at higher risk; overweight and older dogs also more susceptible"),
+                    SpeciesRisk(species: .cat, severity: .low, notes: "Cats are less commonly affected by diet-induced pancreatitis; feline pancreatitis often occurs spontaneously or with other conditions like inflammatory bowel disease")
+                ],
+                preventionTips: [
+                    "Never feed pets table scraps, especially fatty meat trimmings or poultry skin",
+                    "Secure garbage cans to prevent scavenging",
+                    "Be especially vigilant during holidays when fatty foods are more accessible",
+                    "Inform guests not to share food with pets",
+                    "Keep plates and serving dishes out of reach of counter-surfing pets",
+                    "Store cooking grease and drippings securely before disposal"
+                ],
+                sources: ["Pet Poison Helpline", "ASPCA Animal Poison Control Center", "Merck Veterinary Manual", "American Veterinary Medical Association (JAVMA)"]
+            ),
+
+            // MARK: - Cooked Bones
+            ToxicItem(
+                id: UUID(),
+                name: "Cooked Bones",
+                alternateNames: ["chicken bones", "turkey bones", "pork bones", "beef bones cooked", "rib bones", "poultry bones", "fish bones", "lamb bones cooked", "ham bones", "steak bones", "pork chop bones", "t-bone", "drumstick bones", "wing bones", "spare ribs"],
+                categories: [.foods, .holidayHazards],
+                imageAsset: "cooked_bones",
+                description: "Cooked bones from meat, poultry, or fish are common table scraps that pose serious mechanical hazards to pets. Cooking causes bones to become brittle and prone to splintering into sharp fragments when chewed.",
+                toxicityInfo: "Cooked bones are not toxic, but they present dangerous mechanical risks. When cooked, bones lose moisture and become brittle, causing them to splinter into sharp shards when chewed. These fragments can cause lacerations to the mouth, throat, and digestive tract; become lodged in the esophagus or intestines causing obstruction; or perforate the stomach or intestinal wall, leading to life-threatening peritonitis (infection of the abdominal cavity). Bone fragments may require endoscopic removal or emergency surgery.",
+                onsetTime: OnsetTime(
+                    early: "Choking, gagging, or oral injuries may occur immediately during or after chewing",
+                    delayed: "Signs of obstruction or perforation may develop 12-72 hours after ingestion; some cases may not show symptoms for several days"
+                ),
+                symptoms: [
+                    "Choking or gagging",
+                    "Excessive drooling",
+                    "Pawing at mouth",
+                    "Difficulty swallowing",
+                    "Vomiting or retching",
+                    "Bloody stool or constipation",
+                    "Straining to defecate",
+                    "Abdominal pain or bloating",
+                    "Loss of appetite",
+                    "Lethargy",
+                    "Signs of shock (pale gums, rapid breathing, collapse) if perforation occurs"
+                ],
+                speciesRisks: [
+                    SpeciesRisk(species: .dog, severity: .high, notes: "Dogs commonly chew and swallow bone fragments; larger pieces pose obstruction risk, smaller splinters pose perforation risk"),
+                    SpeciesRisk(species: .cat, severity: .moderate, notes: "Cats may chew on smaller bones like fish or poultry; fish bones are particularly hazardous due to their thin, sharp structure")
+                ],
+                preventionTips: [
+                    "Never give pets cooked bones of any kind",
+                    "Dispose of bones in secure, pet-proof containers immediately after meals",
+                    "Be especially cautious during holidays when bone-in meats are common",
+                    "Inform guests not to give bones to pets",
+                    "If you want to give your dog a bone, consult your veterinarian about appropriate raw bone options and supervision requirements"
+                ],
+                sources: ["ASPCA Animal Poison Control Center", "Pet Poison Helpline", "American Kennel Club", "FDA (U.S. Food and Drug Administration)"]
+            ),
+
+            // MARK: - Milk & Dairy Products
+            ToxicItem(
+                id: UUID(),
+                name: "Milk & Dairy Products",
+                alternateNames: ["milk", "cow's milk", "cheese", "ice cream", "yogurt", "cream", "butter", "cottage cheese", "sour cream", "whipped cream", "half and half", "lactose", "dairy", "cheddar", "mozzarella", "parmesan", "cream cheese", "whole milk", "skim milk"],
+                categories: [.foods],
+                imageAsset: "milk_dairy",
+                description: "Milk and dairy products include cow's milk, cheese, ice cream, yogurt, cream, butter, and other foods derived from animal milk. Despite the popular image of cats drinking milk from a saucer, most adult dogs and cats cannot properly digest dairy products.",
+                toxicityInfo: "Milk and dairy products are not toxic, but most adult pets are lactose intolerant. Puppies and kittens produce an enzyme called lactase that allows them to digest their mother's milk. As pets mature and are weaned, their bodies produce less lactase, making it difficult to break down lactose (the sugar in milk). When lactose passes undigested into the intestines, bacteria ferment it, causing gastrointestinal upset. Additionally, high-fat dairy products like ice cream and cheese can contribute to pancreatitis, particularly in dogs. Some pets tolerate small amounts of dairy or lower-lactose products (like aged cheese or yogurt) without issue, while others are highly sensitive. Important: Some dairy alternatives and sugar-free dairy products contain xylitol, an artificial sweetener that is extremely toxic to dogs. Always check ingredient labels.",
+                onsetTime: OnsetTime(
+                    early: "Symptoms typically appear within 12 hours of dairy consumption",
+                    delayed: "Most symptoms resolve within 24 hours if no additional dairy is consumed; persistent symptoms may indicate a larger amount was consumed or a secondary issue like pancreatitis"
+                ),
+                symptoms: [
+                    "Diarrhea (most common sign)",
+                    "Gas and flatulence",
+                    "Bloating",
+                    "Abdominal discomfort or cramping",
+                    "Vomiting",
+                    "Nausea",
+                    "Loose or watery stool"
+                ],
+                speciesRisks: [
+                    SpeciesRisk(species: .dog, severity: .low, notes: "Many dogs are lactose intolerant but some retain the ability to digest dairy; high-fat dairy poses additional pancreatitis risk"),
+                    SpeciesRisk(species: .cat, severity: .low, notes: "Cats are more likely to be lactose intolerant than dogs; despite popular belief, milk is not recommended for cats")
+                ],
+                preventionTips: [
+                    "Avoid giving pets milk or dairy products as treats",
+                    "Never substitute cow's milk for mother's milk in orphaned puppies or kittens; use species-appropriate milk replacers instead",
+                    "If you want to offer dairy, start with a very small amount and monitor for symptoms",
+                    "Lower-lactose options like plain yogurt or aged cheese may be better tolerated in small quantities",
+                    "Always check labels on dairy products and dairy alternatives for xylitol",
+                    "Keep ice cream and other high-fat dairy away from pets prone to pancreatitis"
+                ],
+                sources: ["ASPCA Animal Poison Control Center", "PetMD", "VCA Animal Hospitals", "Merck Veterinary Manual"]
             )
         ]
     }
