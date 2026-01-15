@@ -367,6 +367,125 @@ class DatabaseService {
                     "Be aware that some medications and herbal supplements contain caffeine"
                 ],
                 sources: ["Veterinary Information Network (VIN)", "ASPCA Animal Poison Control Center", "Pet Poison Helpline", "VCA Animal Hospitals"]
+            ),
+
+            // MARK: - Avocado
+            ToxicItem(
+                id: UUID(),
+                name: "Avocado",
+                alternateNames: ["guacamole", "avocado pit", "avocado seed", "avocado leaves", "persea americana"],
+                categories: [.foods, .plants],
+                imageAsset: "avocado",
+                description: "Avocado is a popular fruit used in guacamole and many dishes. The leaves, fruit, seeds, and bark all contain persin, a fungicidal toxin. Toxicity varies dramatically by species—birds and small mammals are highly susceptible, while dogs and cats are relatively resistant.",
+                toxicityInfo: "Avocado contains persin, a toxin that can cause myocardial (heart) damage and death in susceptible species. Birds are extremely sensitive and can die from even small amounts. Rabbits, guinea pigs, and other small mammals are also highly susceptible. Dogs and cats are relatively resistant to persin, but face other risks: the high fat content can trigger pancreatitis, and the large pit can cause life-threatening GI obstruction if swallowed. The leaves are the most toxic part of the plant. Guatemalan avocado varieties are most commonly associated with toxicosis.",
+                onsetTime: OnsetTime(
+                    early: "In birds, signs may appear within hours; in dogs/cats, GI upset may occur within 12-24 hours",
+                    delayed: "Cardiovascular effects in susceptible species may develop within 24-48 hours of ingestion"
+                ),
+                symptoms: [
+                    "Vomiting (dogs/cats)",
+                    "Diarrhea (dogs/cats)",
+                    "Abdominal pain (if pit ingested)",
+                    "Lethargy",
+                    "Difficulty breathing (birds, small mammals)",
+                    "Weakness (birds, small mammals)",
+                    "Inability to perch (birds)",
+                    "Feather pulling or agitation (birds)",
+                    "Swelling around neck and chest (birds)",
+                    "Sudden death (birds, small mammals)"
+                ],
+                speciesRisks: [
+                    SpeciesRisk(species: .dog, severity: .low, notes: "Dogs are relatively resistant to persin; main risks are pancreatitis from high fat content and GI obstruction from swallowing the pit"),
+                    SpeciesRisk(species: .cat, severity: .low, notes: "Cats are relatively resistant to persin; may experience mild GI upset"),
+                    SpeciesRisk(species: .bird, severity: .severe, notes: "Birds are extremely susceptible—even small amounts can cause cardiovascular damage and death; never feed avocado to birds"),
+                    SpeciesRisk(species: .smallMammal, severity: .severe, notes: "Rabbits, guinea pigs, and other small mammals are highly susceptible to persin toxicity")
+                ],
+                preventionTips: [
+                    "Never feed avocado to birds, rabbits, guinea pigs, or other small mammals",
+                    "Keep avocado pits secured in trash—dogs may swallow them whole",
+                    "If you have an avocado tree, prevent access to fallen fruit and leaves",
+                    "Store ripe avocados in the refrigerator out of pet reach",
+                    "Be cautious with guacamole at parties—it may also contain onion and garlic"
+                ],
+                sources: ["Merck Veterinary Manual", "ASPCA Animal Poison Control Center", "Pet Poison Helpline"]
+            ),
+
+            // MARK: - Nutmeg
+            ToxicItem(
+                id: UUID(),
+                name: "Nutmeg",
+                alternateNames: ["ground nutmeg", "whole nutmeg", "nutmeg seed", "myristica fragrans", "myristicin"],
+                categories: [.foods, .holidayHazards],
+                imageAsset: "nutmeg",
+                description: "Nutmeg is a spice made from the seed of the Myristica fragrans tree, commonly used in baked goods, eggnog, and seasonal dishes. Whole nutmeg seeds and ground nutmeg are found in most kitchens, especially during the holiday season.",
+                toxicityInfo: "Nutmeg contains myristicin, a compound with hallucinogenic and neurotoxic properties. At normal culinary amounts (a dash in recipes), nutmeg is unlikely to cause serious problems—mild GI upset at most. However, ingestion of large amounts (1 teaspoon of ground nutmeg or 2-3 whole nutmeg seeds) can cause toxicity. Dogs cannot metabolize myristicin efficiently. Nutmeg essential oil is more concentrated and poses greater risk than the ground spice.",
+                onsetTime: OnsetTime(
+                    early: "Mild GI upset may occur within a few hours of ingestion",
+                    delayed: "Neurological and cardiovascular signs may develop within 3-8 hours; symptoms can last up to 48 hours"
+                ),
+                symptoms: [
+                    "Vomiting",
+                    "Diarrhea",
+                    "Disorientation or confusion",
+                    "Hallucinations",
+                    "Increased heart rate (tachycardia)",
+                    "High blood pressure (hypertension)",
+                    "Dry mouth",
+                    "Abdominal pain",
+                    "Tremors",
+                    "Seizures (in severe cases)"
+                ],
+                speciesRisks: [
+                    SpeciesRisk(species: .dog, severity: .moderate, notes: "Large amounts can cause hallucinogenic and cardiovascular effects; culinary amounts in baked goods are generally not a serious concern"),
+                    SpeciesRisk(species: .cat, severity: .moderate, notes: "Cats are also susceptible to myristicin; similar effects expected at high doses")
+                ],
+                preventionTips: [
+                    "Store whole nutmeg seeds and ground nutmeg in closed cabinets out of pet reach",
+                    "Be extra cautious during holiday baking season when nutmeg is commonly used",
+                    "Keep nutmeg essential oil secured—it is more concentrated than the ground spice",
+                    "A small bite of baked goods with nutmeg is unlikely to cause serious harm, but avoid sharing intentionally"
+                ],
+                sources: ["Veterinary Information Network (VIN)", "Pet Poison Helpline", "PetMD"]
+            ),
+
+            // MARK: - Salt
+            ToxicItem(
+                id: UUID(),
+                name: "Salt",
+                alternateNames: ["sodium chloride", "table salt", "rock salt", "de-icing salt", "road salt", "sea salt", "homemade play dough", "salt dough", "playdough", "paint balls", "sea water", "ocean water", "salty snacks"],
+                categories: [.foods],
+                imageAsset: "salt",
+                description: "While small amounts of salt are a normal part of a pet's diet, excessive salt intake can cause sodium poisoning. Common sources include homemade play dough, rock salt (de-icers), sea water at the beach, paint balls, table salt, and very salty snacks like chips or pretzels.",
+                toxicityInfo: "Excess salt overwhelms the body's ability to maintain fluid balance. Water is pulled out of cells—including brain cells—causing dehydration and neurological damage. The risk is much higher when pets don't have access to fresh water to help flush the excess sodium. Homemade play dough is a frequent culprit, as it contains very high salt concentrations and may be attractive to dogs. Important: Salt should never be used to induce vomiting at home—this outdated practice can cause salt poisoning.",
+                onsetTime: OnsetTime(
+                    early: "Vomiting is typically the first sign and may appear within a few hours of ingestion",
+                    delayed: "Neurological signs (tremors, seizures, incoordination) may develop as sodium levels rise; death can occur within 24-48 hours in severe untreated cases"
+                ),
+                symptoms: [
+                    "Vomiting",
+                    "Diarrhea",
+                    "Excessive thirst",
+                    "Excessive urination",
+                    "Lethargy or depression",
+                    "Loss of appetite",
+                    "Incoordination (walking drunk)",
+                    "Muscle tremors",
+                    "Seizures",
+                    "Coma (in severe cases)"
+                ],
+                speciesRisks: [
+                    SpeciesRisk(species: .dog, severity: .high, notes: "Dogs are frequently affected due to eating play dough, de-icing salt, or drinking sea water at the beach"),
+                    SpeciesRisk(species: .cat, severity: .high, notes: "Cats can develop toxicity from ocean water exposure or licking salt from surfaces"),
+                    SpeciesRisk(species: .bird, severity: .high, notes: "Birds are also susceptible to salt toxicity")
+                ],
+                preventionTips: [
+                    "Keep homemade play dough and salt dough out of pet reach—these contain dangerously high salt levels",
+                    "Prevent pets from drinking sea water at the beach; bring fresh water for them",
+                    "Store rock salt and de-icing products securely; rinse pet paws after winter walks",
+                    "Avoid sharing salty snacks like chips, pretzels, or salted popcorn with pets",
+                    "Never use salt to induce vomiting—this can cause salt poisoning"
+                ],
+                sources: ["Veterinary Information Network (VIN)", "ASPCA Animal Poison Control Center", "Pet Poison Helpline"]
             )
         ]
     }
