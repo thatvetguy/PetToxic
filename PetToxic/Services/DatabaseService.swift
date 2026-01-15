@@ -601,6 +601,122 @@ class DatabaseService {
                     "Keep ice cream and other high-fat dairy away from pets prone to pancreatitis"
                 ],
                 sources: ["ASPCA Animal Poison Control Center", "PetMD", "VCA Animal Hospitals", "Merck Veterinary Manual"]
+            ),
+
+            // MARK: - Black Walnuts
+            ToxicItem(
+                id: UUID(),
+                name: "Black Walnuts",
+                alternateNames: ["black walnut tree", "Juglans nigra", "black walnut wood", "black walnut shavings", "walnut hulls", "black walnut sawdust", "juglone", "walnut shells"],
+                categories: [.foods, .plants],
+                imageAsset: "black_walnuts",
+                description: "Black walnuts come from the black walnut tree (Juglans nigra), common in parks and yards throughout eastern North America. The tree is grown for its premium hardwood and edible nuts. Dogs may be exposed to fallen nuts, hulls, sawdust, wood shavings, or branches. Importantly, there are two distinct clinical syndromes depending on which part of the tree is ingested.",
+                toxicityInfo: "Black walnuts can cause two different clinical syndromes in dogs. Wood and shavings (including sawdust and branches) cause primarily neurologic and musculoskeletal signs—the relative risk of developing neurologic signs after ingesting wood is approximately 4 times higher than after ingesting nuts or hulls. Nuts and hulls most commonly cause vomiting and GI upset, with fewer neurologic signs. The toxicity is often attributed to tremorgenic mycotoxins (mold) on decomposing nuts, but fresh wood can also cause toxicity. Juglone, a naturally occurring compound found in all parts of the black walnut tree (highest concentrations in buds, nut hulls, and roots), is a respiration inhibitor that may also contribute to toxicity in dogs. Even small exposures to sawdust have caused clinical signs in some dogs. Note: English walnuts (the kind sold in grocery stores) are not considered toxic, though they can cause GI upset if eaten in large amounts.",
+                onsetTime: OnsetTime(
+                    early: "Signs from wood/shavings may appear within minutes to 19 hours; signs from nuts/hulls may appear within minutes to hours",
+                    delayed: "Most clinical signs resolve within 9-33 hours with supportive care; all dogs with documented follow-up recovered fully"
+                ),
+                symptoms: [
+                    "Vomiting",
+                    "Lethargy or subdued behavior",
+                    "Generalized or hind limb weakness",
+                    "Stiffness",
+                    "Ataxia (incoordination)",
+                    "Tremors or muscle fasciculations",
+                    "Diarrhea",
+                    "Disorientation",
+                    "Seizures (severe cases, more common with wood ingestion)"
+                ],
+                speciesRisks: [
+                    SpeciesRisk(species: .dog, severity: .high, notes: "Dogs are commonly affected; neurologic signs are 4x more likely with wood/shavings than with nuts/hulls; Labrador retrievers and golden retrievers overrepresented in case reports"),
+                    SpeciesRisk(species: .cat, severity: .low, notes: "Limited data; cats less commonly exposed due to feeding habits")
+                ],
+                preventionTips: [
+                    "Keep dogs away from black walnut trees, especially fallen nuts and debris",
+                    "Do not use black walnut shavings or sawdust as bedding",
+                    "Rake up fallen walnuts, hulls, and branches regularly",
+                    "Be extra vigilant in fall (September-December) when nuts are dropping and in spring when buried nuts resurface",
+                    "If you have black walnut trees cut down or trimmed, keep dogs away from sawdust and debris"
+                ],
+                sources: ["Veterinary Information Network (VIN) - ASPCA APCC Case Series Study", "ASPCA Animal Poison Control Center", "Merck Veterinary Manual"]
+            ),
+
+            // MARK: - Fruit Pits & Seeds
+            ToxicItem(
+                id: UUID(),
+                name: "Fruit Pits & Seeds",
+                alternateNames: ["apple seeds", "apple core", "cherry pits", "cherry seeds", "peach pits", "peach seeds", "apricot pits", "apricot seeds", "plum pits", "plum seeds", "nectarine pits", "stone fruit pits", "cyanogenic glycosides", "amygdalin"],
+                categories: [.foods],
+                imageAsset: "fruit_pits",
+                description: "The pits and seeds of certain common fruits—including apples, cherries, peaches, apricots, plums, and nectarines—contain compounds that can release cyanide when crushed. However, the primary risk to most pets is actually choking and intestinal obstruction rather than cyanide poisoning.",
+                toxicityInfo: "The pits and seeds of certain fruits—including apples, cherries, peaches, apricots, plums, and nectarines—contain cyanogenic glycosides (primarily amygdalin), which can release hydrogen cyanide when crushed. However, cyanide poisoning from fruit pits is rare in dogs and cats for several reasons: the seeds must be thoroughly crushed (not just swallowed whole), a large quantity of crushed seeds is required to cause toxicity, and the bitter taste discourages consumption. This type of toxicity is more commonly a concern for grazing animals. Leaves and stems may cause hypersalivation and GI irritation from natural resins, separate from any cyanide concern. The more common and immediate danger for pets is mechanical: pits can cause choking, tooth fractures, or intestinal obstruction requiring surgery—especially in smaller dogs.",
+                onsetTime: OnsetTime(
+                    early: "Choking or GI obstruction signs may occur immediately to 24 hours after ingestion; cyanide poisoning signs (if seeds were thoroughly crushed) can appear within 15-30 minutes",
+                    delayed: "Signs of obstruction may develop over 24-72 hours as the pit moves through (or gets stuck in) the digestive tract"
+                ),
+                symptoms: [
+                    "Vomiting",
+                    "Decreased appetite",
+                    "Constipation or straining to defecate",
+                    "Abdominal pain or bloating",
+                    "Lethargy",
+                    "Hypersalivation (from leaf/stem irritation)",
+                    "Difficulty breathing (rare, cyanide poisoning)",
+                    "Bright red gums (rare, cyanide poisoning)",
+                    "Dilated pupils (rare, cyanide poisoning)",
+                    "Weakness or collapse (rare, cyanide poisoning)"
+                ],
+                speciesRisks: [
+                    SpeciesRisk(species: .dog, severity: .moderate, notes: "Obstruction is the primary concern, especially in smaller dogs; cyanide poisoning is rare unless large quantities of seeds are thoroughly crushed and consumed"),
+                    SpeciesRisk(species: .cat, severity: .low, notes: "Cats are very unlikely to consume enough pits or seeds to cause cyanide toxicity; leaves may cause hypersalivation from natural resins")
+                ],
+                preventionTips: [
+                    "Always remove pits and cores before sharing fruit with pets",
+                    "Dispose of fruit pits in secure, pet-proof trash containers",
+                    "Pick up fallen fruit from under fruit trees regularly",
+                    "Do not let pets chew on fruit tree branches, leaves, or pruned material",
+                    "Keep compost bins secure; fermenting fruit can also cause alcohol toxicity",
+                    "A single swallowed pit may pass without issue, but contact your vet for guidance, especially for smaller dogs"
+                ],
+                sources: ["ASPCA Animal Poison Control Center", "Pet Poison Helpline", "Veterinary Information Network (VIN)"]
+            ),
+
+            // MARK: - Moldy Foods
+            ToxicItem(
+                id: UUID(),
+                name: "Moldy Foods",
+                alternateNames: ["moldy bread", "moldy cheese", "spoiled food", "rotten food", "compost", "garbage", "trash", "mycotoxins", "tremorgenic mycotoxins", "moldy walnuts", "moldy nuts", "penitrem-A", "roquefortine"],
+                categories: [.foods],
+                imageAsset: "moldy_foods",
+                description: "Moldy or spoiled foods—including bread, cheese, nuts, pasta, and other items found in trash or compost—can contain dangerous fungal toxins called tremorgenic mycotoxins. Dogs that roam, scavenge, or have access to garbage or compost bins are most commonly affected.",
+                toxicityInfo: "Certain molds that grow on spoiled foods produce tremorgenic mycotoxins, including penitrem-A and roquefortine C. These are classified as neurotoxins that affect the nervous system. While the exact mechanism is not fully understood, studies suggest penitrem-A inhibits glycine, an inhibitory neurotransmitter. The severity of signs varies from mild to severe depending on the type and amount of mycotoxin ingested. Moldy walnuts (especially black walnuts), moldy dairy products, and decomposing food in compost piles are common sources. With early aggressive treatment, prognosis is generally good.",
+                onsetTime: OnsetTime(
+                    early: "Tremors and neurologic signs can develop within hours of ingestion",
+                    delayed: "Signs may persist for several days even with treatment; full recovery typically occurs with supportive care"
+                ),
+                symptoms: [
+                    "Muscle tremors (often the first sign)",
+                    "Ataxia (incoordination, 'walking drunk')",
+                    "Seizures or convulsions",
+                    "Vomiting",
+                    "Hyperthermia (elevated body temperature)",
+                    "Restlessness or agitation",
+                    "Stiffness",
+                    "Weakness"
+                ],
+                speciesRisks: [
+                    SpeciesRisk(species: .dog, severity: .high, notes: "Dogs are most commonly affected due to scavenging behavior; roaming dogs and those with access to garbage or compost are at highest risk"),
+                    SpeciesRisk(species: .cat, severity: .moderate, notes: "Cats may also be affected but are less likely to consume moldy food due to more selective eating habits")
+                ],
+                preventionTips: [
+                    "Secure all garbage cans with tight-fitting, pet-proof lids",
+                    "Keep compost bins enclosed and inaccessible to pets",
+                    "Do not leave food out to spoil; refrigerate or dispose of leftovers promptly",
+                    "Supervise dogs outdoors, especially those prone to scavenging",
+                    "Pick up fallen fruit and nuts from your yard before they decompose",
+                    "Never intentionally feed moldy food to pets—even 'a little mold' can be dangerous"
+                ],
+                sources: ["ASPCA Animal Poison Control Center", "Pet Poison Helpline", "Merck Veterinary Manual"]
             )
         ]
     }
