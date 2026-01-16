@@ -1463,6 +1463,126 @@ class DatabaseService {
                     "If your pet ingests aloe vera and develops vomiting or diarrhea, contact your veterinarian — dehydration can become serious if untreated"
                 ],
                 sources: ["Veterinary Information Network (VIN)", "ASPCA Animal Poison Control Center", "Pet Poison Helpline", "Wag Walking Veterinary Resources"]
+            ),
+
+            // MARK: - Morning Glory
+            ToxicItem(
+                id: UUID(),
+                name: "Morning Glory",
+                alternateNames: ["Ipomoea", "Ipomoea tricolor", "Ipomoea purpurea", "Ipomoea violacea", "heavenly blue", "flying saucers", "pearly gates", "Convolvulus", "bindweed", "morning glory seeds", "LSA", "lysergic acid amide", "ergine"],
+                categories: [.plants],
+                imageAsset: "morning_glory_flower",
+                description: "Morning glories are a large group of flowering vines (several hundred species) known for their trumpet-shaped flowers that open in the morning. They are popular garden plants grown on trellises, fences, and arbors. While the foliage is relatively harmless, the seeds of certain species contain hallucinogenic compounds related to LSD and can cause serious toxicity if consumed in large quantities.",
+                toxicityInfo: "Morning glory toxicity depends entirely on which part of the plant is ingested. The leaves and flowers contain minimal toxins and typically cause only mild GI upset if eaten — monitor for vomiting, diarrhea, loss of appetite, and lethargy; treatment is symptomatic and supportive.\n\nThe seeds are a different story. Seeds from some morning glory species (particularly Ipomoea tricolor varieties like 'Heavenly Blue,' 'Pearly Gates,' and 'Flying Saucers') contain lysergic alkaloids, including ergine (LSA — lysergic acid amide), which is chemically related to LSD. When large amounts of seeds are ingested, these alkaloids can cause hallucinations, incoordination, disorientation, and abnormal behavior. In severe cases, diarrhea, anemia, and liver damage have been reported.\n\nCommercially sold morning glory seeds are sometimes treated with pesticides or fungicides that may cause additional toxicity separate from the plant's natural compounds.",
+                onsetTime: OnsetTime(
+                    early: "Foliage ingestion: Mild GI signs (vomiting, diarrhea) may appear within a few hours. Seed ingestion: Hallucinogenic effects and neurologic signs may develop within 1-4 hours.",
+                    delayed: "Most GI symptoms from foliage resolve within 24 hours. Severe seed ingestions may cause prolonged effects; liver damage (if it occurs) may develop over days."
+                ),
+                symptoms: [
+                    "Vomiting",
+                    "Diarrhea",
+                    "Loss of appetite",
+                    "Lethargy",
+                    "Incoordination or ataxia (seed ingestion)",
+                    "Disorientation or confusion (seed ingestion)",
+                    "Hallucinations or abnormal behavior (seed ingestion)",
+                    "Dilated pupils (seed ingestion)",
+                    "Agitation or restlessness (seed ingestion)",
+                    "Tremors (severe cases)",
+                    "Weakness or pale gums (anemia, rare)"
+                ],
+                speciesRisks: [
+                    SpeciesRisk(species: .dog, severity: .low, notes: "Foliage causes only mild GI upset; seed ingestion in large quantities can cause hallucinogenic effects, incoordination, and rarely liver damage — severity depends on amount and species of morning glory"),
+                    SpeciesRisk(species: .cat, severity: .low, notes: "Same as dogs; cats are less likely to consume large quantities of seeds"),
+                    SpeciesRisk(species: .smallMammal, severity: .low, notes: "Rabbits and other small mammals: foliage may cause GI upset; monitor for lethargy, anorexia, abdominal pain, or diarrhea")
+                ],
+                preventionTips: [
+                    "Store morning glory seeds securely — the seeds are the most toxic part of the plant",
+                    "Be aware that commercially sold seeds may be treated with pesticides or fungicides that add additional toxicity",
+                    "If your pet chews on morning glory leaves or flowers, monitor for mild GI upset — this is usually self-limiting",
+                    "If your pet eats morning glory seeds, contact your veterinarian — the quantity consumed matters significantly",
+                    "Supervise pets in gardens where morning glories are growing, especially when seed pods are forming"
+                ],
+                sources: ["Veterinary Information Network (VIN)", "ASPCA Animal Poison Control Center", "Pet Poison Helpline", "Merck Veterinary Manual"]
+            ),
+
+            // MARK: - Cyanogenic Glycoside Plants
+            ToxicItem(
+                id: UUID(),
+                name: "Cyanogenic Glycoside Plants",
+                alternateNames: ["Nandina", "Nandina domestica", "heavenly bamboo", "sacred bamboo", "nandina berries", "Hydrangea", "Hydrangea macrophylla", "hortensia", "hydrangea leaves", "hydrangea flowers", "Cherry laurel", "Prunus laurocerasus", "English laurel", "Chokecherry", "Prunus virginiana", "Photinia", "red tip photinia", "Photinia fraseri", "cyanide plants", "hydrogen cyanide", "amygdalin", "prunasin"],
+                categories: [.plants],
+                imageAsset: "nandina_hydrangea",
+                description: "Several common ornamental plants contain cyanogenic glycosides — compounds that can release hydrogen cyanide when plant tissue is damaged (chewed). This group includes Nandina (heavenly bamboo), Hydrangea, Prunus ornamentals (cherry laurel, chokecherry), and Photinia (red tip). Despite the theoretical danger of cyanide, severe toxicity is uncommon in dogs and cats because they rarely consume enough plant material. However, some plants in this group are more concerning than others.",
+                toxicityInfo: "Cyanogenic glycosides are converted to hydrogen cyanide when plant cells are crushed during chewing. Cyanide blocks cellular oxygen utilization, which can theoretically cause rapid death. However, the reality in small animal practice is more nuanced:\n\n**Nandina (Heavenly Bamboo)** — The most concerning plant in this group. The berries contain the highest concentration of cyanogenic glycosides and have caused documented deaths in birds (cedar waxwings, robins) that gorge on the berries in winter. Dogs and cats that eat Nandina berries can develop cyanide toxicity, though cases are less commonly reported than in birds. The leaves are also toxic but less so than the berries.\n\n**Hydrangea** — Despite widespread concern, severe hydrangea toxicity is rare. According to ASPCA data, most hydrangea ingestions result in only mild GI upset (vomiting, diarrhea, lethargy). Actual cyanide poisoning from hydrangea is uncommon in dogs and cats. The buds and leaves contain the highest concentration of toxins.\n\n**Prunus Ornamentals (Cherry Laurel, Chokecherry)** — The leaves, especially when wilted or damaged, can concentrate cyanogenic glycosides. Fresh, healthy leaves are less dangerous. These plants are more of a concern for livestock that graze on large quantities, but dogs chewing on branches or wilted leaves can be affected.\n\n**Photinia (Red Tip)** — Similar to Prunus; the young red leaves contain cyanogenic glycosides but severe toxicity is uncommon in pets.\n\nClassic signs of cyanide poisoning include bright cherry-red gums (due to inability to use oxygen), rapid breathing, dilated pupils, and collapse. However, most pet exposures to these plants result only in GI upset.",
+                onsetTime: OnsetTime(
+                    early: "GI signs (vomiting, diarrhea, drooling) typically appear within a few hours. True cyanide poisoning signs (if they occur) can develop within 15-60 minutes of ingestion.",
+                    delayed: "Most GI symptoms resolve within 24 hours. Severe cyanide poisoning progresses rapidly — animals either recover quickly with treatment or deteriorate within hours."
+                ),
+                symptoms: [
+                    "Vomiting (most common)",
+                    "Diarrhea",
+                    "Drooling (hypersalivation)",
+                    "Loss of appetite",
+                    "Lethargy or depression",
+                    "Abdominal pain",
+                    "Bright cherry-red gums (cyanide poisoning — rare)",
+                    "Rapid or labored breathing (cyanide poisoning — rare)",
+                    "Dilated pupils (cyanide poisoning — rare)",
+                    "Weakness or incoordination (cyanide poisoning — rare)",
+                    "Seizures (severe cyanide poisoning — rare)",
+                    "Collapse (severe cyanide poisoning — rare)"
+                ],
+                speciesRisks: [
+                    SpeciesRisk(species: .dog, severity: .moderate, notes: "Nandina berries and wilted Prunus leaves pose the highest risk; hydrangea and photinia typically cause only mild GI upset; true cyanide poisoning is uncommon but possible with large ingestions"),
+                    SpeciesRisk(species: .cat, severity: .moderate, notes: "Same concerns as dogs; cats are less likely to consume large quantities but smaller body size means less plant material is needed to cause effects"),
+                    SpeciesRisk(species: .bird, severity: .severe, notes: "Birds are highly susceptible to Nandina berry toxicity — documented mass die-offs of cedar waxwings and robins have occurred; birds should never have access to Nandina")
+                ],
+                preventionTips: [
+                    "Nandina (heavenly bamboo) poses the highest risk in this group — consider removing it from your landscaping if you have pets, especially birds",
+                    "Do not allow pets to eat Nandina berries — they are the most toxic part of the plant",
+                    "Keep dogs away from wilted or damaged Prunus (cherry laurel, chokecherry) leaves — wilting concentrates the toxin",
+                    "Hydrangea, while commonly listed as toxic, rarely causes serious problems — monitor for GI upset if your pet chews on it",
+                    "If you see bright cherry-red gums, rapid breathing, or sudden weakness after plant ingestion, seek emergency veterinary care immediately — these are signs of cyanide poisoning"
+                ],
+                sources: ["Veterinary Information Network (VIN)", "ASPCA Animal Poison Control Center", "Pet Poison Helpline", "Merck Veterinary Manual"]
+            ),
+
+            // MARK: - GI Irritant Plants
+            ToxicItem(
+                id: UUID(),
+                name: "GI Irritant Plants",
+                alternateNames: ["Poinsettia", "Euphorbia pulcherrima", "Christmas flower", "Christmas plant", "Mexican flame leaf", "Iris", "iris rhizome", "flag iris", "bearded iris", "Chrysanthemum", "chrysanthemums", "mums", "garden mums", "florist's mum", "Hosta", "hostas", "plantain lily", "funkia", "Baby's breath", "babys breath", "Gypsophila", "Gypsophila paniculata", "Carnation", "carnations", "Dianthus", "Dianthus caryophyllus", "pinks"],
+                categories: [.plants, .holidayHazards],
+                imageAsset: "poinsettia_mums",
+                description: "Many common houseplants, garden plants, and cut flowers contain substances that can cause mild gastrointestinal irritation when ingested by pets. While these plants are technically 'toxic,' they rarely cause serious illness — symptoms are generally limited to vomiting, diarrhea, drooling, and temporary loss of appetite. This entry covers several frequently searched plants that fall into this mild GI irritant category: Poinsettia, Iris, Chrysanthemums (mums), Hosta, Baby's Breath, and Carnations.",
+                toxicityInfo: "The plants in this group contain various irritating compounds but share a common characteristic: they cause only mild to moderate GI upset in the vast majority of cases. Animals can generally ingest these plants without severe repercussions.\n\n**Poinsettia** — Perhaps the most overhyped 'toxic' plant. The milky sap can cause mild oral irritation and GI upset, but poinsettia is NOT the deadly poison popular culture suggests. Studies have shown that a 50-pound dog would need to eat over 500 poinsettia leaves to approach a potentially toxic dose. Most pets that chew on poinsettia experience mild drooling or vomiting at worst.\n\n**Iris** — The rhizomes (underground stems) are more irritating than the foliage. Contains pentacyclic terpenoids (irisin, iridin) that cause GI upset. Most cases involve only vomiting and diarrhea. Severe bloody diarrhea is primarily a concern in grazing livestock, not household pets.\n\n**Chrysanthemums (Mums)** — Contain pyrethrins, sesquiterpene lactones, and other irritants. While pyrethrins are used in flea products, the concentration in mums is low. Ingestion typically causes drooling, vomiting, and diarrhea. Skin contact may cause mild dermatitis in sensitive animals.\n\n**Hosta** — Contains saponins that cause GI irritation. Very popular shade garden plants that dogs sometimes dig up. Effects are limited to vomiting, diarrhea, and depression.\n\n**Baby's Breath** — Common in floral bouquets. Contains gyposenin (a saponin) that causes mild GI upset. Dried baby's breath in arrangements is less toxic than fresh.\n\n**Carnations** — Contain unknown GI irritants. Ingestion causes mild vomiting, diarrhea, or drooling. Very low toxicity concern.",
+                onsetTime: OnsetTime(
+                    early: "GI signs (vomiting, diarrhea, drooling, loss of appetite) typically appear within a few hours of ingestion",
+                    delayed: "Symptoms are generally self-limiting and resolve within 24 hours without treatment; persistent symptoms beyond 24-48 hours warrant veterinary evaluation"
+                ),
+                symptoms: [
+                    "Vomiting",
+                    "Diarrhea",
+                    "Drooling (hypersalivation)",
+                    "Loss of appetite",
+                    "Lethargy or mild depression",
+                    "Oral irritation (pawing at mouth) — especially with poinsettia sap",
+                    "Mild skin irritation (chrysanthemums, with direct contact)"
+                ],
+                speciesRisks: [
+                    SpeciesRisk(species: .dog, severity: .low, notes: "All plants in this group cause only mild GI upset in dogs; serious complications are rare; symptomatic care is usually sufficient"),
+                    SpeciesRisk(species: .cat, severity: .low, notes: "Same mild effects as dogs; cats may be more likely to chew on cut flowers and houseplants"),
+                    SpeciesRisk(species: .smallMammal, severity: .low, notes: "Rabbits and other small mammals may experience GI upset; because rabbits cannot vomit, monitor for lethargy, anorexia, abdominal pain, or diarrhea")
+                ],
+                preventionTips: [
+                    "While these plants are low-toxicity, it's still best to keep them out of reach of pets that like to chew on vegetation",
+                    "Poinsettia is NOT highly toxic despite its reputation — if your pet nibbles on one, monitor for mild GI upset but don't panic",
+                    "If your pet is a plant chewer, consider truly non-toxic alternatives like spider plants, Boston ferns, or African violets",
+                    "For cut flower arrangements, place them where curious cats cannot reach",
+                    "If vomiting or diarrhea persists beyond 24 hours or your pet seems uncomfortable, contact your veterinarian"
+                ],
+                sources: ["ASPCA Animal Poison Control Center", "Pet Poison Helpline", "Veterinary Information Network (VIN)", "VCA Animal Hospitals"]
             )
         ]
     }
