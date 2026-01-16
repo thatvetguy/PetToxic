@@ -1062,11 +1062,11 @@ class DatabaseService {
             ToxicItem(
                 id: UUID(),
                 name: "Daffodils",
-                alternateNames: ["daffodil", "Narcissus", "Narcissus spp", "jonquil", "jonquils", "paper white", "paperwhite", "paper whites", "narcissus bulb", "daffodil bulb", "yellow daffodil", "wild daffodil", "Lent lily", "lycorine"],
+                alternateNames: ["daffodil", "Narcissus", "Narcissus spp", "jonquil", "jonquils", "paper white", "paperwhite", "paper whites", "narcissus bulb", "daffodil bulb", "yellow daffodil", "wild daffodil", "Lent lily", "lycorine", "amaryllis", "Amaryllis", "Amaryllis belladonna", "Hippeastrum", "belladonna lily", "naked lady lily", "amaryllis bulb"],
                 categories: [.plants, .holidayHazards],
-                imageAsset: "daffodil_narcissus",
-                description: "Daffodils (Narcissus species) are popular spring-flowering bulbs recognized by their distinctive trumpet-shaped yellow, white, or orange flowers. They are found in gardens, parks, and floral arrangements — particularly around Easter and spring holidays. Daffodils belong to the Amaryllidaceae family, which is different from tulips (Liliaceae) and contains different toxic compounds.",
-                toxicityInfo: "Daffodils contain at least 15 different phenanthridine alkaloids, with lycorine being the most abundant. These alkaloids induce vomiting by irritating the stomach lining and stimulating the vomiting center in the brain. The bulbs also contain calcium oxalate crystals in their outer layers, which cause intense tissue irritation when chewed — similar to hyacinth bulbs. All parts of the daffodil are toxic, but the bulbs contain the highest concentration of toxins. Dogs are most commonly poisoned when they dig up freshly planted bulbs or gain access to stored bulbs. Large ingestions — particularly of bulbs — can cause serious cardiovascular effects including dangerous heart rhythm abnormalities and low blood pressure. There is no specific antidote; treatment is supportive. With prompt veterinary care, prognosis is generally good.",
+                imageAsset: "daffodil_amaryllis",
+                description: "Daffodils (Narcissus species) and Amaryllis are popular flowering bulbs belonging to the Amaryllidaceae family. Daffodils are recognized by their distinctive trumpet-shaped yellow, white, or orange flowers and are found in gardens, parks, and floral arrangements — particularly around Easter and spring holidays. Amaryllis, with its large, showy trumpet-shaped flowers in red, pink, white, or striped patterns, is a popular gift plant during the winter holiday season. Both plants contain the same class of toxic alkaloids and pose similar risks to pets.",
+                toxicityInfo: "Daffodils and Amaryllis contain phenanthridine alkaloids, with lycorine being the most abundant. These alkaloids induce vomiting by irritating the stomach lining and stimulating the vomiting center in the brain. The bulbs of both plants contain the highest concentration of toxins and also contain calcium oxalate crystals in their outer layers, which cause intense tissue irritation when chewed.\n\nDogs are most commonly poisoned when they dig up freshly planted bulbs or gain access to stored bulbs. Amaryllis bulbs are a particular concern during the holiday season when they are sold as gift plants or decorations.\n\nMost ingestions cause GI upset (vomiting, diarrhea, drooling). However, large ingestions — particularly of bulbs — can cause more serious effects including hypotension (low blood pressure), sedation, cardiac arrhythmias, tremors, and seizures. Hepatic (liver) effects have also been reported with Amaryllis. There is no specific antidote; treatment is supportive. With prompt veterinary care, prognosis is generally good.",
                 onsetTime: OnsetTime(
                     early: "Vomiting is usually the first sign and can occur within 15 minutes to a few hours of ingestion; drooling, oral irritation, and diarrhea typically follow",
                     delayed: "Cardiovascular and neurologic signs (low blood pressure, abnormal heart rhythm, tremors, seizures) may develop with large ingestions; a published case report described a cat with signs persisting for 3 days before presentation, with full recovery by day 6"
@@ -1097,7 +1097,8 @@ class DatabaseService {
                     "If your dog is a digger, avoid planting daffodils in areas they can access",
                     "Keep cut daffodils in vases out of pet reach; do not let pets drink the vase water",
                     "Be aware that daffodils are common in Easter bouquets and spring floral arrangements",
-                    "Dispose of dead plant material securely — dried stems and leaves can still cause toxicity"
+                    "Dispose of dead plant material securely — dried stems and leaves can still cause toxicity",
+                    "Amaryllis bulbs are popular holiday gifts — keep them out of reach of pets, especially during the winter holiday season"
                 ],
                 sources: ["Veterinary Information Network (VIN)", "ASPCA Animal Poison Control Center", "Pet Poison Helpline", "Canadian Veterinary Journal (case report)"]
             ),
@@ -1552,11 +1553,11 @@ class DatabaseService {
             ToxicItem(
                 id: UUID(),
                 name: "GI Irritant Plants",
-                alternateNames: ["Poinsettia", "Euphorbia pulcherrima", "Christmas flower", "Christmas plant", "Mexican flame leaf", "Iris", "iris rhizome", "flag iris", "bearded iris", "Chrysanthemum", "chrysanthemums", "mums", "garden mums", "florist's mum", "Hosta", "hostas", "plantain lily", "funkia", "Baby's breath", "babys breath", "Gypsophila", "Gypsophila paniculata", "Carnation", "carnations", "Dianthus", "Dianthus caryophyllus", "pinks"],
+                alternateNames: ["Poinsettia", "Euphorbia pulcherrima", "Christmas flower", "Christmas plant", "Mexican flame leaf", "Iris", "iris rhizome", "flag iris", "bearded iris", "Chrysanthemum", "chrysanthemums", "mums", "garden mums", "florist's mum", "Hosta", "hostas", "plantain lily", "funkia", "Baby's breath", "babys breath", "Gypsophila", "Gypsophila paniculata", "Carnation", "carnations", "Dianthus", "Dianthus caryophyllus", "pinks", "Jade plant", "jade plant", "Crassula ovata", "Crassula argentea", "money plant", "money tree", "lucky plant", "friendship tree", "Mistletoe", "mistletoe", "Phoradendron", "Phoradendron leucarpum", "American mistletoe", "Christmas mistletoe", "Holly", "holly", "Ilex", "Ilex aquifolium", "English holly", "Christmas holly", "holly berries", "Christmas cactus", "Schlumbergera", "Schlumbergera truncata", "crab claw cactus", "Thanksgiving cactus", "Easter cactus", "holiday cactus"],
                 categories: [.plants, .holidayHazards],
                 imageAsset: "poinsettia_mums",
-                description: "Many common houseplants, garden plants, and cut flowers contain substances that can cause mild gastrointestinal irritation when ingested by pets. While these plants are technically 'toxic,' they rarely cause serious illness — symptoms are generally limited to vomiting, diarrhea, drooling, and temporary loss of appetite. This entry covers several frequently searched plants that fall into this mild GI irritant category: Poinsettia, Iris, Chrysanthemums (mums), Hosta, Baby's Breath, and Carnations.",
-                toxicityInfo: "The plants in this group contain various irritating compounds but share a common characteristic: they cause only mild to moderate GI upset in the vast majority of cases. Animals can generally ingest these plants without severe repercussions.\n\n**Poinsettia** — Perhaps the most overhyped 'toxic' plant. The milky sap can cause mild oral irritation and GI upset, but poinsettia is NOT the deadly poison popular culture suggests. Studies have shown that a 50-pound dog would need to eat over 500 poinsettia leaves to approach a potentially toxic dose. Most pets that chew on poinsettia experience mild drooling or vomiting at worst.\n\n**Iris** — The rhizomes (underground stems) are more irritating than the foliage. Contains pentacyclic terpenoids (irisin, iridin) that cause GI upset. Most cases involve only vomiting and diarrhea. Severe bloody diarrhea is primarily a concern in grazing livestock, not household pets.\n\n**Chrysanthemums (Mums)** — Contain pyrethrins, sesquiterpene lactones, and other irritants. While pyrethrins are used in flea products, the concentration in mums is low. Ingestion typically causes drooling, vomiting, and diarrhea. Skin contact may cause mild dermatitis in sensitive animals.\n\n**Hosta** — Contains saponins that cause GI irritation. Very popular shade garden plants that dogs sometimes dig up. Effects are limited to vomiting, diarrhea, and depression.\n\n**Baby's Breath** — Common in floral bouquets. Contains gyposenin (a saponin) that causes mild GI upset. Dried baby's breath in arrangements is less toxic than fresh.\n\n**Carnations** — Contain unknown GI irritants. Ingestion causes mild vomiting, diarrhea, or drooling. Very low toxicity concern.",
+                description: "Many common houseplants, garden plants, and cut flowers contain substances that can cause mild gastrointestinal irritation when ingested by pets. While these plants are technically 'toxic,' they rarely cause serious illness — symptoms are generally limited to vomiting, diarrhea, drooling, and temporary loss of appetite. This entry covers several frequently searched plants that fall into this mild GI irritant category: Poinsettia, Iris, Chrysanthemums (mums), Hosta, Baby's Breath, Carnations, Jade Plant, Mistletoe, Holly, and Christmas Cactus.",
+                toxicityInfo: "The plants in this group contain various irritating compounds but share a common characteristic: they cause only mild to moderate GI upset in the vast majority of cases. Animals can generally ingest these plants without severe repercussions.\n\n**Poinsettia** — Perhaps the most overhyped 'toxic' plant. The milky sap can cause mild oral irritation and GI upset, but poinsettia is NOT the deadly poison popular culture suggests. Studies have shown that a 50-pound dog would need to eat over 500 poinsettia leaves to approach a potentially toxic dose. Most pets that chew on poinsettia experience mild drooling or vomiting at worst.\n\n**Iris** — The rhizomes (underground stems) are more irritating than the foliage. Contains pentacyclic terpenoids (irisin, iridin) that cause GI upset. Most cases involve only vomiting and diarrhea. Severe bloody diarrhea is primarily a concern in grazing livestock, not household pets.\n\n**Chrysanthemums (Mums)** — Contain pyrethrins, sesquiterpene lactones, and other irritants. While pyrethrins are used in flea products, the concentration in mums is low. Ingestion typically causes drooling, vomiting, and diarrhea. Skin contact may cause mild dermatitis in sensitive animals.\n\n**Hosta** — Contains saponins that cause GI irritation. Very popular shade garden plants that dogs sometimes dig up. Effects are limited to vomiting, diarrhea, and depression.\n\n**Baby's Breath** — Common in floral bouquets. Contains gyposenin (a saponin) that causes mild GI upset. Dried baby's breath in arrangements is less toxic than fresh.\n\n**Carnations** — Contain unknown GI irritants. Ingestion causes mild vomiting, diarrhea, or drooling. Very low toxicity concern.\n\n**Jade Plant** — A popular succulent houseplant. The resins can cause mild GI irritation, but jade plants are considered essentially non-toxic by the ASPCA. Ingestion typically causes only mild vomiting, similar to any other greenery.\n\n**Mistletoe (American)** — The American mistletoe (Phoradendron species) used in holiday decorations contains compounds that are theoretically cardiotoxic (phoratoxins), but clinically significant cardiac effects are extremely rare in dogs and cats. The most common signs reported to ASPCA APCC are depression and vomiting. Much of the 'deadly mistletoe' reputation comes from European mistletoe (Viscum album), which is more toxic but rarely encountered in North America.\n\n**Holly** — The berries and leaves contain saponins that cause GI irritation. Signs include salivation, vomiting, lip smacking, head shaking, and diarrhea. Effects are self-limiting. Serious toxicity is rare despite holly's reputation.\n\n**Christmas Cactus** — Members of the Schlumbergera genus (Christmas, Thanksgiving, and Easter cacti) are not considered toxic. Ingestion may cause mild gastric upset at most. These are among the safest 'holiday plants' to have around pets.",
                 onsetTime: OnsetTime(
                     early: "GI signs (vomiting, diarrhea, drooling, loss of appetite) typically appear within a few hours of ingestion",
                     delayed: "Symptoms are generally self-limiting and resolve within 24 hours without treatment; persistent symptoms beyond 24-48 hours warrant veterinary evaluation"
@@ -1580,9 +1581,55 @@ class DatabaseService {
                     "Poinsettia is NOT highly toxic despite its reputation — if your pet nibbles on one, monitor for mild GI upset but don't panic",
                     "If your pet is a plant chewer, consider truly non-toxic alternatives like spider plants, Boston ferns, or African violets",
                     "For cut flower arrangements, place them where curious cats cannot reach",
-                    "If vomiting or diarrhea persists beyond 24 hours or your pet seems uncomfortable, contact your veterinarian"
+                    "If vomiting or diarrhea persists beyond 24 hours or your pet seems uncomfortable, contact your veterinarian",
+                    "Mistletoe and holly are traditional holiday decorations — hang them high out of pet reach",
+                    "Jade plants are low-toxicity but should still be kept away from pets that like to chew on succulents",
+                    "Christmas cactus is one of the safest holiday plants — mild GI upset at most if ingested"
                 ],
                 sources: ["ASPCA Animal Poison Control Center", "Pet Poison Helpline", "Veterinary Information Network (VIN)", "VCA Animal Hospitals"]
+            ),
+
+            // MARK: - Brunfelsia (Yesterday, Today and Tomorrow)
+            ToxicItem(
+                id: UUID(),
+                name: "Brunfelsia (Yesterday, Today and Tomorrow)",
+                alternateNames: ["Brunfelsia", "Brunfelsia spp", "Brunfelsia pauciflora", "Brunfelsia australis", "Brunfelsia uniflora", "Brunfelsia calycina", "yesterday today and tomorrow", "yesterday today tomorrow", "morning noon and night", "kiss me quick", "lady of the night", "Paraguay jasmine", "Franciscan rain tree", "brunfelsia berries", "brunfelsia fruit"],
+                categories: [.plants],
+                imageAsset: "brunfelsia_flower",
+                description: "Brunfelsia, commonly known as 'Yesterday, Today and Tomorrow,' is an ornamental shrub popular in tropical and subtropical regions, including Florida, California, Hawaii, and parts of Texas. The plant gets its common name from its flowers, which change color over several days — typically opening purple, fading to lavender, then white. Despite its beauty, Brunfelsia is one of the most dangerous plants to dogs, causing serious neurological toxicity.",
+                toxicityInfo: "Brunfelsia contains two toxic compounds: brunfelsamidine (a stimulant) and hopeanine (a depressant), which together cause severe neurotoxicity mimicking strychnine poisoning. All parts of the plant are toxic, but the fruit (berries) are especially dangerous because they are juicy and palatable to dogs.\n\nThe toxic effects on the central nervous system cause uncontrolled muscle contractions, rigidity, and seizures — similar to strychnine. According to ASPCA Animal Poison Control Center data, dogs are the primary species affected. Over a 5-year period, 38 cases were reported involving 42 dogs, with Labrador Retrievers and Golden Retrievers most commonly affected. Cats are also susceptible but less commonly exposed, possibly due to more selective eating habits.\n\nClinical signs may start with agitation, nervousness, or excitement, then progress to tremors, muscular rigidity, and tonic-clonic seizures. Signs can last from a few hours to several days. All Brunfelsia exposures should be considered potentially life-threatening — seek emergency veterinary care immediately if ingestion is suspected.",
+                onsetTime: OnsetTime(
+                    early: "Signs can appear within minutes to hours of ingestion; early signs include salivation, vomiting, retching, and agitation",
+                    delayed: "Neurological signs (tremors, rigidity, seizures) may persist for days even with treatment; recovery depends on the amount ingested and how quickly treatment begins"
+                ),
+                symptoms: [
+                    "Salivation (often profuse)",
+                    "Vomiting",
+                    "Retching",
+                    "Agitation or anxiety",
+                    "Nystagmus (abnormal eye movements)",
+                    "Decreased motor activity initially",
+                    "Tremors",
+                    "Muscle rigidity",
+                    "Extensor rigidity (stiff, extended limbs)",
+                    "Seizures",
+                    "Hyperthermia (from muscle activity)",
+                    "Coughing",
+                    "Death (without treatment)"
+                ],
+                speciesRisks: [
+                    SpeciesRisk(species: .dog, severity: .high, notes: "Dogs are the primary species affected; the juicy fruit is particularly attractive to dogs; signs mimic strychnine poisoning and can last for several days"),
+                    SpeciesRisk(species: .cat, severity: .moderate, notes: "Cats appear less commonly affected, possibly due to more selective eating habits; if ingestion occurs, similar severe neurological effects are expected"),
+                    SpeciesRisk(species: .bird, severity: .moderate, notes: "Limited data available; birds should be kept away from Brunfelsia as a precaution due to small body size")
+                ],
+                preventionTips: [
+                    "Do not plant Brunfelsia in areas accessible to dogs — the berries are especially attractive and dangerous",
+                    "If you have existing Brunfelsia, consider removing it or fencing it off completely",
+                    "Be aware that Brunfelsia is common in tropical landscaping in Florida, California, Hawaii, and Texas",
+                    "The berries (fruit) are the most dangerous part — they are juicy and palatable to dogs",
+                    "If you suspect your dog has ingested any part of a Brunfelsia plant, seek emergency veterinary care immediately — do not wait for symptoms to appear"
+                ],
+                sources: ["ASPCA Animal Poison Control Center", "Pet Poison Helpline", "Veterinary Information Network (VIN)", "dvm360 (ASPCA APCC case review)"]
             )
         ]
     }
