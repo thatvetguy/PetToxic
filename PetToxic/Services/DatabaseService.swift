@@ -95,7 +95,7 @@ class DatabaseService {
                 name: "Xylitol",
                 alternateNames: ["birch sugar", "wood sugar", "birch bark extract", "sugar alcohol", "E967"],
                 categories: [.foods],
-                imageAsset: "xylitol",
+                imageAsset: "xylitol_gum_peanutbutter",
                 description: "Xylitol is a sugar alcohol sweetener used in over 1,900 products, including sugar-free gum, candy, baked goods, peanut butter, protein bars, toothpaste, mouthwash, vitamins, supplements, medications, and some cosmetics. Xylitol content varies widely between products — even different flavors of the same brand can have vastly different amounts.",
                 toxicityInfo: "Dogs have an exaggerated insulin response to xylitol (3-7 times greater than to regular sugar), causing rapid and potentially life-threatening hypoglycemia. Large ingestions can also cause acute liver failure through a mechanism that is not fully understood. Cats do not appear to have this response — studies show cats do not develop significant hypoglycemia or liver changes after xylitol ingestion. Other sugar alcohols (sorbitol, mannitol, maltitol, erythritol) do not cause similar effects in dogs.",
                 onsetTime: OnsetTime(
@@ -250,7 +250,7 @@ class DatabaseService {
                 name: "Alcohol",
                 alternateNames: ["ethanol", "ethyl alcohol", "beer", "wine", "liquor", "spirits", "vodka", "whiskey", "rum", "cocktail", "isopropanol", "isopropyl alcohol", "rubbing alcohol", "methanol", "methyl alcohol", "wood alcohol", "hand sanitizer"],
                 categories: [.foods, .recreationalSubstances],
-                imageAsset: "alcohol",
+                imageAsset: "beer_wine_bottles",
                 description: "Alcohol toxicity can occur from ethanol (alcoholic beverages, some liquid medications, mouthwash, fermenting fruits), isopropanol (rubbing alcohol, some hand sanitizers, certain flea sprays), or methanol (windshield washer fluid, some paint removers).",
                 toxicityInfo: "Alcohols are rapidly absorbed and act as central nervous system depressants. They cross the blood-brain barrier quickly and can cause dangerous drops in blood sugar, blood pressure, and body temperature. Isopropanol is more than twice as potent as ethanol. Dogs are highly susceptible to the effects of alcohol, and cats are especially sensitive. Significant absorption can also occur through the skin or by inhalation. Note: Raw yeast bread dough produces ethanol as it ferments—see the separate entry for Raw Yeast Dough.",
                 onsetTime: OnsetTime(
@@ -333,7 +333,7 @@ class DatabaseService {
                 name: "Caffeine",
                 alternateNames: ["coffee", "coffee beans", "coffee grounds", "espresso", "tea", "tea bags", "green tea", "black tea", "energy drinks", "Red Bull", "Monster", "soda", "cola", "diet pills", "caffeine pills", "NoDoz", "Vivarin", "pre-workout", "guarana"],
                 categories: [.foods],
-                imageAsset: "caffeine",
+                imageAsset: "coffee_grounds_energy_drink",
                 description: "Caffeine is a stimulant found in coffee, tea, energy drinks, soda, diet pills, pre-workout supplements, and some medications. Coffee grounds, tea bags, and caffeine pills contain much higher concentrations than brewed beverages.",
                 toxicityInfo: "Caffeine is a methylxanthine compound (related to theobromine in chocolate) that dogs and cats are much more sensitive to than humans. Their bodies metabolize caffeine very slowly, allowing it to build up to toxic levels. While a lap or two of coffee or tea is unlikely to harm most pets, ingestion of coffee grounds, tea bags, or just one or two caffeine pills can be fatal to small dogs and cats. Products containing guarana may have additional caffeine. Note: Chocolate also contains caffeine along with theobromine—see the separate Chocolate entry.",
                 onsetTime: OnsetTime(
@@ -454,7 +454,7 @@ class DatabaseService {
                 name: "Salt",
                 alternateNames: ["sodium chloride", "table salt", "rock salt", "de-icing salt", "road salt", "sea salt", "homemade play dough", "salt dough", "playdough", "paint balls", "sea water", "ocean water", "salty snacks"],
                 categories: [.foods],
-                imageAsset: "salt",
+                imageAsset: "salt_playdough",
                 description: "While small amounts of salt are a normal part of a pet's diet, excessive salt intake can cause sodium poisoning. Common sources include homemade play dough, rock salt (de-icers), sea water at the beach, paint balls, table salt, and very salty snacks like chips or pretzels.",
                 toxicityInfo: "Excess salt overwhelms the body's ability to maintain fluid balance. Water is pulled out of cells—including brain cells—causing dehydration and neurological damage. The risk is much higher when pets don't have access to fresh water to help flush the excess sodium. Homemade play dough is a frequent culprit, as it contains very high salt concentrations and may be attractive to dogs. Important: Salt should never be used to induce vomiting at home—this outdated practice can cause salt poisoning.",
                 onsetTime: OnsetTime(
@@ -494,7 +494,7 @@ class DatabaseService {
                 name: "Fatty Foods & Grease",
                 alternateNames: ["fat trimmings", "grease", "bacon grease", "meat drippings", "turkey skin", "chicken skin", "gravy", "fried foods", "greasy foods", "table scraps", "lard", "cooking oil", "butter", "bacon", "pork fat", "beef fat", "schmaltz", "duck fat"],
                 categories: [.foods, .holidayHazards],
-                imageAsset: "fatty_foods",
+                imageAsset: "bacon_turkey_skin",
                 description: "Fatty foods include meat trimmings, poultry skin, bacon, gravy, fried foods, butter, and cooking grease. While commonly shared as table scraps or treats, high-fat foods pose significant health risks to pets even though they are not technically toxic.",
                 toxicityInfo: "Fatty foods are not poisonous in the traditional sense, but they can cause serious gastrointestinal problems. High-fat meals can trigger gastroenteritis (inflammation of the stomach and intestines) or pancreatitis (inflammation of the pancreas). Pancreatitis occurs when digestive enzymes activate prematurely within the pancreas, causing the organ to essentially digest itself. This can lead to severe pain, organ damage, diabetes, and in serious cases, death. Certain breeds are genetically predisposed to pancreatitis.",
                 onsetTime: OnsetTime(
@@ -687,7 +687,7 @@ class DatabaseService {
                 name: "Moldy Foods",
                 alternateNames: ["moldy bread", "moldy cheese", "spoiled food", "rotten food", "compost", "garbage", "trash", "mycotoxins", "tremorgenic mycotoxins", "moldy walnuts", "moldy nuts", "penitrem-A", "roquefortine"],
                 categories: [.foods],
-                imageAsset: "moldy_foods",
+                imageAsset: "moldy_bread_cheese",
                 description: "Moldy or spoiled foods—including bread, cheese, nuts, pasta, and other items found in trash or compost—can contain dangerous fungal toxins called tremorgenic mycotoxins. Dogs that roam, scavenge, or have access to garbage or compost bins are most commonly affected.",
                 toxicityInfo: "Certain molds that grow on spoiled foods produce tremorgenic mycotoxins, including penitrem-A and roquefortine C. These are classified as neurotoxins that affect the nervous system. While the exact mechanism is not fully understood, studies suggest penitrem-A inhibits glycine, an inhibitory neurotransmitter. The severity of signs varies from mild to severe depending on the type and amount of mycotoxin ingested. Moldy walnuts (especially black walnuts), moldy dairy products, and decomposing food in compost piles are common sources. With early aggressive treatment, prognosis is generally good.",
                 onsetTime: OnsetTime(
@@ -976,6 +976,84 @@ class DatabaseService {
                     "The spring leaves can be confused with tulip leaves or wild garlic — keep pets away from areas where autumn crocus grows",
                     "If you have autumn crocus in your garden, consider removing it entirely or fencing it off",
                     "If you are unsure whether a crocus is spring crocus or autumn crocus, treat any ingestion as an emergency"
+                ],
+                sources: ["Veterinary Information Network (VIN)", "ASPCA Animal Poison Control Center", "Pet Poison Helpline", "Merck Veterinary Manual"]
+            ),
+
+            // MARK: - Insoluble Calcium Oxalate Plants
+            ToxicItem(
+                id: UUID(),
+                name: "Insoluble Calcium Oxalate Plants",
+                alternateNames: ["Dieffenbachia", "dumbcane", "dumb cane", "Philodendron", "heartleaf philodendron", "split-leaf philodendron", "Pothos", "golden pothos", "devil's ivy", "Peace lily", "Spathiphyllum", "Calla lily", "Zantedeschia", "Caladium", "angel wings", "Elephant ear", "Alocasia", "Colocasia", "Arrowhead vine", "Syngonium", "Monstera", "Swiss cheese plant", "Chinese evergreen", "Aglaonema", "Anthurium", "flamingo flower", "flamingo lily", "Araceae", "aroid", "arum family", "calcium oxalate crystals", "raphides"],
+                categories: [.plants],
+                imageAsset: "pothos_philodendron",
+                description: "The Araceae (aroid) family includes many of the most popular houseplants: Dieffenbachia (dumbcane), Philodendron, Pothos (devil's ivy), Peace lily, Calla lily, Caladium, Elephant ear, Monstera, Chinese evergreen, Anthurium, and Arrowhead vine. These plants are favored because they tolerate low light and infrequent watering, making them common in homes and offices. According to the ASPCA Animal Poison Control Center, the Araceae family is the most common plant exposure reported in pets.",
+                toxicityInfo: "These plants contain insoluble calcium oxalate crystals called raphides — microscopic needle-sharp structures bundled inside specialized cells. When a pet bites or chews the plant, these crystals are forcibly ejected into the mouth and throat tissues, causing immediate intense pain. The crystals also contain irritating compounds like proteases that worsen local inflammation. Importantly, because the crystals are insoluble, they are NOT absorbed into the bloodstream and do NOT cause kidney damage — the effects are limited to the mouth, tongue, and throat. While symptoms can look alarming to pet owners (dramatic drooling, pawing at the mouth), the condition is generally self-limiting. The concentration of calcium oxalate varies between plants, so some cause more irritation than others. Note: 'Mother-in-law's tongue' can refer to both Dieffenbachia (covered here) and Snake Plant (Sansevieria), which contains different toxins — see separate entry for Snake Plant.",
+                onsetTime: OnsetTime(
+                    early: "Signs appear immediately or within minutes of chewing the plant — the pain response is rapid and dramatic",
+                    delayed: "Symptoms typically resolve within 12-24 hours; severe swelling of the lips, tongue, or throat may take longer to subside"
+                ),
+                symptoms: [
+                    "Hypersalivation (profuse drooling)",
+                    "Pawing at the mouth or face",
+                    "Oral pain",
+                    "Swelling of the lips, tongue, or throat",
+                    "Vomiting",
+                    "Loss of appetite",
+                    "Difficulty swallowing",
+                    "Difficulty breathing (rare, if severe throat/laryngeal swelling occurs)",
+                    "Eye pain, swelling, and sensitivity to light (rare, if ocular exposure)"
+                ],
+                speciesRisks: [
+                    SpeciesRisk(species: .dog, severity: .low, notes: "Effects are localized to the mouth and throat; generally self-limiting; kidney damage does not occur with these plants"),
+                    SpeciesRisk(species: .cat, severity: .low, notes: "Cats may be more likely to chew on houseplants; same localized, self-limiting effects; no systemic toxicity")
+                ],
+                preventionTips: [
+                    "Keep Araceae family plants out of reach of pets, especially cats and puppies prone to chewing",
+                    "Consider hanging planters or elevated plant stands",
+                    "If your pet is a plant chewer, opt for pet-safe alternatives like spider plants, Boston ferns, or African violets",
+                    "Supervise pets around houseplants and redirect chewing behavior",
+                    "If you see your pet chewing on one of these plants, contact your veterinarian for guidance even though effects are usually mild"
+                ],
+                sources: ["ASPCA Animal Poison Control Center", "Veterinary Information Network (VIN)", "Pet Poison Helpline", "Merck Veterinary Manual"]
+            ),
+
+            // MARK: - Soluble Calcium Oxalate Plants
+            ToxicItem(
+                id: UUID(),
+                name: "Soluble Calcium Oxalate Plants",
+                alternateNames: ["Rhubarb", "rhubarb leaves", "garden rhubarb", "common rhubarb", "Rheum rhabarbarum", "Star fruit", "starfruit", "carambola", "Averrhoa carambola", "Shamrock", "shamrock plant", "Oxalis", "wood sorrel", "sorrel", "oxalic acid", "soluble oxalates"],
+                categories: [.plants, .foods],
+                imageAsset: "rhubarb_starfruit",
+                description: "Soluble calcium oxalate plants contain oxalic acid and oxalate salts that can be absorbed into the bloodstream — making them fundamentally different from the insoluble calcium oxalate houseplants (Philodendron, Pothos, etc.) that only cause local mouth irritation. The most common soluble oxalate plants encountered by pets are rhubarb (the leaves, not the edible stems), star fruit (carambola), and shamrock plants (Oxalis). This type of toxicity is less commonly seen in small animals and is more of a concern in livestock that graze on these plants chronically.",
+                toxicityInfo: "When soluble oxalates are absorbed from the GI tract, they bind with calcium in the bloodstream, causing a sudden drop in blood calcium levels (acute hypocalcemia). The calcium oxalate crystals that form can then accumulate in the kidneys, potentially causing acute kidney injury (AKI). While kidney damage from these plants is rare in dogs and cats, there is no established safe dose. Pets that are dehydrated or have pre-existing kidney disease may be at higher risk and should be treated more aggressively. Note that rhubarb toxicity applies to the LEAVES only — the stems (stalks) that humans eat are safe, though not particularly good for pets due to their tartness. Star fruit poses an additional concern because it can cause neurological effects in humans and animals with kidney disease.",
+                onsetTime: OnsetTime(
+                    early: "GI signs (hypersalivation, vomiting, diarrhea, loss of appetite) and signs of hypocalcemia (weakness, tremors, muscle twitching) may appear within hours of ingestion",
+                    delayed: "Signs of kidney injury (increased thirst and urination, decreased urination, lethargy) may develop 24-36 hours after ingestion if AKI occurs"
+                ),
+                symptoms: [
+                    "Hypersalivation (drooling)",
+                    "Vomiting",
+                    "Diarrhea",
+                    "Loss of appetite",
+                    "Lethargy and weakness",
+                    "Tremors or muscle twitching (from low calcium)",
+                    "Tetany or muscle spasms (severe hypocalcemia)",
+                    "Increased thirst and urination (early kidney involvement)",
+                    "Decreased urination (as kidney injury progresses)",
+                    "Blood in urine"
+                ],
+                speciesRisks: [
+                    SpeciesRisk(species: .dog, severity: .moderate, notes: "Large ingestions can cause hypocalcemia and potential kidney injury; dehydrated dogs or those with pre-existing kidney disease are at higher risk"),
+                    SpeciesRisk(species: .cat, severity: .moderate, notes: "Same concerns as dogs; cats with chronic kidney disease (common in older cats) may be more vulnerable"),
+                    SpeciesRisk(species: .bird, severity: .high, notes: "Birds are more susceptible due to small body size; star fruit in particular has caused toxicity in pet birds")
+                ],
+                preventionTips: [
+                    "If you grow rhubarb, fence off the garden or keep pets away — the large leaves can be tempting to chew",
+                    "Never feed rhubarb leaves to pets (the stems are safe but not recommended)",
+                    "Keep star fruit out of reach; do not share this fruit with pets",
+                    "If you have shamrock plants as houseplants or decorations (common around St. Patrick's Day), keep them away from pets",
+                    "Pets with kidney disease should be kept away from all oxalate-containing plants"
                 ],
                 sources: ["Veterinary Information Network (VIN)", "ASPCA Animal Poison Control Center", "Pet Poison Helpline", "Merck Veterinary Manual"]
             )
