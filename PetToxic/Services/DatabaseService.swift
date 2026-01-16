@@ -984,11 +984,11 @@ class DatabaseService {
             ToxicItem(
                 id: UUID(),
                 name: "Insoluble Calcium Oxalate Plants",
-                alternateNames: ["Dieffenbachia", "dumbcane", "dumb cane", "Philodendron", "heartleaf philodendron", "split-leaf philodendron", "Pothos", "golden pothos", "devil's ivy", "Peace lily", "Spathiphyllum", "Calla lily", "Zantedeschia", "Caladium", "angel wings", "Elephant ear", "Alocasia", "Colocasia", "Arrowhead vine", "Syngonium", "Monstera", "Swiss cheese plant", "Chinese evergreen", "Aglaonema", "Anthurium", "flamingo flower", "flamingo lily", "Araceae", "aroid", "arum family", "calcium oxalate crystals", "raphides"],
+                alternateNames: ["Dieffenbachia", "dumbcane", "dumb cane", "Philodendron", "heartleaf philodendron", "split-leaf philodendron", "Pothos", "golden pothos", "devil's ivy", "Peace lily", "Spathiphyllum", "Calla lily", "Zantedeschia", "Caladium", "angel wings", "Elephant ear", "Alocasia", "Colocasia", "Arrowhead vine", "Syngonium", "Monstera", "Swiss cheese plant", "Chinese evergreen", "Aglaonema", "Anthurium", "flamingo flower", "flamingo lily", "Araceae", "aroid", "arum family", "calcium oxalate crystals", "raphides", "ZZ plant", "Zamioculcas zamiifolia", "Zanzibar gem", "eternity plant", "aroid palm", "emerald palm", "Raven ZZ", "ZZ Raven"],
                 categories: [.plants],
                 imageAsset: "pothos_philodendron",
-                description: "The Araceae (aroid) family includes many of the most popular houseplants: Dieffenbachia (dumbcane), Philodendron, Pothos (devil's ivy), Peace lily, Calla lily, Caladium, Elephant ear, Monstera, Chinese evergreen, Anthurium, and Arrowhead vine. These plants are favored because they tolerate low light and infrequent watering, making them common in homes and offices. According to the ASPCA Animal Poison Control Center, the Araceae family is the most common plant exposure reported in pets.",
-                toxicityInfo: "These plants contain insoluble calcium oxalate crystals called raphides — microscopic needle-sharp structures bundled inside specialized cells. When a pet bites or chews the plant, these crystals are forcibly ejected into the mouth and throat tissues, causing immediate intense pain. The crystals also contain irritating compounds like proteases that worsen local inflammation. Importantly, because the crystals are insoluble, they are NOT absorbed into the bloodstream and do NOT cause kidney damage — the effects are limited to the mouth, tongue, and throat. While symptoms can look alarming to pet owners (dramatic drooling, pawing at the mouth), the condition is generally self-limiting. The concentration of calcium oxalate varies between plants, so some cause more irritation than others. Note: 'Mother-in-law's tongue' can refer to both Dieffenbachia (covered here) and Snake Plant (Sansevieria), which contains different toxins — see separate entry for Snake Plant.",
+                description: "The Araceae (aroid) family includes many of the most popular houseplants: Dieffenbachia (dumbcane), Philodendron, Pothos (devil's ivy), Peace lily, Calla lily, Caladium, Elephant ear, Monstera, Chinese evergreen, Anthurium, and Arrowhead vine. These plants are favored because they tolerate low light and infrequent watering, making them common in homes and offices. According to the ASPCA Animal Poison Control Center, the Araceae family is the most common plant exposure reported in pets. Also included in this family is the increasingly popular ZZ plant (Zamioculcas zamiifolia), known for its glossy, dark green leaves and extreme tolerance of neglect.",
+                toxicityInfo: "These plants contain insoluble calcium oxalate crystals called raphides — microscopic needle-sharp structures bundled inside specialized cells. When a pet bites or chews the plant, these crystals are forcibly ejected into the mouth and throat tissues, causing immediate intense pain. The crystals also contain irritating compounds like proteases that worsen local inflammation. Importantly, because the crystals are insoluble, they are NOT absorbed into the bloodstream and do NOT cause kidney damage — the effects are limited to the mouth, tongue, and throat. While symptoms can look alarming to pet owners (dramatic drooling, pawing at the mouth), the condition is generally self-limiting. The concentration of calcium oxalate varies between plants, so some cause more irritation than others. Note: 'Mother-in-law's tongue' can refer to both Dieffenbachia (covered here) and Snake Plant (Sansevieria), which contains different toxins — see separate entry for Snake Plant.\n\n**ZZ Plant (Zamioculcas zamiifolia)** — Despite sometimes being marketed as 'pet-safe,' ZZ plants are members of the Araceae family and contain the same insoluble calcium oxalate crystals. Chewing on the leaves or stems causes the same immediate oral pain and irritation as other plants in this group. The sap can also cause skin irritation on contact. Effects are localized and self-limiting — no systemic toxicity occurs.",
                 onsetTime: OnsetTime(
                     early: "Signs appear immediately or within minutes of chewing the plant — the pain response is rapid and dramatic",
                     delayed: "Symptoms typically resolve within 12-24 hours; severe swelling of the lips, tongue, or throat may take longer to subside"
@@ -1553,11 +1553,11 @@ class DatabaseService {
             ToxicItem(
                 id: UUID(),
                 name: "GI Irritant Plants",
-                alternateNames: ["Poinsettia", "Euphorbia pulcherrima", "Christmas flower", "Christmas plant", "Mexican flame leaf", "Iris", "iris rhizome", "flag iris", "bearded iris", "Chrysanthemum", "chrysanthemums", "mums", "garden mums", "florist's mum", "Hosta", "hostas", "plantain lily", "funkia", "Baby's breath", "babys breath", "Gypsophila", "Gypsophila paniculata", "Carnation", "carnations", "Dianthus", "Dianthus caryophyllus", "pinks", "Jade plant", "jade plant", "Crassula ovata", "Crassula argentea", "money plant", "money tree", "lucky plant", "friendship tree", "Mistletoe", "mistletoe", "Phoradendron", "Phoradendron leucarpum", "American mistletoe", "Christmas mistletoe", "Holly", "holly", "Ilex", "Ilex aquifolium", "English holly", "Christmas holly", "holly berries", "Christmas cactus", "Schlumbergera", "Schlumbergera truncata", "crab claw cactus", "Thanksgiving cactus", "Easter cactus", "holiday cactus"],
+                alternateNames: ["Poinsettia", "Euphorbia pulcherrima", "Christmas flower", "Christmas plant", "Mexican flame leaf", "Iris", "iris rhizome", "flag iris", "bearded iris", "Chrysanthemum", "chrysanthemums", "mums", "garden mums", "florist's mum", "Hosta", "hostas", "plantain lily", "funkia", "Baby's breath", "babys breath", "Gypsophila", "Gypsophila paniculata", "Carnation", "carnations", "Dianthus", "Dianthus caryophyllus", "pinks", "Jade plant", "jade plant", "Crassula ovata", "Crassula argentea", "money plant", "money tree", "lucky plant", "friendship tree", "Mistletoe", "mistletoe", "Phoradendron", "Phoradendron leucarpum", "American mistletoe", "Christmas mistletoe", "Holly", "holly", "Ilex", "Ilex aquifolium", "English holly", "Christmas holly", "holly berries", "Christmas cactus", "Schlumbergera", "Schlumbergera truncata", "crab claw cactus", "Thanksgiving cactus", "Easter cactus", "holiday cactus", "Clematis", "clematis vine", "Clematis spp", "virgin's bower", "leather flower", "leatherflower", "old man's beard", "traveller's joy"],
                 categories: [.plants, .holidayHazards],
                 imageAsset: "poinsettia_mums",
-                description: "Many common houseplants, garden plants, and cut flowers contain substances that can cause mild gastrointestinal irritation when ingested by pets. While these plants are technically 'toxic,' they rarely cause serious illness — symptoms are generally limited to vomiting, diarrhea, drooling, and temporary loss of appetite. This entry covers several frequently searched plants that fall into this mild GI irritant category: Poinsettia, Iris, Chrysanthemums (mums), Hosta, Baby's Breath, Carnations, Jade Plant, Mistletoe, Holly, and Christmas Cactus.",
-                toxicityInfo: "The plants in this group contain various irritating compounds but share a common characteristic: they cause only mild to moderate GI upset in the vast majority of cases. Animals can generally ingest these plants without severe repercussions.\n\n**Poinsettia** — Perhaps the most overhyped 'toxic' plant. The milky sap can cause mild oral irritation and GI upset, but poinsettia is NOT the deadly poison popular culture suggests. Studies have shown that a 50-pound dog would need to eat over 500 poinsettia leaves to approach a potentially toxic dose. Most pets that chew on poinsettia experience mild drooling or vomiting at worst.\n\n**Iris** — The rhizomes (underground stems) are more irritating than the foliage. Contains pentacyclic terpenoids (irisin, iridin) that cause GI upset. Most cases involve only vomiting and diarrhea. Severe bloody diarrhea is primarily a concern in grazing livestock, not household pets.\n\n**Chrysanthemums (Mums)** — Contain pyrethrins, sesquiterpene lactones, and other irritants. While pyrethrins are used in flea products, the concentration in mums is low. Ingestion typically causes drooling, vomiting, and diarrhea. Skin contact may cause mild dermatitis in sensitive animals.\n\n**Hosta** — Contains saponins that cause GI irritation. Very popular shade garden plants that dogs sometimes dig up. Effects are limited to vomiting, diarrhea, and depression.\n\n**Baby's Breath** — Common in floral bouquets. Contains gyposenin (a saponin) that causes mild GI upset. Dried baby's breath in arrangements is less toxic than fresh.\n\n**Carnations** — Contain unknown GI irritants. Ingestion causes mild vomiting, diarrhea, or drooling. Very low toxicity concern.\n\n**Jade Plant** — A popular succulent houseplant. The resins can cause mild GI irritation, but jade plants are considered essentially non-toxic by the ASPCA. Ingestion typically causes only mild vomiting, similar to any other greenery.\n\n**Mistletoe (American)** — The American mistletoe (Phoradendron species) used in holiday decorations contains compounds that are theoretically cardiotoxic (phoratoxins), but clinically significant cardiac effects are extremely rare in dogs and cats. The most common signs reported to ASPCA APCC are depression and vomiting. Much of the 'deadly mistletoe' reputation comes from European mistletoe (Viscum album), which is more toxic but rarely encountered in North America.\n\n**Holly** — The berries and leaves contain saponins that cause GI irritation. Signs include salivation, vomiting, lip smacking, head shaking, and diarrhea. Effects are self-limiting. Serious toxicity is rare despite holly's reputation.\n\n**Christmas Cactus** — Members of the Schlumbergera genus (Christmas, Thanksgiving, and Easter cacti) are not considered toxic. Ingestion may cause mild gastric upset at most. These are among the safest 'holiday plants' to have around pets.",
+                description: "Many common houseplants, garden plants, and cut flowers contain substances that can cause mild gastrointestinal irritation when ingested by pets. While these plants are technically 'toxic,' they rarely cause serious illness — symptoms are generally limited to vomiting, diarrhea, drooling, and temporary loss of appetite. This entry covers several frequently searched plants that fall into this mild GI irritant category: Poinsettia, Iris, Chrysanthemums (mums), Hosta, Baby's Breath, Carnations, Jade Plant, Mistletoe, Holly, Christmas Cactus, and Clematis.",
+                toxicityInfo: "The plants in this group contain various irritating compounds but share a common characteristic: they cause only mild to moderate GI upset in the vast majority of cases. Animals can generally ingest these plants without severe repercussions.\n\n**Poinsettia** — Perhaps the most overhyped 'toxic' plant. The milky sap can cause mild oral irritation and GI upset, but poinsettia is NOT the deadly poison popular culture suggests. Studies have shown that a 50-pound dog would need to eat over 500 poinsettia leaves to approach a potentially toxic dose. Most pets that chew on poinsettia experience mild drooling or vomiting at worst.\n\n**Iris** — The rhizomes (underground stems) are more irritating than the foliage. Contains pentacyclic terpenoids (irisin, iridin) that cause GI upset. Most cases involve only vomiting and diarrhea. Severe bloody diarrhea is primarily a concern in grazing livestock, not household pets.\n\n**Chrysanthemums (Mums)** — Contain pyrethrins, sesquiterpene lactones, and other irritants. While pyrethrins are used in flea products, the concentration in mums is low. Ingestion typically causes drooling, vomiting, and diarrhea. Skin contact may cause mild dermatitis in sensitive animals.\n\n**Hosta** — Contains saponins that cause GI irritation. Very popular shade garden plants that dogs sometimes dig up. Effects are limited to vomiting, diarrhea, and depression.\n\n**Baby's Breath** — Common in floral bouquets. Contains gyposenin (a saponin) that causes mild GI upset. Dried baby's breath in arrangements is less toxic than fresh.\n\n**Carnations** — Contain unknown GI irritants. Ingestion causes mild vomiting, diarrhea, or drooling. Very low toxicity concern.\n\n**Jade Plant** — A popular succulent houseplant. The resins can cause mild GI irritation, but jade plants are considered essentially non-toxic by the ASPCA. Ingestion typically causes only mild vomiting, similar to any other greenery.\n\n**Mistletoe (American)** — The American mistletoe (Phoradendron species) used in holiday decorations contains compounds that are theoretically cardiotoxic (phoratoxins), but clinically significant cardiac effects are extremely rare in dogs and cats. The most common signs reported to ASPCA APCC are depression and vomiting. Much of the 'deadly mistletoe' reputation comes from European mistletoe (Viscum album), which is more toxic but rarely encountered in North America.\n\n**Holly** — The berries and leaves contain saponins that cause GI irritation. Signs include salivation, vomiting, lip smacking, head shaking, and diarrhea. Effects are self-limiting. Serious toxicity is rare despite holly's reputation.\n\n**Christmas Cactus** — Members of the Schlumbergera genus (Christmas, Thanksgiving, and Easter cacti) are not considered toxic. Ingestion may cause mild gastric upset at most. These are among the safest 'holiday plants' to have around pets.\n\n**Clematis** — This popular flowering vine contains irritating glycosides that can cause drooling, vomiting, and diarrhea if ingested. Thankfully, clematis has a very bitter taste that deters most pets from consuming significant amounts. Effects are self-limiting and rarely require more than monitoring.",
                 onsetTime: OnsetTime(
                     early: "GI signs (vomiting, diarrhea, drooling, loss of appetite) typically appear within a few hours of ingestion",
                     delayed: "Symptoms are generally self-limiting and resolve within 24 hours without treatment; persistent symptoms beyond 24-48 hours warrant veterinary evaluation"
@@ -1584,7 +1584,8 @@ class DatabaseService {
                     "If vomiting or diarrhea persists beyond 24 hours or your pet seems uncomfortable, contact your veterinarian",
                     "Mistletoe and holly are traditional holiday decorations — hang them high out of pet reach",
                     "Jade plants are low-toxicity but should still be kept away from pets that like to chew on succulents",
-                    "Christmas cactus is one of the safest holiday plants — mild GI upset at most if ingested"
+                    "Christmas cactus is one of the safest holiday plants — mild GI upset at most if ingested",
+                    "Clematis vines have a bitter taste that usually prevents pets from eating significant amounts"
                 ],
                 sources: ["ASPCA Animal Poison Control Center", "Pet Poison Helpline", "Veterinary Information Network (VIN)", "VCA Animal Hospitals"]
             ),
@@ -1630,6 +1631,125 @@ class DatabaseService {
                     "If you suspect your dog has ingested any part of a Brunfelsia plant, seek emergency veterinary care immediately — do not wait for symptoms to appear"
                 ],
                 sources: ["ASPCA Animal Poison Control Center", "Pet Poison Helpline", "Veterinary Information Network (VIN)", "dvm360 (ASPCA APCC case review)"]
+            ),
+
+            // MARK: - Kalanchoe
+            ToxicItem(
+                id: UUID(),
+                name: "Kalanchoe",
+                alternateNames: ["Kalanchoe spp", "mother of thousands", "mother of millions", "chandelier plant", "devil's backbone", "cathedral bells", "flaming Katy", "florist kalanchoe", "paddle plant", "flapjacks", "Bryophyllum", "air plant", "palm beachbells", "donkey ears", "kalanchoe daigremontiana", "kalanchoe blossfeldiana"],
+                categories: [.plants],
+                imageAsset: "kalanchoe_flowers",
+                description: "Kalanchoe is a large genus of succulent houseplants known for their thick, waxy leaves and clusters of small, colorful flowers (red, pink, orange, yellow, or white). They are extremely popular due to their low water requirements and long-lasting blooms. Common varieties include the florist kalanchoe (Kalanchoe blossfeldiana), mother of thousands/millions (Kalanchoe daigremontiana), and paddle plant (Kalanchoe thyrsiflora). Kalanchoe plants are also commonly purchased as decorations during the Chinese New Year.",
+                toxicityInfo: "Kalanchoe contains bufodienolides, a type of cardiac glycoside that can affect the heart. All parts of the plant contain these toxins, with the flowers having the highest concentration. However, in real-world exposures involving dogs and cats, clinical signs are almost always limited to gastrointestinal upset — pets simply do not eat enough of the plant to cause cardiac effects. According to toxicology specialists, ingestion typically results in vomiting within 1-2 hours, and then symptoms resolve. Large ingestions could theoretically cause changes in heart rate and rhythm, weakness, and collapse, but this is rare in household pet exposures. Birds may be more susceptible due to their smaller body size.",
+                onsetTime: OnsetTime(
+                    early: "Vomiting typically occurs within 1-2 hours of ingestion and is often the only sign",
+                    delayed: "Symptoms usually resolve quickly after vomiting; cardiac effects are rare in dogs and cats but could develop with very large ingestions"
+                ),
+                symptoms: [
+                    "Vomiting (most common)",
+                    "Diarrhea",
+                    "Drooling (hypersalivation)",
+                    "Loss of appetite",
+                    "Lethargy or depression",
+                    "Abnormal heart rate or rhythm (rare, large ingestions)",
+                    "Weakness (rare, large ingestions)",
+                    "Collapse (rare, large ingestions)"
+                ],
+                speciesRisks: [
+                    SpeciesRisk(species: .dog, severity: .low, notes: "Most ingestions cause only vomiting and GI upset; dogs typically do not eat enough to cause cardiac effects"),
+                    SpeciesRisk(species: .cat, severity: .low, notes: "Same as dogs — GI upset is the primary concern; cardiac effects are rare"),
+                    SpeciesRisk(species: .bird, severity: .high, notes: "Birds are more susceptible to cardiac glycosides due to small body size; can cause depression, ataxia, tremors, seizures, and cardiac effects")
+                ],
+                preventionTips: [
+                    "Keep kalanchoe plants on high shelves or in rooms inaccessible to pets",
+                    "Be aware that all parts of the plant are toxic, with flowers containing the highest concentration",
+                    "If your pet vomits after chewing on kalanchoe, contact your veterinarian for guidance",
+                    "Consider pet-safe succulent alternatives like Haworthia or Echeveria",
+                    "Dispose of fallen flowers and leaves promptly"
+                ],
+                sources: ["Veterinary Information Network (VIN)", "ASPCA Animal Poison Control Center", "Pet Poison Helpline", "Veterinary Medicine (peer-reviewed journal)"]
+            ),
+
+            // MARK: - English Ivy
+            ToxicItem(
+                id: UUID(),
+                name: "English Ivy",
+                alternateNames: ["Hedera helix", "common ivy", "European ivy", "ivy", "branching ivy", "glacier ivy", "needlepoint ivy", "sweetheart ivy", "California ivy", "Hahn's ivy", "Irish ivy", "Baltic ivy", "ivy vine"],
+                categories: [.plants],
+                imageAsset: "english_ivy_vine",
+                description: "English ivy (Hedera helix) is an extremely common evergreen climbing vine found both as a houseplant and as outdoor ground cover throughout North America. It is prized for its attractive lobed leaves, ability to climb walls and fences, air-purifying properties, and tolerance of low light conditions. English ivy is widely used in landscaping and can become invasive in many regions. Despite its popularity, it is toxic to pets.",
+                toxicityInfo: "English ivy contains triterpenoid saponins (primarily hederagenin), as well as polyacetylene compounds (falcarinol and didehydrofalcarinol). These compounds cause gastrointestinal irritation when ingested. The foliage (leaves) is more toxic than the berries. In most cases, ingestion causes intense GI distress — vomiting, diarrhea, and abdominal pain — but is unlikely to cause serious illness or death unless very large amounts are consumed. According to veterinary toxicologists, vomiting typically occurs within 2-3 hours of ingestion. The sap can also cause contact dermatitis (skin irritation) in both pets and humans who handle the plant. More severe signs (neurological effects, breathing difficulty) have been reported but require ingestion of large quantities and are uncommon in typical household exposures.",
+                onsetTime: OnsetTime(
+                    early: "Vomiting and GI signs typically appear within 2-3 hours of ingestion",
+                    delayed: "Most symptoms resolve with supportive care; severe signs are uncommon unless very large amounts are ingested"
+                ),
+                symptoms: [
+                    "Vomiting",
+                    "Diarrhea",
+                    "Abdominal pain",
+                    "Drooling (hypersalivation)",
+                    "Loss of appetite",
+                    "Skin irritation or rash (contact with sap)",
+                    "Excessive thirst (large ingestions)",
+                    "Weakness or incoordination (large ingestions, rare)",
+                    "Dilated pupils (large ingestions, rare)",
+                    "Difficulty breathing (large ingestions, rare)"
+                ],
+                speciesRisks: [
+                    SpeciesRisk(species: .dog, severity: .moderate, notes: "Causes intense GI distress (vomiting, diarrhea, abdominal pain); severe effects are unlikely unless very large amounts are ingested"),
+                    SpeciesRisk(species: .cat, severity: .moderate, notes: "Same GI effects as dogs; cats may be attracted to trailing vines indoors"),
+                    SpeciesRisk(species: .bird, severity: .moderate, notes: "Limited data; birds should be kept away from English ivy")
+                ],
+                preventionTips: [
+                    "Keep indoor English ivy plants in hanging baskets or on high shelves out of pet reach",
+                    "Be aware that the leaves are more toxic than the berries",
+                    "Wear gloves when pruning or handling English ivy — the sap can cause skin irritation",
+                    "If you have English ivy as ground cover outdoors, supervise pets to prevent grazing",
+                    "Never burn English ivy clippings — toxins can become airborne",
+                    "If your pet develops vomiting after chewing on ivy, contact your veterinarian"
+                ],
+                sources: ["Veterinary Information Network (VIN)", "ASPCA Animal Poison Control Center", "Pet Poison Helpline"]
+            ),
+
+            // MARK: - Wisteria
+            ToxicItem(
+                id: UUID(),
+                name: "Wisteria",
+                alternateNames: ["Wisteria spp", "Wisteria sinensis", "Wisteria floribunda", "Chinese wisteria", "Japanese wisteria", "American wisteria", "wisteria vine", "wisteria pods", "wisteria seeds"],
+                categories: [.plants],
+                imageAsset: "wisteria_flowers_pods",
+                description: "Wisteria is a stunning woody climbing vine known for its cascading clusters of fragrant purple, blue, pink, or white flowers. It is commonly grown on pergolas, arbors, and walls throughout North America. While beautiful, wisteria is significantly more toxic than many common garden plants — the seed pods and seeds are particularly dangerous and have caused fatalities in small animals and children.",
+                toxicityInfo: "Wisteria contains two toxic compounds: lectin and wisterin glycoside. All parts of the plant are considered toxic, but the seed pods and seeds contain the highest concentrations and pose the greatest danger. Lectin can cause blood cell clumping, while wisterin glycoside (a saponin) causes severe gastrointestinal effects. According to veterinary toxicologists, as few as two seeds can cause severe illness in small dogs. Symptoms include intense vomiting (sometimes prolonged), abdominal pain, diarrhea, and dehydration. With appropriate supportive care, most dogs become asymptomatic within 24 hours, and liver problems have not been reported. However, without treatment, severe cases can lead to dangerous dehydration and collapse.",
+                onsetTime: OnsetTime(
+                    early: "Nausea, vomiting, and abdominal pain typically develop within a few hours of ingestion",
+                    delayed: "With supportive care, most animals improve within 24 hours; severe dehydration can develop if vomiting and diarrhea are prolonged and untreated"
+                ),
+                symptoms: [
+                    "Vomiting (often severe and prolonged)",
+                    "Abdominal pain",
+                    "Diarrhea",
+                    "Nausea",
+                    "Loss of appetite",
+                    "Lethargy or depression",
+                    "Dehydration",
+                    "Weakness",
+                    "Collapse (severe cases)"
+                ],
+                speciesRisks: [
+                    SpeciesRisk(species: .dog, severity: .high, notes: "Seeds and pods are most dangerous — as few as two seeds can cause severe illness in small dogs; entire plant is toxic"),
+                    SpeciesRisk(species: .cat, severity: .high, notes: "Same toxicity concerns as dogs; smaller body size increases risk from even minimal seed ingestion"),
+                    SpeciesRisk(species: .bird, severity: .high, notes: "Birds are susceptible; small body size makes even small exposures potentially serious")
+                ],
+                preventionTips: [
+                    "Keep dogs away from wisteria vines, especially when seed pods are present",
+                    "Remove and dispose of fallen seed pods promptly — they are the most toxic part of the plant",
+                    "Do not allow pets to chew on wisteria branches, leaves, or flowers",
+                    "Be especially vigilant in late summer and fall when seed pods mature",
+                    "If you suspect your pet has eaten any part of a wisteria plant, especially seeds or pods, contact your veterinarian immediately",
+                    "Consider fencing off wisteria or choosing non-toxic climbing vines if you have curious pets"
+                ],
+                sources: ["Veterinary Information Network (VIN)", "ASPCA Animal Poison Control Center", "Pet Poison Helpline"]
             )
         ]
     }
