@@ -1056,6 +1056,241 @@ class DatabaseService {
                     "Pets with kidney disease should be kept away from all oxalate-containing plants"
                 ],
                 sources: ["Veterinary Information Network (VIN)", "ASPCA Animal Poison Control Center", "Pet Poison Helpline", "Merck Veterinary Manual"]
+            ),
+
+            // MARK: - Daffodils
+            ToxicItem(
+                id: UUID(),
+                name: "Daffodils",
+                alternateNames: ["daffodil", "Narcissus", "Narcissus spp", "jonquil", "jonquils", "paper white", "paperwhite", "paper whites", "narcissus bulb", "daffodil bulb", "yellow daffodil", "wild daffodil", "Lent lily", "lycorine"],
+                categories: [.plants, .holidayHazards],
+                imageAsset: "daffodil_narcissus",
+                description: "Daffodils (Narcissus species) are popular spring-flowering bulbs recognized by their distinctive trumpet-shaped yellow, white, or orange flowers. They are found in gardens, parks, and floral arrangements — particularly around Easter and spring holidays. Daffodils belong to the Amaryllidaceae family, which is different from tulips (Liliaceae) and contains different toxic compounds.",
+                toxicityInfo: "Daffodils contain at least 15 different phenanthridine alkaloids, with lycorine being the most abundant. These alkaloids induce vomiting by irritating the stomach lining and stimulating the vomiting center in the brain. The bulbs also contain calcium oxalate crystals in their outer layers, which cause intense tissue irritation when chewed — similar to hyacinth bulbs. All parts of the daffodil are toxic, but the bulbs contain the highest concentration of toxins. Dogs are most commonly poisoned when they dig up freshly planted bulbs or gain access to stored bulbs. Large ingestions — particularly of bulbs — can cause serious cardiovascular effects including dangerous heart rhythm abnormalities and low blood pressure. There is no specific antidote; treatment is supportive. With prompt veterinary care, prognosis is generally good.",
+                onsetTime: OnsetTime(
+                    early: "Vomiting is usually the first sign and can occur within 15 minutes to a few hours of ingestion; drooling, oral irritation, and diarrhea typically follow",
+                    delayed: "Cardiovascular and neurologic signs (low blood pressure, abnormal heart rhythm, tremors, seizures) may develop with large ingestions; a published case report described a cat with signs persisting for 3 days before presentation, with full recovery by day 6"
+                ),
+                symptoms: [
+                    "Vomiting (often the first sign)",
+                    "Hypersalivation (drooling)",
+                    "Diarrhea",
+                    "Oral irritation or pain",
+                    "Abdominal pain",
+                    "Loss of appetite",
+                    "Lethargy or depression",
+                    "Tremors or shivering",
+                    "Low blood pressure (weakness, collapse)",
+                    "Abnormal heart rate or rhythm",
+                    "Hypothermia (low body temperature)",
+                    "Seizures or convulsions (large ingestions)",
+                    "Difficulty breathing (rare, severe cases)"
+                ],
+                speciesRisks: [
+                    SpeciesRisk(species: .dog, severity: .moderate, notes: "Dogs are most commonly affected because they dig up and chew on bulbs; ingestion of flowers or leaves typically causes GI upset, while bulb ingestion can cause more serious cardiovascular effects"),
+                    SpeciesRisk(species: .cat, severity: .moderate, notes: "Cats can develop significant cardiovascular effects including hypothermia, bradycardia, and hypotension; a published case report documented full recovery with supportive care"),
+                    SpeciesRisk(species: .bird, severity: .moderate, notes: "Limited data available; birds should be kept away from daffodils as a precaution")
+                ],
+                preventionTips: [
+                    "Store unplanted bulbs in a secure location out of pet reach — a bag of bulbs is a common source of poisoning",
+                    "Supervise dogs in the garden during planting season; consider fencing off freshly planted bulb beds",
+                    "If your dog is a digger, avoid planting daffodils in areas they can access",
+                    "Keep cut daffodils in vases out of pet reach; do not let pets drink the vase water",
+                    "Be aware that daffodils are common in Easter bouquets and spring floral arrangements",
+                    "Dispose of dead plant material securely — dried stems and leaves can still cause toxicity"
+                ],
+                sources: ["Veterinary Information Network (VIN)", "ASPCA Animal Poison Control Center", "Pet Poison Helpline", "Canadian Veterinary Journal (case report)"]
+            ),
+
+            // MARK: - Foxglove
+            ToxicItem(
+                id: UUID(),
+                name: "Foxglove",
+                alternateNames: ["Digitalis", "Digitalis purpurea", "purple foxglove", "common foxglove", "lady's glove", "fairy gloves", "folk's glove", "digitalis", "digoxin plant", "digitoxin plant", "dead man's bells", "witch's gloves"],
+                categories: [.plants],
+                imageAsset: "foxglove_digitalis",
+                description: "Foxglove (Digitalis purpurea) is a tall, elegant flowering plant with distinctive bell-shaped flowers that grow in spikes, typically purple, pink, white, or yellow. It is commonly found in cottage gardens and naturalized areas throughout temperate regions. Despite its beauty, foxglove is one of the most dangerous plants to pets and humans — it is the original source of the heart medication digoxin.",
+                toxicityInfo: "Foxglove contains cardiac glycosides, primarily digoxin and digitoxin, which interfere with the sodium-potassium pump in heart muscle cells. This disrupts the heart's electrical activity and can cause life-threatening arrhythmias. All parts of the plant are toxic, but the concentration of cardiac glycosides varies — flowers, seeds, and immature leaves contain the highest levels, while mature leaves are relatively lower in toxin content. Even water from a vase containing foxglove can be toxic. Importantly, while digoxin has a short half-life (~6 hours), digitoxin has a much longer half-life (5-7 days), meaning repeated small ingestions could potentially accumulate to toxic levels — unlike some other plant toxins that do not accumulate. The plant's bitter, unpalatable taste makes poisoning relatively rare, but when it occurs, it can be serious. Other plants containing cardiac glycosides include oleander and lily of the valley. There is no specific antidote readily available in veterinary practice; treatment is supportive. With prompt, aggressive veterinary care, prognosis in small animals is generally fair to good.",
+                onsetTime: OnsetTime(
+                    early: "GI signs (vomiting, drooling, diarrhea, loss of appetite) typically appear within a few hours of ingestion",
+                    delayed: "Cardiovascular effects (arrhythmias, changes in heart rate) may develop hours after ingestion and can persist for days due to the long half-life of digitoxin"
+                ),
+                symptoms: [
+                    "Vomiting",
+                    "Diarrhea",
+                    "Hypersalivation (drooling)",
+                    "Loss of appetite",
+                    "Lethargy or depression",
+                    "Weakness",
+                    "Abnormal heart rate (too fast or too slow)",
+                    "Cardiac arrhythmias",
+                    "Dilated pupils",
+                    "Tremors",
+                    "Seizures (severe cases)",
+                    "Collapse"
+                ],
+                speciesRisks: [
+                    SpeciesRisk(species: .dog, severity: .severe, notes: "Dogs may ingest larger quantities due to curious behavior; cardiac effects can be life-threatening; the long half-life of digitoxin means repeated small exposures can accumulate"),
+                    SpeciesRisk(species: .cat, severity: .moderate, notes: "The most common signs in cats are vomiting and lethargy; cardiovascular effects are rare in cats according to toxicology specialists"),
+                    SpeciesRisk(species: .bird, severity: .severe, notes: "Birds are susceptible to cardiac glycoside toxicity; small body size increases risk")
+                ],
+                preventionTips: [
+                    "Do not plant foxglove in areas accessible to pets",
+                    "If you have existing foxglove, consider removing it or fencing it off completely",
+                    "Never allow pets to drink from containers that have held foxglove cuttings — the water is toxic",
+                    "Be aware that foxglove self-seeds readily and may appear in unexpected areas of your garden",
+                    "Supervise pets around foxglove, especially young curious animals",
+                    "Wear gloves when handling foxglove and wash hands thoroughly afterward"
+                ],
+                sources: ["Veterinary Information Network (VIN)", "ASPCA Animal Poison Control Center", "Pet Poison Helpline", "VETgirl"]
+            ),
+
+            // MARK: - Lily of the Valley
+            ToxicItem(
+                id: UUID(),
+                name: "Lily of the Valley",
+                alternateNames: ["Convallaria majalis", "Convallaria", "May lily", "May bells", "Our Lady's tears", "Mary's tears", "muguet", "lily of the valley berries", "convallatoxin"],
+                categories: [.plants],
+                imageAsset: "lily_of_the_valley",
+                description: "Lily of the Valley (Convallaria majalis) is a fragrant perennial plant with delicate white bell-shaped flowers and broad green leaves. It is popular in wedding bouquets and shade gardens. Despite its common name, it is NOT a true lily — it belongs to the Asparagaceae family and does NOT cause the kidney failure seen with true lily (Lilium) ingestion in cats. However, it is still extremely dangerous due to its potent cardiac glycosides.",
+                toxicityInfo: "Lily of the Valley contains 38 different cardiac glycosides, with convallatoxin being the primary toxin. These compounds interfere with the heart's electrical conduction system, similar to digoxin. The plant also contains saponins, which contribute to GI irritation. All parts of the plant are toxic — including the flowers, leaves, stems, roots, and red-orange berries that appear in fall. The bulbs contain the highest concentration of toxins. Even the water in a vase containing lily of the valley flowers can be toxic and has caused documented pet deaths. Ingestion of as little as two leaves may be potentially fatal. A published case report documented sudden collapse and death in a 1-year-old dog after ingesting lily of the valley leaves. There is no specific antidote; treatment is supportive and may include medications to control heart rhythm abnormalities.",
+                onsetTime: OnsetTime(
+                    early: "GI signs (vomiting, drooling, diarrhea) typically appear within a few hours of ingestion",
+                    delayed: "Cardiac effects may develop within hours and can be severe; death can occur rapidly in serious cases"
+                ),
+                symptoms: [
+                    "Vomiting",
+                    "Diarrhea",
+                    "Hypersalivation (drooling)",
+                    "Abdominal pain",
+                    "Loss of appetite",
+                    "Lethargy or weakness",
+                    "Abnormal heart rate (too slow or too fast)",
+                    "Cardiac arrhythmias",
+                    "Low blood pressure",
+                    "Dilated pupils",
+                    "Tremors",
+                    "Seizures",
+                    "Disorientation or confusion",
+                    "Collapse",
+                    "Sudden death"
+                ],
+                speciesRisks: [
+                    SpeciesRisk(species: .dog, severity: .severe, notes: "Dogs are susceptible to serious cardiac effects; a published case report documented sudden collapse and death after ingestion; even small amounts can be dangerous"),
+                    SpeciesRisk(species: .cat, severity: .severe, notes: "Cats are equally susceptible to cardiac glycoside toxicity; this plant does NOT cause kidney failure like true lilies — the danger is cardiac, not renal"),
+                    SpeciesRisk(species: .bird, severity: .severe, notes: "Birds are highly susceptible due to small body size; even minimal exposure can be dangerous")
+                ],
+                preventionTips: [
+                    "Do not plant lily of the valley in areas accessible to pets — there is no safe way to have this plant around animals",
+                    "If you receive lily of the valley in a bouquet, keep it completely out of pet reach",
+                    "Never allow pets to drink water from vases containing lily of the valley — documented pet deaths have occurred from vase water alone",
+                    "Be aware that the red-orange berries that appear in fall are also toxic and may be attractive to pets",
+                    "Lily of the valley spreads aggressively via underground rhizomes — check for it spreading into pet-accessible areas",
+                    "If you suspect any exposure, seek veterinary care immediately — do not wait for symptoms"
+                ],
+                sources: ["Veterinary Information Network (VIN)", "ASPCA Animal Poison Control Center", "Pet Poison Helpline", "JAVMA (case report)"]
+            ),
+
+            // MARK: - Castor Beans
+            ToxicItem(
+                id: UUID(),
+                name: "Castor Beans",
+                alternateNames: ["Ricinus communis", "castor bean plant", "castor oil plant", "castor plant", "mole bean plant", "African wonder tree", "palm of Christ", "ricin", "castor bean meal", "castor cake", "castor oil cake", "castor bean fertilizer"],
+                categories: [.plants, .gardenProducts],
+                imageAsset: "castor_bean_plant",
+                description: "The castor bean plant (Ricinus communis) is a fast-growing ornamental plant with large, star-shaped leaves and spiny seed pods containing distinctive mottled seeds. It is grown for its dramatic tropical appearance and as a source of castor oil. The plant is found in warm climates and is sometimes used in landscaping, though it is extremely toxic to pets and humans.",
+                toxicityInfo: "Castor beans contain ricin, one of the most potent naturally occurring toxins known — it is classified as a Category B bioterrorism agent. Ricin is a ribosome-inactivating protein that stops cells from making proteins, leading to cell death and multi-organ necrosis affecting the GI tract, liver, kidneys, and heart. All parts of the plant are toxic, but the seeds contain the highest concentration of ricin. Critically, the seed coat must be damaged (chewed or cracked) for ricin to be released — beans swallowed whole with intact seed coats may pass through the digestive tract without causing toxicosis. This means the degree of chewing directly determines severity. In dogs, signs of toxicosis have occurred after ingestion of as little as one chewed bean. Cats are less commonly affected, likely because they have more discerning palates. There is no antidote for ricin poisoning. IMPORTANT: Castor bean-based fertilizers and castor cake (the residue after oil extraction) are far more dangerous than the beans themselves — in one study, mortality from fertilizer/castor cake ingestion was 85% compared to 9% from the beans alone. If an animal survives liver injury, residual hepatic insufficiency may persist.",
+                onsetTime: OnsetTime(
+                    early: "GI signs (vomiting, diarrhea, abdominal pain) may appear within 6 hours of ingestion, though onset can be delayed up to 42 hours in some cases",
+                    delayed: "Laboratory abnormalities typically appear 12-24 hours after ingestion; liver and kidney damage may progress over days"
+                ),
+                symptoms: [
+                    "Vomiting (most common sign)",
+                    "Depression or lethargy",
+                    "Diarrhea (may contain blood)",
+                    "Abdominal pain",
+                    "Loss of appetite",
+                    "Bloody vomit (hematemesis)",
+                    "Weakness",
+                    "Ataxia (incoordination)",
+                    "Hypersalivation (drooling)",
+                    "Recumbency (inability to stand)",
+                    "Melena (dark, tarry stool)",
+                    "Tremors",
+                    "Seizures",
+                    "Pale gums",
+                    "Difficulty breathing",
+                    "Increased thirst",
+                    "Decreased urination",
+                    "Jaundice (yellowing)",
+                    "Coma",
+                    "Death"
+                ],
+                speciesRisks: [
+                    SpeciesRisk(species: .dog, severity: .severe, notes: "Dogs are most commonly affected; severity depends on number of beans, degree of chewing, and time to treatment; patients with only GI signs tend to have good prognosis, but liver injury carries a guarded prognosis; mortality from beans is ~9%, but mortality from castor bean fertilizer/castor cake is ~85%"),
+                    SpeciesRisk(species: .cat, severity: .severe, notes: "Cats are rarely affected (likely due to discerning palate) but are equally susceptible if exposure occurs; same severe toxicity expected"),
+                    SpeciesRisk(species: .bird, severity: .severe, notes: "Birds are susceptible to ricin toxicity; small body size increases risk from even minimal exposure")
+                ],
+                preventionTips: [
+                    "Do not plant castor bean plants in areas accessible to pets — the risk is too high",
+                    "If you have castor bean plants, remove them entirely or fence them off completely",
+                    "Check organic fertilizers and soil conditioners carefully — castor bean meal (castor oil cake) is used in some products and carries an extremely high mortality rate (~85%) if ingested by pets, far higher than the beans themselves",
+                    "Store any castor-containing products in locked, pet-proof containers",
+                    "Be aware that castor bean plants may grow wild in warm climates — learn to identify them",
+                    "If you suspect any exposure, seek emergency veterinary care immediately — there is no antidote and early intervention is critical"
+                ],
+                sources: ["Veterinary Information Network (VIN)", "ASPCA Animal Poison Control Center", "Pet Poison Helpline", "PubMed (case studies)"]
+            ),
+
+            // MARK: - Wild Mushrooms
+            ToxicItem(
+                id: UUID(),
+                name: "Wild Mushrooms",
+                alternateNames: ["mushroom", "mushrooms", "toadstool", "toadstools", "Amanita", "death cap", "death angel", "destroying angel", "Amanita phalloides", "Amanita ocreata", "Amanita muscaria", "fly agaric", "Galerina", "Lepiota", "Inocybe", "Clitocybe", "Gyromitra", "false morel", "magic mushrooms", "psilocybin", "Psilocybe", "shrooms", "yard mushrooms", "backyard mushrooms", "lawn mushrooms"],
+                categories: [.plants],
+                imageAsset: "wild_mushrooms_amanita",
+                description: "Wild mushrooms can appear suddenly in yards, parks, and wooded areas, especially during warm, wet weather in spring and fall. Although thousands of mushroom species exist in North America, fewer than 100 are poisonous — but those that are can cause serious illness or death. Mushrooms are extremely difficult to identify without expert knowledge, and toxic species can closely resemble edible ones. Dogs are more commonly affected due to their scavenging behavior, but cats can also be poisoned. Note: Although mushrooms are technically fungi rather than plants, they are included in this category for ease of reference. Important: Mushrooms sold in grocery stores (button, cremini, portobello, shiitake, etc.) are safe for pets.",
+                toxicityInfo: "Wild mushrooms cause several distinct poisoning syndromes depending on the species. Because accurate identification is extremely difficult and often impossible, veterinarians treat all wild mushroom ingestions as potentially life-threatening (worst-case scenario). The main types of toxic mushrooms are:\n\nHepatotoxic (Liver-Destroying) — MOST DANGEROUS: Amanita phalloides (death cap), A. ocreata (death angel), Galerina, and Lepiota species contain amatoxins that cause delayed but severe liver failure. Signs begin 6–24 hours after ingestion, followed by a deceptive 'false recovery' period where the pet appears to improve, then liver failure develops at 36–48 hours. Kidney failure may occur in late stages. These mushrooms are frequently fatal.\n\nMuscarinic (SLUDGE syndrome): Inocybe and Clitocybe species cause profuse salivation, lacrimation (tearing), urination, diarrhea, and GI distress — similar to organophosphate poisoning. Signs appear within 5–30 minutes.\n\nIsoxazole (Neurotoxic): A. muscaria (fly agaric) and A. pantherina contain muscimol and ibotenic acid, causing a 'walking drunk' appearance, sedation, tremors, or seizures. Dogs enter a deep coma-like sleep; recovery usually occurs within 6–72 hours. These mushrooms can be fatal in dogs and cats. IMPORTANT: Cats are particularly attracted to DRIED A. muscaria and A. pantherina.\n\nGyromitrin (False Morels): Gyromitra species cause profuse vomiting and diarrhea; rarely fatal but can cause seizures and liver/kidney damage.\n\nGI Irritants: Many species (Agaricus, Boletus, Entoloma, Scleroderma) cause vomiting and diarrhea within 1–6 hours; generally self-limiting within 1–2 days.\n\nHallucinogenic: Psilocybe, Conocybe, and Gymnopilus ('magic mushrooms') cause ataxia, abnormal behavior, vocalization, nystagmus (abnormal eye movement), and hyperthermia. Rarely life-threatening.",
+                onsetTime: OnsetTime(
+                    early: "Varies dramatically by mushroom type: Muscarinic mushrooms cause signs within 5–30 minutes; GI irritants within 15 minutes to 6 hours; hallucinogenic within 30 minutes to 2 hours; isoxazole/neurotoxic within a few hours",
+                    delayed: "CRITICAL: Hepatotoxic mushrooms (Amanita, Galerina, Lepiota) may not cause signs for 6–24 hours, then show a deceptive 'false recovery' before liver failure develops at 36–48 hours. This delay can give a dangerous false sense of security."
+                ),
+                symptoms: [
+                    "Vomiting",
+                    "Diarrhea (may be bloody with hepatotoxic mushrooms)",
+                    "Profuse drooling/hypersalivation",
+                    "Excessive tearing (lacrimation)",
+                    "Frequent urination",
+                    "Loss of appetite",
+                    "Lethargy and weakness",
+                    "Ataxia ('walking drunk,' lack of coordination)",
+                    "Tremors",
+                    "Seizures",
+                    "Sedation or coma-like sleep",
+                    "Abnormal behavior or vocalization (howling)",
+                    "Nystagmus (abnormal eye movements)",
+                    "Hyperthermia (elevated body temperature)",
+                    "Jaundice/yellowing of skin, gums, or eyes (liver failure)",
+                    "Abdominal pain",
+                    "Dehydration",
+                    "Collapse",
+                    "Death"
+                ],
+                speciesRisks: [
+                    SpeciesRisk(species: .dog, severity: .high, notes: "Dogs are most commonly affected due to scavenging behavior; dogs may be attracted to certain mushrooms (Amanita, Inocybe) due to their fishy odor; severity ranges from mild GI upset to life-threatening liver failure depending on species — all wild mushroom ingestions should be treated as potential emergencies"),
+                    SpeciesRisk(species: .cat, severity: .high, notes: "Cats rarely eat mushrooms but can be seriously affected when they do; cats are particularly attracted to DRIED Amanita muscaria and A. pantherina, sometimes with fatal results"),
+                    SpeciesRisk(species: .bird, severity: .high, notes: "Limited data but birds are assumed to be susceptible; small body size increases risk from even small exposures")
+                ],
+                preventionTips: [
+                    "Regularly inspect your yard for mushrooms, especially after rain or during warm, wet weather — remove any you find before your pet can access them",
+                    "Supervise pets closely in parks, wooded areas, and unfamiliar yards where mushrooms may be growing",
+                    "Assume ALL wild mushrooms are toxic — even experts can have difficulty distinguishing safe from deadly species",
+                    "Grocery store mushrooms (button, cremini, portobello, shiitake) are safe for pets",
+                    "If your pet eats a wild mushroom, contact your veterinarian or poison control immediately — do not wait for symptoms",
+                    "If possible, collect a sample of the mushroom: wrap in a damp paper or wax paper towel (NOT plastic), place in a paper bag, and refrigerate; note where you found it and what it was growing on",
+                    "For emergency mushroom identification, contact the North American Mycological Association (NAMA) at namyco.org, or the Facebook group 'Poisons Help; Emergency Identification for Mushrooms & Plants' — provide clear photos (including gills/underside), geographic location, and what the mushroom was growing on"
+                ],
+                sources: ["Veterinary Information Network (VIN)", "ASPCA Animal Poison Control Center", "North American Mycological Association (NAMA)", "VCA Animal Hospitals", "UC Davis School of Veterinary Medicine"]
             )
         ]
     }
