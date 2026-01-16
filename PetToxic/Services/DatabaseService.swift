@@ -1291,6 +1291,178 @@ class DatabaseService {
                     "For emergency mushroom identification, contact the North American Mycological Association (NAMA) at namyco.org, or the Facebook group 'Poisons Help; Emergency Identification for Mushrooms & Plants' — provide clear photos (including gills/underside), geographic location, and what the mushroom was growing on"
                 ],
                 sources: ["Veterinary Information Network (VIN)", "ASPCA Animal Poison Control Center", "North American Mycological Association (NAMA)", "VCA Animal Hospitals", "UC Davis School of Veterinary Medicine"]
+            ),
+
+            // MARK: - Blue-Green Algae (Cyanobacteria)
+            ToxicItem(
+                id: UUID(),
+                name: "Blue-Green Algae (Cyanobacteria)",
+                alternateNames: ["cyanobacteria", "cyanobacterial poisoning", "blue green algae", "pond scum", "pond algae", "lake algae", "algae bloom", "algal bloom", "harmful algal bloom", "HAB", "microcystins", "anatoxins", "toxic algae", "green pond water", "pea soup water"],
+                categories: [.plants, .environmentalHazards],
+                imageAsset: "bluegreen_algae_pond",
+                description: "Blue-green algae (cyanobacteria) are microscopic bacteria found in freshwater lakes, streams, ponds, and brackish water. Despite the name, they are bacteria rather than true algae. They grow and colonize to form 'blooms' that give water a blue-green or 'pea soup' appearance, or may look like blue or green paint on the surface. Wind can blow floating algae into thick mats near shorelines, making them easily accessible to pets. Blooms are most common during hot weather in mid- to late-summer and thrive in warm, stagnant, nutrient-rich water.",
+                toxicityInfo: "Blue-green algae can produce toxins that cause rapid, severe illness — even a few mouthfuls of contaminated water can be fatal. Not all blooms produce toxins, but it is impossible to tell by appearance alone; all blooms should be treated as potentially deadly. There are two main toxin types that cause very different syndromes:\n\nMicrocystins are hepatotoxic (liver-damaging). They cause acute liver failure with signs including vomiting, diarrhea, bloody stool, weakness, pale gums, jaundice, seizures, and shock. Death typically occurs within days.\n\nAnatoxins are neurotoxic. They act as irreversible acetylcholinesterase inhibitors, causing a SLUDGE-like syndrome (Salivation, Lacrimation, Urination, Defecation, GI distress, Emesis) along with muscle tremors, rigidity, paralysis, and cyanosis (blue-tinged gums from lack of oxygen). Death can occur within minutes to hours from respiratory paralysis.\n\nThere is no antidote for either toxin type. The prognosis is poor once clinical signs develop. Dogs are most commonly affected because they swim in and drink from contaminated water, and may lick algae off their fur after swimming.",
+                onsetTime: OnsetTime(
+                    early: "Anatoxin poisoning can cause signs within minutes of exposure; microcystin signs may appear within hours",
+                    delayed: "With microcystins, liver failure progresses over 1-3 days; death typically follows within days. With anatoxins, death can occur within minutes to hours from respiratory paralysis — animals are sometimes found dead near the water source."
+                ),
+                symptoms: [
+                    "Vomiting",
+                    "Diarrhea (may be bloody or tarry)",
+                    "Excessive drooling (hypersalivation)",
+                    "Excessive tearing (lacrimation)",
+                    "Frequent urination",
+                    "Weakness and lethargy",
+                    "Loss of appetite",
+                    "Pale gums",
+                    "Jaundice (yellowing of skin, gums, or eyes)",
+                    "Muscle tremors or rigidity",
+                    "Paralysis",
+                    "Seizures",
+                    "Difficulty breathing",
+                    "Cyanosis (blue-tinged gums)",
+                    "Collapse or shock",
+                    "Sudden death"
+                ],
+                speciesRisks: [
+                    SpeciesRisk(species: .dog, severity: .severe, notes: "Dogs are most commonly affected — they swim in contaminated water, drink from lakes and ponds, and lick algae off their fur; even minimal exposure (a few mouthfuls) can be fatal"),
+                    SpeciesRisk(species: .cat, severity: .severe, notes: "Cats are equally susceptible but less commonly exposed due to their aversion to swimming; cats drinking from outdoor water sources are still at risk"),
+                    SpeciesRisk(species: .bird, severity: .severe, notes: "Birds drinking from contaminated water sources are at high risk due to small body size")
+                ],
+                preventionTips: [
+                    "Keep dogs away from any water that appears discolored, has visible scum or mats, or smells foul",
+                    "Do not let dogs swim in or drink from ponds, lakes, or stagnant water during hot summer months — bring fresh water from home",
+                    "If you see a 'Harmful Algal Bloom' warning sign, take it seriously and leave the area immediately",
+                    "If your dog has contact with potentially contaminated water, rinse them thoroughly with clean water immediately and prevent them from licking their fur",
+                    "Blooms can appear and disappear quickly — a body of water that was safe last week may not be safe today",
+                    "If you suspect any exposure, seek emergency veterinary care immediately — do not wait for symptoms; minutes can matter with this toxin"
+                ],
+                sources: ["Veterinary Information Network (VIN)", "ASPCA Animal Poison Control Center", "Pet Poison Helpline", "EPA (Environmental Protection Agency)"]
+            ),
+
+            // MARK: - Yew
+            ToxicItem(
+                id: UUID(),
+                name: "Yew",
+                alternateNames: ["Taxus", "Taxus baccata", "Taxus cuspidata", "Taxus canadensis", "Taxus brevifolia", "Taxus chinensis", "Taxus x media", "English yew", "Japanese yew", "Chinese yew", "American yew", "Canadian yew", "Pacific yew", "Western yew", "ground hemlock", "yew tree", "yew bush", "yew shrub", "yew berries", "taxine"],
+                categories: [.plants],
+                imageAsset: "yew_taxus_berries",
+                description: "Yew (Taxus species) is an evergreen shrub or tree with flat, dark green needles and distinctive bright red berries. It is extremely common in landscaping, foundation plantings, hedges, formal gardens, and cemeteries throughout North America and Europe. Despite its popularity as an ornamental, yew is one of the most dangerous plants to pets — Japanese yew, English yew, and Chinese yew are among the most toxic plants in North America. Animals may be found dead with no prior symptoms, earning yew a reputation as a 'sudden death' plant.",
+                toxicityInfo: "Yew contains taxine alkaloids (primarily taxine A and taxine B), which are potent cardiotoxins that depress electrical conduction through the heart, leading to fatal cardiac arrhythmias and acute heart failure. All parts of the plant are toxic — bark, needles, and seeds — EXCEPT the fleshy red covering of the berry (called an aril). However, the seed inside the berry IS highly toxic, and since pets typically chew rather than carefully separating flesh from seed, any berry ingestion should be considered dangerous.\n\nThe amount required for a lethal dose is alarmingly small — a dog can consume a potentially fatal amount simply by playing with or chewing on yew branches or sticks. Taxine concentrations are highest during winter months. Dried or wilted yew clippings remain fully toxic for several months and may actually be more palatable than fresh foliage, which contains a volatile oil that creates a bitter, unpleasant taste.\n\nAbsorption is rapid — horses have collapsed within 15 minutes of consumption, and similar rapid absorption is expected in dogs and cats. Death is often the first indication of yew toxicosis, with little opportunity for treatment. There is no antidote, and successful treatment has never been demonstrated experimentally.",
+                onsetTime: OnsetTime(
+                    early: "GI signs (vomiting, diarrhea, drooling) may appear within 1-3 hours; however, many animals show no warning signs before cardiac collapse",
+                    delayed: "Cardiac effects can develop rapidly — death has been reported within hours of ingestion, and signs can occasionally be delayed up to 2 days; animals are sometimes found dead without any prior observed symptoms"
+                ),
+                symptoms: [
+                    "Sudden death (may occur without prior symptoms)",
+                    "Vomiting",
+                    "Diarrhea",
+                    "Drooling (hypersalivation)",
+                    "Abdominal pain",
+                    "Muscle tremors",
+                    "Weakness",
+                    "Difficulty breathing (dyspnea)",
+                    "Slow heart rate (bradycardia)",
+                    "Cardiac arrhythmias",
+                    "Low blood pressure",
+                    "Incoordination (ataxia)",
+                    "Seizures",
+                    "Collapse"
+                ],
+                speciesRisks: [
+                    SpeciesRisk(species: .dog, severity: .severe, notes: "Dogs may chew on yew branches or eat fallen berries; a lethal dose can be consumed simply by playing with branches; death can occur rapidly with no warning signs; no antidote exists"),
+                    SpeciesRisk(species: .cat, severity: .severe, notes: "Cats are equally susceptible to taxine cardiotoxicity; smaller body size means even minimal ingestion can be fatal"),
+                    SpeciesRisk(species: .smallMammal, severity: .severe, notes: "Chinchillas are potentially susceptible to yew toxicity"),
+                    SpeciesRisk(species: .bird, severity: .severe, notes: "Budgerigars and canaries are susceptible; interestingly, macaws appear to be resistant, but other pet bird species should be considered at risk")
+                ],
+                preventionTips: [
+                    "Do not plant yew in areas accessible to pets — the risk of sudden death is too high",
+                    "If you have existing yew shrubs, consider removing them or fencing them off completely",
+                    "Never leave yew clippings where pets can access them — dried clippings remain fully toxic for months and may be more palatable than fresh foliage",
+                    "Do not allow dogs to play with or chew on yew branches or sticks — a lethal dose can be consumed this way",
+                    "Be aware that yew is extremely common in landscaping, formal gardens, and cemeteries — supervise pets in unfamiliar yards",
+                    "Toxin concentrations are highest in winter — be extra vigilant during cold months",
+                    "If you suspect any yew ingestion, seek emergency veterinary care immediately — do not wait for symptoms; death can occur within hours"
+                ],
+                sources: ["Veterinary Information Network (VIN)", "ASPCA Animal Poison Control Center", "Pet Poison Helpline", "Merck Veterinary Manual"]
+            ),
+
+            // MARK: - Snake Plant
+            ToxicItem(
+                id: UUID(),
+                name: "Snake Plant",
+                alternateNames: ["Sansevieria", "Sansevieria trifasciata", "Dracaena trifasciata", "mother-in-law's tongue", "mother in laws tongue", "good luck plant", "golden bird's nest", "viper's bowstring hemp", "Saint George's sword", "Sansevieria Moonshine", "Sansevieria cylindrica", "snake plant leaves"],
+                categories: [.plants],
+                imageAsset: "snake_plant_sansevieria",
+                description: "Snake plant (Sansevieria trifasciata, recently reclassified as Dracaena trifasciata) is one of the most popular houseplants due to its striking sword-shaped leaves, air-purifying qualities, and extreme hardiness — it thrives on neglect. It is commonly found in homes, offices, and commercial spaces. While toxic to pets, snake plant is considered low toxicity and rarely causes serious illness.",
+                toxicityInfo: "Snake plants contain saponins, natural compounds that protect the plant against fungi, insects, and microbes. When ingested, saponins irritate the gastrointestinal tract by interacting with cell membranes, causing a foaming action that leads to nausea, vomiting, and diarrhea. The bitter taste of snake plants makes them unpalatable, so pets rarely consume enough to cause serious toxicity. In most cases, symptoms are mild and self-limiting. Severe effects (changes in heart rate and blood pressure, incoordination, or rupture of red blood cells) are rare and typically only occur with large ingestions.\n\nIMPORTANT: Snake plant is sometimes called 'mother-in-law's tongue,' but this name is also used for Dieffenbachia — a completely different plant with a different toxin (insoluble calcium oxalate crystals). Snake plant causes systemic GI effects from saponins; Dieffenbachia causes only localized mouth and throat irritation. Do not confuse the two.",
+                onsetTime: OnsetTime(
+                    early: "GI symptoms (vomiting, diarrhea, drooling) typically appear within a few hours of ingestion",
+                    delayed: "Most symptoms resolve within 24-48 hours; severe symptoms are rare but may take longer to resolve"
+                ),
+                symptoms: [
+                    "Nausea",
+                    "Vomiting",
+                    "Diarrhea",
+                    "Drooling (hypersalivation)",
+                    "Loss of appetite",
+                    "Lethargy or depression",
+                    "Weakness",
+                    "Incoordination or stumbling (rare, large ingestions)",
+                    "Changes in heart rate or blood pressure (rare, large ingestions)"
+                ],
+                speciesRisks: [
+                    SpeciesRisk(species: .dog, severity: .low, notes: "Toxicity is mild in most cases; bitter taste limits ingestion; GI upset is the primary concern; severe effects are rare"),
+                    SpeciesRisk(species: .cat, severity: .low, notes: "Cats may chew on the long leaves; toxicity is typically mild with GI symptoms; same low risk as dogs"),
+                    SpeciesRisk(species: .smallMammal, severity: .low, notes: "Rabbits are susceptible to saponin toxicity; keep snake plants out of reach")
+                ],
+                preventionTips: [
+                    "Place snake plants on high shelves or in rooms inaccessible to pets",
+                    "Consider hanging planters to keep leaves out of reach of curious cats",
+                    "If your pet is a plant chewer, opt for non-toxic alternatives like spider plants, Boston ferns, or African violets",
+                    "Monitor pets around snake plants — while toxicity is usually mild, repeated exposure should be avoided",
+                    "If your pet ingests snake plant and develops vomiting or diarrhea, contact your veterinarian for guidance"
+                ],
+                sources: ["ASPCA Animal Poison Control Center", "Pet Poison Helpline", "University of North Carolina Department of Horticultural Science", "Wag Walking Veterinary Resources"]
+            ),
+
+            // MARK: - Aloe Vera
+            ToxicItem(
+                id: UUID(),
+                name: "Aloe Vera",
+                alternateNames: ["Aloe", "Aloe barbadensis", "Aloe vera plant", "medicinal aloe", "burn plant", "first aid plant", "aloe gel", "aloe latex", "aloe juice"],
+                categories: [.plants],
+                imageAsset: "aloe_vera_plant",
+                description: "Aloe vera is an extremely popular succulent houseplant known for its thick, fleshy leaves containing a gel used in skincare and burn treatment. It is found in homes, offices, and gardens worldwide. While the clear inner gel is considered safe, the latex layer just beneath the leaf skin contains toxic compounds that can harm pets if ingested. Both the plant itself and aloe-containing products (gels, lotions, juices) can cause toxicity.",
+                toxicityInfo: "Aloe vera contains two types of toxic compounds: saponins and anthraquinone glycosides. Both are concentrated in the latex — the yellow or orange sap-like layer found just beneath the outer leaf skin. The clear gel inside the leaf is generally considered safe and non-toxic.\n\nAnthraquinone glycosides are purgatives (laxatives) that increase mucus and water production in the colon, leading to vomiting and diarrhea. Saponins cause additional GI irritation and can affect blood sugar levels (potentially causing hypoglycemia) and may damage red blood cells in severe cases.\n\nMost cases of aloe vera ingestion result in mild to moderate GI upset that resolves with supportive care. Severe toxicity is uncommon but can occur with large ingestions. The change in urine color sometimes seen is related to effects on red blood cells. There is no specific antidote; treatment is supportive.",
+                onsetTime: OnsetTime(
+                    early: "GI symptoms (vomiting, diarrhea) typically appear within a few hours of ingestion",
+                    delayed: "Most symptoms resolve within 24-48 hours with supportive care; severe cases may require longer treatment"
+                ),
+                symptoms: [
+                    "Vomiting",
+                    "Diarrhea",
+                    "Loss of appetite (anorexia)",
+                    "Lethargy or depression",
+                    "Abdominal pain or cramping",
+                    "Dehydration (from fluid loss)",
+                    "Weakness",
+                    "Change in urine color (red or dark)",
+                    "Tremors (rare, large ingestions)"
+                ],
+                speciesRisks: [
+                    SpeciesRisk(species: .dog, severity: .low, notes: "Toxicity is usually mild to moderate with GI upset; severe symptoms are uncommon unless large amounts are ingested"),
+                    SpeciesRisk(species: .cat, severity: .low, notes: "Same toxicity as dogs; cats may be attracted to chewing on the fleshy leaves")
+                ],
+                preventionTips: [
+                    "Keep aloe vera plants out of reach of pets — place on high shelves or in inaccessible rooms",
+                    "Be aware that the latex (yellow layer under the skin) is the toxic part, not the clear gel",
+                    "Store aloe vera products (gels, lotions, juices) where pets cannot access them",
+                    "If using aloe gel topically on yourself, prevent your pet from licking the treated area",
+                    "Do not give aloe vera juice or supplements to pets without veterinary guidance",
+                    "If your pet ingests aloe vera and develops vomiting or diarrhea, contact your veterinarian — dehydration can become serious if untreated"
+                ],
+                sources: ["Veterinary Information Network (VIN)", "ASPCA Animal Poison Control Center", "Pet Poison Helpline", "Wag Walking Veterinary Resources"]
             )
         ]
     }

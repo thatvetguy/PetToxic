@@ -75,6 +75,7 @@ enum Category: String, Codable, CaseIterable, Identifiable {
     case gardenProducts
     case recreationalSubstances
     case holidayHazards
+    case environmentalHazards
 
     var id: String { rawValue }
 
@@ -89,6 +90,7 @@ enum Category: String, Codable, CaseIterable, Identifiable {
         case .gardenProducts: return "Garden Products"
         case .recreationalSubstances: return "Recreational Substances"
         case .holidayHazards: return "Holiday Hazards"
+        case .environmentalHazards: return "Environmental Hazards"
         }
     }
 
@@ -103,6 +105,7 @@ enum Category: String, Codable, CaseIterable, Identifiable {
         case .gardenProducts: return "shovel.fill"
         case .recreationalSubstances: return "exclamationmark.triangle.fill"
         case .holidayHazards: return "gift.fill"
+        case .environmentalHazards: return "exclamationmark.triangle.fill"
         }
     }
 }
