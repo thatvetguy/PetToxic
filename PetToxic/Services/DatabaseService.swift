@@ -847,6 +847,137 @@ class DatabaseService {
                     "If you see your pet chewing on azalea, contact your veterinarian even if no symptoms are present yet"
                 ],
                 sources: ["Veterinary Information Network (VIN)", "ASPCA Animal Poison Control Center", "Pet Poison Helpline", "Merck Veterinary Manual"]
+            ),
+
+            // MARK: - Tulips & Hyacinths
+            ToxicItem(
+                id: UUID(),
+                name: "Tulips & Hyacinths",
+                alternateNames: ["tulip", "tulip bulb", "Tulipa", "Tulipa spp", "hyacinth", "hyacinth bulb", "Hyacinthus", "Hyacinthus orientalis", "Dutch hyacinth", "garden hyacinth", "spring bulbs", "flower bulbs", "tulipalin", "tuliposide"],
+                categories: [.plants, .holidayHazards],
+                imageAsset: "tulips_hyacinths",
+                description: "Tulips and hyacinths are popular spring-flowering bulbs found in gardens, landscaping, and cut flower arrangements. Both belong to the Liliaceae (lily) family and share the same toxic compounds. Pets are most commonly poisoned when dogs dig up freshly planted bulbs or gain access to a bag of unplanted bulbs.",
+                toxicityInfo: "Tulips and hyacinths contain allergenic lactones called tuliposides A and B, which are converted to the irritating compounds tulipalin A and B on contact with tissue. These plants also contain calcium oxalate crystals, which cause additional irritation. The toxic compounds are most concentrated in the bulbs — the leaves and flowers contain much lower levels and typically cause only mild, transient GI upset. Bulb ingestion can cause intense vomiting, diarrhea, and dehydration. Large ingestions of bulbs (rare) can cause more serious cardiovascular and respiratory effects. There is no specific antidote, but prognosis is excellent with timely supportive care. Note: Handling tulip and hyacinth bulbs can also cause skin irritation ('tulip fingers') in people — wash hands after planting.",
+                onsetTime: OnsetTime(
+                    early: "Vomiting, drooling, and GI upset typically appear within a few hours of ingestion",
+                    delayed: "Most cases resolve within 24 hours with supportive care; severe cases involving large bulb ingestions may require monitoring for cardiovascular effects"
+                ),
+                symptoms: [
+                    "Vomiting",
+                    "Hypersalivation (drooling)",
+                    "Diarrhea",
+                    "Depression or lethargy",
+                    "Loss of appetite",
+                    "Oral irritation (pawing at mouth)",
+                    "Dehydration (with significant vomiting/diarrhea)",
+                    "Increased heart rate (large ingestions, rare)",
+                    "Difficulty breathing (large ingestions, rare)"
+                ],
+                speciesRisks: [
+                    SpeciesRisk(species: .dog, severity: .moderate, notes: "Dogs are most commonly affected because they dig up and chew on bulbs; ingestion of flowers or leaves typically causes only mild, transient GI upset"),
+                    SpeciesRisk(species: .cat, severity: .moderate, notes: "Cats may chew on leaves or flowers; bulb ingestion is less common but equally dangerous; note that cats with nausea may seek out plants to help them vomit, so plant material in vomitus is not always the primary cause of illness"),
+                    SpeciesRisk(species: .bird, severity: .moderate, notes: "Birds may be affected if they chew on plant material; limited data available")
+                ],
+                preventionTips: [
+                    "Store unplanted bulbs in a secure location out of pet reach — a bag of bulbs is a common source of serious poisoning",
+                    "Supervise dogs in the garden during planting season; consider fencing off freshly planted bulb beds",
+                    "If your dog is a digger, avoid planting tulips and hyacinths in areas they can access",
+                    "Keep cut tulips and hyacinths in vases out of pet reach; the water may also contain irritating compounds",
+                    "If you see your pet chewing on tulip or hyacinth plants, contact your veterinarian even if symptoms haven't appeared yet"
+                ],
+                sources: ["Veterinary Information Network (VIN)", "ASPCA Animal Poison Control Center", "Pet Poison Helpline", "DVM360"]
+            ),
+
+            // MARK: - Oleander
+            ToxicItem(
+                id: UUID(),
+                name: "Oleander",
+                alternateNames: ["Nerium oleander", "common oleander", "rose bay", "rosebay", "yellow oleander", "Thevetia peruviana", "white oleander", "pink oleander", "red oleander", "oleander bush", "oleander shrub", "adelfa", "laurier rose"],
+                categories: [.plants],
+                imageAsset: "oleander",
+                description: "Oleander is a large evergreen flowering shrub commonly found in warm climates, particularly in the southwestern United States, California, Texas, and Hawaii. It is widely planted as an ornamental in gardens and along highways due to its drought tolerance and showy flowers (white, pink, red, or yellow). Despite its beauty, oleander is one of the most toxic plants to pets and humans.",
+                toxicityInfo: "Oleander contains cardiac glycosides, primarily oleandrin, which block the sodium-potassium ATPase pump in heart muscle cells. This causes dangerous electrolyte imbalances (hyperkalemia), increased intracellular calcium, and disruption of normal heart rhythm. All parts of the plant are extremely toxic — including the leaves, flowers, stems, roots, seeds, sap, and even water from a vase containing oleander cuttings. Animals have been fatally poisoned by ingesting just a few leaves, drinking water in which leaves were floating, or eating meat cooked on oleander wood skewers. There is an antidote (digoxin-specific Fab fragments), but it is rarely used due to cost. With aggressive supportive care, prognosis in small animals is fair to good. Note: Other plants in the cardiac glycoside family include foxglove, lily of the valley, kalanchoe, and milkweed — see separate entries for these plants. Pot-bellied pigs are also highly susceptible to oleander toxicity.",
+                onsetTime: OnsetTime(
+                    early: "GI signs (vomiting, drooling, abdominal pain, diarrhea) typically appear within 30 minutes to a few hours of ingestion",
+                    delayed: "Cardiovascular and neurologic signs may develop within hours; effects may persist for 1-3 days even with treatment"
+                ),
+                symptoms: [
+                    "Vomiting",
+                    "Profuse drooling (hypersalivation)",
+                    "Abdominal pain",
+                    "Diarrhea (may be bloody)",
+                    "Depression or lethargy",
+                    "Loss of appetite",
+                    "Cold extremities",
+                    "Abnormal heart rate (bradycardia or tachycardia)",
+                    "Irregular heart rhythm (arrhythmias)",
+                    "Weakness or collapse",
+                    "Tremors",
+                    "Dilated pupils (mydriasis)",
+                    "Seizures",
+                    "Sudden death"
+                ],
+                speciesRisks: [
+                    SpeciesRisk(species: .dog, severity: .severe, notes: "Dogs are highly susceptible; even small amounts can cause life-threatening cardiac effects; this toxicosis is less commonly seen in small animal practice but poses significant risk when it occurs"),
+                    SpeciesRisk(species: .cat, severity: .severe, notes: "Cats are highly susceptible to cardiac glycosides; smaller body size increases risk from even minimal exposure"),
+                    SpeciesRisk(species: .bird, severity: .severe, notes: "Birds (including budgerigars and parakeets) are susceptible to oleander toxicity")
+                ],
+                preventionTips: [
+                    "Do not plant oleander in yards where pets have access — there is no safe way to have this plant around animals",
+                    "If you have existing oleander, consider removing it or fencing it off completely",
+                    "Never allow pets to drink from containers that have held oleander cuttings — the water is toxic",
+                    "Do not use oleander branches as sticks or skewers — the toxin survives cooking",
+                    "Be aware that oleander is commonly planted along highways and in public spaces in warm climates",
+                    "Do not burn oleander clippings — the smoke can also be toxic if inhaled"
+                ],
+                sources: ["Veterinary Information Network (VIN)", "ASPCA Animal Poison Control Center", "Pet Poison Helpline", "DVM360"]
+            ),
+
+            // MARK: - Autumn Crocus
+            ToxicItem(
+                id: UUID(),
+                name: "Autumn Crocus",
+                alternateNames: ["Colchicum autumnale", "meadow saffron", "naked ladies", "naked boys", "fall crocus", "wonder bulb", "colchicum", "Colchicum", "crocus (autumn)"],
+                categories: [.plants],
+                imageAsset: "autumn_crocus",
+                description: "Autumn crocus is a fall-blooming flowering plant with pink to purple crocus-like flowers. Despite its common name, it is NOT related to true crocuses — it belongs to a completely different plant family. The flowers emerge from the ground in autumn without leaves (hence the name 'naked ladies'), while the tulip-like leaves appear in spring. It is cultivated as an ornamental but is one of the most toxic plants to pets.",
+                toxicityInfo: "Autumn crocus contains colchicine, a potent cell poison that stops cell division by binding to tubulin and preventing microtubule formation. Because it targets rapidly dividing cells, the GI tract lining and bone marrow are affected first and most severely. Poisoning progresses through distinct phases: an initial GI phase (oral irritation, bloody vomiting and diarrhea), followed by multi-organ effects in animals that survive the acute phase. All parts of the plant are toxic, with the highest concentrations in the seeds and corms (bulbs). There is no antidote — treatment is supportive only. IMPORTANT: Do not confuse autumn crocus with spring crocus (Crocus species), which is a completely different plant that causes only mild GI upset. If you are unsure which type of crocus your pet ingested, assume the worst and seek veterinary care immediately.",
+                onsetTime: OnsetTime(
+                    early: "GI signs (oral irritation, bloody vomiting, diarrhea, abdominal pain) can be delayed up to 10 hours after ingestion",
+                    delayed: "Bone marrow suppression and multi-organ effects develop a few days after the initial GI signs in animals that survive the acute phase; recovery can take weeks"
+                ),
+                symptoms: [
+                    "Oral irritation",
+                    "Vomiting (often bloody)",
+                    "Bloody diarrhea",
+                    "Severe abdominal pain",
+                    "Profuse drooling (hypersalivation)",
+                    "Difficulty swallowing",
+                    "Extreme thirst",
+                    "Weakness and lethargy",
+                    "Dehydration",
+                    "Shock",
+                    "Respiratory distress",
+                    "Seizures",
+                    "Bone marrow suppression (in survivors of acute phase)",
+                    "Liver failure",
+                    "Kidney failure",
+                    "Cardiac arrhythmias",
+                    "Death"
+                ],
+                speciesRisks: [
+                    SpeciesRisk(species: .dog, severity: .severe, notes: "Extremely toxic; even small amounts can cause life-threatening multi-organ failure; no antidote exists; prognosis is guarded even with aggressive treatment"),
+                    SpeciesRisk(species: .cat, severity: .severe, notes: "Extremely toxic; smaller body size increases risk; signs may be delayed up to 10 hours, making early recognition important"),
+                    SpeciesRisk(species: .bird, severity: .severe, notes: "Birds are susceptible to colchicine toxicity; extremely small amounts can be fatal due to small body size")
+                ],
+                preventionTips: [
+                    "Do not plant autumn crocus in areas accessible to pets",
+                    "Learn to identify autumn crocus in both its fall (flowers only) and spring (leaves only) growth stages",
+                    "The spring leaves can be confused with tulip leaves or wild garlic — keep pets away from areas where autumn crocus grows",
+                    "If you have autumn crocus in your garden, consider removing it entirely or fencing it off",
+                    "If you are unsure whether a crocus is spring crocus or autumn crocus, treat any ingestion as an emergency"
+                ],
+                sources: ["Veterinary Information Network (VIN)", "ASPCA Animal Poison Control Center", "Pet Poison Helpline", "Merck Veterinary Manual"]
             )
         ]
     }
