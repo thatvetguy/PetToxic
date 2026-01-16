@@ -717,6 +717,136 @@ class DatabaseService {
                     "Never intentionally feed moldy food to pets—even 'a little mold' can be dangerous"
                 ],
                 sources: ["ASPCA Animal Poison Control Center", "Pet Poison Helpline", "Merck Veterinary Manual"]
+            ),
+
+            // MARK: - Lilies (True Lilies)
+            ToxicItem(
+                id: UUID(),
+                name: "Lilies (True Lilies)",
+                alternateNames: ["Easter lily", "Asiatic lily", "Tiger lily", "Stargazer lily", "Oriental lily", "Japanese show lily", "Rubrum lily", "Red lily", "Western lily", "Wood lily", "Daylily", "Hemerocallis", "Lilium", "Lilium longiflorum", "Lilium tigrinum", "Lilium speciosum", "Lilium auratum", "lily bouquet", "lily flower", "lily pollen"],
+                categories: [.plants, .holidayHazards],
+                imageAsset: "lily",
+                description: "True lilies (Lilium species) and daylilies (Hemerocallis species) are popular flowering plants found in gardens, bouquets, and floral arrangements. They are especially common during Easter, Mother's Day, and other holidays. These lilies are extremely dangerous to cats — even tiny exposures can cause fatal kidney failure.",
+                toxicityInfo: "True lilies are extremely toxic to cats. The toxic principle has not been identified, but all parts of the plant are dangerous — including the petals, leaves, pollen, and even the water in the vase. Cats can be poisoned by chewing on leaves or petals, grooming pollen off their fur, or drinking water from a vase containing lilies. Even very small exposures can cause acute kidney failure within 24-72 hours. Without aggressive early treatment, the damage is often irreversible and fatal. Importantly, lily toxicity has not been documented in dogs — this appears to be a cat-specific sensitivity. Note: Not all plants with 'lily' in the name are true lilies. Peace lilies (Spathiphyllum), Calla lilies (Zantedeschia), and Lily of the Valley (Convallaria) are NOT true lilies and cause toxicity through different mechanisms — see separate entries for these plants.",
+                onsetTime: OnsetTime(
+                    early: "Vomiting typically begins within 2 hours of ingestion; other early signs include drooling, loss of appetite, lethargy, and depression — these may appear within 6-12 hours",
+                    delayed: "Signs of kidney failure develop 24-72 hours after exposure: increased thirst and urination initially, followed by decreased or absent urination as kidneys fail; without treatment, death typically occurs within 3-6 days"
+                ),
+                symptoms: [
+                    "Vomiting (often the first sign)",
+                    "Drooling or excessive salivation",
+                    "Loss of appetite",
+                    "Lethargy or depression",
+                    "Hiding or withdrawn behavior",
+                    "Increased thirst and urination (early kidney involvement)",
+                    "Decreased or absent urination (kidney failure progressing)",
+                    "Dehydration",
+                    "Disorientation",
+                    "Seizures (terminal stages)",
+                    "Death"
+                ],
+                speciesRisks: [
+                    SpeciesRisk(species: .cat, severity: .severe, notes: "EXTREMELY TOXIC — even tiny exposures (a few pollen grains, one leaf bite, vase water) can cause fatal kidney failure; all cats are susceptible regardless of age or health status"),
+                    SpeciesRisk(species: .dog, severity: .low, notes: "True lily toxicity (kidney failure) has not been documented in dogs; severity is 'low' rather than 'none' because ingestion of plant material may still cause mild GI upset such as vomiting or diarrhea")
+                ],
+                preventionTips: [
+                    "Never bring true lilies (Easter, Asiatic, Tiger, Stargazer, Oriental, Daylilies) into homes with cats — there is no safe way to have these plants around cats",
+                    "Check all flower bouquets and arrangements carefully before bringing them home; request 'no lilies' when ordering flowers",
+                    "If you receive a bouquet containing lilies, remove and dispose of them immediately before your cat can access them",
+                    "Be especially vigilant during Easter, Mother's Day, and other holidays when lily arrangements are common gifts",
+                    "If your cat has any potential exposure to lilies — even brushing against pollen — seek veterinary care immediately; do not wait for symptoms",
+                    "Educate family members, pet sitters, and houseguests about the danger of lilies to cats"
+                ],
+                sources: ["Veterinary Information Network (VIN)", "ASPCA Animal Poison Control Center", "Pet Poison Helpline", "Merck Veterinary Manual"]
+            ),
+
+            // MARK: - Sago Palm
+            ToxicItem(
+                id: UUID(),
+                name: "Sago Palm",
+                alternateNames: ["cycad", "Cycas revoluta", "Cycas circinalis", "Zamia", "cardboard palm", "coontie", "queen sago", "king sago", "Japanese cycad", "Australian nut palm", "fern palm", "false sago palm", "iron tree", "cycad palm", "comptie", "Seminole bread", "Florida arrowroot", "bonsai palm", "sago cycas"],
+                categories: [.plants],
+                imageAsset: "sago_palm",
+                description: "Sago palms are ancient seed plants with a stout trunk and large crown of feathery compound leaves. Despite the name, they are not true palms — they are cycads. Found naturally in tropical and subtropical regions, they are popular landscaping plants in the southern United States (especially Florida, Texas, and Gulf Coast states) and are increasingly kept as houseplants and bonsai in other regions. This indoor cultivation trend has brought sago palms into areas where they previously did not exist, increasing pet exposure risk.",
+                toxicityInfo: "All parts of the sago palm are toxic, but the seeds (nuts) from the female plant are the most dangerous — ingesting as little as one seed has caused death in dogs. The primary toxin is cycasin, which causes severe liver damage and gastrointestinal injury. Another compound, BMAA (β-methylamino-L-alanine), acts as a neurotoxin. There is no antidote for sago palm poisoning; treatment is entirely supportive. Mortality rates can be as high as 50%. Early, aggressive veterinary care significantly improves survival.",
+                onsetTime: OnsetTime(
+                    early: "Gastrointestinal signs (vomiting, diarrhea, drooling, loss of appetite) typically appear within hours of ingestion — vomiting occurs in 80-90% of affected dogs",
+                    delayed: "Neurologic signs (tremors, ataxia, seizures) and liver failure may develop 1-3 days after ingestion; liver damage may continue to progress for weeks after exposure"
+                ),
+                symptoms: [
+                    "Vomiting (occurs in 80-90% of cases)",
+                    "Diarrhea (may contain blood)",
+                    "Drooling and hypersalivation",
+                    "Loss of appetite",
+                    "Lethargy and weakness",
+                    "Abdominal pain",
+                    "Jaundice or yellowing of skin, gums, or eyes (liver failure)",
+                    "Tremors",
+                    "Ataxia (lack of coordination, stumbling)",
+                    "Seizures or convulsions",
+                    "Head pressing",
+                    "Confusion or decreased responsiveness",
+                    "Bleeding abnormalities (bruising, blood in stool, pale gums)",
+                    "Collapse or coma",
+                    "Death"
+                ],
+                speciesRisks: [
+                    SpeciesRisk(species: .dog, severity: .severe, notes: "Dogs are most commonly affected; young dogs are especially prone to chewing on the plant; even one seed can be fatal"),
+                    SpeciesRisk(species: .cat, severity: .severe, notes: "No published case reports exist in cats, but toxic effects are anticipated to be the same as or worse than in dogs; cats should be considered equally at risk"),
+                    SpeciesRisk(species: .bird, severity: .low, notes: "Insufficient data on cycad toxicity in birds; avoid exposure as a precaution")
+                ],
+                preventionTips: [
+                    "Do not keep sago palms or any cycad species in homes or yards where dogs or cats have access",
+                    "If you have sago palms in your landscaping, consider removing them entirely or fencing them off completely",
+                    "Be aware that sago palms are increasingly sold as indoor bonsai plants — these are equally toxic",
+                    "The seeds (large orange-red nuts) are the most toxic part; if your plant is female and produces seeds, the risk is even higher",
+                    "Young dogs are especially prone to chewing on plants — supervise puppies around all landscaping",
+                    "If you suspect any exposure, seek emergency veterinary care immediately — do not wait for symptoms to appear"
+                ],
+                sources: ["Veterinary Information Network (VIN)", "ASPCA Animal Poison Control Center", "Pet Poison Helpline", "Merck Veterinary Manual"]
+            ),
+
+            // MARK: - Azalea & Rhododendron
+            ToxicItem(
+                id: UUID(),
+                name: "Azalea & Rhododendron",
+                alternateNames: ["azalea", "rhododendron", "Rhododendron spp", "rosebay", "great laurel", "wild honeysuckle", "azalea bush", "rhododendron bush"],
+                categories: [.plants],
+                imageAsset: "azalea",
+                description: "Azaleas and rhododendrons are popular flowering shrubs found in gardens and landscaping throughout the United States, with particularly high concentrations in the Southeast. Azaleas are actually a subgroup of the Rhododendron genus — they share the same toxic compounds. These shrubs produce showy clusters of flowers in spring and are commonly used as ornamental plants in yards and gardens.",
+                toxicityInfo: "All parts of the azalea and rhododendron plant are toxic, including the leaves, flowers, nectar, and pollen. The toxic compounds are grayanotoxins, which affect the heart and nervous system by interfering with sodium channels in cells. In most real-world cases, pets do not eat enough to cause severe toxicity — ASPCA data from 1,000 canine cases showed 29% developed vomiting and only 2% developed cardiac arrhythmias. However, large ingestions can cause serious cardiovascular effects including dangerous heart rhythm abnormalities, low blood pressure, and collapse. The toxin is not cumulative (repeated small exposures do not build up), but clinical signs — particularly cardiac effects — may persist for several days.",
+                onsetTime: OnsetTime(
+                    early: "Vomiting and drooling typically appear within a few hours of ingestion; most signs develop within 12 hours",
+                    delayed: "Cardiac signs can continue for days even after initial GI symptoms resolve; prolonged cardiac effects lasting up to 14 days have been reported in severe cases"
+                ),
+                symptoms: [
+                    "Vomiting (most common sign)",
+                    "Drooling and hypersalivation",
+                    "Diarrhea (less common)",
+                    "Loss of appetite",
+                    "Weakness",
+                    "Abdominal pain",
+                    "Abnormal heart rate (too fast or too slow)",
+                    "Low blood pressure",
+                    "Tremors",
+                    "Difficulty breathing",
+                    "CNS depression or lethargy",
+                    "Collapse",
+                    "Coma (severe cases)",
+                    "Death (severe cases)"
+                ],
+                speciesRisks: [
+                    SpeciesRisk(species: .dog, severity: .moderate, notes: "Most cases result in GI upset only (vomiting in ~29% of cases); cardiac arrhythmias are rare (~2%) because dogs typically do not eat enough to cause severe toxicity; large ingestions can be serious"),
+                    SpeciesRisk(species: .cat, severity: .moderate, notes: "Vomiting is the main sign; diarrhea is rare in cats; cardiac signs can persist for days if they occur — veterinary evaluation recommended for any ingestion"),
+                    SpeciesRisk(species: .bird, severity: .high, notes: "Birds are highly susceptible to grayanotoxins due to their small body mass; birds that chew on leaves or flowers are at risk")
+                ],
+                preventionTips: [
+                    "Supervise pets in yards where azaleas or rhododendrons are planted",
+                    "Consider fencing off azalea beds or removing plants if your pet is prone to chewing on vegetation",
+                    "Be aware that all parts are toxic — including fallen flowers and leaves",
+                    "If you see your pet chewing on azalea, contact your veterinarian even if no symptoms are present yet"
+                ],
+                sources: ["Veterinary Information Network (VIN)", "ASPCA Animal Poison Control Center", "Pet Poison Helpline", "Merck Veterinary Manual"]
             )
         ]
     }
