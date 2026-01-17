@@ -1837,6 +1837,49 @@ class DatabaseService {
                     "If you suspect your pet has ingested any part of these plants, contact your veterinarian immediately"
                 ],
                 sources: ["ASPCA Animal Poison Control Center", "Pet Poison Helpline", "Veterinary Information Network (VIN)"]
+            ),
+
+            // MARK: - Horse Chestnut & Buckeye
+            ToxicItem(
+                id: UUID(),
+                name: "Horse Chestnut & Buckeye",
+                alternateNames: ["buckeye", "horse chestnut", "Aesculus", "Aesculus hippocastanum", "Aesculus glabra", "Aesculus pavia", "Ohio buckeye", "red buckeye", "California buckeye", "European horse chestnut", "conker", "conkers", "fetid buckeye", "aesculin", "buckeye nut", "horse chestnut tree"],
+                categories: [.plants],
+                imageAsset: "horse_chestnut_buckeye",
+                description: "Horse chestnuts and buckeyes (Aesculus species) are deciduous trees found throughout North America and Europe, recognized by their distinctive palmate leaves and spiny-husked nuts. Ohio buckeye, red buckeye, and California buckeye are native to the United States, while European horse chestnut (Aesculus hippocastanum) is commonly planted as an ornamental. The shiny brown nuts that fall in autumn attract curious dogs — and pose both a toxic and a foreign body risk.",
+                toxicityInfo: "Horse chestnuts and buckeyes contain glycosidic saponins, primarily aesculin, which cause gastrointestinal irritation and, at higher doses, can affect the central nervous system. All parts of the plant are toxic, including the leaves, bark, flowers, and nuts (seeds). The nuts are the most commonly ingested part.\n\nIn most real-world cases involving dogs in the United States, clinical signs are limited to gastrointestinal upset — vomiting and diarrhea — because American buckeye varieties are generally less toxic than their European counterparts, and the bitter, unpleasant taste discourages consumption of large amounts. European horse chestnut (Aesculus hippocastanum) is considered more toxic.\n\nNeurological signs (incoordination, muscle twitching, dilated pupils, excitement or depression, tremors, seizures) can occur with large ingestions but are uncommon in dogs. Saponins are poorly absorbed from a healthy digestive tract, so significant quantities must be consumed to cause systemic effects.\n\nIn addition to toxicity concerns, the hard, round nuts pose a choking hazard and can cause gastrointestinal obstruction, particularly in smaller dogs.",
+                onsetTime: OnsetTime(
+                    early: "Gastrointestinal signs (vomiting, diarrhea) typically appear within 1-3 hours of ingestion",
+                    delayed: "Neurological signs, if they occur, may peak around 24-28 hours after ingestion; toxins have approximately a 24-hour half-life"
+                ),
+                symptoms: [
+                    "Vomiting",
+                    "Diarrhea",
+                    "Drooling (hypersalivation)",
+                    "Abdominal pain",
+                    "Loss of appetite",
+                    "Lethargy or depression",
+                    "Excitement or agitation",
+                    "Dilated pupils",
+                    "Incoordination or wobbliness (large ingestions)",
+                    "Muscle twitching or tremors (large ingestions)",
+                    "Seizures or convulsions (large ingestions, rare)",
+                    "Coma (severe cases, rare)"
+                ],
+                speciesRisks: [
+                    SpeciesRisk(species: .dog, severity: .moderate, notes: "GI upset is the most common outcome; neurological signs are uncommon in dogs in the US because American varieties are less toxic and dogs rarely eat enough; European horse chestnut is more toxic; nuts also pose foreign body/obstruction risk"),
+                    SpeciesRisk(species: .cat, severity: .moderate, notes: "Cats are susceptible but rarely ingest these nuts due to their selective eating habits"),
+                    SpeciesRisk(species: .bird, severity: .moderate, notes: "Limited data; birds should be kept away from horse chestnuts as a precaution")
+                ],
+                preventionTips: [
+                    "Rake up fallen horse chestnuts and buckeyes from your yard regularly, especially in autumn",
+                    "Do not let dogs play with or chew on the nuts — they pose both a toxicity and choking/obstruction risk",
+                    "Be aware that European horse chestnut (commonly planted as ornamental) is more toxic than American buckeye varieties",
+                    "Supervise dogs in parks and yards where these trees are present",
+                    "The bitter taste usually deters dogs from eating large amounts, but some determined chewers may still be at risk",
+                    "If your dog ingests horse chestnuts or buckeyes, contact your veterinarian — monitor for GI upset and potential obstruction"
+                ],
+                sources: ["Veterinary Information Network (VIN)", "ASPCA Animal Poison Control Center", "Pet Poison Helpline", "Clinical Veterinary Toxicology (Plumlee)"]
             )
         ]
     }
