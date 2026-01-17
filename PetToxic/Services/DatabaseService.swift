@@ -1750,6 +1750,93 @@ class DatabaseService {
                     "Consider fencing off wisteria or choosing non-toxic climbing vines if you have curious pets"
                 ],
                 sources: ["Veterinary Information Network (VIN)", "ASPCA Animal Poison Control Center", "Pet Poison Helpline"]
+            ),
+
+            // MARK: - Milkweed
+            ToxicItem(
+                id: UUID(),
+                name: "Milkweed",
+                alternateNames: ["Asclepias", "Asclepias syriaca", "Asclepias speciosa", "Asclepias tuberosa", "Asclepias incarnata", "Asclepias verticillata", "common milkweed", "showy milkweed", "butterfly weed", "swamp milkweed", "narrow-leaved milkweed", "whorled milkweed", "tropical milkweed", "blood flower", "milkweed sap", "monarch butterfly plant", "pleurisy root"],
+                categories: [.plants],
+                imageAsset: "milkweed_monarch",
+                description: "Milkweed (Asclepias species) is a native North American plant famous for being the sole food source for monarch butterfly caterpillars. It has become increasingly popular in gardens as part of pollinator conservation efforts. The plant gets its name from the thick, milky white sap that oozes from broken stems and leaves. There are over 100 species of milkweed, with varying levels of toxicity — narrow-leaved species tend to be more toxic than broad-leaved species.",
+                toxicityInfo: "Milkweed contains cardiac glycosides (cardenolides), similar to those found in foxglove and oleander. These compounds interfere with the heart's electrical activity and can cause cardiac arrhythmias. Additionally, resinoids in the plant cause gastrointestinal irritation, and some species contain neurotoxins that can cause neurological signs.\n\nThere is significant variation between milkweed species: narrow-leaved milkweeds (like whorled milkweed) tend to cause more neurological signs, while broad-leaved species (like common milkweed) are more likely to cause GI and cardiac effects. According to veterinary toxicologists, in most dog cases, GI signs predominate, followed by cardiac signs. The plant's bitter, unpleasant taste and the irritating milky sap typically deter pets from consuming large amounts.\n\nAll parts of the plant are toxic, including the leaves, stems, roots, and milky sap. The sap can also cause skin and eye irritation on contact.",
+                onsetTime: OnsetTime(
+                    early: "GI signs (vomiting, diarrhea, drooling) typically appear within a few hours of ingestion",
+                    delayed: "Cardiac effects may develop with larger ingestions; neurological signs can occur with certain species"
+                ),
+                symptoms: [
+                    "Vomiting",
+                    "Diarrhea",
+                    "Drooling (hypersalivation)",
+                    "Loss of appetite",
+                    "Lethargy or depression",
+                    "Weakness",
+                    "Incoordination or ataxia",
+                    "Dilated pupils",
+                    "Abnormal heart rate or rhythm (large ingestions)",
+                    "Difficulty breathing (large ingestions)",
+                    "Tremors or seizures (with neurotoxic species)",
+                    "Collapse (severe cases)"
+                ],
+                speciesRisks: [
+                    SpeciesRisk(species: .dog, severity: .moderate, notes: "GI signs are most common; cardiac effects can occur with larger ingestions; the bitter taste typically limits consumption"),
+                    SpeciesRisk(species: .cat, severity: .moderate, notes: "Similar effects to dogs; cats are less likely to consume significant amounts due to taste aversion"),
+                    SpeciesRisk(species: .bird, severity: .high, notes: "Birds are more susceptible to cardiac glycosides due to small body size; pet birds should be kept away from milkweed")
+                ],
+                preventionTips: [
+                    "If you grow milkweed for monarch butterflies, plant it in an area your pets cannot access",
+                    "Supervise pets in gardens where milkweed is growing",
+                    "The milky sap can irritate skin and eyes — wash thoroughly if contact occurs",
+                    "Be aware that narrow-leaved milkweed species tend to be more toxic than broad-leaved species",
+                    "If your pet shows interest in milkweed, redirect them to other areas of the garden",
+                    "Contact your veterinarian if you suspect your pet has ingested milkweed"
+                ],
+                sources: ["Veterinary Information Network (VIN)", "ASPCA Animal Poison Control Center", "Pet Poison Helpline"]
+            ),
+
+            // MARK: - Larkspur & Delphinium
+            ToxicItem(
+                id: UUID(),
+                name: "Larkspur & Delphinium",
+                alternateNames: ["larkspur", "Delphinium", "Delphinium species", "Consolida", "Consolida ajacis", "annual larkspur", "perennial delphinium", "rocket larkspur", "tall larkspur", "low larkspur", "dwarf larkspur"],
+                categories: [.plants],
+                imageAsset: "larkspur_delphinium",
+                description: "Larkspur and Delphinium are closely related flowering plants in the Ranunculaceae (buttercup) family, known for their tall spikes of showy blue, purple, pink, or white flowers. Larkspur typically refers to annual species (Consolida), while Delphinium refers to perennial species — but both contain the same toxic compounds and are often used interchangeably. These are popular cottage garden plants and cut flowers. While poisoning is well-documented in grazing livestock (particularly cattle), cases in household pets are less commonly reported but can occur.",
+                toxicityInfo: "Larkspur and Delphinium contain diterpene alkaloids, primarily methyllycaconitine, which act as neuromuscular blocking agents similar to curare. These alkaloids block acetylcholine receptors at the neuromuscular junction, preventing normal nerve-to-muscle communication and causing progressive weakness, paralysis, and potentially respiratory failure.\n\nAll parts of the plant are toxic, but toxicity varies significantly with the plant's growth stage — young, rapidly growing plants (especially new shoots in spring) contain the highest alkaloid concentrations. As the plant matures and flowers, it generally becomes less toxic. The seeds also contain significant levels of toxins.\n\nWhile severe toxicity is well-documented in grazing livestock that consume large quantities, household pets are less commonly affected — likely because dogs and cats typically do not consume enough plant material to cause serious poisoning. However, the potential for neuromuscular paralysis and respiratory compromise means any ingestion should be taken seriously.",
+                onsetTime: OnsetTime(
+                    early: "GI signs (drooling, vomiting) and early neuromuscular effects (stiffness, tremors) may appear within a few hours of ingestion",
+                    delayed: "Progressive weakness and paralysis can develop; signs may persist for 24-48 hours depending on amount ingested"
+                ),
+                symptoms: [
+                    "Drooling (hypersalivation)",
+                    "Vomiting",
+                    "Constipation or colic",
+                    "Muscle stiffness",
+                    "Muscle tremors",
+                    "Weakness",
+                    "Incoordination (ataxia)",
+                    "Recumbency (inability to stand)",
+                    "Paralysis",
+                    "Convulsions",
+                    "Difficulty breathing",
+                    "Abnormal heart rhythm",
+                    "Collapse"
+                ],
+                speciesRisks: [
+                    SpeciesRisk(species: .dog, severity: .moderate, notes: "Dogs rarely consume large amounts; GI upset is most likely with smaller ingestions; neuromuscular effects possible with larger amounts; puppies may be more prone to chewing on plants"),
+                    SpeciesRisk(species: .cat, severity: .moderate, notes: "Cats have the same susceptibility as dogs; smaller body size means less plant material is needed to cause effects"),
+                    SpeciesRisk(species: .bird, severity: .high, notes: "Small body size makes birds more vulnerable to the neurotoxic effects; keep pet birds away from larkspur and delphinium")
+                ],
+                preventionTips: [
+                    "Keep dogs and cats away from larkspur and delphinium, especially during spring when young shoots are most toxic",
+                    "Be particularly vigilant with puppies that may be prone to chewing on garden plants",
+                    "If you grow these plants, consider fencing them off from pet-accessible areas",
+                    "Remove any larkspur or delphinium from areas where pets play unsupervised",
+                    "The plants become less toxic as they mature, but all growth stages should be considered potentially dangerous",
+                    "If you suspect your pet has ingested any part of these plants, contact your veterinarian immediately"
+                ],
+                sources: ["ASPCA Animal Poison Control Center", "Pet Poison Helpline", "Veterinary Information Network (VIN)"]
             )
         ]
     }
