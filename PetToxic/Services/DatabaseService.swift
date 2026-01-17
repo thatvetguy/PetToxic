@@ -1388,15 +1388,15 @@ class DatabaseService {
                 sources: ["Veterinary Information Network (VIN)", "ASPCA Animal Poison Control Center", "Pet Poison Helpline", "Merck Veterinary Manual"]
             ),
 
-            // MARK: - Snake Plant
+            // MARK: - Snake Plant & Dracaena
             ToxicItem(
                 id: UUID(),
-                name: "Snake Plant",
-                alternateNames: ["Sansevieria", "Sansevieria trifasciata", "Dracaena trifasciata", "mother-in-law's tongue", "mother in laws tongue", "good luck plant", "golden bird's nest", "viper's bowstring hemp", "Saint George's sword", "Sansevieria Moonshine", "Sansevieria cylindrica", "snake plant leaves"],
+                name: "Snake Plant & Dracaena",
+                alternateNames: ["Sansevieria", "Sansevieria trifasciata", "Dracaena trifasciata", "mother-in-law's tongue", "mother in laws tongue", "good luck plant", "golden bird's nest", "viper's bowstring hemp", "Saint George's sword", "Sansevieria Moonshine", "Sansevieria cylindrica", "snake plant leaves", "Dracaena", "Dracaena fragrans", "Dracaena marginata", "Dracaena deremensis", "Dracaena surculosa", "corn plant", "cornstalk plant", "dragon tree", "red-edged dracaena", "ribbon plant", "Janet Craig", "Warneckii", "mass cane", "lucky bamboo", "Dracaena sanderiana", "Florida beauty"],
                 categories: [.plants],
-                imageAsset: "snake_plant_sansevieria",
-                description: "Snake plant (Sansevieria trifasciata, recently reclassified as Dracaena trifasciata) is one of the most popular houseplants due to its striking sword-shaped leaves, air-purifying qualities, and extreme hardiness — it thrives on neglect. It is commonly found in homes, offices, and commercial spaces. While toxic to pets, snake plant is considered low toxicity and rarely causes serious illness.",
-                toxicityInfo: "Snake plants contain saponins, natural compounds that protect the plant against fungi, insects, and microbes. When ingested, saponins irritate the gastrointestinal tract by interacting with cell membranes, causing a foaming action that leads to nausea, vomiting, and diarrhea. The bitter taste of snake plants makes them unpalatable, so pets rarely consume enough to cause serious toxicity. In most cases, symptoms are mild and self-limiting. Severe effects (changes in heart rate and blood pressure, incoordination, or rupture of red blood cells) are rare and typically only occur with large ingestions.\n\nIMPORTANT: Snake plant is sometimes called 'mother-in-law's tongue,' but this name is also used for Dieffenbachia — a completely different plant with a different toxin (insoluble calcium oxalate crystals). Snake plant causes systemic GI effects from saponins; Dieffenbachia causes only localized mouth and throat irritation. Do not confuse the two.",
+                imageAsset: "snake_plant_dracaena",
+                description: "Snake plants and Dracaenas are extremely popular houseplants prized for their striking sword-shaped or arching leaves, air-purifying qualities, and extreme hardiness — they thrive on neglect. Snake plant (formerly Sansevieria, now reclassified as Dracaena trifasciata) and other Dracaena species (corn plant, dragon tree, lucky bamboo, Janet Craig, etc.) are commonly found in homes, offices, and commercial spaces. While toxic to pets, these plants are considered low toxicity and rarely cause serious illness.",
+                toxicityInfo: "Snake plants and Dracaenas contain saponins, natural compounds that protect the plant against fungi, insects, and microbes. When ingested, saponins irritate the gastrointestinal tract by interacting with cell membranes, causing a foaming action that leads to nausea, vomiting, and diarrhea. The bitter taste of these plants makes them unpalatable, so pets rarely consume enough to cause serious toxicity.\n\nIn most cases, symptoms are mild and self-limiting. Cats may also develop dilated pupils. Vomiting occasionally contains small amounts of blood due to GI irritation, but this is typically minor. Severe effects are rare and typically only occur with large ingestions.\n\nIMPORTANT: Snake plant is sometimes called 'mother-in-law's tongue,' but this name is also used for Dieffenbachia — a completely different plant with a different toxin (insoluble calcium oxalate crystals). Snake plant/Dracaena causes systemic GI effects from saponins; Dieffenbachia causes only localized mouth and throat irritation. Do not confuse the two.",
                 onsetTime: OnsetTime(
                     early: "GI symptoms (vomiting, diarrhea, drooling) typically appear within a few hours of ingestion",
                     delayed: "Most symptoms resolve within 24-48 hours; severe symptoms are rare but may take longer to resolve"
@@ -1408,21 +1408,23 @@ class DatabaseService {
                     "Drooling (hypersalivation)",
                     "Loss of appetite",
                     "Lethargy or depression",
+                    "Dilated pupils (cats)",
                     "Weakness",
                     "Incoordination or stumbling (rare, large ingestions)",
                     "Changes in heart rate or blood pressure (rare, large ingestions)"
                 ],
                 speciesRisks: [
                     SpeciesRisk(species: .dog, severity: .low, notes: "Toxicity is mild in most cases; bitter taste limits ingestion; GI upset is the primary concern; severe effects are rare"),
-                    SpeciesRisk(species: .cat, severity: .low, notes: "Cats may chew on the long leaves; toxicity is typically mild with GI symptoms; same low risk as dogs"),
-                    SpeciesRisk(species: .smallMammal, severity: .low, notes: "Rabbits are susceptible to saponin toxicity; keep snake plants out of reach")
+                    SpeciesRisk(species: .cat, severity: .low, notes: "Cats may chew on the long leaves; toxicity is typically mild with GI symptoms; may develop dilated pupils; same low risk as dogs"),
+                    SpeciesRisk(species: .smallMammal, severity: .low, notes: "Rabbits are susceptible to saponin toxicity; keep snake plants and dracaenas out of reach")
                 ],
                 preventionTips: [
-                    "Place snake plants on high shelves or in rooms inaccessible to pets",
+                    "Place snake plants and dracaenas on high shelves or in rooms inaccessible to pets",
                     "Consider hanging planters to keep leaves out of reach of curious cats",
                     "If your pet is a plant chewer, opt for non-toxic alternatives like spider plants, Boston ferns, or African violets",
-                    "Monitor pets around snake plants — while toxicity is usually mild, repeated exposure should be avoided",
-                    "If your pet ingests snake plant and develops vomiting or diarrhea, contact your veterinarian for guidance"
+                    "Monitor pets around these plants — while toxicity is usually mild, repeated exposure should be avoided",
+                    "If your pet ingests snake plant or dracaena and develops vomiting or diarrhea, contact your veterinarian for guidance",
+                    "All Dracaena species (corn plant, dragon tree, lucky bamboo, etc.) contain the same saponin toxins as snake plant"
                 ],
                 sources: ["ASPCA Animal Poison Control Center", "Pet Poison Helpline", "University of North Carolina Department of Horticultural Science", "Wag Walking Veterinary Resources"]
             ),
