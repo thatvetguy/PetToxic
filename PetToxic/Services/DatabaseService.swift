@@ -2895,6 +2895,60 @@ class DatabaseService {
                     "Be aware that washer fluid may pool under parked vehicles in cold weather"
                 ],
                 sources: ["VIN Toxicology Resources — Methanol Toxicosis", "Pet Poison Helpline — Windshield Wiper Fluid", "Pet Poison Helpline — Methanol Poisoning in Dogs and Cats", "American College of Veterinary Pharmacists — Methanol"]
+            ),
+
+            // MARK: - Lead (Batteries, Paint, Fishing Weights)
+            ToxicItem(
+                id: UUID(),
+                name: "Lead (Batteries, Paint, Fishing Weights)",
+                alternateNames: ["lead poisoning", "lead toxicosis", "plumbism", "heavy metal poisoning", "lead-acid battery", "car battery", "automotive battery", "battery acid", "lead-based paint", "paint chips", "paint dust", "renovation dust", "fishing sinker", "fishing weight", "lead sinker", "split shot", "curtain weight", "drapery weight", "wheel weight", "tire weight", "lead shot", "ammunition", "bullets", "pellets", "bird shot", "buckshot", "solder", "soldering", "plumbing solder", "lead pipe", "golf ball", "golf balls", "stained glass", "ceramic glaze", "imported toys", "lead figurines", "lead weights"],
+                categories: [.garageAutomotive],
+                imageAsset: "lead_sources",
+                description: "Lead is a toxic heavy metal found in numerous household and garage items. Common sources of pet lead exposure include:\n\n• **Batteries:** Lead-acid automotive batteries contain lead plates and lead compounds\n• **Paint:** Lead-based paint was used in buildings constructed before 1978; renovation or weathering can release toxic paint chips and dust\n• **Fishing tackle:** Lead sinkers and split shot weights\n• **Ammunition:** Lead shot, bullets, and pellets (including lead embedded in prey animals)\n• **Household items:** Curtain/drapery weights, wheel weights, solder, stained glass, certain ceramic glazes\n• **Other:** Some imported toys, decorative items, golf balls (lead core), and older bird cages\n\nLead poisoning is more common in dogs than cats, and most affected dogs are under 2 years old — likely due to their tendency to chew on objects. In up to 90% of lead toxicosis cases, the exact source is never identified.\n\n**Renovation hazard:** Home renovation projects in older buildings are a major risk. Sanding or scraping painted surfaces releases lead dust that pets can inhale or ingest during grooming. A paint chip the size of a thumbnail can poison a dog weighing up to 20 pounds.",
+                toxicityInfo: "Lead affects multiple body systems, with the gastrointestinal tract and nervous system most commonly involved. Once absorbed, lead binds to red blood cells and distributes throughout the body, with bone serving as a long-term storage site for up to 97% of absorbed lead.\n\n**How lead affects pets:**\n\n• **Gastrointestinal:** Vomiting, diarrhea, abdominal pain, loss of appetite, weight loss\n\n• **Neurological:** Seizures (often intermittent), behavioral changes, lethargy, hysteria, blindness, tremors, head pressing, weakness, incoordination. Lead is one of the few causes of intermittent seizures in cats.\n\n• **Blood:** Lead interferes with red blood cell production, causing anemia\n\n• **Other:** Kidney damage, bone abnormalities (pathologic fractures, delayed healing)\n\n**Key characteristics:**\n\n• Signs are often vague and intermittent, especially with chronic exposure\n• Symptoms may be primarily GI, primarily neurological, or a combination\n• Young animals absorb lead more readily than adults (except dogs, which absorb lead well at any age)\n• Blood lead levels do not always correlate with severity of signs\n• Lead has an extremely long half-life in the body (months to years)\n\n⚠️ **Lead poisoning requires veterinary treatment.** If you suspect your pet has been exposed to lead — especially if showing GI upset, seizures, or behavioral changes — seek veterinary care promptly. X-rays can reveal lead objects in the digestive tract, and blood tests can confirm lead exposure.",
+                onsetTime: OnsetTime(
+                    early: "Hours to days — GI signs (vomiting, diarrhea, abdominal pain) often appear first",
+                    delayed: "Days to weeks — Neurological signs may develop with continued exposure or delayed presentation"
+                ),
+                symptoms: [
+                    "Vomiting",
+                    "Diarrhea",
+                    "Abdominal pain or colic",
+                    "Loss of appetite (anorexia)",
+                    "Weight loss",
+                    "Lethargy or depression",
+                    "Behavioral changes",
+                    "Seizures or convulsions (often intermittent)",
+                    "Tremors",
+                    "Wobbling or incoordination (ataxia)",
+                    "Weakness in limbs",
+                    "Head pressing",
+                    "Blindness",
+                    "Hysteria or anxiety",
+                    "Excessive drooling",
+                    "Regurgitation",
+                    "Increased thirst and urination",
+                    "Pale gums (from anemia)"
+                ],
+                speciesRisks: [
+                    SpeciesRisk(species: .dog, severity: .high, notes: "Dogs are most commonly affected, especially those under 2 years old. Dogs absorb lead readily at any age (unlike most species where young animals absorb more). Chewing behavior increases exposure risk. GI and neurological signs are most common."),
+                    SpeciesRisk(species: .cat, severity: .high, notes: "Less common than in dogs — cats are more fastidious and less likely to chew on objects or lick painted surfaces. However, cats can be exposed through grooming dust from renovations. Lead is one of few causes of intermittent seizures in cats."),
+                    SpeciesRisk(species: .bird, severity: .high, notes: "Birds are highly susceptible to lead poisoning. Common sources include lead weights, stained glass solder, and older cages with lead-based paint or lead components. Wild birds may ingest lead shot from the environment."),
+                    SpeciesRisk(species: .smallMammal, severity: .high, notes: "Small mammals can be exposed through chewing on lead-containing objects or ingesting contaminated materials. Their small body size makes even small exposures potentially serious.")
+                ],
+                preventionTips: [
+                    "Keep pets away from areas undergoing renovation, especially in homes built before 1978",
+                    "Store automotive batteries securely out of pet's reach",
+                    "Keep fishing tackle boxes closed and stored away from pets",
+                    "Do not allow pets to chew on or play with fishing sinkers, curtain weights, or similar objects",
+                    "Dispose of old batteries properly — do not leave accessible to pets",
+                    "If renovating an older home, contain dust and debris; do not allow pets in work areas",
+                    "Wet-mop floors in renovation areas rather than sweeping (reduces airborne dust)",
+                    "Be cautious with imported toys, figurines, and decorative items that may contain lead",
+                    "If your pet is diagnosed with lead poisoning, have family members (especially children) tested for lead exposure",
+                    "Consider lead test kits (available at home improvement stores) for paint in older buildings"
+                ],
+                sources: ["VIN Toxicology Resources — Lead Toxicosis", "ASPCA Animal Poison Control Center — Lead Toxicosis", "Veterinary Partner (VIN) — Lead Poisoning in Dogs and Cats", "VCA Animal Hospitals — Paint and Varnish Poison Alert"]
             )
         ]
     }
