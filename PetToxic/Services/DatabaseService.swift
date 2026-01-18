@@ -1973,6 +1973,89 @@ class DatabaseService {
                     "If you suspect your pet has eaten lantana, especially the berries, contact your veterinarian"
                 ],
                 sources: ["ASPCA Animal Poison Control Center", "Pet Poison Helpline", "Veterinary Information Network (VIN)", "Merck Veterinary Manual"]
+            ),
+
+            // MARK: - Cyclamen
+            ToxicItem(
+                id: UUID(),
+                name: "Cyclamen",
+                alternateNames: ["Cyclamen persicum", "Cyclamen spp", "florist's cyclamen", "Persian violet", "sowbread", "ivy-leaved cyclamen", "hardy cyclamen", "cyclamen tuber", "cyclamen bulb"],
+                categories: [.plants, .holidayHazards],
+                imageAsset: "cyclamen_flowers",
+                description: "Cyclamen is a popular flowering houseplant with distinctive swept-back petals and heart-shaped leaves, often given as a gift during the winter holiday season. It is prized as a winter bloomer that adds color to homes when few other plants are flowering. Despite its delicate appearance, cyclamen is toxic to dogs, cats, horses, and rabbits.",
+                toxicityInfo: "Cyclamen contains terpenoid saponins, primarily cyclamine, which are concentrated throughout the plant but are most abundant in the tubers (roots/underground portions). Unlike most saponins, cyclamine is well-absorbed from the gastrointestinal tract. The mechanism of action involves interference with cell membrane lipids, changing their permeability and integrity — this affects mucosal cells locally and, after absorption, can cause lysis (destruction) of red blood cells.\n\nIn most cases, pets only nibble on the leaves, flowers, or stems, which contain lower levels of saponins and cause only mild GI upset (drooling, vomiting, diarrhea). However, if a pet digs up and consumes the tubers — which dogs are more likely to do than cats — serious toxicity can occur, including cardiac arrhythmias (abnormal heart rate and rhythm), seizures, and potentially death.\n\nRabbits are particularly at risk because they cannot vomit to expel the toxin. Cyclamen poisoning can be life-threatening in rabbits.",
+                onsetTime: OnsetTime(
+                    early: "GI signs (drooling, vomiting, diarrhea) typically appear within a few hours of ingestion",
+                    delayed: "Cardiac effects (arrhythmias) and seizures may develop with large ingestions, particularly of tubers; symptoms may persist for 24+ hours in serious cases"
+                ),
+                symptoms: [
+                    "Drooling (hypersalivation)",
+                    "Vomiting",
+                    "Diarrhea",
+                    "Loss of appetite",
+                    "Lethargy or depression",
+                    "Abdominal discomfort",
+                    "Abnormal heart rate (too fast or too slow)",
+                    "Cardiac arrhythmias (large ingestions)",
+                    "Weakness",
+                    "Incoordination",
+                    "Dilated pupils",
+                    "Seizures (severe cases)",
+                    "Collapse (severe cases)"
+                ],
+                speciesRisks: [
+                    SpeciesRisk(species: .dog, severity: .moderate, notes: "Dogs are more likely than cats to dig up and consume tubers due to their less discriminating eating habits; tuber ingestion can cause cardiac arrhythmias and seizures"),
+                    SpeciesRisk(species: .cat, severity: .moderate, notes: "Cats typically only nibble leaves and flowers (lower toxin levels); GI upset is the most common outcome; serious toxicity is less common but possible with large ingestions"),
+                    SpeciesRisk(species: .smallMammal, severity: .severe, notes: "Rabbits are particularly at risk — cyclamen can be life-threatening because rabbits cannot vomit to expel the toxin")
+                ],
+                preventionTips: [
+                    "Keep cyclamen plants out of reach of pets, especially dogs that may dig in potted plants",
+                    "The tubers (roots) are the most toxic part — if you repot cyclamen, dispose of any loose tubers securely",
+                    "Consider placing cyclamen in rooms that pets cannot access, especially during the holiday season when these plants are commonly given as gifts",
+                    "If you have rabbits, do not keep cyclamen anywhere they can access — it can be life-threatening to them",
+                    "If your pet shows signs of poisoning after contact with cyclamen, contact your veterinarian promptly — cardiac monitoring may be needed for large ingestions"
+                ],
+                sources: ["ASPCA Animal Poison Control Center", "Pet Poison Helpline", "PMC - Toxicity of House Plants to Pet Animals (peer-reviewed)", "WagWalking Veterinary Resources"]
+            ),
+
+            // MARK: - Bird of Paradise (Caesalpinia)
+            ToxicItem(
+                id: UUID(),
+                name: "Bird of Paradise (Caesalpinia)",
+                alternateNames: ["Caesalpinia gilliesii", "Erythrostemon gilliesii", "Poinciana gilliesii", "desert bird of paradise", "yellow bird of paradise", "Mexican bird of paradise", "Barbados pride", "peacock flower", "dwarf poinciana", "red bird of paradise", "pride of Barbados", "Caesalpinia pulcherrima", "bird of paradise shrub"],
+                categories: [.plants],
+                imageAsset: "bird_of_paradise_caesalpinia",
+                description: "The shrub Bird of Paradise (Caesalpinia species) is a flowering plant in the pea family (Fabaceae/Leguminosae) grown as an ornamental in warm climates, particularly the southwestern United States and Gulf Coast regions. It produces showy yellow, red, or orange flowers and leguminous seed pods. This plant should NOT be confused with the tropical houseplant also called Bird of Paradise (Strelitzia reginae), which is a different species with milder toxicity — see the Important Note below.",
+                toxicityInfo: "The shrub Bird of Paradise (Caesalpinia gilliesii and related species) contains hydrocyanic acid (hydrogen cyanide), which is released when plant tissue is damaged by chewing. The seed pods and seeds are considered the most toxic parts, though all parts of the plant contain the toxin. Tannins in the plant also contribute to gastrointestinal irritation.\n\nIngestion causes intense oral irritation and burning of the mouth, tongue, and lips, followed by drooling, vomiting, diarrhea, and difficulty swallowing. Incoordination has been reported, likely related to cyanide's effects on cellular respiration. Deaths have been documented in rabbits.\n\n**IMPORTANT:** Do not confuse this plant with the tropical houseplant Strelitzia reginae, which is also commonly called \"Bird of Paradise\" or \"Crane Flower.\" Strelitzia is a completely different plant (family Strelitziaceae) that causes only mild GI upset — it is considered much less toxic than Caesalpinia. The ASPCA specifically warns against confusing these two plants. If you are unsure which type of Bird of Paradise your pet ingested, describe the plant to your veterinarian or poison control — the shrub Caesalpinia has feathery compound leaves and legume-type seed pods, while Strelitzia has large banana-like leaves.",
+                onsetTime: OnsetTime(
+                    early: "Oral irritation and burning may be immediate; GI signs (drooling, vomiting, diarrhea) can appear within 20 minutes to a few hours",
+                    delayed: "Most symptoms resolve with supportive care; incoordination and more serious effects may develop with larger ingestions"
+                ),
+                symptoms: [
+                    "Intense burning and irritation of mouth, tongue, and lips",
+                    "Excessive drooling (hypersalivation)",
+                    "Vomiting",
+                    "Diarrhea",
+                    "Difficulty swallowing",
+                    "Loss of appetite",
+                    "Lethargy or depression",
+                    "Incoordination (ataxia)",
+                    "Weakness"
+                ],
+                speciesRisks: [
+                    SpeciesRisk(species: .dog, severity: .moderate, notes: "Dogs may be attracted to the seed pods; causes intense oral irritation and GI upset; incoordination possible with larger ingestions"),
+                    SpeciesRisk(species: .cat, severity: .moderate, notes: "Same toxicity concerns as dogs; cats are less likely to consume large amounts due to the intense oral irritation"),
+                    SpeciesRisk(species: .smallMammal, severity: .severe, notes: "Deaths have been documented in rabbits; small mammals are at higher risk due to small body size"),
+                    SpeciesRisk(species: .bird, severity: .moderate, notes: "Limited data; birds should be kept away from this plant as a precaution")
+                ],
+                preventionTips: [
+                    "Keep dogs away from Bird of Paradise shrubs, especially when seed pods are present — the pods and seeds are the most toxic parts",
+                    "If you have this plant in your landscaping, supervise pets and consider fencing it off",
+                    "Do not confuse this shrub (Caesalpinia) with the tropical houseplant Strelitzia — they are different plants with different toxicity levels",
+                    "The intense oral irritation usually limits how much a pet will eat, but any ingestion should prompt a call to your veterinarian",
+                    "If you have rabbits or other small mammals, keep them completely away from this plant — deaths have been documented"
+                ],
+                sources: ["ASPCA Animal Poison Control Center", "Pet Poison Helpline", "WagWalking Veterinary Resources", "Hunker Home & Garden"]
             )
         ]
     }
