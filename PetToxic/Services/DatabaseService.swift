@@ -2107,6 +2107,49 @@ class DatabaseService {
                     "With legalization, highly concentrated products are more available — even small amounts of vape liquid or concentrates can cause severe toxicity"
                 ],
                 sources: ["Veterinary Information Network (VIN)", "ASPCA Animal Poison Control Center", "Pet Poison Helpline", "Veterinary Partner"]
+            ),
+
+            // MARK: - Bleeding Heart
+            ToxicItem(
+                id: UUID(),
+                name: "Bleeding Heart",
+                alternateNames: ["Dicentra spectabilis", "Dicentra spp", "Dicentra eximia", "Dicentra formosa", "Lamprocapnos spectabilis", "bleeding heart plant", "Dutchman's breeches", "squirrel corn", "white eardrops", "steer's head", "soldier's cap", "butterfly banner", "kitten breeches", "staggerweed", "locks and keys", "Asian bleeding heart", "Japanese bleeding heart", "fringed bleeding heart", "western bleeding heart", "old-fashioned bleeding heart"],
+                categories: [.plants],
+                imageAsset: "bleeding_heart_plant",
+                description: "Bleeding Heart is a popular shade-garden perennial known for its distinctive heart-shaped pink or white flowers that dangle from arching stems. Native to Asia (Japan, Korea, China, Siberia), it thrives in cooler climates and is commonly planted in North American gardens. Despite its delicate appearance, all parts of this plant are toxic to dogs, cats, horses, and livestock. The plant belongs to the poppy family (Papaveraceae) and contains alkaloids similar to those found in other members of this family.",
+                toxicityInfo: "Bleeding Heart contains a variety of isoquinoline alkaloids, including apomorphine, cularine, and protoberberine alkaloids, depending on the species. These alkaloids exert neurologic effects through their antagonistic action on the neurotransmitter GABA (gamma-aminobutyric acid). Some alkaloids also interfere with sodium/potassium pumps and normal liver function.\n\n**All parts of the plant are toxic** — flowers, fruit, leaves, roots, sap, seeds, and stems. However, the **roots contain the highest concentration of toxins**, followed by the foliage. The plant has a bitter taste that often deters animals from consuming large quantities, but curious pets may still ingest enough to cause problems.\n\n**Skin contact warning:** The sap can cause contact dermatitis (skin irritation and rash) in both pets and humans. Handle with gloves.\n\n**Liver and kidney damage:** If toxins are not eliminated from the body quickly, they can cause permanent liver and kidney damage. Small dogs are especially vulnerable due to their size — they require a much smaller amount to reach toxic levels.\n\n**Related toxic plants:** Similar isoquinoline alkaloids are found in Corydalis (fitweed, fumeroot), Fumaria (fumitory), and Bloodroot (Sanguinaria).",
+                onsetTime: OnsetTime(
+                    early: "Signs typically appear within a few hours of ingestion; trembling and staggering gait are often the first signs noticed",
+                    delayed: "With significant ingestion, signs can progress to recumbency, seizures, and respiratory depression; liver/kidney damage may develop over 24-72 hours"
+                ),
+                symptoms: [
+                    "Vomiting",
+                    "Diarrhea",
+                    "Excessive salivation (drooling)",
+                    "Trembling or muscle tremors",
+                    "Staggering gait (ataxia)",
+                    "Weakness",
+                    "Disorientation",
+                    "Recumbency (inability to stand)",
+                    "Seizures or convulsions",
+                    "Labored breathing (respiratory depression)",
+                    "Paralysis (severe cases)",
+                    "Skin irritation (from contact with sap)"
+                ],
+                speciesRisks: [
+                    SpeciesRisk(species: .dog, severity: .moderate, notes: "Dogs are commonly affected. Small dogs are at particular risk — they can suffer liver and kidney damage with relatively limited exposure. Progression: trembling → staggering → recumbency → tetanus-like seizures. Liver and kidney damage can be permanent if not treated promptly."),
+                    SpeciesRisk(species: .cat, severity: .moderate, notes: "Cats are susceptible to the same neurologic and organ toxicity as dogs. The bitter taste may limit ingestion, but any exposure should be taken seriously."),
+                    SpeciesRisk(species: .smallMammal, severity: .moderate, notes: "Limited data in small mammals; small body size increases risk. Seek veterinary care for any ingestion.")
+                ],
+                preventionTips: [
+                    "The roots are the most toxic part — if you grow bleeding heart, ensure dogs cannot dig up the roots",
+                    "Consider fencing off garden areas where bleeding heart is planted, especially if you have curious dogs",
+                    "Wear gloves when handling bleeding heart plants — the sap can cause skin irritation in both humans and pets",
+                    "Small dogs are especially at risk for serious toxicity — even small amounts can cause liver damage",
+                    "If you see your pet eating any part of this plant, seek veterinary care immediately — do not wait for symptoms to appear",
+                    "Bring a piece of the plant to the veterinarian if possible to confirm identification"
+                ],
+                sources: ["IVIS - Guide to Poisonous House and Garden Plants (Colorado State University)", "Pet Poison Helpline", "WagWalking Veterinary Resources", "Veterinary Information Network (VIN)"]
             )
         ]
     }
