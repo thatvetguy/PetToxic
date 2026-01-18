@@ -2251,7 +2251,7 @@ class DatabaseService {
                     "Be aware that dried plant material remains toxic",
                     "Learn to identify monkshood — it has distinctive hooded flowers on tall spikes"
                 ],
-                sources: ["Veterinary Information Network (VIN) — Dr. Sharon Gwaltney-Brant, DABVT", "ASPCA Animal Poison Control Center", "Tilley and Smith, The 5-Minute Veterinary Consult: Canine and Feline", "Merck Veterinary Manual"]
+                sources: ["Veterinary Information Network (VIN)", "ASPCA Animal Poison Control Center", "Tilley and Smith, The 5-Minute Veterinary Consult: Canine and Feline", "Merck Veterinary Manual"]
             ),
 
             // MARK: - Datura (Angel's Trumpet & Jimsonweed)
@@ -2300,7 +2300,7 @@ class DatabaseService {
                     "Be aware that all parts of these plants are toxic, but flowers and seeds contain the highest alkaloid concentrations",
                     "Educate family members about the toxicity of these attractive but dangerous plants"
                 ],
-                sources: ["Veterinary Information Network (VIN) — Dr. Sharon Gwaltney-Brant, DABVT", "ASPCA Animal Poison Control Center", "Tilley and Smith, The 5-Minute Veterinary Consult: Canine and Feline", "Pet Poison Helpline"]
+                sources: ["Veterinary Information Network (VIN)", "ASPCA Animal Poison Control Center", "Tilley and Smith, The 5-Minute Veterinary Consult: Canine and Feline", "Pet Poison Helpline"]
             ),
 
             // MARK: - Golden Chain Tree
