@@ -986,11 +986,11 @@ class DatabaseService {
             ToxicItem(
                 id: UUID(),
                 name: "Insoluble Calcium Oxalate Plants",
-                alternateNames: ["Dieffenbachia", "dumbcane", "dumb cane", "Philodendron", "heartleaf philodendron", "split-leaf philodendron", "Pothos", "golden pothos", "devil's ivy", "Peace lily", "Spathiphyllum", "Calla lily", "Zantedeschia", "Caladium", "angel wings", "Elephant ear", "Alocasia", "Colocasia", "Arrowhead vine", "Syngonium", "Monstera", "Swiss cheese plant", "Chinese evergreen", "Aglaonema", "Anthurium", "flamingo flower", "flamingo lily", "Araceae", "aroid", "arum family", "calcium oxalate crystals", "raphides", "ZZ plant", "Zamioculcas zamiifolia", "Zanzibar gem", "eternity plant", "aroid palm", "emerald palm", "Raven ZZ", "ZZ Raven", "Schefflera", "Schefflera actinophylla", "Schefflera arboricola", "umbrella tree", "umbrella plant", "dwarf umbrella tree", "octopus tree", "starleaf", "Queensland umbrella tree", "Australian ivy palm"],
+                alternateNames: ["Dieffenbachia", "dumbcane", "dumb cane", "Philodendron", "heartleaf philodendron", "split-leaf philodendron", "Pothos", "golden pothos", "devil's ivy", "Peace lily", "Spathiphyllum", "Calla lily", "Zantedeschia", "Caladium", "angel wings", "Elephant ear", "Alocasia", "Colocasia", "Arrowhead vine", "Syngonium", "Monstera", "Swiss cheese plant", "Chinese evergreen", "Aglaonema", "Anthurium", "flamingo flower", "flamingo lily", "Araceae", "aroid", "arum family", "calcium oxalate crystals", "raphides", "ZZ plant", "Zamioculcas zamiifolia", "Zanzibar gem", "eternity plant", "aroid palm", "emerald palm", "Raven ZZ", "ZZ Raven", "Schefflera", "Schefflera actinophylla", "Schefflera arboricola", "umbrella tree", "umbrella plant", "dwarf umbrella tree", "octopus tree", "starleaf", "Queensland umbrella tree", "Australian ivy palm", "Jack-in-the-pulpit", "Arisaema", "Arisaema triphyllum", "Indian turnip", "bog onion", "brown dragon", "wild turnip", "dragon root", "pepper turnip", "three-leaved Indian turnip", "wake robin"],
                 categories: [.plants],
                 imageAsset: "pothos_philodendron",
-                description: "The Araceae (aroid) family includes many of the most popular houseplants: Dieffenbachia (dumbcane), Philodendron, Pothos (devil's ivy), Peace lily, Calla lily, Caladium, Elephant ear, Monstera, Chinese evergreen, Anthurium, and Arrowhead vine. These plants are favored because they tolerate low light and infrequent watering, making them common in homes and offices. According to the ASPCA Animal Poison Control Center, the Araceae family is the most common plant exposure reported in pets. Also included in this family is the increasingly popular ZZ plant (Zamioculcas zamiifolia), known for its glossy, dark green leaves and extreme tolerance of neglect. Schefflera (umbrella tree), while belonging to a different plant family (Araliaceae), also contains insoluble calcium oxalate crystals and causes the same localized oral irritation.",
-                toxicityInfo: "These plants contain insoluble calcium oxalate crystals called raphides — microscopic needle-sharp structures bundled inside specialized cells. When a pet bites or chews the plant, these crystals are forcibly ejected into the mouth and throat tissues, causing immediate intense pain. The crystals also contain irritating compounds like proteases that worsen local inflammation. Importantly, because the crystals are insoluble, they are NOT absorbed into the bloodstream and do NOT cause kidney damage — the effects are limited to the mouth, tongue, and throat. While symptoms can look alarming to pet owners (dramatic drooling, pawing at the mouth), the condition is generally self-limiting. The concentration of calcium oxalate varies between plants, so some cause more irritation than others. Note: 'Mother-in-law's tongue' can refer to both Dieffenbachia (covered here) and Snake Plant (Sansevieria), which contains different toxins — see separate entry for Snake Plant.\n\n**ZZ Plant (Zamioculcas zamiifolia)** — Despite sometimes being marketed as 'pet-safe,' ZZ plants are members of the Araceae family and contain the same insoluble calcium oxalate crystals. Chewing on the leaves or stems causes the same immediate oral pain and irritation as other plants in this group. The sap can also cause skin irritation on contact. Effects are localized and self-limiting — no systemic toxicity occurs.\n\n**Schefflera (Umbrella Tree)** — This popular indoor tree contains insoluble calcium oxalate crystals identical to those found in Araceae plants. Chewing on the leaves causes immediate oral pain, drooling, and pawing at the mouth. Effects are localized and self-limiting — no systemic toxicity occurs. The dwarf variety (Schefflera arboricola) is more common as a houseplant than the larger Queensland umbrella tree (Schefflera actinophylla).",
+                description: "The Araceae (aroid) family includes many of the most popular houseplants: Dieffenbachia (dumbcane), Philodendron, Pothos (devil's ivy), Peace lily, Calla lily, Caladium, Elephant ear, Monstera, Chinese evergreen, Anthurium, and Arrowhead vine. These plants are favored because they tolerate low light and infrequent watering, making them common in homes and offices. According to the ASPCA Animal Poison Control Center, the Araceae family is the most common plant exposure reported in pets. Also included in this family is the increasingly popular ZZ plant (Zamioculcas zamiifolia), known for its glossy, dark green leaves and extreme tolerance of neglect. Jack-in-the-pulpit (Arisaema triphyllum) is a native woodland wildflower in the same family, recognized by its distinctive hooded spathe and bright red berry cluster in fall — pets may encounter it on hiking trails or in wooded yards. Schefflera (umbrella tree), while belonging to a different plant family (Araliaceae), also contains insoluble calcium oxalate crystals and causes the same localized oral irritation.",
+                toxicityInfo: "These plants contain insoluble calcium oxalate crystals called raphides — microscopic needle-sharp structures bundled inside specialized cells. When a pet bites or chews the plant, these crystals are forcibly ejected into the mouth and throat tissues, causing immediate intense pain. The crystals also contain irritating compounds like proteases that worsen local inflammation. Importantly, because the crystals are insoluble, they are NOT absorbed into the bloodstream and do NOT cause kidney damage — the effects are limited to the mouth, tongue, and throat. While symptoms can look alarming to pet owners (dramatic drooling, pawing at the mouth), the condition is generally self-limiting. The concentration of calcium oxalate varies between plants, so some cause more irritation than others. Note: 'Mother-in-law's tongue' can refer to both Dieffenbachia (covered here) and Snake Plant (Sansevieria), which contains different toxins — see separate entry for Snake Plant.\n\n**ZZ Plant (Zamioculcas zamiifolia)** — Despite sometimes being marketed as 'pet-safe,' ZZ plants are members of the Araceae family and contain the same insoluble calcium oxalate crystals. Chewing on the leaves or stems causes the same immediate oral pain and irritation as other plants in this group. The sap can also cause skin irritation on contact. Effects are localized and self-limiting — no systemic toxicity occurs.\n\n**Schefflera (Umbrella Tree)** — This popular indoor tree contains insoluble calcium oxalate crystals identical to those found in Araceae plants. Chewing on the leaves causes immediate oral pain, drooling, and pawing at the mouth. Effects are localized and self-limiting — no systemic toxicity occurs. The dwarf variety (Schefflera arboricola) is more common as a houseplant than the larger Queensland umbrella tree (Schefflera actinophylla).\n\n**Jack-in-the-pulpit (Arisaema)** — This native woodland wildflower contains the same insoluble calcium oxalate crystals as other Araceae family members. All parts are toxic, but the corm (underground bulb-like structure) and berries have the highest crystal concentration. The bright red berry cluster that forms in late summer and fall may attract curious pets on woodland walks. Despite the common name 'Indian turnip,' the raw corm is intensely acrid and causes severe oral pain if chewed. Effects are localized and self-limiting — no systemic toxicity occurs.",
                 onsetTime: OnsetTime(
                     early: "Signs appear immediately or within minutes of chewing the plant — the pain response is rapid and dramatic",
                     delayed: "Symptoms typically resolve within 12-24 hours; severe swelling of the lips, tongue, or throat may take longer to subside"
@@ -2352,6 +2352,136 @@ class DatabaseService {
                     "Consider removing golden chain trees from your property if you have pets, especially dogs that tend to chew on things"
                 ],
                 sources: ["Veterinary Information Network (VIN)", "Pet Poison Helpline — Golden Chain Tree", "Clarke ML, Clarke EG, King T. Fatal laburnum poisoning in a dog. Vet Rec. 1971;88(7):199-200", "Clinical Veterinary Toxicology (Plumlee KH, ed.)", "Vetlexicon Canis — Cardiotoxic Plant Poisoning"]
+            ),
+
+            // MARK: - Lupine
+            ToxicItem(
+                id: UUID(),
+                name: "Lupine",
+                alternateNames: ["Lupinus", "Lupinus spp", "bluebonnet", "Texas bluebonnet", "wild lupine", "sundial lupine", "garden lupine", "Russell lupine", "Russell hybrid", "tree lupine", "yellow bush lupine", "silver lupine", "bigleaf lupine", "lupine seeds", "lupine beans", "lupini", "tarwi", "lupine hay", "quinolizidine alkaloids", "lupin", "lupins"],
+                categories: [.plants],
+                imageAsset: "lupine",
+                description: "Lupines (Lupinus spp.) are a large genus of flowering plants with over 200 species found throughout North America, the Mediterranean, and South America. They are prized for their tall spikes of colorful flowers (blue, purple, pink, white, yellow) and are popular in wildflower meadows and cottage gardens. Texas bluebonnets (Lupinus texensis) are the state flower of Texas. While livestock poisoning from lupines grazing on rangeland is well documented ('crooked calf disease' in cattle), pet poisonings are less common but do occur — particularly when dogs ingest seeds or seed pods from ornamental lupines in home gardens.",
+                toxicityInfo: "Lupines contain quinolizidine alkaloids, the same class of toxins found in golden chain tree (Laburnum). The primary alkaloids include lupinine, sparteine, and anagyrine, which affect the nervous system and can cause nicotinic receptor stimulation followed by blockade. **The seeds contain the highest concentration of alkaloids** — concentrations vary significantly between species and even between individual plants of the same species. 'Sweet' lupine varieties bred for low-alkaloid content (used for human consumption) are less toxic but should still be considered potentially harmful to pets. Note that anagyrine is a known teratogen — exposure during pregnancy can cause skeletal deformities in offspring (crooked calf disease in cattle, 'crooked lamb' in sheep). While this primarily affects livestock, pregnant pets should be kept away from lupines.",
+                onsetTime: OnsetTime(
+                    early: "Signs typically appear within 1-4 hours of ingestion — early effects include hypersalivation, vomiting, and excitability",
+                    delayed: "Neurological signs (tremors, incoordination, seizures) may develop over several hours with significant ingestions. Recovery usually occurs within 24-48 hours with supportive care"
+                ),
+                symptoms: [
+                    "Hypersalivation (drooling)",
+                    "Vomiting",
+                    "Diarrhea",
+                    "Loss of appetite",
+                    "Lethargy and depression",
+                    "Excitability or nervousness (early)",
+                    "Tremors",
+                    "Muscle weakness",
+                    "Incoordination (ataxia)",
+                    "Dilated pupils (mydriasis)",
+                    "Difficulty breathing (dyspnea)",
+                    "Seizures (rare, with large ingestions)",
+                    "Collapse"
+                ],
+                speciesRisks: [
+                    SpeciesRisk(species: .dog, severity: .moderate, notes: "Dogs may be attracted to lupine seed pods. Seeds have the highest toxin concentration. Most ingestions cause GI upset and mild neurological signs. Large seed ingestions warrant veterinary evaluation."),
+                    SpeciesRisk(species: .cat, severity: .moderate, notes: "Cats are less likely to ingest lupine but should be monitored if exposure is suspected. Seek veterinary care for any ingestion."),
+                    SpeciesRisk(species: .smallMammal, severity: .high, notes: "Small body size increases risk of serious toxicity. Rabbits and guinea pigs are susceptible. Keep pregnant animals away — quinolizidine alkaloids are teratogenic."),
+                    SpeciesRisk(species: .bird, severity: .moderate, notes: "Limited data available. Assume susceptibility and seek veterinary care for any suspected ingestion.")
+                ],
+                preventionTips: [
+                    "If you grow ornamental lupines, remove spent flower stalks before seed pods develop — the seeds are the most toxic part",
+                    "Do not allow dogs to chew on lupine seed pods — they may find the bean-like pods interesting",
+                    "Keep pregnant pets away from lupines — the alkaloid anagyrine is teratogenic (causes birth defects)",
+                    "Be aware of wild lupines on hiking trails, especially in western North America where they are abundant",
+                    "Do not feed lupini beans (even prepared human-food varieties) to pets"
+                ],
+                sources: ["ASPCA Animal Poison Control Center", "Veterinary Information Network (VIN)", "Merck Veterinary Manual — Quinolizidine Alkaloid Toxicosis", "Pet Poison Helpline", "Panter KE, et al. Natural toxins of plant origin. In: Toxins and Other Harmful Compounds in Foods. RSC Publishing. 2017"]
+            ),
+
+            // MARK: - Christmas Rose & Hellebores
+            ToxicItem(
+                id: UUID(),
+                name: "Christmas Rose & Hellebores",
+                alternateNames: ["Helleborus", "Helleborus niger", "Helleborus orientalis", "Christmas rose", "Lenten rose", "black hellebore", "winter rose", "snow rose", "hellebore", "stinking hellebore", "Helleborus foetidus", "bear's foot", "setterwort", "green hellebore", "Helleborus viridis", "hellebore root", "Corsican hellebore", "Helleborus argutifolius", "oriental hellebore", "hellebore hybrids", "Helleborus x hybridus", "hellebore protoanemonin", "hellebore glycosides"],
+                categories: [.plants, .holidayHazards],
+                imageAsset: "christmas_rose",
+                description: "Hellebores (Helleborus spp.) are a genus of about 20 species of evergreen perennials prized for their winter and early spring blooms. The Christmas rose (Helleborus niger) blooms around Christmas in mild climates, while Lenten roses (Helleborus orientalis and hybrids) bloom during Lent (February-April). Their ability to flower in winter when little else blooms makes them popular garden plants. They are frequently used in holiday arrangements and winter container gardens. All parts of the plant are toxic, with the roots containing the highest concentration of toxins.",
+                toxicityInfo: "Hellebores contain multiple toxins including **cardiac glycosides** (hellebrin, helleborein) and **protoanemonin** (a vesicant also found in buttercups and clematis). The cardiac glycosides can affect heart rhythm and contractility, while protoanemonin causes irritation to mucous membranes and skin. The roots are most toxic, followed by leaves and flowers. The sap can cause contact dermatitis in humans and skin/oral irritation in pets. Historical note: In ancient times, hellebore root was used medicinally (and for poisoning) — the name derives from Greek words meaning 'to kill' and 'food.' Despite their toxicity, severe poisonings in pets are uncommon because the bitter taste and irritating sap usually limit the amount consumed.",
+                onsetTime: OnsetTime(
+                    early: "GI signs (hypersalivation, vomiting, abdominal pain) typically appear within 30 minutes to 2 hours of ingestion due to the irritant effects of protoanemonin",
+                    delayed: "Cardiac effects from glycoside toxicity, if they occur, may develop over several hours — monitor for irregular heartbeat, weakness, or collapse"
+                ),
+                symptoms: [
+                    "Hypersalivation (drooling)",
+                    "Oral irritation and pain",
+                    "Vomiting",
+                    "Diarrhea (may be bloody)",
+                    "Abdominal pain",
+                    "Lethargy",
+                    "Depression",
+                    "Weakness",
+                    "Cardiac arrhythmias (irregular heartbeat)",
+                    "Bradycardia (slow heart rate)",
+                    "Collapse (severe cases)",
+                    "Contact dermatitis (skin exposure to sap)"
+                ],
+                speciesRisks: [
+                    SpeciesRisk(species: .dog, severity: .moderate, notes: "Dogs may dig up and chew hellebore roots when investigating garden beds. The bitter taste usually limits ingestion. Cardiac glycoside effects are possible with large ingestions — seek veterinary care."),
+                    SpeciesRisk(species: .cat, severity: .moderate, notes: "Cats are less likely to ingest hellebores but may chew on leaves. GI upset is the most common presentation. Contact your veterinarian for any ingestion."),
+                    SpeciesRisk(species: .smallMammal, severity: .moderate, notes: "Small body size may increase risk. Keep rabbits and guinea pigs away from hellebore plants in the garden."),
+                    SpeciesRisk(species: .bird, severity: .moderate, notes: "Limited data available. Assume susceptibility and seek veterinary care for any suspected ingestion.")
+                ],
+                preventionTips: [
+                    "Wear gloves when handling hellebores — the sap can cause skin irritation",
+                    "If you have dogs that dig in flower beds, consider protecting hellebore plantings with barriers",
+                    "Be cautious with hellebore trimmings and roots — dispose of them where pets cannot access",
+                    "Keep hellebore holiday arrangements out of reach of pets",
+                    "If your pet is attracted to chewing plants, hellebores are not a good choice for accessible garden areas"
+                ],
+                sources: ["ASPCA Animal Poison Control Center", "Veterinary Information Network (VIN)", "Pet Poison Helpline", "Merck Veterinary Manual", "Plants of the Pacific Northwest Coast (Pojar & MacKinnon)"]
+            ),
+
+            // MARK: - Bittersweet
+            ToxicItem(
+                id: UUID(),
+                name: "Bittersweet",
+                alternateNames: ["American bittersweet", "Celastrus scandens", "climbing bittersweet", "false bittersweet", "waxwork", "shrubby bittersweet", "Oriental bittersweet", "Celastrus orbiculatus", "Asian bittersweet", "round-leaved bittersweet", "staff vine", "staff tree", "bittersweet vine", "bittersweet berries", "decorative bittersweet", "bittersweet wreath", "Euonymus alkaloids", "bittersweet nightshade", "Solanum dulcamara", "woody nightshade", "climbing nightshade", "European bittersweet"],
+                categories: [.plants, .holidayHazards],
+                imageAsset: "bittersweet",
+                description: "The name 'bittersweet' refers to two different groups of plants: the **Celastrus** species (American bittersweet, Oriental bittersweet) — woody vines prized for their showy orange-red berries used in fall/winter wreaths and holiday decorations, and **bittersweet nightshade** (Solanum dulcamara) — a weedy vine in the nightshade family with purple flowers and red berries. Both are toxic to pets, but through different mechanisms. This entry covers both since the common name overlap causes confusion. American bittersweet (Celastrus scandens) is native to North America; Oriental bittersweet (Celastrus orbiculatus) is an invasive species from Asia. Both produce the orange-red berry clusters used in decorative arrangements.",
+                toxicityInfo: "**Celastrus (American & Oriental Bittersweet)** — These vines contain alkaloids and possibly cardiac glycoside-like compounds, though the exact toxins have not been fully characterized. All parts are considered toxic, with the berries being of particular concern because they are attractive and accessible in holiday decorations. Ingestion typically causes GI upset, but larger amounts may cause more significant effects including possible cardiac effects. The bright orange-yellow fruit capsules split open to reveal red berry-like seeds (arils) that may attract pets.\n\n**Bittersweet Nightshade (Solanum dulcamara)** — This unrelated plant contains solanine and other glycoalkaloids (the same toxin class found in green potatoes and tomato plants). The unripe (green) berries have the highest toxin concentration; ripe red berries are less toxic but still potentially harmful. Symptoms include GI upset, CNS depression, and in severe cases, cardiac effects. The berries may be mistaken for edible wild berries.",
+                onsetTime: OnsetTime(
+                    early: "GI signs (vomiting, diarrhea, hypersalivation) typically appear within 1-6 hours of ingestion",
+                    delayed: "CNS effects (lethargy, weakness, incoordination, seizures) may develop with larger ingestions over 6-24 hours"
+                ),
+                symptoms: [
+                    "Hypersalivation (drooling)",
+                    "Vomiting",
+                    "Diarrhea",
+                    "Abdominal pain",
+                    "Loss of appetite",
+                    "Lethargy and weakness",
+                    "Depression",
+                    "Incoordination (ataxia)",
+                    "Dilated pupils (mydriasis)",
+                    "Slow heart rate (bradycardia)",
+                    "Tremors",
+                    "Seizures (rare, with large ingestions)"
+                ],
+                speciesRisks: [
+                    SpeciesRisk(species: .dog, severity: .moderate, notes: "Dogs may chew on bittersweet wreaths and decorations, ingesting the berries. Most cases result in GI upset. Large ingestions warrant veterinary evaluation for potential cardiac or neurological effects."),
+                    SpeciesRisk(species: .cat, severity: .moderate, notes: "Cats may be attracted to swinging bittersweet decorations as play objects. Contact your veterinarian for any ingestion."),
+                    SpeciesRisk(species: .smallMammal, severity: .moderate, notes: "Small body size may increase risk of more significant effects. Keep decorations out of reach of rabbits, guinea pigs, and other small pets."),
+                    SpeciesRisk(species: .bird, severity: .moderate, notes: "Limited data available. Wild birds do eat bittersweet berries, but pet birds may be more sensitive. Seek veterinary care for any suspected ingestion.")
+                ],
+                preventionTips: [
+                    "Keep bittersweet wreaths, garlands, and centerpieces out of reach of pets",
+                    "Be aware that dried bittersweet decorations remain toxic — the berries do not become safe when dried",
+                    "If you have outdoor bittersweet vines (especially the invasive Oriental bittersweet), consider removing them or ensuring pets cannot access the berries",
+                    "Do not allow pets to chew on bittersweet decorations — the berries can detach and be swallowed",
+                    "Learn to identify bittersweet nightshade, which may grow as a weed in gardens and wooded areas"
+                ],
+                sources: ["ASPCA Animal Poison Control Center", "Pet Poison Helpline", "Veterinary Information Network (VIN)", "Cornell University Poisonous Plants Database", "USDA Plant Database"]
             )
         ]
     }
