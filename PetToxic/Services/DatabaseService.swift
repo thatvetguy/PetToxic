@@ -2797,6 +2797,57 @@ class DatabaseService {
                     "Note: Fully dried antifreeze spills pose minimal risk, but wet spills are extremely dangerous"
                 ],
                 sources: ["VIN Toxicology Resources — Ethylene Glycol Toxicosis", "ASPCA Animal Poison Control Center", "Pet Poison Helpline — Antifreeze Poisoning", "Merck Veterinary Manual — Ethylene Glycol Toxicosis"]
+            ),
+
+            // MARK: - Petroleum Products
+            ToxicItem(
+                id: UUID(),
+                name: "Petroleum Products (Gasoline, Motor Oil, Diesel)",
+                alternateNames: ["gasoline", "gas", "petrol", "motor oil", "engine oil", "car oil", "used motor oil", "diesel", "diesel fuel", "kerosene", "kerosine", "paraffin oil", "lamp oil", "tiki torch fuel", "lighter fluid", "charcoal lighter", "paint thinner", "paint solvent", "mineral spirits", "turpentine", "petroleum distillates", "hydrocarbons", "crude oil", "heating oil", "fuel oil", "jet fuel", "naphtha", "benzene", "toluene", "xylene", "transmission fluid", "gear oil", "hydraulic fluid", "penetrating oil", "WD-40", "lubricating oil", "grease", "automotive grease", "wood stain", "wood stripper", "asphalt", "roofing tar", "Castrol", "Mobil 1", "Valvoline", "Pennzoil", "Quaker State"],
+                categories: [.garageAutomotive],
+                imageAsset: "petroleum_products",
+                description: "Petroleum products include a wide range of hydrocarbon-based substances found in garages, workshops, and homes. These range from highly volatile fuels like gasoline and kerosene to thick, viscous lubricants like motor oil and grease. Pets can be exposed through ingestion (licking spills or contaminated fur), inhalation (fumes in poorly ventilated areas), or skin contact.\n\n**Toxicity varies significantly by product type:**\n\n• **High-volatility products (MORE DANGEROUS):** Gasoline, kerosene, diesel fuel, lighter fluid, paint thinners, and solvents. These have low viscosity and are easily aspirated into the lungs, causing severe chemical pneumonia.\n\n• **Low-volatility products (less dangerous but still concerning):** Motor oil, transmission fluid, lubricating greases. These are less likely to be aspirated but can still cause GI upset and, if vomited, may be inhaled.\n\nSmall amounts of petroleum products used as carriers in some insecticides or medications typically cause minimal harm. However, direct exposure to fuels and solvents can be serious.",
+                toxicityInfo: "**Aspiration pneumonia is the most serious risk** with petroleum product exposure. When low-viscosity, volatile hydrocarbons like gasoline or kerosene are inhaled into the lungs—either directly or during vomiting—they cause severe chemical damage to lung tissue. This can progress rapidly to life-threatening pneumonia.\n\n**Mechanisms of toxicity:**\n\n• **Respiratory:** Volatile hydrocarbons damage lung tissue directly and displace oxygen in the airways. Aspiration pneumonia may not show symptoms for several days after exposure.\n\n• **Gastrointestinal:** Most petroleum products irritate the stomach and intestines, causing vomiting, diarrhea, drooling, and loss of appetite. Motor oil and heavier products have a laxative effect similar to mineral oil.\n\n• **Neurological:** Absorbed hydrocarbons can cause CNS depression ranging from lethargy to severe depression, wobbling, tremors, and rarely coma. Some aromatic compounds (benzene, toluene) are particularly neurotoxic.\n\n• **Dermal:** Prolonged skin contact causes irritation, drying, cracking, and chemical burns. Pets will often lick contaminated fur, converting a skin exposure into an ingestion.\n\n**Product-specific concerns:**\n\n• **Gasoline:** Highly volatile and dangerous. Even small ingested amounts can cause severe lung damage if aspirated. Skin exposure causes irritation; small amounts can usually be managed with bathing.\n\n• **Motor oil:** Less acutely dangerous than gasoline. Main concerns are GI upset (diarrhea) and aspiration if vomiting occurs. **Used motor oil may contain lead and other contaminants.**\n\n• **Kerosene/lamp oil/tiki torch fuel:** Similar to gasoline in aspiration risk. Commonly involved in pet exposures due to accessible containers.\n\n⚠️ **CRITICAL: Do NOT induce vomiting.** Vomiting dramatically increases the risk of aspiration pneumonia. If your pet has ingested any petroleum product, contact your veterinarian or poison control immediately for guidance.",
+                onsetTime: OnsetTime(
+                    early: "Minutes to hours — GI irritation, drooling, vomiting, CNS depression",
+                    delayed: "1-3 days — Aspiration pneumonia may not be apparent until days after exposure"
+                ),
+                symptoms: [
+                    "Petroleum/chemical odor on breath or fur",
+                    "Drooling or hypersalivation",
+                    "Pawing at mouth",
+                    "Vomiting",
+                    "Diarrhea (may be oily)",
+                    "Loss of appetite",
+                    "Lethargy or depression",
+                    "Wobbling or incoordination",
+                    "Coughing or gagging",
+                    "Difficulty breathing",
+                    "Rapid or shallow breathing",
+                    "Blue-tinged gums (cyanosis)",
+                    "Skin irritation or redness",
+                    "Eye irritation if splashed",
+                    "Tremors (with significant absorption)",
+                    "Collapse (severe cases)"
+                ],
+                speciesRisks: [
+                    SpeciesRisk(species: .dog, severity: .high, notes: "Severity depends on product type: gasoline/kerosene exposure is HIGH risk; motor oil exposure is MODERATE risk. Dogs may ingest petroleum products from spills or by chewing containers. Aspiration pneumonia is the primary concern with volatile products."),
+                    SpeciesRisk(species: .cat, severity: .high, notes: "Cats are frequently exposed through grooming contaminated fur. Even small amounts of gasoline on fur can cause irritation; prompt bathing with dish soap is important. Respiratory signs warrant immediate veterinary evaluation."),
+                    SpeciesRisk(species: .bird, severity: .high, notes: "Birds are extremely sensitive to inhaled fumes. Keep birds away from areas where petroleum products are used or stored. Even fume exposure without direct contact can be dangerous.")
+                ],
+                preventionTips: [
+                    "Store all petroleum products in sealed, labeled containers out of pet's reach",
+                    "Clean up gasoline and oil spills immediately",
+                    "Keep pets out of garages and workshops when working with fuels or solvents",
+                    "Ensure adequate ventilation when using petroleum-based products",
+                    "Dispose of used motor oil properly—never leave in open containers",
+                    "Keep tiki torch fuel, lamp oil, and lighter fluid stored securely",
+                    "Check vehicles regularly for oil and fuel leaks",
+                    "If petroleum product gets on pet's fur, bathe immediately with dish soap (like Dawn) and cool water",
+                    "Never store gasoline or solvents in food/drink containers",
+                    "Keep birds in well-ventilated areas away from any petroleum fumes"
+                ],
+                sources: ["Merck Veterinary Manual — Petroleum Product Poisoning in Animals", "VIN Toxicology Resources — Hydrocarbon Toxicosis", "ASPCA Animal Poison Control Center", "Pet Poison Helpline"]
             )
         ]
     }
