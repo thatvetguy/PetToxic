@@ -3145,6 +3145,57 @@ class DatabaseService {
                     "If ingestion is suspected, note the product name and strength, and contact a veterinarian immediately"
                 ],
                 sources: ["VIN Toxicology Resources", "ASPCA Animal Poison Control Center", "Merck Veterinary Manual — Cholecalciferol Poisoning in Animals", "Pet Poison Helpline", "VCA Animal Hospitals"]
+            ),
+
+            // MARK: - Zinc Phosphide
+            ToxicItem(
+                id: UUID(),
+                name: "Zinc Phosphide",
+                alternateNames: ["zinc phosphide rodenticide", "aluminum phosphide", "aluminium phosphide", "magnesium phosphide", "metal phosphide", "phosphide rodenticide", "gopher bait", "gopher poison", "mole bait", "mole poison", "Gopha-rid", "ZP Rodent Bait", "Prozap", "Ridall", "Zinc-tox", "Arrex", "Phosvin", "Ratol", "Fumitoxin", "Phostoxin", "Phosfume", "Magtoxin", "grain fumigant", "ground squirrel bait", "vole poison", "field mouse poison"],
+                categories: [.garageAutomotive],
+                imageAsset: "zinc_phosphide",
+                description: "Zinc phosphide is a highly toxic rodenticide primarily used against gophers, moles, voles, ground squirrels, and field mice. Related compounds—aluminum phosphide and magnesium phosphide—are used as fumigants in grain storage and shipping containers. All metal phosphides work the same way: when they contact stomach acid or moisture, they release phosphine gas—an extremely toxic gas that causes rapid, severe poisoning. Zinc phosphide is formulated as dark gray pellets, powders, or grain-based baits at concentrations of 2-10%. CRITICAL SAFETY WARNING: The vomit from a poisoned animal also releases phosphine gas and is dangerous to humans and other animals. If your pet has ingested any phosphide product, seek veterinary care immediately and inform staff about the potential phosphine exposure hazard.",
+                toxicityInfo: "All metal phosphides (zinc, aluminum, magnesium) react with stomach acid and moisture to produce phosphine gas, which is rapidly absorbed and causes widespread cellular damage by blocking energy production in cells. Phosphine damages the heart, lungs, liver, kidneys, and nervous system. Aluminum and magnesium phosphides can release phosphine even at neutral pH, while zinc phosphide requires acidic conditions. Animals that cannot vomit (such as rabbits and horses) are at even greater risk because they cannot expel the poison. There is NO ANTIDOTE—treatment is supportive only. Unlike some other rodenticides, zinc phosphide loses potency when exposed to moisture over time, so old or weathered bait may be less toxic. Secondary (relay) toxicosis from eating a poisoned rodent is possible, especially in dogs.",
+                onsetTime: OnsetTime(
+                    early: "With food in the stomach: signs can begin within 15 minutes to 4 hours (food increases acid production, speeding phosphine release)",
+                    delayed: "On an empty stomach: signs may be delayed up to 12 hours"
+                ),
+                symptoms: [
+                    "Rapid onset of vomiting (often bloody)",
+                    "Anxiety, restlessness, or agitation",
+                    "Vocalization",
+                    "Aggression or abnormal behavior",
+                    "Running fits",
+                    "Loss of appetite",
+                    "Weakness and depression",
+                    "Difficulty breathing (dyspnea)",
+                    "Rapid breathing (tachypnea)",
+                    "Coughing",
+                    "Bluish gums (cyanosis)",
+                    "Unsteady gait (ataxia)",
+                    "Muscle tremors",
+                    "Seizures",
+                    "Coma",
+                    "Sudden death (can occur within hours)"
+                ],
+                speciesRisks: [
+                    SpeciesRisk(species: .dog, severity: .severe, notes: "Most commonly affected species; vomiting may limit absorption but releases toxic gas; relay toxicosis from eating poisoned rodents has been reported"),
+                    SpeciesRisk(species: .cat, severity: .severe, notes: "Equally susceptible; less commonly exposed than dogs"),
+                    SpeciesRisk(species: .smallMammal, severity: .severe, notes: "Rabbits and horses are at extreme risk because they cannot vomit and cannot expel the poison"),
+                    SpeciesRisk(species: .bird, severity: .severe, notes: "Highly susceptible; granivorous birds may consume grain-based baits"),
+                    SpeciesRisk(species: .reptile, severity: .severe, notes: "Susceptible; limited data available")
+                ],
+                preventionTips: [
+                    "Avoid using metal phosphide products where pets have access—there is NO ANTIDOTE",
+                    "If you must use gopher or mole bait, apply it deep in burrows where pets cannot reach",
+                    "Never leave bait on the soil surface",
+                    "Keep pets away from areas being fumigated with aluminum or magnesium phosphide",
+                    "Consider pet-safe alternatives such as traps or vibration deterrents",
+                    "Keep pets away from areas where rodents may have been poisoned (relay toxicosis risk)",
+                    "CRITICAL: If your pet ingests any phosphide product, warn veterinary staff that the vomit releases toxic phosphine gas",
+                    "If your pet vomits at home after suspected ingestion, ventilate the area immediately and avoid breathing the fumes"
+                ],
+                sources: ["VIN Toxicology Resources", "ASPCA Animal Poison Control Center", "Merck Veterinary Manual — Phosphide Poisoning in Animals", "Pet Poison Helpline", "CDC MMWR — Occupational Phosphine Gas Poisoning at Veterinary Hospitals (2012)", "National Pesticide Information Center"]
             )
         ]
     }
