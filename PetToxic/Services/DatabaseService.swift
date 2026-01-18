@@ -806,15 +806,15 @@ class DatabaseService {
                 sources: ["Veterinary Information Network (VIN)", "ASPCA Animal Poison Control Center", "Pet Poison Helpline", "Merck Veterinary Manual"]
             ),
 
-            // MARK: - Azalea & Rhododendron
+            // MARK: - Azalea, Rhododendron & Mountain Laurel
             ToxicItem(
                 id: UUID(),
-                name: "Azalea & Rhododendron",
-                alternateNames: ["azalea", "rhododendron", "Rhododendron spp", "rosebay", "great laurel", "wild honeysuckle", "azalea bush", "rhododendron bush"],
+                name: "Azalea, Rhododendron & Mountain Laurel",
+                alternateNames: ["azalea", "rhododendron", "Rhododendron spp", "rosebay", "great laurel", "wild honeysuckle", "azalea bush", "rhododendron bush", "Mountain laurel", "mountain laurel", "Kalmia", "Kalmia latifolia", "calico bush", "spoonwood", "American laurel", "ivy bush", "sheep laurel", "Kalmia angustifolia", "lambkill", "bog laurel", "Kalmia polifolia", "swamp laurel"],
                 categories: [.plants],
                 imageAsset: "azalea",
-                description: "Azaleas and rhododendrons are popular flowering shrubs found in gardens and landscaping throughout the United States, with particularly high concentrations in the Southeast. Azaleas are actually a subgroup of the Rhododendron genus — they share the same toxic compounds. These shrubs produce showy clusters of flowers in spring and are commonly used as ornamental plants in yards and gardens.",
-                toxicityInfo: "All parts of the azalea and rhododendron plant are toxic, including the leaves, flowers, nectar, and pollen. The toxic compounds are grayanotoxins, which affect the heart and nervous system by interfering with sodium channels in cells. In most real-world cases, pets do not eat enough to cause severe toxicity — ASPCA data from 1,000 canine cases showed 29% developed vomiting and only 2% developed cardiac arrhythmias. However, large ingestions can cause serious cardiovascular effects including dangerous heart rhythm abnormalities, low blood pressure, and collapse. The toxin is not cumulative (repeated small exposures do not build up), but clinical signs — particularly cardiac effects — may persist for several days.",
+                description: "Azalea, Rhododendron, and Mountain Laurel are all members of the Heath family (Ericaceae) that contain grayanotoxins — a group of toxins that affect sodium channels in cell membranes. These popular landscaping plants are found throughout North America in gardens, parks, and wild areas. All parts of the plants are toxic, including the leaves, flowers, nectar, and even honey made from the flower nectar. Rhododendrons and azaleas are among the most commonly planted ornamental shrubs, while mountain laurel is common in eastern U.S. forests and increasingly used in landscaping.",
+                toxicityInfo: "Azaleas, rhododendrons, and mountain laurels contain grayanotoxins (also called andromedotoxins) — a class of toxins that bind to sodium channels and keep them open, disrupting normal nerve and muscle function. All parts of these plants are toxic: leaves, flowers, nectar, pollen, and even honey produced from the nectar ('mad honey'). The toxin concentration can vary considerably between individual plants based on cultivar, climate, soil, and other growing conditions — so while some plants may cause only mild vomiting and diarrhea if ingested, others may cause serious cardiovascular or neurological effects.\n\nGrayanotoxins affect the heart by disrupting normal electrical conduction, leading to potentially life-threatening arrhythmias and changes in heart rate and blood pressure. They also affect the nervous system, causing weakness, incoordination, and in severe cases, paralysis.\n\n**Mountain Laurel (Kalmia latifolia):** This plant contains the same grayanotoxins as azaleas and rhododendrons and poses equal hazards to pets. It is common in eastern U.S. forests and mountain areas, and is also used as an ornamental landscape shrub. As with the other plants in this family, honey made from mountain laurel flowers can also be toxic.",
                 onsetTime: OnsetTime(
                     early: "Vomiting and drooling typically appear within a few hours of ingestion; most signs develop within 12 hours",
                     delayed: "Cardiac signs can continue for days even after initial GI symptoms resolve; prolonged cardiac effects lasting up to 14 days have been reported in severe cases"
@@ -844,7 +844,9 @@ class DatabaseService {
                     "Supervise pets in yards where azaleas or rhododendrons are planted",
                     "Consider fencing off azalea beds or removing plants if your pet is prone to chewing on vegetation",
                     "Be aware that all parts are toxic — including fallen flowers and leaves",
-                    "If you see your pet chewing on azalea, contact your veterinarian even if no symptoms are present yet"
+                    "If you see your pet chewing on azalea, contact your veterinarian even if no symptoms are present yet",
+                    "Be aware that mountain laurel grows wild in many eastern U.S. forests — keep pets supervised when hiking in these areas",
+                    "All three plants (azalea, rhododendron, mountain laurel) pose the same level of risk — do not assume one is safer than others"
                 ],
                 sources: ["Veterinary Information Network (VIN)", "ASPCA Animal Poison Control Center", "Pet Poison Helpline", "Merck Veterinary Manual"]
             ),
@@ -2299,6 +2301,57 @@ class DatabaseService {
                     "Educate family members about the toxicity of these attractive but dangerous plants"
                 ],
                 sources: ["Veterinary Information Network (VIN) — Dr. Sharon Gwaltney-Brant, DABVT", "ASPCA Animal Poison Control Center", "Tilley and Smith, The 5-Minute Veterinary Consult: Canine and Feline", "Pet Poison Helpline"]
+            ),
+
+            // MARK: - Golden Chain Tree
+            ToxicItem(
+                id: UUID(),
+                name: "Golden Chain Tree",
+                alternateNames: ["Laburnum", "Laburnum anagyroides", "Laburnum alpinum", "Laburnum × watereri", "golden chain", "golden chain tree", "golden rain tree", "bean tree", "false ebony", "laburnum tree", "common laburnum", "Scotch laburnum", "alpine laburnum"],
+                categories: [.plants],
+                imageAsset: "golden_chain_tree",
+                description: "Golden Chain Tree (Laburnum species) is an ornamental landscape tree prized for its spectacular hanging clusters of bright yellow flowers that resemble wisteria. All parts of the plant are toxic, with the highest concentration of toxins in the seeds (found in bean-like pods). The plant contains cytisine, a nicotine-like alkaloid that affects the nervous system. While fatal poisonings in dogs are rare, even relatively small exposures can cause significant gastrointestinal upset.",
+                toxicityInfo: "Golden chain tree contains cytisine and other quinolizidine alkaloids. Cytisine has nicotine-like effects — it binds to nicotinic acetylcholine receptors, initially causing stimulation followed by blockade at higher doses. The seeds contain the highest concentration of toxins, but all parts of the plant (bark, leaves, flowers, and seed pods) are toxic. Dogs have been poisoned simply by chewing on laburnum sticks.\n\nCytisine also has cardiac effects — it causes a reduction in intracellular potassium, which can lead to atrioventricular (AV) block and other cardiac conduction abnormalities.\n\nWhile it generally takes a large ingestion to cause severe or fatal toxicosis, smaller exposures can still cause significant gastrointestinal upset including intense vomiting and diarrhea. Fatal poisonings in dogs have been documented in veterinary literature, though they are uncommon. The long-term effects of chronic low-level exposure are not well understood.\n\n**Important for breeders:** Cytisine is teratogenic (can cause birth defects). Pregnant animals should be kept away from this plant.\n\nThe seed pods resemble bean pods, which may make them attractive to curious dogs. Children have also been poisoned after eating the seeds, mistaking them for peas or beans.",
+                onsetTime: OnsetTime(
+                    early: "Signs typically appear within 15 minutes to 2 hours of ingestion",
+                    delayed: "Severe cases may progress over several hours; neurological signs may develop after initial GI upset"
+                ),
+                symptoms: [
+                    "Vomiting (often intense/repeated)",
+                    "Nausea",
+                    "Abdominal pain",
+                    "Diarrhea",
+                    "Drooling (hypersalivation)",
+                    "Weakness",
+                    "Incoordination (ataxia)",
+                    "Depression or lethargy",
+                    "Dilated pupils (mydriasis)",
+                    "Rapid heart rate (tachycardia)",
+                    "Irregular pulse",
+                    "Atrioventricular (AV) block (severe cases)",
+                    "Tremors",
+                    "Seizures (severe cases)",
+                    "Collapse",
+                    "Coma (severe cases)",
+                    "Respiratory depression (severe cases)"
+                ],
+                speciesRisks: [
+                    SpeciesRisk(species: .dog, severity: .moderate, notes: "Fatal poisonings in dogs are rare, but even small ingestions can cause significant GI upset. Dogs may be attracted to the bean-like seed pods. The nicotine-like effects can cause neurological signs in larger ingestions."),
+                    SpeciesRisk(species: .cat, severity: .moderate, notes: "Cats are susceptible to cytisine toxicity. Any ingestion should be evaluated by a veterinarian. GI upset is the most common presentation."),
+                    SpeciesRisk(species: .smallMammal, severity: .moderate, notes: "Small body size may increase risk of more severe effects. Rabbits and guinea pigs with access to outdoor areas where golden chain trees grow should be supervised. Keep pregnant animals away — cytisine is teratogenic."),
+                    SpeciesRisk(species: .bird, severity: .moderate, notes: "Limited data available. Birds may be attracted to the seeds. Assume susceptibility and seek veterinary care for any suspected ingestion."),
+                    SpeciesRisk(species: .reptile, severity: .low, notes: "Limited data available. Ingestion is unlikely but seek veterinary care if suspected.")
+                ],
+                preventionTips: [
+                    "Do not plant golden chain trees in areas accessible to pets",
+                    "If you have an existing golden chain tree, promptly remove fallen seed pods before pets can access them",
+                    "The bean-like seed pods may be attractive to dogs — be especially vigilant during and after the seeding season",
+                    "Do not allow dogs to chew on fallen branches or sticks from golden chain trees — dogs have been poisoned this way",
+                    "Keep pregnant animals away from golden chain trees — the alkaloid cytisine is teratogenic (can cause birth defects)",
+                    "Educate children that the seeds are not edible peas or beans — human poisonings have occurred",
+                    "Consider removing golden chain trees from your property if you have pets, especially dogs that tend to chew on things"
+                ],
+                sources: ["Veterinary Information Network (VIN)", "Pet Poison Helpline — Golden Chain Tree", "Clarke ML, Clarke EG, King T. Fatal laburnum poisoning in a dog. Vet Rec. 1971;88(7):199-200", "Clinical Veterinary Toxicology (Plumlee KH, ed.)", "Vetlexicon Canis — Cardiotoxic Plant Poisoning"]
             )
         ]
     }
