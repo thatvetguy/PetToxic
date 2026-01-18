@@ -1882,6 +1882,94 @@ class DatabaseService {
                     "If your dog ingests horse chestnuts or buckeyes, contact your veterinarian — monitor for GI upset and potential obstruction"
                 ],
                 sources: ["Veterinary Information Network (VIN)", "ASPCA Animal Poison Control Center", "Pet Poison Helpline", "Clinical Veterinary Toxicology (Plumlee)"]
+            ),
+
+            // MARK: - Tomato & Potato Plants
+            ToxicItem(
+                id: UUID(),
+                name: "Tomato & Potato Plants",
+                alternateNames: ["tomato plant", "tomato leaves", "tomato stems", "green tomatoes", "unripe tomatoes", "cherry tomato plant", "Solanum lycopersicum", "potato plant", "potato leaves", "potato stems", "green potatoes", "raw potatoes", "potato skins", "Solanum tuberosum", "nightshade family", "Solanaceae", "solanine", "tomatine", "glycoalkaloids"],
+                categories: [.plants, .foods],
+                imageAsset: "tomato_potato_plants",
+                description: "Tomato and potato plants belong to the Solanaceae (nightshade) family and share the same toxic compounds. These common garden vegetables are safe when ripe and properly prepared, but the green parts of the plants — leaves, stems, unripe fruit, and green-skinned potatoes — contain toxic glycoalkaloids that can harm pets.",
+                toxicityInfo: "Tomato and potato plants contain glycoalkaloids, primarily solanine (in both plants) and tomatine (specific to tomatoes). These compounds act as cholinesterase inhibitors, interfering with nerve signal transmission. They also cause direct gastrointestinal irritation.\n\n**What's toxic:** Leaves, stems, unripe green fruit (tomatoes), green-skinned potatoes (from sun exposure), raw potatoes, potato eyes and sprouts. The highest concentrations are in the green parts of the plant.\n\n**What's safe:** Ripe red tomatoes and properly cooked potatoes (peeled, no green portions) are generally safe in moderation. As the tomato ripens, tomatine is metabolized and levels decrease significantly.\n\nIn most cases involving dogs and cats, ingestion causes gastrointestinal upset. However, a documented case involved two young dogs who ate wild green cherry tomatoes and developed severe signs including seizures, hyperesthesia (extreme sensitivity to touch), hypersalivation, tachycardia, and metabolic acidosis — both recovered with veterinary care. Large amounts are typically required for severe toxicity in dogs and cats (more commonly a concern in grazing livestock), but smaller pets and puppies may be affected by smaller quantities.",
+                onsetTime: OnsetTime(
+                    early: "Gastrointestinal signs (vomiting, diarrhea, drooling, loss of appetite) typically appear within a few hours of ingestion",
+                    delayed: "Clinical course is typically rapid, with recovery or progression within 24-38 hours; neurological and cardiac signs may develop with larger ingestions"
+                ),
+                symptoms: [
+                    "Vomiting",
+                    "Diarrhea",
+                    "Hypersalivation (drooling)",
+                    "Loss of appetite",
+                    "Lethargy or depression",
+                    "Weakness",
+                    "Dilated pupils",
+                    "Slow heart rate (bradycardia)",
+                    "Confusion or behavioral changes",
+                    "Incoordination (ataxia)",
+                    "Muscle tremors",
+                    "Hyperesthesia (sensitivity to touch)",
+                    "Seizures (severe cases)",
+                    "Difficulty breathing (severe cases)"
+                ],
+                speciesRisks: [
+                    SpeciesRisk(species: .dog, severity: .moderate, notes: "Most cases cause only GI upset; severe toxicity requires ingestion of large amounts of green plant material; puppies and small dogs are at higher risk; documented cases of seizures exist with significant green tomato ingestion"),
+                    SpeciesRisk(species: .cat, severity: .moderate, notes: "Cats are susceptible but rarely consume enough plant material to cause severe toxicity; same clinical signs as dogs expected"),
+                    SpeciesRisk(species: .bird, severity: .moderate, notes: "Birds may be affected; small body size increases risk from smaller exposures")
+                ],
+                preventionTips: [
+                    "Fence off vegetable gardens or supervise pets around tomato and potato plants",
+                    "Never feed pets green (unripe) tomatoes, tomato leaves, or stems",
+                    "Never feed pets raw potatoes, green-skinned potatoes, potato skins, or potato plant parts",
+                    "Store potatoes in a cool, dark place to prevent greening — green color indicates increased solanine",
+                    "Ripe red tomatoes are safe as an occasional treat in small amounts",
+                    "Cooked, peeled potatoes (plain, no seasonings) are safe in small amounts",
+                    "Dispose of plant trimmings where pets cannot access them",
+                    "If your pet shows signs after eating any part of these plants, contact your veterinarian"
+                ],
+                sources: ["ASPCA Animal Poison Control Center", "Pet Poison Helpline", "Veterinary Information Network (VIN)", "Vetlexicon - Plant Poisoning: Solanine and Related Glycoalkaloids"]
+            ),
+
+            // MARK: - Lantana
+            ToxicItem(
+                id: UUID(),
+                name: "Lantana",
+                alternateNames: ["Lantana camara", "lantana plant", "lantana berries", "shrub verbena", "yellow sage", "red sage", "wild sage", "ham and eggs", "big sage", "tickberry", "white sage", "lantadene", "pentacyclic triterpenoids"],
+                categories: [.plants],
+                imageAsset: "lantana_flowers_berries",
+                description: "Lantana is a flowering shrub popular in gardens and landscaping, known for its clusters of small, colorful flowers that may be yellow, orange, red, pink, purple, or multicolored. It is commonly found in the southwestern United States, Florida, and Gulf Coast states, where it grows both as an ornamental and in the wild. All parts of the plant are toxic, with the unripe (green) berries being the most dangerous.",
+                toxicityInfo: "Lantana contains pentacyclic triterpenoids, primarily lantadene A and lantadene B, which are hepatotoxic (liver-damaging). These toxins cause liver damage by interfering with bile flow — they damage bile canalicular membranes, block bile excretion, and cause cholestasis (bile backup). This leads to retention of bilirubin and other compounds, potentially causing jaundice.\n\nAll parts of the plant are toxic, but the unripe green berries contain the highest concentration of toxins. Ripe black berries are less toxic but should still be avoided. In livestock (cattle, sheep, horses), lantana toxicity commonly causes photosensitization (severe skin reactions to sunlight) due to phylloerythrin accumulation — this is less commonly reported in dogs and cats.\n\nMost cases in dogs and cats involve gastrointestinal upset (vomiting, diarrhea, loss of appetite, weakness). Severe cases involving liver damage are possible but less commonly documented in household pets than in grazing livestock. Children have been poisoned by eating the berries, demonstrating that significant toxicity can occur with berry ingestion.",
+                onsetTime: OnsetTime(
+                    early: "Gastrointestinal signs (vomiting, diarrhea, weakness, loss of appetite) typically appear within hours of ingestion",
+                    delayed: "Liver damage may develop over 1-4 days with significant ingestions; jaundice (yellowing of gums, skin, eyes) indicates liver involvement"
+                ),
+                symptoms: [
+                    "Vomiting",
+                    "Diarrhea",
+                    "Loss of appetite",
+                    "Weakness",
+                    "Lethargy or depression",
+                    "Abdominal pain",
+                    "Labored breathing",
+                    "Jaundice (yellowing of gums, eyes, or skin)",
+                    "Dark urine",
+                    "Photosensitization (skin sensitivity to sunlight — more common in livestock)"
+                ],
+                speciesRisks: [
+                    SpeciesRisk(species: .dog, severity: .moderate, notes: "Most cases involve GI upset; liver damage is possible with significant ingestions, particularly of unripe berries; less commonly reported than in livestock but mechanism of toxicity is the same"),
+                    SpeciesRisk(species: .cat, severity: .moderate, notes: "Same concerns as dogs; cats are less likely to consume large amounts but smaller body size means less plant material needed for effects"),
+                    SpeciesRisk(species: .bird, severity: .high, notes: "Birds may be attracted to the berries; small body size increases risk of serious toxicity")
+                ],
+                preventionTips: [
+                    "Keep pets away from lantana plants, especially when berries are present",
+                    "The unripe green berries are the most toxic — remove or fence off plants with developing berries if pets have access",
+                    "Be aware that lantana grows wild in many southern states and may be encountered on walks",
+                    "Consider removing lantana from your landscaping if you have pets that like to chew on plants",
+                    "Do not let pets eat any part of the lantana plant, including fallen flowers or leaves",
+                    "If you suspect your pet has eaten lantana, especially the berries, contact your veterinarian"
+                ],
+                sources: ["ASPCA Animal Poison Control Center", "Pet Poison Helpline", "Veterinary Information Network (VIN)", "Merck Veterinary Manual"]
             )
         ]
     }
