@@ -2618,6 +2618,134 @@ class DatabaseService {
                     "Time is critical: early decontamination (inducing vomiting, activated charcoal) offers the best chance of preventing absorption"
                 ],
                 sources: ["ASPCA Animal Poison Control Center", "National Poison Control Center (Poison.org)", "IVIS - Guide to Poisonous House and Garden Plants", "Veterinary Information Network (VIN)", "International Programme on Chemical Safety (INCHEM)"]
+            ),
+
+            // MARK: - Moonseed
+            ToxicItem(
+                id: UUID(),
+                name: "Moonseed",
+                alternateNames: ["Menispermum canadense", "Canadian moonseed", "common moonseed", "yellow parilla", "moonseed vine", "Texas sarsaparilla"],
+                categories: [.plants],
+                imageAsset: "moonseed_berries",
+                description: "Moonseed (Menispermum canadense) is a woody climbing vine native to eastern North America, found from southern Canada to northern Florida. It grows in moist woods, thickets, and along stream banks. The plant is named for its distinctive crescent-moon-shaped seeds. Moonseed produces clusters of purple-black berries in fall that closely resemble wild grapes — this resemblance is dangerous because the fruit is highly toxic. All parts of moonseed are poisonous.",
+                toxicityInfo: "Moonseed contains the alkaloid dauricine, which is the principal toxin responsible for its poisonous effects. All parts of the plant are toxic, with the fruit (berries) being the most dangerous.\n\n**Clinical effects:** The primary toxicity concern is neurological — convulsions are the hallmark sign of moonseed poisoning. Other effects may include GI upset and potentially fatal poisoning if significant amounts are consumed.\n\n**Critical identification concern:** Moonseed berries ripen in September-October, the same time as wild grapes, and look remarkably similar. However, there are key differences:\n- Moonseed has a single crescent-shaped seed; grapes have round seeds\n- Moonseed vines lack tendrils; grape vines have forked tendrils\n- Moonseed berries have a bitter, unpleasant taste\n\nBecause pets (and humans) can mistake moonseed for wild grapes, this plant poses a significant poisoning risk in areas where both grow. Birds appear to tolerate the berries and spread the seeds, but the fruit is toxic to mammals.",
+                onsetTime: OnsetTime(
+                    early: "Neurological signs (convulsions) and GI upset may develop within hours of ingestion",
+                    delayed: "Severe poisoning can progress over hours to days; fatalities have been reported"
+                ),
+                symptoms: [
+                    "Convulsions or seizures",
+                    "Vomiting",
+                    "Diarrhea",
+                    "Abdominal pain",
+                    "Weakness",
+                    "Incoordination",
+                    "Depression or lethargy",
+                    "Collapse (severe cases)"
+                ],
+                speciesRisks: [
+                    SpeciesRisk(species: .dog, severity: .high, notes: "Convulsions are the hallmark sign; can be fatal; dogs may mistake berries for grapes and consume them"),
+                    SpeciesRisk(species: .cat, severity: .high, notes: "Same toxicity concerns as dogs; cats are less likely to consume berries but should be monitored if exposure occurs"),
+                    SpeciesRisk(species: .smallMammal, severity: .high, notes: "Toxic to all mammals; small body size increases vulnerability")
+                ],
+                preventionTips: [
+                    "Learn to identify moonseed — it grows as a climbing vine in moist woodlands and along stream banks in eastern North America",
+                    "If you have both moonseed and wild grapes on your property, consider removing moonseed to prevent confusion",
+                    "Never allow pets to eat wild berries unless you are absolutely certain of the plant's identity",
+                    "Remember the key difference: moonseed has a single crescent-shaped seed, while grapes have round seeds",
+                    "If your pet eats unknown berries and develops convulsions, seek veterinary care immediately"
+                ],
+                sources: ["Veterinary Information Network (VIN)", "Cornell University Poisonous Plants Informational Database", "Missouri Department of Conservation", "USDA Forest Service"]
+            ),
+
+            // MARK: - Stinging Nettle
+            ToxicItem(
+                id: UUID(),
+                name: "Stinging Nettle",
+                alternateNames: ["Urtica dioica", "Urtica", "common nettle", "nettle", "nettles", "stinging nettles", "burn hazel", "burn nettle", "Urtica urens", "dwarf nettle", "small nettle", "dog nettle", "Urtica ferox", "New Zealand tree nettle"],
+                categories: [.plants],
+                imageAsset: "stinging_nettle_plant",
+                description: "Stinging nettles (Urtica species) are common herbaceous plants found throughout North America, Europe, and other temperate regions. They grow in moist, disturbed soils along trails, in fields, ditches, and woodland edges. The plants are covered in fine, hollow hairs (trichomes) that act like tiny hypodermic needles — when touched, the tips break off and inject irritating chemicals into the skin. Hunting dogs and active outdoor dogs are most commonly affected when running through nettle patches.",
+                toxicityInfo: "Stinging nettle's toxicity comes from its unique delivery mechanism. The hollow stinging hairs (trichomes) contain a cocktail of irritating compounds including histamine, acetylcholine, serotonin, and formic acid. When an animal brushes against the plant, the silica-tipped hairs break off and inject these chemicals into the skin, causing immediate burning pain, redness, and swelling.\n\n**Contact exposure (most common):** Results in immediate stinging, itching, and localized swelling. In dogs, the face, muzzle, paw pads, and belly (less-furred areas) are most affected. Symptoms typically resolve within hours to a day.\n\n**Ingestion:** If the plant is chewed or swallowed, the stinging hairs can affect the mouth, throat, and GI tract, causing hypersalivation, retching, vomiting, and oral discomfort.\n\n**Severe exposures:** Working and hunting dogs running through dense nettle patches can experience more significant reactions. Severe cases may include respiratory distress, persistent vomiting, epistaxis (nosebleeds), depression, ataxia, muscle fasciculations (twitching), and pelvic limb paresis (weakness). Anaphylactoid reactions are possible. Signs may persist for several days.\n\n**Species variation:** Toxicity varies by nettle species. The New Zealand tree nettle (Urtica ferox) has caused severe, prolonged neurotoxicosis lasting weeks in humans and dogs — this species is far more dangerous than common nettles found in the US.\n\n**Important note:** Dried or processed nettle loses its stinging properties and is actually used as a nutritional supplement for pets. The danger is only from contact with or ingestion of the living plant.",
+                onsetTime: OnsetTime(
+                    early: "Skin reactions (stinging, redness, swelling) occur immediately upon contact. Oral/GI symptoms from ingestion appear within minutes to hours.",
+                    delayed: "Most symptoms resolve within hours to 1-2 days. Severe exposures may cause symptoms lasting several days. New Zealand tree nettle (Urtica ferox) can cause effects lasting weeks."
+                ),
+                symptoms: [
+                    "Intense itching and scratching",
+                    "Rubbing or pawing at face",
+                    "Licking at paws",
+                    "Redness and swelling of skin (especially muzzle, paw pads, belly)",
+                    "Hives or wheals (urticaria)",
+                    "Hypersalivation (drooling)",
+                    "Retching or vomiting",
+                    "Pawing at mouth (if ingested)",
+                    "Respiratory distress (severe cases)",
+                    "Nosebleeds (epistaxis — severe cases)",
+                    "Depression or lethargy (severe cases)",
+                    "Incoordination (ataxia — severe cases)",
+                    "Muscle twitching (fasciculations — severe cases)",
+                    "Weakness of hind legs (pelvic limb paresis — severe cases)"
+                ],
+                speciesRisks: [
+                    SpeciesRisk(species: .dog, severity: .low, notes: "Most cases involve localized skin irritation that resolves within hours; hunting and working dogs with heavy exposure may develop more serious symptoms; hair coat provides some protection"),
+                    SpeciesRisk(species: .cat, severity: .low, notes: "Similar to dogs; cats are less likely to have heavy exposure due to lifestyle; localized skin reaction is most common"),
+                    SpeciesRisk(species: .smallMammal, severity: .moderate, notes: "Rabbits and small mammals may be more vulnerable due to smaller size; outdoor rabbits in nettle-prone areas should be protected")
+                ],
+                preventionTips: [
+                    "Learn to identify stinging nettle — it has serrated, heart-shaped leaves and grows in clusters in moist areas",
+                    "Avoid walking dogs through dense nettle patches, especially in summer when plants are tall",
+                    "Hunting dogs are at highest risk — scout areas before allowing dogs to run through vegetation",
+                    "If your dog contacts nettles, rinse the affected area with cool water to remove any remaining stinging hairs",
+                    "Keep outdoor rabbit hutches away from areas where nettles grow",
+                    "Dock leaves (Rumex species), which often grow near nettles, contain compounds that may help soothe nettle stings — crush and apply to affected skin"
+                ],
+                sources: ["Veterinary Information Network (VIN)", "Pet Poison Helpline", "Burrows & Tyrl's Toxic Plants of North America", "Animal Poisons Helpline"]
+            ),
+
+            // MARK: - Yellow Jessamine
+            ToxicItem(
+                id: UUID(),
+                name: "Yellow Jessamine",
+                alternateNames: ["Carolina jessamine", "Carolina jasmine", "Gelsemium sempervirens", "Gelsemium", "yellow jasmine", "false jasmine", "evening trumpet", "evening trumpet flower", "woodbine", "poor man's rope", "wild jessamine", "gelsemium vine"],
+                categories: [.plants],
+                imageAsset: "yellow_jessamine_flowers",
+                description: "Yellow jessamine (Gelsemium sempervirens) is an evergreen climbing vine native to the southeastern United States, from Virginia to Florida and west to Texas. It is also found in Central America and the Caribbean. The plant produces fragrant, bright yellow trumpet-shaped flowers from late winter to early spring and is the state flower of South Carolina. Despite its beauty and popularity in landscaping, yellow jessamine is one of the most dangerous plants for pets — ALL parts contain potent neurotoxins, and even minimal ingestion can be fatal.",
+                toxicityInfo: "Yellow jessamine contains highly toxic indole alkaloids, primarily gelsemine, gelseminine, and sempervirine. These neurotoxins affect the nervous system and can cause rapid, severe, and potentially fatal poisoning.\n\n**Mechanism:** The alkaloids act on the central and peripheral nervous system, causing progressive muscle weakness, paralysis, and respiratory failure. Unlike many plant toxins that require large amounts to cause harm, yellow jessamine is toxic in very small doses.\n\n**Recent fatalities:** In April 2025, a dog in Washington, D.C. died within minutes after eating flower petals from a yellow jessamine vine in an apartment courtyard. This case highlights the extreme danger of this plant in landscaping accessible to pets.\n\n**ALL parts are toxic:** Flowers, leaves, stems, roots, and even the nectar contain the deadly alkaloids. Children have been poisoned by sucking nectar from the flowers (which resemble honeysuckle).\n\n**Clinical progression:** Early signs include muscle weakness and dry mouth. This progresses to difficulty swallowing and breathing, bradycardia (slow heart rate), hypothermia, vision problems, paralysis, seizures, and death from respiratory failure.\n\n**Important distinction:** Yellow jessamine (Gelsemium) is NOT related to true jasmine (Jasminum), which is non-toxic. The similar names cause confusion. Do not confuse with night-blooming jessamine (Cestrum) or star jasmine (Trachelospermum), which have different toxicity profiles.\n\n**There is NO ANTIDOTE. Treatment is supportive only.**",
+                onsetTime: OnsetTime(
+                    early: "Signs may begin within minutes to hours — muscle weakness, difficulty swallowing, vision changes, and respiratory depression can develop rapidly",
+                    delayed: "Death can occur within hours in severe cases; survivors may have prolonged recovery"
+                ),
+                symptoms: [
+                    "Muscle weakness (often first sign)",
+                    "Difficulty swallowing (dysphagia)",
+                    "Dry mouth",
+                    "Vision problems or dilated pupils",
+                    "Drooping eyelids (ptosis)",
+                    "Slow heart rate (bradycardia)",
+                    "Low body temperature (hypothermia)",
+                    "Decreased respiratory rate",
+                    "Difficulty breathing",
+                    "Paralysis (progressive)",
+                    "Seizures",
+                    "Collapse",
+                    "Respiratory failure",
+                    "Death"
+                ],
+                speciesRisks: [
+                    SpeciesRisk(species: .dog, severity: .severe, notes: "EXTREMELY TOXIC — documented fatalities from eating flowers or minimal plant material; bright flowers may attract curious dogs; treat ANY exposure as a life-threatening emergency"),
+                    SpeciesRisk(species: .cat, severity: .severe, notes: "Same extreme toxicity as dogs; all exposures should be treated as emergencies"),
+                    SpeciesRisk(species: .bird, severity: .severe, notes: "Highly toxic to birds; nectar is toxic to honey bees as well")
+                ],
+                preventionTips: [
+                    "Do NOT plant yellow jessamine in areas accessible to pets — this plant is too dangerous for pet-friendly landscaping",
+                    "If you have existing yellow jessamine, consider removing it or fencing it off completely from pet areas",
+                    "Even overhead trellises are dangerous — fallen petals and leaves remain toxic and must be promptly removed",
+                    "Learn to distinguish yellow jessamine from similar vines: it has yellow trumpet-shaped flowers, opposite leaves, and blooms in late winter/early spring",
+                    "Do not confuse with true jasmine (Jasminum) which is non-toxic — yellow jessamine is NOT a jasmine despite similar names",
+                    "If your pet eats ANY part of this plant, seek emergency veterinary care IMMEDIATELY — do not wait for symptoms"
+                ],
+                sources: ["Veterinary Information Network (VIN)", "ASPCA Animal Poison Control Center", "Pet Poison Helpline", "Colorado State University Guide to Poisonous Plants"]
             )
         ]
     }
