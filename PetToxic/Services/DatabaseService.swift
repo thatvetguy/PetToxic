@@ -2150,6 +2150,60 @@ class DatabaseService {
                     "Bring a piece of the plant to the veterinarian if possible to confirm identification"
                 ],
                 sources: ["IVIS - Guide to Poisonous House and Garden Plants (Colorado State University)", "Pet Poison Helpline", "WagWalking Veterinary Resources", "Veterinary Information Network (VIN)"]
+            ),
+
+            // MARK: - Nicotine & Tobacco Products
+            ToxicItem(
+                id: UUID(),
+                name: "Nicotine & Tobacco Products",
+                alternateNames: ["nicotine", "tobacco", "cigarette", "cigarettes", "cigarette butt", "cigarette butts", "cigar", "cigars", "e-cigarette", "e-cigarettes", "electronic cigarette", "electronic cigarettes", "vape", "vaping", "vape juice", "vape liquid", "e-juice", "e-liquid", "e juice", "e liquid", "nicotine liquid", "nicotine solution", "nicotine patch", "nicotine patches", "nicotine gum", "nicotine lozenge", "nicotine lozenges", "nicotine inhaler", "nicotine nasal spray", "nicotine replacement", "nicotine replacement therapy", "NRT", "chewing tobacco", "smokeless tobacco", "snuff", "snus", "dip", "dipping tobacco", "pipe tobacco", "Nicotiana", "tobacco plant", "nicotine poisoning", "nicotine toxicosis", "nicotine intoxication", "tobacco poisoning", "tobacco toxicosis", "e-juice poisoning", "e-liquid poisoning", "ashtray", "ash tray", "cigarette pack", "Juul", "vape pen", "vape pod", "Nicorette", "Nicoderm", "Habitrol", "Commit lozenge"],
+                categories: [.recreationalSubstances, .plants],
+                imageAsset: "nicotine_tobacco",
+                description: "Nicotine is a highly toxic alkaloid produced by tobacco plants (Nicotiana species). Pets can be poisoned by ingesting tobacco products, nicotine replacement therapies, or liquid nicotine used in electronic cigarettes. Nicotine acts on the nervous system, initially causing stimulation followed by dangerous depression and paralysis at higher exposures. Death can occur rapidly in severe cases. E-cigarette liquids and nicotine patches pose the greatest danger due to their concentrated nicotine content and rapid absorption.",
+                toxicityInfo: "Nicotine is extremely dangerous to pets. It is rapidly absorbed across mucous membranes (mouth, nose) and skin, meaning exposure doesn't require swallowing. Nicotine is poorly absorbed in the stomach due to stomach acid, but once it reaches the small intestine, absorption is rapid.\n\n**Highest-Risk Products:**\n• E-cigarette liquids (e-juice/e-liquid): Concentrated nicotine (0-200+ mg/mL) with rapid oral and dermal absorption; flavored varieties may be attractive to pets\n• Nicotine patches: Contain far more nicotine than the daily release amount listed on the label; used patches can retain up to 80% of original nicotine; chewing releases a gel that absorbs rapidly through the mouth\n• Nicotine gum and lozenges: Some products contain xylitol, which is separately toxic to dogs\n• Cigarette butts: Filtered butts actually contain MORE nicotine because the filter traps it; ashtrays are a common source of exposure\n\nTobacco products (cigarettes, cigars, chewing tobacco, pipe tobacco, snuff) release nicotine more slowly from the plant material, which may delay but does not prevent toxicosis.\n\nAt low doses, nicotine stimulates nicotinic receptors throughout the nervous system, causing stimulation. At higher doses, persistent receptor activation leads to blockade, causing progressive nervous system depression. Paralysis of respiratory muscles, respiratory arrest, and death may follow. Nicotine also stimulates the emetic (vomiting) center and can cause excessive vagal stimulation, resulting in bradycardia and potentially cardiac arrest.\n\nNicotine is eliminated rapidly (half-life less than 1 hour in dogs), so pets that survive the initial hours generally have a good prognosis with supportive care.",
+                onsetTime: OnsetTime(
+                    early: "Signs can appear within minutes, especially with liquid nicotine products or chewed patches; tobacco products may have delayed onset due to slower nicotine release from plant material",
+                    delayed: "Death can occur within minutes to hours in severe cases; survivors typically recover within 24 hours due to rapid elimination"
+                ),
+                symptoms: [
+                    "Vomiting (often the first sign)",
+                    "Hypersalivation (drooling)",
+                    "Diarrhea",
+                    "Agitation or restlessness",
+                    "Dilated pupils (mydriasis)",
+                    "Incoordination (ataxia)",
+                    "Tachycardia (rapid heart rate)",
+                    "Hypertension (high blood pressure)",
+                    "Bradycardia (slow heart rate — from vagal stimulation)",
+                    "Hypotension (low blood pressure)",
+                    "Cardiac arrhythmias",
+                    "Tremors",
+                    "Seizures",
+                    "Weakness and collapse",
+                    "Central nervous system depression",
+                    "Flaccid paralysis",
+                    "Difficulty breathing (dyspnea)",
+                    "Respiratory arrest",
+                    "Cardiac arrest"
+                ],
+                speciesRisks: [
+                    SpeciesRisk(species: .dog, severity: .severe, notes: "Dogs are most commonly affected due to their scavenging behavior. Cigarette butts in ashtrays, discarded chewing tobacco, and e-liquids are frequent exposure sources. Nicotine gum and lozenges containing xylitol pose a double toxicity risk. Even small exposures to concentrated nicotine liquids can be rapidly fatal."),
+                    SpeciesRisk(species: .cat, severity: .severe, notes: "Cats are highly susceptible to nicotine toxicity. Exposure is less common than in dogs but equally dangerous. Dermal exposure can occur if cats walk through spilled e-liquids and groom themselves."),
+                    SpeciesRisk(species: .smallMammal, severity: .severe, notes: "Rabbits, guinea pigs, ferrets, and other small mammals are extremely susceptible to nicotine toxicity due to their small body size. Even minimal exposure can be life-threatening."),
+                    SpeciesRisk(species: .bird, severity: .severe, notes: "Birds are highly sensitive to nicotine and respiratory irritants. Their small size and rapid metabolism make even minor exposures potentially fatal. Secondhand smoke exposure is also harmful to birds."),
+                    SpeciesRisk(species: .reptile, severity: .severe, notes: "Limited data available, but nicotine is expected to be highly toxic to reptiles. Avoid any exposure and seek veterinary care immediately if exposure occurs.")
+                ],
+                preventionTips: [
+                    "Store all tobacco products, nicotine replacement products, and e-cigarette supplies in secure, pet-proof containers",
+                    "Never leave cigarettes, cigars, or ashtrays where pets can reach them",
+                    "Dispose of cigarette butts securely — do not leave ashtrays accessible or discard butts where pets can find them outdoors",
+                    "Keep e-liquids and vape supplies locked away; even small spills can be dangerous",
+                    "Remember that used nicotine patches still contain significant amounts of nicotine — dispose of them in sealed containers",
+                    "Be aware that some nicotine gums and lozenges contain xylitol, which is separately toxic to dogs",
+                    "Clean up any spilled e-liquid immediately and keep pets away from the area; nicotine absorbs through skin",
+                    "If you use nicotine patches, ensure pets cannot access them on your body or after removal"
+                ],
+                sources: ["Veterinary Information Network (VIN) — Nicotine Toxicosis", "ASPCA Animal Poison Control Center", "Pet Poison Helpline — Nicotine", "Merck Veterinary Manual — Tobacco and Nicotine Toxicosis", "Tilley and Smith, The 5-Minute Veterinary Consult: Canine and Feline"]
             )
         ]
     }
