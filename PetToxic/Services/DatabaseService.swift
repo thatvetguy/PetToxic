@@ -3046,6 +3046,56 @@ class DatabaseService {
                     "Do NOT wait for symptoms to develop—once severe signs appear, the outcome is often poor"
                 ],
                 sources: ["VIN Toxicology Resources", "ASPCA Animal Poison Control Center", "Merck Veterinary Manual — Bromethalin Poisoning in Animals", "Pet Poison Helpline", "VCA Animal Hospitals"]
+            ),
+
+            // MARK: - Cholecalciferol (Vitamin D3) Rodenticide
+            ToxicItem(
+                id: UUID(),
+                name: "Cholecalciferol (Vitamin D3) Rodenticide",
+                alternateNames: ["vitamin D3 rodenticide", "vitamin D poison", "vitamin D3 poison", "cholecalciferol bait", "d-CON", "Quintox", "Rampage", "True Grit Rampage", "Ortho Rat-B-Gone", "Selontra", "rat poison", "mouse poison", "vitamin D rodenticide"],
+                categories: [.garageAutomotive],
+                imageAsset: "cholecalciferol_rodenticide",
+                description: "Cholecalciferol (vitamin D3) rodenticides are among the most dangerous rat and mouse poisons available. In 2018, d-CON—one of the most common rodenticide brands—switched from anticoagulants to cholecalciferol, making this type increasingly common in homes. These products are formulated as pellets, soft baits, granules, and blocks at 0.075% concentration. Despite being a vitamin, cholecalciferol in rodenticide amounts is extremely toxic—a very small amount can cause life-threatening poisoning. When first marketed in the 1980s, these products were advertised as safe around dogs, but this was proven dangerously wrong. Color, size, and shape of the bait do NOT indicate the active ingredient.",
+                toxicityInfo: "Cholecalciferol causes life-threatening elevations in blood calcium (hypercalcemia) and phosphorus. The body cannot excrete excess calcium quickly, leading to mineralization (calcium deposits) in kidneys, heart, blood vessels, and other soft tissues. Kidney failure is the most common fatal outcome. The poison is highly fat-soluble and stored in body fat, causing effects that persist for weeks to months even after a single exposure. There is NO ANTIDOTE—treatment requires weeks of hospitalization, frequent blood monitoring, and expensive therapy. For vitamin D toxicity from supplements or medications, see the separate 'Vitamin D Overdose' entry in Human Medications.",
+                onsetTime: OnsetTime(
+                    early: "Increased thirst and urination may appear within 12-24 hours",
+                    delayed: "Kidney failure and severe signs typically develop 1-3 days after ingestion; damage may already be significant before obvious signs appear"
+                ),
+                symptoms: [
+                    "Increased thirst (polydipsia)",
+                    "Increased urination (polyuria)",
+                    "Loss of appetite",
+                    "Lethargy and weakness",
+                    "Vomiting",
+                    "Constipation or diarrhea",
+                    "Bloody vomit (hematemesis)",
+                    "Dark or bloody stool (melena)",
+                    "Drooling",
+                    "Abdominal pain",
+                    "Uremic breath (ammonia odor)",
+                    "Oral ulcers",
+                    "Hind leg weakness",
+                    "Difficulty breathing",
+                    "Decreased or absent urination (in kidney failure)",
+                    "Seizures (severe cases)"
+                ],
+                speciesRisks: [
+                    SpeciesRisk(species: .dog, severity: .severe, notes: "Extremely narrow margin of safety; even approximately half a tablespoon of bait can cause life-threatening hypercalcemia in a 40-pound dog"),
+                    SpeciesRisk(species: .cat, severity: .severe, notes: "Equally susceptible; any ingestion should be treated as an emergency"),
+                    SpeciesRisk(species: .smallMammal, severity: .severe, notes: "Highly susceptible due to small body size"),
+                    SpeciesRisk(species: .bird, severity: .severe, notes: "Susceptible; relay toxicity theoretically possible"),
+                    SpeciesRisk(species: .reptile, severity: .severe, notes: "Susceptible; limited data available")
+                ],
+                preventionTips: [
+                    "Avoid using cholecalciferol rodenticides—there is NO ANTIDOTE and treatment is difficult and expensive",
+                    "Keep ALL packaging—many rodenticide brands now contain cholecalciferol instead of anticoagulants",
+                    "Do not assume vitamin-based rodenticides are safer—they are among the most dangerous",
+                    "Use tamper-resistant bait stations if rodenticides must be used",
+                    "Consider safer alternatives like snap traps or electronic traps",
+                    "If ingestion is suspected, contact a veterinarian IMMEDIATELY—do not wait for symptoms",
+                    "Do not rely on bait appearance to identify the product"
+                ],
+                sources: ["VIN Toxicology Resources", "ASPCA Animal Poison Control Center", "Merck Veterinary Manual — Cholecalciferol Poisoning in Animals", "Pet Poison Helpline", "VCA Animal Hospitals", "Purdue University College of Veterinary Medicine"]
             )
         ]
     }
