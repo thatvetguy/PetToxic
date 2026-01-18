@@ -2056,6 +2056,57 @@ class DatabaseService {
                     "If you have rabbits or other small mammals, keep them completely away from this plant — deaths have been documented"
                 ],
                 sources: ["ASPCA Animal Poison Control Center", "Pet Poison Helpline", "WagWalking Veterinary Resources", "Hunker Home & Garden"]
+            ),
+
+            // MARK: - Cannabis / Marijuana
+            ToxicItem(
+                id: UUID(),
+                name: "Cannabis / Marijuana",
+                alternateNames: ["Cannabis sativa", "Cannabis indica", "marijuana", "cannabis", "THC", "tetrahydrocannabinol", "delta-9 THC", "delta-8 THC", "pot", "weed", "grass", "ganja", "reefer", "dope", "bud", "chronic", "herb", "skunk", "Mary Jane", "hashish", "hash", "hash oil", "hemp", "CBD", "cannabidiol", "edibles", "marijuana edibles", "THC edibles", "THC gummies", "cannabis gummies", "marijuana brownies", "pot brownies", "cannabutter", "marijuana butter", "THC vape", "cannabis vape", "dronabinol", "nabilone", "devil weed", "Aunt Mary"],
+                categories: [.plants, .recreationalSubstances],
+                imageAsset: "cannabis_plant",
+                description: "Cannabis (marijuana) toxicity has become increasingly common in pets, particularly in regions where marijuana has been legalized. Dogs are affected far more often than cats, typically through accidental ingestion of marijuana edibles (brownies, gummies, cookies, candies), plant material, or concentrated products. The primary psychoactive compound is delta-9-tetrahydrocannabinol (THC). With legalization has come more potent products and more severe toxicity cases.",
+                toxicityInfo: "The cannabis plant (Cannabis sativa, Cannabis indica) contains over 480 distinct compounds, including nearly 70 cannabinoids. The primary psychoactive compound is delta-9-tetrahydrocannabinol (THC). THC concentration varies widely: 1-20% in plant material, 3-6% in hashish, and 30-50% in hashish oil. Edibles and concentrated products (vapes, distillates, tinctures) may contain much higher THC levels. Cannabutter (marijuana-infused butter) can have extremely high THC concentrations because THC is lipophilic (fat-soluble).\n\nTHC is absorbed rapidly after inhalation and more slowly after ingestion. A lethal dose has not been definitively established in dogs and cats — one study found no fatalities in dogs given oral THC doses of 3,000-9,000 mg/kg. However, clinical disease can occur at doses 1/1000th of the estimated lethal dose, and deaths have been reported, particularly with highly concentrated products or marijuana butter.\n\n**Common exposure routes:**\n• Ingestion of edibles (most common) — brownies, gummies, cookies, candies, infused beverages\n• Ingestion of plant material (dried leaves, flowers, stems)\n• Ingestion of concentrated products (vape cartridge liquid, hashish, hash oil)\n• Secondhand smoke exposure (usually causes mild effects)\n• Intentional smoke blown into pet's face\n• Ingestion of human feces containing THC (documented in case reports)\n\n**IMPORTANT — Compound toxicity with edibles:** Many marijuana edibles also contain chocolate, xylitol, raisins, macadamia nuts, or other ingredients toxic to pets. If your pet ingests a marijuana edible, consider ALL ingredients when assessing toxicity risk.\n\n**Delta-8 THC:** This THC isomer (approximately 50-75% as psychoactive as delta-9 THC) is increasingly appearing in legal marketplaces. Products may contain harmful by-products from the synthetic conversion process used to produce higher concentrations.",
+                onsetTime: OnsetTime(
+                    early: "Clinical signs typically appear within 1-3 hours of ingestion; effects from inhalation may appear more quickly",
+                    delayed: "Signs can last 12-72+ hours depending on dose; severe cases may take several days to fully recover"
+                ),
+                symptoms: [
+                    "CNS depression (lethargy, sedation, somnolence)",
+                    "Ataxia (unsteady, wobbly gait)",
+                    "Disorientation or appearing 'dazed'",
+                    "Urinary incontinence (dribbling urine)",
+                    "Hypothermia (low body temperature)",
+                    "Bradycardia (slow heart rate) — or tachycardia in some cases",
+                    "Mydriasis (dilated pupils) — or miosis (constricted pupils)",
+                    "Scleral congestion (red/bloodshot eyes)",
+                    "Hyperesthesia (exaggerated response to stimuli)",
+                    "Vomiting",
+                    "Hypersalivation (drooling)",
+                    "Tremors",
+                    "Vocalization",
+                    "Recumbency (inability to stand)",
+                    "Agitation or hyperactivity (severe cases)",
+                    "Seizures (severe cases)",
+                    "Obtundation or coma (severe cases)",
+                    "Hyperthermia (severe cases)"
+                ],
+                speciesRisks: [
+                    SpeciesRisk(species: .dog, severity: .moderate, notes: "Dogs are most commonly affected. Classic presentation: depressed/somnolent, hypothermic, bradycardic, and dribbling urine. External stimulation causes brief hyperesthesia followed by return to somnolence. With legalization, more severe cases (seizures, coma, death) are being reported — whether from more potent products or adulterants is unknown. Deaths have occurred, particularly with concentrated products or cannabutter."),
+                    SpeciesRisk(species: .cat, severity: .moderate, notes: "Cats may show different signs than dogs, including increased locomotor activity (wandering aimlessly, spontaneous jumping), head bobbing/weaving, swaying, anxiety, aggression, polydipsia, polyuria, polyphagia, and difficulty swallowing. Sedation and depression also occur. Seizures and coma are possible with large exposures."),
+                    SpeciesRisk(species: .smallMammal, severity: .moderate, notes: "Limited data available; small body size means even small exposures could cause significant effects. Seek veterinary care for any cannabis exposure in small mammals."),
+                    SpeciesRisk(species: .bird, severity: .moderate, notes: "Limited data available; birds are susceptible to respiratory irritants from smoke. Seek veterinary care for any suspected exposure.")
+                ],
+                preventionTips: [
+                    "Store all cannabis products (edibles, plant material, vapes, concentrates) in pet-proof containers and locations your pet cannot access",
+                    "Edibles are the most common source of pet poisoning — never leave brownies, gummies, candies, or other edibles where pets can reach them",
+                    "Be aware that marijuana butter (cannabutter) can contain extremely high THC concentrations",
+                    "Do not blow marijuana smoke in your pet's face — this is not amusing, it is poisoning",
+                    "Inform your veterinarian honestly about potential marijuana exposure — this information is confidential and essential for proper treatment",
+                    "If your pet ingests an edible, also consider toxicity from other ingredients (chocolate, xylitol, raisins, macadamia nuts)",
+                    "With legalization, highly concentrated products are more available — even small amounts of vape liquid or concentrates can cause severe toxicity"
+                ],
+                sources: ["Veterinary Information Network (VIN)", "ASPCA Animal Poison Control Center", "Pet Poison Helpline", "Veterinary Partner"]
             )
         ]
     }
