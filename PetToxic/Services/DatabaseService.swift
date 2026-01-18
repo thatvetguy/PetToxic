@@ -2204,6 +2204,101 @@ class DatabaseService {
                     "If you use nicotine patches, ensure pets cannot access them on your body or after removal"
                 ],
                 sources: ["Veterinary Information Network (VIN) — Nicotine Toxicosis", "ASPCA Animal Poison Control Center", "Pet Poison Helpline — Nicotine", "Merck Veterinary Manual — Tobacco and Nicotine Toxicosis", "Tilley and Smith, The 5-Minute Veterinary Consult: Canine and Feline"]
+            ),
+
+            // MARK: - Monkshood
+            ToxicItem(
+                id: UUID(),
+                name: "Monkshood",
+                alternateNames: ["Aconitum", "Aconite", "Wolfsbane", "Wolf's bane", "Leopard's bane", "Devil's helmet", "Blue rocket", "Friar's cap", "Queen of poisons", "Helmet flower", "Aconitum napellus", "Aconitum columbianum", "Western monkshood", "Garden monkshood"],
+                categories: [.plants],
+                imageAsset: "monkshood",
+                description: "Monkshood (Aconitum species) is a perennial garden ornamental with distinctive hooded blue, purple, or white flowers. All parts of the plant are highly toxic. Historically used as a poison for humans and pest animals, monkshood affects the heart and nervous system. There is no antidote — treatment is supportive only. Poisoning is uncommon but can be fatal.",
+                toxicityInfo: "Monkshood contains aconitine and related alkaloids that affect sodium channels in nerve and cardiac tissue. All parts of the plant are toxic, including roots, leaves, and flowers. The alkaloids cause both neurological and cardiac effects, including dangerous arrhythmias and bradycardia. Even handling the plant can cause skin numbness and tingling in some cases.\n\nThere is no specific antidote for aconitine poisoning. Treatment is symptomatic and supportive, focusing on managing cardiac arrhythmias and supporting vital functions.\n\n**Note:** Monkshood is sometimes confused with Larkspur (Delphinium), another tall garden plant with showy flower spikes. However, they contain different alkaloids and have different clinical presentations. Larkspur primarily causes neuromuscular effects, while Monkshood has prominent cardiac toxicity.",
+                onsetTime: OnsetTime(
+                    early: "Signs can develop within minutes to a few hours of ingestion; oral numbness and tingling may occur rapidly",
+                    delayed: "Cardiac arrhythmias may develop or worsen over several hours; death can occur within hours in severe cases"
+                ),
+                symptoms: [
+                    "Hypersalivation (drooling)",
+                    "Oral irritation and numbness",
+                    "Nausea and vomiting",
+                    "Restlessness or agitation",
+                    "Weakness",
+                    "Impaired vision",
+                    "Incoordination (ataxia)",
+                    "Bradycardia (slow heart rate)",
+                    "Cardiac arrhythmias",
+                    "Difficulty breathing (dyspnea)",
+                    "Recumbency (inability to rise)",
+                    "Collapse",
+                    "Death (in severe cases)"
+                ],
+                speciesRisks: [
+                    SpeciesRisk(species: .dog, severity: .high, notes: "Dogs may be attracted to dig up roots or chew on plants. Cardiac and neurological effects can be life-threatening. There is no antidote — all exposure should be treated as an emergency."),
+                    SpeciesRisk(species: .cat, severity: .high, notes: "Cats are susceptible to aconitine toxicity. Any ingestion warrants immediate veterinary care. Cardiac arrhythmias are the primary concern."),
+                    SpeciesRisk(species: .smallMammal, severity: .high, notes: "Small body size increases risk of severe toxicity. Limited data available — treat any exposure as potentially life-threatening."),
+                    SpeciesRisk(species: .bird, severity: .moderate, notes: "Limited data available. Assume toxicity and seek veterinary care for any suspected exposure."),
+                    SpeciesRisk(species: .reptile, severity: .moderate, notes: "Limited data available. Avoid exposure and seek veterinary care if ingestion is suspected.")
+                ],
+                preventionTips: [
+                    "Do not plant monkshood in areas accessible to pets",
+                    "Remove any existing monkshood from pet-accessible gardens",
+                    "Wear gloves when handling the plant — alkaloids can absorb through skin and cause numbness",
+                    "Dispose of plant material (including prunings) securely where pets cannot access it",
+                    "Be aware that dried plant material remains toxic",
+                    "Learn to identify monkshood — it has distinctive hooded flowers on tall spikes"
+                ],
+                sources: ["Veterinary Information Network (VIN) — Dr. Sharon Gwaltney-Brant, DABVT", "ASPCA Animal Poison Control Center", "Tilley and Smith, The 5-Minute Veterinary Consult: Canine and Feline", "Merck Veterinary Manual"]
+            ),
+
+            // MARK: - Datura (Angel's Trumpet & Jimsonweed)
+            ToxicItem(
+                id: UUID(),
+                name: "Datura (Angel's Trumpet & Jimsonweed)",
+                alternateNames: ["Datura", "Angel's trumpet", "Angels trumpet", "Devil's trumpet", "Jimsonweed", "Jimson weed", "Thorn apple", "Moonflower", "Locoweed", "Devil's weed", "Devil's cucumber", "Hell's bells", "Stinkweed", "Tolguacha", "Toloache", "Datura stramonium", "Datura metel", "Datura inoxia", "Datura wrightii", "Brugmansia", "Brugmansia suaveolens", "Trumpet flower", "Sacred datura", "Indian apple", "Mad apple"],
+                categories: [.plants],
+                imageAsset: "datura",
+                description: "Datura species (including jimsonweed and angel's trumpet) are plants with distinctive large, trumpet-shaped flowers. Two genera are commonly called \"angel's trumpet\": Datura (typically with upward-facing flowers) and Brugmansia (typically with pendulous flowers). Both contain tropane alkaloids that cause effects similar to atropine poisoning, including rapid heart rate, dilated pupils, dry mouth, hyperthermia, and CNS effects such as disorientation and agitation. Datura is generally more toxic than Brugmansia. These plants have historically been used as hallucinogens, often with tragic results.",
+                toxicityInfo: "Datura and Brugmansia contain tropane alkaloids including hyoscyamine, scopolamine (also called hyoscine), and atropine. These alkaloids block acetylcholine at muscarinic receptors, causing anticholinergic effects throughout the body.\n\n**Datura** is the more toxic of the two genera. Alkaloids are concentrated in the flowers and seeds, with lower levels in leaves. Ingestion of flowers or seeds is far more dangerous than leaf ingestion alone.\n\n**Brugmansia** contains alkaloids in all parts of the plant but generally at lower concentrations than Datura.\n\nThe clinical syndrome resembles atropine poisoning: rapid heart rate, dry mucous membranes, dilated pupils, elevated body temperature, decreased gut motility, and CNS effects including hallucinations, disorientation, and agitation. Death typically results from depression of central respiratory centers or complications of hyperthermia.\n\nThere is considerable species variation in susceptibility — rabbits and some herbivores show relative resistance to tropane alkaloids.\n\n**Note:** Jimsonweed (Datura stramonium) is a common weed in many areas and may grow uninvited in yards and fields.",
+                onsetTime: OnsetTime(
+                    early: "Signs typically appear within 30 minutes to several hours of ingestion",
+                    delayed: "CNS effects and hyperthermia may persist for 24-48 hours or longer; full recovery may take several days"
+                ),
+                symptoms: [
+                    "Dilated pupils (mydriasis)",
+                    "Dry mucous membranes (dry mouth, nose)",
+                    "Rapid heart rate (tachycardia)",
+                    "Elevated body temperature (hyperthermia)",
+                    "Decreased gut sounds and constipation",
+                    "Thirst",
+                    "Disorientation or confusion",
+                    "Agitation or restlessness",
+                    "Behavioral changes (hallucinations)",
+                    "Incoordination (ataxia)",
+                    "Weakness",
+                    "CNS depression (severe cases)",
+                    "Respiratory depression",
+                    "Seizures (rare)",
+                    "Coma (severe cases)",
+                    "Death (from respiratory failure)"
+                ],
+                speciesRisks: [
+                    SpeciesRisk(species: .dog, severity: .moderate, notes: "Dogs may ingest plant material while exploring. Leaf ingestion may cause mild or no signs; flowers and seeds are significantly more dangerous. Monitor for anticholinergic signs (dilated pupils, dry mouth, rapid heart rate, agitation)."),
+                    SpeciesRisk(species: .cat, severity: .high, notes: "Cats ingesting flowers or seeds are at higher risk for significant toxicity. CNS effects and hyperthermia can be severe. Seek veterinary care promptly for any suspected ingestion."),
+                    SpeciesRisk(species: .smallMammal, severity: .moderate, notes: "Rabbits and some herbivores show relative resistance to tropane alkaloids. However, ferrets and other small mammals may be more susceptible. Seek veterinary care for any suspected exposure."),
+                    SpeciesRisk(species: .bird, severity: .moderate, notes: "Limited data available. Assume susceptibility and seek veterinary care for any suspected exposure."),
+                    SpeciesRisk(species: .reptile, severity: .low, notes: "Limited data available. Seek veterinary care for any suspected exposure.")
+                ],
+                preventionTips: [
+                    "Learn to identify jimsonweed (Datura stramonium) — it commonly grows as a weed in yards, fields, and disturbed areas",
+                    "Remove jimsonweed from yards and areas where pets roam",
+                    "If growing ornamental angel's trumpet (Brugmansia), keep pets away from the plant, especially fallen flowers and seed pods",
+                    "Seeds are particularly dangerous — do not allow pets access to seed pods",
+                    "Be aware that all parts of these plants are toxic, but flowers and seeds contain the highest alkaloid concentrations",
+                    "Educate family members about the toxicity of these attractive but dangerous plants"
+                ],
+                sources: ["Veterinary Information Network (VIN) — Dr. Sharon Gwaltney-Brant, DABVT", "ASPCA Animal Poison Control Center", "Tilley and Smith, The 5-Minute Veterinary Consult: Canine and Feline", "Pet Poison Helpline"]
             )
         ]
     }
