@@ -2848,6 +2848,53 @@ class DatabaseService {
                     "Keep birds in well-ventilated areas away from any petroleum fumes"
                 ],
                 sources: ["Merck Veterinary Manual — Petroleum Product Poisoning in Animals", "VIN Toxicology Resources — Hydrocarbon Toxicosis", "ASPCA Animal Poison Control Center", "Pet Poison Helpline"]
+            ),
+
+            // MARK: - Windshield Washer Fluid (Methanol)
+            ToxicItem(
+                id: UUID(),
+                name: "Windshield Washer Fluid (Methanol)",
+                alternateNames: ["windshield washer fluid", "washer fluid", "wiper fluid", "windshield wiper fluid", "screen wash", "windscreen washer", "methanol", "methyl alcohol", "wood alcohol", "windshield de-icer", "washer fluid antifreeze", "bug wash", "Rain-X washer fluid", "Prestone washer fluid", "gas line antifreeze", "HEET", "model airplane fuel", "glow fuel", "RC fuel", "canned heat", "Sterno fuel", "fondue fuel", "chafing fuel"],
+                categories: [.garageAutomotive],
+                imageAsset: "washer_fluid",
+                description: "Windshield washer fluid typically contains 20-30% methanol (methyl alcohol), though concentrations can be higher in de-icing formulas designed for very cold climates. Methanol is also found in gas line antifreeze products (like HEET), model airplane/RC car fuel ('glow fuel'), canned heat fuels (Sterno), some paint removers, varnishes, and certain solvents.\n\nMethanol is a colorless alcohol with a slightly sweet odor. Pets are most commonly exposed by drinking from puddles of spilled washer fluid, licking residue from containers, or accessing open jugs in garages.\n\n**Important:** Some windshield washer fluids may also contain ethylene glycol as an additive. If you're unsure which type of antifreeze is in a product, treat the exposure as potentially involving ethylene glycol (see Antifreeze entry) and seek immediate veterinary care.",
+                toxicityInfo: "In dogs and cats, methanol behaves similarly to ethanol (drinking alcohol), causing intoxication-like symptoms. This is different from methanol poisoning in humans, where it causes blindness and severe neurological damage — these effects do NOT occur in dogs and cats.\n\n**How methanol affects pets:**\n\nMethanol is rapidly absorbed from the gastrointestinal tract, with effects typically appearing within 30-60 minutes of ingestion. The central nervous system and GI tract are most commonly affected. Pets appear 'drunk' — wobbly, disoriented, and lethargic. Low blood sugar (hypoglycemia) and low body temperature can also occur.\n\n**Key points:**\n\n• **Rapid onset:** If your pet shows no symptoms within 60 minutes of exposure, significant toxicity is unlikely to develop.\n\n• **No specific antidote:** Unlike ethylene glycol antifreeze, there is no antidote for methanol. Fomepizole (the antifreeze antidote) does NOT work for methanol poisoning.\n\n• **No blindness in pets:** While methanol causes blindness in humans and primates, this does not occur in dogs and cats.\n\n• **Activated charcoal is ineffective:** Charcoal does not bind to alcohol molecules.\n\n• **Prognosis is generally good** if veterinary care is sought promptly.\n\n⚠️ **Contact your veterinarian or poison control immediately** if your pet ingests windshield washer fluid. Even though methanol is less dangerous than ethylene glycol, veterinary evaluation is still important — especially since some products contain both.",
+                onsetTime: OnsetTime(
+                    early: "30-60 minutes — Intoxication signs (wobbling, disorientation, lethargy)",
+                    delayed: "If no signs develop within 60 minutes of ingestion, significant toxicity is unlikely"
+                ),
+                symptoms: [
+                    "Appearing 'drunk' or intoxicated",
+                    "Wobbling or incoordination (ataxia)",
+                    "Disorientation or confusion",
+                    "Lethargy or depression",
+                    "Vomiting",
+                    "Diarrhea",
+                    "Abdominal pain",
+                    "Drooling",
+                    "Tremors",
+                    "Low body temperature (hypothermia)",
+                    "Low blood sugar (weakness, trembling)",
+                    "Difficulty breathing (rare, severe cases)",
+                    "Seizures (rare)"
+                ],
+                speciesRisks: [
+                    SpeciesRisk(species: .dog, severity: .moderate, notes: "Methanol causes alcohol-like intoxication. Signs typically appear within 30-60 minutes. Prognosis is generally good with prompt veterinary care. Does NOT cause blindness or kidney failure like ethylene glycol antifreeze."),
+                    SpeciesRisk(species: .cat, severity: .moderate, notes: "Similar to dogs — causes intoxication symptoms. Cats may be exposed by grooming washer fluid residue from fur. If no signs within 60 minutes of exposure, significant problems are unlikely."),
+                    SpeciesRisk(species: .smallMammal, severity: .moderate, notes: "Small body size means even small exposures can cause symptoms. Seek veterinary care for any suspected ingestion."),
+                    SpeciesRisk(species: .bird, severity: .moderate, notes: "Birds may be affected by both ingestion and inhalation of methanol fumes. Keep birds away from areas where washer fluid is used or stored.")
+                ],
+                preventionTips: [
+                    "Store windshield washer fluid in sealed containers out of pet's reach",
+                    "Clean up spills immediately — do not leave puddles accessible to pets",
+                    "Keep pets away when refilling your vehicle's washer fluid reservoir",
+                    "Do not leave open containers in garages or driveways",
+                    "Rinse empty washer fluid containers before recycling",
+                    "Store gas line antifreeze (HEET) and similar products securely",
+                    "Keep model airplane fuel and canned heat fuels away from pets",
+                    "Be aware that washer fluid may pool under parked vehicles in cold weather"
+                ],
+                sources: ["VIN Toxicology Resources — Methanol Toxicosis", "Pet Poison Helpline — Windshield Wiper Fluid", "Pet Poison Helpline — Methanol Poisoning in Dogs and Cats", "American College of Veterinary Pharmacists — Methanol"]
             )
         ]
     }
