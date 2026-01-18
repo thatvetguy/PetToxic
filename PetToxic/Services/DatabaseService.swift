@@ -2746,6 +2746,57 @@ class DatabaseService {
                     "If your pet eats ANY part of this plant, seek emergency veterinary care IMMEDIATELY — do not wait for symptoms"
                 ],
                 sources: ["Veterinary Information Network (VIN)", "ASPCA Animal Poison Control Center", "Pet Poison Helpline", "Colorado State University Guide to Poisonous Plants"]
+            ),
+
+            // MARK: - Antifreeze / Ethylene Glycol
+            ToxicItem(
+                id: UUID(),
+                name: "Antifreeze & Coolant (Ethylene Glycol)",
+                alternateNames: ["antifreeze", "engine coolant", "radiator fluid", "radiator coolant", "ethylene glycol", "EG", "car coolant", "automotive coolant", "vehicle coolant", "coolant poisoning", "antifreeze poisoning", "radiator poisoning", "de-icer", "aircraft de-icer", "windshield de-icer", "brake fluid", "hydraulic brake fluid", "snow globe liquid", "snow globe fluid", "toilet winterizer", "RV antifreeze", "winterizing fluid", "heat exchanger fluid", "solar panel fluid", "portable basketball hoop base", "rust remover", "Prestone", "Peak antifreeze", "Zerex", "green antifreeze", "orange antifreeze", "pink antifreeze", "Dex-Cool"],
+                categories: [.garageAutomotive],
+                imageAsset: "antifreeze_container",
+                description: "Ethylene glycol is the primary toxic ingredient in most automotive antifreeze and engine coolant products. It is also found in certain brake fluids, aircraft de-icers, heat exchangers, home solar thermal units, toilet winterizing treatments, some fire extinguishers, portable basketball hoop bases, rust removers, and even snow globes. Antifreeze products are typically bright green, orange, or pink in color.\n\nContrary to popular belief, studies have shown that animals are not actually attracted to the sweet taste of ethylene glycol—toxicosis typically occurs when pets encounter spills, open containers, or leaking vehicles. Many modern antifreeze products contain a bitter additive to discourage ingestion, and some 'pet-safer' products use propylene glycol instead, which is significantly less toxic.\n\n**Important:** Many antifreeze products contain a fluorescent dye (used to detect engine leaks). If you suspect your pet has ingested antifreeze, a black light may reveal fluorescent residue around the mouth or on vomit, which can help confirm exposure. However, do not delay seeking veterinary care to perform this check.",
+                toxicityInfo: "Ethylene glycol itself causes gastrointestinal irritation and acts as a central nervous system depressant. However, its severe—often fatal—effects result from toxic metabolites produced when the liver breaks down the compound. These metabolites cause profound metabolic acidosis and form calcium oxalate crystals that deposit in the kidneys, causing severe acute kidney failure. Crystals can also form in the brain, heart, and blood vessels.\n\nEthylene glycol toxicosis progresses through three overlapping stages:\n\n**Stage 1 — \"Inebriation\" (30 minutes to 12 hours):** Pets appear \"drunk\" with wobbling, disorientation, and depression. Vomiting, excessive thirst, and urination are common. This stage can be mistaken for alcohol intoxication.\n\n**Stage 2 — Metabolic Crisis (12-24 hours):** Dogs may briefly appear to improve before rapid deterioration. Cats typically remain depressed and progress directly to Stage 3. Severe metabolic acidosis develops, causing rapid breathing, weakness, and cardiovascular effects.\n\n**Stage 3 — Kidney Failure (24-72 hours in dogs; as early as 12 hours in cats):** The kidneys shut down, urine production stops, and uremic signs develop. By this stage, prognosis is extremely poor.\n\n**Cats are especially vulnerable** — they can progress to irreversible kidney failure within 12-24 hours of ingestion. The mortality rate for untreated cats approaches 100%.\n\n⚠️ **THIS IS A VETERINARY EMERGENCY.** Treatment is most effective when started within hours of ingestion—before kidney damage occurs. If you suspect ANY exposure to antifreeze, seek emergency veterinary care immediately. Do not wait for symptoms to appear.",
+                onsetTime: OnsetTime(
+                    early: "30 minutes to 3 hours — CNS depression, wobbling, vomiting, excessive thirst/urination",
+                    delayed: "12-72 hours — Kidney failure develops; cats can reach this stage within 12 hours"
+                ),
+                symptoms: [
+                    "Appearing 'drunk' or intoxicated",
+                    "Wobbling, stumbling, loss of coordination (ataxia)",
+                    "Disorientation or confusion",
+                    "Lethargy or depression",
+                    "Nausea and vomiting",
+                    "Excessive thirst (polydipsia)",
+                    "Excessive urination followed by decreased/no urination",
+                    "Drooling or hypersalivation",
+                    "Rapid breathing (tachypnea)",
+                    "Rapid heart rate",
+                    "Muscle twitching or tremors",
+                    "Weakness or collapse",
+                    "Seizures",
+                    "Coma",
+                    "Sudden death"
+                ],
+                speciesRisks: [
+                    SpeciesRisk(species: .dog, severity: .severe, notes: "Mortality rate of 59-70% even with treatment. Dogs may appear to briefly improve before rapid deterioration. Kidney failure typically develops 24-72 hours after ingestion."),
+                    SpeciesRisk(species: .cat, severity: .severe, notes: "EXTREMELY DANGEROUS — mortality rate approaches 96-100%. Cats are more sensitive than dogs and can develop irreversible kidney failure within 12-24 hours. Any suspected exposure requires immediate emergency care."),
+                    SpeciesRisk(species: .smallMammal, severity: .severe, notes: "Small body size makes even tiny amounts potentially lethal. Seek immediate veterinary care for any suspected exposure."),
+                    SpeciesRisk(species: .bird, severity: .severe, notes: "Birds are highly susceptible due to small body size and rapid metabolism. Any exposure should be treated as an emergency.")
+                ],
+                preventionTips: [
+                    "Clean up any antifreeze spills immediately and thoroughly",
+                    "Check vehicles regularly for coolant leaks, including under parked cars",
+                    "Store antifreeze in clearly labeled, sealed containers in locked cabinets",
+                    "Never leave antifreeze containers open or unattended",
+                    "Keep pets away from garages and driveways when working on vehicles",
+                    "Consider using 'pet-safer' antifreeze products containing propylene glycol instead of ethylene glycol",
+                    "Check snow machines, ATVs, and recreational vehicles for leaks",
+                    "Be aware that snow globes contain ethylene glycol — keep out of pet's reach",
+                    "When winterizing RVs or toilets, prevent pet access to treated areas",
+                    "Note: Fully dried antifreeze spills pose minimal risk, but wet spills are extremely dangerous"
+                ],
+                sources: ["VIN Toxicology Resources — Ethylene Glycol Toxicosis", "ASPCA Animal Poison Control Center", "Pet Poison Helpline — Antifreeze Poisoning", "Merck Veterinary Manual — Ethylene Glycol Toxicosis"]
             )
         ]
     }
