@@ -2482,6 +2482,142 @@ class DatabaseService {
                     "Learn to identify bittersweet nightshade, which may grow as a weed in gardens and wooded areas"
                 ],
                 sources: ["ASPCA Animal Poison Control Center", "Pet Poison Helpline", "Veterinary Information Network (VIN)", "Cornell University Poisonous Plants Database", "USDA Plant Database"]
+            ),
+
+            // MARK: - Daphne
+            ToxicItem(
+                id: UUID(),
+                name: "Daphne",
+                alternateNames: ["Daphne mezereum", "mezereum", "mezereon", "February daphne", "spurge laurel", "Daphne laureola", "spurge flax", "spurge olive", "dwarf bay", "dwarf laurel", "lady laurel", "paradise plant", "wild pepper", "winter daphne", "Daphne odora", "garland daphne", "rose daphne", "Daphne cneorum", "copse laurel", "flax olive", "olive spurge"],
+                categories: [.plants],
+                imageAsset: "daphne_berries",
+                description: "Daphne is a genus of about 70-95 species of fragrant, flowering shrubs in the family Thymelaeaceae, native to Europe, Asia, and North Africa. They are prized for their sweetly scented flowers that bloom in late winter to early spring, and their attractive red berries. Common species include February daphne (Daphne mezereum), spurge laurel (Daphne laureola), winter daphne (Daphne odora), and rose daphne (Daphne cneorum). Despite their ornamental appeal, all parts of daphne plants are highly toxic to humans, dogs, cats, and other animals.",
+                toxicityInfo: "Daphne plants contain potent diterpene toxins, primarily mezerein and daphnin (a glycoside), as well as prostratin (a diterpene acetate). These compounds are found throughout the plant but are most concentrated in the berries and bark.\n\nThe toxins cause severe irritation and vesication (blistering) of the mucous membranes. When ingested, they produce intense burning and swelling of the lips, mouth, tongue, and throat — often described as a 'scalding' sensation. This progresses to severe gastrointestinal damage with vomiting, abdominal pain, and bloody diarrhea. The hemorrhagic diarrhea results from direct irritation and ulceration of the GI tract lining.\n\nFortunately, the extremely bitter taste of daphne usually prevents animals from consuming large quantities. However, only a few berries can be dangerous — in children, as few as 10-12 berries have been reported to cause fatal poisoning.\n\nSevere poisoning (rare due to bitter taste) can progress to weakness, seizures, kidney inflammation, liver damage, coma, and death. Additionally, skin or eye contact with daphne sap can cause blistering, redness, and severe irritation — wear gloves when handling these plants.",
+                onsetTime: OnsetTime(
+                    early: "Oral pain, burning, and swelling begin within minutes of chewing. GI signs (vomiting, diarrhea) typically appear within 1-2 hours.",
+                    delayed: "Bloody diarrhea may develop over several hours. Severe systemic effects (seizures, organ damage) are rare but can develop within 12-24 hours in cases of large ingestion."
+                ),
+                symptoms: [
+                    "Intense burning sensation in mouth and throat",
+                    "Swelling of the lips, tongue, and oral cavity (vesication/blistering)",
+                    "Excessive drooling (hypersalivation)",
+                    "Difficulty swallowing (dysphagia)",
+                    "Extreme thirst",
+                    "Vomiting",
+                    "Severe abdominal pain",
+                    "Diarrhea (may be bloody/hemorrhagic)",
+                    "Weakness",
+                    "Lethargy or depression",
+                    "Seizures (severe cases)",
+                    "Irregular heartbeat (rare)",
+                    "Skin blistering (with dermal contact)",
+                    "Eye irritation and pain (with ocular exposure)"
+                ],
+                speciesRisks: [
+                    SpeciesRisk(species: .dog, severity: .high, notes: "All parts are toxic; berries are most dangerous; bitter taste usually limits ingestion but even a few berries can cause serious illness; hemorrhagic diarrhea is a hallmark sign"),
+                    SpeciesRisk(species: .cat, severity: .high, notes: "Same concerns as dogs; cats may be attracted to the plant's fragrant flowers"),
+                    SpeciesRisk(species: .bird, severity: .severe, notes: "Small body size makes birds extremely vulnerable; berries may be attractive to caged birds if accessible")
+                ],
+                preventionTips: [
+                    "Consider removing daphne plants from areas where pets have unsupervised access — the berries are particularly attractive and dangerous",
+                    "If keeping daphne in your garden, fence off the area or place plants where pets cannot reach",
+                    "Wear gloves when pruning or handling daphne plants — the sap can cause skin blistering",
+                    "Be aware that daphne blooms in late winter/early spring when pets may be more active outdoors",
+                    "Teach children not to eat any berries from garden plants",
+                    "If your pet shows signs of oral pain or bloody diarrhea after being in the garden, seek veterinary care immediately"
+                ],
+                sources: ["Veterinary Information Network (VIN)", "Pet Poison Helpline", "ASPCA Animal Poison Control Center", "Animal Poisons Helpline (Australia)"]
+            ),
+
+            // MARK: - Chinaberry Tree
+            ToxicItem(
+                id: UUID(),
+                name: "Chinaberry Tree",
+                alternateNames: ["Melia azedarach", "chinaberry", "china berry", "Texas umbrella tree", "Texas umbrella", "umbrella tree", "bead tree", "China ball tree", "paradise tree", "Persian lilac", "Indian lilac", "white cedar", "pride of India", "pride-of-India", "China tree", "Chinese umbrella", "hoop tree", "cape lilac", "cape syringa", "Japanese bead tree", "chinaberry berries"],
+                categories: [.plants],
+                imageAsset: "chinaberry_tree_berries",
+                description: "The chinaberry tree (Melia azedarach) is a deciduous tree in the mahogany family, native to Asia and Australia. It was introduced to North America in the early 1800s as an ornamental and is now considered an invasive species in many southern states. The tree produces fragrant purple flowers in spring followed by yellow, berry-like fruits (drupes) that persist through winter. Dogs appear to be particularly susceptible to chinaberry poisoning, and fatalities have been documented.",
+                toxicityInfo: "Chinaberry trees contain tetranortriterpene neurotoxins called meliatoxins (A1, A2, B1, and B2). These toxins are concentrated in the ripe fruit (berries) but are also present in the bark, leaves, and flowers. The meliatoxins act as both enterotoxins (affecting the GI tract) and neurotoxins (affecting the nervous system).\n\n**Clinical progression:** Poisoning typically begins with gastrointestinal signs — drooling, vomiting, and diarrhea — within hours of ingestion. If sufficient berries are consumed, neurological signs follow: ataxia (incoordination), mental confusion, weakness, and in severe cases, seizures. Dogs appear particularly susceptible to fatal poisoning, with multiple case reports documenting death within 24-36 hours despite treatment.\n\n**Toxicity variability:** The toxicity of chinaberry berries varies significantly by geographic location and climate. Some trees may produce more toxic fruit than others. This unpredictability makes all exposures potentially serious.\n\n**Critical note:** The meliatoxin in chinaberry fruit is often fatal within 24 hours without aggressive supportive care. Early veterinary intervention is essential for the best chance of survival.\n\nDo not confuse with the neem tree (Azadirachta indica), which is related but much less toxic.",
+                onsetTime: OnsetTime(
+                    early: "GI signs (drooling, vomiting, diarrhea) typically appear within 2-4 hours of ingestion. Neurological signs may develop within several hours.",
+                    delayed: "Severe cases may progress to seizures, respiratory depression, and death within 24-36 hours. Survivors may show signs for 1-2 days."
+                ),
+                symptoms: [
+                    "Excessive drooling (hypersalivation)",
+                    "Vomiting",
+                    "Diarrhea",
+                    "Faintness or weakness",
+                    "Loss of appetite",
+                    "Abdominal pain",
+                    "Incoordination (ataxia)",
+                    "Mental confusion or disorientation",
+                    "Depression or lethargy",
+                    "Tremors",
+                    "Seizures",
+                    "Respiratory depression (labored breathing)",
+                    "Paralysis (severe cases)",
+                    "Collapse"
+                ],
+                speciesRisks: [
+                    SpeciesRisk(species: .dog, severity: .severe, notes: "Dogs are particularly susceptible to fatal chinaberry poisoning; multiple documented fatalities within 24-36 hours; ALL chinaberry ingestions should be treated as emergencies"),
+                    SpeciesRisk(species: .cat, severity: .high, notes: "Similar toxicity concerns as dogs; cats are less likely to consume fallen berries but should be monitored if exposure occurs"),
+                    SpeciesRisk(species: .bird, severity: .moderate, notes: "Some birds appear more resistant to chinaberry toxicity and may spread seeds; pet birds should still be kept away from these trees")
+                ],
+                preventionTips: [
+                    "If you have a chinaberry tree in your yard, consider removing it — especially if you have dogs",
+                    "At minimum, fence off the area under chinaberry trees to prevent pets from accessing fallen berries",
+                    "Regularly rake up fallen berries, particularly in late summer and fall when fruit is abundant",
+                    "Be aware that chinaberry is invasive and may volunteer in yards where it wasn't planted",
+                    "If your dog eats chinaberry berries, contact your veterinarian immediately — do not wait for symptoms to develop",
+                    "Bring a sample of the berries or a photo of the tree to help your veterinarian identify the exposure"
+                ],
+                sources: ["ASPCA Animal Poison Control Center", "Pet Poison Helpline", "Veterinary Information Network (VIN)", "IVIS - Guide to Poisonous House and Garden Plants", "Clinical Veterinary Toxicology (Plumlee)"]
+            ),
+
+            // MARK: - Rosary Pea
+            ToxicItem(
+                id: UUID(),
+                name: "Rosary Pea",
+                alternateNames: ["Abrus precatorius", "jequirity bean", "jequirity pea", "precatory bean", "crab's eye", "crab's eye vine", "love bean", "lucky bean", "prayer beads", "rosary beads", "Indian licorice", "gidee-gidee", "jumbie bead", "red bead vine", "weather plant", "abrus", "abrin"],
+                categories: [.plants],
+                imageAsset: "rosary_pea_seeds",
+                description: "Rosary pea (Abrus precatorius) is a tropical climbing vine in the legume family, native to India and tropical Asia. It has spread to warm regions worldwide including Florida, Hawaii, and the Caribbean, where it is considered an invasive species. The plant is infamous for its strikingly beautiful seeds — small, shiny, bright red with a black spot at one end — which have historically been used in jewelry, rosaries, and musical instruments. These attractive seeds contain one of the most potent plant toxins known: abrin, which is chemically similar to ricin from castor beans.",
+                toxicityInfo: "Rosary pea seeds contain abrin, an extremely toxic protein (toxalbumin or lectin) that is one of the most poisonous naturally occurring substances known. Abrin works by stopping protein synthesis in cells, leading to cell death. Rapidly dividing cells — such as those lining the gastrointestinal tract — are most severely affected.\n\n**Critical safety feature:** The abrin is contained within the seed's hard outer coat. Intact seeds that are swallowed whole typically pass through the digestive system without releasing the toxin. However, if the seed coat is broken (by chewing, drilling, or damage), the abrin is released and can cause fatal poisoning.\n\n**Toxicity level:** Abrin is approximately 3-4 times more toxic than ricin. In theory, a single well-chewed seed can be lethal to an adult human. The estimated lethal dose is 0.1-1 microgram of abrin per kilogram of body weight.\n\n**There is NO ANTIDOTE for abrin poisoning.** Treatment is entirely supportive.\n\n**Clinical syndrome:** Symptoms may be delayed 1-3 days after ingestion. Severe hemorrhagic gastroenteritis develops, with bloody vomiting and diarrhea leading to severe dehydration. Multi-organ failure (liver, kidneys) can follow. Death typically results from circulatory collapse.\n\n**Important note:** Rosary pea seeds are sometimes used in imported jewelry, toys, and crafts. Be cautious about foreign-made beaded items — they may contain these deadly seeds.",
+                onsetTime: OnsetTime(
+                    early: "Symptoms may be delayed; GI signs (nausea, vomiting, abdominal pain, diarrhea) typically begin within hours but can be delayed up to 1-3 days after ingestion of chewed/broken seeds.",
+                    delayed: "Hemorrhagic diarrhea and systemic effects (fever, tremors, organ failure) develop over 1-3 days. Death, if it occurs, typically happens within 3-5 days due to multi-organ failure."
+                ),
+                symptoms: [
+                    "Nausea",
+                    "Severe vomiting",
+                    "Severe abdominal pain",
+                    "Diarrhea (may become bloody/hemorrhagic)",
+                    "Excessive drooling",
+                    "Dehydration (from fluid loss)",
+                    "Weakness",
+                    "Tremors",
+                    "Rapid heart rate (tachycardia)",
+                    "Fever",
+                    "Lethargy progressing to unresponsiveness",
+                    "Seizures (severe cases)",
+                    "Bleeding from eyes, gums, or other sites (severe cases)",
+                    "Shock",
+                    "Multi-organ failure (liver, kidneys)"
+                ],
+                speciesRisks: [
+                    SpeciesRisk(species: .dog, severity: .severe, notes: "EXTREMELY TOXIC if seeds are chewed; intact seeds may pass without harm but ANY suspected ingestion should be treated as an emergency; NO ANTIDOTE exists"),
+                    SpeciesRisk(species: .cat, severity: .severe, notes: "Same extreme toxicity as dogs; cats may encounter seeds if brought into the home as jewelry or crafts"),
+                    SpeciesRisk(species: .bird, severity: .severe, notes: "Wild birds appear immune and spread the seeds, but pet birds are likely susceptible; the attractive red seeds may be appealing to caged birds")
+                ],
+                preventionTips: [
+                    "Learn to identify rosary pea vines if you live in warm climates (Florida, Hawaii, Caribbean, Gulf Coast) — the distinctive red and black seeds are unmistakable",
+                    "Remove rosary pea vines from your property — wear gloves and do not burn the plant",
+                    "Be extremely cautious about foreign-made beaded jewelry, toys, and crafts — they may contain rosary pea seeds",
+                    "Do not allow children to play with or wear jewelry made from natural seeds unless you can confirm they are not rosary peas",
+                    "If your pet is exposed to rosary pea seeds, contact your veterinarian or poison control immediately — even if the seeds appear intact",
+                    "Time is critical: early decontamination (inducing vomiting, activated charcoal) offers the best chance of preventing absorption"
+                ],
+                sources: ["ASPCA Animal Poison Control Center", "National Poison Control Center (Poison.org)", "IVIS - Guide to Poisonous House and Garden Plants", "Veterinary Information Network (VIN)", "International Programme on Chemical Safety (INCHEM)"]
             )
         ]
     }
