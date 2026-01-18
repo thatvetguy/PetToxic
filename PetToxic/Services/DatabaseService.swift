@@ -2949,6 +2949,54 @@ class DatabaseService {
                     "Consider lead test kits (available at home improvement stores) for paint in older buildings"
                 ],
                 sources: ["VIN Toxicology Resources — Lead Toxicosis", "ASPCA Animal Poison Control Center — Lead Toxicosis", "Veterinary Partner (VIN) — Lead Poisoning in Dogs and Cats", "VCA Animal Hospitals — Paint and Varnish Poison Alert"]
+            ),
+
+            // MARK: - Anticoagulant Rodenticides
+            ToxicItem(
+                id: UUID(),
+                name: "Anticoagulant Rodenticides",
+                alternateNames: ["rat poison", "mouse poison", "rodent bait", "warfarin", "brodifacoum", "bromadiolone", "difethialone", "difenacoum", "diphacinone", "chlorophacinone", "D-Con", "d-CON", "Havoc", "Jaguar", "Just One Bite", "Tomcat", "Boot Hill", "Maki", "Hawk", "Enforcer", "superwarfarin", "anticoagulant bait", "blood thinner poison", "coumarin rodenticide", "indandione rodenticide"],
+                categories: [.garageAutomotive],
+                imageAsset: "anticoagulant_rodenticide",
+                description: "Anticoagulant rodenticides are the most common type of rat and mouse poison. They work by preventing blood from clotting, leading to internal bleeding. These products come in pellets, blocks, and bars, often dyed green or blue—but color and shape do NOT indicate the active ingredient. There are two generations: first-generation (warfarin, diphacinone, chlorophacinone) require multiple feedings to kill rodents, while second-generation 'superwarfarins' (brodifacoum, bromadiolone, difethialone) are lethal after a single feeding and remain in the body much longer. Dogs are more commonly poisoned than cats.",
+                toxicityInfo: "Anticoagulant rodenticides inhibit vitamin K recycling in the liver, which prevents the body from producing essential blood clotting factors (II, VII, IX, X). As existing clotting factors become depleted over 1-2 days, the animal loses the ability to control bleeding. Unlike other rodenticide types, an antidote (vitamin K1) is available, and survival rates with prompt treatment are excellent. Secondary poisoning from eating a single poisoned rodent is unlikely, but animals that regularly consume poisoned rodents (such as barn cats) may be at risk.",
+                onsetTime: OnsetTime(
+                    early: "No signs typically appear in the first 1-3 days—the animal may appear completely normal",
+                    delayed: "Bleeding signs develop 3-7 days after ingestion once clotting factors are depleted"
+                ),
+                symptoms: [
+                    "Lethargy or weakness",
+                    "Pale gums",
+                    "Exercise intolerance",
+                    "Difficulty breathing",
+                    "Coughing (may produce blood)",
+                    "Nosebleeds (epistaxis)",
+                    "Bleeding from gums or mouth",
+                    "Bloody or dark tarry stool",
+                    "Blood in urine",
+                    "Bruising or swelling under skin",
+                    "Distended abdomen",
+                    "Lameness or joint swelling",
+                    "Collapse",
+                    "Sudden death (if bleeding occurs in critical areas)"
+                ],
+                speciesRisks: [
+                    SpeciesRisk(species: .dog, severity: .high, notes: "Most commonly affected species; second-generation products remain in the body for 3-4 weeks requiring prolonged treatment"),
+                    SpeciesRisk(species: .cat, severity: .high, notes: "Less commonly exposed than dogs but equally susceptible; outdoor cats hunting poisoned rodents may have cumulative exposure"),
+                    SpeciesRisk(species: .smallMammal, severity: .high, notes: "Highly susceptible; small body size means even small amounts can be toxic"),
+                    SpeciesRisk(species: .bird, severity: .high, notes: "All birds are susceptible; raptors and scavengers at risk from secondary poisoning"),
+                    SpeciesRisk(species: .reptile, severity: .high, notes: "Susceptible; limited data available but bleeding complications expected")
+                ],
+                preventionTips: [
+                    "Use tamper-resistant bait stations if rodenticides must be used",
+                    "Place bait in areas completely inaccessible to pets",
+                    "Keep ALL packaging—the product appearance does NOT indicate the active ingredient",
+                    "Write down the exact product name, active ingredient, and amount placed",
+                    "Check bait stations regularly to ensure bait hasn't been moved or accessed",
+                    "Consider pet-safe alternatives like snap traps or electronic traps",
+                    "If you suspect ingestion, contact a veterinarian immediately—do not wait for symptoms"
+                ],
+                sources: ["VIN Toxicology Resources", "ASPCA Animal Poison Control Center", "Merck Veterinary Manual — Anticoagulant Rodenticide Poisoning", "Pet Poison Helpline", "Veterinary Partner (VIN)"]
             )
         ]
     }
