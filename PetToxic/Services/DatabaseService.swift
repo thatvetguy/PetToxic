@@ -2997,6 +2997,55 @@ class DatabaseService {
                     "If you suspect ingestion, contact a veterinarian immediately—do not wait for symptoms"
                 ],
                 sources: ["VIN Toxicology Resources", "ASPCA Animal Poison Control Center", "Merck Veterinary Manual — Anticoagulant Rodenticide Poisoning", "Pet Poison Helpline", "Veterinary Partner (VIN)"]
+            ),
+
+            // MARK: - Bromethalin
+            ToxicItem(
+                id: UUID(),
+                name: "Bromethalin",
+                alternateNames: ["bromethalin rodenticide", "neurotoxic rodenticide", "Tomcat", "Fastrac", "Talpirid", "Assault", "Vengeance", "Top Gun", "Gunslinger", "rat poison", "mouse poison", "mole bait", "mole poison"],
+                categories: [.garageAutomotive],
+                imageAsset: "bromethalin",
+                description: "Bromethalin is a neurotoxic rodenticide that causes fatal brain swelling (cerebral edema). It has become the most common rodenticide in consumer products since EPA restrictions on anticoagulant rodenticides. Bromethalin is available as blocks, bars, pellets, and worm-shaped baits for moles. It is frequently confused with anticoagulant rodenticides that have similar-sounding names (brodifacoum, bromadiolone)—but bromethalin works completely differently and has NO ANTIDOTE. Color, size, and shape of the bait do NOT indicate the active ingredient. The European Union banned bromethalin in 2010.",
+                toxicityInfo: "Bromethalin stops energy production in brain cells by uncoupling oxidative phosphorylation in mitochondria. Without energy, the brain cannot control water balance in neurons, leading to swelling of the brain and spinal cord. The poison is converted in the liver to an even more toxic form (desmethylbromethalin). Cats are extremely sensitive—approximately 5-10 times more sensitive than dogs. Puppies, ferrets, and potbellied pigs are also highly sensitive. Unlike anticoagulant rodenticides, there is NO ANTIDOTE for bromethalin. Relay toxicity (poisoning from eating a poisoned rodent) is unlikely because of the relatively high amounts needed to cause toxicosis.",
+                onsetTime: OnsetTime(
+                    early: "High doses: severe signs within 2-24 hours (convulsant syndrome)",
+                    delayed: "Lower doses: signs develop over 1-5 days and progress over 1-2 weeks (paralytic syndrome)"
+                ),
+                symptoms: [
+                    "Loss of appetite",
+                    "Lethargy or depression",
+                    "Vomiting",
+                    "Hind leg weakness progressing to paralysis",
+                    "Unsteady gait (ataxia)",
+                    "Muscle tremors",
+                    "Hyperexcitability or agitation",
+                    "Hypersensitivity to touch or sound",
+                    "Abnormal eye movements (nystagmus)",
+                    "Unequal pupil size (anisocoria)",
+                    "Head pressing",
+                    "Abnormal body posturing",
+                    "Seizures",
+                    "Coma",
+                    "Sudden death (with high doses)"
+                ],
+                speciesRisks: [
+                    SpeciesRisk(species: .dog, severity: .severe, notes: "Two syndromes possible: rapid convulsant form (high dose) or delayed paralytic form (lower dose); puppies more sensitive than adults"),
+                    SpeciesRisk(species: .cat, severity: .severe, notes: "EXTREMELY sensitive—approximately 5-10 times more sensitive than dogs; typically develop paralytic syndrome regardless of dose"),
+                    SpeciesRisk(species: .smallMammal, severity: .severe, notes: "Ferrets highly sensitive; guinea pigs uniquely resistant due to differences in metabolism"),
+                    SpeciesRisk(species: .bird, severity: .severe, notes: "Susceptible; limited data available"),
+                    SpeciesRisk(species: .reptile, severity: .severe, notes: "Susceptible; limited data available")
+                ],
+                preventionTips: [
+                    "Avoid using bromethalin products if pets are in the household—there is NO ANTIDOTE",
+                    "Keep ALL packaging—bromethalin is often confused with anticoagulant rodenticides",
+                    "Do not rely on bait appearance to identify the active ingredient",
+                    "Use tamper-resistant bait stations if rodenticides must be used",
+                    "Consider safer alternatives like snap traps or electronic traps",
+                    "If ingestion is suspected, contact a veterinarian IMMEDIATELY—early decontamination is critical",
+                    "Do NOT wait for symptoms to develop—once severe signs appear, the outcome is often poor"
+                ],
+                sources: ["VIN Toxicology Resources", "ASPCA Animal Poison Control Center", "Merck Veterinary Manual — Bromethalin Poisoning in Animals", "Pet Poison Helpline", "VCA Animal Hospitals"]
             )
         ]
     }
