@@ -3096,6 +3096,55 @@ class DatabaseService {
                     "Do not rely on bait appearance to identify the product"
                 ],
                 sources: ["VIN Toxicology Resources", "ASPCA Animal Poison Control Center", "Merck Veterinary Manual — Cholecalciferol Poisoning in Animals", "Pet Poison Helpline", "VCA Animal Hospitals", "Purdue University College of Veterinary Medicine"]
+            ),
+
+            // MARK: - Vitamin D Overdose (Supplements & Medications)
+            ToxicItem(
+                id: UUID(),
+                name: "Vitamin D Overdose (Supplements & Medications)",
+                alternateNames: ["vitamin D toxicity", "vitamin D3 overdose", "vitamin D2 overdose", "cholecalciferol overdose", "ergocalciferol overdose", "vitamin D supplements", "vitamin D3 supplements", "calcipotriene", "calcipotriol", "tacalcitol", "calcitriol", "Dovonex", "Taclonex", "Sorilux", "Enstilar", "Wynzora", "Rocaltrol", "Vectical", "psoriasis cream", "dog ate vitamins", "pet ate supplements"],
+                categories: [.humanMedications],
+                imageAsset: "vitamin_d_overdose",
+                description: "Vitamin D toxicity occurs when pets ingest human vitamin D supplements or topical medications containing vitamin D analogues. Most standard multivitamins contain low amounts of vitamin D (100-400 IU) and pose minimal risk unless a very small dog eats a large quantity. However, high-dose vitamin D3 supplements (5,000-50,000 IU per capsule) have become increasingly popular and can cause serious toxicity if multiple capsules are ingested. Topical psoriasis medications containing calcipotriene (Dovonex, Taclonex, Enstilar) or tacalcitol are also dangerous—dogs can be poisoned by licking the cream from a person's skin or directly from the tube. Vitamin D2 (ergocalciferol, from plants) has a wider margin of safety than vitamin D3 (cholecalciferol, from animals).",
+                toxicityInfo: "Vitamin D increases calcium absorption from the gut and bones while decreasing excretion through the kidneys. Excessive vitamin D causes dangerously high blood calcium (hypercalcemia) and phosphorus levels, leading to mineralization (calcium deposits) in kidneys, heart, blood vessels, and other soft tissues. Kidney failure is the most serious consequence. Vitamin D and its metabolites are fat-soluble and stored in body fat, so effects can persist for weeks to months. There is NO ANTIDOTE—treatment focuses on lowering calcium levels and may require weeks of monitoring. For vitamin D toxicity from rodenticides, see the separate 'Cholecalciferol Rodenticide' entry.",
+                onsetTime: OnsetTime(
+                    early: "Increased thirst and urination may appear within 12-24 hours",
+                    delayed: "Kidney damage and severe signs typically develop 1-3 days after ingestion"
+                ),
+                symptoms: [
+                    "Increased thirst (polydipsia)",
+                    "Increased urination (polyuria)",
+                    "Loss of appetite",
+                    "Lethargy and weakness",
+                    "Vomiting",
+                    "Constipation or diarrhea",
+                    "Bloody vomit (hematemesis)",
+                    "Dark or bloody stool (melena)",
+                    "Drooling",
+                    "Abdominal pain",
+                    "Uremic breath (ammonia odor)",
+                    "Oral ulcers",
+                    "Hind leg weakness",
+                    "Difficulty breathing",
+                    "Decreased or absent urination (in kidney failure)",
+                    "Seizures (severe cases)"
+                ],
+                speciesRisks: [
+                    SpeciesRisk(species: .dog, severity: .high, notes: "Severity depends on product and amount; standard multivitamins are low risk, but high-dose D3 supplements (5,000+ IU) or psoriasis creams can cause severe toxicity"),
+                    SpeciesRisk(species: .cat, severity: .high, notes: "Equally susceptible to vitamin D toxicity; cats may lick psoriasis cream from owners' skin"),
+                    SpeciesRisk(species: .smallMammal, severity: .high, notes: "Small body size increases risk from even small amounts"),
+                    SpeciesRisk(species: .bird, severity: .high, notes: "Susceptible; limited data available"),
+                    SpeciesRisk(species: .reptile, severity: .high, notes: "Susceptible; note that reptiles have specific vitamin D requirements for calcium metabolism")
+                ],
+                preventionTips: [
+                    "Store all vitamin supplements in secure, pet-proof containers",
+                    "Keep high-dose vitamin D3 supplements (5,000+ IU) in closed cabinets",
+                    "Do not leave supplement bottles within pet reach—dogs may chew through plastic",
+                    "If using psoriasis cream (Dovonex, Taclonex, etc.), cover treated areas or keep pets away until cream is absorbed",
+                    "Store topical medication tubes securely—small amounts can be toxic if a pet chews the tube",
+                    "If ingestion is suspected, note the product name and strength, and contact a veterinarian immediately"
+                ],
+                sources: ["VIN Toxicology Resources", "ASPCA Animal Poison Control Center", "Merck Veterinary Manual — Cholecalciferol Poisoning in Animals", "Pet Poison Helpline", "VCA Animal Hospitals"]
             )
         ]
     }
