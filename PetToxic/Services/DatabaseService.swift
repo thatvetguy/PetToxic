@@ -6589,6 +6589,186 @@ class DatabaseService {
                     "dvm360: Opioid and Tramadol Use in Outpatients — What Are Reasonable Choices"
                 ],
                 relatedEntries: ["bb223344-5566-7788-99aa-bbccddeeff11", "dd445566-7788-99aa-bbcc-ddeeff334455"]
+            ),
+
+            // MARK: - ADHD Medications (Amphetamines & Stimulants)
+            ToxicItem(
+                id: UUID(uuidString: "11889900-aabb-ccdd-eeff-112233445566")!,
+                name: "ADHD Medications (Amphetamines & Stimulants)",
+                alternateNames: [
+                    // General terms
+                    "ADHD medication",
+                    "ADHD medicine",
+                    "ADD medication",
+                    "attention deficit medication",
+                    "stimulant medication",
+                    "amphetamine",
+                    "amphetamines",
+
+                    // AMPHETAMINE MIXED SALTS (most common)
+                    "Adderall",
+                    "Adderall XR",
+                    "mixed amphetamine salts",
+                    "amphetamine salts",
+
+                    // LISDEXAMFETAMINE
+                    "lisdexamfetamine",
+                    "lisdexamphetamine",
+                    "Vyvanse",
+
+                    // DEXTROAMPHETAMINE
+                    "dextroamphetamine",
+                    "Dexedrine",
+                    "Dexedrine Spansule",
+                    "Zenzedi",
+                    "ProCentra",
+
+                    // METHAMPHETAMINE (prescription)
+                    "methamphetamine",
+                    "Desoxyn",
+
+                    // METHYLPHENIDATE family
+                    "methylphenidate",
+                    "Ritalin",
+                    "Ritalin LA",
+                    "Ritalin SR",
+                    "Concerta",
+                    "Methylin",
+                    "Methylin ER",
+                    "Daytrana",
+                    "Quillivant",
+                    "Quillichew",
+                    "QuilliChew ER",
+                    "Jornay PM",
+                    "Aptensio XR",
+                    "Metadate",
+                    "Metadate CD",
+
+                    // DEXMETHYLPHENIDATE
+                    "dexmethylphenidate",
+                    "Focalin",
+                    "Focalin XR",
+
+                    // AMPHETAMINE (single entity)
+                    "Evekeo",
+                    "Dyanavel XR",
+
+                    // Illegal forms (same mechanism)
+                    "crystal meth",
+                    "ecstasy",
+                    "MDMA",
+                    "speed",
+
+                    // Common search queries
+                    "dog ate Adderall",
+                    "cat ate Adderall",
+                    "dog ate Ritalin",
+                    "dog ate Vyvanse",
+                    "cat ate Vyvanse",
+                    "dog ate Concerta",
+                    "pet ate ADHD pill",
+                    "dog got into Adderall",
+                    "cat ate stimulant"
+                ],
+                categories: [.medications],
+                imageAsset: "adhd_medications",
+                description: "ADHD medications are stimulant drugs used to treat attention deficit hyperactivity disorder. They include amphetamines (Adderall, Vyvanse, Dexedrine) and methylphenidate (Ritalin, Concerta). These drugs stimulate the central nervous system and cardiovascular system, causing potentially life-threatening toxicity in pets. Even a small amount of ADHD medication can cause serious problems in dogs and cats. These medications are among the top causes of medication poisoning in pets reported to animal poison control centers. CATS LOVE THESE DRUGS: Unlike most medications, cats find Adderall XR and Vyvanse unusually palatable and will eagerly eat entire pills or capsules. ASPCA reports that cats, which normally reject most medications after one bite, will finish every bit of these drugs. EXTENDED-RELEASE FORMULATIONS: Many ADHD medications are extended-release (XR, ER, LA, CD, SR). These cause DELAYED onset of signs (4-6 hours) but PROLONGED effects lasting 24-72 hours. Do not assume your pet is fine if no symptoms appear immediately. SEROTONIN SYNDROME: Amphetamines cause serotonin release and can trigger serotonin syndrome, especially if combined with antidepressants or other serotonergic drugs. FLAVORED FORMULATIONS: Some chewable and liquid ADHD medications contain flavorings that may include xylitol, adding additional toxicity risk.",
+                toxicityInfo: "ADHD medications work as sympathomimetic agents — they stimulate the sympathetic nervous system by releasing catecholamines (dopamine, norepinephrine, epinephrine) and blocking their reuptake. Amphetamines also release serotonin from presynaptic membranes. Central Nervous System Effects: Overstimulation causes agitation, hyperactivity, restlessness, head bobbing, tremors, mydriasis (dilated pupils), and seizures. In severe cases, hyperthermia develops secondary to muscle tremors and hyperactivity — this can be life-threatening. Cardiovascular Effects: Tachycardia (rapid heart rate), hypertension (high blood pressure), and cardiac arrhythmias can develop. These effects can lead to organ damage. Gastrointestinal Effects: Vomiting, diarrhea, and hypersalivation (drooling) are common early signs. Respiratory Effects: Panting and increased respiratory rate occur from both CNS stimulation and hyperthermia. Species Differences: Dogs typically show obvious hyperactivity — pacing, circling, inability to sit still, restlessness, vocalization. Cats may show hyperactivity OR may sit unusually still and stare for long periods. Despite appearing calm externally, internal cardiovascular effects (elevated heart rate, blood pressure, body temperature) still occur. Amphetamines vs Methylphenidate: Methylphenidate (Ritalin, Concerta) is toxic at approximately half the dose of amphetamines. Extended-release formulations of both are more dangerous than immediate-release due to prolonged drug delivery.",
+                onsetTime: OnsetTime(
+                    early: "Immediate-release formulations: Signs can develop within 15-30 minutes of ingestion. Extended-release formulations (XR, ER, LA, CD, SR): Onset may be DELAYED 4-6 hours. Do not assume your pet is unaffected if no symptoms appear immediately.",
+                    delayed: "Duration varies by formulation: Immediate-release signs typically last 12-24 hours. Extended-release signs may persist 24-72 hours. Vyvanse (lisdexamfetamine) as a prodrug may cause effects lasting up to 72 hours. Organ damage (especially kidneys) is rare but has been reported, particularly when treatment is delayed."
+                ),
+                symptoms: [
+                    // CNS - Excitation
+                    "Agitation or restlessness",
+                    "Hyperactivity",
+                    "Pacing or circling (dogs)",
+                    "Inability to sit still",
+                    "Head bobbing",
+                    "Vocalization",
+                    "Mydriasis (dilated pupils)",
+                    "Unusual stillness with staring (cats)",
+                    "Tremors",
+                    "Muscle twitching or fasciculations",
+                    "Seizures",
+                    "Aggression",
+
+                    // Cardiovascular
+                    "Tachycardia (rapid heart rate)",
+                    "Hypertension (high blood pressure)",
+                    "Cardiac arrhythmias",
+
+                    // Thermoregulation
+                    "Hyperthermia (elevated body temperature)",
+                    "Panting",
+
+                    // GI Signs
+                    "Vomiting",
+                    "Diarrhea",
+                    "Drooling (hypersalivation)",
+                    "Loss of appetite",
+
+                    // Respiratory
+                    "Increased respiratory rate",
+                    "Rapid breathing",
+
+                    // Other
+                    "Disorientation",
+                    "Collapse (severe cases)",
+                    "Death (if untreated)"
+                ],
+                speciesRisks: [
+                    SpeciesRisk(
+                        species: .dog,
+                        severity: .severe,
+                        notes: "Dogs typically show obvious hyperactivity — pacing, circling, inability to sit still, tremors, and dilated pupils. Hyperthermia from muscle activity can become life-threatening. Methylphenidate appears to be more toxic than amphetamines at equivalent doses. Extended-release formulations cause delayed but prolonged toxicity. With prompt aggressive treatment, most dogs recover, but fatalities have been reported."
+                    ),
+                    SpeciesRisk(
+                        species: .cat,
+                        severity: .severe,
+                        notes: "CATS ARE ESPECIALLY AT RISK: Unlike most medications, cats find Adderall XR and Vyvanse highly palatable and will eat entire pills. Cats may show hyperactivity OR sit unusually still and stare — but internal cardiovascular effects (elevated heart rate, blood pressure, body temperature) occur regardless of outward behavior. A single Adderall capsule can be life-threatening to an average-sized cat. Vyvanse is also highly palatable to cats with delayed onset up to 72 hours."
+                    ),
+                    SpeciesRisk(
+                        species: .smallMammal,
+                        severity: .severe,
+                        notes: "Small body size makes even small amounts potentially lethal. CNS stimulation, cardiovascular effects, and hyperthermia expected. Contact poison control immediately for any exposure."
+                    ),
+                    SpeciesRisk(
+                        species: .bird,
+                        severity: .severe,
+                        notes: "Birds are highly sensitive to stimulant effects. Cardiovascular effects and hyperthermia are particularly dangerous in avian species. Contact an avian veterinarian or poison control immediately."
+                    ),
+                    SpeciesRisk(
+                        species: .reptile,
+                        severity: .high,
+                        notes: "Limited data available. Stimulant effects expected. Temperature regulation is already challenging in reptiles, so drug-induced changes could be especially problematic. Contact an exotic animal veterinarian."
+                    )
+                ],
+                preventionTips: [
+                    "Store all ADHD medications in secure, locked cabinets — not on nightstands, counters, or in purses or backpacks",
+                    "Be ESPECIALLY careful with Adderall and Vyvanse around cats — they find these medications unusually tasty",
+                    "Take your medication behind a closed door away from pets",
+                    "Pick up dropped pills IMMEDIATELY — pets can grab them faster than you can",
+                    "Use pill organizers with secure, difficult-to-open lids",
+                    "Be extra vigilant during back-to-school season when ADHD medications are being refilled and adjusted",
+                    "Remind children taking ADHD medications about pet safety",
+                    "Inform house guests about keeping their medications secured",
+                    "If your child takes chewable or liquid ADHD medication, check the label for xylitol (additional toxicity risk)",
+                    "Never store pet medications near human medications to avoid mix-ups",
+                    "Dispose of expired or unused ADHD medications at pharmacy take-back programs"
+                ],
+                sources: [
+                    "VIN (Veterinary Information Network): Lisdexamfetamine and Amphetamines Monographs",
+                    "ASPCA Animal Poison Control Center: ADHD Medication Dangers in Pets",
+                    "Pet Poison Helpline: Amphetamines and Methylphenidate Toxicity",
+                    "VCA Animal Hospitals: Behavioral Health Medication Poisoning",
+                    "dvm360: Psychotropic Substances Are Poisoning Pets (Fetch Conference 2022)",
+                    "Science News: Cats Attracted to ADHD Drug — Society of Toxicology Data",
+                    "VETgirl Veterinary CE: Amphetamine Toxicity in Dogs",
+                    "Coppock RW et al: Methylphenidate toxicosis in dogs: 128 cases (2001-2008). JAVMA 2010",
+                    "American College of Veterinary Pharmacists: Amphetamines Toxicity Data"
+                ],
+                relatedEntries: ["dd445566-7788-99aa-bbcc-ddeeff334455"]
             )
         ]
     }
