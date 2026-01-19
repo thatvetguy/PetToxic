@@ -5127,6 +5127,187 @@ class DatabaseService {
                 ],
                 sources: ["Veterinary Information Network (VIN)", "ASPCA Animal Poison Control Center", "Merck Veterinary Manual", "Pet Poison Helpline", "MSD Veterinary Manual"],
                 relatedEntries: ["22334455-6677-8899-aabb-ccddeeff0011", "33445566-7788-99aa-bbcc-ddeeff001122"]
+            ),
+
+            // MARK: - Oven Cleaners
+            ToxicItem(
+                id: UUID(uuidString: "77889900-aabb-ccdd-eeff-112233445566")!,
+                name: "Oven Cleaners",
+                alternateNames: [
+                    "Oven cleaner",
+                    "Easy-Off",
+                    "Easy Off",
+                    "Mr Muscle oven cleaner",
+                    "Grill cleaner",
+                    "BBQ cleaner",
+                    "Caustic oven cleaner",
+                    "Oven degreaser",
+                    "Heavy duty oven cleaner",
+                    "Fume-free oven cleaner",
+                    "Self-cleaning oven spray"
+                ],
+                categories: [.cleaningProducts],
+                imageAsset: "oven_cleaner",
+                description: "Oven cleaners are highly alkaline products designed to cut through baked-on grease and food residue. Most commercial oven cleaners contain sodium hydroxide (lye) or potassium hydroxide at concentrations that produce a pH greater than 11, placing them in the same caustic category as drain cleaners. These products cause liquefactive necrosis—deep, penetrating chemical burns that dissolve tissue. Like other alkaline products, oven cleaners may cause little immediate pain on contact, allowing pets to swallow more before showing distress. 'Fume-free' formulations still contain caustic ingredients and pose the same ingestion risk, though they produce fewer irritating vapors.",
+                toxicityInfo: "Oven cleaners containing sodium hydroxide or potassium hydroxide (pH >11) cause severe caustic injury identical to drain cleaners. The alkaline chemicals penetrate deeply into tissue, causing liquefactive necrosis of the mouth, esophagus, and stomach. Full tissue damage may not be apparent for up to 12 hours after exposure. Pets may be exposed by licking oven cleaner residue from surfaces, walking through spills and grooming, or directly ingesting the product. Even products marketed as 'fume-free' or 'low odor' contain caustic ingredients—they simply produce fewer volatile fumes during use. Aerosol oven cleaners pose additional inhalation risks if sprayed near pets. Do NOT induce vomiting after oven cleaner ingestion—this re-exposes damaged tissue to the caustic material and increases risk of esophageal perforation.",
+                onsetTime: OnsetTime(
+                    early: "Drooling and oral discomfort may appear within minutes, though alkaline burns often cause little initial pain despite significant injury",
+                    delayed: "Full extent of tissue damage may not be apparent for 12 hours; esophageal strictures can develop weeks later during healing"
+                ),
+                symptoms: [
+                    "Hypersalivation (drooling)",
+                    "Pawing at mouth or face",
+                    "Vocalization or crying (pain)",
+                    "Difficulty swallowing (dysphagia)",
+                    "Refusal to eat or drink",
+                    "Vomiting (may contain blood)",
+                    "Oral redness, swelling, or ulceration",
+                    "White, gray, or black lesions in mouth",
+                    "Fever",
+                    "Abdominal pain",
+                    "Lethargy or depression",
+                    "Difficulty breathing (if inhaled or esophageal swelling)",
+                    "Skin burns (if dermal exposure)",
+                    "Eye injury (if splashed—emergency)"
+                ],
+                speciesRisks: [
+                    SpeciesRisk(species: .dog, severity: .severe, notes: "EMERGENCY—caustic burns identical to drain cleaner exposure; dogs may lick residue from oven surfaces; do NOT induce vomiting"),
+                    SpeciesRisk(species: .cat, severity: .severe, notes: "EMERGENCY—same caustic risk; cats may walk through spills and ingest during grooming; seek immediate veterinary care"),
+                    SpeciesRisk(species: .smallMammal, severity: .severe, notes: "EMERGENCY—small body size makes any caustic exposure extremely serious; can be rapidly life-threatening"),
+                    SpeciesRisk(species: .bird, severity: .severe, notes: "EMERGENCY—caustic injury to crop and esophagus can be fatal; birds also extremely sensitive to aerosol fumes; never use near birds"),
+                    SpeciesRisk(species: .reptile, severity: .severe, notes: "EMERGENCY—caustic burns affect all species; any oral or dermal exposure requires immediate veterinary evaluation")
+                ],
+                preventionTips: [
+                    "Store oven cleaners in locked cabinets—these products are as dangerous as drain cleaners",
+                    "Keep pets completely out of the kitchen while using oven cleaner and until the oven is fully rinsed",
+                    "Ensure all residue is thoroughly wiped and rinsed from oven surfaces before allowing pets access",
+                    "Never spray aerosol oven cleaners with pets in the room—especially birds, who are extremely sensitive to fumes",
+                    "If your pet licks oven cleaner residue or the product itself, contact your veterinarian immediately—do NOT induce vomiting"
+                ],
+                sources: ["Veterinary Information Network (VIN)", "ASPCA Animal Poison Control Center", "Merck Veterinary Manual", "Pet Poison Helpline"],
+                relatedEntries: ["33445566-7788-99aa-bbcc-ddeeff001122"]
+            ),
+
+            // MARK: - Quaternary Ammonium Disinfectants
+            ToxicItem(
+                id: UUID(uuidString: "88990011-aabb-ccdd-eeff-223344556677")!,
+                name: "Quaternary Ammonium Disinfectants",
+                alternateNames: [
+                    "Quats",
+                    "QACs",
+                    "Quaternary ammonium compounds",
+                    "Benzalkonium chloride",
+                    "Alkyl dimethyl benzyl ammonium chloride",
+                    "Lysol",
+                    "Lysol wipes",
+                    "Clorox wipes",
+                    "Disinfecting wipes",
+                    "Surface sanitizer",
+                    "Antibacterial spray",
+                    "Disinfectant spray",
+                    "Hospital disinfectant",
+                    "Roccal",
+                    "Germicidal cleaner",
+                    "Sanitizing wipes"
+                ],
+                categories: [.cleaningProducts],
+                imageAsset: "disinfectant_wipes",
+                description: "Quaternary ammonium compounds (often called 'quats' or QACs) are cationic detergents found in many common disinfectants, sanitizing wipes, and surface cleaners. Products containing benzalkonium chloride and similar compounds became even more widely used during and after the COVID-19 pandemic. While often considered less dangerous than bleach or caustic cleaners, QACs are actually cationic surfactants—the same class of chemicals found in fabric softeners and liquid potpourri—and can cause significant tissue injury, especially in cats. Cats are notably more sensitive to QACs than dogs, with oral ulcerations reported at concentrations as low as 2%.",
+                toxicityInfo: "Quaternary ammonium compounds are cationic surfactants that disrupt cell membranes. Unlike anionic detergents (found in most soaps), cationic detergents can cause corrosive injury similar to alkaline products. In a review of 245 cases of benzalkonium chloride exposure in cats, common signs included hypersalivation, oral ulceration, fever, vomiting, and lethargy. About 22% of affected cats developed respiratory signs. Cats are particularly at risk because they may walk across surfaces cleaned with QAC products and then groom the residue from their paws—and cats show irritation at concentrations that might not affect dogs. Systemic effects from significant exposures can include CNS depression, hypotension, muscle weakness, and in severe cases, seizures or coma. Most household exposures are mild, but concentrated products or prolonged contact can cause serious injury.",
+                onsetTime: OnsetTime(
+                    early: "Drooling, oral irritation, and vomiting may appear within minutes to hours of exposure",
+                    delayed: "Oral ulceration may develop or worsen over 6-12 hours; respiratory signs may develop with significant exposures"
+                ),
+                symptoms: [
+                    "Hypersalivation (drooling)",
+                    "Oral redness or ulceration",
+                    "Tongue ulcers or swelling",
+                    "Pawing at mouth",
+                    "Vomiting",
+                    "Decreased appetite (inappetence)",
+                    "Lethargy",
+                    "Fever (hyperthermia)",
+                    "Respiratory distress or rapid breathing",
+                    "Skin irritation or burns (if dermal exposure)",
+                    "Eye irritation (if ocular exposure)",
+                    "Muscle weakness (severe cases)",
+                    "CNS depression (severe cases)"
+                ],
+                speciesRisks: [
+                    SpeciesRisk(species: .dog, severity: .moderate, notes: "Can cause oral irritation and GI upset; less sensitive than cats; concentrated products or large exposures more concerning"),
+                    SpeciesRisk(species: .cat, severity: .high, notes: "Cats are notably more sensitive to QACs—oral ulcers can occur at concentrations as low as 2%; commonly exposed by grooming paws after walking on cleaned surfaces"),
+                    SpeciesRisk(species: .smallMammal, severity: .high, notes: "Small body size increases risk; limited data but likely sensitive similar to cats; seek veterinary care for any significant exposure"),
+                    SpeciesRisk(species: .bird, severity: .high, notes: "Birds may be exposed by perching on cleaned surfaces; respiratory sensitivity makes any exposure concerning"),
+                    SpeciesRisk(species: .reptile, severity: .moderate, notes: "QAC disinfectants commonly used to clean reptile enclosures; must be thoroughly rinsed before returning animal")
+                ],
+                preventionTips: [
+                    "Allow surfaces cleaned with QAC disinfectants to dry completely before allowing pet access",
+                    "Be especially careful with cats—they groom their paws and can ingest residue from cleaned floors and countertops",
+                    "Rinse surfaces with plain water after using QAC products if your cat will walk on them",
+                    "Consider using pet-safe disinfectants, especially in homes with cats",
+                    "If cleaning reptile or bird enclosures with QAC products, rinse thoroughly and allow to dry completely before returning the animal",
+                    "Keep disinfecting wipes in closed containers—pets may chew on accessible wipes"
+                ],
+                sources: ["Veterinary Information Network (VIN)", "ASPCA Animal Poison Control Center", "Merck Veterinary Manual", "Veterinary Poisons Information Service (UK) - Benzalkonium chloride study", "Journal of Feline Medicine and Surgery (ABCD Guidelines)"],
+                relatedEntries: ["b8c9d0e1-2f3a-4b5c-6d7e-8f9a0b1c2d3e"]
+            ),
+
+            // MARK: - Traditional Laundry Detergent
+            ToxicItem(
+                id: UUID(uuidString: "99001122-aabb-ccdd-eeff-334455667788")!,
+                name: "Traditional Laundry Detergent",
+                alternateNames: [
+                    "Laundry detergent",
+                    "Laundry soap",
+                    "Liquid laundry detergent",
+                    "Powder laundry detergent",
+                    "Washing powder",
+                    "Tide liquid",
+                    "Gain",
+                    "All detergent",
+                    "Arm & Hammer laundry",
+                    "Persil",
+                    "Seventh Generation laundry",
+                    "Free and clear detergent",
+                    "HE detergent",
+                    "High efficiency detergent",
+                    "Fabric wash"
+                ],
+                categories: [.cleaningProducts],
+                imageAsset: "laundry_detergent",
+                description: "Traditional liquid and powder laundry detergents—as opposed to concentrated pods—generally cause only mild, self-limiting gastrointestinal upset when ingested by pets. These products contain anionic and nonionic surfactants similar to those in dish soap and shampoo. While they can cause vomiting, diarrhea, and drooling, serious toxicity is uncommon with traditional formulations. This entry exists primarily for reassurance and to distinguish traditional laundry detergent from the more dangerous laundry pods, which are highly concentrated and pose significant aspiration risks. Cats may be exposed by walking through spills and grooming; dogs may lap up spilled detergent or drink from buckets.",
+                toxicityInfo: "Traditional liquid and powder laundry detergents contain anionic and nonionic surfactants that irritate the gastrointestinal tract but have low systemic toxicity. Small ingestions typically cause only drooling, vomiting, and possibly diarrhea—symptoms that are usually self-limiting. Larger ingestions may cause more persistent vomiting and potential dehydration. The main serious concern with any detergent is aspiration: if a pet vomits and inhales detergent, chemical pneumonitis can develop. However, this risk is much lower with traditional detergents than with concentrated pods. Cats that groom detergent from their fur may develop respiratory sounds due to sodium lauryl sulfate irritation, but this is typically mild. Important distinction: traditional laundry detergent is LOW toxicity; concentrated laundry PODS are HIGH toxicity due to concentration and aspiration risk.",
+                onsetTime: OnsetTime(
+                    early: "Drooling and vomiting typically occur within 15-30 minutes of ingestion",
+                    delayed: "Symptoms usually resolve within a few hours; respiratory signs from aspiration would develop over 12-24 hours if they occur"
+                ),
+                symptoms: [
+                    "Hypersalivation (drooling)",
+                    "Vomiting",
+                    "Diarrhea",
+                    "Decreased appetite",
+                    "Pawing at mouth (due to taste)",
+                    "Mild lethargy",
+                    "Respiratory sounds in cats (if groomed from fur)",
+                    "Eye irritation (if splashed)",
+                    "Coughing or difficulty breathing (rare—if aspirated, seek veterinary care)"
+                ],
+                speciesRisks: [
+                    SpeciesRisk(species: .dog, severity: .low, notes: "Low toxicity; usually just mild GI upset; dogs may drink from buckets or lick spills; large ingestions may cause more persistent vomiting"),
+                    SpeciesRisk(species: .cat, severity: .low, notes: "Low toxicity; cats commonly exposed by walking through spills and grooming; may develop transient respiratory sounds but usually mild"),
+                    SpeciesRisk(species: .smallMammal, severity: .low, notes: "Low toxicity; small body size means dehydration from vomiting is a greater concern; monitor fluid intake"),
+                    SpeciesRisk(species: .bird, severity: .moderate, notes: "Low toxicity but birds are more sensitive to any respiratory irritation; seek veterinary advice if ingested"),
+                    SpeciesRisk(species: .reptile, severity: .low, notes: "Limited data; GI irritation expected; monitor for lethargy")
+                ],
+                preventionTips: [
+                    "Store laundry detergent in closed cabinets, though traditional formulations are less attractive to pets than colorful pods",
+                    "Clean up spills promptly—cats may walk through them and ingest detergent while grooming",
+                    "Don't leave buckets of soapy laundry water where pets can drink from them",
+                    "If your pet ingests traditional laundry detergent, monitor for vomiting; contact your veterinarian if symptoms are severe or persistent",
+                    "Remember: traditional liquid/powder = low concern; concentrated PODS = high concern"
+                ],
+                sources: ["Veterinary Information Network (VIN)", "ASPCA Animal Poison Control Center", "Merck Veterinary Manual", "Pet Poison Helpline"],
+                relatedEntries: ["55667788-99aa-bbcc-ddee-ff0011223344", "11223344-5566-7788-99aa-bbccddeeff00"]
             )
         ]
     }
