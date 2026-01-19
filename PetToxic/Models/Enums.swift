@@ -68,7 +68,7 @@ enum Severity: String, Codable, CaseIterable {
 enum Category: String, Codable, CaseIterable, Identifiable {
     case foods
     case plants
-    case humanMedications
+    case medications
     case cleaningProducts
     case essentialOils
     case garageGarden
@@ -83,7 +83,7 @@ enum Category: String, Codable, CaseIterable, Identifiable {
         switch self {
         case .foods: return "Foods"
         case .plants: return "Plants"
-        case .humanMedications: return "Human Medications"
+        case .medications: return "Medications"
         case .cleaningProducts: return "Cleaning Products"
         case .essentialOils: return "Essential Oils"
         case .garageGarden: return "Garage & Garden"
@@ -98,7 +98,7 @@ enum Category: String, Codable, CaseIterable, Identifiable {
         switch self {
         case .foods: return "fork.knife"
         case .plants: return "leaf.fill"
-        case .humanMedications: return "pills.fill"
+        case .medications: return "pills.fill"
         case .cleaningProducts: return "bubbles.and.sparkles"
         case .essentialOils: return "drop.fill"
         case .garageGarden: return "car.fill"

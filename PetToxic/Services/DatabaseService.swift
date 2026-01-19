@@ -3180,7 +3180,7 @@ class DatabaseService {
                 id: UUID(uuidString: "c492d990-4222-44a0-8546-634118f68f71")!,
                 name: "Vitamin D Overdose (Supplements & Medications)",
                 alternateNames: ["vitamin D toxicity", "vitamin D3 overdose", "vitamin D2 overdose", "cholecalciferol overdose", "ergocalciferol overdose", "vitamin D supplements", "vitamin D3 supplements", "calcipotriene", "calcipotriol", "tacalcitol", "calcitriol", "Dovonex", "Taclonex", "Sorilux", "Enstilar", "Wynzora", "Rocaltrol", "Vectical", "psoriasis cream", "dog ate vitamins", "pet ate supplements"],
-                categories: [.humanMedications],
+                categories: [.medications],
                 imageAsset: "vitamin_d_overdose",
                 description: "Vitamin D toxicity occurs when pets ingest human vitamin D supplements or topical medications containing vitamin D analogues. Most standard multivitamins contain low amounts of vitamin D (100-400 IU) and pose minimal risk unless a very small dog eats a large quantity. However, high-dose vitamin D3 supplements (5,000-50,000 IU per capsule) have become increasingly popular and can cause serious toxicity if multiple capsules are ingested. Topical psoriasis medications containing calcipotriene (Dovonex, Taclonex, Enstilar) or tacalcitol are also dangerous—dogs can be poisoned by licking the cream from a person's skin or directly from the tube. Vitamin D2 (ergocalciferol, from plants) has a wider margin of safety than vitamin D3 (cholecalciferol, from animals).",
                 toxicityInfo: "Vitamin D increases calcium absorption from the gut and bones while decreasing excretion through the kidneys. Excessive vitamin D causes dangerously high blood calcium (hypercalcemia) and phosphorus levels, leading to mineralization (calcium deposits) in kidneys, heart, blood vessels, and other soft tissues. Kidney failure is the most serious consequence. Vitamin D and its metabolites are fat-soluble and stored in body fat, so effects can persist for weeks to months. There is NO ANTIDOTE—treatment focuses on lowering calcium levels and may require weeks of monitoring. For vitamin D toxicity from rodenticides, see the separate 'Cholecalciferol Rodenticide' entry.",
@@ -3421,6 +3421,65 @@ class DatabaseService {
                     "If your pet ingests fertilizer, try to identify the specific product and ingredients before calling your veterinarian"
                 ],
                 sources: ["VIN Toxicology Resources: Fertilizers and Bone/Blood Meal", "ASPCA Animal Poison Control Center: Fertilizers: A Growing Problem for Pets", "Pet Poison Helpline: Bone Meal & Blood Meal Toxicity", "PetMD: My Dog Ate Fertilizer", "DVM360: Spring Toxin - Fertilizers"],
+                relatedEntries: nil
+            ),
+
+            // MARK: - Pyrethrins & Pyrethroids (Permethrin)
+            ToxicItem(
+                id: UUID(uuidString: "d4e5f6a7-8b9c-4d0e-a1b2-3c4d5e6f7a8b")!,
+                name: "Pyrethrins & Pyrethroids (Permethrin)",
+                alternateNames: ["permethrin", "pyrethrin", "pyrethroid", "flea treatment poisoning", "flea product toxicity", "spot-on poisoning", "flea collar toxicosis", "flea dip toxicosis", "flea spray toxicosis", "tick treatment poisoning", "dog flea product on cat", "cypermethrin", "deltamethrin", "allethrin", "bifenthrin", "cyfluthrin", "cyhalothrin", "cyphenothrin", "etofenprox", "fenvalerate", "flumethrin", "fluvalinate", "phenothrin", "resmethrin", "sumithrin", "tetramethrin", "tefluthrin", "tralomethrin", "Advantix", "K9 Advantix", "Bio Spot", "Hartz flea", "Sentry flea", "Zodiac flea", "Sergeant's flea", "Adams flea", "chrysanthemum insecticide"],
+                categories: [.garageGarden, .medications],
+                imageAsset: "pyrethrins_pyrethroids",
+                description: "Pyrethrins are natural insecticides extracted from chrysanthemum flowers. Pyrethroids (such as permethrin, cypermethrin, and deltamethrin) are synthetic derivatives designed for greater stability and effectiveness. These are among the most commonly used household and pet insecticides worldwide.\n\n⚠️ CATS ARE EXTREMELY SENSITIVE to pyrethroids, particularly permethrin. Dogs tolerate these products well, but products designed for dogs contain concentrations that are potentially fatal to cats. Dog spot-on flea products typically contain 40-65% permethrin, while cat-safe products contain less than 1%.\n\nThe most common cause of pyrethroid poisoning in cats is the accidental or intentional application of a dog flea product. Cats can also be poisoned by grooming a recently treated dog or by close contact (sleeping together, rubbing against each other) before the product has dried.\n\nThis species difference exists because cats lack efficient liver glucuronidation enzymes needed to metabolize and eliminate pyrethroids. Without proper treatment, this poisoning can be fatal within hours.\n\nDog toxicosis is rare but can occur with significant overdose (using a large-dog product on a small puppy) or ingestion of flea collars.",
+                toxicityInfo: "Pyrethroids work by disrupting voltage-gated sodium channels in nerve cells, causing prolonged nerve excitation. In cats, the deficiency of glucuronyl transferase enzyme in the liver prevents efficient breakdown of these compounds, leading to dangerous accumulation.\n\nOver 96% of cats exposed to concentrated permethrin products develop toxic signs. Clinical signs can range from mild (tremors, ear twitching) to severe (seizures, hyperthermia, respiratory failure). Mortality rates range from 2-10% with appropriate treatment, but can be much higher without veterinary care.\n\nThere is NO specific antidote. Treatment focuses on decontamination, controlling muscle tremors, and supportive care. Early and aggressive treatment dramatically improves outcomes.\n\nNOTE: Low-concentration products (household sprays at less than 1%, cat-approved flea products, properly applied flea collars) are generally well-tolerated by cats when used according to label directions.",
+                onsetTime: OnsetTime(
+                    early: "Signs typically appear within a few hours of exposure but can begin within 30 minutes in severe cases",
+                    delayed: "Signs may be delayed up to 72 hours; symptoms typically persist for 2-3 days with treatment, sometimes up to 5-7 days"
+                ),
+                symptoms: [
+                    "Muscle tremors (especially face and ears)",
+                    "Muscle twitching and fasciculations",
+                    "Ear flicking",
+                    "Paw flicking or shaking",
+                    "Excessive drooling (hypersalivation)",
+                    "Vomiting",
+                    "Hyperexcitability or agitation",
+                    "Hiding or unusual behavior",
+                    "Hypersensitivity to touch or sound",
+                    "Incoordination (ataxia)",
+                    "Weakness",
+                    "Seizures or convulsions",
+                    "Elevated body temperature (hyperthermia from muscle activity)",
+                    "Low body temperature (hypothermia in some cases)",
+                    "Rapid breathing (tachypnea)",
+                    "Difficulty breathing (dyspnea)",
+                    "Rapid heart rate (tachycardia)",
+                    "Dilated pupils (mydriasis)",
+                    "Temporary blindness (rare)",
+                    "Depression or lethargy",
+                    "Paralysis (severe cases)",
+                    "Coma (severe cases)"
+                ],
+                speciesRisks: [
+                    SpeciesRisk(species: .cat, severity: .severe, notes: "EXTREMELY SENSITIVE. Cats lack the liver enzymes to efficiently metabolize pyrethroids. Over 96% of cats exposed to concentrated products develop toxic signs. Dog flea products should NEVER be applied to cats. Cats should also be separated from treated dogs for 72 hours after application."),
+                    SpeciesRisk(species: .dog, severity: .low, notes: "Dogs tolerate pyrethroids well when used according to label directions. Toxicosis is rare but can occur with significant overdose (large-dog product on small puppy), ingestion of flea collars, or ingestion of large amounts of yard/garden products. Very young or very small dogs may be more susceptible."),
+                    SpeciesRisk(species: .bird, severity: .low, notes: "Birds generally have low sensitivity to pyrethrins and pyrethroids. However, products should still be used according to label directions and birds should not be exposed to concentrated applications."),
+                    SpeciesRisk(species: .reptile, severity: .moderate, notes: "Reptiles can be safely treated with pyrethrin/pyrethroid products for parasites when used correctly, but care must be taken to avoid the eyes and mouth. Excessive exposure can cause toxicosis. Fish in the same environment are extremely sensitive and may die from minimal exposure.")
+                ],
+                preventionTips: [
+                    "NEVER apply dog flea or tick products to cats—even in smaller amounts",
+                    "Always read product labels completely before application",
+                    "Verify the product is appropriate for your pet's species, weight, and age",
+                    "Keep cats separated from dogs for 72 hours after applying permethrin-based spot-on treatments to dogs",
+                    "Do not allow cats to groom dogs that have recently been treated",
+                    "Store flea and tick products securely away from pets",
+                    "If you have cats, consider using non-permethrin flea products for dogs in the same household",
+                    "Cat-safe flea products typically contain less than 0.1% permethrin and should be used as directed",
+                    "Cover or remove aquariums when using any pyrethroid sprays in the home—fish are extremely sensitive",
+                    "When using household insect sprays, remove all pets and allow the area to dry completely before allowing pets back"
+                ],
+                sources: ["VIN Toxicology Resources: Pyrethrins and Pyrethroids", "ASPCA Animal Poison Control Center: Permethrin Spot-On Toxicoses in Cats", "Merck Veterinary Manual: Plant-Derived Insecticide Toxicosis in Animals", "Pet Poison Helpline / VCA Hospitals: Pyrethrin/Pyrethroid Poisoning in Cats", "International Cat Care: Permethrin Poisoning", "American Association of Feline Practitioners (AAFP): Permethrin Poisoning Campaign", "Boland LA, Angles JM. Feline permethrin toxicity: Retrospective study of 42 cases. J Feline Med Surg. 2010", "Sutton NM, et al. Clinical effects and outcome of feline permethrin spot-on poisonings. J Feline Med Surg. 2007"],
                 relatedEntries: nil
             ),
 
