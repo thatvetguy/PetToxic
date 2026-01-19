@@ -105,11 +105,11 @@ enum Category: String, Codable, CaseIterable {
     case humanMedications
     case cleaningProducts
     case essentialOils
-    case garageAutomotive
+    case garageGarden
     case gardenProducts
     case recreationalSubstances
     case holidayHazards
-    
+
     var displayName: String {
         switch self {
         case .foods: return "Foods"
@@ -117,13 +117,13 @@ enum Category: String, Codable, CaseIterable {
         case .humanMedications: return "Human Medications"
         case .cleaningProducts: return "Cleaning Products"
         case .essentialOils: return "Essential Oils"
-        case .garageAutomotive: return "Garage & Automotive"
+        case .garageGarden: return "Garage & Garden"
         case .gardenProducts: return "Garden Products"
         case .recreationalSubstances: return "Recreational Substances"
         case .holidayHazards: return "Holiday Hazards"
         }
     }
-    
+
     var iconName: String {
         switch self {
         case .foods: return "fork.knife"
@@ -131,7 +131,7 @@ enum Category: String, Codable, CaseIterable {
         case .humanMedications: return "pills"
         case .cleaningProducts: return "bubbles.and.sparkles"
         case .essentialOils: return "drop"
-        case .garageAutomotive: return "car"
+        case .garageGarden: return "car"
         case .gardenProducts: return "shovel"
         case .recreationalSubstances: return "exclamationmark.triangle"
         case .holidayHazards: return "gift"
