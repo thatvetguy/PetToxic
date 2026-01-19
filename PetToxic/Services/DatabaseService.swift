@@ -3480,7 +3480,7 @@ class DatabaseService {
                     "When using household insect sprays, remove all pets and allow the area to dry completely before allowing pets back"
                 ],
                 sources: ["VIN Toxicology Resources: Pyrethrins and Pyrethroids", "ASPCA Animal Poison Control Center: Permethrin Spot-On Toxicoses in Cats", "Merck Veterinary Manual: Plant-Derived Insecticide Toxicosis in Animals", "Pet Poison Helpline / VCA Hospitals: Pyrethrin/Pyrethroid Poisoning in Cats", "International Cat Care: Permethrin Poisoning", "American Association of Feline Practitioners (AAFP): Permethrin Poisoning Campaign", "Boland LA, Angles JM. Feline permethrin toxicity: Retrospective study of 42 cases. J Feline Med Surg. 2010", "Sutton NM, et al. Clinical effects and outcome of feline permethrin spot-on poisonings. J Feline Med Surg. 2007"],
-                relatedEntries: nil
+                relatedEntries: ["c9d0e1f2-3a4b-5c6d-e7f8-9a0b1c2d3e4f"]
             ),
 
             // MARK: - Organophosphates & Carbamates
@@ -3536,7 +3536,7 @@ class DatabaseService {
                     "Outdoor cats may be exposed by walking through treated areas—consider keeping cats indoors during and after pesticide applications"
                 ],
                 sources: ["VIN Toxicology Resources: Organophosphate and Carbamate Toxicosis", "ASPCA Animal Poison Control Center", "Merck Veterinary Manual: Carbamate Toxicosis in Animals", "Pet Poison Helpline: Organophosphates", "Klainbart S, et al. Clinical manifestations, laboratory findings, treatment and outcome of acute organophosphate or carbamate intoxication in 102 dogs. Vet J. 2019"],
-                relatedEntries: ["c3f5a8b2-7d4e-4f1a-b6c9-2e8d7f4a5b3c"]
+                relatedEntries: ["c3f5a8b2-7d4e-4f1a-b6c9-2e8d7f4a5b3c", "c9d0e1f2-3a4b-5c6d-e7f8-9a0b1c2d3e4f"]
             ),
 
             // MARK: - Neonicotinoids (Imidacloprid)
@@ -3578,7 +3578,7 @@ class DatabaseService {
                     "Store flea products securely away from pets"
                 ],
                 sources: ["VIN Prescriber Highlights: Imidacloprid", "Merck Veterinary Manual: Neonicotinoid Toxicosis in Animals", "VCA Hospitals: Imidacloprid - Topical", "Parasitipedia: Imidacloprid Safety Summary"],
-                relatedEntries: nil
+                relatedEntries: ["c9d0e1f2-3a4b-5c6d-e7f8-9a0b1c2d3e4f"]
             ),
 
             // MARK: - Fipronil (Frontline)
@@ -3622,7 +3622,145 @@ class DatabaseService {
                     "Store flea products securely away from pets"
                 ],
                 sources: ["VIN Prescriber Highlights: Fipronil", "Merck Veterinary Manual: Phenylpyrazole (Fipronil) Toxicosis in Animals", "EPA: Fipronil Safety Determination for Dogs and Cats"],
-                relatedEntries: nil
+                relatedEntries: ["c9d0e1f2-3a4b-5c6d-e7f8-9a0b1c2d3e4f"]
+            ),
+
+            // MARK: - DEET (Insect Repellent)
+            ToxicItem(
+                id: UUID(uuidString: "b8c9d0e1-2f3a-4b5c-d6e7-8f9a0b1c2d3e")!,
+                name: "DEET (Insect Repellent)",
+                alternateNames: ["DEET", "N,N-diethyl-meta-toluamide", "diethyltoluamide", "bug spray", "insect repellent", "mosquito repellent", "Off!", "Off spray", "Deep Woods Off", "Cutter", "Repel", "Sawyer", "bug repellent", "mosquito spray", "tick repellent"],
+                categories: [.garageGarden],
+                imageAsset: "deet_insect_repellent",
+                description: "DEET (N,N-diethyl-meta-toluamide) is the active ingredient in many popular insect repellent products designed for humans, including Off!®, Cutter®, and Repel®. It is found in over 500 products at concentrations ranging from 5% to 100%.\n\n⚠️ DEET SHOULD NEVER BE APPLIED TO PETS. Some pet owners mistakenly spray their dogs or cats with human bug spray to protect them from mosquitoes or ticks. This can cause significant toxicity.\n\nDEET is readily absorbed through the skin and can cause neurological effects including tremors, seizures, and incoordination. The higher the concentration of DEET in the product, the greater the risk to pets.\n\nPets can be exposed by:\n• Direct application by owners (most common cause)\n• Licking treated human skin\n• Getting into containers of repellent\n• Being sprayed in the face (causes serious eye damage)\n• Inhaling spray in enclosed areas\n\nCats appear to be more sensitive than dogs. There is no established safe threshold—all exposures should be reported to a veterinarian or poison control.",
+                toxicityInfo: "DEET affects the nervous system in pets. The exact mechanism is not fully understood, but it can cause a toxic encephalopathy (brain dysfunction) characterized by tremors, seizures, and behavioral changes.\n\nThe concentration of DEET in the product directly correlates with risk—products with higher concentrations (30-100%) pose greater danger than lower concentration products (5-15%).\n\nEye exposure is particularly serious and can cause conjunctivitis, uveitis (inflammation inside the eye), and corneal ulceration. Eyes should be flushed with saline for at least 15 minutes if exposure occurs.\n\nInhalation can cause airway inflammation and difficulty breathing.\n\nThere is NO specific antidote. Treatment is symptomatic and supportive, including decontamination (bathing for skin exposure, eye flushing, oral dilution), anticonvulsants for seizures, and supportive care.\n\nThe good news: DEET toxicosis in companion animals is generally of short duration when treated promptly.",
+                onsetTime: OnsetTime(
+                    early: "Signs can appear within minutes to hours of exposure depending on route and concentration",
+                    delayed: "Most cases resolve within 24-72 hours with appropriate treatment; severe cases may have prolonged recovery"
+                ),
+                symptoms: [
+                    "Skin irritation or redness",
+                    "Excessive drooling (hypersalivation)",
+                    "Vomiting",
+                    "Diarrhea",
+                    "Tremors",
+                    "Muscle twitching",
+                    "Incoordination (ataxia)",
+                    "Difficulty walking (staggering gait)",
+                    "Hyperexcitability or agitation",
+                    "Behavioral changes",
+                    "Seizures",
+                    "Eye irritation, redness, squinting (if sprayed in face)",
+                    "Corneal ulceration (eye exposure)",
+                    "Difficulty breathing (inhalation exposure)",
+                    "Lethargy or depression"
+                ],
+                speciesRisks: [
+                    SpeciesRisk(species: .dog, severity: .moderate, notes: "Should never have DEET applied. Neurological signs (tremors, ataxia, seizures) can occur. Higher concentration products pose greater risk. Generally short duration with treatment."),
+                    SpeciesRisk(species: .cat, severity: .high, notes: "Cats are reported to be MORE SENSITIVE than dogs to DEET. Never apply any DEET product to cats. Seek veterinary care immediately for any exposure."),
+                    SpeciesRisk(species: .smallMammal, severity: .high, notes: "Do not use DEET products on small mammals. Their small body size increases risk of toxicity."),
+                    SpeciesRisk(species: .bird, severity: .moderate, notes: "Avoid using DEET sprays around birds. Inhalation in enclosed spaces is a concern.")
+                ],
+                preventionTips: [
+                    "NEVER apply human insect repellent containing DEET to dogs, cats, or other pets",
+                    "Store DEET products securely out of reach of pets",
+                    "If you apply DEET to yourself, prevent pets from licking your skin until it has dried completely",
+                    "Do not spray DEET products near pets—especially avoid their face and eyes",
+                    "Use only veterinarian-approved flea, tick, and mosquito preventatives for pets",
+                    "If using DEET sprays indoors, ensure good ventilation and keep pets out of the area",
+                    "Consider DEET-free alternatives for personal use if you have pets that frequently lick you"
+                ],
+                sources: ["ASPCA Animal Poison Control Center: Don't DEET That Dog!", "American College of Veterinary Pharmacists: Pet Poison Control - DEET", "Dorman DC, et al. Diethyltoluamide (DEET) insect repellent toxicosis. Vet Hum Toxicol. 1990", "Cornell University College of Veterinary Medicine: Small Animal Toxins"],
+                relatedEntries: ["c9d0e1f2-3a4b-5c6d-e7f8-9a0b1c2d3e4f"]
+            ),
+
+            // MARK: - Ant & Roach Bait Stations
+            ToxicItem(
+                id: UUID(uuidString: "d0e1f2a3-4b5c-6d7e-f8a9-0b1c2d3e4f5a")!,
+                name: "Ant & Roach Bait Stations",
+                alternateNames: ["ant bait", "ant trap", "ant killer", "roach bait", "roach trap", "roach killer", "cockroach bait", "Raid ant bait", "Terro", "Combat", "Hot Shot", "Ortho", "Amdro", "bait station", "bug bait", "insect bait", "borax ant killer", "boric acid bait"],
+                categories: [.garageGarden],
+                imageAsset: "ant_roach_bait",
+                description: "Household ant and roach bait stations are common pest control products found in kitchens, bathrooms, and garages. Dogs are frequently attracted to these baits because many contain peanut butter or other food attractants designed to lure insects.\n\nThe good news: Most household ant and roach baits have LOW toxicity to pets. The insecticide concentrations are very low, and serious poisoning is uncommon.\n\nCommon active ingredients include:\n• **Abamectin** — A macrocyclic lactone (related to ivermectin) at very low concentrations\n• **Borates/Boric acid** — At bait concentrations, not enough to cause significant toxicity\n• **Fipronil** — Low concentration; generally well-tolerated\n• **Hydramethylnon** — Low toxicity at bait levels\n• **Indoxacarb** — Low toxicity to mammals\n\n⚠️ THE MAIN CONCERN IS THE PLASTIC HOUSING, NOT THE BAIT. If a dog chews up and swallows pieces of the plastic bait station, this can cause:\n• Gastrointestinal irritation\n• Vomiting or diarrhea\n• Potential intestinal obstruction (if large pieces are swallowed)\n\nMost exposures result in no signs or mild, self-limiting GI upset.",
+                toxicityInfo: "WHY ANT BAITS ARE GENERALLY SAFE\n\nThe concentration of insecticide in household bait stations is designed to kill tiny insects—the dose is far too low to harm a much larger mammal in most cases.\n\nFor example:\n• Abamectin in ant baits is typically <0.05% concentration\n• Boric acid in baits is not concentrated enough to cause corrosive injury\n• Most dogs experience no symptoms or only mild GI upset\n\nIMPORTANT EXCEPTIONS\n\n**MDR-1 Gene Mutation Dogs:** Certain breeds with the MDR-1 gene mutation (ABCB1-1Δ polymorphism) may be more sensitive to abamectin-containing baits, especially if large amounts are ingested. Affected breeds include:\n• Collies and Collie mixes\n• Border Collies\n• Australian Shepherds\n• Old English Sheepdogs\n• Shetland Sheepdogs\n• Other herding breeds\n\nIf you have an MDR-1 sensitive breed and your dog ate multiple bait stations, contact your veterinarian.\n\nFOREIGN BODY RISK\n\nThe plastic housing is often the bigger concern. Watch for:\n• Repeated vomiting\n• Inability to keep food/water down\n• Abdominal pain\n• Lethargy\n• Loss of appetite\n• Straining to defecate\n\nThese could indicate a gastrointestinal obstruction requiring veterinary care.\n\nWHAT TO TELL YOUR VETERINARIAN\n\n• Brand name and product name\n• Active ingredient (if known)\n• How many bait stations were eaten\n• Whether the plastic housing was consumed\n• Your dog's breed (for MDR-1 consideration)",
+                onsetTime: OnsetTime(
+                    early: "GI upset (vomiting, diarrhea) typically occurs within a few hours if it occurs at all",
+                    delayed: "Foreign body obstruction signs may develop over 24-72 hours if plastic housing was swallowed"
+                ),
+                symptoms: [
+                    "Vomiting (often from plastic irritation)",
+                    "Diarrhea",
+                    "Drooling",
+                    "Decreased appetite",
+                    "Abdominal discomfort",
+                    "Lethargy (uncommon)",
+                    "Tremors (rare, mainly with large ingestions in MDR-1 dogs)"
+                ],
+                speciesRisks: [
+                    SpeciesRisk(species: .dog, severity: .low, notes: "Most common species to eat bait stations due to food attractants. Generally only causes mild GI upset. Main concern is foreign body risk from plastic housing. MDR-1 gene dogs may be more sensitive to abamectin-containing baits."),
+                    SpeciesRisk(species: .cat, severity: .low, notes: "Less commonly affected (less attracted to baits). Same low toxicity concerns apply."),
+                    SpeciesRisk(species: .smallMammal, severity: .moderate, notes: "Small body size increases relative dose. Contact veterinarian for any known exposure."),
+                    SpeciesRisk(species: .bird, severity: .moderate, notes: "Limited data. Avoid exposure.")
+                ],
+                preventionTips: [
+                    "Place bait stations in areas inaccessible to pets (behind appliances, inside cabinets)",
+                    "Use enclosed bait stations that pets cannot easily chew open",
+                    "Consider pet-safe pest control alternatives",
+                    "Check bait stations regularly and replace any that show signs of pet tampering",
+                    "Store unused bait stations securely out of pet reach"
+                ],
+                sources: ["VIN (Veterinary Information Network): Insect Bait Station Toxicology", "ASPCA Animal Poison Control Center", "Pet Poison Helpline"],
+                relatedEntries: ["c9d0e1f2-3a4b-5c6d-e7f8-9a0b1c2d3e4f"]
+            ),
+
+            // MARK: - Pesticides & Insecticides (Umbrella)
+            ToxicItem(
+                id: UUID(uuidString: "c9d0e1f2-3a4b-5c6d-e7f8-9a0b1c2d3e4f")!,
+                name: "Pesticides & Insecticides",
+                alternateNames: ["pesticide", "insecticide", "bug killer", "bug spray", "flea product poisoning", "tick product poisoning", "flea medicine toxicity", "garden pesticide", "lawn insecticide", "ant killer", "roach killer", "wasp spray", "insect poison"],
+                categories: [.garageGarden, .medications],
+                imageAsset: "pesticides_insecticides",
+                description: "Pesticides and insecticides are chemicals designed to kill or repel insects and other pests. They are found in garden products, household bug sprays, flea and tick preventatives, and agricultural applications. Pet exposure is common and toxicity varies dramatically depending on the type of product.\n\nThere are several major classes of pesticides, each with different mechanisms, toxicity levels, and treatment approaches:\n\n• **Pyrethrins/Pyrethroids** (including permethrin) — EXTREMELY TOXIC TO CATS. Found in many flea products. Dog products should never be used on cats.\n\n• **Organophosphates & Carbamates** — Cholinesterase inhibitors causing \"SLUDGE\" signs. Found in some garden products and older flea treatments. Declining in use but still encountered.\n\n• **Neonicotinoids** (imidacloprid) — LOW TOXICITY to mammals. Found in Advantage®, Seresto®. Generally very safe for dogs and cats.\n\n• **Fipronil** — LOW TOXICITY to dogs and cats but DANGEROUS TO RABBITS. Found in Frontline®.\n\n• **Ant & Roach Baits** — LOW TOXICITY. Main concern is foreign body risk from plastic housing, not the insecticide.\n\n• **DEET** — Human insect repellent. Should NEVER be applied to pets.\n\nIdentifying the specific product is critical for appropriate treatment. Different pesticide classes require different approaches.",
+                toxicityInfo: "WHY IDENTIFICATION MATTERS\n\nPesticides are not a single poison—they are a category containing multiple distinct chemical classes that work in completely different ways:\n\n**Pyrethrins/Pyrethroids (e.g., permethrin)**\n• Mechanism: Sodium channel disruption\n• Key concern: EXTREMELY TOXIC TO CATS due to deficient liver metabolism\n• Dog flea products on cats = most common serious exposure\n• No specific antidote\n\n**Organophosphates & Carbamates**\n• Mechanism: Cholinesterase inhibition\n• Key signs: SLUDGE (Salivation, Lacrimation, Urination, Defecation, GI distress, Emesis)\n• Antidotes exist (atropine, pralidoxime for OPs)\n• 15-17% mortality even with treatment\n\n**Neonicotinoids (e.g., imidacloprid)**\n• Mechanism: Insect-selective nicotinic receptor binding\n• Key point: VERY LOW mammalian toxicity\n• \"My pet licked the flea treatment\" — usually causes only mild, self-limiting effects\n\n**Fipronil**\n• Mechanism: GABA receptor blocker (insect-selective)\n• Key point: Safe for dogs and cats; DANGEROUS TO RABBITS\n• Generally very well tolerated\n\n**Ant & Roach Bait Stations**\n• Active ingredients: Abamectin, borates, fipronil, hydramethylnon, indoxacarb\n• Key point: LOW TOXICITY—concentrations too low to harm pets\n• Main concern: Plastic housing can cause GI irritation or obstruction\n• MDR-1 gene dogs (Collies, etc.) may be more sensitive to abamectin\n\n**DEET**\n• Mechanism: Neurological (not fully understood)\n• Key point: Human product—NEVER apply to pets\n• Causes tremors, ataxia, seizures\n\nBring product packaging to the veterinary clinic whenever possible.",
+                onsetTime: OnsetTime(
+                    early: "Varies by type: DEET and pyrethroids may cause signs within minutes to hours; organophosphates within minutes to hours; neonicotinoids and fipronil typically cause only mild, immediate taste reactions",
+                    delayed: "Organophosphate effects can persist for days to weeks; pyrethroid effects in cats typically last 2-3 days with treatment"
+                ),
+                symptoms: [
+                    "Excessive drooling (hypersalivation)",
+                    "Vomiting",
+                    "Diarrhea",
+                    "Muscle tremors",
+                    "Muscle twitching/fasciculations",
+                    "Seizures",
+                    "Incoordination (ataxia)",
+                    "Weakness",
+                    "Hyperexcitability",
+                    "Depression or lethargy",
+                    "Difficulty breathing",
+                    "Constricted or dilated pupils",
+                    "Excessive tearing",
+                    "Frequent urination"
+                ],
+                speciesRisks: [
+                    SpeciesRisk(species: .dog, severity: .moderate, notes: "Risk varies by pesticide type. Dogs generally tolerate most modern flea products well. Main concerns are organophosphates (HIGH risk) and accidental massive ingestion of any product."),
+                    SpeciesRisk(species: .cat, severity: .severe, notes: "CATS ARE EXTREMELY SENSITIVE TO PYRETHROIDS (especially permethrin). Never use dog flea products on cats. Keep cats separated from treated dogs for 72 hours. Other modern flea products (imidacloprid, fipronil) are generally safe for cats."),
+                    SpeciesRisk(species: .smallMammal, severity: .high, notes: "FIPRONIL IS DANGEROUS TO RABBITS. Use only imidacloprid-based products on rabbits. Small body size increases risk for all pesticide types."),
+                    SpeciesRisk(species: .bird, severity: .high, notes: "Birds are sensitive to many pesticides, particularly fipronil and organophosphates. Avoid using pesticide sprays around birds.")
+                ],
+                preventionTips: [
+                    "Always read product labels completely before use",
+                    "NEVER use dog flea/tick products on cats",
+                    "Keep cats separated from dogs for 72 hours after applying permethrin-based products to dogs",
+                    "Store all pesticides securely out of reach of pets",
+                    "Do not mix garden insecticides with fertilizers that attract pets (bone meal, blood meal)",
+                    "NEVER apply human insect repellent (DEET) to pets",
+                    "Use veterinarian-recommended flea and tick preventatives",
+                    "Keep records of all pesticide products used in and around your home",
+                    "Cover or remove fish tanks when using any pesticide sprays indoors"
+                ],
+                sources: ["ASPCA Animal Poison Control Center", "Pet Poison Helpline", "Merck Veterinary Manual: Insecticide Toxicosis", "VIN Toxicology Resources"],
+                relatedEntries: ["d4e5f6a7-8b9c-4d0e-a1b2-3c4d5e6f7a8b", "e5f6a7b8-9c0d-4e1f-b2a3-4c5d6e7f8a9b", "f6a7b8c9-0d1e-4f2a-b3c4-5d6e7f8a9b0c", "a7b8c9d0-1e2f-4a3b-c4d5-6e7f8a9b0c1d", "d0e1f2a3-4b5c-6d7e-f8a9-0b1c2d3e4f5a", "b8c9d0e1-2f3a-4b5c-d6e7-8f9a0b1c2d3e"]
             ),
 
             // MARK: - Rodenticides (Overview)
