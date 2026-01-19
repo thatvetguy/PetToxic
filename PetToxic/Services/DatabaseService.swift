@@ -3760,7 +3760,7 @@ class DatabaseService {
                     "Cover or remove fish tanks when using any pesticide sprays indoors"
                 ],
                 sources: ["ASPCA Animal Poison Control Center", "Pet Poison Helpline", "Merck Veterinary Manual: Insecticide Toxicosis", "VIN Toxicology Resources"],
-                relatedEntries: ["d4e5f6a7-8b9c-4d0e-a1b2-3c4d5e6f7a8b", "e5f6a7b8-9c0d-4e1f-b2a3-4c5d6e7f8a9b", "f6a7b8c9-0d1e-4f2a-b3c4-5d6e7f8a9b0c", "a7b8c9d0-1e2f-4a3b-c4d5-6e7f8a9b0c1d", "d0e1f2a3-4b5c-6d7e-f8a9-0b1c2d3e4f5a", "b8c9d0e1-2f3a-4b5c-d6e7-8f9a0b1c2d3e"]
+                relatedEntries: ["d4e5f6a7-8b9c-4d0e-a1b2-3c4d5e6f7a8b", "e5f6a7b8-9c0d-4e1f-b2a3-4c5d6e7f8a9b", "f6a7b8c9-0d1e-4f2a-b3c4-5d6e7f8a9b0c", "a7b8c9d0-1e2f-4a3b-c4d5-6e7f8a9b0c1d", "d0e1f2a3-4b5c-6d7e-f8a9-0b1c2d3e4f5a", "b8c9d0e1-2f3a-4b5c-d6e7-8f9a0b1c2d3e", "b4c5d6e7-8f9a-0b1c-2d3e-4f5a6b7c8d9e"]
             ),
 
             // MARK: - Rodenticides (Overview)
@@ -3801,6 +3801,99 @@ class DatabaseService {
                 ],
                 sources: ["VIN Toxicology Resources", "ASPCA Animal Poison Control Center", "Pet Poison Helpline", "Merck Veterinary Manual"],
                 relatedEntries: ["304c1824-e0b2-48bb-9991-3803d1ae87d0", "bdd489ee-bb6e-47c3-9b2f-b63d9fb7de21", "3c40b99c-5653-4195-a821-19dde4e1c8f8", "c8ebc592-fbe3-4e06-9e8d-63399dfce710"]
+            ),
+
+            // MARK: - Pool Chemicals
+            ToxicItem(
+                id: UUID(uuidString: "a3b4c5d6-7e8f-9a0b-1c2d-3e4f5a6b7c8d")!,
+                name: "Pool Chemicals",
+                alternateNames: ["Chlorine tablets", "Chlorine tabs", "Pool chlorine", "Pool shock", "Calcium hypochlorite", "Sodium hypochlorite", "Trichlor", "Dichlor", "Pool algaecide", "Algicide", "Muriatic acid", "Pool acid", "Brominating tablets", "Bromine tablets", "Pool sanitizer", "Spa chemicals", "Hot tub chemicals"],
+                categories: [.garageGarden],
+                imageAsset: "pool_chemicals",
+                description: "Pool chemicals include chlorine tablets, pool shock, algaecides, muriatic acid, and pH balancers used to maintain safe swimming conditions. While properly diluted pool water poses minimal risk to pets beyond mild stomach upset, the concentrated chemicals used to treat pools are extremely corrosive. Chlorine tablets and pool shock contain high concentrations of oxidizing agents that can cause severe chemical burns to the mouth, throat, and digestive tract if ingested.",
+                toxicityInfo: "Concentrated pool chemicals are corrosive and can cause severe ulceration of the mouth, esophagus, and stomach if ingested. Chlorine tablets taste unpleasant, but dogs may mistake them for treats when owners are adding them to pools. Diluted pool water (1-4 ppm chlorine) typically causes only mild GI upset if consumed in small amounts, but overchlorinated water or large amounts can cause more serious effects. Inhalation of chlorine fumes from concentrated products can cause respiratory distress. Muriatic acid (hydrochloric acid) is particularly dangerous and can cause severe chemical burns.\n\nIMPORTANT: Do NOT induce vomiting if a pet has ingested concentrated pool chemicals—the corrosive substance will cause additional burns on the way back up. Contact a veterinarian or poison control immediately.",
+                onsetTime: OnsetTime(
+                    early: "Signs of corrosive injury (drooling, pawing at mouth, difficulty swallowing) appear immediately to within minutes",
+                    delayed: "Ulceration and tissue damage may worsen over 24-48 hours; respiratory signs from fume inhalation may develop within hours"
+                ),
+                symptoms: [
+                    "Excessive drooling",
+                    "Pawing at mouth or face",
+                    "Difficulty swallowing",
+                    "Oral burns or ulcers (visible redness or white patches in mouth)",
+                    "Vomiting (may contain blood)",
+                    "Refusal to eat or drink",
+                    "Abdominal pain",
+                    "Coughing or gagging (if fumes inhaled)",
+                    "Difficulty breathing",
+                    "Eye irritation or redness (if splashed)",
+                    "Skin irritation or burns (if contact with concentrated product)"
+                ],
+                speciesRisks: [
+                    SpeciesRisk(species: .dog, severity: .high, notes: "Most likely to ingest tablets or drink from pools; corrosive burns can be severe—do NOT induce vomiting"),
+                    SpeciesRisk(species: .cat, severity: .high, notes: "Less likely to consume but equally susceptible to corrosive injury and fumes"),
+                    SpeciesRisk(species: .smallMammal, severity: .severe, notes: "Small body size makes any exposure more dangerous; cannot vomit to expel"),
+                    SpeciesRisk(species: .bird, severity: .severe, notes: "Extremely sensitive to fumes; even minor inhalation exposure can be fatal"),
+                    SpeciesRisk(species: .reptile, severity: .high, notes: "Sensitive to chemical exposure; fumes and water contamination pose risks")
+                ],
+                preventionTips: [
+                    "Store all pool chemicals in original containers in a locked area pets cannot access",
+                    "Never leave chlorine tablets or containers unattended while treating the pool",
+                    "Keep pets away from the pool area when adding chemicals",
+                    "Provide fresh drinking water near the pool so pets don't drink pool water",
+                    "Wait until chemicals are fully diluted before allowing pets near the pool",
+                    "Rinse pets with fresh water after swimming to remove chlorine from fur",
+                    "Consider alternatives like bromine which is slightly less irritating to pets"
+                ],
+                sources: ["ASPCA Animal Poison Control Center", "Pet Poison Helpline", "American Kennel Club", "VCA Animal Hospitals"],
+                relatedEntries: nil
+            ),
+
+            // MARK: - Herbicides
+            ToxicItem(
+                id: UUID(uuidString: "b4c5d6e7-8f9a-0b1c-2d3e-4f5a6b7c8d9e")!,
+                name: "Herbicides",
+                alternateNames: ["Weed killer", "Weed killers", "Roundup", "Glyphosate", "2,4-D", "Dicamba", "Triclopyr", "Weed-B-Gon", "Weed and feed", "Lawn herbicide", "Brush killer", "Vegetation killer", "Grass killer", "Crabgrass killer", "Dandelion killer", "Broadleaf weed killer", "Pre-emergent herbicide", "Post-emergent herbicide"],
+                categories: [.garageGarden],
+                imageAsset: "herbicides",
+                description: "Herbicides are chemicals used to control unwanted plants and weeds. Over 200 active ingredients are used in herbicide products, with varying levels of toxicity. Common active ingredients include glyphosate (Roundup), 2,4-D, dicamba, and triclopyr. Most modern herbicides have relatively low acute toxicity to mammals when used as directed, but exposure to concentrated products or recently treated vegetation can cause gastrointestinal upset and, in some cases, more serious effects. Pets are typically exposed by walking on treated lawns and then licking their paws, or by eating treated grass.",
+                toxicityInfo: "Most household herbicides have a wide safety margin, and serious poisoning is uncommon when products are used as directed. Glyphosate (found in Roundup) is generally considered low toxicity but can cause GI upset, especially when vegetation is still wet. The 2,4-D family of herbicides can cause more significant effects including vomiting, diarrhea, loss of appetite, muscle weakness, and incoordination; severe exposures may cause seizures. The surfactants and other 'inert' ingredients in herbicide formulations can be more irritating than the active ingredients themselves. The greatest risk is from exposure to concentrated products or freshly sprayed vegetation before it has dried.",
+                onsetTime: OnsetTime(
+                    early: "GI signs (vomiting, drooling, diarrhea) typically appear within 30 minutes to a few hours of exposure",
+                    delayed: "Neurological signs from 2,4-D or paraquat exposure may develop 24-48 hours after ingestion; liver or kidney effects may take days to manifest"
+                ),
+                symptoms: [
+                    "Drooling or excessive salivation",
+                    "Vomiting",
+                    "Diarrhea",
+                    "Loss of appetite",
+                    "Lethargy or depression",
+                    "Eye irritation (if direct contact)",
+                    "Skin irritation or redness",
+                    "Weakness, particularly in hind legs",
+                    "Incoordination or difficulty walking",
+                    "Muscle twitching or stiffness",
+                    "Seizures (severe or paraquat exposure)",
+                    "Difficulty breathing (paraquat exposure)"
+                ],
+                speciesRisks: [
+                    SpeciesRisk(species: .dog, severity: .moderate, notes: "Most common exposure through eating grass or licking paws; most products cause only GI upset unless large amounts consumed"),
+                    SpeciesRisk(species: .cat, severity: .moderate, notes: "Exposure through grooming after walking on treated areas; less likely to eat grass but still at risk"),
+                    SpeciesRisk(species: .smallMammal, severity: .high, notes: "Rabbits and guinea pigs may consume treated grass or vegetation; smaller body size increases risk"),
+                    SpeciesRisk(species: .bird, severity: .high, notes: "May consume treated seeds or forage on treated lawns; more sensitive to toxic effects"),
+                    SpeciesRisk(species: .reptile, severity: .moderate, notes: "Risk from contaminated water or prey items; limited direct data available")
+                ],
+                preventionTips: [
+                    "Keep pets off treated lawns until the product has completely dried (typically 24-48 hours)",
+                    "Store all herbicides in original containers in a secure location",
+                    "Read and follow all label directions—many specify when it's safe for pets to re-enter treated areas",
+                    "Rinse your pet's paws after walks if you suspect they've crossed treated areas",
+                    "Consider pet-safe or organic alternatives like vinegar-based herbicides",
+                    "If using a lawn care service, ask about products used and re-entry intervals",
+                    "Never let pets drink from puddles in areas that may have been treated"
+                ],
+                sources: ["Merck Veterinary Manual", "ASPCA Animal Poison Control Center", "Pet Poison Helpline", "PetMD", "National Pesticide Information Center"],
+                relatedEntries: ["c9d0e1f2-3a4b-5c6d-e7f8-9a0b1c2d3e4f"]
             )
         ]
     }
