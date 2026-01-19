@@ -6169,7 +6169,185 @@ class DatabaseService {
                     "dvm360: Benzodiazepines Pros and Cons — Diazepam Hepatotoxicity Data",
                     "Center SA et al: Fulminant hepatic failure associated with oral diazepam in 11 cats. JAVMA 1996"
                 ],
-                relatedEntries: ["dd445566-7788-99aa-bbcc-ddeeff334455"]
+                relatedEntries: ["dd445566-7788-99aa-bbcc-ddeeff334455", "ff667788-99aa-bbcc-ddee-ff0011223355"]
+            ),
+
+            // MARK: - Sleep Aids (Prescription & OTC)
+            ToxicItem(
+                id: UUID(uuidString: "ff667788-99aa-bbcc-ddee-ff0011223355")!,
+                name: "Sleep Aids (Prescription & OTC)",
+                alternateNames: [
+                    // General terms
+                    "sleep aid",
+                    "sleeping pill",
+                    "sleeping pills",
+                    "sleep medicine",
+                    "insomnia medication",
+                    "sedative",
+                    "hypnotic",
+                    "Z-drug",
+
+                    // ZOLPIDEM (most common prescription)
+                    "zolpidem",
+                    "Ambien",
+                    "Ambien CR",
+                    "Edluar",
+                    "Intermezzo",
+                    "Zolpimist",
+
+                    // ESZOPICLONE
+                    "eszopiclone",
+                    "Lunesta",
+
+                    // ZALEPLON
+                    "zaleplon",
+                    "Sonata",
+
+                    // DIPHENHYDRAMINE (OTC - most common)
+                    "diphenhydramine",
+                    "Benadryl",
+                    "ZzzQuil",
+                    "Sominex",
+                    "Nytol",
+                    "Unisom SleepGels",
+                    "Simply Sleep",
+                    "Compoz",
+                    "Sleep-eze",
+                    "Sleepinal",
+                    "Banophen",
+                    "Diphenhist",
+                    "Vetadryl",
+                    "Genahist",
+
+                    // COMBINATION PRODUCTS (DANGEROUS - other active ingredients!)
+                    "Tylenol PM",
+                    "Advil PM",
+                    "Excedrin PM",
+                    "Aleve PM",
+                    "Motrin PM",
+                    "NyQuil",
+                    "ZzzQuil PURE Zzzs",
+
+                    // DOXYLAMINE
+                    "doxylamine",
+                    "Unisom SleepTabs",
+                    "Unisom",
+                    "Restavit",
+
+                    // DIMENHYDRINATE (related)
+                    "dimenhydrinate",
+                    "Dramamine",
+
+                    // Common search terms
+                    "dog ate Ambien",
+                    "dog ate sleeping pill",
+                    "cat ate Ambien",
+                    "dog ate Benadryl",
+                    "dog ate ZzzQuil",
+                    "dog ate Tylenol PM",
+                    "pet ate sleep medication",
+                    "dog ate Lunesta",
+                    "dog ate Unisom"
+                ],
+                categories: [.medications],
+                imageAsset: "sleep_aids",
+                description: "Sleep aids include prescription \"Z-drugs\" like zolpidem (Ambien), eszopiclone (Lunesta), and zaleplon (Sonata), as well as over-the-counter antihistamine products containing diphenhydramine (ZzzQuil, Benadryl, Sominex) or doxylamine (Unisom SleepTabs). While these drugs cause sedation in humans, pets — especially dogs — often have the OPPOSITE reaction. PARADOXICAL STIMULATION: Up to 40-50% of dogs ingesting sleep aids develop CNS stimulation (hyperactivity, agitation, aggression) rather than sedation. This is important for owners to understand — your pet becoming \"hyper\" does NOT mean they are fine. CRITICAL — Check the Label: Many sleep aids combine diphenhydramine with other drugs: Tylenol PM = diphenhydramine + ACETAMINOPHEN (very dangerous to cats); Advil PM = diphenhydramine + IBUPROFEN (can cause kidney injury); NyQuil = may contain acetaminophen, dextromethorphan, and other ingredients. Always identify the EXACT product your pet ingested and report ALL active ingredients to your veterinarian or poison control.",
+                toxicityInfo: "Z-Drugs (Zolpidem, Eszopiclone, Zaleplon): These non-benzodiazepine hypnotics work by potentiating GABA transmission, similar to benzodiazepines. They increase the frequency of chloride channel opening, resulting in inhibition of neuronal excitation. Despite causing sedation in humans, 40-50% of dogs develop paradoxical CNS stimulation instead. Signs typically appear within 30-60 minutes and usually resolve within 12-24 hours. Prognosis is generally excellent with supportive care. OTC Antihistamines (Diphenhydramine, Doxylamine): These first-generation antihistamines block H1 receptors and cross the blood-brain barrier, causing sedation. They also have significant anticholinergic effects (blocking acetylcholine), which can cause dry mouth, urinary retention, increased heart rate, dilated pupils, and at high doses, hallucinations, seizures, and hyperthermia. Young animals may be more prone to stimulant effects, while adults may show more depression. Cats can experience paradoxical excitement. Why Paradoxical Stimulation Occurs: The mechanism is not fully understood, but pets — particularly healthy, non-geriatric dogs — may experience agitation, hyperactivity, vocalization, and aggression rather than sedation. This does NOT mean the pet is unaffected; veterinary evaluation is still warranted.",
+                onsetTime: OnsetTime(
+                    early: "Z-drugs: Signs typically appear within 30-60 minutes of ingestion due to rapid oral absorption. Diphenhydramine: Effects typically begin within 30 minutes to 2 hours.",
+                    delayed: "Z-drugs: Signs generally resolve within 12-24 hours. Diphenhydramine: Effects usually resolve within 8-12 hours but may last longer with large doses or in pets with liver/kidney disease. If combination products were ingested (e.g., Tylenol PM), watch for delayed signs of acetaminophen or NSAID toxicity over 24-72 hours."
+                ),
+                symptoms: [
+                    // CNS Depression (expected but not always seen)
+                    "Sedation or drowsiness",
+                    "Lethargy",
+                    "Ataxia (wobbly, uncoordinated gait)",
+                    "Weakness",
+                    "Disorientation",
+                    "Respiratory depression (slow or shallow breathing)",
+                    "Coma (severe cases)",
+
+                    // CNS Stimulation (PARADOXICAL - 40-50% of dogs!)
+                    "Hyperactivity or restlessness",
+                    "Agitation",
+                    "Anxiety",
+                    "Aggression",
+                    "Panting",
+                    "Vocalization",
+                    "Tremors",
+                    "Muscle twitching",
+                    "Seizures (with significant overdose)",
+
+                    // GI Signs
+                    "Vomiting",
+                    "Nausea",
+                    "Diarrhea",
+                    "Drooling (hypersalivation)",
+
+                    // Anticholinergic Effects (especially diphenhydramine)
+                    "Dry mouth",
+                    "Dilated pupils (mydriasis)",
+                    "Rapid heart rate (tachycardia)",
+                    "Urinary retention (difficulty urinating)",
+                    "Constipation",
+
+                    // Cardiovascular
+                    "Low blood pressure (hypotension)",
+                    "High blood pressure (hypertension)",
+                    "Cardiac arrhythmias",
+
+                    // Other
+                    "Hyperthermia (elevated body temperature)",
+                    "Hypothermia (low body temperature)"
+                ],
+                speciesRisks: [
+                    SpeciesRisk(
+                        species: .dog,
+                        severity: .moderate,
+                        notes: "Dogs frequently develop paradoxical CNS stimulation (40-50%) rather than sedation — agitation, hyperactivity, aggression, and tremors may occur instead of drowsiness. Healthy, non-geriatric adults are most prone to this reaction. Prognosis is generally excellent with appropriate supportive care. CRITICAL: If the product contains acetaminophen (Tylenol PM) or ibuprofen (Advil PM), the risk is significantly higher."
+                    ),
+                    SpeciesRisk(
+                        species: .cat,
+                        severity: .high,
+                        notes: "Cats can also experience paradoxical excitement. More importantly, many combination sleep aids contain ACETAMINOPHEN (Tylenol PM, some NyQuil products), which is extremely toxic to cats and can cause fatal methemoglobinemia and liver failure. Always verify the product does NOT contain acetaminophen before assuming 'sleep aid' toxicity only. Pure diphenhydramine is sometimes used therapeutically in cats but overdose can cause significant signs."
+                    ),
+                    SpeciesRisk(
+                        species: .smallMammal,
+                        severity: .moderate,
+                        notes: "Limited toxicity data available. Small body size increases risk of significant effects. Sedation, ataxia, and anticholinergic effects expected. Contact poison control for species-specific guidance."
+                    ),
+                    SpeciesRisk(
+                        species: .bird,
+                        severity: .moderate,
+                        notes: "Limited data on sleep aid toxicity in birds. Sedation and respiratory depression possible. Contact an avian veterinarian or poison control."
+                    ),
+                    SpeciesRisk(
+                        species: .reptile,
+                        severity: .moderate,
+                        notes: "Very limited data available. Contact an exotic animal veterinarian for guidance."
+                    )
+                ],
+                preventionTips: [
+                    "Store all sleep medications in secure cabinets or drawers — never leave them on nightstands",
+                    "Be extra careful at bedtime when you may be drowsy and more likely to drop pills",
+                    "Pick up any dropped pills immediately — pets investigate quickly",
+                    "Keep purses and bags with medications out of reach (common source of exposure)",
+                    "ALWAYS check the label — know exactly what active ingredients are in your sleep aid",
+                    "Be aware that products like Tylenol PM and Advil PM contain additional drugs beyond diphenhydramine",
+                    "Never give human sleep aids to pets without veterinary guidance",
+                    "If you use weekly pill organizers, store them securely — dogs can chew through plastic",
+                    "Inform house guests and pet sitters about medication safety",
+                    "Consider that some melatonin products contain xylitol, which is toxic to dogs"
+                ],
+                sources: [
+                    "VIN (Veterinary Information Network): Sleep Aid Toxicosis",
+                    "Pet Poison Helpline: Sleep Aids Toxicity",
+                    "Merck Veterinary Manual: Toxicoses from Antidepressants, Anxiolytics, and Sleep Aids",
+                    "ASPCA Animal Poison Control Center: Sleep Aids Safety",
+                    "VCA Animal Hospitals: Diphenhydramine Information",
+                    "FDA Drug Safety Communication: Boxed Warning for Z-drugs (2019)"
+                ],
+                relatedEntries: ["ee556677-8899-aabb-ccdd-eeff00112244", "bb223344-5566-7788-99aa-bbccddeeff11"]
             )
         ]
     }
