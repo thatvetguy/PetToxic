@@ -5984,7 +5984,192 @@ class DatabaseService {
                     "Merck Veterinary Manual: Serotonin Syndrome in Animals",
                     "Pet Poison Helpline: SSRI and SNRI Toxicity in Dogs and Cats"
                 ],
-                relatedEntries: nil
+                relatedEntries: ["ee556677-8899-aabb-ccdd-eeff00112244"]
+            ),
+
+            // MARK: - Benzodiazepines (Anti-Anxiety & Sleep Medications)
+            ToxicItem(
+                id: UUID(uuidString: "ee556677-8899-aabb-ccdd-eeff00112244")!,
+                name: "Benzodiazepines (Anti-Anxiety & Sleep Medications)",
+                alternateNames: [
+                    // General terms
+                    "benzodiazepine",
+                    "benzo",
+                    "benzos",
+                    "tranquilizer",
+                    "anti-anxiety medication",
+                    "anxiety medication",
+                    "sleep medication",
+                    "sleeping pill",
+                    "sedative",
+
+                    // ALPRAZOLAM (most common, high-potency)
+                    "alprazolam",
+                    "Xanax",
+                    "Xanax XR",
+                    "Niravam",
+
+                    // DIAZEPAM (classic; hepatotoxic in cats)
+                    "diazepam",
+                    "Valium",
+                    "Diastat",
+                    "Valtoco",
+                    "Diazepam Intensol",
+
+                    // LORAZEPAM
+                    "lorazepam",
+                    "Ativan",
+                    "Loreev",
+                    "Loreev XR",
+
+                    // CLONAZEPAM
+                    "clonazepam",
+                    "Klonopin",
+
+                    // TEMAZEPAM
+                    "temazepam",
+                    "Restoril",
+
+                    // TRIAZOLAM
+                    "triazolam",
+                    "Halcion",
+
+                    // MIDAZOLAM
+                    "midazolam",
+                    "Versed",
+                    "Nayzilam",
+                    "Seizalam",
+
+                    // CHLORDIAZEPOXIDE
+                    "chlordiazepoxide",
+                    "Librium",
+
+                    // OXAZEPAM
+                    "oxazepam",
+                    "Serax",
+
+                    // CLORAZEPATE
+                    "clorazepate",
+                    "Tranxene",
+
+                    // FLURAZEPAM
+                    "flurazepam",
+                    "Dalmane",
+
+                    // ESTAZOLAM
+                    "estazolam",
+                    "ProSom",
+
+                    // CLOBAZAM
+                    "clobazam",
+                    "Onfi",
+                    "Sympazan",
+
+                    // QUAZEPAM
+                    "quazepam",
+                    "Doral",
+
+                    // Common search terms
+                    "dog ate Xanax",
+                    "dog ate Valium",
+                    "cat ate Xanax",
+                    "dog ate anxiety medication",
+                    "pet ate sleeping pill",
+                    "dog got into Klonopin",
+                    "cat ate benzodiazepine"
+                ],
+                categories: [.medications],
+                imageAsset: "benzodiazepines",
+                description: "Benzodiazepines are a class of prescription medications used to treat anxiety, insomnia, seizures, and muscle spasms in both humans and animals. Common examples include alprazolam (Xanax®), diazepam (Valium®), lorazepam (Ativan®), and clonazepam (Klonopin®).\n\nWhile benzodiazepines generally have a wider margin of safety than many other human medications, significant toxicity can still occur, particularly with large ingestions or in smaller pets.\n\n⚠️ **Cat Warning:** Oral diazepam (Valium®) has been associated with acute, potentially fatal liver failure in cats. Deaths have occurred as early as 5 days after starting the medication, even at therapeutic doses. If a cat ingests diazepam, immediate veterinary evaluation is essential.\n\n⚠️ **Paradoxical Excitation:** Instead of becoming sedated, some animals (especially healthy, non-geriatric dogs) may become agitated, excited, or aggressive after benzodiazepine exposure.",
+                toxicityInfo: "Benzodiazepines work by enhancing the effects of gamma-aminobutyric acid (GABA), the primary inhibitory neurotransmitter in the brain. This produces sedation, muscle relaxation, and anticonvulsant effects.\n\n**CNS Depression:** The primary effect of benzodiazepine overdose is central nervous system depression. Animals become sedated, ataxic (uncoordinated), weak, and disoriented. In severe cases, respiratory depression and cardiovascular depression (low blood pressure, slow heart rate) can develop.\n\n**Paradoxical Excitation:** Rather than sedation, some animals experience the opposite effect — agitation, vocalization, excitement, aggression, and muscle fasciculations. This is most common in healthy, non-geriatric adult dogs and cats. In aggressive animals, benzodiazepine-induced disinhibition may trigger aggressive episodes.\n\n**Hepatotoxicity (Cats):** Oral diazepam has been associated with acute hepatic necrosis in cats. Reports describe fulminant liver failure with clinical signs appearing as early as 5 days after beginning daily administration, with death occurring within 24 hours despite aggressive treatment. The exact mechanism is unknown. Lorazepam and oxazepam appear safer for cats.\n\n**Species Differences:** Cats metabolize benzodiazepines primarily through glucuronidation, which may contribute to their increased susceptibility to adverse effects. Diazepam and clorazepate have active metabolites, resulting in longer duration of clinical signs.",
+                onsetTime: OnsetTime(
+                    early: "Signs typically begin within 10-30 minutes of ingestion. Most benzodiazepines are rapidly absorbed from the GI tract.",
+                    delayed: "Signs may persist for many hours to days depending on the specific benzodiazepine. Diazepam and clorazepate have active metabolites that prolong effects. For diazepam hepatotoxicity in cats, liver enzyme elevations may occur within 3-5 days of starting oral administration."
+                ),
+                symptoms: [
+                    // CNS Depression (most common)
+                    "Sedation or excessive sleepiness",
+                    "Ataxia (incoordination, wobbly gait)",
+                    "Weakness",
+                    "Disorientation or confusion",
+                    "Depression or lethargy",
+                    "Recumbency (inability to stand)",
+
+                    // Paradoxical Excitation (can occur instead of sedation)
+                    "Agitation or restlessness",
+                    "Vocalization",
+                    "Excitement or hyperactivity",
+                    "Aggression",
+                    "Muscle fasciculations or twitching",
+
+                    // Cardiovascular/Respiratory
+                    "Respiratory depression (slow or shallow breathing)",
+                    "Low blood pressure (hypotension)",
+                    "Slow heart rate (bradycardia) or fast heart rate (tachycardia)",
+                    "Hypothermia (low body temperature)",
+
+                    // GI Signs
+                    "Vomiting",
+                    "Nausea",
+                    "Drooling (hypersalivation)",
+                    "Diarrhea",
+
+                    // Other
+                    "Small pupils (miosis)",
+                    "Memory impairment",
+                    "Hyperphagia (increased appetite)",
+
+                    // Severe (rare in acute overdose)
+                    "Tremors",
+                    "Seizures (more common with withdrawal than overdose)",
+                    "Coma"
+                ],
+                speciesRisks: [
+                    SpeciesRisk(
+                        species: .dog,
+                        severity: .moderate,
+                        notes: "Dogs generally tolerate benzodiazepine exposure well, with most cases involving sedation and ataxia that resolve with supportive care. Paradoxical excitation (agitation, aggression) is common in healthy, non-geriatric adults when benzodiazepines are given alone. Clorazepate has been associated with hepatotoxicity in dogs with long-term use. Tolerance and physical dependence can develop with chronic exposure."
+                    ),
+                    SpeciesRisk(
+                        species: .cat,
+                        severity: .high,
+                        notes: "Cats are more susceptible to benzodiazepine adverse effects due to glucuronidation metabolism. CRITICAL: Oral diazepam (Valium®) has caused acute, fatal hepatic necrosis in cats — deaths reported as early as 5 days after starting, with rapid deterioration within 24 hours. Lorazepam and oxazepam appear safer alternatives. Paradoxical excitation can also occur. All cat exposures warrant veterinary evaluation."
+                    ),
+                    SpeciesRisk(
+                        species: .smallMammal,
+                        severity: .moderate,
+                        notes: "Limited toxicity data in small mammals. Small body size increases risk of significant effects. Sedation and ataxia expected. Contact poison control for species-specific guidance."
+                    ),
+                    SpeciesRisk(
+                        species: .bird,
+                        severity: .moderate,
+                        notes: "Benzodiazepines are sometimes used therapeutically in birds. Toxicity data is limited. Sedation, ataxia, and respiratory depression possible. Contact an avian veterinarian or poison control."
+                    ),
+                    SpeciesRisk(
+                        species: .reptile,
+                        severity: .moderate,
+                        notes: "Benzodiazepines are occasionally used in reptile medicine. Flumazenil reversal has been documented in reptiles (0.05 mg/kg IM/SQ). Limited overdose data available. Contact an exotic animal veterinarian for guidance."
+                    )
+                ],
+                preventionTips: [
+                    "Store all prescription medications in secure cabinets or drawers out of pet reach",
+                    "Use weekly pill organizers with secure lids, and store them in closed cabinets",
+                    "Never leave loose pills on counters, nightstands, or in open purses",
+                    "Pick up dropped pills immediately — pets are quick to investigate",
+                    "Be especially careful with Xanax and Valium, which are among the most commonly ingested benzodiazepines",
+                    "Inform house guests and pet sitters about medication safety",
+                    "If your cat is prescribed diazepam (Valium), discuss the hepatotoxicity risk with your veterinarian and monitor for signs of liver problems (vomiting, lethargy, jaundice)",
+                    "Do not abruptly stop benzodiazepines in pets receiving chronic therapy — withdrawal can cause seizures"
+                ],
+                sources: [
+                    "VIN (Veterinary Information Network): Benzodiazepine Class Monograph",
+                    "Merck Veterinary Manual: Toxicoses from Antidepressants, Anxiolytics, and Sleep Aids",
+                    "Pet Poison Helpline: Benzodiazepines Toxicity",
+                    "ASPCA Animal Poison Control Center: Human Prescription Medications",
+                    "dvm360: Benzodiazepines Pros and Cons — Diazepam Hepatotoxicity Data",
+                    "Center SA et al: Fulminant hepatic failure associated with oral diazepam in 11 cats. JAVMA 1996"
+                ],
+                relatedEntries: ["dd445566-7788-99aa-bbcc-ddeeff334455"]
             )
         ]
     }
