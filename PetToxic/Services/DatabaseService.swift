@@ -4940,6 +4940,193 @@ class DatabaseService {
                 ],
                 sources: ["Veterinary Information Network (VIN)", "ASPCA Animal Poison Control Center", "Merck Veterinary Manual", "Pet Poison Helpline", "MSD Veterinary Manual"],
                 relatedEntries: nil
+            ),
+
+            // MARK: - Automatic Dishwasher Detergent
+            ToxicItem(
+                id: UUID(uuidString: "44556677-8899-aabb-ccdd-eeff00112233")!,
+                name: "Automatic Dishwasher Detergent",
+                alternateNames: [
+                    "Dishwasher detergent",
+                    "Dishwasher soap",
+                    "Dishwasher pods",
+                    "Dishwasher tablets",
+                    "Dishwasher pacs",
+                    "Cascade",
+                    "Finish",
+                    "Finish Powerball",
+                    "Cascade Platinum",
+                    "Cascade ActionPacs",
+                    "Electrasol",
+                    "Electric dishwasher detergent",
+                    "Machine dishwasher soap",
+                    "Dishwasher powder",
+                    "Rinse aid"
+                ],
+                categories: [.cleaningProducts],
+                imageAsset: "dishwasher_detergent",
+                description: "Automatic dishwasher detergent is fundamentally different from the mild dish soap used for hand-washing dishes. While hand dish soap contains gentle anionic surfactants, automatic dishwasher detergents are highly alkaline (pH often greater than 11) and can cause corrosive burns similar to drain cleaners. This is one of the most important distinctions pet owners need to understand: the 'dish soap' on your counter for hand-washing is low toxicity, but the detergent in your dishwasher (whether powder, gel, or pod) is a caustic product that can cause serious injury. Dishwasher pods are particularly concerning because their bright colors and compact size make them attractive to pets.",
+                toxicityInfo: "Automatic dishwasher detergents have a pH greater than 11, placing them in the same caustic/corrosive category as drain cleaners and oven cleaners. At this pH, the product can cause liquefactive necrosis—deep, penetrating burns to the mouth, esophagus, and stomach. Unlike acidic products that cause immediate pain (limiting how much is consumed), alkaline products may not cause pain on initial contact, allowing pets to swallow more before showing distress. The full extent of tissue damage may not be apparent for up to 12 hours. Dishwasher pods pose additional risks: they are attractively colored, fit easily in a pet's mouth, and when bitten, the pressurized contents can be forcefully expelled and aspirated into the lungs. Do NOT induce vomiting after dishwasher detergent ingestion—this re-exposes damaged tissue to the caustic material.",
+                onsetTime: OnsetTime(
+                    early: "Drooling and oral discomfort may appear within minutes; alkaline burns may initially cause little pain despite significant injury",
+                    delayed: "Full extent of tissue damage may not be apparent for 12 hours; esophageal strictures can develop weeks later"
+                ),
+                symptoms: [
+                    "Hypersalivation (drooling)",
+                    "Pawing at mouth",
+                    "Difficulty swallowing (dysphagia)",
+                    "Refusal to eat",
+                    "Vomiting (may contain blood)",
+                    "Oral redness, swelling, or ulceration",
+                    "White or gray lesions in mouth",
+                    "Abdominal pain",
+                    "Lethargy or depression",
+                    "Fever (may accompany oral inflammation)",
+                    "Coughing or difficulty breathing (if aspirated—seek immediate veterinary care)",
+                    "Eye irritation or injury (if splashed in eyes)"
+                ],
+                speciesRisks: [
+                    SpeciesRisk(species: .dog, severity: .high, notes: "Caustic burns to mouth, esophagus, and stomach possible; dogs may bite into pods or lick residue from open dishwashers; do NOT induce vomiting"),
+                    SpeciesRisk(species: .cat, severity: .high, notes: "Same caustic risk as dogs; cats may walk through spills and ingest during grooming; less likely to bite pods but still at risk"),
+                    SpeciesRisk(species: .smallMammal, severity: .high, notes: "Small body size makes any exposure serious; caustic burns can be rapidly life-threatening"),
+                    SpeciesRisk(species: .bird, severity: .severe, notes: "Crop and esophageal burns can be fatal; respiratory system extremely sensitive to any aspirated material; immediate veterinary care essential"),
+                    SpeciesRisk(species: .reptile, severity: .high, notes: "Caustic injury affects all species; contact with oral mucosa requires immediate veterinary evaluation")
+                ],
+                preventionTips: [
+                    "Store dishwasher detergent in a locked cabinet—this product is caustic, not just an irritant",
+                    "Never leave dishwasher pods where pets can reach them; their bright colors make them attractive",
+                    "Keep the dishwasher door closed; pets may lick detergent residue from racks or the door",
+                    "Understand the difference: hand dish soap (Dawn, Palmolive) = low toxicity; automatic dishwasher detergent = caustic",
+                    "If ingestion occurs, do NOT induce vomiting; contact your veterinarian immediately"
+                ],
+                sources: ["Veterinary Information Network (VIN)", "ASPCA Animal Poison Control Center", "Merck Veterinary Manual", "Pet Poison Helpline"],
+                relatedEntries: ["11223344-5566-7788-99aa-bbccddeeff00", "33445566-7788-99aa-bbcc-ddeeff001122"]
+            ),
+
+            // MARK: - Laundry Detergent Pods
+            ToxicItem(
+                id: UUID(uuidString: "55667788-99aa-bbcc-ddee-ff0011223344")!,
+                name: "Laundry Detergent Pods",
+                alternateNames: [
+                    "Laundry pods",
+                    "Detergent pods",
+                    "Laundry pacs",
+                    "Laundry packets",
+                    "Tide Pods",
+                    "Tide Pacs",
+                    "Gain Flings",
+                    "All Mighty Pacs",
+                    "Arm & Hammer pods",
+                    "Persil discs",
+                    "Single-use laundry detergent",
+                    "Laundry capsules",
+                    "Concentrated laundry detergent",
+                    "Laundry sachets"
+                ],
+                categories: [.cleaningProducts],
+                imageAsset: "laundry_pods",
+                description: "Laundry detergent pods are single-use packets containing highly concentrated liquid detergent. While traditional liquid or powder laundry detergent typically causes only mild gastrointestinal upset if ingested, pods pose significantly greater risks. The concentrated formula, combined with the pressure inside the sealed pod, creates a dangerous situation when a pet bites into one: the contents can be forcefully expelled into the mouth and airway, leading to aspiration into the lungs. Dogs account for over 90% of pod poisoning cases, likely because they tend to bite down on objects with force. The bright colors and toy-like appearance of pods make them particularly attractive to curious pets.",
+                toxicityInfo: "Laundry pods contain the same types of anionic and nonionic surfactants found in traditional laundry detergent, but in a much more concentrated form. When a pet bites a pod, two factors combine to increase danger: first, the concentrated detergent causes more severe irritation than diluted product; second, the pressurized contents burst out forcefully and can be aspirated into the lungs or swallowed in large amounts before the pet can spit it out. According to Pet Poison Helpline data, dogs exposed to laundry pods are nearly twice as likely to develop vomiting and coughing compared to those exposed to traditional laundry detergent. Approximately 20% of symptomatic pets develop respiratory signs including coughing, wheezing, and difficulty breathing. Aspiration pneumonia is the most serious complication. Ingestion of multiple pods also creates a risk of foreign body obstruction from the plastic casings.",
+                onsetTime: OnsetTime(
+                    early: "Vomiting, drooling, and oral irritation typically begin within minutes of biting into a pod",
+                    delayed: "Respiratory symptoms (coughing, wheezing, difficulty breathing) may develop over 12-24 hours as aspiration pneumonia progresses"
+                ),
+                symptoms: [
+                    "Profuse vomiting",
+                    "Hypersalivation (drooling)",
+                    "Pawing at mouth",
+                    "Gagging or retching",
+                    "Decreased appetite",
+                    "Lethargy",
+                    "Coughing",
+                    "Wheezing",
+                    "Difficulty breathing (dyspnea)",
+                    "Rapid breathing",
+                    "Eye irritation (if splashed in eyes)",
+                    "Skin irritation (if on fur)",
+                    "Diarrhea"
+                ],
+                speciesRisks: [
+                    SpeciesRisk(species: .dog, severity: .high, notes: "Dogs account for >90% of pod poisonings; tendency to bite with force causes pressurized release; ~20% develop respiratory symptoms; monitor for aspiration pneumonia"),
+                    SpeciesRisk(species: .cat, severity: .moderate, notes: "Less likely to bite into pods than dogs (~7% of cases); more likely to be exposed by walking through spills and grooming; monitor for respiratory signs"),
+                    SpeciesRisk(species: .smallMammal, severity: .high, notes: "Small body size increases impact of concentrated detergent; respiratory system vulnerable to aspiration; prompt veterinary care recommended"),
+                    SpeciesRisk(species: .bird, severity: .severe, notes: "Extremely sensitive respiratory system; any aspiration can be rapidly fatal; immediate veterinary care essential if exposure suspected"),
+                    SpeciesRisk(species: .reptile, severity: .moderate, notes: "Limited data; GI irritation expected; less risk of aspiration compared to mammals and birds")
+                ],
+                preventionTips: [
+                    "Store laundry pods in a closed, secure container on a high shelf or in a locked cabinet",
+                    "Never leave pods on top of the washing machine or in open containers—their bright colors attract pets",
+                    "Keep laundry room doors closed if pods are accessible",
+                    "If a pod falls on the floor, pick it up immediately—don't assume your pet won't be interested",
+                    "Consider using traditional liquid or powder detergent if you have curious pets who get into things",
+                    "If your pet bites into a pod, contact your veterinarian even if symptoms seem mild—respiratory problems can develop hours later"
+                ],
+                sources: ["Veterinary Information Network (VIN)", "ASPCA Animal Poison Control Center", "Pet Poison Helpline", "Merck Veterinary Manual", "Journal of Veterinary Emergency and Critical Care (Handley & Hovda, 2021)"],
+                relatedEntries: ["11223344-5566-7788-99aa-bbccddeeff00", "44556677-8899-aabb-ccdd-eeff00112233"]
+            ),
+
+            // MARK: - Toilet Bowl Cleaners
+            ToxicItem(
+                id: UUID(uuidString: "66778899-aabb-ccdd-eeff-001122334455")!,
+                name: "Toilet Bowl Cleaners",
+                alternateNames: [
+                    "Toilet cleaner",
+                    "Toilet bowl cleaner",
+                    "Toilet bowl drop-in",
+                    "Toilet tank tablet",
+                    "Toilet puck",
+                    "Lysol Toilet Bowl Cleaner",
+                    "Clorox Toilet Bowl Cleaner",
+                    "The Works toilet cleaner",
+                    "Lime-A-Way",
+                    "Kaboom",
+                    "Scrubbing Bubbles",
+                    "2000 Flushes",
+                    "Vanish drop-in",
+                    "Blue toilet tablets",
+                    "Toilet freshener",
+                    "Acidic toilet cleaner",
+                    "Hydrochloric acid cleaner"
+                ],
+                categories: [.cleaningProducts],
+                imageAsset: "toilet_cleaner",
+                description: "Toilet bowl cleaners are a variable hazard because they can be either strongly acidic OR strongly alkaline, depending on the product. Acidic cleaners (often containing hydrochloric acid or phosphoric acid) are designed to remove mineral deposits and rust stains. Alkaline cleaners (containing sodium hypochlorite or sodium hydroxide) are designed for disinfection and organic stain removal. Both types can cause corrosive burns in concentrated form. Toilet tank drop-ins and tablets are a common source of exposure—pets drink from toilet bowls, and while the diluted water usually causes only mild GI upset, some pets chew on or swallow the tablets themselves, which are much more concentrated and dangerous.",
+                toxicityInfo: "The danger of toilet bowl cleaners depends on whether the product is acidic or alkaline, its concentration, and whether the pet ingested diluted toilet water or the concentrated product itself. Acidic toilet cleaners (pH <3.5) cause coagulative necrosis and immediate pain on contact—this pain often limits how much is consumed but can still cause serious burns. Alkaline toilet cleaners (pH >11) cause liquefactive necrosis that penetrates deeply into tissue; they may cause little initial pain, allowing larger ingestions. If a pet drinks from a toilet bowl containing a dissolved drop-in tablet, the diluted solution typically causes only mild GI upset. However, if a pet chews on or swallows an undissolved tablet or drinks undiluted cleaner left in the bowl, corrosive injury to the mouth, esophagus, and stomach is possible. Some toilet cleaners also contain bleach (sodium hypochlorite) or cationic detergents, adding additional toxic mechanisms.",
+                onsetTime: OnsetTime(
+                    early: "Acidic products: immediate pain, vocalization, drooling; Alkaline products: may have delayed pain despite tissue damage occurring",
+                    delayed: "Full extent of alkaline burns may not be apparent for 12 hours; esophageal strictures can develop weeks later with severe burns"
+                ),
+                symptoms: [
+                    "Hypersalivation (drooling)",
+                    "Vocalization or crying (pain—especially with acidic products)",
+                    "Pawing at mouth",
+                    "Vomiting (may contain blood)",
+                    "Diarrhea",
+                    "Refusal to eat or drink",
+                    "Difficulty swallowing",
+                    "Oral redness, ulceration, or burns",
+                    "White, gray, or black lesions in mouth (corrosive burns)",
+                    "Abdominal pain",
+                    "Lethargy",
+                    "Blue or colored staining around mouth (if product contained dye)"
+                ],
+                speciesRisks: [
+                    SpeciesRisk(species: .dog, severity: .high, notes: "Dogs commonly drink from toilets; diluted water causes mild GI upset, but concentrated product or tablets can cause corrosive burns; do NOT induce vomiting"),
+                    SpeciesRisk(species: .cat, severity: .high, notes: "Cats also drink from toilets; same corrosive risk as dogs with concentrated products; may be attracted to blue dye in some products"),
+                    SpeciesRisk(species: .smallMammal, severity: .high, notes: "Small body size makes any corrosive exposure serious; seek veterinary care promptly"),
+                    SpeciesRisk(species: .bird, severity: .severe, notes: "Corrosive injury to crop and esophagus can be fatal; birds should never have access to bathrooms"),
+                    SpeciesRisk(species: .reptile, severity: .high, notes: "Corrosive injury possible; limited data on specific effects")
+                ],
+                preventionTips: [
+                    "Keep toilet lids closed at all times if your pet drinks from the toilet",
+                    "If using drop-in tablets, ensure pets cannot access the toilet bowl",
+                    "Store toilet bowl cleaners in locked cabinets—both acidic and alkaline products are corrosive",
+                    "Never leave cleaner sitting in the bowl; rinse thoroughly after cleaning",
+                    "If your pet chews on a toilet tablet or drinks undiluted cleaner, contact your veterinarian immediately—do NOT induce vomiting",
+                    "Consider using pet-safe toilet cleaning alternatives if keeping pets out of bathrooms is difficult"
+                ],
+                sources: ["Veterinary Information Network (VIN)", "ASPCA Animal Poison Control Center", "Merck Veterinary Manual", "Pet Poison Helpline", "MSD Veterinary Manual"],
+                relatedEntries: ["22334455-6677-8899-aabb-ccddeeff0011", "33445566-7788-99aa-bbcc-ddeeff001122"]
             )
         ]
     }
