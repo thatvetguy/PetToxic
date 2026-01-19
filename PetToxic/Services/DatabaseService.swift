@@ -6148,7 +6148,7 @@ class DatabaseService {
                     SpeciesRisk(
                         species: .reptile,
                         severity: .moderate,
-                        notes: "Benzodiazepines are occasionally used in reptile medicine. Flumazenil reversal has been documented in reptiles (0.05 mg/kg IM/SQ). Limited overdose data available. Contact an exotic animal veterinarian for guidance."
+                        notes: "Benzodiazepines are occasionally used in reptile medicine. Limited overdose data available. Contact an exotic animal veterinarian for guidance."
                     )
                 ],
                 preventionTips: [
