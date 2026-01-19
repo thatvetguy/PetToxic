@@ -4689,6 +4689,62 @@ class DatabaseService {
                 ],
                 sources: ["Veterinary Information Network (VIN)", "ASPCA Animal Poison Control Center", "Journal of Veterinary Emergency and Critical Care", "Pet Poison Helpline"],
                 relatedEntries: nil
+            ),
+
+            // MARK: - Superglue
+            ToxicItem(
+                id: UUID(uuidString: "f2a3b4c5-6d7e-8f9a-0b1c-2d3e4f5a6b7c")!,
+                name: "Superglue",
+                alternateNames: [
+                    "Super glue",
+                    "Cyanoacrylate",
+                    "Cyanoacrylate glue",
+                    "Krazy Glue",
+                    "Crazy Glue",
+                    "Instant glue",
+                    "CA glue",
+                    "Nail glue",
+                    "Eyelash glue",
+                    "Surgical glue",
+                    "Skin glue",
+                    "Loctite",
+                    "Quick bond glue"
+                ],
+                categories: [.householdItems],
+                imageAsset: "superglue",
+                description: "Superglue (cyanoacrylate) is a fast-bonding adhesive found in households, craft supplies, and even medical settings. When pets bite into superglue tubes or get glue on their fur or paws, the glue rapidly hardens upon contact with moisture (including saliva). Once solidified, cyanoacrylate is chemically inert and non-toxic—if swallowed, the hardened glue typically passes through the GI tract without issue. The primary concern is not toxicity but physical adhesion: superglue can bond body parts together, most commonly gluing eyelids shut or adhering the tongue to the roof of the mouth. These situations require veterinary care for safe separation.",
+                toxicityInfo: "Cyanoacrylate glue has very low toxicity. Upon contact with saliva or other moisture, it solidifies almost instantly into an inert, non-absorbable mass. If a pet swallows hardened superglue, it will typically pass through the digestive tract without causing harm. The real danger is mechanical, not chemical: wet glue can bond skin to skin, eyelids shut, lips together, or the tongue to the roof of the mouth. Liquid glue may also cause mild irritation to mucous membranes before it hardens. Importantly, superglue is very different from polyurethane expanding glues (like Gorilla Glue Original)—expanding glues are far more dangerous because they foam and expand in the stomach, requiring surgical removal.",
+                onsetTime: OnsetTime(
+                    early: "Adhesion occurs within seconds of contact with moist tissue; mild oral irritation may be noted immediately",
+                    delayed: "No delayed toxicity expected; hardened glue passes through GI tract over 1-3 days if swallowed"
+                ),
+                symptoms: [
+                    "Pawing at mouth or face",
+                    "Difficulty opening mouth (if tongue or lips adhered)",
+                    "Unable to open eyes (if eyelids glued shut)",
+                    "Drooling",
+                    "Distress or vocalization",
+                    "Gagging (if glue hardens in mouth)",
+                    "Mild oral irritation",
+                    "Fur matting (if glue on coat)",
+                    "Most pets show no symptoms if glue was swallowed after hardening"
+                ],
+                speciesRisks: [
+                    SpeciesRisk(species: .dog, severity: .low, notes: "Low toxicity; main concern is adhesion of eyelids, lips, or tongue; hardened glue passes safely if swallowed"),
+                    SpeciesRisk(species: .cat, severity: .low, notes: "Same low toxicity as dogs; may get glue on paws and transfer to face during grooming; eyelid adhesion possible"),
+                    SpeciesRisk(species: .smallMammal, severity: .moderate, notes: "Low toxicity but small mouth size increases risk of significant adhesion problems; veterinary care recommended if mouth or eyes involved"),
+                    SpeciesRisk(species: .bird, severity: .moderate, notes: "Low toxicity but beak or eye adhesion could impair eating or vision; small body size warrants closer monitoring"),
+                    SpeciesRisk(species: .reptile, severity: .low, notes: "Low toxicity; adhesion to scales or eyes is the primary concern")
+                ],
+                preventionTips: [
+                    "Store superglue in closed drawers or containers—small tubes are easy for pets to chew",
+                    "Work with superglue in areas where pets cannot access",
+                    "Dispose of used or dried-out glue tubes in covered trash cans",
+                    "Be especially careful with nail glue and eyelash glue, which are often left on countertops",
+                    "Know the difference: superglue (cyanoacrylate) is low toxicity; expanding glues like Gorilla Glue Original are dangerous and require emergency care"
+                ],
+                sources: ["Veterinary Information Network (VIN)", "ASPCA Animal Poison Control Center", "Pet Poison Helpline"],
+                relatedEntries: nil
             )
         ]
     }
