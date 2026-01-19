@@ -5522,7 +5522,7 @@ class DatabaseService {
                     "Inform pet sitters and house guests about medication safety"
                 ],
                 sources: ["VIN Toxicology Resources: NSAID Toxicosis", "ASPCA Animal Poison Control Center: NSAID Statistics and Clinical Data", "Merck Veterinary Manual: NSAID Toxicosis in Animals", "Pet Poison Helpline: Ibuprofen and Naproxen Toxicity", "Veterinary Partner / VCA Hospitals: Ibuprofen Toxicity in Dogs and Cats"],
-                relatedEntries: ["bb223344-5566-7788-99aa-bbccddeeff11"]
+                relatedEntries: ["bb223344-5566-7788-99aa-bbccddeeff11", "cc334455-6677-8899-aabb-ccddeeff2233"]
             ),
 
             // MARK: - Acetaminophen (Tylenol / Paracetamol)
@@ -5662,7 +5662,126 @@ class DatabaseService {
                     "Inform pet sitters and house guests about the danger of acetaminophen to pets"
                 ],
                 sources: ["VIN Toxicology Resources: Acetaminophen Toxicosis", "ASPCA Animal Poison Control Center: Acetaminophen Toxicity", "Merck Veterinary Manual: Acetaminophen Toxicosis", "Pet Poison Helpline: Tylenol Toxicity in Cats and Dogs", "Veterinary Partner / VCA Hospitals: Acetaminophen Toxicity"],
-                relatedEntries: ["aa112233-4455-6677-8899-aabbccddeef0"]
+                relatedEntries: ["aa112233-4455-6677-8899-aabbccddeef0", "cc334455-6677-8899-aabb-ccddeeff2233"]
+            ),
+
+            // MARK: - Aspirin & Salicylates
+            ToxicItem(
+                id: UUID(uuidString: "cc334455-6677-8899-aabb-ccddeeff2233")!,
+                name: "Aspirin & Salicylates",
+                alternateNames: [
+                    // Generic/chemical names
+                    "aspirin", "acetylsalicylic acid", "ASA", "salicylic acid", "salicylate", "salicylates",
+                    "methyl salicylate", "methylsalicylate",
+
+                    // Brand names - US
+                    "Bayer", "Bayer Aspirin", "Bufferin", "Excedrin", "Anacin", "Ecotrin", "St. Joseph Aspirin",
+                    "BC Powder", "Goody's Powder", "Alka-Seltzer", "Ascriptin",
+
+                    // Brand names - International
+                    "Aspro", "Disprin", "Caprin", "Nu-Seals", "Micropirin", "Entrophen",
+
+                    // Bismuth subsalicylate products (IMPORTANT - often overlooked)
+                    "Pepto-Bismol", "Pepto Bismol", "Peptobismol", "pink bismuth",
+                    "Kaopectate", "bismuth subsalicylate", "BSS",
+
+                    // Oil of wintergreen - EXTREMELY DANGEROUS (98% methyl salicylate)
+                    "oil of wintergreen", "wintergreen oil", "wintergreen", "gaultheria oil",
+                    "sweet birch oil", "birch oil", "methyl salicylate oil",
+
+                    // Topical products containing methyl salicylate
+                    "Bengay", "Ben-Gay", "BenGay", "Icy Hot", "IcyHot", "Aspercreme",
+                    "Sportscreme", "Flexall", "Tiger Balm", "Salonpas", "Absorbine Jr",
+                    "Thera-Gesic", "Ultra Strength Bengay", "Muscle Rub", "Deep Heat",
+
+                    // Common misspellings and variations
+                    "aspirn", "asprin", "aspen", "acesal", "asa baby aspirin", "baby aspirin",
+                    "low dose aspirin", "low-dose aspirin", "enteric coated aspirin",
+
+                    // Combination products
+                    "Excedrin Migraine", "Vanquish", "Empirin", "Zorprin", "Measurin",
+                    "Bayer Back & Body", "Excedrin Extra Strength",
+
+                    // Veterinary/historical terms
+                    "aspirin for dogs", "canine aspirin", "pet aspirin"
+                ],
+                categories: [.medications],
+                imageAsset: "aspirin_salicylates",
+                description: "Aspirin and related salicylates are found in many products beyond obvious pain relievers. While aspirin is occasionally prescribed for dogs under veterinary supervision, unsupervised use can cause serious toxicity. Cats are exquisitely sensitive due to slow metabolism. CRITICAL WARNING: Oil of wintergreen contains 98% methyl salicylate—a single teaspoon equals approximately 21 adult aspirin tablets and can be rapidly fatal. Pepto-Bismol (bismuth subsalicylate) is another commonly overlooked source that is toxic to cats.",
+                toxicityInfo: "Dogs: GI ulceration at 50 mg/kg; severe toxicity at 100+ mg/kg. Cats: Toxic at 25 mg/kg; lack glucuronidation pathway so a single 325mg tablet can be fatal. Methyl salicylate (in topical products): Rapidly absorbed through skin/mucous membranes; one teaspoon wintergreen oil ≈ 7,000 mg aspirin. Bismuth subsalicylate (Pepto-Bismol): Each tablespoon contains ~130 mg salicylate; toxic to cats at therapeutic human doses.",
+                onsetTime: OnsetTime(
+                    early: "Oral: 30 minutes–2 hours for initial GI effects. Topical methyl salicylate: Can be absorbed within minutes",
+                    delayed: "Severe toxicity signs (metabolic acidosis, organ damage): 12–24 hours. May see delayed GI ulceration/bleeding 2–5 days post-ingestion"
+                ),
+                symptoms: [
+                    // GI effects (earliest)
+                    "Vomiting (may be bloody or coffee-ground appearance)",
+                    "Nausea and hypersalivation",
+                    "Diarrhea (possibly bloody/melena)",
+                    "Abdominal pain",
+                    "Loss of appetite",
+                    "GI ulceration and bleeding",
+
+                    // Neurological effects
+                    "Restlessness and agitation (early)",
+                    "Disorientation and confusion",
+                    "Ataxia (wobbly gait)",
+                    "Tremors",
+                    "Seizures (severe cases)",
+                    "Depression and lethargy (late)",
+                    "Coma (severe toxicity)",
+
+                    // Metabolic effects
+                    "Hyperthermia (elevated body temperature)",
+                    "Rapid breathing (respiratory alkalosis → metabolic acidosis)",
+                    "Panting",
+                    "Weakness",
+                    "Dehydration",
+
+                    // Hematologic effects
+                    "Prolonged bleeding time",
+                    "Bruising",
+                    "Petechiae (tiny hemorrhages)",
+                    "Anemia from GI blood loss",
+
+                    // Organ damage (severe/delayed)
+                    "Kidney failure (decreased urination, then none)",
+                    "Liver damage",
+                    "Pulmonary edema (difficulty breathing)",
+                    "Bone marrow suppression (with chronic exposure)",
+
+                    // Methyl salicylate specific
+                    "Strong wintergreen odor on breath",
+                    "Rapid onset of severe symptoms"
+                ],
+                speciesRisks: [
+                    SpeciesRisk(species: .dog, severity: .high, notes: "GI ulceration is the primary concern; can occur even at 'therapeutic' doses without food. Dogs lack the ability to safely metabolize aspirin over extended periods. Never give without veterinary guidance."),
+                    SpeciesRisk(species: .cat, severity: .severe, notes: "EXTREMELY DANGEROUS. Cats cannot effectively glucuronidate salicylates—half-life is 38+ hours vs 7.5 hours in dogs. A single 325 mg aspirin can cause severe toxicity. ONE Pepto-Bismol dose can be toxic. Oil of wintergreen is rapidly fatal."),
+                    SpeciesRisk(species: .smallMammal, severity: .severe, notes: "Ferrets, rabbits, guinea pigs—extremely sensitive. Even small doses can cause fatal GI ulceration and metabolic acidosis. Never administer."),
+                    SpeciesRisk(species: .bird, severity: .severe, notes: "Highly toxic; causes severe GI bleeding, kidney failure, and death at very low doses. No safe dose exists for birds."),
+                    SpeciesRisk(species: .reptile, severity: .high, notes: "Limited data but presumed highly sensitive due to slow metabolism. Avoid all salicylate exposure.")
+                ],
+                preventionTips: [
+                    "Store all aspirin products, including Pepto-Bismol and topical muscle rubs, in secure cabinets",
+                    "NEVER give Pepto-Bismol to cats—it contains salicylate that cats cannot metabolize",
+                    "Keep oil of wintergreen completely away from pets—less than a teaspoon can be fatal",
+                    "Dispose of used pain patches and muscle rubs securely—pets may chew discarded products",
+                    "Never apply human topical analgesics (Bengay, Icy Hot) to pets—they will lick it off",
+                    "Don't assume 'baby aspirin' is safe—it's still toxic to cats at any dose",
+                    "If a pet finds and chews a tube of muscle rub, contact poison control immediately",
+                    "Be aware that aspirin is in many combination products (cold medicines, Excedrin, etc.)",
+                    "Never give aspirin to dogs without explicit veterinary dosing instructions",
+                    "Inform pet sitters that common human GI remedies (Pepto-Bismol) are not safe for cats"
+                ],
+                sources: [
+                    "VIN Toxicology Resources: Salicylate Toxicosis in Small Animals",
+                    "ASPCA Animal Poison Control Center: Aspirin and Salicylate Toxicity",
+                    "Merck Veterinary Manual: Aspirin Toxicosis",
+                    "Pet Poison Helpline: Aspirin and Oil of Wintergreen Toxicity",
+                    "Veterinary Partner / VCA Hospitals: Aspirin Use and Toxicity in Dogs and Cats",
+                    "Journal of Veterinary Emergency and Critical Care: Methyl Salicylate Toxicosis"
+                ],
+                relatedEntries: ["aa112233-4455-6677-8899-aabbccddeef0", "bb223344-5566-7788-99aa-bbccddeeff11"]
             )
         ]
     }
