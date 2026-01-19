@@ -4525,6 +4525,170 @@ class DatabaseService {
                 ],
                 sources: ["Veterinary Information Network (VIN)", "ASPCA Animal Poison Control Center", "Pet Poison Helpline", "Merck Veterinary Manual"],
                 relatedEntries: nil
+            ),
+
+            // MARK: - Ice Packs
+            ToxicItem(
+                id: UUID(uuidString: "c9d0e1f2-3a4b-5c6d-7e8f-9a0b1c2d3e4f")!,
+                name: "Ice Packs",
+                alternateNames: [
+                    "Ice pack",
+                    "Gel ice pack",
+                    "Reusable ice pack",
+                    "Cold pack",
+                    "Cold compress",
+                    "Freezer pack",
+                    "Lunch box ice pack",
+                    "Cooler pack",
+                    "Blue ice",
+                    "Soft ice pack",
+                    "Flexible ice pack",
+                    "Instant cold pack",
+                    "Chemical cold pack"
+                ],
+                categories: [.householdItems],
+                imageAsset: "ice_packs",
+                description: "Ice packs are a common source of concern when pets chew into them, but most household ice packs have low toxicity. Reusable gel ice packs typically contain water, cellulose (a starch-based thickener), urea, and propylene glycol. Propylene glycol is much less toxic than ethylene glycol (antifreeze) and generally does not cause serious problems unless consumed in very large quantities. Instant or 'chemical' cold packs that activate when squeezed contain ammonium nitrate, which can cause GI irritation and, rarely, chemical burns. Most ice pack ingestions result in mild GI upset or no symptoms at all.",
+                toxicityInfo: "The primary ingredients in most reusable ice packs—cellulose, urea, and propylene glycol—are of low toxicity in dogs and cats. Propylene glycol can cause mild CNS depression (appearing 'drunk') at high doses, but this is uncommon with typical ice pack exposures. Urea is not a significant concern in monogastric animals like dogs and cats. In most cases, pets that chew into ice packs experience only mild vomiting or no symptoms at all. Instant cold packs containing ammonium nitrate are slightly more concerning—the chemical can cause GI irritation and, in rare cases, mucosal burns if a large amount is ingested. The physical gel material itself may cause mild GI upset but is not absorbed. This is generally a reassurance call for pet owners.",
+                onsetTime: OnsetTime(
+                    early: "Vomiting may occur within a few hours of ingestion, if at all",
+                    delayed: "Symptoms are typically self-limiting; signs of inebriation from propylene glycol are rare but would appear within a few hours"
+                ),
+                symptoms: [
+                    "Vomiting (most common, often mild)",
+                    "Diarrhea (mild)",
+                    "Drooling",
+                    "Loss of appetite (transient)",
+                    "Lethargy (uncommon)",
+                    "Wobbliness or 'drunken' gait (rare, with large propylene glycol ingestion)",
+                    "Most pets show no symptoms at all"
+                ],
+                speciesRisks: [
+                    SpeciesRisk(species: .dog, severity: .low, notes: "Most common species to chew into ice packs; usually only mild GI upset or no symptoms; monitor for vomiting"),
+                    SpeciesRisk(species: .cat, severity: .low, notes: "Less likely to chew ice packs; same low risk profile as dogs"),
+                    SpeciesRisk(species: .smallMammal, severity: .low, notes: "Low toxicity expected; small body size means closer monitoring is prudent"),
+                    SpeciesRisk(species: .bird, severity: .low, notes: "Unlikely exposure; low toxicity if small amount ingested"),
+                    SpeciesRisk(species: .reptile, severity: .low, notes: "Unlikely exposure; limited data but low toxicity expected")
+                ],
+                preventionTips: [
+                    "Store ice packs in the freezer or in closed coolers—don't leave them out where pets can chew on them",
+                    "Discard damaged ice packs that are leaking gel",
+                    "Supervise pets around coolers and lunch boxes containing ice packs",
+                    "Consider using frozen water bottles as a pet-proof alternative to gel packs"
+                ],
+                sources: ["Veterinary Information Network (VIN)", "ASPCA Animal Poison Control Center", "Pet Poison Helpline"],
+                relatedEntries: nil
+            ),
+
+            // MARK: - Sunscreen
+            ToxicItem(
+                id: UUID(uuidString: "d0e1f2a3-4b5c-6d7e-8f9a-0b1c2d3e4f5a")!,
+                name: "Sunscreen",
+                alternateNames: [
+                    "Sunblock",
+                    "Sun lotion",
+                    "Sun cream",
+                    "SPF lotion",
+                    "UV protection",
+                    "Zinc oxide sunscreen",
+                    "Mineral sunscreen",
+                    "Baby sunscreen",
+                    "Sport sunscreen",
+                    "Spray sunscreen",
+                    "Tanning lotion",
+                    "After sun lotion"
+                ],
+                categories: [.householdItems],
+                imageAsset: "sunscreen",
+                description: "Sunscreen ingestion is a common concern when dogs chew on tubes or lick sunscreen off skin. Most sunscreen exposures cause only mild GI upset. However, some sunscreens contain ingredients that can cause more significant effects in large ingestions: zinc oxide (found in mineral/physical sunscreens) can potentially cause zinc toxicity, and salicylates (found in some chemical sunscreens as octisalate or homosalate) are aspirin-related compounds that can cause GI irritation or ulceration at high doses. In practice, most pets that ingest sunscreen vomit, which limits absorption and prevents serious toxicity.",
+                toxicityInfo: "Sunscreen toxicity depends on the specific ingredients and amount ingested. Zinc oxide-based sunscreens could theoretically cause zinc toxicity, but in most cases the product irritates the stomach so much that pets vomit and self-decontaminate before absorbing a toxic dose. Salicylate-containing sunscreens (those with octisalate, homosalate, or other salicylate UV filters) pose a risk of aspirin-like toxicity at high doses—this can cause GI ulceration, but systemic effects (metabolic acidosis, bleeding disorders) typically require very large ingestions. The emollient base of sunscreens can cause mild GI upset, vomiting, and diarrhea. Ingestion of a small amount licked off skin is unlikely to cause problems. Ingestion of a significant portion of a tube warrants veterinary consultation to assess the specific ingredients and amount.",
+                onsetTime: OnsetTime(
+                    early: "Vomiting and GI upset typically occur within a few hours of ingestion",
+                    delayed: "If salicylate toxicity occurs, GI ulceration signs may develop over 1-3 days; zinc toxicity (rare) would show hemolytic signs over 2-4 days"
+                ),
+                symptoms: [
+                    "Vomiting (most common)",
+                    "Diarrhea",
+                    "Drooling",
+                    "Loss of appetite",
+                    "Abdominal discomfort",
+                    "Lethargy",
+                    "Black or tarry stools (indicates GI bleeding—seek veterinary care)",
+                    "Pale gums (rare, with zinc toxicity)",
+                    "Orange or dark urine (rare, with zinc toxicity)"
+                ],
+                speciesRisks: [
+                    SpeciesRisk(species: .dog, severity: .low, notes: "Most commonly affected; usually only GI upset; large ingestions of zinc oxide or salicylate-containing products warrant veterinary consultation"),
+                    SpeciesRisk(species: .cat, severity: .moderate, notes: "Cats are more sensitive to salicylates than dogs; even moderate ingestion warrants veterinary consultation"),
+                    SpeciesRisk(species: .smallMammal, severity: .moderate, notes: "Small body size increases relative dose; veterinary consultation recommended for any significant ingestion"),
+                    SpeciesRisk(species: .bird, severity: .moderate, notes: "Limited data; small body size means even small amounts could be significant"),
+                    SpeciesRisk(species: .reptile, severity: .low, notes: "Unlikely exposure; limited data available")
+                ],
+                preventionTips: [
+                    "Store sunscreen tubes and bottles out of pet reach, especially at the beach or pool",
+                    "Don't leave sunscreen in bags or beach totes accessible to dogs",
+                    "Prevent pets from licking sunscreen off your skin after application—distract them until it absorbs",
+                    "Be especially careful with spray sunscreens around pets to avoid inhalation",
+                    "If using sunscreen on pets (as sometimes recommended for hairless or light-skinned dogs), use only pet-safe products approved by your veterinarian"
+                ],
+                sources: ["Veterinary Information Network (VIN)", "ASPCA Animal Poison Control Center", "Pet Poison Helpline"],
+                relatedEntries: ["a7b8c9d0-1e2f-3a4b-5c6d-7e8f9a0b1c2d"]
+            ),
+
+            // MARK: - Magnets
+            ToxicItem(
+                id: UUID(uuidString: "e1f2a3b4-5c6d-7e8f-9a0b-1c2d3e4f5a6b")!,
+                name: "Magnets",
+                alternateNames: [
+                    "Magnet",
+                    "Rare earth magnet",
+                    "Neodymium magnet",
+                    "Refrigerator magnet",
+                    "Fridge magnet",
+                    "Magnetic toys",
+                    "Magnetic building blocks",
+                    "Magnetic balls",
+                    "Buckyballs",
+                    "Magnetic beads",
+                    "Magnetic jewelry",
+                    "Magnetic clasps"
+                ],
+                categories: [.householdItems],
+                imageAsset: "magnets",
+                description: "Magnet ingestion is a physical hazard rather than a toxicity concern. A single magnet that is swallowed will often pass through the GI tract without incident. However, ingestion of multiple magnets—or a magnet plus a metallic object—creates a serious and potentially life-threatening situation. If two or more magnets are in different loops of intestine, they can attract each other through the intestinal walls, trapping tissue between them. This causes pressure necrosis, leading to tissue death, perforation, and potentially fatal peritonitis. Small, powerful rare earth magnets (neodymium) found in toys, jewelry, and household items are particularly dangerous because of their strong attractive force.",
+                toxicityInfo: "Magnets do not cause chemical toxicity—the danger is purely mechanical. When multiple magnets (or a magnet and a metal object) are swallowed, they may attract each other while in different sections of the intestine. The tissue caught between them undergoes pressure necrosis, which can lead to perforation within hours to days. This is a surgical emergency. A single magnet is much less concerning and will often pass on its own, though monitoring (and sometimes induced vomiting if recent and the magnet is still in the stomach) is recommended. The strength of rare earth magnets makes them especially hazardous—even small magnets can exert enough force to cause tissue damage. X-rays cannot always distinguish between a single magnet and multiple stacked magnets, so the history of how many magnets are missing is critically important.",
+                onsetTime: OnsetTime(
+                    early: "If multiple magnets attract across bowel walls, signs of abdominal pain may develop within hours",
+                    delayed: "Perforation and peritonitis can develop over 1-3 days; a single magnet may pass without any symptoms over 1-5 days"
+                ),
+                symptoms: [
+                    "Vomiting",
+                    "Loss of appetite",
+                    "Abdominal pain (hunched posture, reluctance to move)",
+                    "Lethargy and depression",
+                    "Diarrhea or absence of stool",
+                    "Fever (if perforation occurs)",
+                    "Abdominal distension",
+                    "Signs of shock (pale gums, rapid heart rate, weakness)",
+                    "Single magnet ingestion may cause no symptoms"
+                ],
+                speciesRisks: [
+                    SpeciesRisk(species: .dog, severity: .high, notes: "High risk if MULTIPLE magnets ingested; single magnet often passes without issue; small dogs at higher risk for obstruction"),
+                    SpeciesRisk(species: .cat, severity: .high, notes: "Same risk as dogs; less likely to ingest magnets but serious if multiple are swallowed"),
+                    SpeciesRisk(species: .smallMammal, severity: .severe, notes: "Small GI tract increases perforation risk; even small magnets can cause obstruction; ferrets are curious and may ingest small objects"),
+                    SpeciesRisk(species: .bird, severity: .severe, notes: "Very high risk due to small body size and delicate GI tract; multiple magnets would likely cause rapid perforation"),
+                    SpeciesRisk(species: .reptile, severity: .high, notes: "Limited data; presumed high risk with multiple magnets due to risk of intestinal trapping")
+                ],
+                preventionTips: [
+                    "Keep magnetic toys, building sets, and craft supplies stored securely away from pets",
+                    "Supervise children playing with magnetic toys—dropped magnets can be quickly grabbed by curious dogs",
+                    "Be aware that some jewelry and bag clasps contain small but powerful magnets",
+                    "If a magnet goes missing during play, search thoroughly before assuming it wasn't ingested",
+                    "If you suspect your pet swallowed magnets, try to determine exactly how many are missing—this information is critical for your veterinarian",
+                    "Rare earth magnets (small, silver, very strong) are more dangerous than traditional ceramic refrigerator magnets"
+                ],
+                sources: ["Veterinary Information Network (VIN)", "ASPCA Animal Poison Control Center", "Journal of Veterinary Emergency and Critical Care", "Pet Poison Helpline"],
+                relatedEntries: nil
             )
         ]
     }
