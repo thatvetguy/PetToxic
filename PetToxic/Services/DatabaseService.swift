@@ -5522,7 +5522,147 @@ class DatabaseService {
                     "Inform pet sitters and house guests about medication safety"
                 ],
                 sources: ["VIN Toxicology Resources: NSAID Toxicosis", "ASPCA Animal Poison Control Center: NSAID Statistics and Clinical Data", "Merck Veterinary Manual: NSAID Toxicosis in Animals", "Pet Poison Helpline: Ibuprofen and Naproxen Toxicity", "Veterinary Partner / VCA Hospitals: Ibuprofen Toxicity in Dogs and Cats"],
-                relatedEntries: nil
+                relatedEntries: ["bb223344-5566-7788-99aa-bbccddeeff11"]
+            ),
+
+            // MARK: - Acetaminophen (Tylenol / Paracetamol)
+            ToxicItem(
+                id: UUID(uuidString: "bb223344-5566-7788-99aa-bbccddeeff11")!,
+                name: "Acetaminophen (Tylenol / Paracetamol)",
+                alternateNames: [
+                    // Generic names
+                    "acetaminophen",
+                    "paracetamol",
+                    "APAP",
+                    "N-acetyl-p-aminophenol",
+                    // Major brand names - US
+                    "Tylenol",
+                    "Tylenol Extra Strength",
+                    "Tylenol PM",
+                    "Tylenol Cold",
+                    "Tylenol Sinus",
+                    "Tylenol Arthritis",
+                    // Combination products with opioids
+                    "Percocet",
+                    "Vicodin",
+                    "Norco",
+                    "Lortab",
+                    "Hydrocodone with acetaminophen",
+                    "Oxycodone with acetaminophen",
+                    "Codeine with acetaminophen",
+                    "Tylenol with Codeine",
+                    "Tylenol #3",
+                    "Tylenol #4",
+                    // Other combination products
+                    "Excedrin",
+                    "Excedrin Migraine",
+                    "Excedrin Tension Headache",
+                    "Midol",
+                    "Midol Complete",
+                    "NyQuil",
+                    "DayQuil",
+                    "Theraflu",
+                    "Mucinex Fast-Max",
+                    "Sudafed PE",
+                    "Robitussin",
+                    "Alka-Seltzer Plus",
+                    "Goody's Powder",
+                    "BC Powder",
+                    "Anacin",
+                    "Vanquish",
+                    "Pamprin",
+                    "Benadryl Allergy Plus",
+                    "Coricidin",
+                    "Contac",
+                    "Dristan",
+                    "Sinutab",
+                    "Actifed",
+                    "Comtrex",
+                    "Feverall",
+                    "Mapap",
+                    "Ofirmev",
+                    // International brand names
+                    "Panadol",
+                    "Calpol",
+                    "Tempra",
+                    "Datril",
+                    "Lemsip",
+                    // Common search terms
+                    "cat ate Tylenol",
+                    "dog ate Tylenol",
+                    "cat ate pain pill",
+                    "gave cat Tylenol",
+                    "gave cat acetaminophen",
+                    "Tylenol poisoning cat",
+                    "brown gums cat",
+                    "chocolate colored blood",
+                    "cat face swelling"
+                ],
+                categories: [.medications],
+                imageAsset: "acetaminophen",
+                description: "Acetaminophen (Tylenol, paracetamol) is an extremely common over-the-counter pain reliever and fever reducer. It is found in hundreds of products including cold/flu medications, sleep aids, and prescription opioid combinations. CATS: EXTREMELY DANGEROUS — Cats are exquisitely sensitive to acetaminophen because they cannot metabolize it properly. A single regular-strength tablet (325 mg) can be life-threatening to a cat. One case report describes a kitten developing toxicosis after merely playing with an empty acetaminophen pill container. Important: Acetaminophen is NOT an NSAID. It lacks anti-inflammatory properties and has a completely different toxicity mechanism than ibuprofen or naproxen. Dogs: While more tolerant than cats, dogs can still develop serious liver damage from acetaminophen overdose. Acetaminophen is sometimes used therapeutically in dogs under veterinary supervision, but owner-administered doses frequently cause toxicity.",
+                toxicityInfo: "Acetaminophen itself has relatively low toxicity. The danger comes from its toxic metabolite, N-acetyl-p-benzoquinone imine (NAPQI), which forms when the body's normal detoxification pathways become overwhelmed. Normal Metabolism: Most acetaminophen is safely converted to non-toxic compounds via glucuronidation and sulfation in the liver. Toxic Pathway: A small amount is converted to NAPQI via cytochrome P450 enzymes. Normally, glutathione quickly neutralizes NAPQI. However, when too much acetaminophen is ingested, safe pathways become saturated, more NAPQI forms, and glutathione stores are depleted. Free NAPQI then damages liver cells. Why Cats Are So Sensitive: Cats have deficient glucuronidation pathways—they cannot efficiently process acetaminophen through safe routes. More is shunted to the toxic NAPQI pathway. Cat hemoglobin has 8 reactive sulfhydryl groups (vs. 2 in humans) making it highly susceptible to oxidative damage. Result: Cats develop methemoglobinemia (brown blood that cannot carry oxygen) at doses harmless to humans. Dogs vs. Cats: In dogs, HEPATOTOXICITY (liver damage) is the primary concern. In cats, METHEMOGLOBINEMIA (oxidized hemoglobin) is the primary concern—cats typically succumb to this before liver damage becomes apparent. Dogs can also develop keratoconjunctivitis sicca (dry eye) from acetaminophen.",
+                onsetTime: OnsetTime(
+                    early: "In cats, signs of methemoglobinemia (brown gums, weakness, facial swelling) may appear within 1-4 hours; in dogs, initial signs of GI upset and lethargy may appear within a few hours",
+                    delayed: "Liver damage in dogs typically becomes apparent 24-72 hours after ingestion (jaundice, vomiting, neurological signs); in cats, if methemoglobinemia is survived, liver damage may follow; dry eye (KCS) in dogs may develop days to weeks after exposure"
+                ),
+                symptoms: [
+                    // Methemoglobinemia signs (especially cats)
+                    "Brown or muddy-colored gums (methemoglobinemia)",
+                    "Chocolate-brown colored blood",
+                    "Blue or purple gums (cyanosis)",
+                    "Difficulty breathing (dyspnea)",
+                    "Rapid breathing (tachypnea)",
+                    "Weakness",
+                    "Depression or lethargy",
+                    "Swelling of face",
+                    "Swelling of paws or limbs",
+                    "Hypothermia (low body temperature)",
+                    // Hepatotoxicity signs (especially dogs)
+                    "Loss of appetite (anorexia)",
+                    "Vomiting",
+                    "Diarrhea",
+                    "Abdominal pain",
+                    "Jaundice (yellow skin, eyes, gums)",
+                    "Dark urine",
+                    "Black tarry stool (melena)",
+                    "Bruising or bleeding",
+                    // Neurological signs (severe liver failure)
+                    "Disorientation",
+                    "Incoordination (ataxia)",
+                    "Stupor",
+                    "Coma",
+                    "Seizures",
+                    // Renal signs (high doses)
+                    "Increased thirst",
+                    "Increased urination",
+                    "Decreased urination",
+                    // KCS signs (dogs)
+                    "Dry eyes",
+                    "Thick eye discharge",
+                    "Red eyes"
+                ],
+                speciesRisks: [
+                    SpeciesRisk(species: .cat, severity: .severe, notes: "EXTREMELY DANGEROUS. Cats cannot properly metabolize acetaminophen due to deficient glucuronidation. Methemoglobinemia can occur at very low doses—a single regular-strength Tylenol tablet (325 mg) can be fatal. One kitten developed toxicosis after playing with an empty pill container. NEVER give acetaminophen to cats under any circumstances."),
+                    SpeciesRisk(species: .dog, severity: .high, notes: "Dogs are more resistant than cats but can still develop serious hepatotoxicity from overdose. Methemoglobinemia may occur at high doses. Keratoconjunctivitis sicca (dry eye) has been reported. While sometimes used therapeutically under veterinary supervision, owner-administered acetaminophen frequently causes toxicity."),
+                    SpeciesRisk(species: .smallMammal, severity: .severe, notes: "Ferrets, rabbits, and other small mammals are likely highly sensitive to acetaminophen given their small body size and potentially limited metabolic capacity. Assume extreme danger. Contact poison control immediately."),
+                    SpeciesRisk(species: .bird, severity: .high, notes: "Limited data on avian acetaminophen toxicity. Birds have unique metabolic pathways and should be considered at high risk. Contact an avian veterinarian immediately."),
+                    SpeciesRisk(species: .reptile, severity: .high, notes: "Limited data on reptile acetaminophen toxicity. Given the drug's mammalian toxicity profile and reptiles' unique physiology, assume significant risk. Contact a reptile veterinarian immediately.")
+                ],
+                preventionTips: [
+                    "NEVER give acetaminophen to cats—there is no safe dose",
+                    "Never give acetaminophen to dogs without explicit veterinary instruction",
+                    "Store all medications in secure cabinets completely out of reach of pets",
+                    "Be aware that acetaminophen is in MANY products—check labels for 'acetaminophen,' 'APAP,' or 'paracetamol'",
+                    "Cold/flu medications, sleep aids, and combination pain relievers often contain acetaminophen",
+                    "Prescription pain medications (Percocet, Vicodin, Norco) contain acetaminophen",
+                    "Keep purses and bags containing medications away from pets",
+                    "Dispose of empty pill containers securely—one kitten was poisoned by an empty bottle",
+                    "If a pet is in pain, contact your veterinarian for species-appropriate pain relief",
+                    "Inform pet sitters and house guests about the danger of acetaminophen to pets"
+                ],
+                sources: ["VIN Toxicology Resources: Acetaminophen Toxicosis", "ASPCA Animal Poison Control Center: Acetaminophen Toxicity", "Merck Veterinary Manual: Acetaminophen Toxicosis", "Pet Poison Helpline: Tylenol Toxicity in Cats and Dogs", "Veterinary Partner / VCA Hospitals: Acetaminophen Toxicity"],
+                relatedEntries: ["aa112233-4455-6677-8899-aabbccddeef0"]
             )
         ]
     }
