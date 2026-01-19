@@ -6348,6 +6348,247 @@ class DatabaseService {
                     "FDA Drug Safety Communication: Boxed Warning for Z-drugs (2019)"
                 ],
                 relatedEntries: ["ee556677-8899-aabb-ccdd-eeff00112244", "bb223344-5566-7788-99aa-bbccddeeff11"]
+            ),
+
+            // MARK: - Opioids & Opiates (Pain Medications)
+            ToxicItem(
+                id: UUID(uuidString: "00778899-aabb-ccdd-eeff-001122334455")!,
+                name: "Opioids & Opiates (Pain Medications)",
+                alternateNames: [
+                    // General terms
+                    "opioid",
+                    "opiate",
+                    "narcotic",
+                    "pain pill",
+                    "pain medication",
+                    "painkiller",
+                    "prescription painkiller",
+
+                    // MORPHINE family
+                    "morphine",
+                    "MS Contin",
+                    "Kadian",
+                    "Roxanol",
+                    "heroin",
+
+                    // CODEINE products
+                    "codeine",
+                    "Tylenol with codeine",
+                    "Tylenol #3",
+                    "Tylenol #4",
+                    "codeine cough syrup",
+                    "promethazine with codeine",
+
+                    // HYDROCODONE (very common)
+                    "hydrocodone",
+                    "Vicodin",
+                    "Norco",
+                    "Lortab",
+                    "Lorcet",
+                    "Hycodan",
+                    "Tussigon",
+                    "Vicoprofen",
+
+                    // OXYCODONE
+                    "oxycodone",
+                    "OxyContin",
+                    "Percocet",
+                    "Percodan",
+                    "Roxicodone",
+                    "Endocet",
+
+                    // HYDROMORPHONE
+                    "hydromorphone",
+                    "Dilaudid",
+                    "Exalgo",
+
+                    // OXYMORPHONE
+                    "oxymorphone",
+                    "Opana",
+                    "Numorphan",
+
+                    // FENTANYL (extremely potent)
+                    "fentanyl",
+                    "fentanyl patch",
+                    "Duragesic",
+                    "Duragesic patch",
+                    "Actiq",
+                    "Sublimaze",
+                    "transdermal fentanyl",
+
+                    // TRAMADOL
+                    "tramadol",
+                    "Ultram",
+                    "ConZip",
+                    "Ultracet",
+                    "Rybix",
+                    "Ryzolt",
+
+                    // METHADONE
+                    "methadone",
+                    "Dolophine",
+                    "Methadose",
+
+                    // MEPERIDINE
+                    "meperidine",
+                    "Demerol",
+
+                    // BUPRENORPHINE
+                    "buprenorphine",
+                    "Buprenex",
+                    "Suboxone",
+                    "Subutex",
+                    "Butrans",
+
+                    // BUTORPHANOL
+                    "butorphanol",
+                    "Torbutrol",
+                    "Torbugesic",
+                    "Stadol",
+
+                    // PENTAZOCINE
+                    "pentazocine",
+                    "Talwin",
+
+                    // TAPENTADOL
+                    "tapentadol",
+                    "Nucynta",
+
+                    // LOPERAMIDE (OTC anti-diarrheal — opioid!)
+                    "loperamide",
+                    "Imodium",
+                    "Imodium AD",
+                    "Anti-Diarrheal",
+                    "Diamode",
+
+                    // DIPHENOXYLATE (prescription anti-diarrheal)
+                    "diphenoxylate",
+                    "Lomotil",
+                    "Logen",
+                    "Lonox",
+
+                    // Common search queries
+                    "dog ate Vicodin",
+                    "dog ate Percocet",
+                    "dog ate OxyContin",
+                    "dog chewed fentanyl patch",
+                    "dog ate Imodium",
+                    "cat ate pain pill",
+                    "dog ate tramadol",
+                    "dog ate Norco",
+                    "pet ate opioid",
+                    "dog ate cough syrup",
+                    "collie ate Imodium"
+                ],
+                categories: [.medications],
+                imageAsset: "opioids",
+                description: "Opioids are powerful pain-relieving medications that act on opioid receptors in the brain and body. This class includes prescription pain medications (Vicodin, Percocet, OxyContin), fentanyl patches, tramadol, cough suppressants containing codeine or hydrocodone, and anti-diarrheal medications (Imodium, Lomotil). Opioids are rapidly absorbed and can cause life-threatening effects, particularly respiratory depression (slowed breathing). COMBINATION PRODUCTS: Many opioids are combined with acetaminophen (Percocet, Vicodin, Tylenol #3) or ibuprofen (Vicoprofen), which add significant toxicity — especially acetaminophen, which is deadly to cats at very small amounts. FENTANYL PATCHES: Dogs may chew on transdermal fentanyl patches. Even used patches contain substantial residual fentanyl and can cause severe poisoning or death if chewed. MDR1/ABCB1 MUTATION: Collies, Australian Shepherds, Shetland Sheepdogs, and related herding breeds may carry a genetic mutation that prevents them from excluding certain drugs (including loperamide/Imodium) from the brain. These dogs can experience severe, life-threatening neurological toxicity from opioids at much lower doses. SPECIES DIFFERENCES: Cats, horses, cattle, and swine may show CNS EXCITATION rather than depression after opioid exposure.",
+                toxicityInfo: "Opioids produce their effects by binding to mu, kappa, and delta opioid receptors found in the brain, spinal cord, and gastrointestinal tract. This causes pain relief, sedation, respiratory depression, and decreased GI motility. CNS Depression: The primary effect in most dogs is CNS depression — sedation, drowsiness, weakness, and incoordination. In severe cases, animals may become unresponsive or comatose. Respiratory depression (dangerously slow or shallow breathing) is the most life-threatening effect. CNS Excitation (Cats and Other Species): Instead of sedation, cats may show excitement, agitation, restlessness, and hyperactivity. This paradoxical reaction also occurs in horses, cattle, and swine. Pupil Changes: Dogs typically develop pinpoint pupils (miosis), while cats may have dilated pupils. GI Effects: Vomiting commonly occurs shortly after ingestion, followed by constipation (opioids slow gut motility). MDR1/ABCB1 Mutation: Dogs with this genetic mutation (common in Collies and related breeds) cannot effectively pump certain drugs out of the central nervous system. Loperamide (Imodium) is particularly dangerous in these dogs, causing severe neurological depression, ataxia, drooling, blindness, and potentially death at doses that would be safe in other dogs. Serotonin Syndrome (Tramadol): Tramadol inhibits serotonin reuptake in addition to its opioid effects. When combined with other serotonergic drugs (SSRIs, SNRIs, tricyclic antidepressants), it can precipitate serotonin syndrome. Cats Metabolize Slowly: Due to deficient glucuronidation, cats may have prolonged drug effects from some opioids.",
+                onsetTime: OnsetTime(
+                    early: "Clinical signs typically begin within 30 minutes to 2 hours of oral ingestion. Transdermal (patch) absorption may take longer initially but can produce effects for days. Loperamide toxicity signs usually appear within 30 minutes to 6 hours.",
+                    delayed: "Duration varies by drug. Short-acting opioids (morphine, hydromorphone) may clear within 24 hours. Long-acting formulations (extended-release oxycodone, methadone) and drugs with active metabolites may cause signs for 48-72 hours or longer. Fentanyl patches continue releasing drug for 3-5 days."
+                ),
+                symptoms: [
+                    // CNS Depression (most common in dogs)
+                    "Sedation or excessive sleepiness",
+                    "Drowsiness",
+                    "Weakness",
+                    "Ataxia (incoordination, wobbly gait)",
+                    "Depression or lethargy",
+                    "Disorientation",
+                    "Coma (severe cases)",
+
+                    // CNS Excitation (cats, sometimes dogs)
+                    "Agitation or restlessness (especially cats)",
+                    "Excitement or hyperactivity (especially cats)",
+                    "Vocalization",
+
+                    // Respiratory (CRITICAL)
+                    "Respiratory depression (slow, shallow breathing)",
+                    "Labored breathing",
+                    "Cyanosis (blue gums from low oxygen)",
+
+                    // Cardiovascular
+                    "Bradycardia (slow heart rate)",
+                    "Hypotension (low blood pressure)",
+                    "Hypothermia (low body temperature)",
+
+                    // Eye changes
+                    "Miosis (pinpoint pupils) — typical in dogs",
+                    "Mydriasis (dilated pupils) — may occur in cats",
+
+                    // GI Signs
+                    "Vomiting (often early)",
+                    "Nausea",
+                    "Drooling (hypersalivation)",
+                    "Constipation",
+                    "Defecation (may occur initially)",
+
+                    // Neurological (especially MDR1 dogs)
+                    "Tremors",
+                    "Seizures",
+                    "Blindness (MDR1 dogs with loperamide)",
+                    "Head pressing",
+
+                    // Other
+                    "Urinary retention",
+                    "Loss of appetite",
+                    "Death (from respiratory failure in severe cases)"
+                ],
+                speciesRisks: [
+                    SpeciesRisk(
+                        species: .dog,
+                        severity: .high,
+                        notes: "Dogs typically develop CNS depression, sedation, ataxia, and respiratory depression. Pinpoint pupils are characteristic. MDR1/ABCB1 mutation breeds (Collies, Australian Shepherds, Shetland Sheepdogs, Border Collies, Old English Sheepdogs, Longhaired Whippets, Silken Windhounds) are at extreme risk for severe neurological toxicity from loperamide (Imodium) and other opioids — even small amounts can be life-threatening. Fentanyl patch ingestion is a medical emergency. Tramadol combined with antidepressants risks serotonin syndrome."
+                    ),
+                    SpeciesRisk(
+                        species: .cat,
+                        severity: .high,
+                        notes: "Cats often show CNS EXCITATION (agitation, excitement, restlessness) rather than depression — this paradoxical reaction is important for owners to recognize. Cats may have dilated rather than pinpoint pupils. Due to glucuronidation deficiency, opioid effects may be prolonged. CRITICAL: Many opioid products contain acetaminophen (Percocet, Vicodin, Tylenol #3), which is extremely toxic to cats and can be fatal. Loperamide can cause severe excitatory behavior in cats and is not recommended."
+                    ),
+                    SpeciesRisk(
+                        species: .smallMammal,
+                        severity: .high,
+                        notes: "Small body size means even small amounts can cause significant toxicity. Rabbits and rodents are sensitive to opioid effects including respiratory depression. Contact an exotic animal veterinarian or poison control immediately."
+                    ),
+                    SpeciesRisk(
+                        species: .bird,
+                        severity: .high,
+                        notes: "Birds are highly sensitive to opioids. Respiratory depression is particularly dangerous in species with limited respiratory reserve. Contact an avian veterinarian or poison control immediately for any opioid exposure."
+                    ),
+                    SpeciesRisk(
+                        species: .reptile,
+                        severity: .moderate,
+                        notes: "Opioids are sometimes used therapeutically in reptile medicine, but overdose can cause significant sedation and respiratory depression. Metabolism varies by species and environmental temperature. Contact an exotic animal veterinarian for guidance."
+                    )
+                ],
+                preventionTips: [
+                    "Store all prescription pain medications in secure, locked cabinets out of pet reach",
+                    "Never leave medication bottles or pill organizers on nightstands, counters, or tables",
+                    "Pick up dropped pills immediately — many opioid tablets are sweet-coated and palatable",
+                    "Dispose of unused pain medications properly (many pharmacies accept returns)",
+                    "FENTANYL PATCHES: Keep patches covered and secure while in use; dispose of used patches by folding sticky sides together and flushing (per FDA guidance)",
+                    "Never leave fentanyl patches where pets can access them — dogs have died from chewing used patches",
+                    "If your pet is wearing a fentanyl patch, monitor it closely and prevent chewing",
+                    "Know if your dog may have the MDR1 mutation (Collie breeds) — genetic testing is available",
+                    "NEVER give Imodium to Collies, Shelties, or Australian Shepherds without veterinary guidance",
+                    "Do not give your pet ANY opioid-containing cough syrup or pain medication without veterinary approval",
+                    "Remember that many pain medications contain acetaminophen — fatal to cats",
+                    "Inform guests about medication safety, especially those with chronic pain prescriptions"
+                ],
+                sources: [
+                    "VIN (Veterinary Information Network): Opioid Toxicosis Monograph",
+                    "Merck Veterinary Manual: Toxicities from Illicit and Abused Drugs — Opioids",
+                    "Pet Poison Helpline: Opioids & Opiates Toxicity in Dogs",
+                    "ASPCA Animal Poison Control Center: Human Prescription Medications",
+                    "VCA Animal Hospitals: Fentanyl, Tramadol, Loperamide Drug Information",
+                    "American Kennel Club: Imodium for Dogs — MDR1 Gene Mutation Warning",
+                    "Veterinary Partner (VIN): Loperamide (Imodium AD), Fentanyl (Duragesic Patch)",
+                    "Washington State University: MDR1 Drug Sensitivity in Dogs",
+                    "BluePearl Veterinary Partners: Serotonin Syndrome in Dogs and Cats",
+                    "dvm360: Opioid and Tramadol Use in Outpatients — What Are Reasonable Choices"
+                ],
+                relatedEntries: ["bb223344-5566-7788-99aa-bbccddeeff11", "dd445566-7788-99aa-bbcc-ddeeff334455"]
             )
         ]
     }
