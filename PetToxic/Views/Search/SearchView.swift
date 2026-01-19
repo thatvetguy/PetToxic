@@ -28,6 +28,9 @@ struct SearchView: View {
                 text: $viewModel.searchText,
                 prompt: "Search foods, plants, medications..."
             )
+            .navigationDestination(for: ToxicItem.self) { item in
+                ArticleDetailView(item: item)
+            }
         }
     }
 
@@ -72,9 +75,6 @@ struct SearchView: View {
             NavigationLink(value: result.item) {
                 SearchResultRow(result: result)
             }
-        }
-        .navigationDestination(for: ToxicItem.self) { item in
-            ArticleDetailView(item: item)
         }
     }
 }
