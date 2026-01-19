@@ -49,7 +49,7 @@ class DatabaseService {
                     "Remember that baking chocolate and dark chocolate are most dangerous"
                 ],
                 sources: ["ASPCA Animal Poison Control Center", "Merck Veterinary Manual", "Veterinary Information Network (VIN)", "VCA Animal Hospitals"],
-                relatedEntries: nil
+                relatedEntries: ["f2a3b4c5-6d7e-8f9a-0b1c-2d3e4f5a6b7c"]
             ),
 
             // MARK: - Grapes & Raisins
@@ -3894,6 +3894,100 @@ class DatabaseService {
                 ],
                 sources: ["Merck Veterinary Manual", "ASPCA Animal Poison Control Center", "Pet Poison Helpline", "PetMD", "National Pesticide Information Center"],
                 relatedEntries: ["c9d0e1f2-3a4b-5c6d-e7f8-9a0b1c2d3e4f"]
+            ),
+
+            // MARK: - Mothballs
+            ToxicItem(
+                id: UUID(uuidString: "e1f2a3b4-5c6d-7e8f-9a0b-1c2d3e4f5a6b")!,
+                name: "Mothballs",
+                alternateNames: ["Moth balls", "Moth repellent", "Moth crystals", "Moth flakes", "Moth cakes", "Naphthalene balls", "Paradichlorobenzene", "PDB mothballs", "Camphor balls", "Camphor mothballs", "Urinal cake", "Urinal cakes", "Urinal deodorizer", "Toilet deodorizer block", "Closet deodorizer"],
+                categories: [.garageGarden],
+                imageAsset: "mothballs",
+                description: "Mothballs are solid pesticides that slowly release vapor to kill and repel moths, their larvae, and other insects in stored clothing and fabric. They contain either naphthalene (older formulations, more toxic), paradichlorobenzene/PDB (modern formulations, less toxic), or camphor (rare in the US but may be found in products imported from Asia, particularly India and China). Paradichlorobenzene is also used in urinal deodorizing cakes. Mothballs are sometimes misused to repel snakes, mice, or other animals, which increases the risk of pet exposure. Fresh mothballs typically weigh 2.5-5 grams each.",
+                toxicityInfo: "Naphthalene mothballs are significantly more toxic than paradichlorobenzene (PDB) types—approximately twice as toxic. A single paradichlorobenzene mothball is generally well tolerated by most dogs, while naphthalene ingestion can cause serious illness even from one mothball in smaller pets. Camphor mothballs, though less common, can cause severe CNS effects including seizures. Naphthalene damages red blood cells through oxidative injury, causing methemoglobinemia, Heinz body formation, and hemolytic anemia. It can also affect the liver and kidneys. PDB primarily causes gastrointestinal upset and trembling; large ingestions may cause hepatic or renal injury. Mothballs dissolve slowly in the digestive tract, so toxicity may be delayed. Cats are more sensitive to mothball toxicity than dogs, but dogs are more likely to ingest them.",
+                onsetTime: OnsetTime(
+                    early: "GI signs (vomiting, loss of appetite) typically appear within hours of ingestion",
+                    delayed: "Hemolytic anemia and organ damage may develop 1-5 days after naphthalene ingestion; signs can persist due to slow dissolution"
+                ),
+                symptoms: [
+                    "Vomiting",
+                    "Loss of appetite",
+                    "Lethargy and weakness",
+                    "Mothball-scented breath",
+                    "Pale or brown mucous membranes (indicating anemia or methemoglobinemia)",
+                    "Icterus (jaundice/yellowing of gums, skin, or eyes)",
+                    "Labored or rapid breathing",
+                    "Disorientation or depression",
+                    "Tremors or muscle twitching",
+                    "Difficulty walking or incoordination",
+                    "Excessive drooling",
+                    "Abdominal pain",
+                    "Seizures (severe cases)",
+                    "Dark or discolored urine",
+                    "Collapse or coma (severe cases)"
+                ],
+                speciesRisks: [
+                    SpeciesRisk(species: .dog, severity: .high, notes: "Dogs are more likely to ingest mothballs; naphthalene causes hemolytic anemia; one PDB mothball is generally tolerated but naphthalene is more dangerous"),
+                    SpeciesRisk(species: .cat, severity: .severe, notes: "Cats are more sensitive to toxic effects; even one mothball can cause serious illness"),
+                    SpeciesRisk(species: .smallMammal, severity: .severe, notes: "Small body size increases risk; rabbits and rodents cannot vomit to expel toxin"),
+                    SpeciesRisk(species: .bird, severity: .severe, notes: "Highly sensitive to both ingestion and fumes; respiratory exposure especially dangerous"),
+                    SpeciesRisk(species: .reptile, severity: .high, notes: "Limited data; avoid any exposure")
+                ],
+                preventionTips: [
+                    "Store mothballs only in sealed, airtight containers as directed on the label",
+                    "Never place mothballs in open areas, closets, or yards where pets can access them",
+                    "Do not use mothballs to repel wildlife—this is not their intended use and increases pet exposure risk",
+                    "Consider safer alternatives like cedar products or lavender sachets",
+                    "If you must use mothballs, choose PDB formulations over naphthalene (check label)",
+                    "Keep storage containers locked and out of pet reach"
+                ],
+                sources: ["ASPCA Animal Poison Control Center", "Pet Poison Helpline", "VCA Animal Hospitals", "Merck Veterinary Manual", "Veterinary Information Network (VIN)"],
+                relatedEntries: nil
+            ),
+
+            // MARK: - Cocoa Mulch
+            ToxicItem(
+                id: UUID(uuidString: "f2a3b4c5-6d7e-8f9a-0b1c-2d3e4f5a6b7c")!,
+                name: "Cocoa Mulch",
+                alternateNames: ["Cocoa bean mulch", "Cocoa shell mulch", "Cocoa bean shell mulch", "Cocoa hull mulch", "Chocolate mulch", "Cacao mulch", "Cocoa bean hulls"],
+                categories: [.garageGarden],
+                imageAsset: "cocoa_mulch",
+                description: "Cocoa mulch is a garden product made from the discarded shells of cocoa beans, a byproduct of chocolate production. It is popular with gardeners for its rich brown color, pleasant chocolate aroma, and ability to retain moisture. However, cocoa shells contain theobromine and caffeine—the same compounds that make chocolate toxic to pets. The chocolate scent can attract dogs, making this mulch particularly hazardous in yards where dogs have access.",
+                toxicityInfo: "Cocoa mulch contains theobromine concentrations that can exceed those found in dark or even baker's chocolate—some products contain up to 300-1200 mg of theobromine per ounce. Dogs are most at risk because they may be attracted to the chocolate scent and eat the mulch. A 60-pound dog could potentially be poisoned by consuming less than 3 ounces of cocoa mulch. The methylxanthines (theobromine and caffeine) affect the heart, nervous system, and kidneys. Theobromine has an 18-hour half-life in dogs, meaning effects can be prolonged.",
+                onsetTime: OnsetTime(
+                    early: "Vomiting, restlessness, and increased thirst typically appear within 1-4 hours",
+                    delayed: "Cardiac effects and seizures may develop 6-12 hours after ingestion; symptoms can persist up to 36 hours"
+                ),
+                symptoms: [
+                    "Vomiting",
+                    "Diarrhea",
+                    "Restlessness or hyperactivity",
+                    "Increased thirst and urination",
+                    "Panting or rapid breathing",
+                    "Rapid or abnormal heart rate",
+                    "Elevated blood pressure",
+                    "Muscle tremors",
+                    "Hyperthermia (elevated body temperature)",
+                    "Seizures (severe cases)",
+                    "Cardiac arrhythmias (severe cases)"
+                ],
+                speciesRisks: [
+                    SpeciesRisk(species: .dog, severity: .high, notes: "Dogs are most at risk—attracted to chocolate scent and more likely to consume mulch; theobromine is poorly metabolized"),
+                    SpeciesRisk(species: .cat, severity: .moderate, notes: "Cats are less likely to eat cocoa mulch; no documented cases of feline cocoa mulch poisoning, but cats are sensitive to theobromine"),
+                    SpeciesRisk(species: .smallMammal, severity: .high, notes: "Small body size means less mulch needed to reach toxic levels; rabbits and rodents are at risk if they forage in garden beds"),
+                    SpeciesRisk(species: .bird, severity: .high, notes: "Highly sensitive to methylxanthines; avoid any exposure"),
+                    SpeciesRisk(species: .reptile, severity: .moderate, notes: "Limited data; generally less likely to consume plant material")
+                ],
+                preventionTips: [
+                    "Avoid using cocoa mulch if you have dogs that have access to garden areas",
+                    "Choose pet-safe alternatives like cedar, pine, or rubber mulch",
+                    "If cocoa mulch is already in your garden, fence off the area or supervise pets closely",
+                    "Look for 'pet-safe' or 'pet-friendly' mulch products that have had theobromine removed through heat treatment",
+                    "Be aware that the chocolate scent is strongest when mulch is fresh—this is when it's most attractive to dogs",
+                    "Store unused mulch in sealed containers in areas pets cannot access"
+                ],
+                sources: ["ASPCA Animal Poison Control Center", "Merck Veterinary Manual", "Michigan State University Extension", "National Capital Poison Center", "RSPCA Australia"],
+                relatedEntries: ["d8c34930-fe78-414c-a182-49521dbfc266"]
             )
         ]
     }
