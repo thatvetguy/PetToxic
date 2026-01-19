@@ -4170,7 +4170,195 @@ class DatabaseService {
                     "Store pet treats in containers rather than original bags to avoid packet ingestion"
                 ],
                 sources: ["ASPCA Animal Poison Control Center", "Pet Poison Helpline", "PetMD", "Veterinary Information Network (VIN)"],
+                relatedEntries: ["f6a7b8c9-0d1e-2f3a-4b5c-6d7e8f9a0b1c"]
+            ),
+
+            // MARK: - Glow Sticks
+            ToxicItem(
+                id: UUID(uuidString: "d4e5f6a7-8b9c-0d1e-2f3a-4b5c6d7e8f9a")!,
+                name: "Glow Sticks",
+                alternateNames: [
+                    "Glow stick",
+                    "Glow jewelry",
+                    "Glow necklace",
+                    "Glow necklaces",
+                    "Glow bracelet",
+                    "Glow bracelets",
+                    "Glow-in-the-dark jewelry",
+                    "Glow-in-the-dark sticks",
+                    "Light sticks",
+                    "Lightsticks",
+                    "Chemiluminescent sticks",
+                    "Rave sticks",
+                    "Party glow sticks",
+                    "Halloween glow sticks",
+                    "Fourth of July glow sticks"
+                ],
+                categories: [.householdItems],
+                imageAsset: "glow_sticks",
+                description: "Glow sticks and glow jewelry (necklaces, bracelets) are popular novelty items sold at fairs, carnivals, concerts, and around holidays like Halloween and the Fourth of July. They contain dibutyl phthalate (DBP), an oily liquid that produces the characteristic glow through a chemical reaction. Despite the dramatic symptoms pets may display after biting into these products, glow sticks are considered low toxicity. The extremely bitter taste of dibutyl phthalate typically limits how much a pet will ingest.",
+                toxicityInfo: "Dibutyl phthalate is the primary luminescent agent in glow products. It has low systemic toxicity (LD50 >8,000 mg/kg in rats), so serious poisoning is unlikely from the amounts in glow sticks. However, the intensely bitter taste causes dramatic immediate reactions—especially in cats. Signs appear within seconds of biting into the product and are primarily a taste aversion response rather than true poisoning. Cats tend to have much more exaggerated reactions than dogs, displaying profuse drooling, foaming, head shaking, and behavioral changes (hyperactivity, aggression, hiding). Dogs typically show milder reactions or none at all. The liquid can also irritate the skin and eyes on contact.",
+                onsetTime: OnsetTime(
+                    early: "Signs appear within seconds to minutes of biting into the glow stick—drooling, gagging, and behavioral changes occur almost immediately",
+                    delayed: "Signs are self-limiting and typically resolve within 30-60 minutes once the taste is diluted; no delayed systemic effects expected"
+                ),
+                symptoms: [
+                    "Profuse drooling and salivation",
+                    "Foaming at the mouth",
+                    "Gagging or retching",
+                    "Vomiting (occasional)",
+                    "Head shaking",
+                    "Pawing at mouth",
+                    "Hyperactivity or agitation (especially cats)",
+                    "Aggression (especially cats)",
+                    "Hiding behavior (especially cats)",
+                    "Eye irritation if splashed (redness, pawing at eyes)",
+                    "Skin irritation if liquid contacts fur"
+                ],
+                speciesRisks: [
+                    SpeciesRisk(species: .dog, severity: .low, notes: "Dogs may show mild drooling or no reaction at all; behavioral effects are rare; low toxicity"),
+                    SpeciesRisk(species: .cat, severity: .low, notes: "Cats have more dramatic reactions to the bitter taste—profuse drooling, hyperactivity, aggression—but actual toxicity is still low; cats may re-expose themselves while grooming contaminated fur"),
+                    SpeciesRisk(species: .smallMammal, severity: .low, notes: "Expected to have taste aversion similar to cats; low toxicity"),
+                    SpeciesRisk(species: .bird, severity: .low, notes: "Low toxicity; plastic casing could pose foreign body risk if ingested"),
+                    SpeciesRisk(species: .reptile, severity: .low, notes: "Limited data; low toxicity expected")
+                ],
+                preventionTips: [
+                    "Keep glow sticks and glow jewelry out of pet reach, especially around holidays",
+                    "Dispose of used glow products in a secure trash container",
+                    "Supervise children using glow products around pets—cats in particular are attracted to the movement",
+                    "If a glow stick breaks, take the pet to a dark room to identify glowing residue on fur and clean it off",
+                    "Remember that the dramatic drooling and behavioral signs look scary but are not dangerous"
+                ],
+                sources: ["ASPCA Animal Poison Control Center", "Pet Poison Helpline", "Veterinary Information Network (VIN)", "PetMD", "Vetstreet"],
                 relatedEntries: nil
+            ),
+
+            // MARK: - Electrical Cords & Electrocution
+            ToxicItem(
+                id: UUID(uuidString: "e5f6a7b8-9c0d-1e2f-3a4b-5c6d7e8f9a0b")!,
+                name: "Electrical Cords & Electrocution",
+                alternateNames: [
+                    "Electrical cord",
+                    "Electric cord",
+                    "Electric cord injury",
+                    "Electrical injury",
+                    "Electrocution",
+                    "Electrocution burn",
+                    "Electric shock",
+                    "Electrical shock",
+                    "Power cord",
+                    "Charging cable",
+                    "Phone charger cord",
+                    "Christmas light cords",
+                    "Extension cord",
+                    "Lamp cord",
+                    "Appliance cord",
+                    "Wire chewing",
+                    "Cord chewing"
+                ],
+                categories: [.householdItems],
+                imageAsset: "electrical_cords",
+                description: "Electrical cord injuries occur when pets—most commonly puppies and kittens—chew on live electrical cords. This is the most common type of electrical injury in companion animals. When a pet bites through the protective covering of an energized wire, electrical current passes through their body, causing burns at the contact point (usually the mouth) and potentially affecting the heart, lungs, and nervous system. While oral burns are the most visible injury, the most serious complication is non-cardiogenic pulmonary edema (fluid in the lungs), which can be life-threatening and may not develop until hours after the incident.",
+                toxicityInfo: "Electrical injury severity depends on the voltage, current type, duration of contact, and path through the body. Standard household current in the US is 110-120 volts (low voltage), which typically causes localized thermal burns where the electricity enters the body—usually the lips, tongue, gums, and palate. The current can also disrupt the heart's electrical activity, causing arrhythmias or cardiac arrest, and stimulate the nervous system in ways that lead to non-cardiogenic pulmonary edema (NCPE). NCPE occurs when the electrical shock triggers a massive sympathetic nervous system response, causing fluid to leak into the lungs. This is the most common life-threatening complication and may develop 12-36 hours after the incident—even in pets that initially appear fine. High-voltage electrocution (>1000 volts) from sources like power lines is usually immediately fatal.",
+                onsetTime: OnsetTime(
+                    early: "Burns and pain at the contact site are immediate; collapse, seizures, or cardiac arrest may occur at the time of shock",
+                    delayed: "Non-cardiogenic pulmonary edema (fluid in lungs) may develop 12-36 hours after the incident; pets that seem fine initially can deteriorate"
+                ),
+                symptoms: [
+                    "Burns on lips, tongue, gums, or palate (pale, yellow, tan, gray, or charred/black)",
+                    "Singed whiskers or facial hair",
+                    "Drooling or hypersalivation",
+                    "Reluctance to eat or drink",
+                    "Pain or crying when mouth is touched",
+                    "Bad breath (halitosis)",
+                    "Difficulty breathing or rapid breathing",
+                    "Coughing (may produce frothy or blood-tinged fluid)",
+                    "Blue or pale gums (cyanosis)",
+                    "Weak or irregular pulse",
+                    "Muscle stiffness or tremors",
+                    "Collapse or loss of consciousness",
+                    "Seizures",
+                    "Sudden death (severe cases)"
+                ],
+                speciesRisks: [
+                    SpeciesRisk(species: .dog, severity: .high, notes: "Puppies are most commonly affected due to chewing behavior; oral burns common; pulmonary edema is the main life-threatening risk"),
+                    SpeciesRisk(species: .cat, severity: .high, notes: "Kittens and young cats are most at risk; same concerns as dogs—oral burns and delayed pulmonary edema"),
+                    SpeciesRisk(species: .smallMammal, severity: .high, notes: "Rabbits and rodents may chew cords; small body size increases severity of electrical injury"),
+                    SpeciesRisk(species: .bird, severity: .high, notes: "Birds may chew cords; small body size makes any electrical injury potentially fatal"),
+                    SpeciesRisk(species: .reptile, severity: .high, notes: "Less likely to chew cords but contact with faulty heating elements or lights in enclosures can cause electrical injury")
+                ],
+                preventionTips: [
+                    "Keep electrical cords out of reach or cover them with protective tubing or cord covers",
+                    "Unplug devices when not in use, especially around teething puppies and kittens",
+                    "Provide appropriate chew toys to redirect chewing behavior",
+                    "Supervise young pets closely and train them to avoid cords",
+                    "Inspect cords regularly for damage and replace frayed or exposed wires immediately",
+                    "Use cord management systems to bundle and hide cables",
+                    "Be especially vigilant with holiday lights and decorations"
+                ],
+                sources: ["Veterinary Information Network (VIN)", "MSPCA-Angell Emergency Service", "PetMD", "Preventive Vet", "Vets Now UK", "Critical Care DVM"],
+                relatedEntries: nil
+            ),
+
+            // MARK: - Iron-Containing Oxygen Absorbers
+            ToxicItem(
+                id: UUID(uuidString: "f6a7b8c9-0d1e-2f3a-4b5c-6d7e8f9a0b1c")!,
+                name: "Iron-Containing Oxygen Absorbers",
+                alternateNames: [
+                    "Oxygen absorber",
+                    "Oxygen absorber packet",
+                    "Oxygen absorber sachet",
+                    "Oxygen scavenger",
+                    "Iron packet",
+                    "Iron oxygen absorber",
+                    "Freshness packet",
+                    "Food preservative packet",
+                    "Jerky packet",
+                    "Beef jerky packet",
+                    "Pet treat packet",
+                    "Dog treat packet",
+                    "Deoxidizer",
+                    "Deoxidizer packet",
+                    "Do not eat packet"
+                ],
+                categories: [.householdItems],
+                imageAsset: "oxygen_absorbers",
+                description: "Iron-containing oxygen absorbers are small packets found in packages of dried foods such as beef jerky, pepperoni, dried fruits, and pet treats. They contain elemental iron powder that absorbs oxygen to prevent food spoilage and rancidity. These packets are commonly confused with silica gel desiccants, but they are significantly more dangerous. While silica gel is essentially non-toxic, iron oxygen absorbers can cause iron poisoning, particularly in small dogs. The packets are often unlabeled or do not specify that they contain iron, making identification difficult.",
+                toxicityInfo: "Elemental iron can cause severe poisoning even in the small amounts contained in a single oxygen absorber packet. The iron content of these packets ranges from 50-70% total iron. Iron is highly irritating to the gastrointestinal tract and has direct corrosive effects, causing bloody vomiting and diarrhea. If a toxic dose is absorbed, iron overwhelms the body's protein carriers (transferrin and ferritin), and free iron causes oxidative damage to the liver and other organs. Severe metabolic acidosis, shock, and hepatic failure can develop 1-5 days after ingestion. Small dogs (<15 pounds) are at greatest risk—the most severe poisoning cases reported have occurred in small breed dogs. Larger dogs ingesting a single small packet are less likely to develop serious toxicity. Once iron has fully oxidized ('spent' absorbers), it becomes iron oxide, which has poor bioavailability and is less toxic—but the degree of oxidation cannot be determined by appearance.",
+                onsetTime: OnsetTime(
+                    early: "Vomiting (often with blood) typically occurs within 1-6 hours of ingestion; absence of vomiting suggests a non-toxic dose was ingested",
+                    delayed: "Hepatic toxicity, metabolic acidosis, and shock may develop 1-5 days after exposure; a 'latent period' of apparent improvement may precede organ failure"
+                ),
+                symptoms: [
+                    "Vomiting (often bloody or containing dark material)",
+                    "Diarrhea (may be bloody or black/tarry)",
+                    "Abdominal pain",
+                    "Loss of appetite",
+                    "Lethargy and weakness",
+                    "Drooling",
+                    "Pale gums",
+                    "Rapid heart rate",
+                    "Shock or collapse",
+                    "Jaundice/icterus (yellowing of gums, skin, eyes—indicates liver damage)",
+                    "Coagulopathy (bleeding disorders)",
+                    "Seizures (severe cases)"
+                ],
+                speciesRisks: [
+                    SpeciesRisk(species: .dog, severity: .high, notes: "Dogs are most commonly affected—they get into treat bags containing these packets; small dogs (<15 lbs) at highest risk for serious poisoning"),
+                    SpeciesRisk(species: .cat, severity: .high, notes: "Less commonly affected than dogs but equally susceptible to iron toxicity if ingested"),
+                    SpeciesRisk(species: .smallMammal, severity: .severe, notes: "Small body size means even small amounts of iron can be dangerous; ferrets may be exposed via meat-based treats"),
+                    SpeciesRisk(species: .bird, severity: .severe, notes: "Highly susceptible to iron toxicity; small body size increases risk"),
+                    SpeciesRisk(species: .reptile, severity: .high, notes: "Limited data but presumed susceptible to iron toxicity")
+                ],
+                preventionTips: [
+                    "Remove and discard oxygen absorber packets immediately when opening pet treats or human jerky products",
+                    "Store treats in a separate container after removing the packet",
+                    "Keep packages containing these packets out of pet reach—especially around holidays when treats may be wrapped as gifts",
+                    "Learn to distinguish oxygen absorbers (dark brown/rust-colored contents, MAGNETIC) from silica gel (white/clear beads, not magnetic)",
+                    "If your pet ingests a packet from food packaging, check with a magnet—if it sticks, the packet likely contains iron"
+                ],
+                sources: ["Pet Poison Helpline", "Veterinary Information Network (VIN)", "Journal of Medical Toxicology (Brutlag et al., 2012)", "dvm360", "Animal Poisons Helpline (Australia)"],
+                relatedEntries: ["c3d4e5f6-7a8b-9c0d-1e2f-3a4b5c6d7e8f"]
             )
         ]
     }
