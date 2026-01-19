@@ -3373,6 +3373,57 @@ class DatabaseService {
                 relatedEntries: nil
             ),
 
+            // MARK: - Fertilizers
+            ToxicItem(
+                id: UUID(uuidString: "c3f5a8b2-7d4e-4f1a-b6c9-2e8d7f4a5b3c")!,
+                name: "Fertilizers",
+                alternateNames: ["lawn fertilizer", "garden fertilizer", "plant food", "plant fertilizer", "bone meal", "blood meal", "fish meal", "feather meal", "organic fertilizer", "rose fertilizer", "Miracle-Gro", "Scotts fertilizer", "lawn food", "garden soil", "potting soil with fertilizer", "slow release fertilizer", "granular fertilizer", "liquid fertilizer", "NPK fertilizer", "nitrogen fertilizer", "iron fertilizer", "compost fertilizer"],
+                categories: [.garageGarden],
+                imageAsset: "fertilizer_bag",
+                description: "Lawn and garden fertilizers are among the most common products pets are exposed to. Basic fertilizers containing nitrogen, phosphorus, and potassium (N-P-K) generally have a wide margin of safety and typically cause only mild gastrointestinal upset. However, certain types of fertilizers and additives pose more serious risks.\n\n**Organic fertilizers** such as bone meal and blood meal are highly palatable to dogs—they will often tear open bags to eat large quantities. Bone meal can form a cement-like mass (bezoar) in the stomach that may require surgical removal. Blood meal can cause severe pancreatitis and may contain added iron.\n\n**Combination products** are a major concern: some fertilizers (especially rose fertilizers) contain organophosphate insecticides like disulfoton, which are extremely toxic—as little as one teaspoon of 1% disulfoton can kill a large dog.\n\nAlways check product labels carefully, as fertilizers are often mixed with herbicides, insecticides, or other additives that significantly increase toxicity.",
+                toxicityInfo: "The toxicity of fertilizers varies greatly by type:\n\n**Basic N-P-K fertilizers:** Low toxicity; cause mild GI irritation. Once properly applied and dried, treated lawns pose minimal risk.\n\n**Bone meal:** Forms a hard, cement-like mass in the stomach that cannot be digested or vomited. Can cause gastrointestinal obstruction requiring surgery. Also associated with pancreatitis.\n\n**Blood meal:** Contains approximately 12% nitrogen. Can cause vomiting, diarrhea, and severe pancreatitis. Some products are fortified with iron, adding risk of iron toxicity.\n\n**Iron-containing fertilizers:** Elemental iron can cause iron toxicity with vomiting, bloody diarrhea, and potential cardiac and liver effects.\n\n**Organophosphate-containing products:** Rose and systemic fertilizers may contain disulfoton or other organophosphates that cause severe cholinergic toxicity (salivation, urination, defecation, tremors, seizures, death).\n\n**Moldy fertilizers:** Old or improperly stored fertilizers can develop mold that produces tremorgenic mycotoxins.",
+                onsetTime: OnsetTime(
+                    early: "Few hours — vomiting, diarrhea, muscle stiffness with basic fertilizers; minutes to hours with organophosphates",
+                    delayed: "24-48 hours — bone meal obstructions become apparent as material hardens"
+                ),
+                symptoms: [
+                    "Vomiting",
+                    "Diarrhea (may be bloody)",
+                    "Drooling",
+                    "Abdominal pain",
+                    "Loss of appetite",
+                    "Lethargy",
+                    "Excessive thirst",
+                    "Muscle stiffness or soreness",
+                    "Hind limb rigidity",
+                    "Tremors",
+                    "Bloated or distended abdomen (with large ingestions)",
+                    "Signs of pancreatitis (severe abdominal pain, hunched posture)",
+                    "SLUD signs with organophosphates: Salivation, Lacrimation (tearing), Urination, Defecation",
+                    "Seizures (with organophosphate or moldy products)",
+                    "Difficulty breathing (severe cases)"
+                ],
+                speciesRisks: [
+                    SpeciesRisk(species: .dog, severity: .moderate, notes: "Dogs are most commonly affected because they find organic fertilizers (bone meal, blood meal) highly palatable and will often eat large quantities directly from bags. Risk increases significantly with combination products containing organophosphates."),
+                    SpeciesRisk(species: .cat, severity: .low, notes: "Cats are less commonly affected as they are typically less interested in eating fertilizers. However, they can be exposed by walking through treated areas and grooming their paws."),
+                    SpeciesRisk(species: .bird, severity: .moderate, notes: "Birds may be exposed to fertilizers in outdoor environments. Small body size increases risk from smaller exposures.")
+                ],
+                preventionTips: [
+                    "Store all fertilizer bags in sealed containers in locked cabinets or areas completely inaccessible to pets",
+                    "Never leave open bags of fertilizer unattended—dogs can tear them open in seconds",
+                    "Keep pets off treated lawns until products are completely dry (at least 24-48 hours)",
+                    "Read labels carefully to identify any added herbicides, insecticides, or organophosphates",
+                    "Be especially cautious with rose fertilizers, which may contain highly toxic disulfoton",
+                    "Bone meal is often used to dust spring bulbs—prevent dogs from digging in newly planted areas",
+                    "Consider pet-safer alternatives to bone meal and blood meal for organic gardening",
+                    "Dispose of old or moldy fertilizers properly—do not leave them where pets can access them",
+                    "Wipe pets' paws after walks if you suspect they've walked through treated areas",
+                    "If your pet ingests fertilizer, try to identify the specific product and ingredients before calling your veterinarian"
+                ],
+                sources: ["VIN Toxicology Resources: Fertilizers and Bone/Blood Meal", "ASPCA Animal Poison Control Center: Fertilizers: A Growing Problem for Pets", "Pet Poison Helpline: Bone Meal & Blood Meal Toxicity", "PetMD: My Dog Ate Fertilizer", "DVM360: Spring Toxin - Fertilizers"],
+                relatedEntries: nil
+            ),
+
             // MARK: - Rodenticides (Overview)
             ToxicItem(
                 id: UUID(uuidString: "049e1259-f968-4e23-aa8c-5110cb52a08c")!,
