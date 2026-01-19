@@ -3322,6 +3322,51 @@ class DatabaseService {
                 relatedEntries: nil
             ),
 
+            // MARK: - Expanding Glues (Gorilla Glue)
+            ToxicItem(
+                id: UUID(uuidString: "b2e4f7a1-8c3d-4e6f-a9b2-1d5c8e3f7a2b")!,
+                name: "Expanding Glues (Gorilla Glue)",
+                alternateNames: ["Gorilla Glue", "polyurethane glue", "expanding glue", "foaming glue", "wood glue", "construction glue", "diisocyanate glue", "isocyanate glue", "Elmer's ProBond", "Titebond polyurethane", "expanding adhesive", "foaming adhesive", "polyurethane adhesive", "Grizzly glue", "expanding wood glue", "Loctite polyurethane", "MDI glue", "diphenylmethane diisocyanate"],
+                categories: [.garageGarden],
+                imageAsset: "expanding_glue",
+                description: "Expanding polyurethane glues—sold under brand names like Gorilla Glue, Elmer's ProBond, and Titebond—contain diisocyanates that react with moisture to create an expanding foam that hardens into an extremely strong bond. These glues are commonly labeled as \"expanding\" or \"foaming\" adhesives and are popular for woodworking and construction projects.\n\nWhen a dog chews on a bottle and swallows even a small amount of liquid glue, the warm, moist environment of the stomach triggers rapid expansion. The glue can expand to many times its original volume—sometimes filling the entire stomach—and then hardens into a rock-solid mass within minutes. This mass cannot be vomited up because it becomes too large to pass through the esophagus, and it cannot pass into the intestines. The result is a complete gastrointestinal obstruction.\n\nAccording to the ASPCA Animal Poison Control Center, cases of expanding glue ingestion have increased over 300% since 2002. Dogs are overwhelmingly the most common victims, often attracted by the sweet smell or taste of these products. Cats are rarely affected.\n\n**Critical:** Do NOT induce vomiting and do NOT give water or any fluids—this will cause the glue to expand faster and larger. Surgery is almost always required to remove the mass.",
+                toxicityInfo: "The danger from expanding glues is physical obstruction, not chemical toxicity. The diisocyanates in these products react with water and stomach acid to produce an expanding foam that hardens rapidly. Heat and carbon dioxide are byproducts of this reaction, which accelerates in the warm stomach environment.\n\nAs little as half an ounce (about 15 mL) of glue has been sufficient to cause gastric obstruction in dogs. The hardened mass rubs against the stomach lining, causing irritation and potentially ulceration. If the glue expands in the esophagus or small intestine rather than the stomach, the risk of perforation and rupture is higher due to the limited space.\n\nThe glue mass does not break down in the stomach and cannot be digested. Without surgical removal, the obstruction will persist indefinitely. Some dogs have survived for weeks with a glue mass in the stomach before the obstruction became critical, but most require emergency surgery.",
+                onsetTime: OnsetTime(
+                    early: "15 minutes to several hours — vomiting, retching, drooling, abdominal discomfort",
+                    delayed: "Hours to days — progressive obstruction signs: loss of appetite, bloating, inability to keep food down"
+                ),
+                symptoms: [
+                    "Vomiting (may contain blood)",
+                    "Retching and gagging",
+                    "Loss of appetite (anorexia)",
+                    "Abdominal pain",
+                    "Distended or bloated abdomen",
+                    "Lethargy and weakness",
+                    "Weight loss",
+                    "Excessive thirst (polydipsia)",
+                    "Drooling",
+                    "Inability to keep food or water down",
+                    "Diarrhea (early)",
+                    "Absence of stool (later, as obstruction progresses)"
+                ],
+                speciesRisks: [
+                    SpeciesRisk(species: .dog, severity: .high, notes: "Dogs are overwhelmingly the most commonly affected species, typically from chewing on glue bottles. The sweet smell and taste of these products attracts dogs. Surgery is almost always required to remove the hardened mass."),
+                    SpeciesRisk(species: .cat, severity: .high, notes: "Expanding glue ingestion has not been reported in cats in the veterinary literature, but the same mechanism would apply if a cat ingested the product. Cats may be exposed if they groom glue off their fur.")
+                ],
+                preventionTips: [
+                    "Store all expanding glues in locked cabinets or sturdy toolboxes completely inaccessible to pets",
+                    "Never leave glue bottles unattended during projects—dogs can grab them in seconds",
+                    "Keep pets out of the work area entirely when using these products",
+                    "Clean up any spills immediately and thoroughly",
+                    "Be aware that contractors or handymen may bring these products into your home",
+                    "Remember that the sweet smell attracts dogs—don't assume your dog won't be interested",
+                    "Not all Gorilla Glue products contain expanding diisocyanates—check labels, but treat all as potentially dangerous",
+                    "If you see your dog with a chewed glue bottle, contact your veterinarian immediately even if you're not sure any was swallowed"
+                ],
+                sources: ["VIN Toxicology Resources: Expanding Wood Glue Ingestion", "ASPCA Animal Poison Control Center: Polyurethane Glue Ingestion Statistics", "Pet Poison Helpline / VCA Hospitals: Expanding Glues", "Veterinary Partner (VIN): Expandable Foaming Glues Cause Obstructions in Pets", "PetMD: Gorilla Glue Poisoning in Dogs"],
+                relatedEntries: nil
+            ),
+
             // MARK: - Rodenticides (Overview)
             ToxicItem(
                 id: UUID(uuidString: "049e1259-f968-4e23-aa8c-5110cb52a08c")!,
