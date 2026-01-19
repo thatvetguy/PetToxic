@@ -5782,6 +5782,209 @@ class DatabaseService {
                     "Journal of Veterinary Emergency and Critical Care: Methyl Salicylate Toxicosis"
                 ],
                 relatedEntries: ["aa112233-4455-6677-8899-aabbccddeef0", "bb223344-5566-7788-99aa-bbccddeeff11"]
+            ),
+
+            // MARK: - Antidepressants (SSRIs & SNRIs)
+            ToxicItem(
+                id: UUID(uuidString: "dd445566-7788-99aa-bbcc-ddeeff334455")!,
+                name: "Antidepressants (SSRIs & SNRIs)",
+                alternateNames: [
+                    // General terms
+                    "antidepressant",
+                    "SSRI",
+                    "SNRI",
+                    "selective serotonin reuptake inhibitor",
+                    "serotonin reuptake inhibitor",
+                    "serotonin syndrome",
+
+                    // FLUOXETINE (most common)
+                    "fluoxetine",
+                    "Prozac",
+                    "Reconcile",
+                    "Sarafem",
+                    "Selfemra",
+
+                    // SERTRALINE
+                    "sertraline",
+                    "Zoloft",
+
+                    // PAROXETINE
+                    "paroxetine",
+                    "Paxil",
+                    "Pexeva",
+                    "Brisdelle",
+
+                    // CITALOPRAM / ESCITALOPRAM
+                    "citalopram",
+                    "Celexa",
+                    "escitalopram",
+                    "Lexapro",
+
+                    // FLUVOXAMINE
+                    "fluvoxamine",
+                    "Luvox",
+
+                    // VENLAFAXINE (SNRI)
+                    "venlafaxine",
+                    "Effexor",
+                    "Effexor XR",
+
+                    // DULOXETINE (SNRI)
+                    "duloxetine",
+                    "Cymbalta",
+
+                    // DESVENLAFAXINE (SNRI)
+                    "desvenlafaxine",
+                    "Pristiq",
+
+                    // NEFAZODONE
+                    "nefazodone",
+                    "Serzone",
+
+                    // TRAZODONE (commonly prescribed to pets)
+                    "trazodone",
+                    "Desyrel",
+                    "Oleptro",
+
+                    // MIRTAZAPINE (commonly prescribed to cats)
+                    "mirtazapine",
+                    "Remeron",
+                    "Mirataz",
+
+                    // BUPROPION
+                    "bupropion",
+                    "Wellbutrin",
+                    "Zyban",
+
+                    // TRICYCLIC ANTIDEPRESSANTS (related)
+                    "tricyclic antidepressant",
+                    "TCA",
+                    "amitriptyline",
+                    "Elavil",
+                    "clomipramine",
+                    "Clomicalm",
+                    "Anafranil",
+                    "doxepin",
+                    "Sinequan",
+                    "imipramine",
+                    "Tofranil",
+                    "nortriptyline",
+                    "Pamelor",
+
+                    // 5-HTP SUPPLEMENTS (DANGEROUS)
+                    "5-HTP",
+                    "5-hydroxytryptophan",
+                    "hydroxytryptophan",
+                    "L-tryptophan",
+                    "tryptophan",
+                    "Griffonia seed extract",
+                    "Griffonia",
+
+                    // OTHER SEROTONERGIC
+                    "buspirone",
+                    "BuSpar",
+
+                    // Common search terms
+                    "dog ate Prozac",
+                    "dog ate antidepressant",
+                    "cat ate Zoloft",
+                    "dog ate Effexor",
+                    "pet ate depression medication",
+                    "dog ate 5-HTP",
+                    "dog ate trazodone",
+                    "cat ate mirtazapine"
+                ],
+                categories: [.medications],
+                imageAsset: "antidepressants_ssri",
+                description: "Selective serotonin reuptake inhibitors (SSRIs) and serotonin-norepinephrine reuptake inhibitors (SNRIs) are commonly prescribed human antidepressants. Examples include fluoxetine (Prozac®), sertraline (Zoloft®), paroxetine (Paxil®), venlafaxine (Effexor®), and duloxetine (Cymbalta®).\n\nThese medications are also used in veterinary medicine for behavioral conditions — fluoxetine (Reconcile®) for canine separation anxiety, clomipramine (Clomicalm®) for anxiety disorders, and mirtazapine for appetite stimulation in cats.\n\n**Primary Concern: Serotonin Syndrome**\nOverdose causes excessive serotonin activity in the brain and nervous system, leading to a potentially life-threatening condition called serotonin syndrome. Signs include agitation, tremors, elevated body temperature, rapid heart rate, and in severe cases, seizures.\n\n⚠️ **5-HTP Warning:** 5-hydroxytryptophan supplements are ESPECIALLY dangerous. They bypass normal rate-limiting steps in serotonin production and can cause serotonin syndrome at much lower doses than prescription antidepressants.\n\n⚠️ **Drug Interaction Warning:** Risk of serotonin syndrome increases dramatically when pets are exposed to multiple serotonergic drugs. If your pet is already taking an antidepressant or behavioral medication and ingests another serotonergic substance, seek veterinary care immediately.",
+                toxicityInfo: "SSRIs and SNRIs work by blocking the reuptake of serotonin (and norepinephrine for SNRIs) in the brain, increasing serotonin levels in the synaptic space. In overdose, this leads to excessive serotonergic stimulation — serotonin syndrome.\n\n**Serotonin Syndrome involves three categories of signs:**\n\n**1. Autonomic Dysfunction:**\nExcessive serotonin causes instability in the autonomic nervous system, leading to elevated body temperature (hyperthermia), rapid heart rate (tachycardia), rapid breathing, dilated pupils (mydriasis), and high blood pressure.\n\n**2. Neuromuscular Signs:**\nSerotonin overstimulation causes muscle tremors, rigidity, hyperreflexia (exaggerated reflexes), and in severe cases, seizures. Hyperthermia is often secondary to muscle hyperactivity.\n\n**3. Altered Mentation:**\nCNS effects include agitation, restlessness, vocalization, disorientation, hyperactivity, and in severe cases, coma.\n\n**Why 5-HTP Is More Dangerous:**\nNormally, L-tryptophan must be transported into the brain and converted to 5-HTP before becoming serotonin. 5-HTP supplements bypass this rate-limiting step and cross the blood-brain barrier freely, causing rapid serotonin elevation at lower doses.\n\n**Extended-Release Products:**\nExtended-release formulations (Effexor XR, etc.) may have delayed onset of 6-12 hours and prolonged duration of signs.\n\n**Species Notes:**\nDogs and cats can both develop serotonin syndrome. Cats may be prescribed mirtazapine for appetite stimulation or trazodone for anxiety — owners should be aware their cat may already be on a serotonergic medication.",
+                onsetTime: OnsetTime(
+                    early: "Signs typically begin within 1-2 hours of ingestion. Initial signs are often sedation, followed by GI upset (vomiting, diarrhea, drooling). Agitation and tremors may develop as serotonin levels rise.",
+                    delayed: "Extended-release products may have delayed onset of 6-12 hours. In cases of multiple serotonergic drugs at lower doses, signs may develop gradually over hours to days. Duration of signs typically ranges from 12-36 hours but may persist several days with extended-release products or drugs like amphetamines."
+                ),
+                symptoms: [
+                    // GI Signs (often first)
+                    "Vomiting",
+                    "Diarrhea",
+                    "Excessive drooling (hypersalivation)",
+                    "Loss of appetite",
+                    "Abdominal discomfort",
+
+                    // CNS/Behavioral Signs
+                    "Sedation (often initial sign)",
+                    "Agitation or restlessness",
+                    "Vocalization",
+                    "Hyperactivity",
+                    "Disorientation",
+                    "Dilated pupils (mydriasis)",
+                    "Temporary blindness (rare, usually resolves)",
+
+                    // Neuromuscular Signs
+                    "Tremors",
+                    "Muscle rigidity",
+                    "Twitching (myoclonus)",
+                    "Exaggerated reflexes (hyperreflexia)",
+                    "Incoordination (ataxia)",
+                    "Seizures (severe cases)",
+
+                    // Autonomic Signs
+                    "Elevated body temperature (hyperthermia)",
+                    "Rapid heart rate (tachycardia)",
+                    "Slow heart rate (bradycardia — less common)",
+                    "Rapid breathing (tachypnea)",
+                    "Panting",
+                    "High blood pressure",
+
+                    // Severe Signs
+                    "Coma",
+                    "Respiratory difficulty"
+                ],
+                speciesRisks: [
+                    SpeciesRisk(
+                        species: .dog,
+                        severity: .high,
+                        notes: "Dogs commonly develop serotonin syndrome from antidepressant ingestion. Signs typically begin within 1-2 hours. Fluoxetine (Reconcile®) and clomipramine (Clomicalm®) are prescribed for behavioral issues — be aware if your dog is already on these medications. With treatment, prognosis is generally excellent."
+                    ),
+                    SpeciesRisk(
+                        species: .cat,
+                        severity: .high,
+                        notes: "Cats can develop serotonin syndrome, often from prescribed medications like mirtazapine (appetite stimulant) or trazodone (anxiety). Dosing errors and accidental overdoses are common causes in cats. Venlafaxine and fluoxetine exposures are frequently reported. With treatment, prognosis is generally good with recovery in 12-48 hours."
+                    ),
+                    SpeciesRisk(
+                        species: .smallMammal,
+                        severity: .high,
+                        notes: "Limited data on serotonin syndrome in small mammals. Given their small body size and the potency of these medications, assume significant risk. Contact poison control immediately."
+                    ),
+                    SpeciesRisk(
+                        species: .bird,
+                        severity: .high,
+                        notes: "Limited data on avian antidepressant toxicity. Some SSRIs have been used experimentally in birds, but overdose risk is significant. Contact an avian veterinarian immediately."
+                    ),
+                    SpeciesRisk(
+                        species: .reptile,
+                        severity: .moderate,
+                        notes: "Very limited data on reptile serotonin syndrome. Given the neurological nature of the toxicity, assume potential risk. Contact a reptile veterinarian for guidance."
+                    )
+                ],
+                preventionTips: [
+                    "Store all antidepressants and psychiatric medications securely out of reach of pets",
+                    "Be especially careful with extended-release capsules — they contain multiple doses",
+                    "Keep 5-HTP and tryptophan supplements away from pets — these are particularly dangerous",
+                    "If your pet is prescribed a behavioral medication (Reconcile, Clomicalm, trazodone, mirtazapine), store it as securely as human medications",
+                    "Never give human antidepressants to pets without explicit veterinary guidance",
+                    "Inform your veterinarian of ALL medications and supplements your pet takes to avoid dangerous interactions",
+                    "Allow adequate washout periods when switching between serotonergic medications (consult your veterinarian)",
+                    "Do not combine tramadol with SSRIs without veterinary guidance — both affect serotonin",
+                    "Be aware that some cough medicines contain dextromethorphan, which can contribute to serotonin syndrome",
+                    "Guests and pet sitters should be warned to keep their medications secured"
+                ],
+                sources: [
+                    "VIN Toxicology Resources: Serotonin Syndrome (Canine and Feline)",
+                    "ASPCA Animal Poison Control Center: Antidepressant Toxicity Data",
+                    "Merck Veterinary Manual: Serotonin Syndrome in Animals",
+                    "Pet Poison Helpline: SSRI and SNRI Toxicity in Dogs and Cats"
+                ],
+                relatedEntries: nil
             )
         ]
     }
