@@ -3271,6 +3271,57 @@ class DatabaseService {
                 relatedEntries: ["049e1259-f968-4e23-aa8c-5110cb52a08c"]
             ),
 
+            // MARK: - Slug & Snail Bait (Metaldehyde)
+            ToxicItem(
+                id: UUID(uuidString: "a7d3e8f2-6b4c-4a1e-9f5d-2c8b7a3e6d1f")!,
+                name: "Slug & Snail Bait (Metaldehyde)",
+                alternateNames: ["slug bait", "snail bait", "slug pellets", "snail pellets", "slug killer", "snail killer", "metaldehyde", "metaldehyde poisoning", "molluscicide", "slug poison", "snail poison", "garden slug bait", "slug and snail bait", "Deadline", "Slug-Tox", "Bug-Geta", "Sluggo Plus", "Corry's Slug & Snail Killer", "camping stove fuel", "solid fuel tablets", "camp stove fuel", "Esbit fuel tablets"],
+                categories: [.garageGarden],
+                imageAsset: "slug_snail_bait",
+                description: "Metaldehyde is the primary toxic ingredient in most commercial slug and snail baits used in gardens. It is extremely toxic to dogs, cats, birds, and wildlife. The baits are typically formulated as pellets, granules, powders, or liquids, and often contain bran or molasses to attract slugs and snails—unfortunately, these additives also make the bait highly attractive to pets, especially dogs.\n\nMetaldehyde is also found in solid fuel tablets used for camping stoves and lamps, particularly products from Europe where concentrations can be much higher than in garden baits.\n\nThis poisoning is classically described as \"shake and bake\" because affected animals develop severe muscle tremors or seizures combined with dangerously elevated body temperature. There is NO specific antidote for metaldehyde poisoning. Very small amounts can cause life-threatening toxicosis—ingestion of less than a teaspoon of bait can be fatal in small dogs.\n\nDogs are far more commonly affected than cats, likely due to their less discriminating eating habits, but cats can also be poisoned if they walk through treated areas and groom the product off their paws.",
+                toxicityInfo: "Metaldehyde is a neurotoxin that affects the central nervous system. The exact mechanism is not fully understood, but it appears to affect GABA (an inhibitory neurotransmitter) and lower the seizure threshold. After ingestion, metaldehyde readily crosses the blood-brain barrier.\n\nThe severe muscle tremors and seizures cause body temperature to rise to dangerous levels (hyperthermia), which can lead to organ damage, metabolic acidosis, and multi-organ failure. Even pets that survive the initial neurological crisis may develop liver failure days later, though this is uncommon.\n\nThere is NO specific antidote. Treatment focuses on controlling tremors, managing body temperature, and supportive care. Early veterinary intervention dramatically improves outcomes.",
+                onsetTime: OnsetTime(
+                    early: "30 minutes to 3 hours — anxiety, muscle twitching, hypersalivation, vomiting",
+                    delayed: "Rapid progression to severe tremors, seizures, hyperthermia, and potentially coma"
+                ),
+                symptoms: [
+                    "Anxious behavior and restlessness",
+                    "Muscle twitching progressing to severe tremors",
+                    "Seizures and convulsions",
+                    "Hyperthermia (dangerously elevated body temperature)",
+                    "Rapid heart rate (tachycardia)",
+                    "Rapid breathing or panting",
+                    "Excessive drooling (hypersalivation)",
+                    "Vomiting",
+                    "Diarrhea",
+                    "Incoordination and wobbly gait (ataxia)",
+                    "Hypersensitivity to touch, light, or sound",
+                    "Dilated pupils (mydriasis)",
+                    "Rapid eye movements (nystagmus) — especially in cats",
+                    "Rigid body posture (opisthotonos)",
+                    "Depression progressing to coma",
+                    "Respiratory failure"
+                ],
+                speciesRisks: [
+                    SpeciesRisk(species: .dog, severity: .severe, notes: "Dogs are most commonly affected due to their indiscriminate eating habits. The bran and molasses in baits are highly attractive to dogs. Even very small amounts can be fatal."),
+                    SpeciesRisk(species: .cat, severity: .severe, notes: "Less commonly affected than dogs, but equally susceptible to toxicity. Cats may be exposed by walking through treated areas and grooming metaldehyde off their paws. Nystagmus (rapid eye movements) is particularly noted in cats."),
+                    SpeciesRisk(species: .bird, severity: .severe, notes: "Birds are highly susceptible to metaldehyde poisoning. Backyard poultry and wild birds can be affected by consuming bait pellets or poisoned slugs/snails.")
+                ],
+                preventionTips: [
+                    "Store all slug and snail baits in sealed containers in locked cabinets inaccessible to pets",
+                    "Consider using iron phosphate-based molluscicides (such as Sluggo) instead—these are much less toxic to pets",
+                    "Never apply bait in piles or lines; scatter sparingly as directed",
+                    "Keep pets out of treated garden areas for the duration recommended on the product label",
+                    "Clean up any spills immediately and thoroughly",
+                    "Be aware that your neighbor may use metaldehyde baits even if you don't",
+                    "Remember that solid fuel tablets for camping stoves may contain high concentrations of metaldehyde",
+                    "Use non-chemical slug deterrents: copper bands around plants, crushed eggshells, lava rock, or beer traps",
+                    "If your pet has access to areas where slugs are common, inspect regularly for any bait products"
+                ],
+                sources: ["VIN Toxicology Resources: Metaldehyde Toxicosis", "ASPCA Animal Poison Control Center: Tips for Treating Metaldehyde Poisoning", "Merck Veterinary Manual: Metaldehyde Poisoning in Animals", "Pet Poison Helpline / VCA Hospitals: Metaldehyde Toxicity (Slug Bait Poisoning)", "Bates NS, et al. Suspected metaldehyde slug bait poisoning in dogs: a retrospective analysis. Vet Rec. 2012"],
+                relatedEntries: nil
+            ),
+
             // MARK: - Rodenticides (Overview)
             ToxicItem(
                 id: UUID(uuidString: "049e1259-f968-4e23-aa8c-5110cb52a08c")!,
