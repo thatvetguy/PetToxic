@@ -3539,6 +3539,92 @@ class DatabaseService {
                 relatedEntries: ["c3f5a8b2-7d4e-4f1a-b6c9-2e8d7f4a5b3c"]
             ),
 
+            // MARK: - Neonicotinoids (Imidacloprid)
+            ToxicItem(
+                id: UUID(uuidString: "f6a7b8c9-0d1e-4f2a-b3c4-5d6e7f8a9b0c")!,
+                name: "Neonicotinoids (Imidacloprid)",
+                alternateNames: ["imidacloprid", "neonicotinoid", "Advantage", "Advantage II", "Advantage Multi", "Advocate", "Seresto", "K9 Advantix", "flea treatment licked", "cat licked flea medicine", "dog licked flea treatment", "spot-on flea treatment", "dinotefuran", "nitenpyram", "Capstar", "clothianidin", "acetamiprid", "thiamethoxam", "thiacloprid"],
+                categories: [.medications],
+                imageAsset: "neonicotinoids_imidacloprid",
+                description: "Neonicotinoids (including imidacloprid, the active ingredient in Advantage® and Seresto®) are modern insecticides commonly used in flea and tick products for dogs and cats. They have a very favorable safety profile for mammals.\n\nThese products work by targeting nicotinic acetylcholine receptors in insect nervous systems. Neonicotinoids bind much more strongly to insect receptors than mammalian receptors, and they do not easily cross the blood-brain barrier in mammals. This makes them much safer for pets than older insecticides like organophosphates.\n\n**Common concern:** \"My pet licked the flea treatment!\" This is very common and usually causes only mild, self-limiting effects such as drooling (from the bitter taste) or mild stomach upset. These typically resolve without treatment.\n\nImidacloprid has been extensively studied: dogs given 41 mg/kg daily by mouth for an entire year showed no adverse effects. Topical application at 5 times the recommended dose causes no adverse effects in dogs or cats.\n\nThese products are approved for use in pregnant and nursing dogs and cats.",
+                toxicityInfo: "Neonicotinoids have very low mammalian toxicity. Imidacloprid preferentially binds to insect nicotinic receptors (not mammalian receptors) and does not readily cross the blood-brain barrier in mammals.\n\nMost \"toxicity\" reports are actually taste reactions from licking the application site. The bitter taste causes hypersalivation (drooling), and ingestion may cause mild vomiting or diarrhea that is typically self-limiting.\n\nThere is NO specific antidote because one is rarely needed. For oral exposure, dilution with water or milk is usually sufficient. Vomiting is typically self-limiting; antiemetics are only needed if persistent.\n\nSerious toxicity requiring veterinary intervention is rare and would only occur with massive ingestion of product (far exceeding normal use).",
+                onsetTime: OnsetTime(
+                    early: "Taste reaction (drooling) occurs immediately after licking; mild GI upset within a few hours if ingested",
+                    delayed: "Symptoms are typically self-limiting and resolve within hours; persistent symptoms beyond 24 hours warrant veterinary evaluation"
+                ),
+                symptoms: [
+                    "Hypersalivation/drooling (taste reaction — most common)",
+                    "Vomiting (usually mild and self-limiting)",
+                    "Diarrhea (usually mild)",
+                    "Decreased appetite",
+                    "Skin redness or irritation at application site",
+                    "Itching/scratching at application site",
+                    "Lethargy (uncommon)",
+                    "Hyperactivity (uncommon, reported in dogs)"
+                ],
+                speciesRisks: [
+                    SpeciesRisk(species: .dog, severity: .low, notes: "Very well tolerated. Dogs given 5 times the topical dose or 41 mg/kg/day orally for one year showed no adverse effects. Main concern is taste reaction from licking. Safe for pregnant and nursing dogs."),
+                    SpeciesRisk(species: .cat, severity: .low, notes: "Very well tolerated when using CAT-SPECIFIC products. Cats are more prone to licking and may show more drooling. Do not use products containing permethrin on cats (some combination products like K9 Advantix contain permethrin and are for dogs only)."),
+                    SpeciesRisk(species: .smallMammal, severity: .low, notes: "Imidacloprid is approved for use on rabbits and ferrets at appropriate doses. It is the only flea product authorized for rabbits in many countries."),
+                    SpeciesRisk(species: .bird, severity: .low, notes: "Low toxicity to birds based on available data.")
+                ],
+                preventionTips: [
+                    "Apply spot-on treatments to the back of the neck where pets cannot lick",
+                    "Prevent pets from grooming each other immediately after application",
+                    "Wait until the product has dried before allowing close contact between pets",
+                    "Always use the correct product for the species (dog products for dogs, cat products for cats)",
+                    "Follow label age and weight restrictions",
+                    "Do not use on puppies under 7 weeks or kittens under 8 weeks of age",
+                    "Store flea products securely away from pets"
+                ],
+                sources: ["VIN Prescriber Highlights: Imidacloprid", "Merck Veterinary Manual: Neonicotinoid Toxicosis in Animals", "VCA Hospitals: Imidacloprid - Topical", "Parasitipedia: Imidacloprid Safety Summary"],
+                relatedEntries: nil
+            ),
+
+            // MARK: - Fipronil (Frontline)
+            ToxicItem(
+                id: UUID(uuidString: "a7b8c9d0-1e2f-4a3b-c4d5-6e7f8a9b0c1d")!,
+                name: "Fipronil (Frontline)",
+                alternateNames: ["fipronil", "Frontline", "Frontline Plus", "Frontline Gold", "Frontline Spray", "phenylpyrazole", "flea treatment toxicity", "dog licked Frontline", "cat licked Frontline", "fipronil poisoning", "spot-on flea medicine", "pyriprole"],
+                categories: [.medications],
+                imageAsset: "fipronil_frontline",
+                description: "Fipronil is a phenylpyrazole insecticide and the active ingredient in Frontline® flea and tick products for dogs and cats. It has a wide margin of safety in dogs and cats when used according to label directions.\n\nFipronil works by blocking GABA-regulated chloride channels in insect nervous systems, causing hyperexcitation and death. It has greater than 500-fold selective toxicity toward insects over mammals because it preferentially binds to insect GABA receptors.\n\n**Common concern:** \"My pet licked the flea treatment!\" Licking typically causes only a taste reaction (drooling from the bitter taste) and possibly mild stomach upset. These effects are usually self-limiting.\n\nIn safety studies, dogs and cats given 5 times the recommended topical dose showed no adverse effects. Dogs given 0.5 mg/kg/day orally for 13 weeks showed no adverse signs.\n\n⚠️ **EXCEPTION — RABBITS:** Fipronil has been associated with deaths in rabbits and should NEVER be used on them. Use imidacloprid-based products for rabbits instead.\n\nFipronil may be used on breeding, pregnant, and lactating dogs and cats.",
+                toxicityInfo: "Fipronil has low mammalian toxicity when used as directed. After topical application, less than 1% is absorbed through the skin. The product spreads through skin lipids and hair follicles, providing residual activity for about one month.\n\nMost \"toxicity\" cases are taste reactions from licking the application site. The bitter taste causes hypersalivation, and ingestion may cause mild GI upset.\n\nTrue toxicity (convulsions, tremors, hyperexcitability) requires ingestion of amounts far exceeding normal topical use. There is NO specific antidote. Treatment is supportive: anticonvulsants for seizures, confinement for ataxic patients.\n\n**Bird sensitivity:** Fipronil is more toxic to birds than mammals. Keep treated pets away from pet birds during application.",
+                onsetTime: OnsetTime(
+                    early: "Taste reaction (drooling) occurs immediately after licking; local skin irritation may develop within hours of application",
+                    delayed: "Serious neurological signs (if they occur at all) would develop within hours of massive ingestion; symptoms typically self-limiting"
+                ),
+                symptoms: [
+                    "Hypersalivation/drooling (taste reaction — most common)",
+                    "Vomiting (usually mild)",
+                    "Mild skin irritation at application site",
+                    "Temporary redness at application site",
+                    "At toxic doses only: hyperactivity",
+                    "At toxic doses only: hyperexcitability",
+                    "At toxic doses only: tremors",
+                    "At toxic doses only: convulsions/seizures",
+                    "At toxic doses only: ataxia (incoordination)"
+                ],
+                speciesRisks: [
+                    SpeciesRisk(species: .dog, severity: .low, notes: "Very well tolerated. Dogs given 5 times the topical dose or 0.5 mg/kg/day orally for 13 weeks showed no adverse effects. Main concern is taste reaction from licking. Safe for pregnant and nursing dogs."),
+                    SpeciesRisk(species: .cat, severity: .low, notes: "Very well tolerated at label doses. Cats given 5 times the topical dose showed no adverse effects. Do not use on kittens under 8 weeks of age."),
+                    SpeciesRisk(species: .smallMammal, severity: .severe, notes: "⚠️ DANGEROUS TO RABBITS. Fipronil has been associated with deaths in rabbits and should NEVER be used on them. Use imidacloprid-based products (Advantage) for rabbits instead."),
+                    SpeciesRisk(species: .bird, severity: .high, notes: "Birds are significantly more sensitive to fipronil than mammals. Oral LD50 values are 31 mg/kg in pheasants and 11.3 mg/kg in bobwhite quail (compared to 97 mg/kg in rats). Keep pet birds away from treated animals.")
+                ],
+                preventionTips: [
+                    "Apply spot-on treatments to the back of the neck where pets cannot lick",
+                    "Prevent pets from grooming each other immediately after application",
+                    "Apply only to intact, healthy skin — not to broken or irritated skin",
+                    "NEVER use fipronil products on rabbits",
+                    "Keep treated pets away from pet birds during and immediately after application",
+                    "Do not use on puppies or kittens under 8 weeks of age",
+                    "Follow label weight restrictions",
+                    "Store flea products securely away from pets"
+                ],
+                sources: ["VIN Prescriber Highlights: Fipronil", "Merck Veterinary Manual: Phenylpyrazole (Fipronil) Toxicosis in Animals", "EPA: Fipronil Safety Determination for Dogs and Cats"],
+                relatedEntries: nil
+            ),
+
             // MARK: - Rodenticides (Overview)
             ToxicItem(
                 id: UUID(uuidString: "049e1259-f968-4e23-aa8c-5110cb52a08c")!,
