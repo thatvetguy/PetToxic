@@ -3988,6 +3988,189 @@ class DatabaseService {
                 ],
                 sources: ["ASPCA Animal Poison Control Center", "Merck Veterinary Manual", "Michigan State University Extension", "National Capital Poison Center", "RSPCA Australia"],
                 relatedEntries: ["d8c34930-fe78-414c-a182-49521dbfc266"]
+            ),
+
+            // MARK: - Button Batteries
+            ToxicItem(
+                id: UUID(uuidString: "a1b2c3d4-5e6f-7a8b-9c0d-1e2f3a4b5c6d")!,
+                name: "Button Batteries",
+                alternateNames: [
+                    "Disc batteries",
+                    "Disc battery",
+                    "Button cell",
+                    "Button cell batteries",
+                    "Coin batteries",
+                    "Coin cell batteries",
+                    "Lithium button battery",
+                    "Lithium disc battery",
+                    "Lithium coin battery",
+                    "Watch battery",
+                    "Watch batteries",
+                    "Hearing aid battery",
+                    "Hearing aid batteries",
+                    "Calculator battery",
+                    "Remote battery",
+                    "Small round battery",
+                    "CR2032",
+                    "CR2025",
+                    "CR2016",
+                    "LR44",
+                    "AG13",
+                    "Keyless entry battery",
+                    "Key fob battery"
+                ],
+                categories: [.householdItems],
+                imageAsset: "button_batteries",
+                description: "Button batteries (also called disc or coin batteries) are small, round batteries found in watches, hearing aids, remote controls, key fobs, calculators, musical greeting cards, and many children's toys. Lithium button batteries are particularly dangerous because they generate an electrical current when in contact with moist tissue, causing severe burns within minutes. These batteries can become lodged in the esophagus, where they cause rapid, life-threatening injury through a combination of electrical current, chemical leakage, and pressure necrosis.",
+                toxicityInfo: "Button battery ingestion is a TIME-CRITICAL EMERGENCY. Lithium button batteries (3-volt) are the most dangerous—a single battery can cause severe esophageal burns within 15-30 minutes of becoming lodged. The battery generates an electrical current through tissue (current-induced necrosis), creates alkaline hydroxide at the negative pole, and causes pressure injury. This can lead to esophageal perforation, tracheoesophageal fistula, or erosion into major blood vessels. Even 'dead' batteries retain enough charge to cause tissue damage. Smaller button batteries may pass through the GI tract but can still cause burns wherever they contact tissue for prolonged periods. Non-lithium button batteries (silver oxide, zinc-air) are less dangerous but still pose risks if lodged.",
+                onsetTime: OnsetTime(
+                    early: "Tissue damage begins within 15-30 minutes of a lithium battery lodging in the esophagus; drooling, difficulty swallowing, or vomiting may appear quickly",
+                    delayed: "Perforation and severe complications can develop within 2-4 hours; some injuries may not be apparent for days"
+                ),
+                symptoms: [
+                    "Drooling or hypersalivation",
+                    "Difficulty swallowing (dysphagia)",
+                    "Refusal to eat or drink",
+                    "Gagging or retching",
+                    "Vomiting (may contain blood)",
+                    "Pawing at mouth or throat",
+                    "Restlessness or signs of pain",
+                    "Lethargy or depression",
+                    "Fever",
+                    "Abdominal pain",
+                    "Black or tarry stools (indicating GI bleeding)",
+                    "Coughing or respiratory distress (if esophageal perforation occurs)",
+                    "Collapse (severe cases)"
+                ],
+                speciesRisks: [
+                    SpeciesRisk(species: .dog, severity: .severe, notes: "Dogs commonly ingest button batteries; esophageal lodgment causes rapid, severe burns; immediate veterinary care essential"),
+                    SpeciesRisk(species: .cat, severity: .severe, notes: "Less common than dogs but equally dangerous if ingested; cats' smaller esophagus increases lodgment risk"),
+                    SpeciesRisk(species: .smallMammal, severity: .severe, notes: "Extremely dangerous due to small body size; battery is more likely to lodge; rabbits and ferrets at risk"),
+                    SpeciesRisk(species: .bird, severity: .severe, notes: "Critical emergency; small GI tract makes lodgment likely; tissue damage occurs rapidly"),
+                    SpeciesRisk(species: .reptile, severity: .severe, notes: "Limited data but presumed highly dangerous; seek immediate veterinary care")
+                ],
+                preventionTips: [
+                    "Store devices containing button batteries out of pet reach",
+                    "Secure battery compartments with tape if the cover is loose or missing",
+                    "Dispose of used batteries immediately in a sealed container",
+                    "Be especially careful with musical greeting cards, remote controls, and key fobs—common sources of button batteries",
+                    "Keep new batteries in original packaging until use",
+                    "Check children's toys and holiday decorations for accessible battery compartments"
+                ],
+                sources: ["ASPCA Animal Poison Control Center", "Pet Poison Helpline", "Veterinary Information Network (VIN)", "Merck Veterinary Manual", "National Capital Poison Center"],
+                relatedEntries: ["b2c3d4e5-6f7a-8b9c-0d1e-2f3a4b5c6d7e"]
+            ),
+
+            // MARK: - Alkaline Batteries
+            ToxicItem(
+                id: UUID(uuidString: "b2c3d4e5-6f7a-8b9c-0d1e-2f3a4b5c6d7e")!,
+                name: "Alkaline Batteries",
+                alternateNames: [
+                    "AA battery",
+                    "AAA battery",
+                    "C battery",
+                    "D battery",
+                    "9-volt battery",
+                    "9V battery",
+                    "Dry cell battery",
+                    "Dry cell batteries",
+                    "Household batteries",
+                    "Flashlight battery",
+                    "Flashlight batteries",
+                    "Remote control battery",
+                    "Toy batteries",
+                    "Duracell",
+                    "Energizer",
+                    "Standard batteries",
+                    "Cylindrical batteries"
+                ],
+                categories: [.householdItems],
+                imageAsset: "alkaline_batteries",
+                description: "Alkaline batteries are the standard household batteries (AA, AAA, C, D, and 9-volt) found in flashlights, remote controls, toys, and countless other devices. These batteries contain potassium hydroxide or sodium hydroxide, which are strongly alkaline (basic) substances. When a battery is punctured or chewed, these caustic contents can leak and cause chemical burns to the mouth, esophagus, and stomach. Dogs are most commonly affected, often chewing on batteries found in discarded or accessible devices.",
+                toxicityInfo: "When alkaline batteries are punctured, the caustic contents (potassium or sodium hydroxide) cause liquefactive necrosis—a type of chemical burn that penetrates deeply into tissue. Unlike acid burns that create a protective barrier, alkaline burns continue to damage tissue until the chemical is removed or neutralized. The presence of black or gray powdery material in the mouth indicates the battery has been punctured. If swallowed intact, small batteries relative to the pet's size often pass through the GI tract without incident, though radiographic monitoring is recommended. Batteries that remain in the stomach for more than 48 hours may require removal. Heavy metal toxicity from battery contents is theoretically possible but has not been reported in clinical veterinary cases.",
+                onsetTime: OnsetTime(
+                    early: "Burns and oral ulceration may appear within 1-2 hours of exposure to battery contents; some ulcers take several hours to become visible",
+                    delayed: "Full extent of caustic injury may take up to 24 hours to develop; esophageal strictures can develop 4-6 weeks post-exposure (rare)"
+                ),
+                symptoms: [
+                    "Drooling or hypersalivation",
+                    "Oral pain or pawing at mouth",
+                    "Black or gray discoloration of teeth, gums, or tongue",
+                    "Visible burns or ulcers in the mouth",
+                    "Difficulty swallowing",
+                    "Vomiting",
+                    "Loss of appetite or refusal to eat",
+                    "Abdominal pain",
+                    "Lethargy",
+                    "Fever (if secondary infection develops)"
+                ],
+                speciesRisks: [
+                    SpeciesRisk(species: .dog, severity: .moderate, notes: "Most commonly affected species; caustic burns if battery is punctured; intact batteries often pass without issue in larger dogs"),
+                    SpeciesRisk(species: .cat, severity: .moderate, notes: "Less likely to chew batteries than dogs; same caustic burn risk if battery contents are released"),
+                    SpeciesRisk(species: .smallMammal, severity: .high, notes: "Small body size increases risk; even small batteries may cause obstruction; caustic burns more dangerous"),
+                    SpeciesRisk(species: .bird, severity: .high, notes: "Caustic injury is serious; battery casing can cause crop or GI obstruction"),
+                    SpeciesRisk(species: .reptile, severity: .high, notes: "Limited data; caustic burns and obstruction risk; seek veterinary care")
+                ],
+                preventionTips: [
+                    "Store batteries in a closed drawer or container out of pet reach",
+                    "Dispose of used batteries promptly—don't leave them on counters or in trash cans pets can access",
+                    "Check that battery compartments on devices are secure",
+                    "Supervise pets around battery-operated toys",
+                    "If a device is chewed, immediately check whether the batteries are intact or missing",
+                    "Never leave remotes, flashlights, or other battery-containing items where pets can chew them"
+                ],
+                sources: ["ASPCA Animal Poison Control Center", "Pet Poison Helpline", "Veterinary Information Network (VIN)", "Merck Veterinary Manual", "Vetlexicon"],
+                relatedEntries: ["a1b2c3d4-5e6f-7a8b-9c0d-1e2f3a4b5c6d"]
+            ),
+
+            // MARK: - Silica Gel Packets
+            ToxicItem(
+                id: UUID(uuidString: "c3d4e5f6-7a8b-9c0d-1e2f-3a4b5c6d7e8f")!,
+                name: "Silica Gel Packets",
+                alternateNames: [
+                    "Silica gel",
+                    "Silica packets",
+                    "Desiccant packets",
+                    "Desiccant packs",
+                    "Do not eat packets",
+                    "Moisture absorber packets",
+                    "Freshness packets",
+                    "Shoe box packets",
+                    "Electronics packets",
+                    "Beef jerky packets",
+                    "Medication packets"
+                ],
+                categories: [.householdItems],
+                imageAsset: "silica_gel",
+                description: "Silica gel packets are small paper or plastic sachets containing silica gel beads, used as desiccants (drying agents) to absorb moisture and protect products from humidity damage. They are commonly found in shoe boxes, electronics packaging, vitamin bottles, food products, leather goods, and pet treat bags. Despite the alarming 'DO NOT EAT' warning label, silica gel itself is essentially non-toxic. The warning exists because it is not a food product, not because it is poisonous. These packets are one of the most common reasons pet owners contact poison control, but they rarely cause significant problems.",
+                toxicityInfo: "Silica gel is considered non-toxic to pets. The beads are inert, do not expand in the stomach, and pass through the digestive tract without being absorbed. At most, ingestion may cause mild, self-limiting gastrointestinal upset such as vomiting or diarrhea. The soft outer packaging poses minimal obstruction risk in most pets, though very small animals ingesting large or intact packets could theoretically develop a blockage. IMPORTANT: Some silica gel contains color-indicating beads (blue, orange, pink, or green) that may be coated with cobalt chloride—these are potentially more concerning in large quantities but still pose low risk. CRITICAL DISTINCTION: Do not confuse silica gel with iron-based oxygen absorbers found in jerky and food packages. Oxygen absorbers contain elemental iron, appear dark brown or rust-colored, and are MAGNETIC. Iron-containing packets are toxic and require veterinary attention.",
+                onsetTime: OnsetTime(
+                    early: "Mild vomiting or diarrhea may occur within a few hours if at all",
+                    delayed: "Symptoms typically resolve within 24 hours; persistent signs are uncommon"
+                ),
+                symptoms: [
+                    "Mild vomiting (uncommon)",
+                    "Mild diarrhea (uncommon)",
+                    "Decreased appetite (transient)",
+                    "Drooling (if packet material irritates mouth)",
+                    "Most pets show no symptoms at all"
+                ],
+                speciesRisks: [
+                    SpeciesRisk(species: .dog, severity: .low, notes: "Generally non-toxic; mild GI upset possible; no treatment usually needed for standard white/clear silica gel"),
+                    SpeciesRisk(species: .cat, severity: .low, notes: "Non-toxic; cats less likely to ingest; monitor for mild GI upset"),
+                    SpeciesRisk(species: .smallMammal, severity: .low, notes: "Non-toxic; small risk of obstruction if large packet swallowed whole by very small pet"),
+                    SpeciesRisk(species: .bird, severity: .low, notes: "Silica gel itself is non-toxic; physical obstruction possible if large pieces ingested"),
+                    SpeciesRisk(species: .reptile, severity: .low, notes: "Non-toxic; unlikely to cause problems")
+                ],
+                preventionTips: [
+                    "Discard silica gel packets when unpacking new products—don't leave them where pets can find them",
+                    "Be especially careful with packets from food products, as they retain appealing food odors",
+                    "Know the difference: silica gel (white/clear beads, non-toxic) vs. oxygen absorbers (dark brown, magnetic, contains iron—potentially toxic)",
+                    "If your pet ingests a packet from a food product and you're unsure what it is, use a magnet to test—if it sticks, the packet may contain iron",
+                    "Store pet treats in containers rather than original bags to avoid packet ingestion"
+                ],
+                sources: ["ASPCA Animal Poison Control Center", "Pet Poison Helpline", "PetMD", "Veterinary Information Network (VIN)"],
+                relatedEntries: nil
             )
         ]
     }
