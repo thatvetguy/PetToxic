@@ -4745,6 +4745,201 @@ class DatabaseService {
                 ],
                 sources: ["Veterinary Information Network (VIN)", "ASPCA Animal Poison Control Center", "Pet Poison Helpline"],
                 relatedEntries: nil
+            ),
+
+            // MARK: - Soaps & Mild Detergents
+            ToxicItem(
+                id: UUID(uuidString: "11223344-5566-7788-99aa-bbccddeeff00")!,
+                name: "Soaps & Mild Detergents",
+                alternateNames: [
+                    "Dish soap",
+                    "Dishwashing liquid",
+                    "Hand soap",
+                    "Body wash",
+                    "Shampoo",
+                    "Pet shampoo",
+                    "Liquid hand soap",
+                    "Bar soap",
+                    "Castile soap",
+                    "Dawn dish soap",
+                    "Palmolive",
+                    "Ivory soap",
+                    "Body soap",
+                    "Bubble bath",
+                    "Hand wash",
+                    "Shower gel",
+                    "Anionic detergent",
+                    "Non-ionic detergent",
+                    "Mild detergent",
+                    "Surfactant"
+                ],
+                categories: [.cleaningProducts],
+                imageAsset: "soaps_detergents",
+                description: "Soaps and mild detergents—including hand soap, dish soap, shampoo, and body wash—are among the most common household products pets encounter. These products contain anionic or non-ionic surfactants, which are gastrointestinal irritants but have very low systemic toxicity. While ingestion typically causes only mild, self-limiting symptoms like drooling, vomiting, or diarrhea, these products can also cause eye irritation if splashed into the eyes. Mild detergents are very different from cationic detergents (found in fabric softeners and some disinfectants), which are more corrosive and dangerous.",
+                toxicityInfo: "Anionic and non-ionic detergents found in most household soaps and dish detergents have low toxicity. They work by disrupting surface tension, which can irritate the gastrointestinal tract and cause vomiting or diarrhea. However, these effects are typically mild and self-limiting. Large ingestions may cause more significant vomiting (occasionally with blood) and can lead to dehydration if vomiting is prolonged. A more serious concern is aspiration—if a pet inhales liquid detergent during vomiting, it can cause chemical pneumonitis with respiratory distress. Eye exposure causes mild irritation but rarely results in corneal injury. These products are fundamentally different from concentrated detergent pods, automatic dishwasher detergent, or cationic detergents—all of which are more dangerous.",
+                onsetTime: OnsetTime(
+                    early: "Drooling, vomiting, and mild GI upset typically appear within 15-30 minutes of ingestion",
+                    delayed: "Symptoms usually resolve within a few hours; prolonged vomiting may cause dehydration"
+                ),
+                symptoms: [
+                    "Hypersalivation (drooling)",
+                    "Vomiting",
+                    "Diarrhea",
+                    "Decreased appetite",
+                    "Lethargy",
+                    "Pawing at mouth (due to taste)",
+                    "Eye redness or squinting (if eye exposure)",
+                    "Coughing or difficulty breathing (if aspirated—seek immediate veterinary care)"
+                ],
+                speciesRisks: [
+                    SpeciesRisk(species: .dog, severity: .low, notes: "Low toxicity; most cases involve only mild, self-limiting GI upset; large ingestions or aspiration warrant veterinary consultation"),
+                    SpeciesRisk(species: .cat, severity: .low, notes: "Same low toxicity as dogs; may develop respiratory sounds after grooming sodium lauryl sulfate from fur; monitor breathing"),
+                    SpeciesRisk(species: .smallMammal, severity: .low, notes: "Low toxicity; small body size means even mild dehydration from vomiting warrants closer monitoring"),
+                    SpeciesRisk(species: .bird, severity: .moderate, notes: "Low toxicity but birds are more sensitive to respiratory irritants; any breathing difficulty requires immediate veterinary care"),
+                    SpeciesRisk(species: .reptile, severity: .low, notes: "Limited data; GI irritation expected; monitor for lethargy or appetite changes")
+                ],
+                preventionTips: [
+                    "Store dish soap and hand soap in cabinets rather than on counter edges pets can reach",
+                    "Rinse pet bowls thoroughly after washing with soap",
+                    "Don't leave buckets of soapy water unattended—curious pets may drink from them",
+                    "If soap contacts your pet's eyes, flush gently with water and contact your veterinarian if irritation persists"
+                ],
+                sources: ["Veterinary Information Network (VIN)", "ASPCA Animal Poison Control Center", "Merck Veterinary Manual", "Pet Poison Helpline"],
+                relatedEntries: ["b8c9d0e1-2f3a-4b5c-6d7e-8f9a0b1c2d3e"]
+            ),
+
+            // MARK: - Bleach
+            ToxicItem(
+                id: UUID(uuidString: "22334455-6677-8899-aabb-ccddeeff0011")!,
+                name: "Bleach",
+                alternateNames: [
+                    "Sodium hypochlorite",
+                    "Household bleach",
+                    "Chlorine bleach",
+                    "Clorox",
+                    "Liquid bleach",
+                    "Laundry bleach",
+                    "Disinfecting bleach",
+                    "Ultra bleach",
+                    "Concentrated bleach",
+                    "Color-safe bleach",
+                    "Oxygen bleach",
+                    "Non-chlorine bleach",
+                    "Sodium perborate",
+                    "Sodium percarbonate",
+                    "Hydrogen peroxide bleach",
+                    "OxiClean",
+                    "Pool chlorine",
+                    "Calcium hypochlorite",
+                    "Pool shock"
+                ],
+                categories: [.cleaningProducts],
+                imageAsset: "bleach",
+                description: "Bleach is one of the most common household cleaning products, used for disinfection and stain removal. Household liquid bleach typically contains 3-6% sodium hypochlorite with a pH around 11, making it a mild-to-moderate irritant. Most pet exposures involve diluted bleach (from mopping water or cleaned surfaces) and cause only mild symptoms. However, concentrated bleach products, 'ultra' bleach (>6% concentration), and pool chlorination products (up to 70-80% concentration) can cause significant corrosive injury. Color-safe or 'oxygen' bleaches contain hydrogen peroxide or percarbonates instead of chlorine and tend to cause more vomiting but are generally less corrosive.",
+                toxicityInfo: "The severity of bleach exposure depends on concentration, pH, and the amount ingested. Diluted household bleach typically causes only mild gastrointestinal irritation—drooling, vomiting, and possibly diarrhea. Concentrated products with sodium hypochlorite above 10% or pH above 11 can cause burns to the mouth, esophagus, and stomach. Color-safe bleaches release hydrogen peroxide on contact with water, often causing protracted vomiting but rarely serious injury at household concentrations. Inhalation of bleach fumes can irritate the respiratory tract, causing coughing, wheezing, and difficulty breathing. A critical safety note: mixing bleach with ammonia-containing products produces toxic chloramine gas, which can cause severe respiratory distress in both pets and humans.",
+                onsetTime: OnsetTime(
+                    early: "Drooling, vomiting, and oral irritation typically appear within minutes of ingestion; eye or skin irritation is immediate",
+                    delayed: "Respiratory symptoms from fume inhalation may develop over several hours; esophageal strictures are a rare late complication of severe burns"
+                ),
+                symptoms: [
+                    "Hypersalivation (drooling)",
+                    "Vomiting",
+                    "Pawing at mouth",
+                    "Oral redness or irritation",
+                    "Strong bleach odor on breath or fur",
+                    "Decreased appetite",
+                    "Coughing or wheezing (if fumes inhaled)",
+                    "Difficulty breathing (seek immediate veterinary care)",
+                    "Eye redness, squinting, or tearing (if eye exposure)",
+                    "Skin irritation or redness (if dermal exposure)",
+                    "Mouth or esophageal burns (concentrated products—seek immediate veterinary care)"
+                ],
+                speciesRisks: [
+                    SpeciesRisk(species: .dog, severity: .moderate, notes: "Diluted bleach causes mild GI upset; concentrated products can cause burns; dogs may drink from mop buckets or lick cleaned floors"),
+                    SpeciesRisk(species: .cat, severity: .moderate, notes: "Similar to dogs; cats may walk on bleached surfaces and ingest during grooming; some cats are attracted to the chlorine smell"),
+                    SpeciesRisk(species: .smallMammal, severity: .moderate, notes: "Small body size increases relative exposure; respiratory effects may be more pronounced; keep away from freshly cleaned areas"),
+                    SpeciesRisk(species: .bird, severity: .high, notes: "Birds are extremely sensitive to inhaled irritants including bleach fumes; never use bleach near birds without thorough ventilation; respiratory distress can be life-threatening"),
+                    SpeciesRisk(species: .reptile, severity: .moderate, notes: "Bleach is commonly used to disinfect reptile enclosures; must be thoroughly rinsed and dried before returning animal; fume sensitivity less studied")
+                ],
+                preventionTips: [
+                    "Never leave buckets of bleach solution unattended—pets may drink from them",
+                    "Keep pets out of rooms while cleaning with bleach and until surfaces are dry and fumes have dissipated",
+                    "Store bleach in secured cabinets; dogs can chew through plastic bottles",
+                    "Never mix bleach with ammonia or other cleaners—the resulting fumes are toxic",
+                    "Rinse pet bowls, toys, and bedding thoroughly after disinfecting with bleach",
+                    "Use extra caution with birds—even diluted bleach fumes can cause respiratory distress"
+                ],
+                sources: ["Veterinary Information Network (VIN)", "ASPCA Animal Poison Control Center", "Merck Veterinary Manual", "Pet Poison Helpline"],
+                relatedEntries: nil
+            ),
+
+            // MARK: - Drain Cleaners & Caustic Alkalis
+            ToxicItem(
+                id: UUID(uuidString: "33445566-7788-99aa-bbcc-ddeeff001122")!,
+                name: "Drain Cleaners & Caustic Alkalis",
+                alternateNames: [
+                    "Drain opener",
+                    "Drano",
+                    "Liquid-Plumr",
+                    "Lye",
+                    "Caustic soda",
+                    "Sodium hydroxide",
+                    "Potassium hydroxide",
+                    "Oven cleaner",
+                    "Easy-Off",
+                    "Industrial cleaner",
+                    "Pipe cleaner",
+                    "Clog remover",
+                    "Alkaline cleaner",
+                    "Caustic cleaner",
+                    "Hair relaxer",
+                    "Hair straightener",
+                    "Ammonium hydroxide",
+                    "Cement",
+                    "Wet concrete"
+                ],
+                categories: [.cleaningProducts],
+                imageAsset: "drain_cleaner",
+                description: "Drain cleaners and other strongly alkaline products are among the most dangerous household chemicals pets can encounter. Products containing sodium hydroxide (lye), potassium hydroxide, or ammonium hydroxide with pH greater than 11 can cause severe, penetrating chemical burns. Unlike acids, which cause immediate pain that often limits exposure, alkaline products cause little pain on initial contact—allowing pets to swallow more before realizing something is wrong. The alkali rapidly penetrates deep into tissue, causing liquefactive necrosis (tissue dissolution). Damage continues for hours after exposure, and the full extent of injury may not be apparent for up to 12 hours. Esophageal burns, perforation, and stricture formation are serious risks.",
+                toxicityInfo: "Strongly alkaline substances (pH >11) cause liquefactive necrosis—they dissolve fats, denature proteins, and penetrate deeply into tissue layers. This is fundamentally different from acidic burns, which cause surface coagulation that somewhat limits penetration. Because alkaline products are often tasteless and cause little immediate pain, pets may swallow significant amounts before showing distress. The initial injury can worsen for up to 12 hours as the alkali continues to penetrate tissue. Esophageal involvement is more common with alkaline products than with acids. Burns may initially appear white or gray, then turn black. Potential complications include esophageal or gastric perforation, secondary infection, and esophageal stricture formation during healing. CRITICAL: Do not induce vomiting—this re-exposes the esophagus to the caustic material. Do not attempt to neutralize with acids—this produces an exothermic reaction causing thermal burns.",
+                onsetTime: OnsetTime(
+                    early: "Drooling, vocalization, and difficulty swallowing may appear immediately or within minutes; however, significant pain and visible oral burns may be delayed",
+                    delayed: "Full extent of tissue damage may not be apparent for 12 hours; esophageal strictures can develop weeks later during healing"
+                ),
+                symptoms: [
+                    "Hypersalivation (drooling)",
+                    "Vocalization or crying (pain)",
+                    "Pawing at mouth or face",
+                    "Difficulty swallowing (dysphagia)",
+                    "Refusal to eat or drink",
+                    "Vomiting (may contain blood)",
+                    "Oral redness, swelling, or ulceration",
+                    "White, gray, or black lesions in mouth",
+                    "Fever",
+                    "Abdominal pain",
+                    "Dark, tarry stool (melena)",
+                    "Depression or lethargy",
+                    "Difficulty breathing (if esophageal swelling or aspiration)",
+                    "Skin burns or ulceration (if dermal exposure)",
+                    "Eye pain, redness, or cloudiness (if eye exposure—emergency)"
+                ],
+                speciesRisks: [
+                    SpeciesRisk(species: .dog, severity: .severe, notes: "EMERGENCY—caustic burns to mouth, esophagus, and stomach can be life-threatening; do NOT induce vomiting; seek immediate veterinary care"),
+                    SpeciesRisk(species: .cat, severity: .severe, notes: "EMERGENCY—same severe risk as dogs; cats may also be exposed by walking through spills and grooming; seek immediate veterinary care"),
+                    SpeciesRisk(species: .smallMammal, severity: .severe, notes: "EMERGENCY—small body size makes any exposure extremely serious; esophageal and gastric burns can be rapidly fatal"),
+                    SpeciesRisk(species: .bird, severity: .severe, notes: "EMERGENCY—crop and esophageal burns can be fatal; birds are also extremely sensitive to caustic fumes; immediate veterinary care essential"),
+                    SpeciesRisk(species: .reptile, severity: .severe, notes: "EMERGENCY—caustic burns affect all species; contact with skin or mucous membranes requires immediate veterinary evaluation")
+                ],
+                preventionTips: [
+                    "Store drain cleaners, oven cleaners, and other caustic products in locked cabinets—these are among the most dangerous household chemicals",
+                    "Never leave open containers unattended, even briefly",
+                    "Keep pets completely away from areas where these products are being used",
+                    "Clean up any spills immediately and thoroughly",
+                    "Consider using enzymatic or mechanical drain cleaning methods as safer alternatives",
+                    "If working with wet concrete or cement, keep pets away from the work area until fully cured"
+                ],
+                sources: ["Veterinary Information Network (VIN)", "ASPCA Animal Poison Control Center", "Merck Veterinary Manual", "Pet Poison Helpline", "MSD Veterinary Manual"],
+                relatedEntries: nil
             )
         ]
     }
