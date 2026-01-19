@@ -11,6 +11,7 @@
 		0A35A2B438F7FE2009ABCC3C /* EmptyStateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24B2882F5F5387A02F14DC1B /* EmptyStateView.swift */; };
 		0ED8DF5F0BC3B56D614CF741 /* SpeciesFilterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81DA312D440067CFD3E192A8 /* SpeciesFilterView.swift */; };
 		17B80370F698B2819590C349 /* SavedViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CBB1717EB5134FC9FB2784A /* SavedViewModel.swift */; };
+		1FF8DFAEF0DB676643C8C3B3 /* RelatedEntryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53D68258BA348FBDC14FFB4 /* RelatedEntryButton.swift */; };
 		28656B569411963894CA0019 /* PetToxicApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4287B0389C9E01E7BF8C74A2 /* PetToxicApp.swift */; };
 		2C6EF40350EE9264A0C5267E /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58C075EC2898DE2A6C54CB66 /* SearchView.swift */; };
 		301692FECB5521C59819B49F /* Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CEADD8856CCEA9B7022E31F /* Enums.swift */; };
@@ -88,6 +89,7 @@
 		9D0A536DAB60D4A56FC6C6B9 /* SeverityBadge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeverityBadge.swift; sourceTree = "<group>"; };
 		AD01A1755E279E4482FD79C5 /* SearchResultRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultRow.swift; sourceTree = "<group>"; };
 		AF7B0E075A2786B63F29BED4 /* SymptomsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SymptomsListView.swift; sourceTree = "<group>"; };
+		B53D68258BA348FBDC14FFB4 /* RelatedEntryButton.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = RelatedEntryButton.swift; sourceTree = "<group>"; };
 		C1B02F5CCAC1245C9103DF3A /* HistoryListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryListView.swift; sourceTree = "<group>"; };
 		C2A1F327069C6F80D711B112 /* CategoryGridItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryGridItem.swift; sourceTree = "<group>"; };
 		C2AFADFF0244619952F5FC07 /* BookmarksListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarksListView.swift; sourceTree = "<group>"; };
@@ -156,6 +158,7 @@
 				F4AF21A98F3346F34930A106 /* LoadingView.swift */,
 				207482A283C5391FDFEFAFC1 /* PoisonControlButton.swift */,
 				9D0A536DAB60D4A56FC6C6B9 /* SeverityBadge.swift */,
+				B53D68258BA348FBDC14FFB4 /* RelatedEntryButton.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -308,8 +311,6 @@
 				D69DC659D90E3E1752C9CF6D /* PBXTargetDependency */,
 			);
 			name = PetToxicUITests;
-			packageProductDependencies = (
-			);
 			productName = PetToxicUITests;
 			productReference = 48FD14B94E272939D2281BD1 /* PetToxicUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
@@ -326,8 +327,6 @@
 			dependencies = (
 			);
 			name = PetToxic;
-			packageProductDependencies = (
-			);
 			productName = PetToxic;
 			productReference = 43492A46C658B52393AA5BA7 /* PetToxic.app */;
 			productType = "com.apple.product-type.application";
@@ -344,8 +343,6 @@
 				6E10F7E84681E74775604C76 /* PBXTargetDependency */,
 			);
 			name = PetToxicTests;
-			packageProductDependencies = (
-			);
 			productName = PetToxicTests;
 			productReference = 48FB23F604DBF891410A2F23 /* PetToxicTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
@@ -383,6 +380,7 @@
 			mainGroup = EE5DA48B16C54F453B1773CE;
 			minimizedProjectReferenceProxies = 1;
 			preferredProjectObjectVersion = 77;
+			productRefGroup = F95BFEAAE9F71A6F51F04D61 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
@@ -441,6 +439,7 @@
 				F1372C807BFFDC33BCD4A18F /* SpeciesRisk.swift in Sources */,
 				4E934701319A0D79525B5FC1 /* SymptomsListView.swift in Sources */,
 				BD101F4DBB5A92DCFD01C09D /* ToxicItem.swift in Sources */,
+				1FF8DFAEF0DB676643C8C3B3 /* RelatedEntryButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

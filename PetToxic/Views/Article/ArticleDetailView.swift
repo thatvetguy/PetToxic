@@ -47,6 +47,9 @@ struct ArticleDetailView: View {
                 // Emergency contacts
                 emergencySection
 
+                // Related entries
+                relatedEntriesSection
+
                 // Sources
                 sourcesSection
             }
@@ -67,6 +70,9 @@ struct ArticleDetailView: View {
         .onAppear {
             isBookmarked = viewModel.isBookmarked(item)
             viewModel.recordView(of: item)
+        }
+        .navigationDestination(for: ToxicItem.self) { relatedItem in
+            ArticleDetailView(item: relatedItem)
         }
     }
 
@@ -178,6 +184,27 @@ struct ArticleDetailView: View {
             }
         }
         .padding(.vertical)
+    }
+
+    @ViewBuilder
+    private var relatedEntriesSection: some View {
+        if let relatedEntryIds = item.relatedEntries, !relatedEntryIds.isEmpty {
+            let relatedItems = relatedEntryIds.compactMap { DatabaseService.shared.item(withIdString: $0) }
+            if !relatedItems.isEmpty {
+                VStack(alignment: .leading, spacing: 12) {
+                    Text("Related Entries")
+                        .font(.title2)
+                        .fontWeight(.semibold)
+
+                    VStack(spacing: 8) {
+                        ForEach(relatedItems) { relatedItem in
+                            RelatedEntryButton(item: relatedItem)
+                        }
+                    }
+                }
+                .padding(.vertical, 4)
+            }
+        }
     }
 
     private var sourcesSection: some View {

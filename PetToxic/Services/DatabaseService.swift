@@ -15,7 +15,7 @@ class DatabaseService {
         allItems = [
             // MARK: - Chocolate
             ToxicItem(
-                id: UUID(),
+                id: UUID(uuidString: "d8c34930-fe78-414c-a182-49521dbfc266")!,
                 name: "Chocolate",
                 alternateNames: ["cocoa", "cacao", "dark chocolate", "milk chocolate", "baking chocolate", "white chocolate", "cocoa powder", "chocolate chips", "cocoa bean mulch"],
                 categories: [.foods, .holidayHazards],
@@ -48,12 +48,13 @@ class DatabaseService {
                     "Educate children not to share chocolate with pets",
                     "Remember that baking chocolate and dark chocolate are most dangerous"
                 ],
-                sources: ["ASPCA Animal Poison Control Center", "Merck Veterinary Manual", "Veterinary Information Network (VIN)", "VCA Animal Hospitals"]
+                sources: ["ASPCA Animal Poison Control Center", "Merck Veterinary Manual", "Veterinary Information Network (VIN)", "VCA Animal Hospitals"],
+                relatedEntries: nil
             ),
 
             // MARK: - Grapes & Raisins
             ToxicItem(
-                id: UUID(),
+                id: UUID(uuidString: "d1bde5cd-6881-4765-ac4c-b9f43b40da70")!,
                 name: "Grapes & Raisins",
                 alternateNames: ["grapes", "raisins", "currants", "sultanas", "Zante currants", "dried grapes", "Corinthian raisins", "Vitis vinifera"],
                 categories: [.foods],
@@ -86,12 +87,13 @@ class DatabaseService {
                     "Be cautious with grape juice and wine—both contain the same toxic compounds",
                     "Dispose of fallen grapes promptly if you have grapevines"
                 ],
-                sources: ["ASPCA Animal Poison Control Center", "Pet Poison Helpline", "Merck Veterinary Manual", "Veterinary Information Network (VIN)"]
+                sources: ["ASPCA Animal Poison Control Center", "Pet Poison Helpline", "Merck Veterinary Manual", "Veterinary Information Network (VIN)"],
+                relatedEntries: nil
             ),
 
             // MARK: - Xylitol
             ToxicItem(
-                id: UUID(),
+                id: UUID(uuidString: "d7723ed0-6496-40b3-8b1c-84e129083cb9")!,
                 name: "Xylitol",
                 alternateNames: ["birch sugar", "wood sugar", "birch bark extract", "sugar alcohol", "E967"],
                 categories: [.foods],
@@ -124,12 +126,13 @@ class DatabaseService {
                     "Keep sugar-free peanut butter away from pets; always check labels before sharing",
                     "Be aware that some medications and supplements contain xylitol as a sweetener"
                 ],
-                sources: ["ASPCA Animal Poison Control Center", "Pet Poison Helpline", "Merck Veterinary Manual", "Veterinary Information Network (VIN)"]
+                sources: ["ASPCA Animal Poison Control Center", "Pet Poison Helpline", "Merck Veterinary Manual", "Veterinary Information Network (VIN)"],
+                relatedEntries: nil
             ),
 
             // MARK: - Onions
             ToxicItem(
-                id: UUID(),
+                id: UUID(uuidString: "8a27c390-254f-47c9-90e7-7739694f603f")!,
                 name: "Onions",
                 alternateNames: ["onion", "red onion", "white onion", "yellow onion", "green onion", "scallions", "shallots", "chives", "leeks", "onion powder", "onion flakes", "dried onion", "dehydrated onion", "Allium cepa", "Allium porrum", "Allium schoenoprasum"],
                 categories: [.foods],
@@ -164,12 +167,13 @@ class DatabaseService {
                     "Check ingredient lists on baby food, soups, and prepared foods",
                     "Remember that all forms are toxic: raw, cooked, powdered, and dehydrated"
                 ],
-                sources: ["ASPCA Animal Poison Control Center", "Pet Poison Helpline", "Merck Veterinary Manual", "Veterinary Information Network (VIN)"]
+                sources: ["ASPCA Animal Poison Control Center", "Pet Poison Helpline", "Merck Veterinary Manual", "Veterinary Information Network (VIN)"],
+                relatedEntries: nil
             ),
 
             // MARK: - Garlic
             ToxicItem(
-                id: UUID(),
+                id: UUID(uuidString: "dad777ea-3120-43b1-9b8f-aee413716abc")!,
                 name: "Garlic",
                 alternateNames: ["garlic cloves", "garlic powder", "garlic salt", "minced garlic", "roasted garlic", "garlic supplements", "Allium sativum"],
                 categories: [.foods],
@@ -204,12 +208,13 @@ class DatabaseService {
                     "Avoid garlic-based pet supplements unless specifically directed by a veterinarian",
                     "Check ingredient lists on prepared foods, sauces, and seasonings"
                 ],
-                sources: ["ASPCA Animal Poison Control Center", "Pet Poison Helpline", "Merck Veterinary Manual", "Veterinary Information Network (VIN)"]
+                sources: ["ASPCA Animal Poison Control Center", "Pet Poison Helpline", "Merck Veterinary Manual", "Veterinary Information Network (VIN)"],
+                relatedEntries: nil
             ),
 
             // MARK: - Macadamia Nuts
             ToxicItem(
-                id: UUID(),
+                id: UUID(uuidString: "df7f2d18-6f6c-40c8-9f77-cdfbc815e946")!,
                 name: "Macadamia Nuts",
                 alternateNames: ["macadamia", "Australia nut", "Queensland nut", "macadamia integrifolia", "macadamia tetraphylla"],
                 categories: [.foods],
@@ -241,12 +246,13 @@ class DatabaseService {
                     "Be aware that macadamia nuts are often paired with chocolate, which is also toxic",
                     "Keep baked goods containing macadamia nuts out of pet reach"
                 ],
-                sources: ["Veterinary Information Network (VIN)", "ASPCA Animal Poison Control Center", "Pet Poison Helpline", "Merck Veterinary Manual"]
+                sources: ["Veterinary Information Network (VIN)", "ASPCA Animal Poison Control Center", "Pet Poison Helpline", "Merck Veterinary Manual"],
+                relatedEntries: nil
             ),
 
             // MARK: - Alcohol
             ToxicItem(
-                id: UUID(),
+                id: UUID(uuidString: "63f63b3a-1172-4fb2-9702-45496c99df4d")!,
                 name: "Alcohol",
                 alternateNames: ["ethanol", "ethyl alcohol", "beer", "wine", "liquor", "spirits", "vodka", "whiskey", "rum", "cocktail", "isopropanol", "isopropyl alcohol", "rubbing alcohol", "methanol", "methyl alcohol", "wood alcohol", "hand sanitizer"],
                 categories: [.foods, .recreationalSubstances],
@@ -283,12 +289,13 @@ class DatabaseService {
                     "Dispose of fermenting or rotting fruits promptly",
                     "Be aware that cocktails made with milk or cream may be especially attractive to pets"
                 ],
-                sources: ["Veterinary Information Network (VIN)", "ASPCA Animal Poison Control Center", "Pet Poison Helpline", "Merck Veterinary Manual", "VCA Animal Hospitals"]
+                sources: ["Veterinary Information Network (VIN)", "ASPCA Animal Poison Control Center", "Pet Poison Helpline", "Merck Veterinary Manual", "VCA Animal Hospitals"],
+                relatedEntries: nil
             ),
 
             // MARK: - Raw Yeast Dough
             ToxicItem(
-                id: UUID(),
+                id: UUID(uuidString: "ec90eb4b-765b-45cb-9255-f449b656b7d3")!,
                 name: "Raw Yeast Dough",
                 alternateNames: ["bread dough", "raw bread dough", "unbaked dough", "rising dough", "pizza dough", "raw pizza dough", "sourdough starter", "yeast dough", "uncooked dough"],
                 categories: [.foods, .holidayHazards],
@@ -324,12 +331,13 @@ class DatabaseService {
                     "Dispose of unused or old dough in a secure trash container outside the home",
                     "Be extra vigilant during holiday baking when dough is frequently left to rise"
                 ],
-                sources: ["Veterinary Information Network (VIN)", "ASPCA Animal Poison Control Center", "Pet Poison Helpline", "Merck Veterinary Manual", "VCA Animal Hospitals"]
+                sources: ["Veterinary Information Network (VIN)", "ASPCA Animal Poison Control Center", "Pet Poison Helpline", "Merck Veterinary Manual", "VCA Animal Hospitals"],
+                relatedEntries: nil
             ),
 
             // MARK: - Caffeine
             ToxicItem(
-                id: UUID(),
+                id: UUID(uuidString: "ae80bf97-0ffd-4ed8-b9d9-727e747d583b")!,
                 name: "Caffeine",
                 alternateNames: ["coffee", "coffee beans", "coffee grounds", "espresso", "tea", "tea bags", "green tea", "black tea", "energy drinks", "Red Bull", "Monster", "soda", "cola", "diet pills", "caffeine pills", "NoDoz", "Vivarin", "pre-workout", "guarana"],
                 categories: [.foods],
@@ -366,12 +374,13 @@ class DatabaseService {
                     "Keep diet pills, pre-workout supplements, and caffeine pills in closed cabinets",
                     "Be aware that some medications and herbal supplements contain caffeine"
                 ],
-                sources: ["Veterinary Information Network (VIN)", "ASPCA Animal Poison Control Center", "Pet Poison Helpline", "VCA Animal Hospitals"]
+                sources: ["Veterinary Information Network (VIN)", "ASPCA Animal Poison Control Center", "Pet Poison Helpline", "VCA Animal Hospitals"],
+                relatedEntries: nil
             ),
 
             // MARK: - Avocado
             ToxicItem(
-                id: UUID(),
+                id: UUID(uuidString: "6a0dda24-d0e1-47c4-af59-068101844c8b")!,
                 name: "Avocado",
                 alternateNames: ["guacamole", "avocado pit", "avocado seed", "avocado leaves", "persea americana"],
                 categories: [.foods, .plants],
@@ -407,12 +416,13 @@ class DatabaseService {
                     "Store ripe avocados in the refrigerator out of pet reach",
                     "Be cautious with guacamole at parties—it may also contain onion and garlic"
                 ],
-                sources: ["Merck Veterinary Manual", "ASPCA Animal Poison Control Center", "Pet Poison Helpline"]
+                sources: ["Merck Veterinary Manual", "ASPCA Animal Poison Control Center", "Pet Poison Helpline"],
+                relatedEntries: nil
             ),
 
             // MARK: - Nutmeg
             ToxicItem(
-                id: UUID(),
+                id: UUID(uuidString: "d6ac2e8a-00de-42cb-9c6b-f912ec43d5f3")!,
                 name: "Nutmeg",
                 alternateNames: ["ground nutmeg", "whole nutmeg", "nutmeg seed", "myristica fragrans", "myristicin"],
                 categories: [.foods, .holidayHazards],
@@ -445,12 +455,13 @@ class DatabaseService {
                     "Keep nutmeg essential oil secured—it is more concentrated than the ground spice",
                     "A small bite of baked goods with nutmeg is unlikely to cause serious harm, but avoid sharing intentionally"
                 ],
-                sources: ["Veterinary Information Network (VIN)", "Pet Poison Helpline", "PetMD"]
+                sources: ["Veterinary Information Network (VIN)", "Pet Poison Helpline", "PetMD"],
+                relatedEntries: nil
             ),
 
             // MARK: - Salt
             ToxicItem(
-                id: UUID(),
+                id: UUID(uuidString: "c9fb21d1-a66a-418e-a63f-1b754ec048f2")!,
                 name: "Salt",
                 alternateNames: ["sodium chloride", "table salt", "rock salt", "de-icing salt", "road salt", "sea salt", "homemade play dough", "salt dough", "playdough", "paint balls", "sea water", "ocean water", "salty snacks"],
                 categories: [.foods],
@@ -485,12 +496,13 @@ class DatabaseService {
                     "Avoid sharing salty snacks like chips, pretzels, or salted popcorn with pets",
                     "Never use salt to induce vomiting—this can cause salt poisoning"
                 ],
-                sources: ["Veterinary Information Network (VIN)", "ASPCA Animal Poison Control Center", "Pet Poison Helpline"]
+                sources: ["Veterinary Information Network (VIN)", "ASPCA Animal Poison Control Center", "Pet Poison Helpline"],
+                relatedEntries: nil
             ),
 
             // MARK: - Fatty Foods & Grease
             ToxicItem(
-                id: UUID(),
+                id: UUID(uuidString: "2e094121-64ea-499c-bfb4-6db98f139b55")!,
                 name: "Fatty Foods & Grease",
                 alternateNames: ["fat trimmings", "grease", "bacon grease", "meat drippings", "turkey skin", "chicken skin", "gravy", "fried foods", "greasy foods", "table scraps", "lard", "cooking oil", "butter", "bacon", "pork fat", "beef fat", "schmaltz", "duck fat"],
                 categories: [.foods, .holidayHazards],
@@ -523,12 +535,13 @@ class DatabaseService {
                     "Keep plates and serving dishes out of reach of counter-surfing pets",
                     "Store cooking grease and drippings securely before disposal"
                 ],
-                sources: ["Pet Poison Helpline", "ASPCA Animal Poison Control Center", "Merck Veterinary Manual", "American Veterinary Medical Association (JAVMA)"]
+                sources: ["Pet Poison Helpline", "ASPCA Animal Poison Control Center", "Merck Veterinary Manual", "American Veterinary Medical Association (JAVMA)"],
+                relatedEntries: nil
             ),
 
             // MARK: - Cooked Bones
             ToxicItem(
-                id: UUID(),
+                id: UUID(uuidString: "59cf7dc4-5d83-4811-97f1-ce1d0162cd28")!,
                 name: "Cooked Bones",
                 alternateNames: ["chicken bones", "turkey bones", "pork bones", "beef bones cooked", "rib bones", "poultry bones", "fish bones", "lamb bones cooked", "ham bones", "steak bones", "pork chop bones", "t-bone", "drumstick bones", "wing bones", "spare ribs"],
                 categories: [.foods, .holidayHazards],
@@ -563,12 +576,13 @@ class DatabaseService {
                     "Inform guests not to give bones to pets",
                     "If you want to give your dog a bone, consult your veterinarian about appropriate raw bone options and supervision requirements"
                 ],
-                sources: ["ASPCA Animal Poison Control Center", "Pet Poison Helpline", "American Kennel Club", "FDA (U.S. Food and Drug Administration)"]
+                sources: ["ASPCA Animal Poison Control Center", "Pet Poison Helpline", "American Kennel Club", "FDA (U.S. Food and Drug Administration)"],
+                relatedEntries: nil
             ),
 
             // MARK: - Milk & Dairy Products
             ToxicItem(
-                id: UUID(),
+                id: UUID(uuidString: "9bc97e12-961b-4fee-adee-182c55d91ea9")!,
                 name: "Milk & Dairy Products",
                 alternateNames: ["milk", "cow's milk", "cheese", "ice cream", "yogurt", "cream", "butter", "cottage cheese", "sour cream", "whipped cream", "half and half", "lactose", "dairy", "cheddar", "mozzarella", "parmesan", "cream cheese", "whole milk", "skim milk"],
                 categories: [.foods],
@@ -600,12 +614,13 @@ class DatabaseService {
                     "Always check labels on dairy products and dairy alternatives for xylitol",
                     "Keep ice cream and other high-fat dairy away from pets prone to pancreatitis"
                 ],
-                sources: ["ASPCA Animal Poison Control Center", "PetMD", "VCA Animal Hospitals", "Merck Veterinary Manual"]
+                sources: ["ASPCA Animal Poison Control Center", "PetMD", "VCA Animal Hospitals", "Merck Veterinary Manual"],
+                relatedEntries: nil
             ),
 
             // MARK: - Black Walnuts
             ToxicItem(
-                id: UUID(),
+                id: UUID(uuidString: "6349efb2-07ef-4da1-a8cc-bbd6dc338f77")!,
                 name: "Black Walnuts",
                 alternateNames: ["black walnut tree", "Juglans nigra", "black walnut wood", "black walnut shavings", "walnut hulls", "black walnut sawdust", "juglone", "walnut shells"],
                 categories: [.foods, .plants],
@@ -638,12 +653,13 @@ class DatabaseService {
                     "Be extra vigilant in fall (September-December) when nuts are dropping and in spring when buried nuts resurface",
                     "If you have black walnut trees cut down or trimmed, keep dogs away from sawdust and debris"
                 ],
-                sources: ["Veterinary Information Network (VIN) - ASPCA APCC Case Series Study", "ASPCA Animal Poison Control Center", "Merck Veterinary Manual"]
+                sources: ["Veterinary Information Network (VIN) - ASPCA APCC Case Series Study", "ASPCA Animal Poison Control Center", "Merck Veterinary Manual"],
+                relatedEntries: nil
             ),
 
             // MARK: - Fruit Pits & Seeds
             ToxicItem(
-                id: UUID(),
+                id: UUID(uuidString: "f1369ae0-b97d-424d-98b7-b46a9b245109")!,
                 name: "Fruit Pits & Seeds",
                 alternateNames: ["apple seeds", "apple core", "cherry pits", "cherry seeds", "peach pits", "peach seeds", "apricot pits", "apricot seeds", "plum pits", "plum seeds", "nectarine pits", "stone fruit pits", "cyanogenic glycosides", "amygdalin"],
                 categories: [.foods],
@@ -678,12 +694,13 @@ class DatabaseService {
                     "Keep compost bins secure; fermenting fruit can also cause alcohol toxicity",
                     "A single swallowed pit may pass without issue, but contact your vet for guidance, especially for smaller dogs"
                 ],
-                sources: ["ASPCA Animal Poison Control Center", "Pet Poison Helpline", "Veterinary Information Network (VIN)"]
+                sources: ["ASPCA Animal Poison Control Center", "Pet Poison Helpline", "Veterinary Information Network (VIN)"],
+                relatedEntries: nil
             ),
 
             // MARK: - Moldy Foods
             ToxicItem(
-                id: UUID(),
+                id: UUID(uuidString: "beacabe2-00ab-4e59-8c8c-c09665f940b6")!,
                 name: "Moldy Foods",
                 alternateNames: ["moldy bread", "moldy cheese", "spoiled food", "rotten food", "compost", "garbage", "trash", "mycotoxins", "tremorgenic mycotoxins", "moldy walnuts", "moldy nuts", "penitrem-A", "roquefortine"],
                 categories: [.foods],
@@ -716,12 +733,13 @@ class DatabaseService {
                     "Pick up fallen fruit and nuts from your yard before they decompose",
                     "Never intentionally feed moldy food to pets—even 'a little mold' can be dangerous"
                 ],
-                sources: ["ASPCA Animal Poison Control Center", "Pet Poison Helpline", "Merck Veterinary Manual"]
+                sources: ["ASPCA Animal Poison Control Center", "Pet Poison Helpline", "Merck Veterinary Manual"],
+                relatedEntries: nil
             ),
 
             // MARK: - Lilies (True Lilies)
             ToxicItem(
-                id: UUID(),
+                id: UUID(uuidString: "419a437f-3834-47e1-934a-5fa379b98a00")!,
                 name: "Lilies (True Lilies)",
                 alternateNames: ["Easter lily", "Asiatic lily", "Tiger lily", "Stargazer lily", "Oriental lily", "Japanese show lily", "Rubrum lily", "Red lily", "Western lily", "Wood lily", "Daylily", "Hemerocallis", "Lilium", "Lilium longiflorum", "Lilium tigrinum", "Lilium speciosum", "Lilium auratum", "lily bouquet", "lily flower", "lily pollen"],
                 categories: [.plants, .holidayHazards],
@@ -757,12 +775,13 @@ class DatabaseService {
                     "If your cat has any potential exposure to lilies — even brushing against pollen — seek veterinary care immediately; do not wait for symptoms",
                     "Educate family members, pet sitters, and houseguests about the danger of lilies to cats"
                 ],
-                sources: ["Veterinary Information Network (VIN)", "ASPCA Animal Poison Control Center", "Pet Poison Helpline", "Merck Veterinary Manual"]
+                sources: ["Veterinary Information Network (VIN)", "ASPCA Animal Poison Control Center", "Pet Poison Helpline", "Merck Veterinary Manual"],
+                relatedEntries: nil
             ),
 
             // MARK: - Sago Palm
             ToxicItem(
-                id: UUID(),
+                id: UUID(uuidString: "7e96af6d-05e2-438b-8391-70087f947bcb")!,
                 name: "Sago Palm",
                 alternateNames: ["cycad", "Cycas revoluta", "Cycas circinalis", "Zamia", "cardboard palm", "coontie", "queen sago", "king sago", "Japanese cycad", "Australian nut palm", "fern palm", "false sago palm", "iron tree", "cycad palm", "comptie", "Seminole bread", "Florida arrowroot", "bonsai palm", "sago cycas"],
                 categories: [.plants],
@@ -803,12 +822,13 @@ class DatabaseService {
                     "Young dogs are especially prone to chewing on plants — supervise puppies around all landscaping",
                     "If you suspect any exposure, seek emergency veterinary care immediately — do not wait for symptoms to appear"
                 ],
-                sources: ["Veterinary Information Network (VIN)", "ASPCA Animal Poison Control Center", "Pet Poison Helpline", "Merck Veterinary Manual"]
+                sources: ["Veterinary Information Network (VIN)", "ASPCA Animal Poison Control Center", "Pet Poison Helpline", "Merck Veterinary Manual"],
+                relatedEntries: nil
             ),
 
             // MARK: - Azalea, Rhododendron & Mountain Laurel
             ToxicItem(
-                id: UUID(),
+                id: UUID(uuidString: "674ec507-669c-4a1c-8bf5-cb745b03c2a7")!,
                 name: "Azalea, Rhododendron & Mountain Laurel",
                 alternateNames: ["azalea", "rhododendron", "Rhododendron spp", "rosebay", "great laurel", "wild honeysuckle", "azalea bush", "rhododendron bush", "Mountain laurel", "mountain laurel", "Kalmia", "Kalmia latifolia", "calico bush", "spoonwood", "American laurel", "ivy bush", "sheep laurel", "Kalmia angustifolia", "lambkill", "bog laurel", "Kalmia polifolia", "swamp laurel"],
                 categories: [.plants],
@@ -848,12 +868,13 @@ class DatabaseService {
                     "Be aware that mountain laurel grows wild in many eastern U.S. forests — keep pets supervised when hiking in these areas",
                     "All three plants (azalea, rhododendron, mountain laurel) pose the same level of risk — do not assume one is safer than others"
                 ],
-                sources: ["Veterinary Information Network (VIN)", "ASPCA Animal Poison Control Center", "Pet Poison Helpline", "Merck Veterinary Manual"]
+                sources: ["Veterinary Information Network (VIN)", "ASPCA Animal Poison Control Center", "Pet Poison Helpline", "Merck Veterinary Manual"],
+                relatedEntries: nil
             ),
 
             // MARK: - Tulips & Hyacinths
             ToxicItem(
-                id: UUID(),
+                id: UUID(uuidString: "81d94db6-b452-4997-818a-fb89fde196fa")!,
                 name: "Tulips & Hyacinths",
                 alternateNames: ["tulip", "tulip bulb", "Tulipa", "Tulipa spp", "hyacinth", "hyacinth bulb", "Hyacinthus", "Hyacinthus orientalis", "Dutch hyacinth", "garden hyacinth", "spring bulbs", "flower bulbs", "tulipalin", "tuliposide"],
                 categories: [.plants, .holidayHazards],
@@ -887,12 +908,13 @@ class DatabaseService {
                     "Keep cut tulips and hyacinths in vases out of pet reach; the water may also contain irritating compounds",
                     "If you see your pet chewing on tulip or hyacinth plants, contact your veterinarian even if symptoms haven't appeared yet"
                 ],
-                sources: ["Veterinary Information Network (VIN)", "ASPCA Animal Poison Control Center", "Pet Poison Helpline", "DVM360"]
+                sources: ["Veterinary Information Network (VIN)", "ASPCA Animal Poison Control Center", "Pet Poison Helpline", "DVM360"],
+                relatedEntries: nil
             ),
 
             // MARK: - Oleander
             ToxicItem(
-                id: UUID(),
+                id: UUID(uuidString: "00270080-3cce-4b30-b9ee-571f90e92371")!,
                 name: "Oleander",
                 alternateNames: ["Nerium oleander", "common oleander", "rose bay", "rosebay", "yellow oleander", "Thevetia peruviana", "white oleander", "pink oleander", "red oleander", "oleander bush", "oleander shrub", "adelfa", "laurier rose"],
                 categories: [.plants],
@@ -932,12 +954,13 @@ class DatabaseService {
                     "Be aware that oleander is commonly planted along highways and in public spaces in warm climates",
                     "Do not burn oleander clippings — the smoke can also be toxic if inhaled"
                 ],
-                sources: ["Veterinary Information Network (VIN)", "ASPCA Animal Poison Control Center", "Pet Poison Helpline", "DVM360"]
+                sources: ["Veterinary Information Network (VIN)", "ASPCA Animal Poison Control Center", "Pet Poison Helpline", "DVM360"],
+                relatedEntries: nil
             ),
 
             // MARK: - Autumn Crocus
             ToxicItem(
-                id: UUID(),
+                id: UUID(uuidString: "741c92ff-a3da-4512-967c-628e8783cff8")!,
                 name: "Autumn Crocus",
                 alternateNames: ["Colchicum autumnale", "meadow saffron", "naked ladies", "naked boys", "fall crocus", "wonder bulb", "colchicum", "Colchicum", "crocus (autumn)"],
                 categories: [.plants],
@@ -979,12 +1002,13 @@ class DatabaseService {
                     "If you have autumn crocus in your garden, consider removing it entirely or fencing it off",
                     "If you are unsure whether a crocus is spring crocus or autumn crocus, treat any ingestion as an emergency"
                 ],
-                sources: ["Veterinary Information Network (VIN)", "ASPCA Animal Poison Control Center", "Pet Poison Helpline", "Merck Veterinary Manual"]
+                sources: ["Veterinary Information Network (VIN)", "ASPCA Animal Poison Control Center", "Pet Poison Helpline", "Merck Veterinary Manual"],
+                relatedEntries: nil
             ),
 
             // MARK: - Insoluble Calcium Oxalate Plants
             ToxicItem(
-                id: UUID(),
+                id: UUID(uuidString: "f52b8aba-d899-418b-8ce6-2844408a5e3c")!,
                 name: "Insoluble Calcium Oxalate Plants",
                 alternateNames: ["Dieffenbachia", "dumbcane", "dumb cane", "Philodendron", "heartleaf philodendron", "split-leaf philodendron", "Pothos", "golden pothos", "devil's ivy", "Peace lily", "Spathiphyllum", "Calla lily", "Zantedeschia", "Caladium", "angel wings", "Elephant ear", "Alocasia", "Colocasia", "Arrowhead vine", "Syngonium", "Monstera", "Swiss cheese plant", "Chinese evergreen", "Aglaonema", "Anthurium", "flamingo flower", "flamingo lily", "Araceae", "aroid", "arum family", "calcium oxalate crystals", "raphides", "ZZ plant", "Zamioculcas zamiifolia", "Zanzibar gem", "eternity plant", "aroid palm", "emerald palm", "Raven ZZ", "ZZ Raven", "Schefflera", "Schefflera actinophylla", "Schefflera arboricola", "umbrella tree", "umbrella plant", "dwarf umbrella tree", "octopus tree", "starleaf", "Queensland umbrella tree", "Australian ivy palm", "Jack-in-the-pulpit", "Arisaema", "Arisaema triphyllum", "Indian turnip", "bog onion", "brown dragon", "wild turnip", "dragon root", "pepper turnip", "three-leaved Indian turnip", "wake robin"],
                 categories: [.plants],
@@ -1017,12 +1041,13 @@ class DatabaseService {
                     "Supervise pets around houseplants and redirect chewing behavior",
                     "If you see your pet chewing on one of these plants, contact your veterinarian for guidance even though effects are usually mild"
                 ],
-                sources: ["ASPCA Animal Poison Control Center", "Veterinary Information Network (VIN)", "Pet Poison Helpline", "Merck Veterinary Manual"]
+                sources: ["ASPCA Animal Poison Control Center", "Veterinary Information Network (VIN)", "Pet Poison Helpline", "Merck Veterinary Manual"],
+                relatedEntries: nil
             ),
 
             // MARK: - Soluble Calcium Oxalate Plants
             ToxicItem(
-                id: UUID(),
+                id: UUID(uuidString: "8e6a2493-6fc9-4ddd-83b1-acb7148fbdd4")!,
                 name: "Soluble Calcium Oxalate Plants",
                 alternateNames: ["Rhubarb", "rhubarb leaves", "garden rhubarb", "common rhubarb", "Rheum rhabarbarum", "Star fruit", "starfruit", "carambola", "Averrhoa carambola", "Shamrock", "shamrock plant", "Oxalis", "wood sorrel", "sorrel", "oxalic acid", "soluble oxalates", "Begonia", "Begonia spp", "wax begonia", "rex begonia", "tuberous begonia", "angel wing begonia", "begonia tuber", "elephant ear begonia", "polka dot begonia"],
                 categories: [.plants, .foods],
@@ -1058,12 +1083,13 @@ class DatabaseService {
                     "Pets with kidney disease should be kept away from all oxalate-containing plants",
                     "If you plant tuberous begonias outdoors, be aware that dogs may dig up and chew the tubers — the most toxic part of the plant"
                 ],
-                sources: ["Veterinary Information Network (VIN)", "ASPCA Animal Poison Control Center", "Pet Poison Helpline", "Merck Veterinary Manual"]
+                sources: ["Veterinary Information Network (VIN)", "ASPCA Animal Poison Control Center", "Pet Poison Helpline", "Merck Veterinary Manual"],
+                relatedEntries: nil
             ),
 
             // MARK: - Daffodils
             ToxicItem(
-                id: UUID(),
+                id: UUID(uuidString: "cdb80d59-274a-45f9-b5c5-1e716a7b402b")!,
                 name: "Daffodils",
                 alternateNames: ["daffodil", "Narcissus", "Narcissus spp", "jonquil", "jonquils", "paper white", "paperwhite", "paper whites", "narcissus bulb", "daffodil bulb", "yellow daffodil", "wild daffodil", "Lent lily", "lycorine", "amaryllis", "Amaryllis", "Amaryllis belladonna", "Hippeastrum", "belladonna lily", "naked lady lily", "amaryllis bulb"],
                 categories: [.plants, .holidayHazards],
@@ -1103,12 +1129,13 @@ class DatabaseService {
                     "Dispose of dead plant material securely — dried stems and leaves can still cause toxicity",
                     "Amaryllis bulbs are popular holiday gifts — keep them out of reach of pets, especially during the winter holiday season"
                 ],
-                sources: ["Veterinary Information Network (VIN)", "ASPCA Animal Poison Control Center", "Pet Poison Helpline", "Canadian Veterinary Journal (case report)"]
+                sources: ["Veterinary Information Network (VIN)", "ASPCA Animal Poison Control Center", "Pet Poison Helpline", "Canadian Veterinary Journal (case report)"],
+                relatedEntries: nil
             ),
 
             // MARK: - Foxglove
             ToxicItem(
-                id: UUID(),
+                id: UUID(uuidString: "2a95c561-533e-4a73-bd11-8d43bd127bb4")!,
                 name: "Foxglove",
                 alternateNames: ["Digitalis", "Digitalis purpurea", "purple foxglove", "common foxglove", "lady's glove", "fairy gloves", "folk's glove", "digitalis", "digoxin plant", "digitoxin plant", "dead man's bells", "witch's gloves"],
                 categories: [.plants],
@@ -1146,12 +1173,13 @@ class DatabaseService {
                     "Supervise pets around foxglove, especially young curious animals",
                     "Wear gloves when handling foxglove and wash hands thoroughly afterward"
                 ],
-                sources: ["Veterinary Information Network (VIN)", "ASPCA Animal Poison Control Center", "Pet Poison Helpline", "VETgirl"]
+                sources: ["Veterinary Information Network (VIN)", "ASPCA Animal Poison Control Center", "Pet Poison Helpline", "VETgirl"],
+                relatedEntries: nil
             ),
 
             // MARK: - Lily of the Valley
             ToxicItem(
-                id: UUID(),
+                id: UUID(uuidString: "f057eb34-f67c-4341-b971-1bde66ca3242")!,
                 name: "Lily of the Valley",
                 alternateNames: ["Convallaria majalis", "Convallaria", "May lily", "May bells", "Our Lady's tears", "Mary's tears", "muguet", "lily of the valley berries", "convallatoxin"],
                 categories: [.plants],
@@ -1192,12 +1220,13 @@ class DatabaseService {
                     "Lily of the valley spreads aggressively via underground rhizomes — check for it spreading into pet-accessible areas",
                     "If you suspect any exposure, seek veterinary care immediately — do not wait for symptoms"
                 ],
-                sources: ["Veterinary Information Network (VIN)", "ASPCA Animal Poison Control Center", "Pet Poison Helpline", "JAVMA (case report)"]
+                sources: ["Veterinary Information Network (VIN)", "ASPCA Animal Poison Control Center", "Pet Poison Helpline", "JAVMA (case report)"],
+                relatedEntries: nil
             ),
 
             // MARK: - Castor Beans
             ToxicItem(
-                id: UUID(),
+                id: UUID(uuidString: "0bf15704-86a3-40a9-94e1-4ba4ffbdea1b")!,
                 name: "Castor Beans",
                 alternateNames: ["Ricinus communis", "castor bean plant", "castor oil plant", "castor plant", "mole bean plant", "African wonder tree", "palm of Christ", "ricin", "castor bean meal", "castor cake", "castor oil cake", "castor bean fertilizer"],
                 categories: [.plants, .gardenProducts],
@@ -1243,12 +1272,13 @@ class DatabaseService {
                     "Be aware that castor bean plants may grow wild in warm climates — learn to identify them",
                     "If you suspect any exposure, seek emergency veterinary care immediately — there is no antidote and early intervention is critical"
                 ],
-                sources: ["Veterinary Information Network (VIN)", "ASPCA Animal Poison Control Center", "Pet Poison Helpline", "PubMed (case studies)"]
+                sources: ["Veterinary Information Network (VIN)", "ASPCA Animal Poison Control Center", "Pet Poison Helpline", "PubMed (case studies)"],
+                relatedEntries: nil
             ),
 
             // MARK: - Wild Mushrooms
             ToxicItem(
-                id: UUID(),
+                id: UUID(uuidString: "1ce957ec-633a-4946-9b76-933a16dfdb5c")!,
                 name: "Wild Mushrooms",
                 alternateNames: ["mushroom", "mushrooms", "toadstool", "toadstools", "Amanita", "death cap", "death angel", "destroying angel", "Amanita phalloides", "Amanita ocreata", "Amanita muscaria", "fly agaric", "Galerina", "Lepiota", "Inocybe", "Clitocybe", "Gyromitra", "false morel", "magic mushrooms", "psilocybin", "Psilocybe", "shrooms", "yard mushrooms", "backyard mushrooms", "lawn mushrooms"],
                 categories: [.plants],
@@ -1294,12 +1324,13 @@ class DatabaseService {
                     "If possible, collect a sample of the mushroom: wrap in a damp paper or wax paper towel (NOT plastic), place in a paper bag, and refrigerate; note where you found it and what it was growing on",
                     "For emergency mushroom identification, contact the North American Mycological Association (NAMA) at namyco.org, or the Facebook group 'Poisons Help; Emergency Identification for Mushrooms & Plants' — provide clear photos (including gills/underside), geographic location, and what the mushroom was growing on"
                 ],
-                sources: ["Veterinary Information Network (VIN)", "ASPCA Animal Poison Control Center", "North American Mycological Association (NAMA)", "VCA Animal Hospitals", "UC Davis School of Veterinary Medicine"]
+                sources: ["Veterinary Information Network (VIN)", "ASPCA Animal Poison Control Center", "North American Mycological Association (NAMA)", "VCA Animal Hospitals", "UC Davis School of Veterinary Medicine"],
+                relatedEntries: nil
             ),
 
             // MARK: - Blue-Green Algae (Cyanobacteria)
             ToxicItem(
-                id: UUID(),
+                id: UUID(uuidString: "f122f209-b845-4921-a9e1-235abcd6876b")!,
                 name: "Blue-Green Algae (Cyanobacteria)",
                 alternateNames: ["cyanobacteria", "cyanobacterial poisoning", "blue green algae", "pond scum", "pond algae", "lake algae", "algae bloom", "algal bloom", "harmful algal bloom", "HAB", "microcystins", "anatoxins", "toxic algae", "green pond water", "pea soup water"],
                 categories: [.plants, .environmentalHazards],
@@ -1341,12 +1372,13 @@ class DatabaseService {
                     "Blooms can appear and disappear quickly — a body of water that was safe last week may not be safe today",
                     "If you suspect any exposure, seek emergency veterinary care immediately — do not wait for symptoms; minutes can matter with this toxin"
                 ],
-                sources: ["Veterinary Information Network (VIN)", "ASPCA Animal Poison Control Center", "Pet Poison Helpline", "EPA (Environmental Protection Agency)"]
+                sources: ["Veterinary Information Network (VIN)", "ASPCA Animal Poison Control Center", "Pet Poison Helpline", "EPA (Environmental Protection Agency)"],
+                relatedEntries: nil
             ),
 
             // MARK: - Yew
             ToxicItem(
-                id: UUID(),
+                id: UUID(uuidString: "35d425ef-8319-4820-9614-a9b1a0c4cfac")!,
                 name: "Yew",
                 alternateNames: ["Taxus", "Taxus baccata", "Taxus cuspidata", "Taxus canadensis", "Taxus brevifolia", "Taxus chinensis", "Taxus x media", "English yew", "Japanese yew", "Chinese yew", "American yew", "Canadian yew", "Pacific yew", "Western yew", "ground hemlock", "yew tree", "yew bush", "yew shrub", "yew berries", "taxine"],
                 categories: [.plants],
@@ -1388,12 +1420,13 @@ class DatabaseService {
                     "Toxin concentrations are highest in winter — be extra vigilant during cold months",
                     "If you suspect any yew ingestion, seek emergency veterinary care immediately — do not wait for symptoms; death can occur within hours"
                 ],
-                sources: ["Veterinary Information Network (VIN)", "ASPCA Animal Poison Control Center", "Pet Poison Helpline", "Merck Veterinary Manual"]
+                sources: ["Veterinary Information Network (VIN)", "ASPCA Animal Poison Control Center", "Pet Poison Helpline", "Merck Veterinary Manual"],
+                relatedEntries: nil
             ),
 
             // MARK: - Snake Plant & Dracaena
             ToxicItem(
-                id: UUID(),
+                id: UUID(uuidString: "edb87d20-62af-4382-883e-5f979b4b7892")!,
                 name: "Snake Plant & Dracaena",
                 alternateNames: ["Sansevieria", "Sansevieria trifasciata", "Dracaena trifasciata", "mother-in-law's tongue", "mother in laws tongue", "good luck plant", "golden bird's nest", "viper's bowstring hemp", "Saint George's sword", "Sansevieria Moonshine", "Sansevieria cylindrica", "snake plant leaves", "Dracaena", "Dracaena fragrans", "Dracaena marginata", "Dracaena deremensis", "Dracaena surculosa", "corn plant", "cornstalk plant", "dragon tree", "red-edged dracaena", "ribbon plant", "Janet Craig", "Warneckii", "mass cane", "lucky bamboo", "Dracaena sanderiana", "Florida beauty"],
                 categories: [.plants],
@@ -1429,12 +1462,13 @@ class DatabaseService {
                     "If your pet ingests snake plant or dracaena and develops vomiting or diarrhea, contact your veterinarian for guidance",
                     "All Dracaena species (corn plant, dragon tree, lucky bamboo, etc.) contain the same saponin toxins as snake plant"
                 ],
-                sources: ["ASPCA Animal Poison Control Center", "Pet Poison Helpline", "University of North Carolina Department of Horticultural Science", "Wag Walking Veterinary Resources"]
+                sources: ["ASPCA Animal Poison Control Center", "Pet Poison Helpline", "University of North Carolina Department of Horticultural Science", "Wag Walking Veterinary Resources"],
+                relatedEntries: nil
             ),
 
             // MARK: - Aloe Vera
             ToxicItem(
-                id: UUID(),
+                id: UUID(uuidString: "508bc9a0-e697-4c2c-83ad-e3257d597785")!,
                 name: "Aloe Vera",
                 alternateNames: ["Aloe", "Aloe barbadensis", "Aloe vera plant", "medicinal aloe", "burn plant", "first aid plant", "aloe gel", "aloe latex", "aloe juice"],
                 categories: [.plants],
@@ -1468,12 +1502,13 @@ class DatabaseService {
                     "Do not give aloe vera juice or supplements to pets without veterinary guidance",
                     "If your pet ingests aloe vera and develops vomiting or diarrhea, contact your veterinarian — dehydration can become serious if untreated"
                 ],
-                sources: ["Veterinary Information Network (VIN)", "ASPCA Animal Poison Control Center", "Pet Poison Helpline", "Wag Walking Veterinary Resources"]
+                sources: ["Veterinary Information Network (VIN)", "ASPCA Animal Poison Control Center", "Pet Poison Helpline", "Wag Walking Veterinary Resources"],
+                relatedEntries: nil
             ),
 
             // MARK: - Morning Glory
             ToxicItem(
-                id: UUID(),
+                id: UUID(uuidString: "a0716b51-b922-4b95-b557-a08c5ce9ed86")!,
                 name: "Morning Glory",
                 alternateNames: ["Ipomoea", "Ipomoea tricolor", "Ipomoea purpurea", "Ipomoea violacea", "heavenly blue", "flying saucers", "pearly gates", "Convolvulus", "bindweed", "morning glory seeds", "LSA", "lysergic acid amide", "ergine"],
                 categories: [.plants],
@@ -1509,12 +1544,13 @@ class DatabaseService {
                     "If your pet eats morning glory seeds, contact your veterinarian — the quantity consumed matters significantly",
                     "Supervise pets in gardens where morning glories are growing, especially when seed pods are forming"
                 ],
-                sources: ["Veterinary Information Network (VIN)", "ASPCA Animal Poison Control Center", "Pet Poison Helpline", "Merck Veterinary Manual"]
+                sources: ["Veterinary Information Network (VIN)", "ASPCA Animal Poison Control Center", "Pet Poison Helpline", "Merck Veterinary Manual"],
+                relatedEntries: nil
             ),
 
             // MARK: - Cyanogenic Glycoside Plants
             ToxicItem(
-                id: UUID(),
+                id: UUID(uuidString: "3816a23f-40cf-47e7-88e6-158fddc21b71")!,
                 name: "Cyanogenic Glycoside Plants",
                 alternateNames: ["Nandina", "Nandina domestica", "heavenly bamboo", "sacred bamboo", "nandina berries", "Hydrangea", "Hydrangea macrophylla", "hortensia", "hydrangea leaves", "hydrangea flowers", "Cherry laurel", "Prunus laurocerasus", "English laurel", "Chokecherry", "Prunus virginiana", "Photinia", "red tip photinia", "Photinia fraseri", "cyanide plants", "hydrogen cyanide", "amygdalin", "prunasin"],
                 categories: [.plants],
@@ -1551,12 +1587,13 @@ class DatabaseService {
                     "Hydrangea, while commonly listed as toxic, rarely causes serious problems — monitor for GI upset if your pet chews on it",
                     "If you see bright cherry-red gums, rapid breathing, or sudden weakness after plant ingestion, seek emergency veterinary care immediately — these are signs of cyanide poisoning"
                 ],
-                sources: ["Veterinary Information Network (VIN)", "ASPCA Animal Poison Control Center", "Pet Poison Helpline", "Merck Veterinary Manual"]
+                sources: ["Veterinary Information Network (VIN)", "ASPCA Animal Poison Control Center", "Pet Poison Helpline", "Merck Veterinary Manual"],
+                relatedEntries: nil
             ),
 
             // MARK: - GI Irritant Plants
             ToxicItem(
-                id: UUID(),
+                id: UUID(uuidString: "045fe2d3-3c59-4f15-b72a-09371b675d77")!,
                 name: "GI Irritant Plants",
                 alternateNames: ["Poinsettia", "Euphorbia pulcherrima", "Christmas flower", "Christmas plant", "Mexican flame leaf", "Iris", "iris rhizome", "flag iris", "bearded iris", "Chrysanthemum", "chrysanthemums", "mums", "garden mums", "florist's mum", "Hosta", "hostas", "plantain lily", "funkia", "Baby's breath", "babys breath", "Gypsophila", "Gypsophila paniculata", "Carnation", "carnations", "Dianthus", "Dianthus caryophyllus", "pinks", "Jade plant", "jade plant", "Crassula ovata", "Crassula argentea", "money plant", "money tree", "lucky plant", "friendship tree", "Mistletoe", "mistletoe", "Phoradendron", "Phoradendron leucarpum", "American mistletoe", "Christmas mistletoe", "Holly", "holly", "Ilex", "Ilex aquifolium", "English holly", "Christmas holly", "holly berries", "Christmas cactus", "Schlumbergera", "Schlumbergera truncata", "crab claw cactus", "Thanksgiving cactus", "Easter cactus", "holiday cactus", "Clematis", "clematis vine", "Clematis spp", "virgin's bower", "leather flower", "leatherflower", "old man's beard", "traveller's joy", "Asparagus fern", "asparagus fern", "Asparagus setaceus", "Asparagus densiflorus", "Asparagus aethiopicus", "sprengeri fern", "foxtail fern", "plumosa fern", "lace fern", "emerald fern", "climbing asparagus", "asparagus fern berries", "Spring crocus", "spring crocus", "Crocus vernus", "Crocus spp", "Dutch crocus", "giant crocus", "snow crocus", "crocus bulb", "crocus corm"],
                 categories: [.plants, .holidayHazards],
@@ -1594,12 +1631,13 @@ class DatabaseService {
                     "Asparagus fern berries are the most toxic part — remove berries if you keep this plant around pets",
                     "Spring crocus causes only mild GI upset, but if you're unsure whether a crocus is spring or autumn variety, treat any ingestion as an emergency"
                 ],
-                sources: ["ASPCA Animal Poison Control Center", "Pet Poison Helpline", "Veterinary Information Network (VIN)", "VCA Animal Hospitals"]
+                sources: ["ASPCA Animal Poison Control Center", "Pet Poison Helpline", "Veterinary Information Network (VIN)", "VCA Animal Hospitals"],
+                relatedEntries: nil
             ),
 
             // MARK: - Brunfelsia (Yesterday, Today and Tomorrow)
             ToxicItem(
-                id: UUID(),
+                id: UUID(uuidString: "4ebc62d6-6f94-4f60-a1cb-58c505450d61")!,
                 name: "Brunfelsia (Yesterday, Today and Tomorrow)",
                 alternateNames: ["Brunfelsia", "Brunfelsia spp", "Brunfelsia pauciflora", "Brunfelsia australis", "Brunfelsia uniflora", "Brunfelsia calycina", "yesterday today and tomorrow", "yesterday today tomorrow", "morning noon and night", "kiss me quick", "lady of the night", "Paraguay jasmine", "Franciscan rain tree", "brunfelsia berries", "brunfelsia fruit"],
                 categories: [.plants],
@@ -1637,12 +1675,13 @@ class DatabaseService {
                     "The berries (fruit) are the most dangerous part — they are juicy and palatable to dogs",
                     "If you suspect your dog has ingested any part of a Brunfelsia plant, seek emergency veterinary care immediately — do not wait for symptoms to appear"
                 ],
-                sources: ["ASPCA Animal Poison Control Center", "Pet Poison Helpline", "Veterinary Information Network (VIN)", "dvm360 (ASPCA APCC case review)"]
+                sources: ["ASPCA Animal Poison Control Center", "Pet Poison Helpline", "Veterinary Information Network (VIN)", "dvm360 (ASPCA APCC case review)"],
+                relatedEntries: nil
             ),
 
             // MARK: - Kalanchoe
             ToxicItem(
-                id: UUID(),
+                id: UUID(uuidString: "dfa90432-20a6-45bb-9e19-f917b50b3765")!,
                 name: "Kalanchoe",
                 alternateNames: ["Kalanchoe spp", "mother of thousands", "mother of millions", "chandelier plant", "devil's backbone", "cathedral bells", "flaming Katy", "florist kalanchoe", "paddle plant", "flapjacks", "Bryophyllum", "air plant", "palm beachbells", "donkey ears", "kalanchoe daigremontiana", "kalanchoe blossfeldiana"],
                 categories: [.plants],
@@ -1675,12 +1714,13 @@ class DatabaseService {
                     "Consider pet-safe succulent alternatives like Haworthia or Echeveria",
                     "Dispose of fallen flowers and leaves promptly"
                 ],
-                sources: ["Veterinary Information Network (VIN)", "ASPCA Animal Poison Control Center", "Pet Poison Helpline", "Veterinary Medicine (peer-reviewed journal)"]
+                sources: ["Veterinary Information Network (VIN)", "ASPCA Animal Poison Control Center", "Pet Poison Helpline", "Veterinary Medicine (peer-reviewed journal)"],
+                relatedEntries: nil
             ),
 
             // MARK: - English Ivy
             ToxicItem(
-                id: UUID(),
+                id: UUID(uuidString: "8ea06fcf-b35d-4049-a73f-8c94752c783d")!,
                 name: "English Ivy",
                 alternateNames: ["Hedera helix", "common ivy", "European ivy", "ivy", "branching ivy", "glacier ivy", "needlepoint ivy", "sweetheart ivy", "California ivy", "Hahn's ivy", "Irish ivy", "Baltic ivy", "ivy vine"],
                 categories: [.plants],
@@ -1716,12 +1756,13 @@ class DatabaseService {
                     "Never burn English ivy clippings — toxins can become airborne",
                     "If your pet develops vomiting after chewing on ivy, contact your veterinarian"
                 ],
-                sources: ["Veterinary Information Network (VIN)", "ASPCA Animal Poison Control Center", "Pet Poison Helpline"]
+                sources: ["Veterinary Information Network (VIN)", "ASPCA Animal Poison Control Center", "Pet Poison Helpline"],
+                relatedEntries: nil
             ),
 
             // MARK: - Wisteria
             ToxicItem(
-                id: UUID(),
+                id: UUID(uuidString: "b2e1e5d4-0d12-410b-83dc-da106bbc2199")!,
                 name: "Wisteria",
                 alternateNames: ["Wisteria spp", "Wisteria sinensis", "Wisteria floribunda", "Chinese wisteria", "Japanese wisteria", "American wisteria", "wisteria vine", "wisteria pods", "wisteria seeds"],
                 categories: [.plants],
@@ -1756,12 +1797,13 @@ class DatabaseService {
                     "If you suspect your pet has eaten any part of a wisteria plant, especially seeds or pods, contact your veterinarian immediately",
                     "Consider fencing off wisteria or choosing non-toxic climbing vines if you have curious pets"
                 ],
-                sources: ["Veterinary Information Network (VIN)", "ASPCA Animal Poison Control Center", "Pet Poison Helpline"]
+                sources: ["Veterinary Information Network (VIN)", "ASPCA Animal Poison Control Center", "Pet Poison Helpline"],
+                relatedEntries: nil
             ),
 
             // MARK: - Milkweed
             ToxicItem(
-                id: UUID(),
+                id: UUID(uuidString: "053d21cd-da83-448d-914d-a230343b35d7")!,
                 name: "Milkweed",
                 alternateNames: ["Asclepias", "Asclepias syriaca", "Asclepias speciosa", "Asclepias tuberosa", "Asclepias incarnata", "Asclepias verticillata", "common milkweed", "showy milkweed", "butterfly weed", "swamp milkweed", "narrow-leaved milkweed", "whorled milkweed", "tropical milkweed", "blood flower", "milkweed sap", "monarch butterfly plant", "pleurisy root"],
                 categories: [.plants],
@@ -1799,12 +1841,13 @@ class DatabaseService {
                     "If your pet shows interest in milkweed, redirect them to other areas of the garden",
                     "Contact your veterinarian if you suspect your pet has ingested milkweed"
                 ],
-                sources: ["Veterinary Information Network (VIN)", "ASPCA Animal Poison Control Center", "Pet Poison Helpline"]
+                sources: ["Veterinary Information Network (VIN)", "ASPCA Animal Poison Control Center", "Pet Poison Helpline"],
+                relatedEntries: nil
             ),
 
             // MARK: - Larkspur & Delphinium
             ToxicItem(
-                id: UUID(),
+                id: UUID(uuidString: "ed41fd85-d05e-4797-9f94-5152653df2d1")!,
                 name: "Larkspur & Delphinium",
                 alternateNames: ["larkspur", "Delphinium", "Delphinium species", "Consolida", "Consolida ajacis", "annual larkspur", "perennial delphinium", "rocket larkspur", "tall larkspur", "low larkspur", "dwarf larkspur"],
                 categories: [.plants],
@@ -1843,12 +1886,13 @@ class DatabaseService {
                     "The plants become less toxic as they mature, but all growth stages should be considered potentially dangerous",
                     "If you suspect your pet has ingested any part of these plants, contact your veterinarian immediately"
                 ],
-                sources: ["ASPCA Animal Poison Control Center", "Pet Poison Helpline", "Veterinary Information Network (VIN)"]
+                sources: ["ASPCA Animal Poison Control Center", "Pet Poison Helpline", "Veterinary Information Network (VIN)"],
+                relatedEntries: nil
             ),
 
             // MARK: - Horse Chestnut & Buckeye
             ToxicItem(
-                id: UUID(),
+                id: UUID(uuidString: "c3531735-0e34-448a-82d8-660ed4c22a24")!,
                 name: "Horse Chestnut & Buckeye",
                 alternateNames: ["buckeye", "horse chestnut", "Aesculus", "Aesculus hippocastanum", "Aesculus glabra", "Aesculus pavia", "Ohio buckeye", "red buckeye", "California buckeye", "European horse chestnut", "conker", "conkers", "fetid buckeye", "aesculin", "buckeye nut", "horse chestnut tree"],
                 categories: [.plants],
@@ -1886,12 +1930,13 @@ class DatabaseService {
                     "The bitter taste usually deters dogs from eating large amounts, but some determined chewers may still be at risk",
                     "If your dog ingests horse chestnuts or buckeyes, contact your veterinarian — monitor for GI upset and potential obstruction"
                 ],
-                sources: ["Veterinary Information Network (VIN)", "ASPCA Animal Poison Control Center", "Pet Poison Helpline", "Clinical Veterinary Toxicology (Plumlee)"]
+                sources: ["Veterinary Information Network (VIN)", "ASPCA Animal Poison Control Center", "Pet Poison Helpline", "Clinical Veterinary Toxicology (Plumlee)"],
+                relatedEntries: nil
             ),
 
             // MARK: - Tomato & Potato Plants
             ToxicItem(
-                id: UUID(),
+                id: UUID(uuidString: "d8d69209-6177-411e-bd92-c541af9fe79d")!,
                 name: "Tomato & Potato Plants",
                 alternateNames: ["tomato plant", "tomato leaves", "tomato stems", "green tomatoes", "unripe tomatoes", "cherry tomato plant", "Solanum lycopersicum", "potato plant", "potato leaves", "potato stems", "green potatoes", "raw potatoes", "potato skins", "Solanum tuberosum", "nightshade family", "Solanaceae", "solanine", "tomatine", "glycoalkaloids"],
                 categories: [.plants, .foods],
@@ -1933,12 +1978,13 @@ class DatabaseService {
                     "Dispose of plant trimmings where pets cannot access them",
                     "If your pet shows signs after eating any part of these plants, contact your veterinarian"
                 ],
-                sources: ["ASPCA Animal Poison Control Center", "Pet Poison Helpline", "Veterinary Information Network (VIN)", "Vetlexicon - Plant Poisoning: Solanine and Related Glycoalkaloids"]
+                sources: ["ASPCA Animal Poison Control Center", "Pet Poison Helpline", "Veterinary Information Network (VIN)", "Vetlexicon - Plant Poisoning: Solanine and Related Glycoalkaloids"],
+                relatedEntries: nil
             ),
 
             // MARK: - Lantana
             ToxicItem(
-                id: UUID(),
+                id: UUID(uuidString: "1d9f0989-6d98-4305-ac74-56f6e6e8ca0f")!,
                 name: "Lantana",
                 alternateNames: ["Lantana camara", "lantana plant", "lantana berries", "shrub verbena", "yellow sage", "red sage", "wild sage", "ham and eggs", "big sage", "tickberry", "white sage", "lantadene", "pentacyclic triterpenoids"],
                 categories: [.plants],
@@ -1974,12 +2020,13 @@ class DatabaseService {
                     "Do not let pets eat any part of the lantana plant, including fallen flowers or leaves",
                     "If you suspect your pet has eaten lantana, especially the berries, contact your veterinarian"
                 ],
-                sources: ["ASPCA Animal Poison Control Center", "Pet Poison Helpline", "Veterinary Information Network (VIN)", "Merck Veterinary Manual"]
+                sources: ["ASPCA Animal Poison Control Center", "Pet Poison Helpline", "Veterinary Information Network (VIN)", "Merck Veterinary Manual"],
+                relatedEntries: nil
             ),
 
             // MARK: - Cyclamen
             ToxicItem(
-                id: UUID(),
+                id: UUID(uuidString: "1669461b-b725-4e4b-a30a-99c26b34e5c1")!,
                 name: "Cyclamen",
                 alternateNames: ["Cyclamen persicum", "Cyclamen spp", "florist's cyclamen", "Persian violet", "sowbread", "ivy-leaved cyclamen", "hardy cyclamen", "cyclamen tuber", "cyclamen bulb"],
                 categories: [.plants, .holidayHazards],
@@ -2017,12 +2064,13 @@ class DatabaseService {
                     "If you have rabbits, do not keep cyclamen anywhere they can access — it can be life-threatening to them",
                     "If your pet shows signs of poisoning after contact with cyclamen, contact your veterinarian promptly — cardiac monitoring may be needed for large ingestions"
                 ],
-                sources: ["ASPCA Animal Poison Control Center", "Pet Poison Helpline", "PMC - Toxicity of House Plants to Pet Animals (peer-reviewed)", "WagWalking Veterinary Resources"]
+                sources: ["ASPCA Animal Poison Control Center", "Pet Poison Helpline", "PMC - Toxicity of House Plants to Pet Animals (peer-reviewed)", "WagWalking Veterinary Resources"],
+                relatedEntries: nil
             ),
 
             // MARK: - Bird of Paradise (Caesalpinia)
             ToxicItem(
-                id: UUID(),
+                id: UUID(uuidString: "892498a6-3354-4bad-a3e3-1553972d6bae")!,
                 name: "Bird of Paradise (Caesalpinia)",
                 alternateNames: ["Caesalpinia gilliesii", "Erythrostemon gilliesii", "Poinciana gilliesii", "desert bird of paradise", "yellow bird of paradise", "Mexican bird of paradise", "Barbados pride", "peacock flower", "dwarf poinciana", "red bird of paradise", "pride of Barbados", "Caesalpinia pulcherrima", "bird of paradise shrub"],
                 categories: [.plants],
@@ -2057,12 +2105,13 @@ class DatabaseService {
                     "The intense oral irritation usually limits how much a pet will eat, but any ingestion should prompt a call to your veterinarian",
                     "If you have rabbits or other small mammals, keep them completely away from this plant — deaths have been documented"
                 ],
-                sources: ["ASPCA Animal Poison Control Center", "Pet Poison Helpline", "WagWalking Veterinary Resources", "Hunker Home & Garden"]
+                sources: ["ASPCA Animal Poison Control Center", "Pet Poison Helpline", "WagWalking Veterinary Resources", "Hunker Home & Garden"],
+                relatedEntries: nil
             ),
 
             // MARK: - Cannabis / Marijuana
             ToxicItem(
-                id: UUID(),
+                id: UUID(uuidString: "e293e8ba-eefc-4fe0-bf93-9e8842873a35")!,
                 name: "Cannabis / Marijuana",
                 alternateNames: ["Cannabis sativa", "Cannabis indica", "marijuana", "cannabis", "THC", "tetrahydrocannabinol", "delta-9 THC", "delta-8 THC", "pot", "weed", "grass", "ganja", "reefer", "dope", "bud", "chronic", "herb", "skunk", "Mary Jane", "hashish", "hash", "hash oil", "hemp", "CBD", "cannabidiol", "edibles", "marijuana edibles", "THC edibles", "THC gummies", "cannabis gummies", "marijuana brownies", "pot brownies", "cannabutter", "marijuana butter", "THC vape", "cannabis vape", "dronabinol", "nabilone", "devil weed", "Aunt Mary"],
                 categories: [.plants, .recreationalSubstances],
@@ -2108,12 +2157,13 @@ class DatabaseService {
                     "If your pet ingests an edible, also consider toxicity from other ingredients (chocolate, xylitol, raisins, macadamia nuts)",
                     "With legalization, highly concentrated products are more available — even small amounts of vape liquid or concentrates can cause severe toxicity"
                 ],
-                sources: ["Veterinary Information Network (VIN)", "ASPCA Animal Poison Control Center", "Pet Poison Helpline", "Veterinary Partner"]
+                sources: ["Veterinary Information Network (VIN)", "ASPCA Animal Poison Control Center", "Pet Poison Helpline", "Veterinary Partner"],
+                relatedEntries: nil
             ),
 
             // MARK: - Bleeding Heart
             ToxicItem(
-                id: UUID(),
+                id: UUID(uuidString: "fc5744df-f6a1-4464-97b0-7de82f9c299a")!,
                 name: "Bleeding Heart",
                 alternateNames: ["Dicentra spectabilis", "Dicentra spp", "Dicentra eximia", "Dicentra formosa", "Lamprocapnos spectabilis", "bleeding heart plant", "Dutchman's breeches", "squirrel corn", "white eardrops", "steer's head", "soldier's cap", "butterfly banner", "kitten breeches", "staggerweed", "locks and keys", "Asian bleeding heart", "Japanese bleeding heart", "fringed bleeding heart", "western bleeding heart", "old-fashioned bleeding heart"],
                 categories: [.plants],
@@ -2151,12 +2201,13 @@ class DatabaseService {
                     "If you see your pet eating any part of this plant, seek veterinary care immediately — do not wait for symptoms to appear",
                     "Bring a piece of the plant to the veterinarian if possible to confirm identification"
                 ],
-                sources: ["IVIS - Guide to Poisonous House and Garden Plants (Colorado State University)", "Pet Poison Helpline", "WagWalking Veterinary Resources", "Veterinary Information Network (VIN)"]
+                sources: ["IVIS - Guide to Poisonous House and Garden Plants (Colorado State University)", "Pet Poison Helpline", "WagWalking Veterinary Resources", "Veterinary Information Network (VIN)"],
+                relatedEntries: nil
             ),
 
             // MARK: - Nicotine & Tobacco Products
             ToxicItem(
-                id: UUID(),
+                id: UUID(uuidString: "fd98d3c0-368c-4b20-9192-c98dd3c17f14")!,
                 name: "Nicotine & Tobacco Products",
                 alternateNames: ["nicotine", "tobacco", "cigarette", "cigarettes", "cigarette butt", "cigarette butts", "cigar", "cigars", "e-cigarette", "e-cigarettes", "electronic cigarette", "electronic cigarettes", "vape", "vaping", "vape juice", "vape liquid", "e-juice", "e-liquid", "e juice", "e liquid", "nicotine liquid", "nicotine solution", "nicotine patch", "nicotine patches", "nicotine gum", "nicotine lozenge", "nicotine lozenges", "nicotine inhaler", "nicotine nasal spray", "nicotine replacement", "nicotine replacement therapy", "NRT", "chewing tobacco", "smokeless tobacco", "snuff", "snus", "dip", "dipping tobacco", "pipe tobacco", "Nicotiana", "tobacco plant", "nicotine poisoning", "nicotine toxicosis", "nicotine intoxication", "tobacco poisoning", "tobacco toxicosis", "e-juice poisoning", "e-liquid poisoning", "ashtray", "ash tray", "cigarette pack", "Juul", "vape pen", "vape pod", "Nicorette", "Nicoderm", "Habitrol", "Commit lozenge"],
                 categories: [.recreationalSubstances, .plants],
@@ -2205,12 +2256,13 @@ class DatabaseService {
                     "Clean up any spilled e-liquid immediately and keep pets away from the area; nicotine absorbs through skin",
                     "If you use nicotine patches, ensure pets cannot access them on your body or after removal"
                 ],
-                sources: ["Veterinary Information Network (VIN) — Nicotine Toxicosis", "ASPCA Animal Poison Control Center", "Pet Poison Helpline — Nicotine", "Merck Veterinary Manual — Tobacco and Nicotine Toxicosis", "Tilley and Smith, The 5-Minute Veterinary Consult: Canine and Feline"]
+                sources: ["Veterinary Information Network (VIN) — Nicotine Toxicosis", "ASPCA Animal Poison Control Center", "Pet Poison Helpline — Nicotine", "Merck Veterinary Manual — Tobacco and Nicotine Toxicosis", "Tilley and Smith, The 5-Minute Veterinary Consult: Canine and Feline"],
+                relatedEntries: nil
             ),
 
             // MARK: - Monkshood
             ToxicItem(
-                id: UUID(),
+                id: UUID(uuidString: "7e3f5e24-a4ef-4356-9445-16b8f37d6ab4")!,
                 name: "Monkshood",
                 alternateNames: ["Aconitum", "Aconite", "Wolfsbane", "Wolf's bane", "Leopard's bane", "Devil's helmet", "Blue rocket", "Friar's cap", "Queen of poisons", "Helmet flower", "Aconitum napellus", "Aconitum columbianum", "Western monkshood", "Garden monkshood"],
                 categories: [.plants],
@@ -2251,12 +2303,13 @@ class DatabaseService {
                     "Be aware that dried plant material remains toxic",
                     "Learn to identify monkshood — it has distinctive hooded flowers on tall spikes"
                 ],
-                sources: ["Veterinary Information Network (VIN)", "ASPCA Animal Poison Control Center", "Tilley and Smith, The 5-Minute Veterinary Consult: Canine and Feline", "Merck Veterinary Manual"]
+                sources: ["Veterinary Information Network (VIN)", "ASPCA Animal Poison Control Center", "Tilley and Smith, The 5-Minute Veterinary Consult: Canine and Feline", "Merck Veterinary Manual"],
+                relatedEntries: nil
             ),
 
             // MARK: - Datura (Angel's Trumpet & Jimsonweed)
             ToxicItem(
-                id: UUID(),
+                id: UUID(uuidString: "058dbd41-6a45-4486-ab20-bc2929c251a0")!,
                 name: "Datura (Angel's Trumpet & Jimsonweed)",
                 alternateNames: ["Datura", "Angel's trumpet", "Angels trumpet", "Devil's trumpet", "Jimsonweed", "Jimson weed", "Thorn apple", "Moonflower", "Locoweed", "Devil's weed", "Devil's cucumber", "Hell's bells", "Stinkweed", "Tolguacha", "Toloache", "Datura stramonium", "Datura metel", "Datura inoxia", "Datura wrightii", "Brugmansia", "Brugmansia suaveolens", "Trumpet flower", "Sacred datura", "Indian apple", "Mad apple"],
                 categories: [.plants],
@@ -2300,12 +2353,13 @@ class DatabaseService {
                     "Be aware that all parts of these plants are toxic, but flowers and seeds contain the highest alkaloid concentrations",
                     "Educate family members about the toxicity of these attractive but dangerous plants"
                 ],
-                sources: ["Veterinary Information Network (VIN)", "ASPCA Animal Poison Control Center", "Tilley and Smith, The 5-Minute Veterinary Consult: Canine and Feline", "Pet Poison Helpline"]
+                sources: ["Veterinary Information Network (VIN)", "ASPCA Animal Poison Control Center", "Tilley and Smith, The 5-Minute Veterinary Consult: Canine and Feline", "Pet Poison Helpline"],
+                relatedEntries: nil
             ),
 
             // MARK: - Golden Chain Tree
             ToxicItem(
-                id: UUID(),
+                id: UUID(uuidString: "e4b28653-d4b2-42a0-ac67-f22e53fc1673")!,
                 name: "Golden Chain Tree",
                 alternateNames: ["Laburnum", "Laburnum anagyroides", "Laburnum alpinum", "Laburnum × watereri", "golden chain", "golden chain tree", "golden rain tree", "bean tree", "false ebony", "laburnum tree", "common laburnum", "Scotch laburnum", "alpine laburnum"],
                 categories: [.plants],
@@ -2351,12 +2405,13 @@ class DatabaseService {
                     "Educate children that the seeds are not edible peas or beans — human poisonings have occurred",
                     "Consider removing golden chain trees from your property if you have pets, especially dogs that tend to chew on things"
                 ],
-                sources: ["Veterinary Information Network (VIN)", "Pet Poison Helpline — Golden Chain Tree", "Clarke ML, Clarke EG, King T. Fatal laburnum poisoning in a dog. Vet Rec. 1971;88(7):199-200", "Clinical Veterinary Toxicology (Plumlee KH, ed.)", "Vetlexicon Canis — Cardiotoxic Plant Poisoning"]
+                sources: ["Veterinary Information Network (VIN)", "Pet Poison Helpline — Golden Chain Tree", "Clarke ML, Clarke EG, King T. Fatal laburnum poisoning in a dog. Vet Rec. 1971;88(7):199-200", "Clinical Veterinary Toxicology (Plumlee KH, ed.)", "Vetlexicon Canis — Cardiotoxic Plant Poisoning"],
+                relatedEntries: nil
             ),
 
             // MARK: - Lupine
             ToxicItem(
-                id: UUID(),
+                id: UUID(uuidString: "71347450-35e9-4be4-b472-eedc6b9cef7a")!,
                 name: "Lupine",
                 alternateNames: ["Lupinus", "Lupinus spp", "bluebonnet", "Texas bluebonnet", "wild lupine", "sundial lupine", "garden lupine", "Russell lupine", "Russell hybrid", "tree lupine", "yellow bush lupine", "silver lupine", "bigleaf lupine", "lupine seeds", "lupine beans", "lupini", "tarwi", "lupine hay", "quinolizidine alkaloids", "lupin", "lupins"],
                 categories: [.plants],
@@ -2395,12 +2450,13 @@ class DatabaseService {
                     "Be aware of wild lupines on hiking trails, especially in western North America where they are abundant",
                     "Do not feed lupini beans (even prepared human-food varieties) to pets"
                 ],
-                sources: ["ASPCA Animal Poison Control Center", "Veterinary Information Network (VIN)", "Merck Veterinary Manual — Quinolizidine Alkaloid Toxicosis", "Pet Poison Helpline", "Panter KE, et al. Natural toxins of plant origin. In: Toxins and Other Harmful Compounds in Foods. RSC Publishing. 2017"]
+                sources: ["ASPCA Animal Poison Control Center", "Veterinary Information Network (VIN)", "Merck Veterinary Manual — Quinolizidine Alkaloid Toxicosis", "Pet Poison Helpline", "Panter KE, et al. Natural toxins of plant origin. In: Toxins and Other Harmful Compounds in Foods. RSC Publishing. 2017"],
+                relatedEntries: nil
             ),
 
             // MARK: - Christmas Rose & Hellebores
             ToxicItem(
-                id: UUID(),
+                id: UUID(uuidString: "165617f0-7aa5-47a2-b62c-21adb49e42ca")!,
                 name: "Christmas Rose & Hellebores",
                 alternateNames: ["Helleborus", "Helleborus niger", "Helleborus orientalis", "Christmas rose", "Lenten rose", "black hellebore", "winter rose", "snow rose", "hellebore", "stinking hellebore", "Helleborus foetidus", "bear's foot", "setterwort", "green hellebore", "Helleborus viridis", "hellebore root", "Corsican hellebore", "Helleborus argutifolius", "oriental hellebore", "hellebore hybrids", "Helleborus x hybridus", "hellebore protoanemonin", "hellebore glycosides"],
                 categories: [.plants, .holidayHazards],
@@ -2438,12 +2494,13 @@ class DatabaseService {
                     "Keep hellebore holiday arrangements out of reach of pets",
                     "If your pet is attracted to chewing plants, hellebores are not a good choice for accessible garden areas"
                 ],
-                sources: ["ASPCA Animal Poison Control Center", "Veterinary Information Network (VIN)", "Pet Poison Helpline", "Merck Veterinary Manual", "Plants of the Pacific Northwest Coast (Pojar & MacKinnon)"]
+                sources: ["ASPCA Animal Poison Control Center", "Veterinary Information Network (VIN)", "Pet Poison Helpline", "Merck Veterinary Manual", "Plants of the Pacific Northwest Coast (Pojar & MacKinnon)"],
+                relatedEntries: nil
             ),
 
             // MARK: - Bittersweet
             ToxicItem(
-                id: UUID(),
+                id: UUID(uuidString: "03a94b12-a160-4244-a3b0-a8050554a062")!,
                 name: "Bittersweet",
                 alternateNames: ["American bittersweet", "Celastrus scandens", "climbing bittersweet", "false bittersweet", "waxwork", "shrubby bittersweet", "Oriental bittersweet", "Celastrus orbiculatus", "Asian bittersweet", "round-leaved bittersweet", "staff vine", "staff tree", "bittersweet vine", "bittersweet berries", "decorative bittersweet", "bittersweet wreath", "Euonymus alkaloids", "bittersweet nightshade", "Solanum dulcamara", "woody nightshade", "climbing nightshade", "European bittersweet"],
                 categories: [.plants, .holidayHazards],
@@ -2481,12 +2538,13 @@ class DatabaseService {
                     "Do not allow pets to chew on bittersweet decorations — the berries can detach and be swallowed",
                     "Learn to identify bittersweet nightshade, which may grow as a weed in gardens and wooded areas"
                 ],
-                sources: ["ASPCA Animal Poison Control Center", "Pet Poison Helpline", "Veterinary Information Network (VIN)", "Cornell University Poisonous Plants Database", "USDA Plant Database"]
+                sources: ["ASPCA Animal Poison Control Center", "Pet Poison Helpline", "Veterinary Information Network (VIN)", "Cornell University Poisonous Plants Database", "USDA Plant Database"],
+                relatedEntries: nil
             ),
 
             // MARK: - Daphne
             ToxicItem(
-                id: UUID(),
+                id: UUID(uuidString: "0352eba9-25a1-4a99-a850-a22052c2f176")!,
                 name: "Daphne",
                 alternateNames: ["Daphne mezereum", "mezereum", "mezereon", "February daphne", "spurge laurel", "Daphne laureola", "spurge flax", "spurge olive", "dwarf bay", "dwarf laurel", "lady laurel", "paradise plant", "wild pepper", "winter daphne", "Daphne odora", "garland daphne", "rose daphne", "Daphne cneorum", "copse laurel", "flax olive", "olive spurge"],
                 categories: [.plants],
@@ -2526,12 +2584,13 @@ class DatabaseService {
                     "Teach children not to eat any berries from garden plants",
                     "If your pet shows signs of oral pain or bloody diarrhea after being in the garden, seek veterinary care immediately"
                 ],
-                sources: ["Veterinary Information Network (VIN)", "Pet Poison Helpline", "ASPCA Animal Poison Control Center", "Animal Poisons Helpline (Australia)"]
+                sources: ["Veterinary Information Network (VIN)", "Pet Poison Helpline", "ASPCA Animal Poison Control Center", "Animal Poisons Helpline (Australia)"],
+                relatedEntries: nil
             ),
 
             // MARK: - Chinaberry Tree
             ToxicItem(
-                id: UUID(),
+                id: UUID(uuidString: "52bd87dd-b94f-4c72-9dfa-ff1f8b689193")!,
                 name: "Chinaberry Tree",
                 alternateNames: ["Melia azedarach", "chinaberry", "china berry", "Texas umbrella tree", "Texas umbrella", "umbrella tree", "bead tree", "China ball tree", "paradise tree", "Persian lilac", "Indian lilac", "white cedar", "pride of India", "pride-of-India", "China tree", "Chinese umbrella", "hoop tree", "cape lilac", "cape syringa", "Japanese bead tree", "chinaberry berries"],
                 categories: [.plants],
@@ -2571,12 +2630,13 @@ class DatabaseService {
                     "If your dog eats chinaberry berries, contact your veterinarian immediately — do not wait for symptoms to develop",
                     "Bring a sample of the berries or a photo of the tree to help your veterinarian identify the exposure"
                 ],
-                sources: ["ASPCA Animal Poison Control Center", "Pet Poison Helpline", "Veterinary Information Network (VIN)", "IVIS - Guide to Poisonous House and Garden Plants", "Clinical Veterinary Toxicology (Plumlee)"]
+                sources: ["ASPCA Animal Poison Control Center", "Pet Poison Helpline", "Veterinary Information Network (VIN)", "IVIS - Guide to Poisonous House and Garden Plants", "Clinical Veterinary Toxicology (Plumlee)"],
+                relatedEntries: nil
             ),
 
             // MARK: - Rosary Pea
             ToxicItem(
-                id: UUID(),
+                id: UUID(uuidString: "57801263-b55c-4c20-b12c-cff832a15077")!,
                 name: "Rosary Pea",
                 alternateNames: ["Abrus precatorius", "jequirity bean", "jequirity pea", "precatory bean", "crab's eye", "crab's eye vine", "love bean", "lucky bean", "prayer beads", "rosary beads", "Indian licorice", "gidee-gidee", "jumbie bead", "red bead vine", "weather plant", "abrus", "abrin"],
                 categories: [.plants],
@@ -2617,12 +2677,13 @@ class DatabaseService {
                     "If your pet is exposed to rosary pea seeds, contact your veterinarian or poison control immediately — even if the seeds appear intact",
                     "Time is critical: early decontamination (inducing vomiting, activated charcoal) offers the best chance of preventing absorption"
                 ],
-                sources: ["ASPCA Animal Poison Control Center", "National Poison Control Center (Poison.org)", "IVIS - Guide to Poisonous House and Garden Plants", "Veterinary Information Network (VIN)", "International Programme on Chemical Safety (INCHEM)"]
+                sources: ["ASPCA Animal Poison Control Center", "National Poison Control Center (Poison.org)", "IVIS - Guide to Poisonous House and Garden Plants", "Veterinary Information Network (VIN)", "International Programme on Chemical Safety (INCHEM)"],
+                relatedEntries: nil
             ),
 
             // MARK: - Moonseed
             ToxicItem(
-                id: UUID(),
+                id: UUID(uuidString: "d15976a7-a615-4d2d-a828-2f3e0e666500")!,
                 name: "Moonseed",
                 alternateNames: ["Menispermum canadense", "Canadian moonseed", "common moonseed", "yellow parilla", "moonseed vine", "Texas sarsaparilla"],
                 categories: [.plants],
@@ -2655,12 +2716,13 @@ class DatabaseService {
                     "Remember the key difference: moonseed has a single crescent-shaped seed, while grapes have round seeds",
                     "If your pet eats unknown berries and develops convulsions, seek veterinary care immediately"
                 ],
-                sources: ["Veterinary Information Network (VIN)", "Cornell University Poisonous Plants Informational Database", "Missouri Department of Conservation", "USDA Forest Service"]
+                sources: ["Veterinary Information Network (VIN)", "Cornell University Poisonous Plants Informational Database", "Missouri Department of Conservation", "USDA Forest Service"],
+                relatedEntries: nil
             ),
 
             // MARK: - Stinging Nettle
             ToxicItem(
-                id: UUID(),
+                id: UUID(uuidString: "8cd181bc-9ac5-492b-9085-aa51b6b92e44")!,
                 name: "Stinging Nettle",
                 alternateNames: ["Urtica dioica", "Urtica", "common nettle", "nettle", "nettles", "stinging nettles", "burn hazel", "burn nettle", "Urtica urens", "dwarf nettle", "small nettle", "dog nettle", "Urtica ferox", "New Zealand tree nettle"],
                 categories: [.plants],
@@ -2700,12 +2762,13 @@ class DatabaseService {
                     "Keep outdoor rabbit hutches away from areas where nettles grow",
                     "Dock leaves (Rumex species), which often grow near nettles, contain compounds that may help soothe nettle stings — crush and apply to affected skin"
                 ],
-                sources: ["Veterinary Information Network (VIN)", "Pet Poison Helpline", "Burrows & Tyrl's Toxic Plants of North America", "Animal Poisons Helpline"]
+                sources: ["Veterinary Information Network (VIN)", "Pet Poison Helpline", "Burrows & Tyrl's Toxic Plants of North America", "Animal Poisons Helpline"],
+                relatedEntries: nil
             ),
 
             // MARK: - Yellow Jessamine
             ToxicItem(
-                id: UUID(),
+                id: UUID(uuidString: "f96f5ad9-369a-413e-a899-971f6423a683")!,
                 name: "Yellow Jessamine",
                 alternateNames: ["Carolina jessamine", "Carolina jasmine", "Gelsemium sempervirens", "Gelsemium", "yellow jasmine", "false jasmine", "evening trumpet", "evening trumpet flower", "woodbine", "poor man's rope", "wild jessamine", "gelsemium vine"],
                 categories: [.plants],
@@ -2745,12 +2808,13 @@ class DatabaseService {
                     "Do not confuse with true jasmine (Jasminum) which is non-toxic — yellow jessamine is NOT a jasmine despite similar names",
                     "If your pet eats ANY part of this plant, seek emergency veterinary care IMMEDIATELY — do not wait for symptoms"
                 ],
-                sources: ["Veterinary Information Network (VIN)", "ASPCA Animal Poison Control Center", "Pet Poison Helpline", "Colorado State University Guide to Poisonous Plants"]
+                sources: ["Veterinary Information Network (VIN)", "ASPCA Animal Poison Control Center", "Pet Poison Helpline", "Colorado State University Guide to Poisonous Plants"],
+                relatedEntries: nil
             ),
 
             // MARK: - Antifreeze / Ethylene Glycol
             ToxicItem(
-                id: UUID(),
+                id: UUID(uuidString: "61b259ac-d3af-4451-a1a4-b050fb70d455")!,
                 name: "Antifreeze & Coolant (Ethylene Glycol)",
                 alternateNames: ["antifreeze", "engine coolant", "radiator fluid", "radiator coolant", "ethylene glycol", "EG", "car coolant", "automotive coolant", "vehicle coolant", "coolant poisoning", "antifreeze poisoning", "radiator poisoning", "de-icer", "aircraft de-icer", "windshield de-icer", "brake fluid", "hydraulic brake fluid", "snow globe liquid", "snow globe fluid", "toilet winterizer", "RV antifreeze", "winterizing fluid", "heat exchanger fluid", "solar panel fluid", "portable basketball hoop base", "rust remover", "Prestone", "Peak antifreeze", "Zerex", "green antifreeze", "orange antifreeze", "pink antifreeze", "Dex-Cool"],
                 categories: [.garageAutomotive],
@@ -2796,12 +2860,13 @@ class DatabaseService {
                     "When winterizing RVs or toilets, prevent pet access to treated areas",
                     "Note: Fully dried antifreeze spills pose minimal risk, but wet spills are extremely dangerous"
                 ],
-                sources: ["VIN Toxicology Resources — Ethylene Glycol Toxicosis", "ASPCA Animal Poison Control Center", "Pet Poison Helpline — Antifreeze Poisoning", "Merck Veterinary Manual — Ethylene Glycol Toxicosis"]
+                sources: ["VIN Toxicology Resources — Ethylene Glycol Toxicosis", "ASPCA Animal Poison Control Center", "Pet Poison Helpline — Antifreeze Poisoning", "Merck Veterinary Manual — Ethylene Glycol Toxicosis"],
+                relatedEntries: nil
             ),
 
             // MARK: - Petroleum Products
             ToxicItem(
-                id: UUID(),
+                id: UUID(uuidString: "edfcb0ed-52aa-44fb-a71f-060551350513")!,
                 name: "Petroleum Products (Gasoline, Motor Oil, Diesel)",
                 alternateNames: ["gasoline", "gas", "petrol", "motor oil", "engine oil", "car oil", "used motor oil", "diesel", "diesel fuel", "kerosene", "kerosine", "paraffin oil", "lamp oil", "tiki torch fuel", "lighter fluid", "charcoal lighter", "paint thinner", "paint solvent", "mineral spirits", "turpentine", "petroleum distillates", "hydrocarbons", "crude oil", "heating oil", "fuel oil", "jet fuel", "naphtha", "benzene", "toluene", "xylene", "transmission fluid", "gear oil", "hydraulic fluid", "penetrating oil", "WD-40", "lubricating oil", "grease", "automotive grease", "wood stain", "wood stripper", "asphalt", "roofing tar", "Castrol", "Mobil 1", "Valvoline", "Pennzoil", "Quaker State"],
                 categories: [.garageAutomotive],
@@ -2847,12 +2912,13 @@ class DatabaseService {
                     "Never store gasoline or solvents in food/drink containers",
                     "Keep birds in well-ventilated areas away from any petroleum fumes"
                 ],
-                sources: ["Merck Veterinary Manual — Petroleum Product Poisoning in Animals", "VIN Toxicology Resources — Hydrocarbon Toxicosis", "ASPCA Animal Poison Control Center", "Pet Poison Helpline"]
+                sources: ["Merck Veterinary Manual — Petroleum Product Poisoning in Animals", "VIN Toxicology Resources — Hydrocarbon Toxicosis", "ASPCA Animal Poison Control Center", "Pet Poison Helpline"],
+                relatedEntries: nil
             ),
 
             // MARK: - Windshield Washer Fluid (Methanol)
             ToxicItem(
-                id: UUID(),
+                id: UUID(uuidString: "286ff548-979a-45c1-853b-3cc87ccbcaa1")!,
                 name: "Windshield Washer Fluid (Methanol)",
                 alternateNames: ["windshield washer fluid", "washer fluid", "wiper fluid", "windshield wiper fluid", "screen wash", "windscreen washer", "methanol", "methyl alcohol", "wood alcohol", "windshield de-icer", "washer fluid antifreeze", "bug wash", "Rain-X washer fluid", "Prestone washer fluid", "gas line antifreeze", "HEET", "model airplane fuel", "glow fuel", "RC fuel", "canned heat", "Sterno fuel", "fondue fuel", "chafing fuel"],
                 categories: [.garageAutomotive],
@@ -2894,12 +2960,13 @@ class DatabaseService {
                     "Keep model airplane fuel and canned heat fuels away from pets",
                     "Be aware that washer fluid may pool under parked vehicles in cold weather"
                 ],
-                sources: ["VIN Toxicology Resources — Methanol Toxicosis", "Pet Poison Helpline — Windshield Wiper Fluid", "Pet Poison Helpline — Methanol Poisoning in Dogs and Cats", "American College of Veterinary Pharmacists — Methanol"]
+                sources: ["VIN Toxicology Resources — Methanol Toxicosis", "Pet Poison Helpline — Windshield Wiper Fluid", "Pet Poison Helpline — Methanol Poisoning in Dogs and Cats", "American College of Veterinary Pharmacists — Methanol"],
+                relatedEntries: nil
             ),
 
             // MARK: - Lead (Batteries, Paint, Fishing Weights)
             ToxicItem(
-                id: UUID(),
+                id: UUID(uuidString: "3b605ff6-df0c-426f-8687-70226969f7c0")!,
                 name: "Lead (Batteries, Paint, Fishing Weights)",
                 alternateNames: ["lead poisoning", "lead toxicosis", "plumbism", "heavy metal poisoning", "lead-acid battery", "car battery", "automotive battery", "battery acid", "lead-based paint", "paint chips", "paint dust", "renovation dust", "fishing sinker", "fishing weight", "lead sinker", "split shot", "curtain weight", "drapery weight", "wheel weight", "tire weight", "lead shot", "ammunition", "bullets", "pellets", "bird shot", "buckshot", "solder", "soldering", "plumbing solder", "lead pipe", "golf ball", "golf balls", "stained glass", "ceramic glaze", "imported toys", "lead figurines", "lead weights"],
                 categories: [.garageAutomotive],
@@ -2948,12 +3015,13 @@ class DatabaseService {
                     "If your pet is diagnosed with lead poisoning, have family members (especially children) tested for lead exposure",
                     "Consider lead test kits (available at home improvement stores) for paint in older buildings"
                 ],
-                sources: ["VIN Toxicology Resources — Lead Toxicosis", "ASPCA Animal Poison Control Center — Lead Toxicosis", "Veterinary Partner (VIN) — Lead Poisoning in Dogs and Cats", "VCA Animal Hospitals — Paint and Varnish Poison Alert"]
+                sources: ["VIN Toxicology Resources — Lead Toxicosis", "ASPCA Animal Poison Control Center — Lead Toxicosis", "Veterinary Partner (VIN) — Lead Poisoning in Dogs and Cats", "VCA Animal Hospitals — Paint and Varnish Poison Alert"],
+                relatedEntries: nil
             ),
 
             // MARK: - Anticoagulant Rodenticides
             ToxicItem(
-                id: UUID(),
+                id: UUID(uuidString: "304c1824-e0b2-48bb-9991-3803d1ae87d0")!,
                 name: "Anticoagulant Rodenticides",
                 alternateNames: ["rat poison", "mouse poison", "rodent bait", "warfarin", "brodifacoum", "bromadiolone", "difethialone", "difenacoum", "diphacinone", "chlorophacinone", "D-Con", "d-CON", "Havoc", "Jaguar", "Just One Bite", "Tomcat", "Boot Hill", "Maki", "Hawk", "Enforcer", "superwarfarin", "anticoagulant bait", "blood thinner poison", "coumarin rodenticide", "indandione rodenticide"],
                 categories: [.garageAutomotive],
@@ -2996,12 +3064,13 @@ class DatabaseService {
                     "Consider pet-safe alternatives like snap traps or electronic traps",
                     "If you suspect ingestion, contact a veterinarian immediately—do not wait for symptoms"
                 ],
-                sources: ["VIN Toxicology Resources", "ASPCA Animal Poison Control Center", "Merck Veterinary Manual — Anticoagulant Rodenticide Poisoning", "Pet Poison Helpline", "Veterinary Partner (VIN)"]
+                sources: ["VIN Toxicology Resources", "ASPCA Animal Poison Control Center", "Merck Veterinary Manual — Anticoagulant Rodenticide Poisoning", "Pet Poison Helpline", "Veterinary Partner (VIN)"],
+                relatedEntries: ["049e1259-f968-4e23-aa8c-5110cb52a08c"]
             ),
 
             // MARK: - Bromethalin
             ToxicItem(
-                id: UUID(),
+                id: UUID(uuidString: "bdd489ee-bb6e-47c3-9b2f-b63d9fb7de21")!,
                 name: "Bromethalin",
                 alternateNames: ["bromethalin rodenticide", "neurotoxic rodenticide", "Tomcat", "Fastrac", "Talpirid", "Assault", "Vengeance", "Top Gun", "Gunslinger", "rat poison", "mouse poison", "mole bait", "mole poison"],
                 categories: [.garageAutomotive],
@@ -3045,12 +3114,13 @@ class DatabaseService {
                     "If ingestion is suspected, contact a veterinarian IMMEDIATELY—early decontamination is critical",
                     "Do NOT wait for symptoms to develop—once severe signs appear, the outcome is often poor"
                 ],
-                sources: ["VIN Toxicology Resources", "ASPCA Animal Poison Control Center", "Merck Veterinary Manual — Bromethalin Poisoning in Animals", "Pet Poison Helpline", "VCA Animal Hospitals"]
+                sources: ["VIN Toxicology Resources", "ASPCA Animal Poison Control Center", "Merck Veterinary Manual — Bromethalin Poisoning in Animals", "Pet Poison Helpline", "VCA Animal Hospitals"],
+                relatedEntries: ["049e1259-f968-4e23-aa8c-5110cb52a08c"]
             ),
 
             // MARK: - Cholecalciferol (Vitamin D3) Rodenticide
             ToxicItem(
-                id: UUID(),
+                id: UUID(uuidString: "3c40b99c-5653-4195-a821-19dde4e1c8f8")!,
                 name: "Cholecalciferol (Vitamin D3) Rodenticide",
                 alternateNames: ["vitamin D3 rodenticide", "vitamin D poison", "vitamin D3 poison", "cholecalciferol bait", "d-CON", "Quintox", "Rampage", "True Grit Rampage", "Ortho Rat-B-Gone", "Selontra", "rat poison", "mouse poison", "vitamin D rodenticide"],
                 categories: [.garageAutomotive],
@@ -3095,12 +3165,13 @@ class DatabaseService {
                     "If ingestion is suspected, contact a veterinarian IMMEDIATELY—do not wait for symptoms",
                     "Do not rely on bait appearance to identify the product"
                 ],
-                sources: ["VIN Toxicology Resources", "ASPCA Animal Poison Control Center", "Merck Veterinary Manual — Cholecalciferol Poisoning in Animals", "Pet Poison Helpline", "VCA Animal Hospitals", "Purdue University College of Veterinary Medicine"]
+                sources: ["VIN Toxicology Resources", "ASPCA Animal Poison Control Center", "Merck Veterinary Manual — Cholecalciferol Poisoning in Animals", "Pet Poison Helpline", "VCA Animal Hospitals", "Purdue University College of Veterinary Medicine"],
+                relatedEntries: ["049e1259-f968-4e23-aa8c-5110cb52a08c"]
             ),
 
             // MARK: - Vitamin D Overdose (Supplements & Medications)
             ToxicItem(
-                id: UUID(),
+                id: UUID(uuidString: "c492d990-4222-44a0-8546-634118f68f71")!,
                 name: "Vitamin D Overdose (Supplements & Medications)",
                 alternateNames: ["vitamin D toxicity", "vitamin D3 overdose", "vitamin D2 overdose", "cholecalciferol overdose", "ergocalciferol overdose", "vitamin D supplements", "vitamin D3 supplements", "calcipotriene", "calcipotriol", "tacalcitol", "calcitriol", "Dovonex", "Taclonex", "Sorilux", "Enstilar", "Wynzora", "Rocaltrol", "Vectical", "psoriasis cream", "dog ate vitamins", "pet ate supplements"],
                 categories: [.humanMedications],
@@ -3144,12 +3215,13 @@ class DatabaseService {
                     "Store topical medication tubes securely—small amounts can be toxic if a pet chews the tube",
                     "If ingestion is suspected, note the product name and strength, and contact a veterinarian immediately"
                 ],
-                sources: ["VIN Toxicology Resources", "ASPCA Animal Poison Control Center", "Merck Veterinary Manual — Cholecalciferol Poisoning in Animals", "Pet Poison Helpline", "VCA Animal Hospitals"]
+                sources: ["VIN Toxicology Resources", "ASPCA Animal Poison Control Center", "Merck Veterinary Manual — Cholecalciferol Poisoning in Animals", "Pet Poison Helpline", "VCA Animal Hospitals"],
+                relatedEntries: nil
             ),
 
             // MARK: - Zinc Phosphide
             ToxicItem(
-                id: UUID(),
+                id: UUID(uuidString: "c8ebc592-fbe3-4e06-9e8d-63399dfce710")!,
                 name: "Zinc Phosphide",
                 alternateNames: ["zinc phosphide rodenticide", "aluminum phosphide", "aluminium phosphide", "magnesium phosphide", "metal phosphide", "phosphide rodenticide", "gopher bait", "gopher poison", "mole bait", "mole poison", "Gopha-rid", "ZP Rodent Bait", "Prozap", "Ridall", "Zinc-tox", "Arrex", "Phosvin", "Ratol", "Fumitoxin", "Phostoxin", "Phosfume", "Magtoxin", "grain fumigant", "ground squirrel bait", "vole poison", "field mouse poison"],
                 categories: [.garageAutomotive],
@@ -3195,7 +3267,48 @@ class DatabaseService {
                     "CRITICAL: If your pet ingests any phosphide product, warn veterinary staff that the vomit releases toxic phosphine gas",
                     "If your pet vomits at home after suspected ingestion, ventilate the area immediately and avoid breathing the fumes"
                 ],
-                sources: ["VIN Toxicology Resources", "ASPCA Animal Poison Control Center", "Merck Veterinary Manual — Phosphide Poisoning in Animals", "Pet Poison Helpline", "CDC MMWR — Occupational Phosphine Gas Poisoning at Veterinary Hospitals (2012)", "National Pesticide Information Center"]
+                sources: ["VIN Toxicology Resources", "ASPCA Animal Poison Control Center", "Merck Veterinary Manual — Phosphide Poisoning in Animals", "Pet Poison Helpline", "CDC MMWR — Occupational Phosphine Gas Poisoning at Veterinary Hospitals (2012)", "National Pesticide Information Center"],
+                relatedEntries: ["049e1259-f968-4e23-aa8c-5110cb52a08c"]
+            ),
+
+            // MARK: - Rodenticides (Overview)
+            ToxicItem(
+                id: UUID(uuidString: "049e1259-f968-4e23-aa8c-5110cb52a08c")!,
+                name: "Rodenticides (Overview)",
+                alternateNames: ["rat poison", "mouse poison", "rodent bait", "rodent poison", "rodenticide", "rat bait", "mouse bait", "gopher poison", "mole poison", "vole poison", "rodent killer"],
+                categories: [.garageAutomotive],
+                imageAsset: "rodenticides_overview",
+                description: "Rodenticides are poisons designed to kill rodents such as rats, mice, gophers, moles, and voles. These products are a leading cause of pet poisoning—the ASPCA Animal Poison Control Center receives thousands of rodenticide-related calls annually. Four main types of rodenticides are used in the United States, each working through a completely different mechanism. Identifying the exact product is critical because treatment varies dramatically between types. Product appearance (color, shape, size) does NOT reliably indicate the active ingredient—always check the packaging or contact poison control.",
+                toxicityInfo: "The four major rodenticide types are: (1) Anticoagulant rodenticides (warfarin, brodifacoum, bromadiolone) prevent blood clotting and have an antidote (vitamin K1); (2) Bromethalin causes fatal brain swelling with NO ANTIDOTE; (3) Cholecalciferol (vitamin D3) causes fatal calcium elevation with NO ANTIDOTE; (4) Zinc phosphide releases toxic phosphine gas in the stomach with NO ANTIDOTE. Treatment success depends heavily on knowing the specific product and acting quickly. For detailed information on each type, see the related entries below.",
+                onsetTime: OnsetTime(
+                    early: "Varies by type: Anticoagulants show no signs for 1-3 days; Bromethalin and cholecalciferol may show signs within 12-24 hours; Zinc phosphide can cause signs within 15 minutes to 4 hours",
+                    delayed: "Anticoagulants: bleeding 3-7 days after ingestion; Bromethalin: paralysis over 1-2 weeks; Cholecalciferol: kidney failure 1-3 days; Zinc phosphide: multi-organ failure within hours to days"
+                ),
+                symptoms: [
+                    "Varies dramatically by rodenticide type",
+                    "Anticoagulants: bleeding, pale gums, weakness, difficulty breathing",
+                    "Bromethalin: hind leg weakness, paralysis, seizures, tremors",
+                    "Cholecalciferol: increased thirst/urination, vomiting, kidney failure signs",
+                    "Zinc phosphide: rapid vomiting, anxiety, difficulty breathing, collapse"
+                ],
+                speciesRisks: [
+                    SpeciesRisk(species: .dog, severity: .severe, notes: "Most commonly poisoned species; dogs often find and consume bait or poisoned rodents"),
+                    SpeciesRisk(species: .cat, severity: .severe, notes: "Less commonly exposed but equally susceptible; outdoor cats may consume poisoned rodents"),
+                    SpeciesRisk(species: .smallMammal, severity: .severe, notes: "Extremely susceptible due to small body size; ferrets, rabbits, and guinea pigs at high risk"),
+                    SpeciesRisk(species: .bird, severity: .severe, notes: "All birds susceptible; raptors and scavengers at risk from eating poisoned rodents"),
+                    SpeciesRisk(species: .reptile, severity: .severe, notes: "Susceptible; limited data available")
+                ],
+                preventionTips: [
+                    "If you must use rodenticides, keep ALL packaging—product appearance does NOT indicate the active ingredient",
+                    "Write down the exact product name, active ingredient, EPA registration number, and amount used",
+                    "Use tamper-resistant bait stations and place them where pets cannot access",
+                    "Consider pet-safe alternatives: snap traps, electronic traps, or professional pest control",
+                    "If you suspect ANY rodenticide ingestion, contact a veterinarian or poison control immediately",
+                    "Have product information ready when you call—treatment varies dramatically by type",
+                    "Time is critical for all types—do not wait for symptoms to appear"
+                ],
+                sources: ["VIN Toxicology Resources", "ASPCA Animal Poison Control Center", "Pet Poison Helpline", "Merck Veterinary Manual"],
+                relatedEntries: ["304c1824-e0b2-48bb-9991-3803d1ae87d0", "bdd489ee-bb6e-47c3-9b2f-b63d9fb7de21", "3c40b99c-5653-4195-a821-19dde4e1c8f8", "c8ebc592-fbe3-4e06-9e8d-63399dfce710"]
             )
         ]
     }
@@ -3210,6 +3323,11 @@ class DatabaseService {
 
     func item(withId id: UUID) -> ToxicItem? {
         allItems.first { $0.id == id }
+    }
+
+    func item(withIdString idString: String) -> ToxicItem? {
+        guard let uuid = UUID(uuidString: idString) else { return nil }
+        return item(withId: uuid)
     }
 
     func search(query: String, species: [Species]?) -> [ToxicItem] {

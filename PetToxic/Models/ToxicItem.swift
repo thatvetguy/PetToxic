@@ -22,6 +22,7 @@ struct ToxicItem: Identifiable, Codable, Hashable {
     let speciesRisks: [SpeciesRisk]
     let preventionTips: [String]?
     let sources: [String]
+    let relatedEntries: [String]?  // Array of UUID strings
 
     // MARK: - Hashable
 
@@ -71,6 +72,7 @@ extension ToxicItem {
             "Educate children not to share chocolate with pets",
             "Remember that baking chocolate and dark chocolate are most dangerous"
         ],
-        sources: ["ASPCA Animal Poison Control Center", "Merck Veterinary Manual", "Veterinary Information Network (VIN)", "VCA Animal Hospitals"]
+        sources: ["ASPCA Animal Poison Control Center", "Merck Veterinary Manual", "Veterinary Information Network (VIN)", "VCA Animal Hospitals"],
+        relatedEntries: nil
     )
 }
