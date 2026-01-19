@@ -4319,11 +4319,23 @@ class DatabaseService {
                     "Dog treat packet",
                     "Deoxidizer",
                     "Deoxidizer packet",
-                    "Do not eat packet"
+                    "Do not eat packet",
+                    "Hand warmer",
+                    "Hand warmers",
+                    "Hand warmer packet",
+                    "Disposable hand warmer",
+                    "Hot Hands",
+                    "HotHands",
+                    "Grabber hand warmer",
+                    "Toe warmer",
+                    "Toe warmers",
+                    "Body warmer packet",
+                    "Heat pack",
+                    "Heating packet"
                 ],
                 categories: [.householdItems],
                 imageAsset: "oxygen_absorbers",
-                description: "Iron-containing oxygen absorbers are small packets found in packages of dried foods such as beef jerky, pepperoni, dried fruits, and pet treats. They contain elemental iron powder that absorbs oxygen to prevent food spoilage and rancidity. These packets are commonly confused with silica gel desiccants, but they are significantly more dangerous. While silica gel is essentially non-toxic, iron oxygen absorbers can cause iron poisoning, particularly in small dogs. The packets are often unlabeled or do not specify that they contain iron, making identification difficult.",
+                description: "Iron-containing oxygen absorbers are small packets found in packages of dried foods such as beef jerky, pepperoni, dried fruits, and pet treats. Disposable hand warmers and toe warmers also contain elemental iron powder—when exposed to air, the iron oxidizes and generates heat. These products contain 50-70% elemental iron, which can cause serious iron poisoning if ingested. The packets are commonly confused with non-toxic silica gel desiccants, making identification difficult. While silica gel is essentially non-toxic, iron-containing packets can cause iron poisoning, particularly in small dogs. Hand warmers pose a seasonal risk during cold months when they are commonly carried in pockets, bags, and outdoor gear accessible to pets.",
                 toxicityInfo: "Elemental iron can cause severe poisoning even in the small amounts contained in a single oxygen absorber packet. The iron content of these packets ranges from 50-70% total iron. Iron is highly irritating to the gastrointestinal tract and has direct corrosive effects, causing bloody vomiting and diarrhea. If a toxic dose is absorbed, iron overwhelms the body's protein carriers (transferrin and ferritin), and free iron causes oxidative damage to the liver and other organs. Severe metabolic acidosis, shock, and hepatic failure can develop 1-5 days after ingestion. Small dogs (<15 pounds) are at greatest risk—the most severe poisoning cases reported have occurred in small breed dogs. Larger dogs ingesting a single small packet are less likely to develop serious toxicity. Once iron has fully oxidized ('spent' absorbers), it becomes iron oxide, which has poor bioavailability and is less toxic—but the degree of oxidation cannot be determined by appearance.",
                 onsetTime: OnsetTime(
                     early: "Vomiting (often with blood) typically occurs within 1-6 hours of ingestion; absence of vomiting suggests a non-toxic dose was ingested",
@@ -4355,10 +4367,164 @@ class DatabaseService {
                     "Store treats in a separate container after removing the packet",
                     "Keep packages containing these packets out of pet reach—especially around holidays when treats may be wrapped as gifts",
                     "Learn to distinguish oxygen absorbers (dark brown/rust-colored contents, MAGNETIC) from silica gel (white/clear beads, not magnetic)",
-                    "If your pet ingests a packet from food packaging, check with a magnet—if it sticks, the packet likely contains iron"
+                    "If your pet ingests a packet from food packaging, check with a magnet—if it sticks, the packet likely contains iron",
+                    "Store hand warmers and toe warmers out of pet reach, especially during winter months",
+                    "Dispose of used hand warmers in a sealed trash container—even 'spent' warmers may still contain some unoxidized iron",
+                    "Keep outdoor gear containing hand warmers (gloves, jacket pockets, boots) away from curious pets"
                 ],
                 sources: ["Pet Poison Helpline", "Veterinary Information Network (VIN)", "Journal of Medical Toxicology (Brutlag et al., 2012)", "dvm360", "Animal Poisons Helpline (Australia)"],
                 relatedEntries: ["c3d4e5f6-7a8b-9c0d-1e2f-3a4b5c6d7e8f"]
+            ),
+
+            // MARK: - Pennies & Zinc Objects
+            ToxicItem(
+                id: UUID(uuidString: "a7b8c9d0-1e2f-3a4b-5c6d-7e8f9a0b1c2d")!,
+                name: "Pennies & Zinc Objects",
+                alternateNames: [
+                    "Penny",
+                    "Pennies",
+                    "Zinc penny",
+                    "Zinc pennies",
+                    "Coins",
+                    "US penny",
+                    "US pennies",
+                    "Canadian penny",
+                    "Canadian pennies",
+                    "Zinc toxicity",
+                    "Zinc poisoning",
+                    "Zinc toxicosis",
+                    "Zinc nuts",
+                    "Zinc bolts",
+                    "Zinc hardware",
+                    "Galvanized metal",
+                    "Galvanized nails",
+                    "Galvanized screws",
+                    "Zinc oxide",
+                    "Diaper rash cream",
+                    "Zinc supplement",
+                    "Board game pieces",
+                    "Monopoly pieces",
+                    "Game tokens",
+                    "Zipper pulls",
+                    "Jewelry"
+                ],
+                categories: [.householdItems],
+                imageAsset: "pennies_zinc",
+                description: "US pennies minted after 1982 contain 97.5% zinc with a thin copper coating, making them a significant source of zinc toxicity when ingested by pets. Canadian pennies minted from 1997-2001 also contain 96% zinc. Dogs are most commonly affected due to their tendency to swallow foreign objects. Other zinc sources include galvanized hardware (nuts, bolts, nails), board game pieces, zippers, jewelry, and zinc-containing ointments (diaper rash creams, sunscreen). In the acidic environment of the stomach, zinc rapidly dissolves and is absorbed into the bloodstream, causing destruction of red blood cells (intravascular hemolysis).",
+                toxicityInfo: "Zinc toxicosis causes intravascular hemolysis—destruction of red blood cells within the bloodstream. The acidic gastric environment promotes rapid dissolution and absorption of zinc from metallic sources. Once absorbed, zinc interferes with red blood cell metabolism, leading to oxidative damage and cell rupture. This releases hemoglobin into the bloodstream, which can damage the kidneys (acute renal failure) and cause severe anemia. A single post-1982 US penny contains enough zinc to be potentially fatal to dogs weighing less than 24 kg (about 53 lbs). Small dogs are at greatest risk because zinc-containing objects are more likely to remain in their stomachs rather than passing through. In up to 90% of zinc toxicosis cases, the source of zinc is never identified—diagnosis may occur without finding the offending object. Chronic low-level exposure from zinc-containing ointments can also cause toxicosis over time.",
+                onsetTime: OnsetTime(
+                    early: "Vomiting, depression, and loss of appetite typically appear within 1-2 days of ingestion",
+                    delayed: "Hemolytic anemia and icterus (jaundice) may develop 2-4 days after ingestion; kidney failure can follow; signs resolve within 48-72 hours once the zinc source is removed"
+                ),
+                symptoms: [
+                    "Vomiting",
+                    "Diarrhea",
+                    "Depression and lethargy",
+                    "Loss of appetite (anorexia)",
+                    "Weakness",
+                    "Collapse",
+                    "Pale gums (pallor)",
+                    "Jaundice/icterus (yellow discoloration of gums, skin, whites of eyes)",
+                    "Orange or red-brown urine (hemoglobinuria)",
+                    "Increased thirst (polydipsia)",
+                    "Increased urination (polyuria)",
+                    "Rapid breathing",
+                    "Rapid heart rate (tachycardia)",
+                    "Abdominal pain",
+                    "Seizures (severe cases)",
+                    "Kidney failure signs (decreased urination, vomiting)"
+                ],
+                speciesRisks: [
+                    SpeciesRisk(species: .dog, severity: .high, notes: "Most commonly affected species; dogs frequently swallow coins and small objects; small dogs (<24 kg) at greatest risk because objects more likely to remain in stomach"),
+                    SpeciesRisk(species: .cat, severity: .high, notes: "Rare due to more selective eating habits, but equally susceptible to zinc toxicosis if ingestion occurs"),
+                    SpeciesRisk(species: .smallMammal, severity: .severe, notes: "Small body size increases risk; ferrets may be attracted to shiny objects; very small amounts of zinc can be toxic"),
+                    SpeciesRisk(species: .bird, severity: .severe, notes: "Birds are highly susceptible to heavy metal toxicosis; zinc from cage hardware (galvanized wire) is a known cause of toxicity in pet birds"),
+                    SpeciesRisk(species: .reptile, severity: .high, notes: "Limited data; presumed susceptible to zinc toxicity")
+                ],
+                preventionTips: [
+                    "Keep loose change in containers with secure lids, not in open dishes or jars",
+                    "Be especially vigilant with small dogs—they are most at risk for serious zinc poisoning from a single penny",
+                    "Supervise children during activities involving coins (piggy banks, coin-counting, magic tricks)",
+                    "Check that galvanized hardware in bird cages is coated or replaced with stainless steel",
+                    "Store zinc-containing ointments (diaper cream, sunscreen) out of pet reach and prevent licking when applied to people",
+                    "Keep board games stored securely—game pieces and tokens often contain zinc",
+                    "If your pet is diagnosed with zinc toxicosis from an unknown source, carefully search your home for accessible zinc objects"
+                ],
+                sources: ["Veterinary Information Network (VIN)", "ASPCA Animal Poison Control Center", "Pet Poison Helpline", "Merck Veterinary Manual", "Journal of Veterinary Emergency and Critical Care"],
+                relatedEntries: nil
+            ),
+
+            // MARK: - Liquid Potpourri & Scented Products
+            ToxicItem(
+                id: UUID(uuidString: "b8c9d0e1-2f3a-4b5c-6d7e-8f9a0b1c2d3e")!,
+                name: "Liquid Potpourri & Scented Products",
+                alternateNames: [
+                    "Liquid potpourri",
+                    "Potpourri oil",
+                    "Simmering potpourri",
+                    "Scented oil",
+                    "Fragrance oil",
+                    "Room fragrance",
+                    "Wax melts",
+                    "Wax tarts",
+                    "Candle melts",
+                    "Scented wax",
+                    "Wax warmer",
+                    "Candle warmer",
+                    "Oil warmer",
+                    "Oil diffuser liquid",
+                    "Reed diffuser oil",
+                    "Dryer sheets",
+                    "Fabric softener sheets",
+                    "Scented sachets",
+                    "Air freshener liquid",
+                    "Plug-in air freshener refill",
+                    "Scentsy",
+                    "Glade plugins"
+                ],
+                categories: [.householdItems],
+                imageAsset: "liquid_potpourri",
+                description: "Liquid potpourri and similar scented products (wax melts, fragrance oils, dryer sheets) can cause significant injury to pets, particularly cats. These products typically contain a combination of essential oils and cationic detergents—both of which can cause tissue damage. Cats are especially vulnerable because they are attracted to warm, aromatic liquids and may drink from simmering potpourri pots or walk through spilled oils and then groom themselves. The cationic detergents in these products cause severe corrosive burns to mucous membranes, similar to alkaline injuries. Unlike dried potpourri (which primarily poses a foreign body risk), liquid forms cause direct chemical injury.",
+                toxicityInfo: "Liquid potpourri and scented products cause injury through two mechanisms: essential oil toxicity and cationic detergent burns. Essential oils irritate mucous membranes and the GI tract, and can cause CNS depression, dermal hypersensitivity, and liver damage in cats. Cationic detergents (also found in fabric softeners and dryer sheets) are far more dangerous—they cause severe corrosive burns similar to alkaline injuries, with tissue necrosis of the mouth, tongue, esophagus, and stomach. Even small exposures can cause intense pain, ulceration, and difficulty eating or drinking. Dermal exposure (walking through spilled product, then grooming) can cause burns to the paws, skin ulceration, and systemic effects when groomed. Cats are at significantly higher risk than dogs due to their grooming behavior and sensitivity to essential oils. Solid candle wax, by contrast, is relatively non-toxic and primarily poses a GI upset or obstruction risk rather than chemical injury.",
+                onsetTime: OnsetTime(
+                    early: "Oral burns and pain occur immediately upon contact; drooling, pawing at mouth, and distress appear within minutes",
+                    delayed: "Full extent of tissue damage may take 12-24 hours to develop; esophageal strictures can develop weeks later in severe cases"
+                ),
+                symptoms: [
+                    "Intense drooling (hypersalivation)",
+                    "Pawing at mouth or face",
+                    "Oral ulcers and burns (tongue, gums, palate)",
+                    "Difficulty swallowing (dysphagia)",
+                    "Refusal to eat or drink",
+                    "Vomiting",
+                    "Vocalization or signs of pain",
+                    "Red, ulcerated skin (if dermal exposure)",
+                    "Eye irritation or corneal ulcers (if eye exposure)",
+                    "Depression or lethargy",
+                    "Difficulty breathing (if aspirated or severe swelling)",
+                    "Tremors (if significant essential oil absorption)",
+                    "Weakness or wobbliness (CNS depression from essential oils)",
+                    "Fever"
+                ],
+                speciesRisks: [
+                    SpeciesRisk(species: .cat, severity: .high, notes: "Most commonly and severely affected; attracted to warm liquids; groom contaminated fur causing repeated exposure; sensitive to essential oils; cationic detergent burns are particularly severe"),
+                    SpeciesRisk(species: .dog, severity: .moderate, notes: "Less commonly affected than cats; similar risk of corrosive burns if product is ingested; less likely to groom contaminated fur"),
+                    SpeciesRisk(species: .smallMammal, severity: .high, notes: "Small body size increases risk; rabbits and ferrets that groom extensively are at higher risk from dermal exposure"),
+                    SpeciesRisk(species: .bird, severity: .high, notes: "Respiratory system is sensitive to aerosolized oils; direct ingestion would cause crop and GI burns"),
+                    SpeciesRisk(species: .reptile, severity: .moderate, notes: "Limited data; presumed at risk for corrosive injury if ingested")
+                ],
+                preventionTips: [
+                    "Avoid using liquid potpourri simmers in homes with cats—cats are attracted to the warm, fragrant liquid and may attempt to drink it",
+                    "Place wax warmers and oil diffusers in locations completely inaccessible to pets",
+                    "Clean up any spilled fragrance oils immediately and thoroughly",
+                    "Store dryer sheets in closed containers; dispose of used sheets in covered trash cans",
+                    "If using plug-in air fresheners, ensure pets cannot reach or chew on the units",
+                    "Consider switching to pet-safer alternatives like baking soda for odor control",
+                    "If a pet walks through spilled product, wash paws immediately with mild dish soap and water to prevent grooming exposure",
+                    "Keep reed diffusers out of reach—cats may knock them over and walk through the spilled oil"
+                ],
+                sources: ["Veterinary Information Network (VIN)", "ASPCA Animal Poison Control Center", "Pet Poison Helpline", "Merck Veterinary Manual"],
+                relatedEntries: nil
             )
         ]
     }
