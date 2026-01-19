@@ -463,10 +463,10 @@ class DatabaseService {
             ToxicItem(
                 id: UUID(uuidString: "c9fb21d1-a66a-418e-a63f-1b754ec048f2")!,
                 name: "Salt",
-                alternateNames: ["sodium chloride", "table salt", "rock salt", "de-icing salt", "road salt", "sea salt", "homemade play dough", "salt dough", "playdough", "paint balls", "sea water", "ocean water", "salty snacks"],
-                categories: [.foods],
+                alternateNames: ["sodium chloride", "table salt", "rock salt", "de-icing salt", "road salt", "sea salt", "homemade play dough", "salt dough", "playdough", "paint balls", "sea water", "ocean water", "salty snacks", "ice melt", "ice melter", "ice melt pellets", "de-icer", "deicer", "sidewalk salt", "driveway salt", "calcium chloride", "magnesium chloride", "potassium chloride", "Safe Paw", "Safe Step", "Morton Safe-T-Salt", "Road Runner ice melt", "pet safe ice melt", "pet friendly ice melt"],
+                categories: [.foods, .garageGarden],
                 imageAsset: "salt_playdough",
-                description: "While small amounts of salt are a normal part of a pet's diet, excessive salt intake can cause sodium poisoning. Common sources include homemade play dough, rock salt (de-icers), sea water at the beach, paint balls, table salt, and very salty snacks like chips or pretzels.",
+                description: "While small amounts of salt are a normal part of a pet's diet, excessive salt intake can cause sodium poisoning. Common sources include homemade play dough, rock salt (de-icers), sea water at the beach, paint balls, table salt, and very salty snacks like chips or pretzels. In winter, pets can also be exposed by walking on treated sidewalks and driveways, then licking ice melt residue off their paws. This can cause both GI upset from ingestion and local irritation to paw pads.",
                 toxicityInfo: "Excess salt overwhelms the body's ability to maintain fluid balance. Water is pulled out of cells—including brain cells—causing dehydration and neurological damage. The risk is much higher when pets don't have access to fresh water to help flush the excess sodium. Homemade play dough is a frequent culprit, as it contains very high salt concentrations and may be attractive to dogs. Important: Salt should never be used to induce vomiting at home—this outdated practice can cause salt poisoning.",
                 onsetTime: OnsetTime(
                     early: "Vomiting is typically the first sign and may appear within a few hours of ingestion",
@@ -492,9 +492,15 @@ class DatabaseService {
                 preventionTips: [
                     "Keep homemade play dough and salt dough out of pet reach—these contain dangerously high salt levels",
                     "Prevent pets from drinking sea water at the beach; bring fresh water for them",
-                    "Store rock salt and de-icing products securely; rinse pet paws after winter walks",
+                    "Store rock salt and de-icing products in sealed containers in the garage, out of pet reach",
+                    "Wipe your pet's paws with a damp cloth or pet-safe wipes after winter walks to remove ice melt residue",
+                    "Consider using pet booties in winter to protect paws from ice melt chemicals",
+                    "Apply paw balm or wax before walks to create a protective barrier",
+                    "Prevent pets from licking ice melt off the ground or eating snow in treated areas",
+                    "\"Pet-safe\" or \"pet-friendly\" ice melts are less irritating but can still cause GI upset if ingested—no ice melt is truly safe",
+                    "Rinse and dry paws thoroughly if your pet shows signs of irritation (licking paws, limping, red skin)",
                     "Avoid sharing salty snacks like chips, pretzels, or salted popcorn with pets",
-                    "Never use salt to induce vomiting—this can cause salt poisoning"
+                    "Never use salt to induce vomiting—this outdated practice can cause salt poisoning"
                 ],
                 sources: ["Veterinary Information Network (VIN)", "ASPCA Animal Poison Control Center", "Pet Poison Helpline"],
                 relatedEntries: nil
