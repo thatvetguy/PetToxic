@@ -3483,6 +3483,62 @@ class DatabaseService {
                 relatedEntries: nil
             ),
 
+            // MARK: - Organophosphates & Carbamates
+            ToxicItem(
+                id: UUID(uuidString: "e5f6a7b8-9c0d-4e1f-b2a3-4c5d6e7f8a9b")!,
+                name: "Organophosphates & Carbamates",
+                alternateNames: ["organophosphate", "organophosphate poisoning", "carbamate", "carbamate poisoning", "cholinesterase inhibitor", "acetylcholinesterase poisoning", "SLUDGE syndrome", "systemic rose care", "rose fertilizer poison", "disulfoton", "Di-Syston", "acephate", "Orthene", "chlorpyrifos", "Dursban", "Lorsban", "diazinon", "malathion", "parathion", "phosmet", "dichlorvos", "DDVP", "fenthion", "coumaphos", "terbufos", "carbaryl", "Sevin", "carbofuran", "Furadan", "methomyl", "Lannate", "propoxur", "Baygon", "aldicarb", "Temik", "fly bait poisoning", "cattle ear tag poisoning", "livestock ear tag"],
+                categories: [.garageGarden, .medications],
+                imageAsset: "organophosphates_carbamates",
+                description: "Organophosphates (OPs) and carbamates (CMs) are cholinesterase-inhibiting insecticides that were once commonly used for pest control on animals and in agriculture. While their use has declined significantly due to the availability of safer modern insecticides, they remain in some garden products, agricultural applications, livestock treatments, and older stored pesticides.\n\n⚠️ SYSTEMIC ROSE CARE PRODUCTS are a major source of poisoning. Products containing disulfoton or acephate are extremely toxic—just ONE TEASPOON of some rose care products can exceed the lethal dose for a 25 kg (55 lb) dog. These are often applied with bone meal or blood meal fertilizers that dogs find highly attractive, leading to accidental ingestion.\n\nOther common exposure sources include fly baits (especially methomyl, which is formulated with sugar to attract flies—and dogs), cattle ear tags containing OPs, older flea/tick products, and agricultural/lawn pesticides.\n\nThese toxins cause the classic \"SLUDGE\" syndrome: Salivation, Lacrimation (tearing), Urination, Defecation, GI distress, and Emesis (vomiting). Additional neurological signs include muscle tremors, seizures, and weakness.\n\n**Key difference between OPs and carbamates:** Organophosphates irreversibly bind to acetylcholinesterase, so effects can persist for days to weeks. Carbamates bind reversibly, so effects typically resolve within 4 hours if the animal survives.",
+                toxicityInfo: "These insecticides work by inhibiting acetylcholinesterase (AChE), the enzyme that breaks down the neurotransmitter acetylcholine. This causes acetylcholine to accumulate at nerve endings, leading to continuous, uncontrolled nerve stimulation.\n\nEffects are classified as:\n• MUSCARINIC (smooth muscle/glands): SLUDGE signs—excessive secretions, GI hypermotility, slow heart rate, constricted pupils\n• NICOTINIC (skeletal muscle): Fasciculations, tremors, weakness, paralysis\n• CNS: Anxiety, seizures, depression, coma\n\nOPs can also cause \"Intermediate Syndrome\" (IMS) 1-4 days after apparent recovery, characterized by profound muscle weakness especially in the neck, face, and respiratory muscles. Delayed neuropathy (weeks after exposure) has been reported in cats with lipophilic OPs like chlorpyrifos.\n\nAntidotes exist (atropine for muscarinic signs; pralidoxime for OPs), but treatment must be aggressive and early. Even with treatment, mortality rates of 15-17% have been reported.",
+                onsetTime: OnsetTime(
+                    early: "Signs typically develop within minutes to hours of exposure; carbamate effects usually resolve within 4 hours",
+                    delayed: "OP effects may persist for days to weeks; Intermediate Syndrome may develop 1-4 days after apparent recovery; delayed neuropathy possible weeks later with some OPs"
+                ),
+                symptoms: [
+                    "Excessive salivation/drooling",
+                    "Tearing (lacrimation)",
+                    "Frequent urination",
+                    "Diarrhea",
+                    "Vomiting",
+                    "Abdominal cramping",
+                    "Constricted pupils (miosis) — or dilated in severe cases",
+                    "Slow heart rate (bradycardia)",
+                    "Difficulty breathing (dyspnea)",
+                    "Excessive airway secretions",
+                    "Muscle twitching and fasciculations",
+                    "Muscle tremors",
+                    "Seizures/convulsions",
+                    "Weakness progressing to paralysis",
+                    "Incoordination (ataxia)",
+                    "Depression or lethargy",
+                    "Anorexia (not eating)",
+                    "Hypothermia or hyperthermia",
+                    "Bluish gums (cyanosis)",
+                    "Collapse",
+                    "Respiratory failure"
+                ],
+                speciesRisks: [
+                    SpeciesRisk(species: .dog, severity: .high, notes: "Dogs are frequently poisoned by ingesting rose care products mixed with attractive fertilizers (bone meal, blood meal), fly baits, or cattle ear tags. In one study of 102 dogs, 17% died despite treatment. Signs associated with death included weakness, mental dullness, and respiratory failure."),
+                    SpeciesRisk(species: .cat, severity: .high, notes: "Cats are particularly sensitive to many OPs, especially chlorpyrifos. Exposure often occurs through grooming after walking through treated areas or from topical flea products. Cats may show chronic toxicosis from fat-stored OPs. Muscarinic signs (SLUDGE) are often LESS prominent in cats. One study reported 15% mortality."),
+                    SpeciesRisk(species: .bird, severity: .high, notes: "Birds are highly susceptible. Carbofuran (Furadan) has been documented as extremely toxic to birds including poultry, ducks, pheasants, and wild birds, with oral LD50 values as low as 0.4 mg/kg in some species.")
+                ],
+                preventionTips: [
+                    "Store all insecticides securely out of reach of pets",
+                    "NEVER mix systemic rose care products (containing disulfoton or acephate) with organic fertilizers like bone meal or blood meal",
+                    "Keep pets away from treated garden areas until products have been watered in and soil has dried",
+                    "Place fly baits (especially methomyl-based) completely out of reach of pets—the sugar base is highly attractive to dogs",
+                    "Properly dispose of used pesticide-impregnated livestock ear tags",
+                    "Consider using modern, lower-toxicity alternatives for pest control",
+                    "Be aware that banned products may still exist in older households, garages, or outbuildings",
+                    "If using any OP/CM product, read labels carefully and follow all safety precautions",
+                    "Outdoor cats may be exposed by walking through treated areas—consider keeping cats indoors during and after pesticide applications"
+                ],
+                sources: ["VIN Toxicology Resources: Organophosphate and Carbamate Toxicosis", "ASPCA Animal Poison Control Center", "Merck Veterinary Manual: Carbamate Toxicosis in Animals", "Pet Poison Helpline: Organophosphates", "Klainbart S, et al. Clinical manifestations, laboratory findings, treatment and outcome of acute organophosphate or carbamate intoxication in 102 dogs. Vet J. 2019"],
+                relatedEntries: ["c3f5a8b2-7d4e-4f1a-b6c9-2e8d7f4a5b3c"]
+            ),
+
             // MARK: - Rodenticides (Overview)
             ToxicItem(
                 id: UUID(uuidString: "049e1259-f968-4e23-aa8c-5110cb52a08c")!,
