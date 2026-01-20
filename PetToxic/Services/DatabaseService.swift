@@ -10073,6 +10073,198 @@ class DatabaseService {
                     "PetMD — Pit Viper Bite Poisoning in Dogs"
                 ],
                 relatedEntries: ["00112233-4455-6677-8899-aabbccddef05"]
+            ),
+
+            // MARK: - Coral Snake Envenomation
+            ToxicItem(
+                id: UUID(uuidString: "00112233-4455-6677-8899-aabbccddef08")!,
+                name: "Coral Snake Envenomation",
+                alternateNames: [
+                    "coral snake bite",
+                    "elapid envenomation",
+                    "Micrurus bite",
+                    "Micruroides bite",
+                    "eastern coral snake",
+                    "Texas coral snake",
+                    "Arizona coral snake",
+                    "Sonoran coral snake"
+                ],
+                categories: [.animalEncounters],
+                summary: "NEUROTOXIC venom. Delayed paralysis onset 10-18 hours. No canine-specific antivenom available in US. Emergency care essential even with minimal initial signs.",
+                description: """
+Coral snakes are elapids with potent NEUROTOXIC venom distinct from pit viper hemotoxic venom. Three species exist in the US: Eastern coral snake (Micrurus fulvius) in Southeast, Texas coral snake (M. tener) in Texas/Louisiana, and Arizona/Sonoran coral snake (Micruroides euryxanthus) in Southwest.
+
+**Critical Identification:**
+- Color pattern: Red-yellow-black bands ("red touches yellow, kills a fellow")
+- Small head, round pupils, small fixed fangs
+- Non-aggressive but will bite if stepped on or handled
+- King snakes (harmless mimics): red touches black bands
+
+**Venom Mechanism:**
+Coral snake venom contains alpha-neurotoxins that block acetylcholine receptors at neuromuscular junctions, causing ascending paralysis. Unlike pit viper bites, there is typically MINIMAL local tissue reaction—DO NOT be falsely reassured by lack of swelling.
+
+**CRITICAL TIMING:**
+- Signs may be DELAYED 10-18 hours after bite
+- Once neurological signs appear, they progress rapidly
+- Respiratory paralysis can develop within 24-72 hours
+- Early treatment BEFORE symptom onset improves prognosis
+
+**Antivenom Situation:**
+- Pfizer discontinued production in 2010
+- North American Coral Snake Antivenin (equine-derived) has limited availability
+- No FDA-approved canine-specific product
+- Some facilities may have expired stock (still used in emergencies)
+- Mexican coral snake antivenom may be available in border states
+
+**Geographic Caution:**
+Coral snakes are secretive and rarely encountered, but pets investigating leaf litter, brush piles, or digging may provoke defensive bites. Most bites occur spring through fall in warm regions.
+""",
+                symptoms: [
+                    "EARLY (may be absent or minimal for hours):",
+                    "Fang marks (small, may be difficult to see)",
+                    "Minimal local swelling or pain (UNLIKE pit vipers)",
+                    "Drooling or hypersalivation",
+                    "Vomiting",
+                    "",
+                    "DELAYED (10-18 hours, may be rapid once started):",
+                    "Weakness progressing to paralysis",
+                    "Ataxia (wobbling, incoordination)",
+                    "Cranial nerve deficits (difficulty swallowing, facial weakness)",
+                    "Dilated pupils",
+                    "Loss of spinal reflexes",
+                    "Respiratory depression → paralysis",
+                    "Altered mentation progressing to obtundation"
+                ],
+                onsetTime: OnsetTime(
+                    early: "0-4 hours (minimal local signs)",
+                    delayed: "10-18 hours (neurological signs begin)"
+                ),
+                speciesRisks: [
+                    SpeciesRisk(
+                        species: .dog,
+                        severity: .severe,
+                        notes: "Dogs more commonly bitten than cats. Curious investigation of snakes leads to face/muzzle bites. Delayed onset means emergency care needed even without immediate symptoms. Prognosis guarded once paralysis develops."
+                    ),
+                    SpeciesRisk(
+                        species: .cat,
+                        severity: .severe,
+                        notes: "Less common than dogs but equally serious. Cats may not show signs for many hours. Any suspected exposure requires immediate veterinary evaluation and observation."
+                    )
+                ],
+                preventionTips: [
+                    "Learn to identify coral snakes in your region",
+                    "Keep pets on leash in snake habitat",
+                    "Avoid leaf litter, brush piles, and debris where snakes hide",
+                    "Don't let pets dig or investigate holes",
+                    "Clear yard of hiding spots (wood piles, rock walls, dense vegetation)",
+                    "Supervise outdoor time in endemic areas during warm months",
+                    "Snake avoidance training available for dogs in some areas"
+                ],
+                sources: [
+                    "ASPCA Animal Poison Control Center",
+                    "Journal of Veterinary Emergency and Critical Care — Elapid Envenomation",
+                    "Merck Veterinary Manual — Coral Snake Envenomation",
+                    "Clinical Toxicology — North American Coral Snake Bites",
+                    "Veterinary Clinics of North America — Reptile Envenomation Update"
+                ],
+                relatedEntries: ["00112233-4455-6677-8899-aabbccddef07"]
+            ),
+
+            // MARK: - Scorpion Stings
+            ToxicItem(
+                id: UUID(uuidString: "00112233-4455-6677-8899-aabbccddef09")!,
+                name: "Scorpion Stings",
+                alternateNames: [
+                    "bark scorpion sting",
+                    "Arizona bark scorpion",
+                    "Centruroides sculpturatus",
+                    "Centruroides exilicauda",
+                    "scorpion envenomation",
+                    "scorpion venom"
+                ],
+                categories: [.animalEncounters],
+                summary: "Most US scorpion stings cause only local pain. Arizona bark scorpion (Centruroides) is medically significant—neurotoxic venom causes pain, tremors, respiratory effects. Small pets at higher risk.",
+                description: """
+Over 70 scorpion species exist in the US, but only the Arizona bark scorpion (Centruroides sculpturatus/exilicauda) causes significant systemic envenomation. Found primarily in Arizona, New Mexico, and adjacent areas of California, Nevada, Utah, and Mexico.
+
+**Species Identification:**
+- Arizona bark scorpion: Yellowish-tan, 2-3 inches, slender pincers, climbs walls
+- Other US species: Larger pincers, ground-dwelling, cause only local reactions
+- Rule of thumb: Large pincers = less toxic; small pincers = more toxic
+
+**Venom Mechanism:**
+Centruroides venom contains neurotoxins affecting sodium channels, causing:
+- Excessive nerve firing
+- Muscle fasciculations and tremors
+- Autonomic dysfunction
+- Respiratory compromise in severe cases
+
+**Risk Stratification:**
+Small dogs have significantly higher risk of severe envenomation:
+- Dogs <15 lbs: 39% develop severe signs
+- Dogs >15 lbs: 13% develop severe signs
+- Cats: Limited data, likely similar size-dependent pattern
+
+**Non-Centruroides Stings:**
+Most US scorpion stings cause only:
+- Local pain (often intense but brief)
+- Mild swelling
+- Self-limiting within hours
+- Supportive care sufficient
+
+**When to Worry:**
+Geographic location matters most. Outside Arizona bark scorpion range, severe systemic effects from scorpion stings are rare in pets.
+""",
+                symptoms: [
+                    "LOCAL (all scorpion species):",
+                    "Intense local pain at sting site",
+                    "Mild swelling or redness",
+                    "Licking or pawing at affected area",
+                    "",
+                    "SYSTEMIC (Centruroides/bark scorpion):",
+                    "Restlessness and agitation",
+                    "Hypersalivation (drooling)",
+                    "Muscle tremors and fasciculations",
+                    "Ataxia (wobbling gait)",
+                    "Roving eye movements (opsoclonus)",
+                    "Respiratory distress",
+                    "Tachycardia or arrhythmias",
+                    "Hypertension",
+                    "Vomiting"
+                ],
+                onsetTime: OnsetTime(
+                    early: "Minutes to 1 hour (local pain immediate)",
+                    delayed: "1-4 hours (systemic signs if they occur)"
+                ),
+                speciesRisks: [
+                    SpeciesRisk(
+                        species: .dog,
+                        severity: .moderate,
+                        notes: "Small dogs (<15 lbs) at significantly higher risk for severe envenomation—39% vs 13% in larger dogs. Most stings cause only local pain. Arizona bark scorpion range requires heightened concern. Most dogs recover with supportive care."
+                    ),
+                    SpeciesRisk(
+                        species: .cat,
+                        severity: .moderate,
+                        notes: "Limited published data. Presumed similar risk pattern to small dogs based on body size. Cats in bark scorpion range should be evaluated if systemic signs develop."
+                    )
+                ],
+                preventionTips: [
+                    "Shake out shoes, clothing, and bedding in scorpion areas",
+                    "Use blacklight at night to spot scorpions (they fluoresce)",
+                    "Seal cracks and gaps in home foundation and walls",
+                    "Remove debris, woodpiles, and clutter near home",
+                    "Keep grass short and vegetation trimmed away from house",
+                    "Supervise pets at night when scorpions are active",
+                    "Consider professional pest control in heavily infested areas"
+                ],
+                sources: [
+                    "ASPCA Animal Poison Control Center",
+                    "Journal of Veterinary Emergency and Critical Care — Scorpion Envenomation in Dogs",
+                    "Clinical Toxicology — Centruroides Envenomation",
+                    "Arizona Poison and Drug Information Center",
+                    "Veterinary Clinics of North America — Envenomation in Small Animals"
+                ],
+                relatedEntries: ["00112233-4455-6677-8899-aabbccddef06"]
             )
         ]
     }
