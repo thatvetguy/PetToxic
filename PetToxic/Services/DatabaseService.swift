@@ -10518,6 +10518,235 @@ NOT found in California, Florida, Pacific Northwest, or Atlantic seaboard. Singl
                     "Small Animal Toxicology, 3rd Edition (Peterson)"
                 ],
                 relatedEntries: ["00112233-4455-6677-8899-aabbccddef10"]
+            ),
+
+            // MARK: - Asp/Puss Caterpillar & Stinging Caterpillars
+            ToxicItem(
+                id: UUID(uuidString: "00112233-4455-6677-8899-aabbccddef12")!,
+                name: "Asp/Puss Caterpillar & Stinging Caterpillars",
+                alternateNames: [
+                    "puss caterpillar",
+                    "puss moth caterpillar",
+                    "asp caterpillar",
+                    "southern flannel moth caterpillar",
+                    "flannel moth caterpillar",
+                    "tree asp",
+                    "woolly slug",
+                    "Italian asp",
+                    "possum bug",
+                    "el perrito",
+                    "saddleback caterpillar",
+                    "slug caterpillar",
+                    "buck moth caterpillar",
+                    "io moth caterpillar",
+                    "hag moth caterpillar",
+                    "monkey slug",
+                    "hickory tussock moth caterpillar",
+                    "spiny oak slug caterpillar",
+                    "stinging caterpillar",
+                    "venomous caterpillar",
+                    "caterpillar sting",
+                    "erucism"
+                ],
+                categories: [.animalEncounters, .environmentalHazards],
+                summary: "Venomous spines hidden beneath soft, fuzzy appearance cause intense pain. Texas epicenter. Peak seasons: early summer and fall. Oral exposure (mouthing/eating) causes more severe symptoms than skin contact.",
+                description: """
+The asp or puss caterpillar (Megalopyge opercularis), also known as the southern flannel moth caterpillar, is considered the most dangerous caterpillar in the United States. Despite its soft, fluffy appearance that resembles a tuft of fur or cotton, this caterpillar conceals venomous spines beneath its hair.
+
+**DECEPTIVE APPEARANCE:**
+The teardrop-shaped caterpillar is covered in long, silky hair that looks inviting to touch. This makes it hazardous for curious pets who may investigate, paw at, or mouth these caterpillars. Venomous spines hidden beneath the soft exterior break off on contact and release venom.
+
+**GEOGRAPHIC DISTRIBUTION:**
+Found throughout the southern and southeastern United States, from Texas (epicenter) to Florida, north to Virginia and Maryland. Commonly found on shade trees—oak, elm, pecan, hackberry, wild plum—and ornamental shrubs.
+
+**SEASONALITY:**
+Two generations per year. Most abundant:
+- Early summer (June-July)
+- Fall (September-November)
+
+**OTHER STINGING CATERPILLARS:**
+- Saddleback caterpillar: distinctive horns with spines
+- Hag moth caterpillar (monkey slug): East Coast
+- Buck moth caterpillar
+- Io moth caterpillar
+- Hickory tussock moth caterpillar
+
+While the asp is most painful, all stinging caterpillars should be avoided.
+
+**HOW EXPOSURE OCCURS:**
+- Stepping on caterpillars
+- Pawing at them
+- Rolling on them
+- Mouthing or eating them
+- Caterpillars falling from trees onto resting pets
+
+Pet fur provides some protection from skin exposure, but oral exposure from mouthing causes more significant symptoms.
+""",
+                symptoms: [
+                    "DERMAL (skin) EXPOSURE:",
+                    "Localized pain at contact site",
+                    "Redness and swelling",
+                    "Skin irritation",
+                    "(Fur often provides some protection)",
+                    "",
+                    "ORAL EXPOSURE (more severe):",
+                    "Intense drooling",
+                    "Head shaking and pawing at mouth",
+                    "Difficulty swallowing",
+                    "Tongue and lip swelling",
+                    "Oral irritation",
+                    "",
+                    "GENERAL SIGNS:",
+                    "Nausea and vomiting",
+                    "Restlessness or distress",
+                    "Rarely, allergic reactions"
+                ],
+                onsetTime: OnsetTime(
+                    early: "Immediate to minutes (intense pain at contact)",
+                    delayed: "Hours for swelling to peak; usually self-limiting"
+                ),
+                speciesRisks: [
+                    SpeciesRisk(
+                        species: .dog,
+                        severity: .moderate,
+                        notes: "Curious dogs may paw at, mouth, or eat caterpillars. Oral exposure causes more severe symptoms than skin contact. Most stings are painful but self-limiting. Veterinary care recommended if face/mouth involved or symptoms are severe."
+                    ),
+                    SpeciesRisk(
+                        species: .cat,
+                        severity: .moderate,
+                        notes: "Cats may encounter caterpillars while hunting or exploring. Similar pattern to dogs—oral exposure more severe than dermal. Seek veterinary care if symptoms persist or worsen."
+                    )
+                ],
+                preventionTips: [
+                    "Learn to identify asp caterpillars: teardrop-shaped, covered in soft-looking fur",
+                    "Peak seasons: early summer (June-July) and fall (September-November)",
+                    "Texas is the epicenter; also common throughout Southeast US",
+                    "Keep pets away from trees/shrubs where caterpillars are found",
+                    "Do NOT handle fuzzy caterpillars with bare hands",
+                    "Use a stick or leaf to relocate caterpillars away from pet areas",
+                    "Rule: If a caterpillar looks fuzzy, assume it may sting",
+                    "Check outdoor pet resting areas under trees"
+                ],
+                sources: [
+                    "ASPCA Animal Poison Control Center",
+                    "Texas A&M AgriLife Extension Service",
+                    "Merck Manual Professional Edition",
+                    "University of Florida IFAS Extension",
+                    "Veterinary Information Network (VIN)"
+                ],
+                relatedEntries: ["00112233-4455-6677-8899-aabbccddef06"]
+            ),
+
+            // MARK: - Tick Paralysis
+            ToxicItem(
+                id: UUID(uuidString: "00112233-4455-6677-8899-aabbccddef13")!,
+                name: "Tick Paralysis",
+                alternateNames: [
+                    "tick toxicosis",
+                    "tick-induced paralysis",
+                    "ascending paralysis from tick",
+                    "tick neurotoxicosis",
+                    "paralysis tick",
+                    "American dog tick",
+                    "Rocky Mountain wood tick",
+                    "Dermacentor tick",
+                    "wood tick paralysis",
+                    "dog tick paralysis"
+                ],
+                categories: [.animalEncounters, .environmentalHazards],
+                summary: "Neurotoxin in tick saliva causes ascending paralysis after 5-9 days of attachment. FULLY REVERSIBLE with prompt tick removal. Affects dogs; NOT reported in cats in North America. ~95% survival with treatment.",
+                description: """
+Tick paralysis is a potentially life-threatening but FULLY REVERSIBLE condition caused by neurotoxins secreted in tick saliva during feeding. In North America, tick paralysis affects dogs but has NOT been reported in domestic cats.
+
+**THE KEY MESSAGE:**
+Tick paralysis is FULLY REVERSIBLE with prompt tick removal. Once the tick is removed, most dogs begin recovering within hours and return to normal within 24-72 hours. However, if untreated, it can be fatal due to respiratory muscle paralysis.
+
+**RESPONSIBLE TICK SPECIES (North America):**
+- Dermacentor variabilis (American dog tick): Eastern 2/3 of US, Pacific Northwest
+- Dermacentor andersoni (Rocky Mountain wood tick): Western US
+- Occasionally: Lone Star tick, Gulf Coast tick, Ixodes species
+
+**HOW IT DEVELOPS:**
+- Requires 5-9 days of tick attachment and feeding
+- Neurotoxin not present in early feeding stages
+- A SINGLE tick can cause paralysis
+- Ticks near head, neck, or spine more likely to cause symptoms
+- Toxin blocks nerve-to-muscle signal transmission
+
+**SYMPTOMS PROGRESSION:**
+Begins in hind legs and progresses forward over 24-48 hours:
+1. Weakness/wobbliness in back legs
+2. Difficulty rising or walking
+3. Change in bark (weaker voice)
+4. Inability to stand
+5. Decreased reflexes
+6. Labored breathing
+7. Complete paralysis (severe cases)
+
+IMPORTANT: Dogs retain normal pain sensation and remain mentally alert.
+
+**SEASONALITY:**
+Most common spring through early summer when adult ticks are active. Peak in some regions (e.g., California): 45-day period May-June.
+
+**CATS IN NORTH AMERICA:**
+Tick paralysis has NOT been reported in domestic cats in North America. While cats can get tick-borne diseases, they do not develop tick paralysis from North American tick species. (Australian Ixodes holocyclus DOES cause tick paralysis in cats but is not present in North America.)
+
+**PROGNOSIS:**
+Approximately 95% of affected dogs survive with prompt treatment. Fatalities occur when ticks are not discovered or treatment is delayed.
+""",
+                symptoms: [
+                    "EARLY SIGNS (hind legs first):",
+                    "Weakness or wobbliness in back legs",
+                    "Difficulty rising",
+                    "Difficulty walking",
+                    "Change in bark (weaker or different)",
+                    "",
+                    "PROGRESSIVE SIGNS:",
+                    "Weakness spreading to front legs",
+                    "Inability to stand",
+                    "Decreased muscle tone",
+                    "Decreased reflexes",
+                    "",
+                    "SEVERE SIGNS:",
+                    "Labored breathing",
+                    "Complete paralysis",
+                    "Respiratory failure (if untreated)",
+                    "",
+                    "NOTE: Mental alertness and pain sensation remain NORMAL"
+                ],
+                onsetTime: OnsetTime(
+                    early: "5-9 days after tick attachment (paralysis begins)",
+                    delayed: "24-72 hours for recovery AFTER tick removal"
+                ),
+                speciesRisks: [
+                    SpeciesRisk(
+                        species: .dog,
+                        severity: .moderate,
+                        notes: "Dogs are susceptible to tick paralysis from Dermacentor species. Ascending paralysis develops after 5-9 days of tick attachment. FULLY REVERSIBLE—most dogs recover within 24-72 hours of tick removal. ~95% survival rate. Long-haired dogs at higher risk because ticks harder to detect."
+                    ),
+                    SpeciesRisk(
+                        species: .cat,
+                        severity: .low,
+                        notes: "Tick paralysis has NOT been reported in domestic cats in North America. Cats can still get tick-borne diseases but do not develop paralysis from North American tick species. (Different situation in Australia with Ixodes holocyclus.)"
+                    )
+                ],
+                preventionTips: [
+                    "Use veterinarian-recommended tick preventatives year-round",
+                    "Check dog thoroughly for ticks after outdoor activities",
+                    "Focus on head, neck, ears, and thin-fur areas (70% attach to head/neck)",
+                    "Keep fur trimmed in long-haired breeds to aid tick detection",
+                    "Remove attached ticks promptly—paralysis requires 5-9 days attachment",
+                    "Peak season: spring through early summer",
+                    "Wooded and grassy areas are highest risk"
+                ],
+                sources: [
+                    "Veterinary Information Network (VIN)",
+                    "Merck Veterinary Manual",
+                    "ASPCA Animal Poison Control Center",
+                    "Veterinary Partner (VIN)",
+                    "PetMD"
+                ],
+                relatedEntries: ["00112233-4455-6677-8899-aabbccddef08"]
             )
         ]
     }
