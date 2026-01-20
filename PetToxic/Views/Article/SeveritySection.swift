@@ -18,6 +18,7 @@ struct SeveritySection: View {
 
                         Text(risk.species.displayName)
                             .font(.body)
+                            .fontWeight(.semibold)
 
                         Spacer()
 
@@ -29,8 +30,8 @@ struct SeveritySection: View {
 
                     if let notes = risk.notes, !notes.isEmpty {
                         Text(notes)
-                            .font(.caption)
-                            .foregroundStyle(.secondary)
+                            .font(.callout)
+                            .foregroundStyle(.primary)
                             .padding(.horizontal)
                     }
                 }
