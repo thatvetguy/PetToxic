@@ -2266,6 +2266,412 @@ class DatabaseService {
                 relatedEntries: nil
             ),
 
+            // MARK: - Methamphetamine & Street Amphetamines
+            ToxicItem(
+                id: UUID(uuidString: "ff001122-3344-5566-7788-99aabbccdd01")!,
+                name: "Methamphetamine & Street Amphetamines",
+                alternateNames: [
+                    // Primary terms
+                    "methamphetamine",
+                    "meth",
+                    "crystal meth",
+                    "crystal",
+                    "ice",
+                    "glass",
+                    "crank",
+                    "speed",
+                    "chalk",
+                    "tina",
+                    "tweak",
+
+                    // Street amphetamines
+                    "amphetamine",
+                    "amphetamines",
+                    "street amphetamines",
+                    "bennies",
+                    "uppers",
+                    "pep pills",
+                    "wake-ups",
+                    "black beauties",
+
+                    // Common search queries
+                    "dog ate meth",
+                    "cat ate meth",
+                    "dog ate crystal meth",
+                    "dog got into meth",
+                    "pet ate speed",
+                    "dog ate drugs",
+                    "cat ate drugs",
+                    "dog exposed to meth",
+                    "dog sniffed meth"
+                ],
+                categories: [.recreationalSubstances],
+                imageAsset: "methamphetamine",
+                description: "Methamphetamine (\"meth,\" \"crystal,\" \"ice,\" \"speed\") is an illicit stimulant drug that causes severe central nervous system and cardiovascular effects in pets. Street amphetamines are also included in this category. Exposures are becoming more common — a 2024 study found amphetamine-type stimulants were involved in 75% of confirmed drug abuse cases in pets. YOUR PET'S HEALTH IS THE PRIORITY. Veterinarians are focused on treating your pet, not on the legal status of the substance. Being honest about what your pet was exposed to helps your veterinarian provide the best possible care. Veterinary professionals are NOT required to report illegal drug exposures to law enforcement. ADULTERANTS: Street drugs are often \"cut\" with other substances including caffeine, ephedrine, phenylpropanolamine, or other drugs that can add additional toxicity. RAPID ONSET: Clinical signs typically develop within 1-2 hours and can persist for 24-48 hours due to methamphetamine's long half-life. HYPERTHERMIA IS LIFE-THREATENING: Dangerously elevated body temperature from muscle activity and inability to dissipate heat can cause organ damage, DIC (disseminated intravascular coagulation), and death.",
+                toxicityInfo: "Methamphetamine and amphetamines stimulate both the peripheral and central nervous systems by releasing catecholamines (norepinephrine, dopamine) and serotonin from nerve endings. They also block the reuptake and breakdown of these neurotransmitters, creating a hyperadrenergic state. CENTRAL NERVOUS SYSTEM EFFECTS: Hyperactivity, agitation, aggression, pacing, circling, head bobbing, tremors, muscle rigidity, dilated pupils (mydriasis), and seizures. CARDIOVASCULAR EFFECTS: Tachycardia (rapid heart rate), hypertension (high blood pressure), and cardiac arrhythmias including potentially fatal ventricular fibrillation. The QT interval may be prolonged on ECG. THERMOREGULATION: Methamphetamine causes dose-dependent hyperthermia through increased heat production from muscle activity AND decreased heat dissipation from vasoconstriction. Life-threatening hyperthermia can lead to rhabdomyolysis, metabolic acidosis, organ damage, and DIC. SEROTONIN SYNDROME: Because amphetamines cause serotonin release, serotonin syndrome can develop — characterized by agitation, muscle rigidity, disorientation, and hyperthermia. DURATION: Effects typically last 24-48 hours, significantly longer than cocaine due to methamphetamine's longer half-life (8-30 hours depending on urinary pH).",
+                onsetTime: OnsetTime(
+                    early: "Clinical signs typically develop within 1-2 hours after ingestion. Signs may appear even faster with inhalational or mucous membrane exposure.",
+                    delayed: "Effects can persist for 24-48 hours due to the long half-life of methamphetamine. In severe cases, organ damage (particularly to the kidneys and heart) may become apparent days after exposure. Complete recovery typically occurs within 72 hours with aggressive treatment."
+                ),
+                symptoms: [
+                    // CNS - Excitation
+                    "Hyperactivity",
+                    "Extreme agitation or restlessness",
+                    "Aggression",
+                    "Pacing or circling",
+                    "Head bobbing",
+                    "Tremors",
+                    "Muscle rigidity",
+                    "Seizures",
+                    "Mydriasis (dilated pupils)",
+                    "Disorientation",
+
+                    // Cardiovascular
+                    "Tachycardia (rapid heart rate)",
+                    "Hypertension (high blood pressure)",
+                    "Cardiac arrhythmias",
+
+                    // Thermoregulation
+                    "Hyperthermia (elevated body temperature)",
+                    "Panting",
+
+                    // GI Signs
+                    "Vomiting",
+                    "Diarrhea (may be bloody)",
+                    "Drooling (hypersalivation)",
+
+                    // Other
+                    "Ataxia (incoordination)",
+                    "Collapse",
+                    "Coma (severe cases)",
+                    "Death (if untreated)"
+                ],
+                speciesRisks: [
+                    SpeciesRisk(
+                        species: .dog,
+                        severity: .severe,
+                        notes: "Dogs are commonly exposed to methamphetamine, accounting for the majority of cases reported to poison control centers. Clinical signs include severe hyperactivity, pacing, circling, tremors, seizures, and life-threatening hyperthermia. Effects can persist for 24-48 hours. With aggressive treatment, most dogs survive, but fatalities occur, especially when treatment is delayed. DIC (disseminated intravascular coagulation) has been reported in severe cases."
+                    ),
+                    SpeciesRisk(
+                        species: .cat,
+                        severity: .severe,
+                        notes: "Cats are less commonly exposed than dogs but are equally susceptible to severe toxicity. Cats may show hyperactivity OR may hide, stare, and appear withdrawn while still experiencing dangerous internal cardiovascular effects. Hyperthermia and seizures can be rapidly fatal."
+                    ),
+                    SpeciesRisk(
+                        species: .smallMammal,
+                        severity: .severe,
+                        notes: "Small mammals are extremely susceptible due to their small body size. Even minimal exposure can cause severe CNS stimulation, hyperthermia, and cardiovascular effects. Contact an exotic animal veterinarian immediately."
+                    ),
+                    SpeciesRisk(
+                        species: .bird,
+                        severity: .severe,
+                        notes: "Birds are highly sensitive to stimulants. Their high metabolic rate and limited ability to regulate body temperature make hyperthermia especially dangerous. Contact an avian veterinarian immediately."
+                    ),
+                    SpeciesRisk(
+                        species: .reptile,
+                        severity: .high,
+                        notes: "Limited data available. Stimulant effects expected. Temperature regulation in reptiles depends on environmental conditions, making drug-induced changes potentially more problematic. Contact an exotic animal veterinarian."
+                    )
+                ],
+                preventionTips: [
+                    "Keep all substances completely out of reach of pets in secure, locked containers",
+                    "Be aware that pets can be exposed by sniffing contaminated surfaces — clean up any residue thoroughly",
+                    "If your pet has been exposed, contact a veterinarian immediately — early treatment dramatically improves outcomes",
+                    "Be honest with your veterinarian about what your pet was exposed to — veterinarians are NOT required to report drug exposures and are focused solely on your pet's health",
+                    "Consider the safety of all household members, including pets, when making decisions about substance use",
+                    "If you or someone you know is struggling with substance use, resources are available — SAMHSA National Helpline: 1-800-662-4357"
+                ],
+                sources: [
+                    "Merck Veterinary Manual: Toxicities from Illicit and Abused Drugs — Amphetamines",
+                    "JAMA Network Open (2024): Cat and Dog Exposures to Cocaine or Methamphetamine — Pet Poison Helpline Data",
+                    "Frontiers in Veterinary Science (2024): Drug Exposures in Pets — California AHFS Laboratory System",
+                    "VETgirl Veterinary CE: Crystal Methamphetamine Toxicity in Dogs",
+                    "BMC Veterinary Research (2014): Methamphetamine Intoxication in a Dog — Case Report",
+                    "ASPCA Animal Poison Control Center: Managing Pets Exposed to Recreational Drugs",
+                    "Veterinary and Animal Science (2023): Intoxication of Dogs and Cats with Recreational Drugs",
+                    "Vet Times: Canine Amphetamine Toxicosis — Comprehensive Review"
+                ],
+                relatedEntries: [
+                    "11889900-aabb-ccdd-eeff-112233445566",
+                    "dd445566-7788-99aa-bbcc-ddeeff334455"
+                ]
+            ),
+
+            // MARK: - Cocaine
+            ToxicItem(
+                id: UUID(uuidString: "ff001122-3344-5566-7788-99aabbccdd02")!,
+                name: "Cocaine",
+                alternateNames: [
+                    // Primary terms
+                    "cocaine",
+                    "coke",
+                    "crack",
+                    "crack cocaine",
+                    "freebase",
+                    "rock",
+                    "blow",
+                    "snow",
+                    "powder",
+                    "white",
+                    "nose candy",
+                    "flake",
+
+                    // Street names
+                    "C",
+                    "cola",
+                    "dust",
+                    "gold dust",
+                    "stardust",
+                    "white girl",
+                    "white lady",
+                    "baseball",
+                    "speedball",
+                    "yayo",
+
+                    // Common search queries
+                    "dog ate cocaine",
+                    "cat ate cocaine",
+                    "dog sniffed cocaine",
+                    "dog exposed to cocaine",
+                    "dog ate coke",
+                    "cat ate crack",
+                    "dog got into cocaine",
+                    "pet ate cocaine"
+                ],
+                categories: [.recreationalSubstances],
+                imageAsset: "cocaine",
+                description: "Cocaine is a potent stimulant alkaloid derived from the coca plant that causes severe central nervous system and cardiovascular effects in pets. It is rapidly absorbed through mucous membranes (nose, mouth) and the GI tract. Exposures in pets are increasing — a 2024 JAMA Network Open study documented a 52% annual increase in cat exposures and 39% annual increase in dog exposures to cocaine from 2019-2023. YOUR PET'S HEALTH IS THE PRIORITY. Veterinarians are focused on treating your pet, not on the legal status of the substance. Being honest about what your pet was exposed to helps your veterinarian provide the best possible care. Veterinary professionals are NOT required to report illegal drug exposures to law enforcement. RAPID ONSET: Cocaine is absorbed very quickly. Clinical signs can develop within minutes of exposure, especially if inhaled or absorbed through mucous membranes. Effects typically last 1-3 hours (shorter than amphetamines). ADULTERANTS: Street cocaine is frequently \"cut\" with other substances including local anesthetics (lidocaine), caffeine, levamisole, and recently even fentanyl — all of which add additional toxicity risks. POLICE/WORKING DOGS: Dogs that work in drug detection are at particular risk during training exercises or drug busts.",
+                toxicityInfo: "Cocaine acts on the sympathetic nervous system by blocking the reuptake of dopamine, norepinephrine, and serotonin in the brain. This leads to accumulation of these neurotransmitters at nerve endings, causing intense stimulation. CENTRAL NERVOUS SYSTEM EFFECTS: Hyperactivity, agitation, nervousness, pacing, ataxia (incoordination), shaking, tremors, seizures, and mydriasis (dilated pupils). CNS depression and coma may follow the initial excitation phase. CARDIOVASCULAR EFFECTS: Tachycardia (rapid heart rate), severe hypertension (high blood pressure), and cardiac arrhythmias. Death may occur from cardiac arrest. THERMOREGULATION: Hyperthermia develops from increased muscle activity AND cocaine-induced vasoconstriction (which prevents heat dissipation). Life-threatening hyperthermia can cause organ damage and death. RESPIRATORY EFFECTS: Rapid breathing progressing to respiratory depression in severe cases. Death may occur from respiratory arrest. DURATION: Effects are typically shorter than amphetamines due to cocaine's shorter half-life (0.9-2.8 hours). However, severity can be extreme during the active phase.",
+                onsetTime: OnsetTime(
+                    early: "Clinical signs can develop within MINUTES of exposure, especially with inhalation or mucous membrane contact. Effects from oral ingestion typically appear within 30 minutes. If no clinical signs develop within 1 hour of oral ingestion, significant toxicity is less likely.",
+                    delayed: "Effects typically last 1-3 hours due to cocaine's short half-life, though severe cases may have prolonged effects. Unlike amphetamines, cocaine toxicity tends to resolve more quickly with treatment. Monitoring should continue until the pet has been stable for at least 8 hours."
+                ),
+                symptoms: [
+                    // CNS - Excitation (early)
+                    "Hyperactivity",
+                    "Extreme agitation",
+                    "Nervousness",
+                    "Shaking or trembling",
+                    "Pacing",
+                    "Ataxia (incoordination)",
+                    "Mydriasis (dilated pupils)",
+                    "Muscle twitches",
+                    "Seizures",
+                    "Aggression",
+
+                    // CNS - Depression (late/severe)
+                    "Depression (following excitation)",
+                    "Coma",
+
+                    // Cardiovascular
+                    "Tachycardia (rapid heart rate)",
+                    "Hypertension (high blood pressure)",
+                    "Cardiac arrhythmias",
+
+                    // Thermoregulation
+                    "Hyperthermia (elevated body temperature)",
+                    "Panting",
+
+                    // GI Signs
+                    "Vomiting",
+                    "Diarrhea",
+                    "Drooling (hypersalivation)",
+
+                    // Respiratory
+                    "Rapid breathing",
+                    "Respiratory depression (severe cases)",
+
+                    // Other
+                    "Circling",
+                    "Head bobbing",
+                    "Collapse",
+                    "Death (cardiac or respiratory arrest, hyperthermia)"
+                ],
+                speciesRisks: [
+                    SpeciesRisk(
+                        species: .dog,
+                        severity: .severe,
+                        notes: "Dogs are commonly exposed to cocaine, including working police dogs during drug operations. Dogs can be exposed by sniffing contaminated surfaces — cocaine is well-absorbed through nasal and oral mucous membranes. Clinical signs develop rapidly (within minutes to 30 minutes) and include severe hyperactivity, tremors, seizures, and hyperthermia. Without treatment, the likelihood of death is high. With aggressive veterinary care, most dogs can survive."
+                    ),
+                    SpeciesRisk(
+                        species: .cat,
+                        severity: .severe,
+                        notes: "Cats exposed to cocaine show similar severe stimulatory signs. A 2024 study found 65% of cat exposures to illicit stimulants involved cocaine (rather than methamphetamine). Cats may show severe agitation, tremors, seizures, and hyperthermia. Rapid veterinary intervention is essential."
+                    ),
+                    SpeciesRisk(
+                        species: .smallMammal,
+                        severity: .severe,
+                        notes: "Small mammals are extremely susceptible due to their small body size. Even minimal exposure can cause severe toxicity. Contact an exotic animal veterinarian immediately."
+                    ),
+                    SpeciesRisk(
+                        species: .bird,
+                        severity: .severe,
+                        notes: "Birds are highly sensitive to stimulants. Rapid heart rate and hyperthermia are especially dangerous in avian species. Contact an avian veterinarian immediately."
+                    ),
+                    SpeciesRisk(
+                        species: .reptile,
+                        severity: .high,
+                        notes: "Limited data available. Stimulant and cardiovascular effects expected. Contact an exotic animal veterinarian for guidance."
+                    )
+                ],
+                preventionTips: [
+                    "Keep all substances completely out of reach of pets",
+                    "Be aware that pets can be exposed by sniffing contaminated surfaces — cocaine is rapidly absorbed through nasal and oral mucous membranes",
+                    "Clean any contaminated surfaces thoroughly to prevent accidental pet exposure",
+                    "If your pet has been exposed, seek veterinary care IMMEDIATELY — cocaine toxicity develops rapidly and can be fatal",
+                    "Be honest with your veterinarian about what your pet was exposed to — veterinarians are NOT required to report drug exposures and are focused solely on your pet's health",
+                    "If you work with drug-detection dogs, be aware of exposure risks during training and operations",
+                    "If you or someone you know is struggling with substance use, resources are available — SAMHSA National Helpline: 1-800-662-4357"
+                ],
+                sources: [
+                    "Merck Veterinary Manual: Toxicities from Illicit and Abused Drugs — Cocaine",
+                    "JAMA Network Open (2024): Cat and Dog Exposures to Cocaine or Methamphetamine — Significant Annual Increases Documented",
+                    "VETgirl Veterinary CE: How to Treat Cocaine Toxicity in Dogs",
+                    "Pet Poison Helpline: Cocaine Toxicity in Dogs",
+                    "ASPCA Animal Poison Control Center: Managing Pets Exposed to Recreational Drugs",
+                    "Veterinary and Animal Science (2023): Intoxication of Dogs and Cats with Recreational Drugs",
+                    "American College of Veterinary Pharmacists: Illicit Drugs Toxicity"
+                ],
+                relatedEntries: [
+                    "ff001122-3344-5566-7788-99aabbccdd01",
+                    "11889900-aabb-ccdd-eeff-112233445566"
+                ]
+            ),
+
+            // MARK: - MDMA (Ecstasy, Molly)
+            ToxicItem(
+                id: UUID(uuidString: "ff001122-3344-5566-7788-99aabbccdd03")!,
+                name: "MDMA (Ecstasy, Molly)",
+                alternateNames: [
+                    // Primary terms
+                    "MDMA",
+                    "ecstasy",
+                    "molly",
+                    "XTC",
+                    "X",
+                    "E",
+                    "Adam",
+                    "roll",
+                    "rolling",
+                    "love drug",
+                    "MDA",
+                    "methylenedioxymethamphetamine",
+
+                    // Street terms
+                    "beans",
+                    "disco biscuits",
+                    "happy pill",
+                    "hug drug",
+                    "skittles",
+                    "smarties",
+                    "thizz",
+
+                    // Common search queries
+                    "dog ate ecstasy",
+                    "dog ate molly",
+                    "cat ate ecstasy",
+                    "dog ate MDMA",
+                    "pet ate ecstasy pill",
+                    "dog ate E",
+                    "dog ate X"
+                ],
+                categories: [.recreationalSubstances],
+                imageAsset: "mdma",
+                description: "MDMA (3,4-methylenedioxymethamphetamine), commonly known as ecstasy or molly, is a synthetic psychoactive drug with both stimulant (amphetamine-like) and hallucinogenic properties. It causes excessive release of serotonin and can trigger life-threatening serotonin syndrome in pets. YOUR PET'S HEALTH IS THE PRIORITY. Veterinarians are focused on treating your pet, not on the legal status of the substance. Being honest about what your pet was exposed to helps your veterinarian provide the best possible care. Veterinary professionals are NOT required to report illegal drug exposures to law enforcement. SEROTONIN SYNDROME: MDMA causes excessive serotonin release. This can trigger serotonin syndrome — a potentially life-threatening condition characterized by agitation, muscle rigidity, hyperthermia, and altered mental status. CAFFEINE ADULTERANT: Street ecstasy tablets commonly contain caffeine in addition to MDMA, which adds additional stimulant toxicity. Dogs and cats are more sensitive to caffeine than humans. PROLONGED EFFECTS: Effects can last up to 72 hours — significantly longer than in humans — because dogs cannot metabolize the drug as efficiently. CATS MAY HIDE: Unlike dogs that typically show obvious hyperactivity, cats exposed to MDMA may hide, stare, and appear extremely withdrawn while still experiencing dangerous internal effects.",
+                toxicityInfo: "MDMA primarily causes excessive release of serotonin from presynaptic neurons. It also binds to serotonin transporters, blocking serotonin reuptake and leading to accumulation at synapses. MDMA also affects dopamine and norepinephrine. SEROTONIN SYNDROME: The hallmark toxicity of MDMA is serotonin syndrome. Signs progress from mild (dilated pupils, shivering, mild tachycardia) to moderate (agitation, disorientation, muscle rigidity, hyperthermia) to severe (delirium, severe hyperthermia, seizures, cardiovascular collapse). Serotonin syndrome can be fatal. SYMPATHOMIMETIC EFFECTS: Like other amphetamines, MDMA causes CNS excitation, tachycardia, hypertension, and hyperthermia through catecholamine release. HALLUCINOGENIC EFFECTS: Pets may show signs suggestive of hallucinations including vocalization, disorientation, and responses to stimuli that aren't present. SPECIES DIFFERENCES: Dogs typically show hyperactivity, pacing, head bobbing, and tremors. Cats may paradoxically hide, stare, and be extremely withdrawn — but internal cardiovascular effects still occur. DURATION: Effects can persist for up to 72 hours because dogs metabolize MDMA much more slowly than humans (human half-life is 7-8 hours).",
+                onsetTime: OnsetTime(
+                    early: "Clinical signs typically develop within 30 minutes to 2 hours after ingestion. Signs may include hyperactivity, agitation, dilated pupils, and rapid heart rate.",
+                    delayed: "Effects can persist for up to 72 hours due to slow metabolism in dogs. Serotonin syndrome signs (muscle rigidity, hyperthermia, altered mental status) may develop or worsen over several hours. Pets should be monitored until they have been stable without medical intervention for at least 8 hours."
+                ),
+                symptoms: [
+                    // Sympathomimetic effects
+                    "Hyperactivity",
+                    "Agitation",
+                    "Pacing",
+                    "Mydriasis (dilated pupils)",
+                    "Tachycardia (rapid heart rate)",
+                    "Hypertension (high blood pressure)",
+                    "Hyperthermia (elevated body temperature)",
+                    "Tremors",
+                    "Seizures",
+
+                    // Serotonin syndrome signs
+                    "Muscle rigidity",
+                    "Disorientation",
+                    "Altered mental status",
+                    "Shivering",
+                    "Nervousness",
+
+                    // Behavioral/hallucinogenic
+                    "Vocalization",
+                    "Circling",
+                    "Head bobbing",
+                    "Hyperesthesia (exaggerated response to touch)",
+                    "Hiding or withdrawal (especially cats)",
+                    "Staring (especially cats)",
+
+                    // GI Signs
+                    "Vomiting",
+                    "Diarrhea",
+                    "Drooling",
+
+                    // Severe/late signs
+                    "Delirium",
+                    "Collapse",
+                    "Death (if untreated)"
+                ],
+                speciesRisks: [
+                    SpeciesRisk(
+                        species: .dog,
+                        severity: .severe,
+                        notes: "Dogs typically show hyperactivity, circling, head bobbing, tremors, dilated pupils, and rapid breathing. Serotonin syndrome can develop, causing muscle rigidity, severe hyperthermia, and seizures. Effects can last up to 72 hours because dogs metabolize MDMA slowly. When treatment is delayed, death can occur from uncontrolled seizures, hyperthermia, kidney failure, or cardiac arrhythmias. With prompt aggressive treatment, most dogs recover."
+                    ),
+                    SpeciesRisk(
+                        species: .cat,
+                        severity: .severe,
+                        notes: "Cats exposed to MDMA may show hyperactivity OR may paradoxically hide, stare, and appear extremely withdrawn. Despite appearing outwardly calm, dangerous internal effects (elevated heart rate, blood pressure, body temperature) still occur. Cats are also more sensitive to the caffeine commonly found in ecstasy tablets. Seek immediate veterinary care regardless of outward appearance."
+                    ),
+                    SpeciesRisk(
+                        species: .smallMammal,
+                        severity: .severe,
+                        notes: "Small mammals are extremely susceptible due to their small body size and high metabolic rate. Serotonergic effects and hyperthermia are especially dangerous. Contact an exotic animal veterinarian immediately."
+                    ),
+                    SpeciesRisk(
+                        species: .bird,
+                        severity: .severe,
+                        notes: "Birds are highly sensitive to stimulants and serotonergic drugs. Hyperthermia and cardiovascular effects are especially dangerous. Contact an avian veterinarian immediately."
+                    ),
+                    SpeciesRisk(
+                        species: .reptile,
+                        severity: .high,
+                        notes: "Limited data available. Stimulant and serotonergic effects expected. Contact an exotic animal veterinarian for guidance."
+                    )
+                ],
+                preventionTips: [
+                    "Keep all substances completely out of reach of pets",
+                    "Be aware that ecstasy tablets are often colorful and may look like candy — pets may be attracted to them",
+                    "If your pet has been exposed, seek veterinary care immediately — serotonin syndrome can develop rapidly and be life-threatening",
+                    "Be honest with your veterinarian about what your pet was exposed to — veterinarians are NOT required to report drug exposures and are focused solely on your pet's health",
+                    "Inform your veterinarian if the ecstasy may have contained other substances (it's often adulterated with caffeine or other drugs)",
+                    "If you or someone you know is struggling with substance use, resources are available — SAMHSA National Helpline: 1-800-662-4357"
+                ],
+                sources: [
+                    "Merck Veterinary Manual: Toxicities from Illicit and Abused Drugs — Ecstasy (MDMA)",
+                    "ASPCA Animal Poison Control Center: Ecstasy Toxicosis in Animals",
+                    "Veterinary Partner (VIN): Serotonin Syndrome in Dogs and Cats",
+                    "PetPlace: Ecstasy (MDMA) Toxicity in Dogs",
+                    "Veterinary and Animal Science (2023): Intoxication of Dogs and Cats with Recreational Drugs",
+                    "PubMed (1987): Toxicity of Methylenedioxymethamphetamine (MDMA) in the Dog and Rat",
+                    "Veterinary Practice News: Preventing Serotonin Syndrome — Factors You Need to Know",
+                    "Vet Times: Canine Amphetamine Toxicosis — MDMA/Ecstasy Section"
+                ],
+                relatedEntries: [
+                    "dd445566-7788-99aa-bbcc-ddeeff334455",
+                    "ff001122-3344-5566-7788-99aabbccdd01",
+                    "11889900-aabb-ccdd-eeff-112233445566"
+                ]
+            ),
+
             // MARK: - Monkshood
             ToxicItem(
                 id: UUID(uuidString: "7e3f5e24-a4ef-4356-9445-16b8f37d6ab4")!,
