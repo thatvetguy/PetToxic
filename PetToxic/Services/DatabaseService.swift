@@ -9957,6 +9957,122 @@ class DatabaseService {
                     "PetMD — How to Identify and Treat Ant Bites in Dogs"
                 ],
                 relatedEntries: nil
+            ),
+
+            // MARK: - Pit Viper Envenomation (Venomous Snake Bites)
+            ToxicItem(
+                id: UUID(uuidString: "00112233-4455-6677-8899-aabbccddef07")!,
+                name: "Pit Viper Envenomation (Venomous Snake Bites)",
+                alternateNames: [
+                    "snake bite",
+                    "snakebite",
+                    "rattlesnake bite",
+                    "rattlesnake envenomation",
+                    "copperhead bite",
+                    "copperhead envenomation",
+                    "water moccasin bite",
+                    "cottonmouth bite",
+                    "cottonmouth envenomation",
+                    "pit viper bite",
+                    "crotalid envenomation",
+                    "crotaline envenomation",
+                    "viper bite",
+                    "viper envenomation",
+                    "venomous snake bite",
+                    "massasauga bite",
+                    "diamondback bite",
+                    "timber rattlesnake bite",
+                    "Mojave rattlesnake bite",
+                    "sidewinder bite",
+                    "dog bitten by snake",
+                    "cat bitten by snake",
+                    "dog snake bite",
+                    "cat snake bite"
+                ],
+                categories: [.animalEncounters, .environmentalHazards],
+                imageAsset: "pit_viper",
+                description: "Pit viper envenomation occurs when a pet is bitten by a venomous snake in the Crotalinae subfamily, which includes rattlesnakes, copperheads, and water moccasins (cottonmouths). These snakes account for approximately 99% of venomous snake bites in the United States, with an estimated 150,000 or more companion animals bitten annually. Pit vipers are found throughout most of the continental US — only Maine, Alaska, and Hawaii lack native venomous snakes. Approximately 90% of bites occur between April and October. Pit viper venom contains enzymes and toxins that destroy tissue, impair blood clotting, and can cause life-threatening systemic effects. THIS IS A MEDICAL EMERGENCY REQUIRING IMMEDIATE VETERINARY CARE. ANTIVENOM is the only treatment that directly neutralizes snake venom and is most effective when administered within the first 4-6 hours after a bite. DO: Get to an emergency veterinarian IMMEDIATELY — call ahead if possible so they can prepare antivenom. Keep your pet as calm and still as possible during transport (activity spreads venom faster). Carry your pet if possible. Remove collars if the bite is on the neck/head and swelling rapidly. DO NOT: Wait to see if symptoms develop. Attempt to capture, kill, or identify the snake. Apply ice, heat, tourniquets, or suction devices. Cut the wound or try to suck out venom. Even if you're unsure whether the snake was venomous, treat all snake bites as emergencies.",
+                toxicityInfo: "Pit viper venom is a complex mixture of over 50 enzymes and toxins including myotoxins (muscle damage), cytotoxins (cell death), hemorrhagic toxins (bleeding), and in some species like the Mojave rattlesnake, potent neurotoxins. Hyaluronidase breaks down connective tissue, allowing venom to spread rapidly. Phospholipase A disrupts cell membranes and releases inflammatory mediators. The venom destroys blood vessel walls, causes blood to pool abnormally (in splanchnic vessels in dogs, pulmonary vessels in cats), and impairs the blood's ability to clot. Disseminated intravascular coagulopathy (DIC), hemolysis, acute kidney failure, and cardiovascular collapse can occur. DRY BITES: Bites without venom injection occur in approximately 20-25% of pit viper bites, but this CANNOT be determined at the time of the bite — all snake bites must be treated as emergencies. SPECIES TOXICITY: Rattlesnakes are most dangerous (especially Mojave with neurotoxin), then water moccasins, then copperheads. Venom toxicity also varies by snake size and whether the snake recently fed.",
+                onsetTime: OnsetTime(
+                    early: "Local signs (swelling, pain, bleeding at bite site) typically appear within minutes to 2 hours. Systemic signs can develop rapidly. Without treatment, severely envenomated animals may die within the first 2 hours.",
+                    delayed: "Symptoms can be delayed up to 6-8 hours in some cases. If an animal appears normal 24 hours after a suspected bite, death from direct venom effects is unlikely — but tissue necrosis and infection can develop over the following days to weeks."
+                ),
+                symptoms: [
+                    "Rapid swelling at or near the bite site",
+                    "Visible puncture wounds (may be obscured by swelling or fur)",
+                    "Severe pain at bite site",
+                    "Bleeding or bruising around the bite",
+                    "Redness (erythema) at bite site",
+                    "Tissue death (necrosis) developing around the bite",
+                    "Lameness (if bitten on a limb)",
+                    "Enlarged lymph nodes near the bite",
+                    "Widespread bruising (ecchymoses)",
+                    "Pinpoint bleeding spots (petechiae)",
+                    "Bleeding from gums, nose, or in urine/stool",
+                    "Vomiting",
+                    "Diarrhea (may be bloody)",
+                    "Drooling or hypersalivation",
+                    "Pale or white gums",
+                    "Rapid heart rate or abnormal heart rhythm",
+                    "Difficulty breathing or rapid breathing",
+                    "Weakness or collapse",
+                    "Muscle tremors or twitching",
+                    "Incoordination (ataxia)",
+                    "Dilated pupils",
+                    "Decreased responsiveness",
+                    "Paralysis (with neurotoxic species like Mojave rattlesnake)",
+                    "Seizures",
+                    "Shock",
+                    "Sudden death"
+                ],
+                speciesRisks: [
+                    SpeciesRisk(
+                        species: .dog,
+                        severity: .severe,
+                        notes: "Dogs are the most commonly affected domestic animals and have higher bite rates than any other pet. Small dogs are at significantly higher risk due to the larger venom-to-body-weight ratio. Bites to the tongue, chest, or abdomen carry higher risk than bites to limbs or face. Dogs bitten by rattlesnakes with neurotoxic venom (such as Mojave rattlesnakes) may develop respiratory paralysis. SEEK EMERGENCY VETERINARY CARE IMMEDIATELY — antivenom is most effective when given within the first 4-6 hours."
+                    ),
+                    SpeciesRisk(
+                        species: .cat,
+                        severity: .severe,
+                        notes: "Cats can be severely affected by pit viper envenomation. While some sources historically suggested cats were more resistant to snake venom, recent studies show significant risk. Cats may hide symptoms more effectively than dogs, so monitor closely after any potential exposure. SEEK EMERGENCY VETERINARY CARE IMMEDIATELY."
+                    ),
+                    SpeciesRisk(
+                        species: .bird,
+                        severity: .severe,
+                        notes: "Birds are highly vulnerable to snake envenomation due to their small body size. Seek immediate avian veterinary care if exposure is suspected."
+                    ),
+                    SpeciesRisk(
+                        species: .smallMammal,
+                        severity: .severe,
+                        notes: "Small mammals (rabbits, ferrets, guinea pigs) are at extreme risk due to the high venom-to-body-weight ratio. Even a small amount of venom can be rapidly fatal. Seek emergency care immediately."
+                    ),
+                    SpeciesRisk(
+                        species: .reptile,
+                        severity: .moderate,
+                        notes: "Some reptiles have varying degrees of resistance to snake venom, but pet reptiles can still be seriously affected. Consult an exotic animal veterinarian if exposure occurs."
+                    )
+                ],
+                preventionTips: [
+                    "Learn to identify venomous snakes in your area — pit vipers have triangular heads, vertical slit pupils, heat-sensing pits between the eyes and nostrils, and (in rattlesnakes) a rattle on the tail",
+                    "Keep dogs on leash when hiking, especially in rocky areas, tall grass, woodpiles, and near water sources where snakes may be present",
+                    "Avoid walking pets at dawn, dusk, or night during warm months when snakes are most active",
+                    "Stay on cleared trails and avoid letting pets investigate holes, logs, rock crevices, or dense brush",
+                    "Keep your yard clear of debris, woodpiles, and tall grass that provide snake habitat",
+                    "Rattlesnakes are found throughout the US; copperheads range from New England to Texas; water moccasins are found in the Southeast from Virginia to Texas",
+                    "Arizona has the highest concentration of rattlesnake species (13 different species) in the US",
+                    "A rattlesnake vaccine (Crotalus Atrox Toxoid) is available for dogs — discuss with your veterinarian whether it is appropriate; NOTE: the vaccine does NOT eliminate the need for emergency veterinary care if a bite occurs",
+                    "Coral snakes (red-yellow-black banded) are found in the Southeast and Southwest — remember 'red touches yellow, kills a fellow' to distinguish from harmless look-alikes",
+                    "If you encounter a snake, back away slowly — do not attempt to kill or capture it"
+                ],
+                sources: [
+                    "Veterinary Information Network (VIN) — Viperid Envenomation",
+                    "Merck Veterinary Manual — Snakebite",
+                    "ASPCA Professional — Treating Snake Bites in Pets",
+                    "VCA Animal Hospitals — Snakebite Envenomization",
+                    "Today's Veterinary Practice — Pit Viper Envenomation in a Dog (2022)",
+                    "PetMD — Pit Viper Bite Poisoning in Dogs"
+                ],
+                relatedEntries: ["00112233-4455-6677-8899-aabbccddef05"]
             )
         ]
     }
