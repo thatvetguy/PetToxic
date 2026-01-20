@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		047D61DFD0831C22C171B07C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4892A0DA69F9D82CF1D8373B /* Assets.xcassets */; };
+		A1B2C3D4E5F6789012345678 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B2C3D4E5F67890123456789A /* LaunchScreen.storyboard */; };
 		0A35A2B438F7FE2009ABCC3C /* EmptyStateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24B2882F5F5387A02F14DC1B /* EmptyStateView.swift */; };
 		0ED8DF5F0BC3B56D614CF741 /* SpeciesFilterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81DA312D440067CFD3E192A8 /* SpeciesFilterView.swift */; };
 		17B80370F698B2819590C349 /* SavedViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CBB1717EB5134FC9FB2784A /* SavedViewModel.swift */; };
@@ -66,6 +67,7 @@
 		0B85A0BAA5B698970D8F9ADA /* EmergencyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmergencyView.swift; sourceTree = "<group>"; };
 		1CC831E76E0F0F17894ADA65 /* PetToxicUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetToxicUITests.swift; sourceTree = "<group>"; };
 		1E1A648E35297523A4222EE2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		B2C3D4E5F67890123456789A /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		207482A283C5391FDFEFAFC1 /* PoisonControlButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoisonControlButton.swift; sourceTree = "<group>"; };
 		237521FB4875580645396715 /* BookmarkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarkService.swift; sourceTree = "<group>"; };
 		24B2882F5F5387A02F14DC1B /* EmptyStateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyStateView.swift; sourceTree = "<group>"; };
@@ -111,6 +113,7 @@
 			children = (
 				4892A0DA69F9D82CF1D8373B /* Assets.xcassets */,
 				1E1A648E35297523A4222EE2 /* Info.plist */,
+				B2C3D4E5F67890123456789A /* LaunchScreen.storyboard */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -397,6 +400,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				047D61DFD0831C22C171B07C /* Assets.xcassets in Resources */,
+				A1B2C3D4E5F6789012345678 /* LaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
