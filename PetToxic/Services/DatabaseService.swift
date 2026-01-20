@@ -7750,6 +7750,382 @@ class DatabaseService {
                     "Berger D: Canine Alopecia Secondary to Human Topical Hormone Replacement Therapy. JAAHA. 2015"
                 ],
                 relatedEntries: nil
+            ),
+
+            // MARK: - Alpha Lipoic Acid (ALA)
+            ToxicItem(
+                id: UUID(uuidString: "88ff6677-99aa-bbcc-ddee-ff0011223344")!,
+                name: "Alpha Lipoic Acid (ALA)",
+                alternateNames: [
+                    // Chemical/generic names
+                    "alpha lipoic acid",
+                    "lipoic acid",
+                    "ALA",
+                    "thioctic acid",
+                    "alpha-lipoic acid",
+                    "R-lipoic acid",
+                    "R-ALA",
+
+                    // Brand names and product names
+                    "Thioctaid",
+                    "Thioctan",
+                    "Lipoicin",
+                    "Biletan",
+                    "acetate replacing factor",
+
+                    // Supplement descriptions
+                    "antioxidant supplement",
+                    "diabetes supplement",
+                    "weight loss supplement",
+                    "nerve support supplement",
+
+                    // Common search terms
+                    "cat ate supplement",
+                    "dog ate ALA",
+                    "cat ate alpha lipoic acid",
+                    "pet ate vitamin",
+                    "dog ate antioxidant"
+                ],
+                categories: [.medications],
+                imageAsset: "alpha_lipoic_acid",
+                description: "Alpha lipoic acid (ALA) is an over-the-counter antioxidant supplement used in humans for diabetes management, weight loss, nerve support, and other conditions. It is found naturally in foods like yeast, liver, broccoli, spinach, potatoes, and meats, but is also sold as concentrated supplements in 100-300 mg capsules. CATS ARE EXTREMELY SENSITIVE: Cats are approximately 10 times more susceptible to ALA toxicity than dogs, humans, or rats. Even relatively small amounts can cause life-threatening effects in cats. In one published case series of 4 cats with known ALA ingestions, all developed clinical signs and 2 died. RAPID ONSET: Signs can develop within 30 minutes of ingestion — do not wait to seek veterinary care.",
+                toxicityInfo: "Alpha lipoic acid is a potent antioxidant that acts synergistically with insulin in the body. This interaction with glucose metabolism is why HYPOGLYCEMIA (dangerously low blood sugar) is a primary concern in pets who ingest ALA supplements. Mechanism of Toxicity: ALA increases intracellular glutathione and regenerates other antioxidants (vitamins C and E, coenzyme Q10). In overdose, it binds to copper, manganese, and zinc, and its synergistic activity with insulin causes blood sugar to drop dangerously low. Organ Systems Affected: Metabolic (hypoglycemia causing weakness, tremors, seizures, collapse), Neurologic (ataxia, tremors, hypersalivation, seizures), Hepatic (hepatocellular damage, elevated liver enzymes), Renal (acute kidney injury has been reported). Why Cats Are So Sensitive: Research has demonstrated that cats develop hepatocellular toxicity at doses tolerated by other species. The exact mechanism is unclear, but cats appear to have limited ability to safely metabolize ALA. Absorption: ALA is rapidly absorbed with peak levels occurring 2-4 hours post-ingestion. It is metabolized by the liver and cleared by the kidneys.",
+                onsetTime: OnsetTime(
+                    early: "Signs can appear as quickly as 30 minutes after ingestion. Early signs include hypersalivation, vomiting, and behavioral changes. Neurologic signs (ataxia, tremors) may develop rapidly.",
+                    delayed: "Peak blood levels occur 2-4 hours post-ingestion. Hypoglycemia, hepatic effects, and potential kidney injury may develop or worsen over hours to days. Fatalities have occurred even with treatment."
+                ),
+                symptoms: [
+                    // GI signs (often first)
+                    "Vomiting",
+                    "Hypersalivation (drooling)",
+                    "Loss of appetite",
+                    "Nausea",
+
+                    // Hypoglycemia signs
+                    "Weakness",
+                    "Lethargy",
+                    "Tremors",
+                    "Wobbling or incoordination (ataxia)",
+                    "Glassy eyes",
+                    "Disorientation",
+                    "Collapse",
+                    "Seizures",
+
+                    // Neurologic signs
+                    "Muscle twitching",
+                    "Vocalization",
+                    "Agitation or restlessness",
+
+                    // Severe/systemic signs
+                    "Rapid breathing",
+                    "Increased thirst",
+                    "Hypoglycemia (low blood sugar)",
+                    "Coma",
+                    "Death"
+                ],
+                speciesRisks: [
+                    SpeciesRisk(
+                        species: .dog,
+                        severity: .high,
+                        notes: "Dogs can develop hypoglycemia, neurologic signs (ataxia, tremors, seizures), and potentially liver or kidney injury. Case reports include fatalities. Signs may appear within 30 minutes to several hours. Contact poison control or your veterinarian immediately for any ingestion of ALA supplements."
+                    ),
+                    SpeciesRisk(
+                        species: .cat,
+                        severity: .severe,
+                        notes: "CATS ARE 10 TIMES MORE SENSITIVE than dogs, humans, or rats. In published case series, 2 of 4 cats with known ALA ingestions died. Signs include vomiting, neurologic dysfunction, hepatotoxicity, and potentially acute kidney failure. ANY ingestion of ALA by a cat should be treated as a medical emergency. Do not wait for symptoms — seek veterinary care immediately."
+                    ),
+                    SpeciesRisk(
+                        species: .smallMammal,
+                        severity: .high,
+                        notes: "Limited data available. Given the small body size of rabbits, guinea pigs, and ferrets, assume significant sensitivity. Hypoglycemia can be rapidly fatal in small mammals. Contact an exotic animal veterinarian or poison control immediately."
+                    ),
+                    SpeciesRisk(
+                        species: .bird,
+                        severity: .high,
+                        notes: "No published data on avian ALA toxicity. Birds have high metabolic rates and are very sensitive to blood sugar changes. Assume significant risk and contact an avian veterinarian immediately."
+                    ),
+                    SpeciesRisk(
+                        species: .reptile,
+                        severity: .moderate,
+                        notes: "Very limited data available. Reptiles have different glucose metabolism but effects are unpredictable. Contact an exotic animal veterinarian for guidance."
+                    )
+                ],
+                preventionTips: [
+                    "Store ALL supplements — including 'natural' or 'vitamin' products — in secure locations completely out of pet reach",
+                    "Be especially careful with ALA if you have cats — they are extremely sensitive to this supplement",
+                    "Do not leave supplement bottles on counters, nightstands, or anywhere pets can reach them",
+                    "Be aware that some products marketed for joint health or diabetes may contain alpha lipoic acid",
+                    "Do NOT confuse alpha LIPOIC acid with alpha LINOLEIC acid (an omega-3 fatty acid) — they have very different safety profiles",
+                    "If a supplement bottle falls or spills, pick up all capsules immediately — assume pets will investigate",
+                    "Weekly pill organizers are easily chewed open by pets — store them securely",
+                    "If you suspect your pet has ingested ANY amount of ALA, especially if you have a cat, contact poison control or seek veterinary care immediately — do not wait for symptoms",
+                    "Inform pet sitters and houseguests about the danger of leaving supplements accessible"
+                ],
+                sources: [
+                    "VIN (Veterinary Information Network): Alpha Lipoic Acid Toxicosis",
+                    "Hill AS, et al. 'Lipoic acid is 10 times more toxic in cats than reported in humans, dogs or rats.' J Anim Physiol Anim Nutr. 2004;88:150-156",
+                    "Carpenter MM, Hovda LR. 'Alpha lipoic acid toxicosis in cats (2008-2016): Four cases.' J Vet Emerg Crit Care. 2022",
+                    "ASPCA Animal Poison Control Center: Alpha Lipoic Acid",
+                    "Pet Poison Helpline: Warning: Alpha Lipoic Acid (ALA)",
+                    "American College of Veterinary Pharmacists: Pet Poison Control"
+                ],
+                relatedEntries: ["33aa1122-bbcc-ddee-ff00-112233445566"]
+            ),
+
+            // MARK: - Phenylpropanolamine (PPA)
+            ToxicItem(
+                id: UUID(uuidString: "99aa7788-bbcc-ddee-ff00-112233445566")!,
+                name: "Phenylpropanolamine (PPA)",
+                alternateNames: [
+                    // Generic names
+                    "phenylpropanolamine",
+                    "PPA",
+
+                    // Brand names
+                    "Proin",
+                    "Proin ER",
+                    "Propalin",
+                    "Cystolamine",
+                    "Uricon",
+                    "Uriflex-PT",
+                    "Urilin",
+
+                    // Medical descriptions
+                    "urinary incontinence medication",
+                    "incontinence pills",
+                    "bladder control medication",
+
+                    // Common search terms
+                    "dog ate Proin",
+                    "dog ate incontinence pills",
+                    "dog ate whole bottle of Proin",
+                    "pet ate bladder medication",
+                    "dog got into incontinence medicine"
+                ],
+                categories: [.medications],
+                imageAsset: "phenylpropanolamine",
+                description: "Phenylpropanolamine (PPA) is a sympathomimetic medication commonly prescribed to treat urinary incontinence in dogs, particularly spayed females. It is marketed as Proin, Propalin, Cystolamine, and other brand names. While safe at prescribed doses for most dogs, PPA overdose can cause serious cardiovascular and central nervous system effects. The chewable tablets are palatable — dogs have been known to chew through closed vials and consume entire bottles. IMPORTANT: PPA was removed from human use in the United States in 2000-2003 due to evidence that it increased the risk of hemorrhagic stroke. While it remains available for veterinary use, this history underscores that overdose can have serious cardiovascular consequences.",
+                toxicityInfo: "Phenylpropanolamine is a sympathomimetic amine that stimulates alpha-adrenergic receptors, which is how it increases urethral sphincter tone to treat incontinence. In overdose, this same mechanism causes dangerous systemic effects. Cardiovascular Effects: Intense peripheral vasoconstriction causes severe HYPERTENSION. Reflex bradycardia (slow heart rate) is common. Tachycardia (fast heart rate) can also occur. Myocardial damage has been documented in severe cases. Target Organ Damage from Hypertension: Profound systemic hypertension can cause damage to the brain (neurological signs, seizures, hemorrhagic stroke), eyes (hyphema/blood in eye, retinal detachment, hemorrhages), kidneys (acute kidney injury), heart (myocardial necrosis), and liver (elevated liver enzymes). CNS Effects: Agitation, restlessness, anxiety, tremors, muscle twitching, seizures (in severe cases). Absorption: PPA is rapidly absorbed orally with high bioavailability (93-98%). Peak plasma levels occur within 2 hours. Half-life ranges from 4-16 hours depending on formulation. Duration of clinical signs may exceed 24 hours, especially with extended-release products or large doses.",
+                onsetTime: OnsetTime(
+                    early: "Clinical signs typically appear within 15-90 minutes of ingestion. Most dogs exhibit signs by 8 hours. Early signs include agitation, restlessness, vomiting, panting, and dilated pupils.",
+                    delayed: "With extended-release formulations or large doses, signs may be delayed up to 24 hours. Duration of effects may persist 24 hours or longer. Severe cardiovascular effects (hypertension, cardiac damage) may develop over hours."
+                ),
+                symptoms: [
+                    // Behavioral/CNS signs
+                    "Agitation or excitation",
+                    "Restlessness",
+                    "Anxiety",
+                    "Lethargy or depression (paradoxical)",
+                    "Vocalization",
+                    "Hiding",
+
+                    // Cardiovascular signs
+                    "Bradycardia (slow heart rate) — most common",
+                    "Tachycardia (fast heart rate)",
+                    "Hypertension (high blood pressure)",
+                    "Pulse deficits",
+
+                    // Autonomic signs
+                    "Mydriasis (dilated pupils)",
+                    "Piloerection (hair standing up)",
+                    "Panting or tachypnea (rapid breathing)",
+                    "Erythema (redness/flushing)",
+                    "Conjunctival hyperemia (red eyes)",
+
+                    // GI signs
+                    "Vomiting",
+                    "Diarrhea",
+                    "Loss of appetite",
+                    "Hypersalivation",
+
+                    // Neurologic signs
+                    "Tremors",
+                    "Muscle twitching",
+                    "Ataxia (wobbling)",
+                    "Hypermetria",
+                    "Nystagmus (abnormal eye movements)",
+                    "Proprioceptive deficits",
+                    "Seizures",
+
+                    // Severe signs
+                    "Hyperthermia (fever)",
+                    "Urinary retention",
+                    "Collapse",
+                    "Sudden death (may be preceded by vocalization)"
+                ],
+                speciesRisks: [
+                    SpeciesRisk(
+                        species: .dog,
+                        severity: .high,
+                        notes: "PPA is commonly prescribed for dogs with urinary incontinence — toxicosis occurs with overdose or in sensitive individuals. Some dogs may show signs even at therapeutic doses. Older dogs and those with pre-existing heart disease, hypertension, kidney disease, or diabetes may be more sensitive. The CHEWABLE TABLETS are palatable — dogs have consumed entire bottles by chewing through vials. With appropriate treatment, prognosis is generally good, but severe cases can be life-threatening."
+                    ),
+                    SpeciesRisk(
+                        species: .cat,
+                        severity: .high,
+                        notes: "PPA toxicosis is rarely reported in cats, possibly because it is uncommonly prescribed for felines and cats are more discriminating eaters. When it does occur, common signs include vomiting, retching, hypertension, and rapid breathing. Any PPA ingestion by a cat should be evaluated by a veterinarian."
+                    ),
+                    SpeciesRisk(
+                        species: .smallMammal,
+                        severity: .high,
+                        notes: "No specific data available. Small body size increases risk of significant effects. Sympathomimetic drugs can cause serious cardiovascular effects in small mammals. Contact an exotic animal veterinarian or poison control immediately."
+                    ),
+                    SpeciesRisk(
+                        species: .bird,
+                        severity: .high,
+                        notes: "No specific data available. Birds are sensitive to cardiovascular stressors. Contact an avian veterinarian immediately for any suspected ingestion."
+                    ),
+                    SpeciesRisk(
+                        species: .reptile,
+                        severity: .moderate,
+                        notes: "Very limited data. Contact an exotic animal veterinarian for guidance."
+                    )
+                ],
+                preventionTips: [
+                    "Keep Proin and other PPA products in SECURED locations — dogs find the chewable tablets palatable and have chewed through closed vials to consume entire bottles",
+                    "Never store PPA medication in locations accessible to pets, even if the container seems secure",
+                    "If your dog is prescribed PPA, dispense only the dose needed and store the bottle immediately",
+                    "Follow prescribed dosing carefully — do not increase the dose without veterinary guidance",
+                    "Monitor dogs on PPA therapy for signs of restlessness, agitation, or decreased appetite",
+                    "Dogs with pre-existing heart disease, hypertension, kidney disease, diabetes, or glaucoma may be more sensitive to PPA",
+                    "Contact your veterinarian immediately if your dog ingests more than the prescribed dose",
+                    "If multiple pets are in the household, ensure other animals cannot access the medicated pet's pills",
+                    "PPA can interact with other medications (tricyclic antidepressants, MAOIs, other sympathomimetics) — inform your vet of all medications",
+                    "Blood pressure should be monitored regularly in dogs on long-term PPA therapy"
+                ],
+                sources: [
+                    "VIN (Veterinary Information Network): Phenylpropanolamine Toxicosis",
+                    "ASPCA Animal Poison Control Center: PPA Toxicity Database (823 cases, 2003-2011)",
+                    "Ginn JA, et al. 'Phenylpropanolamine toxicosis in dogs: 170 cases (2004-2009).' JAVMA. 2011",
+                    "dvm360: 'Toxicology Brief: Phenylpropanolamine toxicosis in dogs and cats'",
+                    "Pet Poison Helpline: Phenylpropanolamine Poisoning in Dogs and Cats",
+                    "VCA Animal Hospitals: Phenylpropanolamine",
+                    "PRN Pharmacal: Proin and Proin ER Prescribing Information"
+                ],
+                relatedEntries: ["66dd4455-eeff-0011-2233-445566778899"]
+            ),
+
+            // MARK: - Metronidazole (Flagyl)
+            ToxicItem(
+                id: UUID(uuidString: "aabb8899-ccdd-eeff-0011-223344556677")!,
+                name: "Metronidazole (Flagyl)",
+                alternateNames: [
+                    // Generic names
+                    "metronidazole",
+                    "metro",
+
+                    // Brand names
+                    "Flagyl",
+                    "Flagyl ER",
+                    "Metrogel",
+                    "MetroCream",
+                    "Noritate",
+                    "Vandazole",
+
+                    // Medical descriptions
+                    "antibiotic for dogs",
+                    "giardia medication",
+                    "IBD medication",
+
+                    // Common search terms
+                    "dog ate metronidazole",
+                    "cat ate Flagyl",
+                    "metronidazole side effects dog",
+                    "dog wobbling metronidazole",
+                    "dog head tilt Flagyl",
+                    "metronidazole neurologic signs",
+                    "metronidazole toxicity"
+                ],
+                categories: [.medications],
+                imageAsset: "metronidazole",
+                description: "Metronidazole (Flagyl) is an antibiotic commonly prescribed in veterinary medicine for anaerobic bacterial infections, giardiasis (intestinal parasites), inflammatory bowel disease, and hepatic encephalopathy. While generally safe at standard doses for short periods, metronidazole can cause NEUROTOXICITY — particularly with high doses or prolonged treatment. Unlike many toxicoses, metronidazole neurotoxicity is usually related to cumulative dose over time rather than a single acute ingestion. GOOD NEWS: Neurologic signs are typically REVERSIBLE once the medication is stopped. Most dogs recover within 1-2 weeks of discontinuation. KEY WARNING SIGNS: Wide-based stance, wobbling (ataxia), head tilt, abnormal eye movements (nystagmus), and difficulty walking are classic signs of metronidazole neurotoxicity.",
+                toxicityInfo: "Metronidazole neurotoxicity primarily affects the vestibular and cerebellar systems, causing balance and coordination problems. Mechanism: The exact mechanism is unknown. Proposed mechanisms include inhibition of neuronal protein synthesis by binding to RNA, antagonism of GABA receptors in the cerebellum and vestibular system, and axonal degeneration and demyelination in affected brain regions. Risk Factors: HIGH daily doses (particularly above recommended amounts), PROLONGED treatment (weeks to months of therapy), pre-existing liver disease (impairs drug metabolism), individual sensitivity varies — some animals develop signs at doses tolerated by others. Important Distinction: This is NOT a typical acute poisoning. A single accidental ingestion of an extra dose or two is unlikely to cause neurotoxicity. The concern is with high doses over extended periods. GI Effects: Separate from neurotoxicity, metronidazole can cause gastrointestinal upset (vomiting, diarrhea, loss of appetite) at any dose. These GI effects are usually mild and resolve when the drug is stopped. Hepatotoxicity: Rarely, metronidazole may cause liver toxicity, though this is uncommon.",
+                onsetTime: OnsetTime(
+                    early: "GI signs (vomiting, loss of appetite, nausea) can occur shortly after starting treatment or with any dose. Neurologic signs from toxicity typically develop after days to weeks of treatment, though onset can vary based on dose and individual sensitivity.",
+                    delayed: "Neurologic signs often develop after prolonged treatment (weeks to months). Once metronidazole is discontinued, most dogs show improvement within days and recover fully within 1-2 weeks. Some severe cases may take longer. Rarely, signs may be permanent."
+                ),
+                symptoms: [
+                    // GI signs (common, any dose)
+                    "Vomiting",
+                    "Diarrhea",
+                    "Loss of appetite (anorexia)",
+                    "Nausea",
+                    "Excessive drooling",
+
+                    // Vestibular/cerebellar signs (neurotoxicity)
+                    "Wide-based stance",
+                    "Inability to walk",
+                    "Generalized ataxia (wobbling, incoordination)",
+                    "Head tilt",
+                    "Nystagmus (abnormal eye movements)",
+                    "Positional or vertical nystagmus",
+                    "Hypermetria (overshooting when reaching)",
+                    "Intention tremors",
+
+                    // Other neurologic signs
+                    "Disorientation",
+                    "Lethargy or depression",
+                    "Weakness",
+                    "Diminished postural reactions",
+                    "Knuckling",
+                    "Falling or rolling",
+                    "Extensor rigidity of limbs",
+                    "Torticollis (twisted neck)",
+                    "Opisthotonus (arched back)",
+
+                    // Severe signs
+                    "Apparent blindness (especially cats)",
+                    "Reduced menace response",
+                    "Seizures (rare)",
+                    "Tremors"
+                ],
+                speciesRisks: [
+                    SpeciesRisk(
+                        species: .dog,
+                        severity: .moderate,
+                        notes: "Dogs are the most commonly affected species. Neurotoxicity typically occurs with high doses or prolonged treatment. Classic presentation is a dog that suddenly cannot walk properly, has a head tilt, and shows abnormal eye movements. The GOOD NEWS: signs are usually reversible within 1-2 weeks after stopping the medication. Contact your veterinarian if you notice any neurologic changes while your dog is taking metronidazole."
+                    ),
+                    SpeciesRisk(
+                        species: .cat,
+                        severity: .moderate,
+                        notes: "Cats can develop CNS signs from metronidazole toxicosis, including ataxia, weakness, disorientation, diminished postural reactions, seizures, and APPARENT BLINDNESS. Forebrain involvement may be more prominent in cats than dogs. Signs are generally reversible upon discontinuation. NOTE: Diazepam, which can speed recovery in dogs, should NOT be used long-term in cats due to rare risk of fatal hepatic necrosis."
+                    ),
+                    SpeciesRisk(
+                        species: .smallMammal,
+                        severity: .moderate,
+                        notes: "Metronidazole is used in rabbits, ferrets, and other small mammals. Neurotoxicity risk exists. Contact an exotic animal veterinarian if you notice ataxia, head tilt, or other neurologic signs in a small mammal receiving metronidazole."
+                    ),
+                    SpeciesRisk(
+                        species: .bird,
+                        severity: .moderate,
+                        notes: "Metronidazole is used in avian medicine. Limited data on neurotoxicity in birds. Contact an avian veterinarian if you notice neurologic changes during treatment."
+                    ),
+                    SpeciesRisk(
+                        species: .reptile,
+                        severity: .low,
+                        notes: "Metronidazole is commonly used in reptiles for protozoal infections. Limited reports of toxicity. Follow prescribed dosing and contact your veterinarian with concerns."
+                    )
+                ],
+                preventionTips: [
+                    "Follow prescribed dosing carefully — do not exceed the dose or duration recommended by your veterinarian",
+                    "Be aware that long-term metronidazole therapy carries higher risk of neurotoxicity than short-term use",
+                    "Inform your veterinarian if your pet has liver disease, as this can affect metronidazole metabolism",
+                    "Watch for early signs of neurotoxicity: wobbling, head tilt, abnormal eye movements, difficulty walking",
+                    "If you notice ANY neurologic changes in a pet taking metronidazole, STOP THE MEDICATION and contact your veterinarian immediately",
+                    "Do not restart metronidazole after a neurotoxic episode without veterinary guidance",
+                    "Store metronidazole safely to prevent accidental ingestion by other pets",
+                    "Keep all veterinary appointments to monitor pets on long-term metronidazole therapy",
+                    "Remember: most metronidazole neurotoxicity is reversible — early recognition and drug discontinuation lead to better outcomes"
+                ],
+                sources: [
+                    "VIN (Veterinary Information Network): Metronidazole Toxicosis",
+                    "Evans J, et al. 'Diazepam as a treatment for metronidazole toxicosis in dogs.' J Vet Intern Med. 2003;17:304-310",
+                    "dvm360: 'Metronidazole: Uses, toxicity and management of neurologic sequelae'",
+                    "Kinga KE, et al. 'Metronidazole-induced neurotoxicity in 26 dogs.' Vet Rec. 2018",
+                    "Olson EJ, et al. 'Putative Metronidazole Neurotoxicosis in a Cat.' Vet Pathol. 2005;42:665-669",
+                    "Merck Veterinary Manual: Metronidazole",
+                    "VETgirl: Metronidazole Toxicity"
+                ],
+                relatedEntries: nil
             )
         ]
     }
