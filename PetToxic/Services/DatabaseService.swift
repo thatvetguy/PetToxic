@@ -1235,7 +1235,7 @@ class DatabaseService {
                 id: UUID(uuidString: "0bf15704-86a3-40a9-94e1-4ba4ffbdea1b")!,
                 name: "Castor Beans",
                 alternateNames: ["Ricinus communis", "castor bean plant", "castor oil plant", "castor plant", "mole bean plant", "African wonder tree", "palm of Christ", "ricin", "castor bean meal", "castor cake", "castor oil cake", "castor bean fertilizer"],
-                categories: [.plants, .gardenProducts],
+                categories: [.plants],
                 imageAsset: "castor_bean_plant",
                 description: "The castor bean plant (Ricinus communis) is a fast-growing ornamental plant with large, star-shaped leaves and spiny seed pods containing distinctive mottled seeds. It is grown for its dramatic tropical appearance and as a source of castor oil. The plant is found in warm climates and is sometimes used in landscaping, though it is extremely toxic to pets and humans.",
                 toxicityInfo: "Castor beans contain ricin, one of the most potent naturally occurring toxins known — it is classified as a Category B bioterrorism agent. Ricin is a ribosome-inactivating protein that stops cells from making proteins, leading to cell death and multi-organ necrosis affecting the GI tract, liver, kidneys, and heart. All parts of the plant are toxic, but the seeds contain the highest concentration of ricin. Critically, the seed coat must be damaged (chewed or cracked) for ricin to be released — beans swallowed whole with intact seed coats may pass through the digestive tract without causing toxicosis. This means the degree of chewing directly determines severity. In dogs, signs of toxicosis have occurred after ingestion of as little as one chewed bean. Cats are less commonly affected, likely because they have more discerning palates. There is no antidote for ricin poisoning. IMPORTANT: Castor bean-based fertilizers and castor cake (the residue after oil extraction) are far more dangerous than the beans themselves — in one study, mortality from fertilizer/castor cake ingestion was 85% compared to 9% from the beans alone. If an animal survives liver injury, residual hepatic insufficiency may persist.",
@@ -10090,7 +10090,7 @@ class DatabaseService {
                     "Sonoran coral snake"
                 ],
                 categories: [.animalEncounters],
-                summary: "NEUROTOXIC venom. Delayed paralysis onset 10-18 hours. No canine-specific antivenom available in US. Emergency care essential even with minimal initial signs.",
+                imageAsset: nil,
                 description: """
 Coral snakes are elapids with potent NEUROTOXIC venom distinct from pit viper hemotoxic venom. Three species exist in the US: Eastern coral snake (Micrurus fulvius) in Southeast, Texas coral snake (M. tener) in Texas/Louisiana, and Arizona/Sonoran coral snake (Micruroides euryxanthus) in Southwest.
 
@@ -10119,6 +10119,11 @@ Coral snake venom contains alpha-neurotoxins that block acetylcholine receptors 
 **Geographic Caution:**
 Coral snakes are secretive and rarely encountered, but pets investigating leaf litter, brush piles, or digging may provoke defensive bites. Most bites occur spring through fall in warm regions.
 """,
+                toxicityInfo: "Coral snake venom contains alpha-neurotoxins that block acetylcholine receptors at neuromuscular junctions, causing ascending paralysis. Signs may be DELAYED 10-18 hours after bite, progressing rapidly once neurological symptoms appear. Respiratory paralysis can develop within 24-72 hours. Unlike pit viper bites, there is typically MINIMAL local tissue reaction—DO NOT be falsely reassured by lack of swelling. No canine-specific antivenom is FDA-approved in the US; North American Coral Snake Antivenin has limited availability.",
+                onsetTime: OnsetTime(
+                    early: "0-4 hours (minimal local signs)",
+                    delayed: "10-18 hours (neurological signs begin)"
+                ),
                 symptoms: [
                     "EARLY (may be absent or minimal for hours):",
                     "Fang marks (small, may be difficult to see)",
@@ -10135,10 +10140,6 @@ Coral snakes are secretive and rarely encountered, but pets investigating leaf l
                     "Respiratory depression → paralysis",
                     "Altered mentation progressing to obtundation"
                 ],
-                onsetTime: OnsetTime(
-                    early: "0-4 hours (minimal local signs)",
-                    delayed: "10-18 hours (neurological signs begin)"
-                ),
                 speciesRisks: [
                     SpeciesRisk(
                         species: .dog,
@@ -10183,7 +10184,7 @@ Coral snakes are secretive and rarely encountered, but pets investigating leaf l
                     "scorpion venom"
                 ],
                 categories: [.animalEncounters],
-                summary: "Most US scorpion stings cause only local pain. Arizona bark scorpion (Centruroides) is medically significant—neurotoxic venom causes pain, tremors, respiratory effects. Small pets at higher risk.",
+                imageAsset: nil,
                 description: """
 Over 70 scorpion species exist in the US, but only the Arizona bark scorpion (Centruroides sculpturatus/exilicauda) causes significant systemic envenomation. Found primarily in Arizona, New Mexico, and adjacent areas of California, Nevada, Utah, and Mexico.
 
@@ -10215,6 +10216,11 @@ Most US scorpion stings cause only:
 **When to Worry:**
 Geographic location matters most. Outside Arizona bark scorpion range, severe systemic effects from scorpion stings are rare in pets.
 """,
+                toxicityInfo: "Centruroides (Arizona bark scorpion) venom contains neurotoxins affecting sodium channels, causing excessive nerve firing, muscle fasciculations and tremors, autonomic dysfunction, and respiratory compromise in severe cases. Small dogs (<15 lbs) have significantly higher risk—39% develop severe signs vs 13% in larger dogs. Most non-Centruroides US scorpion stings cause only local pain and are self-limiting.",
+                onsetTime: OnsetTime(
+                    early: "Minutes to 1 hour (local pain immediate)",
+                    delayed: "1-4 hours (systemic signs if they occur)"
+                ),
                 symptoms: [
                     "LOCAL (all scorpion species):",
                     "Intense local pain at sting site",
@@ -10232,10 +10238,6 @@ Geographic location matters most. Outside Arizona bark scorpion range, severe sy
                     "Hypertension",
                     "Vomiting"
                 ],
-                onsetTime: OnsetTime(
-                    early: "Minutes to 1 hour (local pain immediate)",
-                    delayed: "1-4 hours (systemic signs if they occur)"
-                ),
                 speciesRisks: [
                     SpeciesRisk(
                         species: .dog,
@@ -10290,7 +10292,7 @@ Geographic location matters most. Outside Arizona bark scorpion range, severe sy
                     "redback spider bite"
                 ],
                 categories: [.animalEncounters, .environmentalHazards],
-                summary: "NEUROTOXIC venom causes severe muscle pain, cramping, rigidity. CATS ARE MARKEDLY SUSCEPTIBLE—can be fatal without treatment. Dogs have relative resistance with good prognosis. Antivenom available.",
+                imageAsset: nil,
                 description: """
 Widow spiders (Latrodectus spp.) are the most medically significant spiders worldwide. Five species are found in the United States, with the black widow (Latrodectus mactans) being most common. Female black widows are identified by their shiny black color and distinctive red or orange hourglass marking on the underside of their globular abdomen. Males are much smaller and not considered a significant bite risk.
 
@@ -10312,6 +10314,11 @@ Cats are MARKEDLY more susceptible to widow spider venom than dogs. In one veter
 **Dry Bites:**
 Approximately 15% of widow spider bites are "dry" with no venom injection, but any suspected bite should be treated as a medical emergency.
 """,
+                toxicityInfo: "Black widow venom contains alpha-latrotoxin, which causes massive release of neurotransmitters (acetylcholine, norepinephrine, dopamine), resulting in severe muscle cramping, pain, and rigidity. Eventually, neurotransmitter stores become depleted, leading to flaccid paralysis and potentially respiratory failure. CATS ARE MARKEDLY SUSCEPTIBLE—in one study, 20 of 22 cats died following black widow bites. Dogs have relative resistance with good prognosis. Antivenom is available and provides rapid relief.",
+                onsetTime: OnsetTime(
+                    early: "30 minutes to 8 hours (painful bite, then muscle signs)",
+                    delayed: "48-72 hours for acute signs to resolve; weakness may persist weeks"
+                ),
                 symptoms: [
                     "Initial painful bite (sharp pinch sensation)",
                     "Mild redness or swelling at bite site",
@@ -10337,10 +10344,6 @@ Approximately 15% of widow spider bites are "dry" with no venom injection, but a
                     "Flaccid paralysis (neurotransmitter depletion)",
                     "Respiratory failure"
                 ],
-                onsetTime: OnsetTime(
-                    early: "30 minutes to 8 hours (painful bite, then muscle signs)",
-                    delayed: "48-72 hours for acute signs to resolve; weakness may persist weeks"
-                ),
                 speciesRisks: [
                     SpeciesRisk(
                         species: .dog,
@@ -10413,7 +10416,7 @@ Approximately 15% of widow spider bites are "dry" with no venom injection, but a
                     "dermonecrotic spider bite"
                 ],
                 categories: [.animalEncounters, .environmentalHazards],
-                summary: "CYTOTOXIC venom causes progressive necrotic skin wounds. Initial bite often PAINLESS. Limited to south-central/Midwest US. Systemic illness rare. Good prognosis. NO antivenom available.",
+                imageAsset: nil,
                 description: """
 The brown recluse spider (Loxosceles reclusa) is found in the south-central and midwestern United States—primarily from southeastern Nebraska through Texas, east to southwestern Ohio and northwestern Georgia.
 
@@ -10441,6 +10444,11 @@ Unlike widow spider neurotoxic venom, brown recluse venom is CYTOTOXIC—it dest
 **Geographic Limitations:**
 NOT found in California, Florida, Pacific Northwest, or Atlantic seaboard. Single spiders can be accidentally transported but do not establish populations outside endemic range.
 """,
+                toxicityInfo: "Brown recluse venom is CYTOTOXIC—it destroys tissue locally rather than causing systemic neurotoxic effects. Sphingomyelinase D causes platelet aggregation, microvascular thrombosis, and progressive tissue necrosis, resulting in the characteristic 'bull's-eye' or 'target' lesion that can ulcerate. ~90% of bites result in minimal reaction; ~10% develop significant dermonecrotic lesions. Systemic effects (hemolytic anemia, kidney injury) are RARE. NO antivenom is available.",
+                onsetTime: OnsetTime(
+                    early: "Hours—painless bite, then redness/blister within 2-8 hours",
+                    delayed: "2-7 days for full necrosis; healing takes 1-8 weeks (months if severe)"
+                ),
                 symptoms: [
                     "Initial bite often PAINLESS—may not be noticed",
                     "Small red, itchy area at bite site (hours later)",
@@ -10466,10 +10474,6 @@ NOT found in California, Florida, Pacific Northwest, or Atlantic seaboard. Singl
                     "Pale gums (hemolytic anemia)",
                     "Signs of kidney injury"
                 ],
-                onsetTime: OnsetTime(
-                    early: "Hours—painless bite, then redness/blister within 2-8 hours",
-                    delayed: "2-7 days for full necrosis; healing takes 1-8 weeks (months if severe)"
-                ),
                 speciesRisks: [
                     SpeciesRisk(
                         species: .dog,
@@ -10549,7 +10553,7 @@ NOT found in California, Florida, Pacific Northwest, or Atlantic seaboard. Singl
                     "erucism"
                 ],
                 categories: [.animalEncounters, .environmentalHazards],
-                summary: "Venomous spines hidden beneath soft, fuzzy appearance cause intense pain. Texas epicenter. Peak seasons: early summer and fall. Oral exposure (mouthing/eating) causes more severe symptoms than skin contact.",
+                imageAsset: nil,
                 description: """
 The asp or puss caterpillar (Megalopyge opercularis), also known as the southern flannel moth caterpillar, is considered the most dangerous caterpillar in the United States. Despite its soft, fluffy appearance that resembles a tuft of fur or cotton, this caterpillar conceals venomous spines beneath its hair.
 
@@ -10582,6 +10586,11 @@ While the asp is most painful, all stinging caterpillars should be avoided.
 
 Pet fur provides some protection from skin exposure, but oral exposure from mouthing causes more significant symptoms.
 """,
+                toxicityInfo: "Venomous spines hidden beneath the soft, fuzzy exterior break off on contact and release venom, causing intense localized pain. The venom contains proteins that cause inflammation and pain. Oral exposure from mouthing or eating caterpillars causes more severe symptoms than dermal contact, as fur provides some protection. While extremely painful, stings are typically self-limiting and rarely life-threatening.",
+                onsetTime: OnsetTime(
+                    early: "Immediate to minutes (intense pain at contact)",
+                    delayed: "Hours for swelling to peak; usually self-limiting"
+                ),
                 symptoms: [
                     "DERMAL (skin) EXPOSURE:",
                     "Localized pain at contact site",
@@ -10601,10 +10610,6 @@ Pet fur provides some protection from skin exposure, but oral exposure from mout
                     "Restlessness or distress",
                     "Rarely, allergic reactions"
                 ],
-                onsetTime: OnsetTime(
-                    early: "Immediate to minutes (intense pain at contact)",
-                    delayed: "Hours for swelling to peak; usually self-limiting"
-                ),
                 speciesRisks: [
                     SpeciesRisk(
                         species: .dog,
@@ -10654,7 +10659,7 @@ Pet fur provides some protection from skin exposure, but oral exposure from mout
                     "dog tick paralysis"
                 ],
                 categories: [.animalEncounters, .environmentalHazards],
-                summary: "Neurotoxin in tick saliva causes ascending paralysis after 5-9 days of attachment. FULLY REVERSIBLE with prompt tick removal. Affects dogs; NOT reported in cats in North America. ~95% survival with treatment.",
+                imageAsset: nil,
                 description: """
 Tick paralysis is a potentially life-threatening but FULLY REVERSIBLE condition caused by neurotoxins secreted in tick saliva during feeding. In North America, tick paralysis affects dogs but has NOT been reported in domestic cats.
 
@@ -10694,6 +10699,11 @@ Tick paralysis has NOT been reported in domestic cats in North America. While ca
 **PROGNOSIS:**
 Approximately 95% of affected dogs survive with prompt treatment. Fatalities occur when ticks are not discovered or treatment is delayed.
 """,
+                toxicityInfo: "Neurotoxin secreted in tick saliva during feeding blocks nerve-to-muscle signal transmission, causing ascending paralysis. Requires 5-9 days of tick attachment—toxin not present in early feeding stages. A SINGLE tick can cause paralysis. FULLY REVERSIBLE with prompt tick removal; most dogs recover within 24-72 hours. Tick paralysis affects dogs but has NOT been reported in domestic cats in North America.",
+                onsetTime: OnsetTime(
+                    early: "5-9 days after tick attachment (paralysis begins)",
+                    delayed: "24-72 hours for recovery AFTER tick removal"
+                ),
                 symptoms: [
                     "EARLY SIGNS (hind legs first):",
                     "Weakness or wobbliness in back legs",
@@ -10714,10 +10724,6 @@ Approximately 95% of affected dogs survive with prompt treatment. Fatalities occ
                     "",
                     "NOTE: Mental alertness and pain sensation remain NORMAL"
                 ],
-                onsetTime: OnsetTime(
-                    early: "5-9 days after tick attachment (paralysis begins)",
-                    delayed: "24-72 hours for recovery AFTER tick removal"
-                ),
                 speciesRisks: [
                     SpeciesRisk(
                         species: .dog,
@@ -10770,7 +10776,7 @@ Approximately 95% of affected dogs survive with prompt treatment. Fatalities occ
                     "Humulus"
                 ],
                 categories: [.foods, .householdItems],
-                summary: "EXTREMELY DANGEROUS to dogs. Causes malignant hyperthermia with body temperature exceeding 109°F. Death can occur within 3 HOURS without treatment. Home brewing supplies are primary source. Not reported in cats.",
+                imageAsset: nil,
                 description: """
 Hops (Humulus lupulus) are the flowering cones of the hop plant, used in beer brewing. Hops are EXTREMELY DANGEROUS to dogs and can cause a life-threatening condition characterized by rapidly rising body temperature. Without treatment, death can occur within hours.
 
@@ -10812,6 +10818,11 @@ With rapid veterinary intervention and aggressive cooling, clinical signs genera
 **CATS:**
 Hops toxicosis has NOT been reported in cats. However, given the severity in dogs, prevent cat access as well.
 """,
+                toxicityInfo: "The exact toxic compound is unknown, but hops ingestion triggers a malignant hyperthermia-like reaction in dogs. Body temperature rises uncontrollably, sometimes exceeding 109°F (42.8°C), leading to rhabdomyolysis (muscle breakdown), DIC, kidney injury, liver damage, and neurologic dysfunction. Death can occur within 3 HOURS without treatment. A single 28-gram hop plug can expand to ~900 grams of rehydrated material in a dog's stomach.",
+                onsetTime: OnsetTime(
+                    early: "2-4 hours (symptoms begin and progress rapidly)",
+                    delayed: "24-72 hours for recovery WITH treatment"
+                ),
                 symptoms: [
                     "SEVERE and rapidly rising body temperature (hallmark sign)",
                     "Temperature may exceed 109°F (42.8°C)",
@@ -10829,10 +10840,6 @@ Hops toxicosis has NOT been reported in cats. However, given the severity in dog
                     "Difficulty breathing or apnea",
                     "Death (within 3 hours if untreated)"
                 ],
-                onsetTime: OnsetTime(
-                    early: "2-4 hours (symptoms begin and progress rapidly)",
-                    delayed: "24-72 hours for recovery WITH treatment"
-                ),
                 speciesRisks: [
                     SpeciesRisk(
                         species: .dog,
@@ -10887,7 +10894,7 @@ Hops toxicosis has NOT been reported in cats. However, given the severity in dog
                     "hepatotoxic mycotoxin"
                 ],
                 categories: [.foods],
-                summary: "Invisible toxin from Aspergillus mold in contaminated pet food causes severe LIVER FAILURE. Dogs extremely susceptible. Has caused multiple pet food recalls and deaths. Colorless, odorless, heat-stable.",
+                imageAsset: nil,
                 description: """
 Aflatoxins are invisible, odorless toxins produced by Aspergillus mold that can contaminate pet food ingredients. Dogs are EXTREMELY susceptible to aflatoxin poisoning, which causes severe liver damage and can be fatal. Aflatoxin contamination has caused multiple pet food recalls and outbreaks worldwide.
 
@@ -10923,6 +10930,11 @@ Major US outbreaks: 2005, 2011, 2020, 2021—numerous pet deaths. FDA maintains 
 - Contact veterinarian right away
 - Report to FDA: www.fda.gov/reportproblem
 """,
+                toxicityInfo: "Aflatoxin B1 (AFB1) is the most toxic mycotoxin, produced by Aspergillus mold on contaminated grains. It is colorless, odorless, flavorless, and HEAT-STABLE—survives cooking and food processing. Dogs have naturally low liver glutathione levels, making them extremely susceptible. When toxin levels exceed detoxification capacity, metabolites damage liver cells and DNA, causing severe liver failure. Even low aflatoxin levels accumulate over time with daily feeding.",
+                onsetTime: OnsetTime(
+                    early: "1-2 days after eating heavily contaminated food",
+                    delayed: "Days to weeks with low-level chronic exposure"
+                ),
                 symptoms: [
                     "EARLY SIGNS:",
                     "Loss of appetite or sudden food refusal",
@@ -10953,10 +10965,6 @@ Major US outbreaks: 2005, 2011, 2020, 2021—numerous pet deaths. FDA maintains 
                     "",
                     "Sudden death (peracute cases)"
                 ],
-                onsetTime: OnsetTime(
-                    early: "1-2 days after eating heavily contaminated food",
-                    delayed: "Days to weeks with low-level chronic exposure"
-                ),
                 speciesRisks: [
                     SpeciesRisk(
                         species: .dog,
@@ -11014,7 +11022,7 @@ Major US outbreaks: 2005, 2011, 2020, 2021—numerous pet deaths. FDA maintains 
                     "wild hemlock"
                 ],
                 categories: [.plants],
-                summary: "TWO different deadly plants. Poison hemlock causes PARALYSIS. Water hemlock causes violent SEIZURES and is the most toxic plant in North America. Rare in pets (primarily affects livestock). Hemlock TREES are NOT toxic.",
+                imageAsset: nil,
                 description: """
 Hemlock refers to TWO different but equally dangerous plants: poison hemlock (Conium maculatum) and water hemlock (Cicuta species). Both are potentially lethal, but poisoning is RARE in dogs and cats—they typically don't consume enough. Primarily a livestock concern.
 
@@ -11050,6 +11058,11 @@ Water hemlock: 3-6 feet tall near WATER sources, hollow stems with chambered roo
 - Poison hemlock: If pet survives, recovery usually complete within 1-2 days
 - Water hemlock: Guarded. Survival beyond 8 hours with mild signs = generally recover. Severe seizures = poor prognosis.
 """,
+                toxicityInfo: "TWO different toxins from TWO different plants: Poison hemlock contains coniine (piperidine alkaloid) with nicotine-like effects causing progressive PARALYSIS and death from respiratory failure. Water hemlock contains cicutoxin and is the most violently toxic plant in North America, causing violent SEIZURES with death possible within 15 MINUTES. Companion animal cases are rare—dogs and cats typically don't consume enough.",
+                onsetTime: OnsetTime(
+                    early: "Poison hemlock: 30 min to 2 hours",
+                    delayed: "Water hemlock: 15-60 min; death can occur within 15 min to 8 hours"
+                ),
                 symptoms: [
                     "SHARED EARLY SIGNS:",
                     "Excessive drooling",
@@ -11075,10 +11088,6 @@ Water hemlock: 3-6 feet tall near WATER sources, hollow stems with chambered roo
                     "Coma",
                     "Death (water hemlock: can occur within 15 min)"
                 ],
-                onsetTime: OnsetTime(
-                    early: "Poison hemlock: 30 min to 2 hours",
-                    delayed: "Water hemlock: 15-60 min; death can occur within 15 min to 8 hours"
-                ),
                 speciesRisks: [
                     SpeciesRisk(
                         species: .dog,
@@ -11130,7 +11139,7 @@ Water hemlock: 3-6 feet tall near WATER sources, hollow stems with chambered roo
                     "leaves of three"
                 ],
                 categories: [.plants],
-                summary: "PETS RARELY AFFECTED—fur protects skin from urushiol oil. Main concern: pets can TRANSFER oil to owners, causing rash in humans. ASPCA classifies as non-toxic to dogs, cats, and horses.",
+                imageAsset: nil,
                 description: """
 Poison ivy, poison oak, and poison sumac contain urushiol, an oily resin that causes an itchy, blistering rash in most humans. The good news: dogs and cats are RARELY affected. However, pets can carry the oil on their fur and transfer it to their owners.
 
@@ -11163,6 +11172,11 @@ If your pet may have contacted these plants:
 Poison ivy and oak: "Leaves of three, let it be"—clusters of three shiny leaflets.
 Poison sumac: 7-13 leaflets in pairs with one at tip; grows in swampy areas.
 """,
+                toxicityInfo: "Urushiol is an oily resin that causes allergic contact dermatitis in most humans. PETS ARE RARELY AFFECTED—fur protects skin from the oil. The ASPCA classifies poison ivy, oak, and sumac as NON-TOXIC to dogs, cats, and horses. Ingestion may cause mild GI upset. Main concern: pets can carry urushiol on their fur and TRANSFER it to owners (50-75% of humans are allergic).",
+                onsetTime: OnsetTime(
+                    early: "Skin irritation (if it occurs): 24 hours to several days",
+                    delayed: "GI upset from ingestion: within a few hours"
+                ),
                 symptoms: [
                     "DERMAL (uncommon in pets):",
                     "Red, bumpy rash on areas with little fur",
@@ -11175,10 +11189,6 @@ Poison sumac: 7-13 leaflets in pairs with one at tip; grows in swampy areas.
                     "Drooling",
                     "Weakness (rare, large ingestion)"
                 ],
-                onsetTime: OnsetTime(
-                    early: "Skin irritation (if it occurs): 24 hours to several days",
-                    delayed: "GI upset from ingestion: within a few hours"
-                ),
                 speciesRisks: [
                     SpeciesRisk(
                         species: .dog,
@@ -11227,7 +11237,7 @@ Poison sumac: 7-13 leaflets in pairs with one at tip; grows in swampy areas.
                     "P-gp deficiency"
                 ],
                 categories: [.medications],
-                summary: "GENETIC CONDITION affecting drug metabolism in herding breeds. Dogs with this mutation can have SEVERE reactions to many common medications. Genetic testing available and recommended. See also: Ivermectin entry.",
+                imageAsset: nil,
                 description: """
 The MDR1 gene mutation is a genetic defect that affects how certain dogs metabolize many common medications. Dogs with this mutation can experience SEVERE, life-threatening reactions to drugs that are safe for other dogs. Essential information for owners of herding breeds.
 
@@ -11266,6 +11276,11 @@ IMPORTANT: Standard-dose monthly heartworm preventives (like Heartgard) are gene
 **TESTING:**
 Washington State University Veterinary Clinical Pharmacology Laboratory offers testing. Always inform ALL veterinarians of your dog's MDR1 status.
 """,
+                toxicityInfo: "INFORMATIONAL ENTRY—this is a genetic condition, not a toxin. The MDR1 gene produces P-glycoprotein, a pump that removes certain drugs from the brain. Dogs with the mutation have a defective pump, allowing drugs (ivermectin, loperamide, acepromazine, certain chemotherapy drugs, and others) to accumulate to toxic levels in the brain. Both carriers AND affected dogs may show drug sensitivity. Genetic testing is available and recommended for at-risk breeds.",
+                onsetTime: OnsetTime(
+                    early: "Varies by drug—hours after administration",
+                    delayed: "Effects may persist longer due to impaired drug clearance"
+                ),
                 symptoms: [
                     "SYMPTOMS OF DRUG TOXICITY IN MDR1-AFFECTED DOGS:",
                     "(Varies by drug involved)",
@@ -11281,10 +11296,6 @@ Washington State University Veterinary Clinical Pharmacology Laboratory offers t
                     "Coma",
                     "Death (severe cases)"
                 ],
-                onsetTime: OnsetTime(
-                    early: "Varies by drug—hours after administration",
-                    delayed: "Effects may persist longer due to impaired drug clearance"
-                ),
                 speciesRisks: [
                     SpeciesRisk(
                         species: .dog,
@@ -11332,7 +11343,7 @@ Washington State University Veterinary Clinical Pharmacology Laboratory offers t
                     "summer cookout hazard"
                 ],
                 categories: [.foods],
-                summary: "NOT TOXIC but one of the MOST COMMON causes of intestinal obstruction in dogs. Cobs do not dissolve—they become lodged and often require SURGERY. Common during summer cookout season.",
+                imageAsset: nil,
                 description: """
 Corn cobs are one of the MOST COMMON causes of intestinal obstruction in dogs. While corn itself is not toxic, the cob is indigestible and the perfect size and shape to become lodged in a dog's intestines. Frequently requires emergency surgery.
 
@@ -11357,6 +11368,11 @@ Veterinary ERs see spikes around Memorial Day, Fourth of July, and Labor Day whe
 **CATS:**
 Cats rarely eat corn cobs due to selective eating habits.
 """,
+                toxicityInfo: "NOT TOXIC—this is a PHYSICAL HAZARD causing intestinal obstruction. Corn cobs do NOT dissolve or soften in the digestive system. The cylindrical shape wedges tightly in intestines, and the rough, fibrous texture prevents natural movement. Once lodged, the cob blocks food and fluid passage. Without treatment, intestinal tissue can lose blood supply and die. Surgery is often required.",
+                onsetTime: OnsetTime(
+                    early: "Vomiting may begin within hours",
+                    delayed: "Complete obstruction signs typically within 24-72 hours"
+                ),
                 symptoms: [
                     "EARLY SIGNS:",
                     "Vomiting (often repeated, unproductive)",
@@ -11372,10 +11388,6 @@ Cats rarely eat corn cobs due to selective eating habits.
                     "Weakness",
                     "Depression"
                 ],
-                onsetTime: OnsetTime(
-                    early: "Vomiting may begin within hours",
-                    delayed: "Complete obstruction signs typically within 24-72 hours"
-                ),
                 speciesRisks: [
                     SpeciesRisk(
                         species: .dog,
@@ -11424,7 +11436,7 @@ Cats rarely eat corn cobs due to selective eating habits.
                     "downy brome"
                 ],
                 categories: [.plants],
-                summary: "NOT TOXIC but serious PHYSICAL HAZARD. Barbed seeds burrow INTO tissue—never out. Can penetrate ears, nose, eyes, paws, skin. Can migrate internally causing severe damage. Most common in Western US.",
+                imageAsset: nil,
                 description: """
 Foxtails are barbed grass seed heads that pose a serious PHYSICAL hazard to dogs. Unlike other plant material, foxtails do NOT break down inside the body. Their barbed shape allows them to burrow DEEPER over time, never working back out. Can cause severe infections and damage.
 
@@ -11452,6 +11464,11 @@ Foxtails may be unfamiliar. This is essential information for West Coast residen
 
 Early removal is much easier than waiting. May require sedation, scoping, or surgery depending on location.
 """,
+                toxicityInfo: "NOT TOXIC—this is a serious PHYSICAL HAZARD. Foxtails have microscopic barbs pointing backward like tiny fishhooks—once they enter the body, they can only move FORWARD, never backward. They do NOT break down inside the body. Can penetrate ears, nose, eyes, paws, and skin, then migrate to internal organs including lungs, abdominal cavity, and spine causing severe damage and infection.",
+                onsetTime: OnsetTime(
+                    early: "Signs may appear within hours of exposure",
+                    delayed: "Internal migration can cause problems days to weeks later"
+                ),
                 symptoms: [
                     "LOCATION-SPECIFIC SIGNS:",
                     "",
@@ -11468,10 +11485,6 @@ Early removal is much easier than waiting. May require sedation, scoping, or sur
                     "Lethargy",
                     "Unexplained abscess anywhere on body"
                 ],
-                onsetTime: OnsetTime(
-                    early: "Signs may appear within hours of exposure",
-                    delayed: "Internal migration can cause problems days to weeks later"
-                ),
                 speciesRisks: [
                     SpeciesRisk(
                         species: .dog,
@@ -11524,7 +11537,7 @@ Early removal is much easier than waiting. May require sedation, scoping, or sur
                     "menstrual product"
                 ],
                 categories: [.householdItems],
-                summary: "NOT TOXIC but COMMON cause of intestinal obstruction. Dogs attracted to scent. Tampons expand when wet and strings create linear foreign body risk. Frequently requires surgical removal.",
+                imageAsset: nil,
                 description: """
 Tampons, sanitary pads, diapers, and similar absorbent products are a surprisingly COMMON reason for veterinary visits. Dogs are strongly attracted to these items due to scent, and ingestion can lead to serious gastrointestinal obstruction. One of the most frequently seen foreign body ingestions.
 
@@ -11554,6 +11567,11 @@ With recent ingestion (few hours), induced vomiting may retrieve the item. Once 
 **SMALL DOGS AT HIGHER RISK:**
 Narrower intestines make obstruction more likely even with smaller items.
 """,
+                toxicityInfo: "NOT TOXIC—this is a PHYSICAL HAZARD causing intestinal obstruction. Tampons are designed to absorb and EXPAND dramatically when wet. The string creates LINEAR FOREIGN BODY risk (especially dangerous—can saw through intestinal walls). Pads and diapers contain super-absorbent materials that swell many times their original size. These products do NOT break down in the digestive system. Surgery is frequently required.",
+                onsetTime: OnsetTime(
+                    early: "Vomiting may begin within hours",
+                    delayed: "Obstruction signs typically within 24-72 hours"
+                ),
                 symptoms: [
                     "EARLY SIGNS:",
                     "Vomiting",
@@ -11572,10 +11590,6 @@ Narrower intestines make obstruction more likely even with smaller items.
                     "",
                     "NOTE: If string visible, NEVER PULL"
                 ],
-                onsetTime: OnsetTime(
-                    early: "Vomiting may begin within hours",
-                    delayed: "Obstruction signs typically within 24-72 hours"
-                ),
                 speciesRisks: [
                     SpeciesRisk(
                         species: .dog,

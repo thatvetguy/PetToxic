@@ -7,21 +7,24 @@ Reference document for data structures used throughout the app.
 ## Primary Entity: ToxicItem
 
 ```swift
-struct ToxicItem: Identifiable, Codable {
+struct ToxicItem: Identifiable, Codable, Hashable {
     let id: UUID
     let name: String
-    let alternateNames: [String]  // Brand names, synonyms, common misspellings
+    let alternateNames: [String]    // Brand names, synonyms, common misspellings
     let categories: [Category]
     let imageAsset: String?
     let description: String
     let toxicityInfo: String
-    let onsetTime: OnsetTime?     // Timing of symptom onset
+    let onsetTime: OnsetTime?       // Timing of symptom onset
     let symptoms: [String]
-    let speciesRisks: [SpeciesRisk]
-    let preventionTips: [String]? // NEW: Optional tips to prevent exposure
+    let speciesRisks: [SpeciesRisk] // Can be empty for informational entries
+    let preventionTips: [String]?
     let sources: [String]
+    let relatedEntries: [String]?   // Array of UUID strings referencing other ToxicItems
 }
 ```
+
+**Note:** `speciesRisks` may be empty for informational entries that describe conditions or hazards rather than toxic substances (e.g., MDR1 Gene Mutation, Foxtails).
 
 ---
 
@@ -29,7 +32,7 @@ struct ToxicItem: Identifiable, Codable {
 
 ### OnsetTime
 ```swift
-struct OnsetTime: Codable {
+struct OnsetTime: Codable, Hashable {
     let early: String?   // When early symptoms typically appear
     let delayed: String? // When delayed/serious symptoms may develop
 }
@@ -37,10 +40,12 @@ struct OnsetTime: Codable {
 
 ### SpeciesRisk
 ```swift
-struct SpeciesRisk: Codable {
+struct SpeciesRisk: Codable, Hashable, Identifiable {
     let species: Species
     let severity: Severity
     let notes: String?
+
+    var id: String { species.rawValue }
 }
 ```
 
@@ -50,7 +55,7 @@ struct SearchResult: Identifiable {
     let id: UUID
     let item: ToxicItem
     let relevanceScore: Double
-    let matchType: MatchType  // exact, prefix, fuzzy, synonym
+    let matchType: MatchType
 }
 ```
 
@@ -60,12 +65,34 @@ struct SearchResult: Identifiable {
 
 ### Species
 ```swift
-enum Species: String, Codable, CaseIterable {
+enum Species: String, Codable, CaseIterable, Identifiable {
     case dog
     case cat
     case smallMammal
     case bird
     case reptile
+
+    var id: String { rawValue }
+
+    var displayName: String {
+        switch self {
+        case .dog: return "Dogs"
+        case .cat: return "Cats"
+        case .smallMammal: return "Small Mammals"
+        case .bird: return "Birds"
+        case .reptile: return "Reptiles"
+        }
+    }
+
+    var icon: String {
+        switch self {
+        case .dog: return "dog"
+        case .cat: return "cat"
+        case .smallMammal: return "hare"
+        case .bird: return "bird"
+        case .reptile: return "lizard"
+        }
+    }
 }
 ```
 
@@ -76,22 +103,26 @@ enum Severity: String, Codable, CaseIterable {
     case moderate
     case high
     case severe
-    
+
+    var displayName: String {
+        rawValue.capitalized
+    }
+
     var color: Color {
         switch self {
-        case .low: return .green
-        case .moderate: return .yellow
-        case .high: return .orange
-        case .severe: return .red
+        case .low: return Color(red: 144/255, green: 238/255, blue: 144/255)      // Light green
+        case .moderate: return Color(red: 255/255, green: 215/255, blue: 0/255)   // Gold
+        case .high: return Color(red: 255/255, green: 165/255, blue: 0/255)       // Orange
+        case .severe: return Color(red: 255/255, green: 68/255, blue: 68/255)     // Red
         }
     }
-    
-    var displayName: String {
+
+    var description: String {
         switch self {
-        case .low: return "Low"
-        case .moderate: return "Moderate"
-        case .high: return "High"
-        case .severe: return "Severe"
+        case .low: return "Mild GI upset possible; monitor at home"
+        case .moderate: return "Vet consultation recommended"
+        case .high: return "Seek veterinary care promptly"
+        case .severe: return "Potentially life-threatening; emergency care needed"
         }
     }
 }
@@ -99,16 +130,21 @@ enum Severity: String, Codable, CaseIterable {
 
 ### Category
 ```swift
-enum Category: String, Codable, CaseIterable {
+enum Category: String, Codable, CaseIterable, Identifiable {
     case foods
     case plants
     case medications
     case cleaningProducts
     case essentialOils
     case garageGarden
-    case gardenProducts
     case recreationalSubstances
     case holidayHazards
+    case environmentalHazards
+    case householdItems
+    case otherHazards
+    case animalEncounters
+
+    var id: String { rawValue }
 
     var displayName: String {
         switch self {
@@ -118,25 +154,41 @@ enum Category: String, Codable, CaseIterable {
         case .cleaningProducts: return "Cleaning Products"
         case .essentialOils: return "Essential Oils"
         case .garageGarden: return "Garage & Garden"
-        case .gardenProducts: return "Garden Products"
         case .recreationalSubstances: return "Recreational Substances"
         case .holidayHazards: return "Holiday Hazards"
+        case .environmentalHazards: return "Environmental Hazards"
+        case .householdItems: return "Household Items"
+        case .otherHazards: return "Other Hazards"
+        case .animalEncounters: return "Animal Encounters"
         }
     }
 
-    var iconName: String {
+    var icon: String {
         switch self {
         case .foods: return "fork.knife"
-        case .plants: return "leaf"
-        case .medications: return "pills"
+        case .plants: return "leaf.fill"
+        case .medications: return "pills.fill"
         case .cleaningProducts: return "bubbles.and.sparkles"
-        case .essentialOils: return "drop"
-        case .garageGarden: return "car"
-        case .gardenProducts: return "shovel"
-        case .recreationalSubstances: return "exclamationmark.triangle"
-        case .holidayHazards: return "gift"
+        case .essentialOils: return "drop.fill"
+        case .garageGarden: return "wrench.and.screwdriver.fill"
+        case .recreationalSubstances: return "smoke.fill"
+        case .holidayHazards: return "gift.fill"
+        case .environmentalHazards: return "exclamationmark.triangle.fill"
+        case .householdItems: return "house.fill"
+        case .otherHazards: return "exclamationmark.octagon.fill"
+        case .animalEncounters: return "pawprint.fill"
         }
     }
+}
+```
+
+### MatchType
+```swift
+enum MatchType: String, Codable {
+    case exact
+    case prefix
+    case fuzzy
+    case synonym
 }
 ```
 
@@ -159,14 +211,14 @@ struct EmergencyContacts {
         displayPhone: "(888) 426-4435",
         note: "Consultation fee may apply"
     )
-    
+
     static let petPoisonHelpline = EmergencyContact(
         name: "Pet Poison Helpline",
         phone: "8557647661",
         displayPhone: "(855) 764-7661",
         note: "Consultation fee may apply"
     )
-    
+
     static let all: [EmergencyContact] = [aspca, petPoisonHelpline]
 }
 ```
@@ -283,6 +335,7 @@ The SQLite database should include:
     "ASPCA Animal Poison Control Center",
     "Merck Veterinary Manual",
     "Pet Poison Helpline"
-  ]
+  ],
+  "relatedEntries": null
 }
 ```

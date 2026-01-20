@@ -15,7 +15,9 @@ struct ArticleDetailView: View {
                 DisclaimerView()
 
                 // Species risks
-                SeveritySection(speciesRisks: item.speciesRisks)
+                if !item.speciesRisks.isEmpty {
+                    SeveritySection(speciesRisks: item.speciesRisks)
+                }
 
                 // Description
                 section(title: "What is it?") {

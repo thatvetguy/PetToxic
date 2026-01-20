@@ -72,7 +72,6 @@ enum Category: String, Codable, CaseIterable, Identifiable {
     case cleaningProducts
     case essentialOils
     case garageGarden
-    case gardenProducts
     case recreationalSubstances
     case holidayHazards
     case environmentalHazards
@@ -90,7 +89,6 @@ enum Category: String, Codable, CaseIterable, Identifiable {
         case .cleaningProducts: return "Cleaning Products"
         case .essentialOils: return "Essential Oils"
         case .garageGarden: return "Garage & Garden"
-        case .gardenProducts: return "Garden Products"
         case .recreationalSubstances: return "Recreational Substances"
         case .holidayHazards: return "Holiday Hazards"
         case .environmentalHazards: return "Environmental Hazards"
@@ -107,9 +105,8 @@ enum Category: String, Codable, CaseIterable, Identifiable {
         case .medications: return "pills.fill"
         case .cleaningProducts: return "bubbles.and.sparkles"
         case .essentialOils: return "drop.fill"
-        case .garageGarden: return "car.fill"
-        case .gardenProducts: return "shovel.fill"
-        case .recreationalSubstances: return "exclamationmark.triangle.fill"
+        case .garageGarden: return "wrench.and.screwdriver.fill"
+        case .recreationalSubstances: return "smoke.fill"
         case .holidayHazards: return "gift.fill"
         case .environmentalHazards: return "exclamationmark.triangle.fill"
         case .householdItems: return "house.fill"
