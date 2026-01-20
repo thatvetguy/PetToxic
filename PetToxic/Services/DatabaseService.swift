@@ -7749,7 +7749,7 @@ class DatabaseService {
                     "Sontas HB et al.: Estrogen-induced myelotoxicity in dogs: A review. Can Vet J. 2009",
                     "Berger D: Canine Alopecia Secondary to Human Topical Hormone Replacement Therapy. JAAHA. 2015"
                 ],
-                relatedEntries: nil
+                relatedEntries: ["ccdd0011-eeff-2233-4455-667788990011"]
             ),
 
             // MARK: - Alpha Lipoic Acid (ALA)
@@ -8300,6 +8300,174 @@ class DatabaseService {
                     "Meekins JM, et al. 'Retinopathy associated with ivermectin toxicosis in five cats.' JAVMA. 2015"
                 ],
                 relatedEntries: ["00778899-aabb-ccdd-eeff-001122334455"]
+            ),
+
+            // MARK: - Estrogen Medications & Hormone Therapies
+            ToxicItem(
+                id: UUID(uuidString: "ccdd0011-eeff-2233-4455-667788990011")!,
+                name: "Estrogen Medications & Hormone Therapies",
+                alternateNames: [
+                    // Condition names
+                    "estrogen toxicosis",
+                    "estrogen toxicity",
+                    "estrogen poisoning",
+                    "hyperestrogenism",
+                    "hyperoestrogenism",
+                    "estrogen-induced myelotoxicity",
+                    "estrogen-induced aplastic anemia",
+
+                    // Veterinary medications - Generic names
+                    "diethylstilbestrol",
+                    "DES",
+                    "estradiol",
+                    "estradiol cypionate",
+                    "ECP",
+                    "estriol",
+                    "stilbestrol",
+
+                    // Veterinary medications - Brand names
+                    "Incurin",
+
+                    // Human HRT - Generic terms
+                    "hormone replacement therapy",
+                    "HRT",
+                    "estrogen cream",
+                    "estrogen gel",
+                    "estrogen patch",
+                    "estrogen spray",
+                    "transdermal estrogen",
+                    "topical estrogen",
+                    "menopausal hormone therapy",
+
+                    // Human HRT - Brand names (patches)
+                    "Vivelle",
+                    "Vivelle-Dot",
+                    "Climara",
+                    "Estraderm",
+                    "Alora",
+                    "Minivelle",
+                    "Menostar",
+
+                    // Human HRT - Brand names (gels/creams)
+                    "Estrogel",
+                    "Divigel",
+                    "Elestrin",
+                    "Estrasorb",
+
+                    // Human HRT - Brand names (sprays)
+                    "Evamist",
+
+                    // Human HRT - Brand names (vaginal)
+                    "Vagifem",
+                    "Estring",
+                    "Femring",
+                    "Premarin cream",
+                    "Estrace cream",
+
+                    // Human HRT - Combination products
+                    "Prempro",
+                    "Premphase",
+                    "Combipatch",
+                    "Activella",
+                    "FemHRT",
+
+                    // Bone marrow terms
+                    "aplastic anemia",
+                    "bone marrow suppression",
+                    "pancytopenia",
+                    "myelotoxicity",
+
+                    // Common search terms
+                    "dog ate estrogen",
+                    "dog ate hormone cream",
+                    "dog licked estrogen",
+                    "dog licked HRT",
+                    "dog ate estrogen patch",
+                    "dog chewed estrogen patch",
+                    "dog vulva swollen",
+                    "spayed dog vulva swelling",
+                    "male dog enlarged nipples",
+                    "dog hair loss estrogen",
+                    "hormone replacement poisoning dog"
+                ],
+                categories: [.medications],
+                imageAsset: "estrogen_medications",
+                description: "Estrogen toxicosis occurs when dogs are exposed to excessive estrogen from veterinary medications (like diethylstilbestrol/DES for incontinence), human hormone replacement therapy (HRT) products, or rarely from ingestion of large amounts of birth control pills. The most serious consequence is bone marrow suppression (aplastic anemia), which can be fatal. However, many cases—especially from secondary exposure to topical HRT creams, gels, or patches—present with feminization signs (vulvar swelling, hair loss, mammary enlargement) that typically resolve once exposure stops. Secondary exposure to topical HRT is increasingly common: dogs are exposed by licking owners' skin after application, being held/petted, or chewing discarded patches. Smaller dogs are at higher risk due to their body weight. If you use topical hormone products, apply them to areas your pet cannot reach or lick, wash hands thoroughly after application, and dispose of patches securely. Bone marrow suppression develops over days to weeks and may not be immediately apparent. Signs include lethargy, pale gums, bleeding, bruising, fever, and weakness. Individual sensitivity varies—some dogs develop fatal aplasia while others show only mild effects from the same exposure. If your pet has been exposed to estrogen products, contact a veterinarian even if they appear normal initially.",
+                toxicityInfo: "MECHANISM: Estrogen may stimulate thymic tissue to produce a myelopoiesis-inhibitory factor. This factor causes death of hematopoietic stem cells, leading to pancytopenia (decreased production of all blood cell types). Individual sensitivity varies significantly—some dogs develop fatal bone marrow aplasia while others show minimal effects from the same exposure. BONE MARROW SUPPRESSION STAGES: The classic estrogen-induced bone marrow suppression progresses over approximately 20+ days in three stages: Stage 1 (days 0-13): Brief thrombocytosis (increased platelets) followed by thrombocytopenia (decreased platelets). Stage 2 (days 13-20): Neutrophilia (increased white cells) followed by neutropenia (decreased white cells). Stage 3: Either recovery OR progression to aplasia (bone marrow failure), depending on dose and individual sensitivity. EXPOSURE SOURCES: 1) Veterinary estrogen medications (DES for incontinence, estradiol) — toxicity can occur even at recommended doses due to idiosyncratic sensitivity. 2) Human HRT products — topical creams, gels, sprays, and patches. Secondary exposure occurs when dogs lick owners' skin after application, are held/petted, or chew discarded patches. 3) Massive ingestion of birth control pills (rare). 4) Endogenous estrogen from tumors (not toxicosis, but same clinical picture).",
+                onsetTime: OnsetTime(
+                    early: "FEMINIZATION SIGNS (more common with topical HRT exposure): Vulvar swelling, mammary enlargement, hair loss, and behavioral changes may develop within days to weeks of exposure onset and typically resolve weeks to months after exposure stops. Hair regrowth may take up to 6 months.",
+                    delayed: "BONE MARROW SUPPRESSION: Effects develop over days to weeks (not immediately apparent). The classic progression occurs over approximately 20+ days, with platelet changes occurring first, followed by white blood cell changes, and finally either recovery or aplasia. Pet may appear normal initially. Signs of bone marrow failure include lethargy, pale gums, bleeding, bruising, fever, and weakness. Because effects are delayed, veterinary monitoring is important even if the pet appears well after exposure."
+                ),
+                symptoms: [
+                    // Feminization signs (more common with topical HRT exposure)
+                    "Vulvar swelling or enlargement (even in spayed females)",
+                    "Vaginal discharge or bleeding",
+                    "Mammary gland enlargement (including in males)",
+                    "Attractiveness to male dogs",
+                    "Estrus behavior in spayed females",
+                    "Male feminization (small penis, enlarged nipples)",
+                    "Symmetrical hair loss (alopecia)",
+
+                    // Bone marrow suppression signs (more serious)
+                    "Lethargy and weakness",
+                    "Pale gums and mucous membranes",
+                    "Exercise intolerance",
+                    "Collapse",
+                    "Petechiae (tiny red spots on skin/gums)",
+                    "Ecchymoses (bruising)",
+                    "Bleeding from gums, nose (epistaxis), or other sites",
+                    "Bloody urine (hematuria)",
+                    "Bloody stool (melena)",
+                    "Vomiting blood (hematemesis)",
+                    "Fever",
+                    "Loss of appetite",
+
+                    // Other signs
+                    "Perioral edema (swelling around mouth)",
+                    "Perineal edema",
+                    "Difficulty breathing (dyspnea)",
+                    "Rapid breathing (tachypnea)",
+                    "Rapid heart rate (tachycardia)"
+                ],
+                speciesRisks: [
+                    SpeciesRisk(
+                        species: .dog,
+                        severity: .high,
+                        notes: "Dogs are susceptible to estrogen-induced bone marrow suppression, which can progress to fatal aplastic anemia. Effects develop over days to weeks (not immediately). Individual sensitivity varies—some dogs are severely affected while others tolerate the same exposure. Bone marrow suppression is more common with veterinary estrogen medications, large ingestions, or prolonged exposure. Secondary exposure to topical human HRT products more commonly causes feminization signs (vulvar swelling, hair loss, mammary changes) that typically resolve once exposure stops, though bone marrow effects are still possible with prolonged exposure. Smaller dogs are at higher risk from HRT exposure due to their body weight."
+                    ),
+                    SpeciesRisk(
+                        species: .cat,
+                        severity: .moderate,
+                        notes: "Estrogen-induced bone marrow suppression has rarely been reported in cats. Diethylstilbestrol (DES) is generally avoided in cats due to concerns about liver, heart, and pancreas problems. Secondary exposure to human HRT can cause signs of heat (yowling, rolling, behavioral changes) in spayed females and mammary changes. If your cat has been exposed to estrogen products, contact a veterinarian."
+                    ),
+                    SpeciesRisk(
+                        species: .smallMammal,
+                        severity: .moderate,
+                        notes: "Limited data available for small mammals. Ferrets have been reported with signs following topical estrogen exposure. Contact an exotic animal veterinarian if exposure occurs."
+                    )
+                ],
+                preventionTips: [
+                    "Keep all hormone medications (pills, creams, gels, patches) securely stored away from pets",
+                    "If you use topical HRT products, apply them to areas your pet cannot reach or lick—inner thighs rather than wrists or forearms are safer",
+                    "Wash hands thoroughly after applying topical hormone products before petting your dog",
+                    "Do not allow your dog to lick your skin after applying hormone creams, gels, or sprays",
+                    "Dispose of used estrogen patches in a secure trash container your pet cannot access—dogs have been poisoned by chewing discarded patches",
+                    "Be aware that estrogen can transfer through skin-to-skin and skin-to-fur contact",
+                    "Smaller dogs are at higher risk from secondary HRT exposure due to their body weight",
+                    "If your dog receives veterinary estrogen medication (DES), follow your veterinarian's dosing instructions exactly and report any unusual signs promptly",
+                    "Know the signs of estrogen toxicity: vulvar swelling, hair loss, and mammary changes (feminization); lethargy, pale gums, bruising, and bleeding (bone marrow suppression)"
+                ],
+                sources: [
+                    "VIN (Veterinary Information Network): Estrogen Toxicosis",
+                    "PMC/Can Vet J: 'Estrogen-induced myelotoxicity in dogs: A review'",
+                    "Merck Veterinary Manual: Pharmacotherapeutics in Urinary Incontinence in Dogs and Cats",
+                    "PetMD: Diethylstilbestrol for Dogs; Hormone Replacement Product Poisoning in Dogs",
+                    "Veterinary Partner (VIN): Diethylstilbestrol (DES)",
+                    "VIN News Service: 'Hormone replacement skin products affect users' pets, confound veterinarians'",
+                    "Sjöström et al. 'A review of adverse events in animals and children after secondary exposure to transdermal hormone-containing medicinal products.' Veterinary Record Open. 2022",
+                    "American College of Veterinary Pharmacists: Estrogen"
+                ],
+                relatedEntries: ["77ee5566-ff00-1122-3344-556677889900"]
             )
         ]
     }
