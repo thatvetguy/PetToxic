@@ -7465,6 +7465,291 @@ class DatabaseService {
                     "Pet Poison Helpline: Thyroid Medications"
                 ],
                 relatedEntries: nil
+            ),
+
+            // MARK: - Decongestants (Pseudoephedrine & Phenylephrine)
+            ToxicItem(
+                id: UUID(uuidString: "66dd4455-eeff-0011-2233-445566778899")!,
+                name: "Decongestants (Pseudoephedrine & Phenylephrine)",
+                alternateNames: [
+                    // General terms
+                    "decongestant",
+                    "nasal decongestant",
+                    "cold medicine",
+                    "cold medication",
+                    "flu medicine",
+                    "flu medication",
+                    "sinus medicine",
+                    "sinus medication",
+                    "cough and cold",
+
+                    // PSEUDOEPHEDRINE — More toxic
+                    "pseudoephedrine",
+                    "PSE",
+                    "Sudafed",
+                    "Sudafed 12 Hour",
+                    "Sudafed 24 Hour",
+                    "Claritin-D",
+                    "Allegra-D",
+                    "Zyrtec-D",
+                    "Mucinex-D",
+                    "Benadryl-D",
+                    "Advil Cold & Sinus",
+                    "Aleve-D",
+                    "Tylenol Sinus",
+                    "Contac",
+                    "Dimetapp",
+
+                    // PHENYLEPHRINE — Less toxic
+                    "phenylephrine",
+                    "PE",
+                    "Sudafed PE",
+                    "Neo-Synephrine",
+                    "Preparation H",
+                    "Sinex",
+                    "Triaminic",
+                    "Theraflu",
+                    "NyQuil",
+                    "DayQuil",
+
+                    // Other related decongestants (imidazolines)
+                    "oxymetazoline",
+                    "Afrin",
+                    "tetrahydrozoline",
+                    "Visine",
+                    "naphazoline",
+                    "Clear Eyes",
+
+                    // Common search queries
+                    "dog ate Sudafed",
+                    "cat ate cold medicine",
+                    "dog ate Claritin-D",
+                    "pet ate decongestant",
+                    "dog ate NyQuil",
+                    "dog ate DayQuil"
+                ],
+                categories: [.medications],
+                imageAsset: "medications_decongestants",
+                description: "Decongestants like pseudoephedrine (Sudafed) and phenylephrine (Sudafed PE) are common ingredients in cold, flu, and allergy medications. They stimulate the nervous system and can cause serious toxic effects in pets. PSEUDOEPHEDRINE IS MORE DANGEROUS than phenylephrine. It acts like an amphetamine stimulant and can cause severe cardiac and neurological effects. Signs can appear within 15-30 minutes with immediate-release products, but may be DELAYED 3-6+ hours with extended-release formulations. CHECK FOR COMBINATION PRODUCTS: Many cold/flu medications contain MULTIPLE active ingredients. Always check for acetaminophen (toxic to cats), ibuprofen, or other drugs that may pose additional risks.",
+                toxicityInfo: "PSEUDOEPHEDRINE: A sympathomimetic drug that stimulates adrenergic receptors by releasing norepinephrine. Effects are similar to amphetamine toxicity. Causes stimulation of the cardiovascular and central nervous systems. Signs can be severe and death has been reported. Pseudoephedrine is sold behind the pharmacy counter (requires ID) due to its use in methamphetamine production — if the owner had to show ID and ask for the product, it likely contains pseudoephedrine. PHENYLEPHRINE: Has LOW ORAL BIOAVAILABILITY, making it less toxic than pseudoephedrine when swallowed. Per ASPCA APCC data, the most common signs in dogs are vomiting, hyperactivity, and lethargy. Serious cardiovascular and neurological effects are possible but less common than with pseudoephedrine. IMIDAZOLINE DECONGESTANTS (Afrin, Visine): Oxymetazoline, tetrahydrozoline, and naphazoline found in nasal sprays and eye drops can cause rapid-onset bradycardia, hypotension, CNS depression, and hypothermia. Effects can begin within minutes.",
+                onsetTime: OnsetTime(
+                    early: "PSEUDOEPHEDRINE: Immediate-release — Signs can appear within 15-30 minutes. Extended-release (12-hour or 24-hour) — Signs may be DELAYED 3-6+ hours; progression may be subtle at first. PHENYLEPHRINE: Signs typically appear within 1-2 hours, usually limited to GI upset and mild agitation.",
+                    delayed: "PSEUDOEPHEDRINE: Extended-release products can cause prolonged toxicity. Severe signs may develop hours after initial exposure. Duration depends on formulation and amount ingested. IMIDAZOLINES (Afrin, Visine): Very rapid onset — within minutes. Effects may last 12-24 hours."
+                ),
+                symptoms: [
+                    // Cardiovascular
+                    "Tachycardia (rapid heart rate)",
+                    "Hypertension (high blood pressure)",
+                    "Reflex bradycardia (slow heart rate — response to high BP)",
+                    "Cardiac arrhythmias",
+                    "Pale gums",
+
+                    // CNS
+                    "Mydriasis (dilated pupils)",
+                    "Agitation or restlessness",
+                    "Hyperactivity",
+                    "Nervousness",
+                    "Trembling or tremors",
+                    "Muscle rigidity",
+                    "Seizures",
+
+                    // Temperature/Metabolic
+                    "Hyperthermia (elevated body temperature)",
+                    "Panting",
+
+                    // GI (especially phenylephrine)
+                    "Vomiting",
+                    "Nausea",
+                    "Diarrhea",
+                    "Drooling",
+
+                    // Other
+                    "Lethargy (some cases)",
+                    "Ataxia (incoordination)",
+                    "Vocalization",
+                    "Death (severe cases, especially pseudoephedrine)"
+                ],
+                speciesRisks: [
+                    SpeciesRisk(
+                        species: .dog,
+                        severity: .high,
+                        notes: "Dogs are commonly affected when they chew into cold/flu medication packages. Pseudoephedrine can cause severe stimulant toxicity similar to amphetamines. Extended-release products are especially concerning because signs may be delayed for hours. ALWAYS check if the medication contains other toxic ingredients like acetaminophen or ibuprofen."
+                    ),
+                    SpeciesRisk(
+                        species: .cat,
+                        severity: .high,
+                        notes: "Cats are sensitive to sympathomimetic drugs. Additionally, many cold/flu medications contain ACETAMINOPHEN, which is highly toxic to cats. Even a single extra-strength acetaminophen tablet can be fatal to a cat. Always check all active ingredients in any medication a cat may have ingested."
+                    ),
+                    SpeciesRisk(
+                        species: .smallMammal,
+                        severity: .high,
+                        notes: "Small body size makes decongestant toxicity dangerous. Cardiovascular and CNS effects can be life-threatening. Contact an exotic animal veterinarian immediately."
+                    ),
+                    SpeciesRisk(
+                        species: .bird,
+                        severity: .high,
+                        notes: "Birds are highly sensitive to stimulant effects. Cardiovascular effects can be rapidly fatal. Contact an avian veterinarian or poison control immediately."
+                    ),
+                    SpeciesRisk(
+                        species: .reptile,
+                        severity: .moderate,
+                        notes: "Limited data available. Cardiovascular effects expected. Contact an exotic animal veterinarian for guidance."
+                    )
+                ],
+                preventionTips: [
+                    "Store ALL cold, flu, and allergy medications in secure cabinets out of pet reach",
+                    "Be aware that many products contain MULTIPLE active ingredients — always check the label",
+                    "Never leave medication packages on counters, nightstands, or in purses accessible to pets",
+                    "Remember: if you had to show ID to buy it, it contains pseudoephedrine — the more dangerous decongestant",
+                    "Extended-release formulations can cause DELAYED signs — don't assume your pet is fine just because they seem normal initially",
+                    "Weekly pill organizers are easily chewed open by pets — store them in closed cabinets",
+                    "Keep nasal sprays and eye drops containing decongestants away from pets — these can cause rapid toxicity if chewed",
+                    "If your pet ingests a combination product, immediately identify ALL active ingredients to report to your veterinarian",
+                    "Pick up dropped pills immediately — many dogs will eat anything"
+                ],
+                sources: [
+                    "VIN (Veterinary Information Network): Decongestant Toxicity",
+                    "ASPCA Animal Poison Control Center: Pseudoephedrine Toxicity in Pets",
+                    "Merck Veterinary Manual: Toxicoses in Animals from Human Cold and Allergy Medications (2025)",
+                    "dvm360: Toxicology Brief — Phenylephrine Ingestion in Dogs (Wegenast, 2012)",
+                    "American College of Veterinary Pharmacists: Pseudoephedrine & Phenylephrine",
+                    "ASPCA: Can Human Allergy Medication Be Harmful for Pets?",
+                    "ASPCApro: Allergy Medications That Are Toxic for Pets",
+                    "AVMA: Pseudoephedrine Alert Issued"
+                ],
+                relatedEntries: ["bb223344-5566-7788-99aa-bbccddeeff11", "11889900-aabb-ccdd-eeff-112233445566"]
+            ),
+
+            // MARK: - Birth Control Pills
+            ToxicItem(
+                id: UUID(uuidString: "77ee5566-ff00-1122-3344-556677889900")!,
+                name: "Birth Control Pills",
+                alternateNames: [
+                    // General terms
+                    "birth control",
+                    "birth control pill",
+                    "contraceptive",
+                    "contraceptive pill",
+                    "oral contraceptive",
+                    "the pill",
+                    "hormone pill",
+
+                    // Common brand names
+                    "Yaz",
+                    "Yasmin",
+                    "Ortho Tri-Cyclen",
+                    "Lo Loestrin",
+                    "Loestrin",
+                    "Seasonique",
+                    "NuvaRing",
+                    "Xulane",
+                    "Beyaz",
+                    "Alesse",
+                    "Levlen",
+                    "Nordette",
+                    "Mirena",
+                    "Skyla",
+                    "Nexplanon",
+                    "Depo-Provera",
+
+                    // Hormone names
+                    "estrogen pill",
+                    "progestin",
+                    "progesterone",
+                    "ethinyl estradiol",
+                    "norgestimate",
+                    "levonorgestrel",
+
+                    // Related products - MORE DANGEROUS
+                    "hormone replacement therapy",
+                    "HRT",
+                    "Premarin",
+                    "estradiol",
+                    "DES",
+                    "diethylstilbestrol",
+
+                    // Common search queries
+                    "dog ate birth control",
+                    "cat ate birth control pill",
+                    "dog ate my pill pack",
+                    "pet ate hormone pill"
+                ],
+                categories: [.medications],
+                imageAsset: "medications_birth_control",
+                description: "Birth control pills contain low doses of hormones (estrogen and/or progestin) and are generally considered to have LOW TOXICITY for pets. Most birth control pills contain only 0.020-0.035 mg of estrogen per tablet — far below levels that would cause toxicity. A medium-sized dog would need to eat over 100 active pills to reach a concerning dose. THE PACKAGING IS OFTEN MORE CONCERNING THAN THE PILLS: Dogs are often attracted to the plastic pill packs. Ingesting large amounts of plastic can cause intestinal obstruction, which may require surgery. SPECIAL SITUATIONS THAT ARE MORE CONCERNING: Pills containing IRON supplements (some placebo pills) — iron can be toxic. HORMONE REPLACEMENT THERAPY (HRT) products — contain MUCH higher hormone levels. Massive ingestion (hundreds of pills). Birds are especially sensitive to estrogen.",
+                toxicityInfo: "HORMONE TOXICITY: Birth control pills typically contain 21 active hormone pills and 7 placebo pills per pack. The active pills contain very low doses of estrogen (0.020-0.035 mg) and progestin. These doses are far below the level needed to cause significant toxicity. Even ingesting an entire 28-day pack is unlikely to cause hormone-related problems in most pets. IRON IN PLACEBO PILLS: Some birth control packs include iron supplements (ferrous fumarate) in the 7 placebo pills. If a pet ingests multiple iron-containing pills, iron toxicity can occur, causing GI irritation, liver damage, and other serious effects. BONE MARROW SUPPRESSION: Very high estrogen doses can cause aplastic anemia and bone marrow suppression (decreased production of red blood cells, white blood cells, and platelets). However, this requires massive ingestion — far more than a single pill pack. HORMONE REPLACEMENT THERAPY (HRT) IS MORE DANGEROUS: HRT products contain much higher concentrations of estrogen than birth control pills. Ingestion of HRT medications warrants more aggressive evaluation.",
+                onsetTime: OnsetTime(
+                    early: "Most ingestions cause NO SIGNS or only mild GI upset: vomiting within 1-2 hours, diarrhea, decreased appetite. Iron toxicity (if iron-containing pills ingested): GI signs within 6 hours.",
+                    delayed: "If bone marrow suppression occurs (rare, requires massive ingestion): Signs may develop 1-2 weeks post-exposure — weakness, pale gums, increased bleeding/bruising. Note: Most pet owners will see NO delayed signs from typical birth control pill ingestion."
+                ),
+                symptoms: [
+                    // Common (usually only these)
+                    "Vomiting (mild)",
+                    "Diarrhea (mild)",
+                    "Decreased appetite",
+                    "GI upset",
+
+                    // Rare (massive ingestion or HRT)
+                    "Lethargy",
+                    "Weakness",
+                    "Pale gums (if bone marrow suppression)",
+                    "Increased bleeding or bruising (if bone marrow suppression)",
+
+                    // Iron toxicity (if iron-containing pills)
+                    "Bloody vomiting or diarrhea (iron toxicity)",
+                    "Abdominal pain (iron toxicity)",
+
+                    // Packaging concerns
+                    "Vomiting pieces of plastic",
+                    "Loss of appetite (possible obstruction)",
+                    "Abdominal discomfort"
+                ],
+                speciesRisks: [
+                    SpeciesRisk(
+                        species: .dog,
+                        severity: .low,
+                        notes: "Dogs commonly chew into birth control pill packs, but actual hormone toxicity is rare. The LOW estrogen content means a 25-pound dog would need to eat 140+ active pills to reach toxic levels. The PACKAGING is often more concerning — swallowed plastic can cause intestinal obstruction. Watch for vomiting, decreased appetite, or lethargy that could indicate obstruction. If only a few pills were eaten, observation at home is usually appropriate."
+                    ),
+                    SpeciesRisk(
+                        species: .cat,
+                        severity: .low,
+                        notes: "Cats rarely ingest birth control pills, but if they do, the low hormone content makes serious toxicity unlikely. Monitor for mild GI upset. Contact your veterinarian if the cat ingested a large number of pills or any packaging material."
+                    ),
+                    SpeciesRisk(
+                        species: .smallMammal,
+                        severity: .moderate,
+                        notes: "Small body size may increase sensitivity to hormones. Contact an exotic animal veterinarian for guidance on any ingestion."
+                    ),
+                    SpeciesRisk(
+                        species: .bird,
+                        severity: .moderate,
+                        notes: "BIRDS ARE MORE SENSITIVE to estrogen than mammals. Even lower doses of estrogen can cause bone marrow suppression in birds. Any birth control or estrogen ingestion in a bird should be evaluated by an avian veterinarian."
+                    ),
+                    SpeciesRisk(
+                        species: .reptile,
+                        severity: .low,
+                        notes: "Limited data available. Hormone effects likely minimal. Contact an exotic animal veterinarian if concerned."
+                    )
+                ],
+                preventionTips: [
+                    "Store birth control pills in closed medicine cabinets or drawers — dogs are often attracted to the crinkly plastic packaging",
+                    "Don't leave pill packs on counters, nightstands, or in purses accessible to pets",
+                    "Dispose of empty pill packs in closed trash containers",
+                    "Know if your birth control contains iron in the placebo pills — this information affects toxicity assessment",
+                    "Keep HORMONE REPLACEMENT THERAPY (HRT) products especially secure — these are more dangerous than birth control pills",
+                    "If your dog chews a pill pack, try to determine how many pills AND how much plastic was consumed",
+                    "Save the packaging to show your veterinarian — different formulations have different hormone and iron content"
+                ],
+                sources: [
+                    "VIN (Veterinary Information Network): Birth Control Pills Toxicity",
+                    "ASPCA Animal Poison Control Center: Birth Control Pill and HRT Exposure in Pets",
+                    "Pet Poison Helpline: Human Medications Poisonous to Pets — Birth Control",
+                    "PetMD: My Dog Ate Birth Control — Now What?",
+                    "American College of Veterinary Pharmacists: Estrogen Toxicity",
+                    "Sontas HB et al.: Estrogen-induced myelotoxicity in dogs: A review. Can Vet J. 2009",
+                    "Berger D: Canine Alopecia Secondary to Human Topical Hormone Replacement Therapy. JAAHA. 2015"
+                ],
+                relatedEntries: nil
             )
         ]
     }
