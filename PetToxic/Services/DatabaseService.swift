@@ -503,7 +503,7 @@ class DatabaseService {
                     "Never use salt to induce vomiting—this outdated practice can cause salt poisoning"
                 ],
                 sources: ["Veterinary Information Network (VIN)", "ASPCA Animal Poison Control Center", "Pet Poison Helpline"],
-                relatedEntries: nil
+                relatedEntries: ["00112233-4455-6677-8899-aabbccddef01"]
             ),
 
             // MARK: - Fatty Foods & Grease
@@ -740,7 +740,7 @@ class DatabaseService {
                     "Never intentionally feed moldy food to pets—even 'a little mold' can be dangerous"
                 ],
                 sources: ["ASPCA Animal Poison Control Center", "Pet Poison Helpline", "Merck Veterinary Manual"],
-                relatedEntries: nil
+                relatedEntries: ["00112233-4455-6677-8899-aabbccddef15"]
             ),
 
             // MARK: - Lilies (True Lilies)
@@ -3971,7 +3971,7 @@ class DatabaseService {
                     "If your pet ingests fertilizer, try to identify the specific product and ingredients before calling your veterinarian"
                 ],
                 sources: ["VIN Toxicology Resources: Fertilizers and Bone/Blood Meal", "ASPCA Animal Poison Control Center: Fertilizers: A Growing Problem for Pets", "Pet Poison Helpline: Bone Meal & Blood Meal Toxicity", "PetMD: My Dog Ate Fertilizer", "DVM360: Spring Toxin - Fertilizers"],
-                relatedEntries: nil
+                relatedEntries: ["e5f6a7b8-9c0d-4e1f-b2a3-4c5d6e7f8a9b"]
             ),
 
             // MARK: - Pyrethrins & Pyrethroids (Permethrin)
@@ -5001,7 +5001,7 @@ class DatabaseService {
                     "If your pet is diagnosed with zinc toxicosis from an unknown source, carefully search your home for accessible zinc objects"
                 ],
                 sources: ["Veterinary Information Network (VIN)", "ASPCA Animal Poison Control Center", "Pet Poison Helpline", "Merck Veterinary Manual", "Journal of Veterinary Emergency and Critical Care"],
-                relatedEntries: nil
+                relatedEntries: ["d0e1f2a3-4b5c-6d7e-8f9a-0b1c2d3e4f5a"]
             ),
 
             // MARK: - Liquid Potpourri & Scented Products
@@ -5074,7 +5074,7 @@ class DatabaseService {
                     "Keep reed diffusers out of reach—cats may knock them over and walk through the spilled oil"
                 ],
                 sources: ["Veterinary Information Network (VIN)", "ASPCA Animal Poison Control Center", "Pet Poison Helpline", "Merck Veterinary Manual"],
-                relatedEntries: nil
+                relatedEntries: ["11223344-5566-7788-99aa-bbccddeeff00", "88990011-aabb-ccdd-eeff-223344556677"]
             ),
 
             // MARK: - Ice Packs
@@ -5294,7 +5294,7 @@ class DatabaseService {
                     "Know the difference: superglue (cyanoacrylate) is low toxicity; expanding glues like Gorilla Glue Original are dangerous and require emergency care"
                 ],
                 sources: ["Veterinary Information Network (VIN)", "ASPCA Animal Poison Control Center", "Pet Poison Helpline"],
-                relatedEntries: nil
+                relatedEntries: ["d8c34930-fe78-414c-a182-49521dbfc266"]
             ),
 
             // MARK: - Essential Oils (Tea Tree, Pennyroyal, Eucalyptus & Others)
@@ -5545,7 +5545,7 @@ class DatabaseService {
                     "If soap contacts your pet's eyes, flush gently with water and contact your veterinarian if irritation persists"
                 ],
                 sources: ["Veterinary Information Network (VIN)", "ASPCA Animal Poison Control Center", "Merck Veterinary Manual", "Pet Poison Helpline"],
-                relatedEntries: ["b8c9d0e1-2f3a-4b5c-6d7e-8f9a0b1c2d3e"]
+                relatedEntries: ["b8c9d0e1-2f3a-4b5c-6d7e-8f9a0b1c2d3e", "44556677-8899-aabb-ccdd-eeff00112233", "55667788-99aa-bbcc-ddee-ff0011223344", "99001122-aabb-ccdd-eeff-334455667788"]
             ),
 
             // MARK: - Bleach
@@ -5610,7 +5610,7 @@ class DatabaseService {
                     "Use extra caution with birds—even diluted bleach fumes can cause respiratory distress"
                 ],
                 sources: ["Veterinary Information Network (VIN)", "ASPCA Animal Poison Control Center", "Merck Veterinary Manual", "Pet Poison Helpline"],
-                relatedEntries: nil
+                relatedEntries: ["66778899-aabb-ccdd-eeff-001122334455"]
             ),
 
             // MARK: - Drain Cleaners & Caustic Alkalis
@@ -5679,7 +5679,7 @@ class DatabaseService {
                     "If working with wet concrete or cement, keep pets away from the work area until fully cured"
                 ],
                 sources: ["Veterinary Information Network (VIN)", "ASPCA Animal Poison Control Center", "Merck Veterinary Manual", "Pet Poison Helpline", "MSD Veterinary Manual"],
-                relatedEntries: nil
+                relatedEntries: ["44556677-8899-aabb-ccdd-eeff00112233", "66778899-aabb-ccdd-eeff-001122334455", "77889900-aabb-ccdd-eeff-112233445566"]
             ),
 
             // MARK: - Automatic Dishwasher Detergent
@@ -5740,7 +5740,7 @@ class DatabaseService {
                     "If ingestion occurs, do NOT induce vomiting; contact your veterinarian immediately"
                 ],
                 sources: ["Veterinary Information Network (VIN)", "ASPCA Animal Poison Control Center", "Merck Veterinary Manual", "Pet Poison Helpline"],
-                relatedEntries: ["11223344-5566-7788-99aa-bbccddeeff00", "33445566-7788-99aa-bbcc-ddeeff001122"]
+                relatedEntries: ["11223344-5566-7788-99aa-bbccddeeff00", "33445566-7788-99aa-bbcc-ddeeff001122", "55667788-99aa-bbcc-ddee-ff0011223344"]
             ),
 
             // MARK: - Laundry Detergent Pods
@@ -5802,7 +5802,7 @@ class DatabaseService {
                     "If your pet bites into a pod, contact your veterinarian even if symptoms seem mild—respiratory problems can develop hours later"
                 ],
                 sources: ["Veterinary Information Network (VIN)", "ASPCA Animal Poison Control Center", "Pet Poison Helpline", "Merck Veterinary Manual", "Journal of Veterinary Emergency and Critical Care (Handley & Hovda, 2021)"],
-                relatedEntries: ["11223344-5566-7788-99aa-bbccddeeff00", "44556677-8899-aabb-ccdd-eeff00112233"]
+                relatedEntries: ["11223344-5566-7788-99aa-bbccddeeff00", "44556677-8899-aabb-ccdd-eeff00112233", "99001122-aabb-ccdd-eeff-334455667788"]
             ),
 
             // MARK: - Toilet Bowl Cleaners
@@ -6402,7 +6402,7 @@ class DatabaseService {
                     "Inform pet sitters and house guests about the danger of acetaminophen to pets"
                 ],
                 sources: ["VIN Toxicology Resources: Acetaminophen Toxicosis", "ASPCA Animal Poison Control Center: Acetaminophen Toxicity", "Merck Veterinary Manual: Acetaminophen Toxicosis", "Pet Poison Helpline: Tylenol Toxicity in Cats and Dogs", "Veterinary Partner / VCA Hospitals: Acetaminophen Toxicity"],
-                relatedEntries: ["aa112233-4455-6677-8899-aabbccddeef0", "cc334455-6677-8899-aabb-ccddeeff2233"]
+                relatedEntries: ["aa112233-4455-6677-8899-aabbccddeef0", "cc334455-6677-8899-aabb-ccddeeff2233", "ff667788-99aa-bbcc-ddee-ff0011223355", "66dd4455-eeff-0011-2233-445566778899", "ddee1122-ff33-4455-6677-889900aabbcc"]
             ),
 
             // MARK: - Aspirin & Salicylates
@@ -6724,7 +6724,7 @@ class DatabaseService {
                     "Merck Veterinary Manual: Serotonin Syndrome in Animals",
                     "Pet Poison Helpline: SSRI and SNRI Toxicity in Dogs and Cats"
                 ],
-                relatedEntries: ["ee556677-8899-aabb-ccdd-eeff00112244"]
+                relatedEntries: ["ee556677-8899-aabb-ccdd-eeff00112244", "11889900-aabb-ccdd-eeff-112233445566", "44bb2233-ccdd-eeff-0011-223344556677"]
             ),
 
             // MARK: - Benzodiazepines (Anti-Anxiety & Sleep Medications)
@@ -7328,7 +7328,7 @@ class DatabaseService {
                     "BluePearl Veterinary Partners: Serotonin Syndrome in Dogs and Cats",
                     "dvm360: Opioid and Tramadol Use in Outpatients — What Are Reasonable Choices"
                 ],
-                relatedEntries: ["bb223344-5566-7788-99aa-bbccddeeff11", "dd445566-7788-99aa-bbcc-ddeeff334455"]
+                relatedEntries: ["bb223344-5566-7788-99aa-bbccddeeff11", "dd445566-7788-99aa-bbcc-ddeeff334455", "00112233-4455-6677-8899-aabbccddef18", "bbcc9900-ddee-ff11-2233-445566778899"]
             ),
 
             // MARK: - ADHD Medications (Amphetamines & Stimulants)
@@ -7508,7 +7508,7 @@ class DatabaseService {
                     "Coppock RW et al: Methylphenidate toxicosis in dogs: 128 cases (2001-2008). JAVMA 2010",
                     "American College of Veterinary Pharmacists: Amphetamines Toxicity Data"
                 ],
-                relatedEntries: ["dd445566-7788-99aa-bbcc-ddeeff334455"]
+                relatedEntries: ["dd445566-7788-99aa-bbcc-ddeeff334455", "66dd4455-eeff-0011-2233-445566778899"]
             ),
 
             // MARK: - Heart & Blood Pressure Medications
@@ -7916,7 +7916,7 @@ class DatabaseService {
                     "ScienceDirect: Glipizide Veterinary Toxicity Data",
                     "Merck Veterinary Manual: Diabetes Mellitus in Dogs and Cats"
                 ],
-                relatedEntries: nil
+                relatedEntries: ["88ff6677-99aa-bbcc-ddee-ff0011223344"]
             ),
 
             // MARK: - Muscle Relaxants
@@ -8357,7 +8357,7 @@ class DatabaseService {
                     "ASPCApro: Allergy Medications That Are Toxic for Pets",
                     "AVMA: Pseudoephedrine Alert Issued"
                 ],
-                relatedEntries: ["bb223344-5566-7788-99aa-bbccddeeff11", "11889900-aabb-ccdd-eeff-112233445566"]
+                relatedEntries: ["bb223344-5566-7788-99aa-bbccddeeff11", "11889900-aabb-ccdd-eeff-112233445566", "99aa7788-bbcc-ddee-ff00-112233445566"]
             ),
 
             // MARK: - Birth Control Pills
@@ -9039,7 +9039,7 @@ class DatabaseService {
                     "Washington State University Veterinary Clinical Pharmacology Laboratory: ABCB1/MDR1 Information",
                     "Meekins JM, et al. 'Retinopathy associated with ivermectin toxicosis in five cats.' JAVMA. 2015"
                 ],
-                relatedEntries: ["00778899-aabb-ccdd-eeff-001122334455"]
+                relatedEntries: ["00778899-aabb-ccdd-eeff-001122334455", "00112233-4455-6677-8899-aabbccddef18"]
             ),
 
             // MARK: - Estrogen Medications & Hormone Therapies
@@ -9841,7 +9841,7 @@ class DatabaseService {
                     "Reeves MP. A retrospective report of 90 dogs with suspected cane toad (Bufo marinus) toxicity. Aust Vet J. 2004;82(10):608-611",
                     "Merck Veterinary Manual — Toad Poisoning"
                 ],
-                relatedEntries: nil
+                relatedEntries: ["00112233-4455-6677-8899-aabbccddef07"]
             ),
 
             // MARK: - Bee, Wasp, and Ant Stings (Hymenoptera)
@@ -9956,7 +9956,7 @@ class DatabaseService {
                     "VCA Animal Hospitals — First Aid for Insect Stings in Dogs",
                     "PetMD — How to Identify and Treat Ant Bites in Dogs"
                 ],
-                relatedEntries: nil
+                relatedEntries: ["00112233-4455-6677-8899-aabbccddef09", "00112233-4455-6677-8899-aabbccddef12"]
             ),
 
             // MARK: - Pit Viper Envenomation (Venomous Snake Bites)
@@ -10072,7 +10072,7 @@ class DatabaseService {
                     "Today's Veterinary Practice — Pit Viper Envenomation in a Dog (2022)",
                     "PetMD — Pit Viper Bite Poisoning in Dogs"
                 ],
-                relatedEntries: ["00112233-4455-6677-8899-aabbccddef05"]
+                relatedEntries: ["00112233-4455-6677-8899-aabbccddef05", "00112233-4455-6677-8899-aabbccddef08"]
             ),
 
             // MARK: - Coral Snake Envenomation
@@ -10168,7 +10168,7 @@ Coral snakes are secretive and rarely encountered, but pets investigating leaf l
                     "Clinical Toxicology — North American Coral Snake Bites",
                     "Veterinary Clinics of North America — Reptile Envenomation Update"
                 ],
-                relatedEntries: ["00112233-4455-6677-8899-aabbccddef07"]
+                relatedEntries: ["00112233-4455-6677-8899-aabbccddef07", "00112233-4455-6677-8899-aabbccddef13"]
             ),
 
             // MARK: - Scorpion Stings
@@ -11322,7 +11322,7 @@ Washington State University Veterinary Clinical Pharmacology Laboratory offers t
                     "American Kennel Club Canine Health Foundation",
                     "Merck Veterinary Manual"
                 ],
-                relatedEntries: ["bbcc9900-ddee-ff11-2233-445566778899"]
+                relatedEntries: ["bbcc9900-ddee-ff11-2233-445566778899", "00778899-aabb-ccdd-eeff-001122334455"]
             ),
 
             // MARK: - Corn Cob Ingestion
