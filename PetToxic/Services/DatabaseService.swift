@@ -8126,6 +8126,180 @@ class DatabaseService {
                     "VETgirl: Metronidazole Toxicity"
                 ],
                 relatedEntries: nil
+            ),
+
+            // MARK: - Ivermectin & Macrocyclic Lactones
+            ToxicItem(
+                id: UUID(uuidString: "bbcc9900-ddee-ff11-2233-445566778899")!,
+                name: "Ivermectin & Macrocyclic Lactones",
+                alternateNames: [
+                    // Generic drug names - Avermectins
+                    "ivermectin",
+                    "selamectin",
+                    "moxidectin",
+                    "doramectin",
+                    "eprinomectin",
+                    "abamectin",
+
+                    // Generic drug names - Milbemycins
+                    "milbemycin",
+                    "milbemycin oxime",
+
+                    // Drug class names
+                    "macrocyclic lactone",
+                    "avermectin",
+                    "antiparasitic",
+                    "dewormer",
+                    "heartworm medication",
+
+                    // Small animal heartworm products (SAFE at labeled doses)
+                    "Heartgard",
+                    "Heartgard Plus",
+                    "Iverhart",
+                    "Iverhart Plus",
+                    "Iverhart Max",
+                    "Tri-Heart Plus",
+                    "Interceptor",
+                    "Interceptor Plus",
+                    "Sentinel",
+                    "Sentinel Spectrum",
+                    "Revolution",
+                    "Revolution Plus",
+                    "Advantage Multi",
+                    "Advocate",
+                    "ProHeart",
+                    "ProHeart 6",
+                    "ProHeart 12",
+                    "Simparica Trio",
+                    "Trifexis",
+                    "Coraxis",
+
+                    // Large animal products (DANGEROUS if misused)
+                    "horse dewormer",
+                    "horse wormer",
+                    "equine dewormer",
+                    "horse paste",
+                    "ivermectin paste",
+                    "Ivomec",
+                    "Zimecterin",
+                    "Equimectrin",
+                    "Eqvalan",
+                    "Bimectin",
+                    "Duramectin",
+                    "cattle dewormer",
+                    "livestock dewormer",
+                    "pour-on",
+                    "injectable ivermectin",
+
+                    // Genetic terms
+                    "MDR1",
+                    "ABCB1",
+                    "MDR1 mutation",
+                    "ABCB1 mutation",
+                    "P-glycoprotein",
+                    "ivermectin sensitivity",
+                    "ivermectin sensitive",
+
+                    // Common search terms
+                    "dog ate horse dewormer",
+                    "dog ate ivermectin",
+                    "collie ivermectin",
+                    "herding dog ivermectin",
+                    "dog ate heartworm pill",
+                    "dog ate Heartgard",
+                    "cat ate ivermectin"
+                ],
+                categories: [.medications],
+                imageAsset: "ivermectin_macrocyclic_lactones",
+                description: "Ivermectin and other macrocyclic lactones (MLs) are antiparasitic drugs found in heartworm preventatives, flea treatments, and livestock dewormers. This drug family includes ivermectin, milbemycin, moxidectin, and selamectin. CRITICAL DISTINCTION: Heartworm preventatives (Heartgard, Interceptor, Revolution, etc.) are SAFE — even for dogs with the ABCB1/MDR1 gene mutation. These products use very low doses specifically tested for safety. Horse/livestock dewormers are DANGEROUS — concentrated formulations (1-1.87%) can cause severe toxicity, especially in sensitive breeds. ABCB1/MDR1 GENE MUTATION: Certain dog breeds, particularly herding breeds, carry a genetic mutation that makes them extremely sensitive to ivermectin and related drugs. Approximately 70-75% of Collies and 50% of Australian Shepherds carry this mutation. Affected breeds include Collies, Australian Shepherds, Shetland Sheepdogs, Border Collies, Old English Sheepdogs, German Shepherds, and mixed breeds with herding ancestry. Genetic testing is available.",
+                toxicityInfo: "Macrocyclic lactones work by binding to chloride channels in parasite nervous systems, causing paralysis and death. In mammals, these drugs normally cannot enter the brain because P-glycoprotein (encoded by the ABCB1 gene) actively pumps them back into the bloodstream. Why Toxicity Occurs: 1) ABCB1/MDR1 Gene Mutation — Dogs with a 4-base pair deletion in the ABCB1 gene produce nonfunctional P-glycoprotein. Without this 'pump,' ivermectin and related drugs accumulate in the brain, causing toxicity at doses that would be safe for other dogs. 2) Massive Overdose — Even dogs without the gene mutation can develop toxicity if they ingest enough drug to saturate the P-glycoprotein transport system. This commonly happens when dogs eat horse dewormer paste. 3) Cumulative Toxicity — With high-dose daily treatment (e.g., for mange), drug can accumulate over days to weeks. How MLs Cause Neurologic Signs: In the brain, MLs enhance GABA activity at GABA-A receptors, causing increased inhibition of neurons. This leads to the characteristic CNS depression: lethargy progressing to stupor and coma, ataxia, tremors, and potentially respiratory depression. Drug Half-Life: MLs have LONG half-lives (days to weeks). This means toxicity can persist for an extended period even after exposure stops.",
+                onsetTime: OnsetTime(
+                    early: "Signs typically appear within 4-12 hours of exposure. Dogs showing signs within 4-6 hours often develop severe toxicity (stupor, coma). Dogs whose signs begin at 10-12 hours usually have milder toxicity.",
+                    delayed: "Due to the long half-life of these drugs, clinical signs may persist for DAYS TO WEEKS. Recovery is gradual. Blindness, when it occurs, typically resolves over time but may take weeks. Some dogs require prolonged hospitalization and intensive care."
+                ),
+                symptoms: [
+                    // Early/mild signs
+                    "Lethargy",
+                    "Depression",
+                    "Weakness",
+                    "Drooling (hypersalivation)",
+                    "Vomiting",
+                    "Diarrhea",
+                    "Loss of appetite",
+
+                    // Neurologic signs - moderate
+                    "Ataxia (wobbling, incoordination)",
+                    "Disorientation",
+                    "Tremors",
+                    "Muscle twitching",
+                    "Inability to stand",
+                    "Recumbency",
+
+                    // Ocular signs
+                    "Mydriasis (dilated pupils)",
+                    "Decreased menace response",
+                    "Apparent blindness (usually reversible)",
+
+                    // Cardiovascular
+                    "Bradycardia (slow heart rate)",
+                    "Sinus arrhythmia",
+
+                    // Severe signs
+                    "Stupor",
+                    "Coma",
+                    "Seizures (less common)",
+                    "Respiratory depression",
+                    "Hyperthermia (with prolonged tremors/seizures)"
+                ],
+                speciesRisks: [
+                    SpeciesRisk(
+                        species: .dog,
+                        severity: .high,
+                        notes: "Toxicity depends heavily on DOSE and GENETICS. Dogs with the ABCB1/MDR1 mutation (common in Collies, Australian Shepherds, Shetland Sheepdogs, Border Collies, Old English Sheepdogs, and other herding breeds) are extremely sensitive. Heartworm preventatives are safe at labeled doses for ALL dogs. Horse/livestock dewormers and off-label high-dose treatments are dangerous. Genetic testing is available. Recovery can take days to weeks; prognosis is generally good with supportive care but guarded in severe cases."
+                    ),
+                    SpeciesRisk(
+                        species: .cat,
+                        severity: .high,
+                        notes: "Cats do NOT have the ABCB1/MDR1 mutation issue, but can still develop ivermectin toxicity from overdose. Kittens are more susceptible (immature blood-brain barrier). Common cause: owners using horse dewormer or applying inappropriate doses. Signs include ataxia, tremors, mydriasis, and blindness. Most cats recover with supportive care, though blindness may take weeks to resolve. Deaths have been reported."
+                    ),
+                    SpeciesRisk(
+                        species: .smallMammal,
+                        severity: .high,
+                        notes: "Ivermectin is used in rabbits, ferrets, and other small mammals for parasites. Overdose can cause neurologic signs similar to dogs and cats. Young animals and those with compromised blood-brain barriers are at higher risk. Contact an exotic animal veterinarian for guidance."
+                    ),
+                    SpeciesRisk(
+                        species: .bird,
+                        severity: .high,
+                        notes: "Ivermectin is sometimes used in birds for parasites. Overdose can cause neurologic signs. Birds are sensitive to many medications. Contact an avian veterinarian for any suspected exposure."
+                    ),
+                    SpeciesRisk(
+                        species: .reptile,
+                        severity: .moderate,
+                        notes: "Ivermectin is used in reptiles for parasites. Certain species (particularly chelonians/turtles) may be more sensitive. Contact an exotic animal veterinarian for guidance."
+                    )
+                ],
+                preventionTips: [
+                    "HEARTWORM PREVENTATIVES ARE SAFE — Do not skip heartworm prevention out of fear of ivermectin. Products like Heartgard, Interceptor, and Revolution use doses well below toxic thresholds, even for dogs with the ABCB1/MDR1 mutation. The FDA tested these products on Collies.",
+                    "NEVER give horse or livestock dewormer to dogs or cats — These products are highly concentrated (1-1.87% ivermectin) and can easily cause fatal overdoses",
+                    "If you own a herding breed or herding mix, consider genetic testing for the ABCB1/MDR1 mutation — Testing is available through Washington State University and other laboratories",
+                    "Keep all livestock medications securely stored away from pets",
+                    "Dogs on farms or in rural settings: prevent access to areas where large animals are dewormed — Dogs have been poisoned by eating horse feces after deworming",
+                    "If your dog has the ABCB1/MDR1 mutation, inform ALL veterinarians who treat your pet — Other drugs (loperamide/Imodium, certain chemotherapy agents, some sedatives) are also affected",
+                    "Do not attempt to treat mange with injectable or paste ivermectin without veterinary supervision — High-dose ivermectin treatment requires careful dosing and monitoring",
+                    "Young puppies and kittens may be more susceptible due to immature blood-brain barriers",
+                    "If using topical products (pour-ons), prevent pets from licking treated animals"
+                ],
+                sources: [
+                    "VIN (Veterinary Information Network): Macrocyclic Lactone Toxicosis",
+                    "Merola VM, Eubig PA. 'Toxicology of Avermectins and Milbemycins and the Role of P-Glycoprotein in Dogs and Cats.' Vet Clin North Am Small Anim Pract. 2012",
+                    "ASPCA Animal Poison Control Center: Ivermectin Toxicity",
+                    "Pet Poison Helpline: Ivermectin",
+                    "PetMD: Ivermectin Toxicity in Dogs",
+                    "dvm360: 'Just Ask the Expert: The best way to treat ivermectin toxicosis'",
+                    "Washington State University Veterinary Clinical Pharmacology Laboratory: ABCB1/MDR1 Information",
+                    "Meekins JM, et al. 'Retinopathy associated with ivermectin toxicosis in five cats.' JAVMA. 2015"
+                ],
+                relatedEntries: ["00778899-aabb-ccdd-eeff-001122334455"]
             )
         ]
     }
