@@ -117,11 +117,13 @@ Users can browse by category instead of searching:
 - Plants (houseplants, outdoor plants, flowers)
 - Human Medications (OTC, prescription)
 - Cleaning Products
-- Essential Oils & Aromatherapy
-- Garage & Automotive (antifreeze, motor oil, etc.)
-- Garden Products (fertilizers, pesticides, mulch)
+- Garage & Garden (antifreeze, fertilizers, pesticides, mulch)
 - Recreational Substances (cannabis, alcohol, nicotine)
 - Holiday Hazards (seasonal items cross-referenced)
+- Environmental Hazards
+- Household Items (includes essential oils)
+- Other Hazards
+- Animal Encounters
 
 #### Toxicity Articles
 
@@ -505,11 +507,13 @@ Before App Store submission, the following should be reviewed by a veterinary at
 | Plants | leaf.fill |
 | Human Medications | pills.fill |
 | Cleaning Products | bubbles.and.sparkles |
-| Essential Oils | drop.fill |
-| Garage & Automotive | car.fill |
-| Garden Products | shovel.fill |
-| Recreational Substances | exclamationmark.triangle |
+| Garage & Garden | wrench.and.screwdriver.fill |
+| Recreational Substances | smoke.fill |
 | Holiday Hazards | gift.fill |
+| Environmental Hazards | exclamationmark.triangle.fill |
+| Household Items | house.fill |
+| Other Hazards | exclamationmark.octagon.fill |
+| Animal Encounters | pawprint.fill |
 
 ### Appendix C: Priority Items for Launch
 

@@ -157,14 +157,16 @@ Use SF Symbols for consistency with iOS.
 | Category | Symbol |
 |----------|--------|
 | Foods | fork.knife |
-| Plants | leaf |
-| Human Medications | pills |
+| Plants | leaf.fill |
+| Medications | pills.fill |
 | Cleaning Products | bubbles.and.sparkles |
-| Essential Oils | drop |
-| Garage & Automotive | car |
-| Garden Products | shovel |
-| Recreational Substances | exclamationmark.triangle |
-| Holiday Hazards | gift |
+| Garage & Garden | wrench.and.screwdriver.fill |
+| Recreational Substances | smoke.fill |
+| Holiday Hazards | gift.fill |
+| Environmental Hazards | exclamationmark.triangle.fill |
+| Household Items | house.fill |
+| Other Hazards | exclamationmark.octagon.fill |
+| Animal Encounters | pawprint.fill |
 
 ### Action Icons
 | Action | Symbol |

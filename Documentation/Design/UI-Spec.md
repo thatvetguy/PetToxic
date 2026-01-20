@@ -69,13 +69,15 @@ Reference document for screens, navigation, and UI components.
 **Categories:**
 1. Foods
 2. Plants
-3. Human Medications
+3. Medications
 4. Cleaning Products
-5. Essential Oils
-6. Garage & Automotive
-7. Garden Products
-8. Recreational Substances
-9. Holiday Hazards
+5. Garage & Garden
+6. Recreational Substances
+7. Holiday Hazards
+8. Environmental Hazards
+9. Household Items
+10. Other Hazards
+11. Animal Encounters
 
 **Behavior:**
 - Tapping category shows filtered list of items in that category
