@@ -8468,6 +8468,147 @@ class DatabaseService {
                     "American College of Veterinary Pharmacists: Estrogen"
                 ],
                 relatedEntries: ["77ee5566-ff00-1122-3344-556677889900"]
+            ),
+
+            // MARK: - Benzocaine (Orajel, Anbesol)
+            ToxicItem(
+                id: UUID(uuidString: "ddee1122-ff33-4455-6677-889900aabbcc")!,
+                name: "Benzocaine (Orajel, Anbesol)",
+                alternateNames: [
+                    // Generic/Chemical names
+                    "benzocaine",
+                    "aminobenzoate",
+                    "ethyl aminobenzoate",
+                    "topical anesthetic",
+                    "local anesthetic",
+
+                    // Brand names - Oral pain relief
+                    "Orajel",
+                    "Baby Orajel",
+                    "Orajel gel",
+                    "Anbesol",
+                    "Anbesol gel",
+                    "Cepacol",
+                    "Cepacol lozenges",
+
+                    // Brand names - Throat sprays
+                    "Chloraseptic",
+                    "sore throat spray",
+                    "throat spray",
+
+                    // Brand names - Topical/First aid
+                    "Americaine",
+                    "Lanacane",
+                    "Dermoplast",
+                    "Solarcaine",
+                    "Bactine",
+                    "Sting-Kill",
+
+                    // Brand names - Medical/Veterinary
+                    "Cetacaine",
+                    "Topex",
+                    "Hurricane spray",
+
+                    // Condition/Toxicity terms
+                    "methemoglobinemia",
+                    "methemoglobin",
+                    "brown blood",
+                    "chocolate blood",
+                    "benzocaine toxicity",
+                    "benzocaine poisoning",
+
+                    // Common search terms
+                    "dog ate Orajel",
+                    "cat licked Orajel",
+                    "dog ate teething gel",
+                    "dog ate throat lozenges",
+                    "dog ate sore throat spray",
+                    "cat ate Anbesol",
+                    "pet brown gums",
+                    "muddy gums dog",
+                    "muddy gums cat"
+                ],
+                categories: [.medications],
+                imageAsset: "benzocaine_topical",
+                description: "Benzocaine is a topical anesthetic found in many over-the-counter products for oral pain relief (Orajel, Anbesol, Baby Orajel), sore throat sprays and lozenges (Cepacol, Chloraseptic), and first-aid products (Americaine, Lanacane). When ingested or absorbed through the skin, benzocaine causes methemoglobinemia — a dangerous blood condition where hemoglobin cannot properly release oxygen to tissues. CATS ARE EXTREMELY SUSCEPTIBLE. Clinical signs can develop within 20-30 minutes of even a single topical application. The characteristic sign is 'muddy brown' or bluish gums (instead of normal pink) due to the blood's inability to carry oxygen effectively. Other signs include weakness, rapid breathing, lethargy, and collapse. Dogs are more resistant than cats but can still develop toxicity, especially when benzocaine is applied to inflamed or irritated skin (which enhances absorption), when lozenges are ingested, or in dogs with cytochrome b5 reductase deficiency (certain breeds). Never use human benzocaine products on pets. If your pet has been exposed to benzocaine, contact a veterinarian immediately — this is a rapidly developing emergency.",
+                toxicityInfo: "MECHANISM: Benzocaine is metabolized to benzocaine hydroxylamine. This metabolite oxidizes hemoglobin iron from ferrous (Fe²⁺) to ferric (Fe³⁺) state. Ferric hemoglobin (methemoglobin) has enhanced oxygen affinity but REDUCED oxygen release to tissues. Further oxidation causes Heinz body formation. Erythrocytes with denatured hemoglobin are removed by lysis or phagocytosis, leading to anemia. Net effect: severe tissue hypoxia despite normal breathing. EXPOSURE ROUTES: 1) Ingestion — lozenges, licking applied products, chewing tubes. 2) Topical absorption — especially through inflamed/irritated skin. 3) Oral mucosal absorption — sprays, gels applied to gums. IMPORTANT: Inflamed or irritated skin ENHANCES absorption significantly. Products applied to intact skin in normal dogs did not cause measurable methemoglobinemia, but application to damaged skin caused toxicity.",
+                onsetTime: OnsetTime(
+                    early: "CATS: Signs can develop within 20-30 MINUTES of even a single topical application. This is a rapid-onset emergency. DOGS: Signs typically develop within 1-4 hours of exposure, though onset may be faster with large ingestions or application to inflamed skin.",
+                    delayed: "Once methemoglobinemia develops, it can progress rapidly to life-threatening levels. Without treatment, tissue hypoxia worsens. Heinz body anemia may develop over 1-5 days following exposure. Recovery depends on severity and speed of treatment."
+                ),
+                symptoms: [
+                    // Characteristic findings
+                    "Muddy brown or bluish gums and mucous membranes",
+                    "Cyanosis (blue discoloration of gums, tongue)",
+                    "Chocolate-brown colored blood",
+
+                    // Respiratory signs
+                    "Rapid breathing (tachypnea)",
+                    "Difficulty breathing (dyspnea)",
+                    "Labored breathing",
+
+                    // Cardiovascular signs
+                    "Rapid heart rate (tachycardia)",
+                    "Weak pulse",
+                    "Shock",
+
+                    // Neurologic/General signs
+                    "Weakness",
+                    "Lethargy",
+                    "Depression",
+                    "Exercise intolerance",
+                    "Ataxia (wobbling, incoordination)",
+                    "Collapse",
+                    "Coma",
+                    "Seizures (severe cases)",
+
+                    // GI signs
+                    "Vomiting",
+                    "Loss of appetite (anorexia)",
+
+                    // Other
+                    "Hypothermia (low body temperature)",
+                    "Death (untreated severe cases)"
+                ],
+                speciesRisks: [
+                    SpeciesRisk(
+                        species: .dog,
+                        severity: .high,
+                        notes: "Dogs are more resistant to benzocaine-induced methemoglobinemia than cats, but toxicity still occurs. Most cases result from ingestion of lozenges, topical application to irritated or inflamed skin (which enhances absorption), or use of benzocaine throat sprays. Dogs with cytochrome b5 reductase deficiency are at increased risk—breeds with reported deficiencies include Chihuahua, Borzoi, English Setter, Cardigan Welsh Corgi, Pomeranian, Poodles, American Cocker Spaniel, Coonhound, and certain mixes. Signs can develop within hours. Chocolate-brown blood and 'muddy' gums are characteristic. Never use human benzocaine products on dogs."
+                    ),
+                    SpeciesRisk(
+                        species: .cat,
+                        severity: .severe,
+                        notes: "CATS ARE EXTREMELY SUSCEPTIBLE to benzocaine-induced methemoglobinemia. Signs can develop within 20-30 minutes of even a single topical application. A study showed significant methemoglobinemia in cats after just a 2-second spray. Cats that ingest benzocaine (licking products, eating lozenges) or have it applied topically can rapidly develop life-threatening toxicity. Signs include muddy brown gums, rapid breathing, weakness, vomiting, and collapse. This is a MEDICAL EMERGENCY requiring immediate veterinary care."
+                    ),
+                    SpeciesRisk(
+                        species: .smallMammal,
+                        severity: .severe,
+                        notes: "Rabbits are highly susceptible to benzocaine-induced methemoglobinemia, similar to cats. Ferrets have also shown positive methemoglobin responses. Never use human benzocaine products on small mammals. Contact an exotic animal veterinarian immediately if exposure occurs."
+                    )
+                ],
+                preventionTips: [
+                    "Never use human oral pain products (Orajel, Anbesol, Baby Orajel) on pets",
+                    "Keep all benzocaine-containing products securely stored away from pets",
+                    "Do not leave throat lozenges where pets can access them",
+                    "If your pet has mouth pain, consult your veterinarian for pet-safe options",
+                    "Never apply human first-aid sprays or creams containing benzocaine to pets",
+                    "Be aware that inflamed or irritated skin greatly increases absorption of benzocaine",
+                    "If you have used benzocaine on yourself, wash the area before handling pets (especially cats)",
+                    "Know the signs of methemoglobinemia: muddy brown or blue gums, rapid breathing, weakness, collapse",
+                    "Cats are EXTREMELY sensitive — even small exposures can be life-threatening",
+                    "Certain dog breeds (Chihuahua, Borzoi, English Setter, Welsh Corgi, Poodles, Cocker Spaniel) may be at higher risk due to enzyme deficiencies"
+                ],
+                sources: [
+                    "VIN (Veterinary Information Network): Benzocaine Toxicosis",
+                    "Davis JA, et al. 'Benzocaine-induced methemoglobinemia attributed to topical application of the anesthetic in several laboratory animal species.' Am J Vet Res. 1993",
+                    "Harvey JW, et al. 'Benzocaine-induced methemoglobinemia in dogs.' J Am Vet Med Assoc. 1979",
+                    "Wilkie DA, Kirby R. 'Methemoglobinemia associated with dermal application of benzocaine cream in a cat.' J Am Vet Med Assoc. 1988",
+                    "Pet Poison Helpline: Is Orajel Safe for Dogs?",
+                    "dvm360: 'CVC Highlight: Your toolbox for troublesome toxicoses in cats'",
+                    "FDA Safety Communication: Benzocaine and methemoglobinemia risk (2018)"
+                ],
+                relatedEntries: ["bb223344-5566-7788-99aa-bbccddeeff11"]
             )
         ]
     }
