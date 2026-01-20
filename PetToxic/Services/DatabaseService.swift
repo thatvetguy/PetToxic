@@ -9842,6 +9842,121 @@ class DatabaseService {
                     "Merck Veterinary Manual — Toad Poisoning"
                 ],
                 relatedEntries: nil
+            ),
+
+            // MARK: - Bee, Wasp, and Ant Stings (Hymenoptera)
+            ToxicItem(
+                id: UUID(uuidString: "00112233-4455-6677-8899-aabbccddef06")!,
+                name: "Bee, Wasp, and Ant Stings (Hymenoptera)",
+                alternateNames: [
+                    "bee sting",
+                    "honey bee sting",
+                    "honeybee sting",
+                    "wasp sting",
+                    "hornet sting",
+                    "yellow jacket sting",
+                    "fire ant sting",
+                    "fire ant bite",
+                    "ant sting",
+                    "ant bite",
+                    "velvet ant sting",
+                    "cow killer ant sting",
+                    "Africanized bee sting",
+                    "killer bee sting",
+                    "African bee sting",
+                    "insect sting",
+                    "insect envenomation",
+                    "bee sting allergy",
+                    "insect sting anaphylaxis",
+                    "dog stung by bee",
+                    "cat stung by bee",
+                    "dog stung by wasp",
+                    "swarm attack",
+                    "multiple bee stings",
+                    "bumblebee sting",
+                    "carpenter bee sting",
+                    "dog ate bee",
+                    "cat ate bee",
+                    "dog bit wasp"
+                ],
+                categories: [.animalEncounters, .environmentalHazards],
+                imageAsset: "hymenoptera_sting",
+                description: "Hymenoptera envenomation refers to stings from insects in the order Hymenoptera, which includes bees (honey bees, Africanized 'killer' bees, carpenter bees), wasps, hornets, yellow jackets, fire ants, and velvet ants. These insects account for the majority of insect sting cases in veterinary patients. Dogs and cats are typically stung when they disturb a nest, step on an insect, or try to bite or play with one. Most stings occur on the paws, muzzle, or inside the mouth. While most single stings cause only localized pain and swelling, some pets develop life-threatening allergic reactions (anaphylaxis) even from a single sting, and mass envenomation from swarms or fire ant mounds can be fatal. IMMEDIATE ACTION (Bee Stings Only): FIRST — If your pet shows ANY signs of a serious reaction (difficulty breathing, facial swelling, collapse, vomiting, weakness, or pale gums), GO TO A VETERINARIAN IMMEDIATELY. Do not delay to search for a stinger. If your pet appears stable and you can easily see a stinger, remove it quickly by scraping sideways across the skin with a credit card, fingernail, or other flat edge. Do NOT squeeze the stinger with tweezers or fingers — this can inject more venom. Then monitor closely for any developing signs of allergic reaction. Note: Only BEES leave stingers behind. Wasps, hornets, yellow jackets, and fire ants do not.",
+                toxicityInfo: "Hymenoptera venom contains a complex mixture of allergenic proteins, enzymes, peptides, and vasoactive amines. Key components include phospholipase A2, hyaluronidase, and melittin (in bee venom), which work together to disrupt cell membranes and break down connective tissue. Fire ant venom is composed primarily of alkaloids. The venom promotes histamine and heparin release from mast cells, causing local inflammation. IMPORTANT DISTINCTIONS: (1) BEES have BARBED stingers that detach and remain in the victim — the venom sac can continue pumping venom for up to 60 seconds even after the bee dies; (2) Wasps, hornets, yellow jackets, fire ants, and velvet ants have SMOOTH stingers and can sting MULTIPLE TIMES; (3) Fire ants bite with their mandibles to anchor themselves, then sting in a circular pattern from their abdomen, delivering multiple stings per ant. ANAPHYLAXIS: Allergic reactions are NOT dose-dependent — some pets react severely to a single sting while others tolerate multiple stings. MASS ENVENOMATION: Dozens to hundreds of stings can be fatal even in non-allergic animals due to the sheer volume of venom. The estimated lethal dose is approximately 20 stings per kilogram of body weight.",
+                onsetTime: OnsetTime(
+                    early: "Local reactions (pain, swelling, redness) occur within seconds to minutes. Anaphylactic reactions typically develop within 10-60 minutes but may be delayed up to several hours.",
+                    delayed: "Delayed-type hypersensitivity reactions (rare in cats, uncommon in dogs) can occur 3-14 days after the sting, potentially causing serum sickness with joint pain, fever, and kidney involvement. Fire ant sting sites may develop pustules or become infected over 24-72 hours."
+                ),
+                symptoms: [
+                    "Sudden yelping or crying",
+                    "Limping or favoring a paw",
+                    "Pawing at face or mouth",
+                    "Localized swelling at sting site",
+                    "Redness at sting site",
+                    "Hives (raised bumps or welts, may appear anywhere on body)",
+                    "Excessive licking at one area",
+                    "Drooling or hypersalivation",
+                    "Facial swelling (even if sting was elsewhere)",
+                    "Swelling of muzzle, lips, or eyelids",
+                    "Vomiting",
+                    "Diarrhea",
+                    "Weakness or lethargy",
+                    "Pale gums",
+                    "Difficulty breathing or wheezing",
+                    "Coughing or gagging",
+                    "Rapid breathing",
+                    "Collapse",
+                    "Seizures (rare)",
+                    "Sudden death (severe anaphylaxis or massive envenomation)"
+                ],
+                speciesRisks: [
+                    SpeciesRisk(
+                        species: .dog,
+                        severity: .moderate,
+                        notes: "Most single stings cause only local pain and swelling that resolves within hours to days. However, some dogs experience severe allergic reactions (anaphylaxis) requiring emergency treatment. Brachycephalic (flat-faced) breeds like Bulldogs and Pugs are at increased risk for airway compromise if stung on the face or mouth due to their already-narrowed airways. Mass envenomation from disturbing a hive or fire ant mound can be life-threatening."
+                    ),
+                    SpeciesRisk(
+                        species: .cat,
+                        severity: .moderate,
+                        notes: "Cats face similar risks to dogs but may hide signs of pain and distress more effectively. Watch for subtle behavioral changes such as hiding, decreased activity, or loss of appetite after potential exposure. Stings to the mouth or throat can cause dangerous airway swelling."
+                    ),
+                    SpeciesRisk(
+                        species: .bird,
+                        severity: .high,
+                        notes: "Birds' small body size makes them more vulnerable to venom effects. Even a few stings could cause significant reactions. Seek avian veterinary care if exposure is suspected."
+                    ),
+                    SpeciesRisk(
+                        species: .smallMammal,
+                        severity: .high,
+                        notes: "Small mammals (rabbits, guinea pigs, ferrets, hamsters) are at higher risk due to their small body size relative to venom dose. A few stings can cause significant effects."
+                    ),
+                    SpeciesRisk(
+                        species: .reptile,
+                        severity: .low,
+                        notes: "Hymenoptera sting encounters with reptiles are uncommon. Effects are poorly documented but likely minimal for most species."
+                    )
+                ],
+                preventionTips: [
+                    "Inspect your yard regularly for hives, nests, and fire ant mounds — have them professionally removed or relocated",
+                    "Keep pets away from flowering plants and ground cover where bees forage",
+                    "Do not leave pet food outdoors, as it attracts fire ants and other insects",
+                    "Supervise pets outdoors, especially during spring and fall when stings are more common",
+                    "Train your dog to respond to 'leave it' commands when investigating buzzing insects",
+                    "Fire ants are common in the southeastern United States (from Texas to Florida) — be especially vigilant in these regions",
+                    "Africanized ('killer') bees are present in the Southwest US and Florida — they are more aggressive and may swarm if their hive is disturbed",
+                    "If your pet has a history of severe reactions to insect stings, discuss emergency preparedness with your veterinarian, including whether an epinephrine auto-injector (EpiPen) is appropriate",
+                    "Pets with previous severe reactions may be candidates for venom immunotherapy — consult a veterinary dermatologist",
+                    "For bee stings ONLY: If you see a stinger, scrape it off with a credit card or fingernail — do NOT squeeze it with tweezers"
+                ],
+                sources: [
+                    "Veterinary Information Network (VIN) — Hymenoptera Envenomation",
+                    "Merck Veterinary Manual — Wasp, Bee, and Ant Stings to Animals",
+                    "ASPCA Animal Poison Control Center",
+                    "Pet Poison Helpline — Fire Ant Venom",
+                    "VCA Animal Hospitals — First Aid for Insect Stings in Dogs",
+                    "PetMD — How to Identify and Treat Ant Bites in Dogs"
+                ],
+                relatedEntries: nil
             )
         ]
     }
