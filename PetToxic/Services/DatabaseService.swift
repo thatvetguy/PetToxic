@@ -6769,6 +6769,239 @@ class DatabaseService {
                     "American College of Veterinary Pharmacists: Amphetamines Toxicity Data"
                 ],
                 relatedEntries: ["dd445566-7788-99aa-bbcc-ddeeff334455"]
+            ),
+
+            // MARK: - Heart & Blood Pressure Medications
+            ToxicItem(
+                id: UUID(uuidString: "22990011-aabb-ccdd-eeff-223344556677")!,
+                name: "Heart & Blood Pressure Medications",
+                alternateNames: [
+                    // General terms
+                    "heart medication",
+                    "heart medicine",
+                    "cardiac medication",
+                    "blood pressure medication",
+                    "blood pressure medicine",
+                    "blood pressure pill",
+                    "heart pill",
+                    "cardiovascular medication",
+                    "hypertension medication",
+
+                    // CALCIUM CHANNEL BLOCKERS
+                    "calcium channel blocker",
+                    "CCB",
+                    // Diltiazem
+                    "diltiazem",
+                    "Cardizem",
+                    "Cardizem CD",
+                    "Cartia XT",
+                    "Dilacor XR",
+                    "Tiazac",
+                    "Dilt-CD",
+                    // Amlodipine
+                    "amlodipine",
+                    "Norvasc",
+                    // Verapamil
+                    "verapamil",
+                    "Calan",
+                    "Verelan",
+                    "Isoptin",
+                    "Covera-HS",
+                    // Nifedipine
+                    "nifedipine",
+                    "Procardia",
+                    "Adalat",
+                    // Other CCBs
+                    "felodipine",
+                    "Plendil",
+                    "nicardipine",
+                    "Cardene",
+                    "isradipine",
+                    "DynaCirc",
+                    "nisoldipine",
+                    "Sular",
+                    "nimodipine",
+                    "Nimotop",
+
+                    // BETA-BLOCKERS
+                    "beta blocker",
+                    "beta-blocker",
+                    // Atenolol
+                    "atenolol",
+                    "Tenormin",
+                    // Propranolol
+                    "propranolol",
+                    "Inderal",
+                    "InnoPran",
+                    // Metoprolol
+                    "metoprolol",
+                    "Lopressor",
+                    "Toprol XL",
+                    // Carvedilol
+                    "carvedilol",
+                    "Coreg",
+                    // Sotalol
+                    "sotalol",
+                    "Betapace",
+                    // Other beta-blockers
+                    "nadolol",
+                    "Corgard",
+                    "bisoprolol",
+                    "Zebeta",
+                    "nebivolol",
+                    "Bystolic",
+                    "labetalol",
+                    "Trandate",
+                    "timolol",
+                    "Blocadren",
+                    "esmolol",
+                    "Brevibloc",
+
+                    // ACE INHIBITORS
+                    "ACE inhibitor",
+                    "angiotensin converting enzyme inhibitor",
+                    // Enalapril
+                    "enalapril",
+                    "Vasotec",
+                    "Enacard",
+                    // Lisinopril
+                    "lisinopril",
+                    "Prinivil",
+                    "Zestril",
+                    // Benazepril
+                    "benazepril",
+                    "Lotensin",
+                    // Other ACE inhibitors
+                    "captopril",
+                    "Capoten",
+                    "ramipril",
+                    "Altace",
+                    "fosinopril",
+                    "Monopril",
+                    "quinapril",
+                    "Accupril",
+                    "perindopril",
+                    "Aceon",
+                    "trandolapril",
+                    "Mavik",
+                    "moexipril",
+                    "Univasc",
+                    "imidapril",
+
+                    // DIGOXIN / CARDIAC GLYCOSIDES
+                    "digoxin",
+                    "Lanoxin",
+                    "Digitek",
+                    "cardiac glycoside",
+                    "digitalis",
+
+                    // Common search queries
+                    "dog ate heart medication",
+                    "dog ate blood pressure pill",
+                    "cat ate Norvasc",
+                    "dog ate atenolol",
+                    "dog ate Cardizem",
+                    "pet ate Lisinopril",
+                    "dog ate digoxin"
+                ],
+                categories: [.medications],
+                imageAsset: "heart_medications",
+                description: "Heart and blood pressure medications are widely used in both human and veterinary medicine. This category includes calcium channel blockers, beta-blockers, ACE inhibitors, and digoxin (cardiac glycosides). These medications have VERY DIFFERENT safety profiles. DANGEROUS — NARROW MARGIN OF SAFETY: Calcium channel blockers (Norvasc, Cardizem, Procardia) — Even small amounts can cause severe poisoning. Deaths have been reported. Beta-blockers (Atenolol, Metoprolol, Propranolol) — Very narrow margin of safety. Small overdoses can be life-threatening. Digoxin (Lanoxin) — Extremely narrow margin between therapeutic and toxic doses. Cats are MORE SENSITIVE than dogs. MODERATE RISK — WIDER MARGIN OF SAFETY: ACE inhibitors (Lisinopril, Enalapril, Benazepril) — Relatively safer than other cardiac medications. Small ingestions in healthy pets MAY be monitored at home after consulting a veterinarian, but pets with existing kidney or heart disease are at higher risk. IMPORTANT: Many of these medications are used therapeutically in veterinary medicine. Toxicity can occur from pets eating their own prescribed medications (overdose), eating human family members' medications, or exposure to sustained-release formulations.",
+                toxicityInfo: "CALCIUM CHANNEL BLOCKERS: Block calcium entry into heart and blood vessel cells. Overdose causes life-threatening hypotension (low blood pressure), severe bradycardia (slow heart rate), heart failure, and secondary acute kidney injury from poor blood flow. Signs can be DELAYED by many hours, especially with sustained-release formulations. Deaths have been reported to ASPCA APCC. BETA-BLOCKERS: Block effects of adrenaline on the heart. Overdose causes severe bradycardia, hypotension, heart failure, and secondary acute kidney failure. Some beta-blockers can also cause hypoglycemia (low blood sugar), respiratory depression, and seizures. Signs typically appear within 4 hours but can persist 24-48+ hours. ACE INHIBITORS: Block production of angiotensin II, causing blood vessels to relax. Have a WIDER margin of safety than CCBs and beta-blockers. Primary concern is hypotension with reflex tachycardia. Pets with underlying kidney or heart disease are MORE SENSITIVE. Hypotension can occur within hours and persist 12-24 hours. DIGOXIN (Cardiac Glycosides): Increases heart contractility and slows heart rate. Has an EXTREMELY narrow margin of safety — the difference between therapeutic and toxic doses is small. Toxicity can occur from medication overdose OR from eating plants containing cardiac glycosides (foxglove, oleander, lily of the valley). About 25% of dogs on digoxin therapy experience toxicity. CATS ARE MORE SENSITIVE than dogs. Toxicity can resemble worsening heart disease, making it difficult to recognize.",
+                onsetTime: OnsetTime(
+                    early: "Varies by medication class: Calcium channel blockers — Signs can appear within 20-45 minutes for immediate-release forms, but may be DELAYED MANY HOURS for sustained-release formulations. Beta-blockers — Signs typically appear within 4 hours of ingestion. ACE inhibitors — Hypotension can occur within a few hours. Digoxin — GI signs (vomiting, loss of appetite) often appear first; cardiac signs may follow.",
+                    delayed: "Duration varies significantly: Calcium channel blockers — Effects may persist 24-48+ hours; sustained-release formulations can cause prolonged toxicity. Beta-blockers — Signs can persist 24-48 hours, or longer for extended-release forms. ACE inhibitors — Effects typically last 12-24 hours but can be longer with extended-release. Digoxin — Half-life is 23-39 hours in dogs (extremely variable in cats); effects can be prolonged."
+                ),
+                symptoms: [
+                    // Cardiovascular
+                    "Hypotension (low blood pressure)",
+                    "Weakness or collapse from low blood pressure",
+                    "Bradycardia (slow heart rate)",
+                    "Tachycardia (fast heart rate) — reflex response to low BP",
+                    "Cardiac arrhythmias (irregular heartbeat)",
+                    "Heart block",
+                    "Heart failure",
+                    "Pale gums",
+                    "Weak pulse",
+
+                    // Neurological/General
+                    "Lethargy",
+                    "Depression",
+                    "Dizziness or disorientation",
+                    "Ataxia (incoordination)",
+                    "Seizures",
+                    "Coma",
+
+                    // GI Signs
+                    "Vomiting",
+                    "Nausea",
+                    "Diarrhea",
+                    "Loss of appetite",
+                    "Drooling",
+
+                    // Respiratory
+                    "Difficulty breathing",
+                    "Pulmonary edema (fluid in lungs)",
+                    "Respiratory depression",
+
+                    // Other
+                    "Acute kidney injury (from poor blood flow)",
+                    "Hyperkalemia (high potassium) — digoxin",
+                    "Hypoglycemia (low blood sugar) — beta-blockers",
+                    "Hypothermia",
+                    "Dilated pupils",
+                    "Death (if untreated)"
+                ],
+                speciesRisks: [
+                    SpeciesRisk(
+                        species: .dog,
+                        severity: .severe,
+                        notes: "Calcium channel blockers and beta-blockers have NARROW margins of safety — even small amounts can cause severe, life-threatening toxicity. About 25% of dogs on digoxin therapy experience toxicity. ACE inhibitors are relatively safer but large ingestions or pets with kidney/heart disease are at risk. Common in households with elderly family members taking cardiac medications."
+                    ),
+                    SpeciesRisk(
+                        species: .cat,
+                        severity: .severe,
+                        notes: "CATS ARE MORE SENSITIVE TO DIGOXIN than dogs. Calcium channel blockers (especially amlodipine, commonly prescribed for hypertensive cats) and beta-blockers also have narrow safety margins. ACE inhibitors are relatively safer. Any suspected cardiac medication ingestion in cats should be evaluated promptly."
+                    ),
+                    SpeciesRisk(
+                        species: .smallMammal,
+                        severity: .severe,
+                        notes: "Small body size makes even small amounts potentially dangerous. Limited data on cardiac medication toxicity in small mammals. Contact an exotic animal veterinarian or poison control immediately."
+                    ),
+                    SpeciesRisk(
+                        species: .bird,
+                        severity: .severe,
+                        notes: "Birds are highly sensitive to cardiac-active medications. Cardiovascular effects can be rapidly life-threatening. Contact an avian veterinarian or poison control immediately."
+                    ),
+                    SpeciesRisk(
+                        species: .reptile,
+                        severity: .high,
+                        notes: "Limited data available. Cardiovascular effects expected. Contact an exotic animal veterinarian for guidance."
+                    )
+                ],
+                preventionTips: [
+                    "Store all heart and blood pressure medications in secure, locked cabinets",
+                    "Be especially careful if elderly family members take multiple cardiac medications",
+                    "Never leave pill bottles, pill organizers, or weekly pill boxes accessible to pets",
+                    "Pick up dropped pills immediately — pets may find them before you do",
+                    "Be aware that many cardiac medications are also prescribed to pets — ensure proper dosing and never double-dose",
+                    "If your pet takes cardiac medication, keep it separate from human medications to avoid mix-ups",
+                    "Know which medications are MOST dangerous: calcium channel blockers and beta-blockers have NO safe margin for accidental ingestion",
+                    "Monitor pets wearing medication patches — some cardiac medications come in patch form",
+                    "Dispose of unused medications properly at pharmacy take-back programs",
+                    "Inform pet sitters and houseguests about medication safety around your pets"
+                ],
+                sources: [
+                    "VIN (Veterinary Information Network): Cardiac Medications Toxicity",
+                    "Pet Poison Helpline: Calcium Channel Blockers, Beta-Blockers, ACE Inhibitors, Cardiac Glycosides",
+                    "Merck Veterinary Manual: Toxicoses from Cardiovascular Medications",
+                    "ASPCA APCC: Calcium Channel Blocker Toxicity in Dogs and Cats",
+                    "Hayes CL: Calcium channel blocker toxicity in dogs and cats. Vet Clin North Am Small Anim Pract. 2012 & 2018",
+                    "American College of Veterinary Pharmacists: Amlodipine, Diltiazem, Atenolol, Carvedilol, Enalapril, Digoxin Toxicity Data",
+                    "Wedgewood Pharmacy: Digoxin for Dogs and Cats",
+                    "dvm360: Top Human Medications Pets Ingest (Lee JA)"
+                ],
+                relatedEntries: ["11223344-5566-7788-99aa-bbccddeeff00", "22334455-6677-8899-aabb-ccddeeff0011", "33445566-7788-99aa-bbcc-ddeeff001122", "88990011-2233-4455-6677-8899aabbccdd"]
             )
         ]
     }
