@@ -7002,6 +7002,469 @@ class DatabaseService {
                     "dvm360: Top Human Medications Pets Ingest (Lee JA)"
                 ],
                 relatedEntries: ["11223344-5566-7788-99aa-bbccddeeff00", "22334455-6677-8899-aabb-ccddeeff0011", "33445566-7788-99aa-bbcc-ddeeff001122", "88990011-2233-4455-6677-8899aabbccdd"]
+            ),
+
+            // MARK: - Diabetes Medications (Insulin & Oral Hypoglycemics)
+            ToxicItem(
+                id: UUID(uuidString: "33aa1122-bbcc-ddee-ff00-112233445566")!,
+                name: "Diabetes Medications (Insulin & Oral Hypoglycemics)",
+                alternateNames: [
+                    // General terms
+                    "diabetes medication",
+                    "diabetes medicine",
+                    "diabetic medication",
+                    "blood sugar medication",
+                    "antidiabetic",
+                    "hypoglycemic agent",
+                    "oral hypoglycemic",
+
+                    // INSULIN
+                    "insulin",
+                    "insulin injection",
+                    "insulin pen",
+                    "insulin syringe",
+                    // Veterinary insulin
+                    "Vetsulin",
+                    "Caninsulin",
+                    "porcine insulin",
+                    "lente insulin",
+                    "ProZinc",
+                    "PZI",
+                    // Human insulins
+                    "Lantus",
+                    "glargine",
+                    "Levemir",
+                    "detemir",
+                    "Humalog",
+                    "lispro",
+                    "NovoLog",
+                    "aspart",
+                    "Novolin",
+                    "Humulin",
+                    "NPH insulin",
+                    "regular insulin",
+                    "Tresiba",
+                    "degludec",
+                    "Basaglar",
+                    "Toujeo",
+                    "Apidra",
+                    "glulisine",
+                    "Fiasp",
+
+                    // SULFONYLUREAS
+                    "sulfonylurea",
+                    "glipizide",
+                    "Glucotrol",
+                    "Glucotrol XL",
+                    "glyburide",
+                    "glibenclamide",
+                    "DiaBeta",
+                    "Micronase",
+                    "Glynase",
+                    "glimepiride",
+                    "Amaryl",
+
+                    // METFORMIN
+                    "metformin",
+                    "Glucophage",
+                    "Glucophage XR",
+                    "Fortamet",
+                    "Glumetza",
+                    "Riomet",
+
+                    // OTHER ORAL DIABETES MEDICATIONS
+                    "sitagliptin",
+                    "Januvia",
+                    "pioglitazone",
+                    "Actos",
+                    "gliclazide",
+                    "acarbose",
+                    "Precose",
+
+                    // Common search queries
+                    "dog ate insulin",
+                    "cat ate insulin",
+                    "dog ate diabetes pill",
+                    "cat ate glipizide",
+                    "pet ate metformin",
+                    "insulin overdose pet"
+                ],
+                categories: [.medications],
+                imageAsset: "medications_diabetes",
+                description: "Diabetes medications include injectable insulin and oral hypoglycemic agents used to control blood sugar. The primary danger for pets is HYPOGLYCEMIA (dangerously low blood sugar), which can be life-threatening. Insulin and sulfonylurea drugs (glipizide, glyburide) carry the highest risk because they directly lower blood sugar. Metformin works differently and does not typically cause hypoglycemia in overdose. INSULIN CONCENTRATION WARNING: Veterinary insulin (Vetsulin/Caninsulin) is 40 U/mL while human insulin is typically 100 U/mL. Using the wrong syringe type can cause a dangerous dosing error. IMMEDIATE ACTION FOR HYPOGLYCEMIA: If your pet shows signs of hypoglycemia (weakness, wobbling, glassy eyes, seizures, collapse) and is still conscious, apply a small amount of corn syrup (Karo) or honey to the gums while preparing to seek veterinary care. Do NOT attempt this if your pet is unconscious or seizing actively.",
+                toxicityInfo: "INSULIN: Insulin promotes cellular uptake of glucose. Overdose or accidental ingestion by non-diabetic pets causes hypoglycemia (low blood sugar), which can rapidly become life-threatening. Signs include weakness, lethargy, wobbling, disorientation, tremors, seizures, and death. Obese diabetic cats are at higher risk for overdose than dogs. SULFONYLUREAS (Glipizide, Glyburide): These medications stimulate the pancreas to release more insulin. They have a NARROW margin of safety. Even small amounts can cause hypoglycemia in pets. Glipizide is sometimes prescribed for diabetic cats but is NOT effective in dogs due to different disease mechanisms — however, it can still cause toxic hypoglycemia if ingested. METFORMIN (Glucophage): Metformin works by reducing glucose production in the liver and improving insulin sensitivity. Unlike insulin and sulfonylureas, metformin does NOT typically cause hypoglycemia in overdose. The primary concerns are gastrointestinal upset (vomiting, diarrhea) and, in very large ingestions, potentially lactic acidosis.",
+                onsetTime: OnsetTime(
+                    early: "Hypoglycemia signs typically appear within 30 minutes to 2 hours: weakness, lethargy, wobbling, incoordination, hunger, restlessness, trembling, muscle twitching, glassy eyes. Metformin: GI signs (vomiting, diarrhea) may appear within 1-4 hours.",
+                    delayed: "Severe hypoglycemia (if untreated): disorientation, confusion, seizures, collapse, coma, death. Duration depends on insulin type — long-acting formulations can cause prolonged effects."
+                ),
+                symptoms: [
+                    // Early hypoglycemia signs
+                    "Weakness",
+                    "Lethargy",
+                    "Wobbling or incoordination (ataxia)",
+                    "Hunger or restlessness",
+                    "Trembling or shivering",
+                    "Muscle twitching",
+                    "Glassy eyes",
+
+                    // Progressive hypoglycemia
+                    "Disorientation or confusion",
+                    "Depression",
+                    "Falling down",
+                    "Rear leg weakness (especially cats)",
+
+                    // Severe hypoglycemia
+                    "Seizures",
+                    "Collapse",
+                    "Coma",
+                    "Hypothermia (low body temperature)",
+                    "Death (if untreated)",
+
+                    // GI signs (especially metformin)
+                    "Vomiting",
+                    "Diarrhea",
+                    "Loss of appetite",
+                    "Drooling"
+                ],
+                speciesRisks: [
+                    SpeciesRisk(
+                        species: .dog,
+                        severity: .severe,
+                        notes: "Dogs are highly susceptible to hypoglycemia from insulin or sulfonylurea ingestion. Signs include weakness, lethargy, ataxia, falling down, depression, disorientation, collapse, seizures, and death. Even non-diabetic dogs can become dangerously hypoglycemic. Glipizide is ineffective for diabetic dogs but can still cause toxic hypoglycemia if ingested."
+                    ),
+                    SpeciesRisk(
+                        species: .cat,
+                        severity: .severe,
+                        notes: "Cats show hunger, anxiety, ataxia, muscle twitching, rear end weakness, disorientation, lethargy, and seizures with hypoglycemia. Obese diabetic cats are at HIGHER RISK for insulin overdose than dogs. Glipizide is sometimes prescribed for diabetic cats — accidental double-dosing can cause hypoglycemia. If signs of low blood sugar occur: apply corn syrup (Karo) to gums and seek veterinary care immediately."
+                    ),
+                    SpeciesRisk(
+                        species: .smallMammal,
+                        severity: .severe,
+                        notes: "Small body size makes hypoglycemia extremely dangerous. Rabbits, ferrets, guinea pigs, and other small mammals can become critically hypoglycemic from small amounts of insulin or oral hypoglycemics. Contact an exotic animal veterinarian immediately."
+                    ),
+                    SpeciesRisk(
+                        species: .bird,
+                        severity: .severe,
+                        notes: "Birds have high metabolic rates and are very sensitive to blood sugar changes. Hypoglycemia can be rapidly fatal. Contact an avian veterinarian or poison control immediately."
+                    ),
+                    SpeciesRisk(
+                        species: .reptile,
+                        severity: .high,
+                        notes: "Limited data available. Reptiles have different glucose metabolism but insulin can still cause hypoglycemia. Contact an exotic animal veterinarian for guidance."
+                    )
+                ],
+                preventionTips: [
+                    "Store all insulin pens, vials, and syringes in secure locations out of pet reach",
+                    "Never leave insulin syringes (used or unused) where pets can access them",
+                    "If your pet is diabetic, keep a consistent dosing schedule to avoid accidental double-dosing",
+                    "Know your insulin concentration: Veterinary insulin (Vetsulin) is 40 U/mL; human insulin is typically 100 U/mL — always use the correct syringe type",
+                    "Keep oral diabetes medications in secure, closed containers",
+                    "Pick up dropped pills immediately",
+                    "If your pet is on glipizide, never give a dose if the pet is not eating or appears unwell",
+                    "Keep corn syrup (Karo) or honey on hand if you have a diabetic pet — for emergency use if hypoglycemia occurs",
+                    "Weekly pill organizers are easily chewed open by pets — store them securely",
+                    "Educate all family members about the dangers of diabetes medications for pets"
+                ],
+                sources: [
+                    "VIN (Veterinary Information Network): Insulin — Prescriber Highlights, Adverse Effects, Clinical Pearls",
+                    "Veterinary Partner (VIN): Glipizide (Glucotrol)",
+                    "ASPCA Animal Poison Control Center: Anti-Diabetic Medication Toxicity",
+                    "AAHA Diabetes Management Guidelines for Dogs and Cats (2018)",
+                    "PetMD: Glipizide for Cats",
+                    "VCA Animal Hospitals: Glipizide",
+                    "dvm360: Toxicology Brief — Metformin Overdose in Dogs and Cats",
+                    "ScienceDirect: Glipizide Veterinary Toxicity Data",
+                    "Merck Veterinary Manual: Diabetes Mellitus in Dogs and Cats"
+                ],
+                relatedEntries: nil
+            ),
+
+            // MARK: - Muscle Relaxants
+            ToxicItem(
+                id: UUID(uuidString: "44bb2233-ccdd-eeff-0011-223344556677")!,
+                name: "Muscle Relaxants",
+                alternateNames: [
+                    // General terms
+                    "muscle relaxant",
+                    "muscle relaxer",
+                    "skeletal muscle relaxant",
+                    "antispasmodic",
+
+                    // BACLOFEN — Most dangerous
+                    "baclofen",
+                    "Lioresal",
+                    "Gablofen",
+                    "Kemstro",
+                    "Lyvispah",
+                    "OZOBAX",
+                    "Fleqsuvy",
+
+                    // CYCLOBENZAPRINE
+                    "cyclobenzaprine",
+                    "Flexeril",
+                    "Fexmid",
+                    "Amrix",
+
+                    // CARISOPRODOL
+                    "carisoprodol",
+                    "Soma",
+                    "Soma Compound",
+                    "Vanadom",
+
+                    // TIZANIDINE
+                    "tizanidine",
+                    "Zanaflex",
+
+                    // METHOCARBAMOL (safer, vet-approved)
+                    "methocarbamol",
+                    "Robaxin",
+                    "Robaxin-V",
+                    "Robinax",
+                    "Robaximol",
+
+                    // OTHER
+                    "metaxalone",
+                    "Skelaxin",
+                    "orphenadrine",
+                    "Norflex",
+                    "chlorzoxazone",
+                    "Parafon Forte",
+
+                    // Common search queries
+                    "dog ate muscle relaxer",
+                    "cat ate muscle relaxant",
+                    "dog ate Flexeril",
+                    "dog ate baclofen",
+                    "pet ate Soma"
+                ],
+                categories: [.medications],
+                imageAsset: "medications_muscle_relaxants",
+                description: "Muscle relaxants are medications used in humans to treat muscle spasms and spasticity. Several are EXTREMELY DANGEROUS for pets, especially baclofen, which has a very narrow margin of safety — a single dropped tablet can cause serious toxicosis in a small dog, and NO DOSE IS CONSIDERED SAFE FOR CATS. BACLOFEN IS THE MOST DANGEROUS: Signs can appear within MINUTES and effects can persist 72-96+ hours. Development of seizures is associated with worse outcomes. Delay in seeking treatment significantly worsens prognosis. METHOCARBAMOL (Robaxin-V) IS THE SAFEST: It is the only muscle relaxant FDA-approved for veterinary use and has a wider margin of safety. However, extreme overdose can still be dangerous.",
+                toxicityInfo: "BACLOFEN (Lioresal) — VERY NARROW MARGIN OF SAFETY: A GABA receptor agonist that causes profound CNS depression. NO therapeutic dose is considered safe in cats. Dogs can develop serious toxicosis from a single tablet. Signs appear rapidly (within minutes to hours) and can persist 72-96+ hours. Development of seizures indicates a worse prognosis. Delay in treatment dramatically worsens outcomes. CYCLOBENZAPRINE (Flexeril): Structurally related to tricyclic antidepressants. Causes CNS depression, tachycardia, and can lead to seizures. Effects can be prolonged due to enterohepatic recirculation. CARISOPRODOL (Soma): Metabolized to meprobamate, a sedative. Causes CNS depression progressing to seizures and coma. Effects from the metabolite can be prolonged. TIZANIDINE (Zanaflex): An alpha-2 adrenergic agonist with narrow safety margin in pets. Causes sedation, bradycardia, and hypotension. METHOCARBAMOL (Robaxin-V): The SAFEST muscle relaxant — FDA-approved for dogs, cats, and horses. Used therapeutically to treat muscle spasms from injury, IVDD, and certain poisonings. Has a wider margin of safety, but extreme overdose can still cause respiratory depression.",
+                onsetTime: OnsetTime(
+                    early: "BACLOFEN: Signs can appear within MINUTES to a few hours — vocalization (often dramatic), salivation, drooling, vomiting, ataxia (wobbling), weakness. Other muscle relaxants: Signs typically appear within 30 minutes to 2 hours.",
+                    delayed: "BACLOFEN: Effects can persist 72-96+ HOURS — progressive CNS depression, recumbency (unable to stand), seizures (indicates worse prognosis), respiratory depression, coma, death. Cyclobenzaprine: Effects can persist days due to long half-life. Carisoprodol: Prolonged effects from meprobamate metabolite."
+                ),
+                symptoms: [
+                    // CNS Depression
+                    "Vocalization (often dramatic, especially baclofen)",
+                    "Lethargy or sedation",
+                    "Weakness",
+                    "Ataxia (wobbling, incoordination)",
+                    "Recumbency (unable to stand)",
+                    "Disorientation",
+                    "Depression",
+                    "Coma",
+
+                    // GI Signs
+                    "Vomiting",
+                    "Drooling or hypersalivation",
+                    "Diarrhea",
+
+                    // Cardiovascular
+                    "Bradycardia (slow heart rate) — baclofen, tizanidine",
+                    "Tachycardia (fast heart rate) — cyclobenzaprine, carisoprodol",
+                    "Hypotension (low blood pressure)",
+                    "Cardiac arrhythmias",
+
+                    // Neurological
+                    "Tremors",
+                    "Muscle flaccidity (floppy muscles)",
+                    "Seizures",
+                    "Nystagmus (eye tremors)",
+                    "Blindness (baclofen)",
+
+                    // Temperature/Respiratory
+                    "Hypothermia",
+                    "Hyperthermia (with seizures)",
+                    "Respiratory depression",
+                    "Respiratory arrest",
+
+                    // Other
+                    "Urinary incontinence",
+                    "Dilated or constricted pupils",
+                    "Death (especially baclofen)"
+                ],
+                speciesRisks: [
+                    SpeciesRisk(
+                        species: .dog,
+                        severity: .severe,
+                        notes: "BACLOFEN is especially dangerous — a single dropped tablet can cause serious toxicosis in a small dog, and deaths have occurred. Signs appear within minutes and can persist 72-96+ hours. Development of seizures indicates worse prognosis. Delay in treatment dramatically worsens outcomes. Other muscle relaxants also cause significant CNS depression. ONLY methocarbamol (Robaxin-V) is FDA-approved for dogs and has a reasonable safety margin."
+                    ),
+                    SpeciesRisk(
+                        species: .cat,
+                        severity: .severe,
+                        notes: "NO DOSE OF BACLOFEN IS CONSIDERED SAFE FOR CATS. Cyclobenzaprine and other muscle relaxants are also poorly tolerated. Methocarbamol is FDA-approved for cats and is used therapeutically to treat permethrin toxicity (when dog flea products are accidentally applied to cats). However, even methocarbamol can cause toxicity in overdose."
+                    ),
+                    SpeciesRisk(
+                        species: .smallMammal,
+                        severity: .severe,
+                        notes: "Small body size makes even small amounts of muscle relaxants extremely dangerous. CNS depression can be rapidly life-threatening. Contact an exotic animal veterinarian immediately."
+                    ),
+                    SpeciesRisk(
+                        species: .bird,
+                        severity: .severe,
+                        notes: "Birds are highly sensitive to CNS-depressant medications. Respiratory depression can be rapidly fatal. Contact an avian veterinarian or poison control immediately."
+                    ),
+                    SpeciesRisk(
+                        species: .reptile,
+                        severity: .high,
+                        notes: "Limited data available. CNS and respiratory depression expected. Contact an exotic animal veterinarian for guidance."
+                    )
+                ],
+                preventionTips: [
+                    "BACLOFEN: Never take this medication when pets are present — a single dropped tablet can cause serious poisoning",
+                    "Store ALL muscle relaxants in secure, closed containers completely out of pet reach",
+                    "Pick up dropped pills IMMEDIATELY — do not turn away even for a second",
+                    "Be aware that many people who take baclofen also take other medications — multiple drug exposure is possible",
+                    "Weekly pill organizers are easily chewed open by pets — store them in closed cabinets",
+                    "If prescribed methocarbamol for your pet, follow dosing instructions carefully — even the 'safest' muscle relaxant can cause toxicity in overdose",
+                    "Educate all family members about the extreme danger of baclofen to pets",
+                    "Consider keeping muscle relaxants in a completely separate, locked location from other medications",
+                    "Know the signs of muscle relaxant toxicity: vocalization, drooling, wobbling, weakness, seizures",
+                    "Seek veterinary care IMMEDIATELY for any suspected ingestion — delay worsens outcomes"
+                ],
+                sources: [
+                    "VIN (Veterinary Information Network): Baclofen Toxicosis — Definition, Etiology, Pathophysiology, Clinical Signs, Prognosis",
+                    "Merck Veterinary Manual: Toxicoses from Skeletal Muscle Relaxants in Animals (2024)",
+                    "Merck Veterinary Manual: Skeletal Muscle Relaxants for Animals",
+                    "ASPCA Animal Poison Control Center: Tips for Treating Baclofen Poisoning",
+                    "Frontiers in Veterinary Science: Case Report — Treatment of Cyclobenzaprine Ingestion in Two Dogs (Dreese et al., 2024)",
+                    "Journal of Veterinary Emergency and Critical Care: SOMA (Carisoprodol) Toxicity in a Dog (Lane, 2005)",
+                    "PetMD: Methocarbamol (Robaxin)",
+                    "VCA Animal Hospitals: Methocarbamol",
+                    "Veterinary Partner (VIN): Methocarbamol (Robaxin-V)"
+                ],
+                relatedEntries: ["dd445566-7788-99aa-bbcc-ddeeff334455"]
+            ),
+
+            // MARK: - Thyroid Medications (Levothyroxine)
+            ToxicItem(
+                id: UUID(uuidString: "55cc3344-ddee-ff00-1122-334455667788")!,
+                name: "Thyroid Medications (Levothyroxine)",
+                alternateNames: [
+                    // Generic names
+                    "levothyroxine",
+                    "L-thyroxine",
+                    "T4",
+                    "thyroxine",
+                    "thyroid hormone",
+                    "thyroid medication",
+                    "thyroid medicine",
+                    "thyroid supplement",
+                    "thyroid pill",
+
+                    // Human brand names
+                    "Synthroid",
+                    "Levoxyl",
+                    "Tirosint",
+                    "Unithroid",
+                    "Euthyrox",
+                    "Levothroid",
+
+                    // Veterinary brand names
+                    "Thyro-Tabs",
+                    "Soloxine",
+                    "ThyroKare",
+
+                    // Related
+                    "liothyronine",
+                    "T3",
+                    "Cytomel",
+                    "Armour Thyroid",
+                    "desiccated thyroid",
+                    "Nature-Throid",
+                    "NP Thyroid",
+
+                    // Common search queries
+                    "dog ate thyroid pill",
+                    "cat ate levothyroxine",
+                    "dog ate Synthroid",
+                    "pet ate thyroid medication"
+                ],
+                categories: [.medications],
+                imageAsset: "medications_thyroid",
+                description: "Levothyroxine is a synthetic thyroid hormone used to treat hypothyroidism in both humans and pets. It has a WIDE MARGIN OF SAFETY — acute toxicosis following a single overdose is uncommon. Dogs have tolerated several times the normal dose without developing signs of toxicosis. A single accidental ingestion is typically not an emergency for healthy pets. DYE ALLERGY WARNING: Some dogs develop allergic reactions to the dye used in certain levothyroxine tablets, causing skin problems, itching, or GI upset. If your dog shows these signs on thyroid medication, ask your veterinarian about undyed formulations.",
+                toxicityInfo: "WIDE MARGIN OF SAFETY: Levothyroxine has a wide margin of safety in dogs and cats. Dogs tolerated 3-6x the recommended dose daily for 4 weeks without signs of toxicosis. Acute overdose (single ingestion) is typically not problematic — chronic overdosing is more likely to cause signs of thyrotoxicosis. SIGNS OF THYROTOXICOSIS: When toxicity does occur (usually with chronic overdose), signs include hyperactivity, tachycardia, polydipsia (excessive thirst), polyuria (excessive urination), polyphagia (excessive appetite), weight loss despite increased appetite, vomiting, diarrhea, and restlessness. DYE ALLERGIES: Some dogs are allergic to the dye used in colored levothyroxine tablets. Signs include pruritus (itching), dermatitis, hives, facial swelling, and GI upset. If this occurs, undyed formulations (typically white 0.5 mg tablets) can be substituted. SPECIES NOTE: Dogs require much higher doses of levothyroxine than humans. This is normal and does not indicate overdose risk.",
+                onsetTime: OnsetTime(
+                    early: "Signs of thyrotoxicosis typically develop 1-9 hours after acute ingestion: vomiting, hyperactivity, restlessness, tachycardia (fast heart rate), increased thirst. However, many acute ingestions cause NO SIGNS.",
+                    delayed: "Unlike humans, delayed thyrotoxicosis (5-11 days post-ingestion) has NOT been reported in dogs or cats. Chronic overdose signs may develop gradually: sustained weight loss, personality changes, persistent hyperactivity, diarrhea."
+                ),
+                symptoms: [
+                    // Common signs of thyrotoxicosis
+                    "Hyperactivity or restlessness",
+                    "Tachycardia (fast heart rate)",
+                    "Polydipsia (excessive thirst)",
+                    "Polyuria (excessive urination)",
+                    "Polyphagia (excessive appetite)",
+                    "Weight loss despite increased appetite",
+
+                    // GI signs
+                    "Vomiting",
+                    "Diarrhea",
+                    "Loss of appetite (some cases)",
+
+                    // Other
+                    "Tachypnea (rapid breathing)",
+                    "Dyspnea (labored breathing)",
+                    "Lethargy (some cases)",
+                    "Hypertension (high blood pressure)",
+                    "Personality or behavior changes",
+                    "Reduced heat tolerance",
+
+                    // Dye allergy signs
+                    "Pruritus (itching) — may indicate dye allergy",
+                    "Dermatitis or skin rash — may indicate dye allergy",
+                    "Hives — may indicate dye allergy",
+                    "Facial swelling — may indicate dye allergy",
+                    "Alopecia (hair loss)"
+                ],
+                speciesRisks: [
+                    SpeciesRisk(
+                        species: .dog,
+                        severity: .low,
+                        notes: "Dogs have a WIDE margin of safety for levothyroxine. Single acute overdose is typically not dangerous — dogs tolerated 3-6x recommended doses daily for 4 weeks without toxicosis. More common concern is chronic overdose causing thyrotoxicosis. NOTE: Some dogs are allergic to the dye in colored tablets — signs include itching, dermatitis, and GI upset. Undyed formulations are available."
+                    ),
+                    SpeciesRisk(
+                        species: .cat,
+                        severity: .low,
+                        notes: "Cats generally tolerate levothyroxine well. Acute overdose toxicosis is uncommon. Cats typically take doses closer to human doses than dogs do. Contact your veterinarian if your cat ingests levothyroxine intended for a human or another pet, especially in large amounts."
+                    ),
+                    SpeciesRisk(
+                        species: .smallMammal,
+                        severity: .moderate,
+                        notes: "Limited data in small mammals. Small body size may increase sensitivity. Contact an exotic animal veterinarian for guidance on accidental ingestion."
+                    ),
+                    SpeciesRisk(
+                        species: .bird,
+                        severity: .moderate,
+                        notes: "Limited data in birds. Thyroid hormone metabolism differs across species. Contact an avian veterinarian for guidance."
+                    ),
+                    SpeciesRisk(
+                        species: .reptile,
+                        severity: .moderate,
+                        notes: "Very limited data. Reptile thyroid physiology differs from mammals. Contact an exotic animal veterinarian for guidance."
+                    )
+                ],
+                preventionTips: [
+                    "While levothyroxine has a wide safety margin, still store medications securely out of pet reach",
+                    "If your pet is on thyroid medication, avoid double-dosing — missed doses can be skipped without serious consequences",
+                    "Watch for signs of dye allergy (itching, skin problems) if your dog starts thyroid medication",
+                    "Keep human thyroid medication separate from pet medications to avoid confusion",
+                    "Do not panic if your pet eats a single levothyroxine tablet — contact your veterinarian for guidance, but this is typically not an emergency",
+                    "Monitor for signs of thyrotoxicosis if chronic overdosing is suspected: hyperactivity, weight loss, excessive thirst/urination",
+                    "Inform your veterinarian if your pet takes other medications that might interact with levothyroxine"
+                ],
+                sources: [
+                    "VIN (Veterinary Information Network): Levothyroxine — Prescriber Highlights, Clinical Pearls, Adverse Effects, Overdosage",
+                    "Merck Veterinary Manual: Thyroid Hormones",
+                    "Veterinary Partner (VIN): Levothyroxine",
+                    "VCA Animal Hospitals: Levothyroxine",
+                    "PetMD: Levothyroxine for Dogs",
+                    "ASPCA Animal Poison Control Center: Thyroid Hormone Toxicity",
+                    "Pet Poison Helpline: Thyroid Medications"
+                ],
+                relatedEntries: nil
             )
         ]
     }
