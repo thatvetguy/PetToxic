@@ -10860,6 +10860,252 @@ Hops toxicosis has NOT been reported in cats. However, given the severity in dog
                     "Pet Poison Helpline"
                 ],
                 relatedEntries: nil
+            ),
+
+            // MARK: - Aflatoxin Poisoning (Aflatoxicosis)
+            ToxicItem(
+                id: UUID(uuidString: "00112233-4455-6677-8899-aabbccddef15")!,
+                name: "Aflatoxin Poisoning (Aflatoxicosis)",
+                alternateNames: [
+                    "aflatoxicosis",
+                    "aflatoxin poisoning",
+                    "aflatoxin B1 poisoning",
+                    "AFB1 toxicosis",
+                    "Aspergillus poisoning",
+                    "Aspergillus toxicosis",
+                    "contaminated pet food",
+                    "contaminated dog food",
+                    "dog food poisoning",
+                    "pet food poisoning",
+                    "pet food recall",
+                    "foodborne mycotoxicosis",
+                    "corn toxicosis",
+                    "moldy corn poisoning",
+                    "peanut poisoning",
+                    "grain toxicosis",
+                    "mycotoxicosis",
+                    "hepatotoxic mycotoxin"
+                ],
+                categories: [.foods],
+                summary: "Invisible toxin from Aspergillus mold in contaminated pet food causes severe LIVER FAILURE. Dogs extremely susceptible. Has caused multiple pet food recalls and deaths. Colorless, odorless, heat-stable.",
+                description: """
+Aflatoxins are invisible, odorless toxins produced by Aspergillus mold that can contaminate pet food ingredients. Dogs are EXTREMELY susceptible to aflatoxin poisoning, which causes severe liver damage and can be fatal. Aflatoxin contamination has caused multiple pet food recalls and outbreaks worldwide.
+
+**WHAT ARE AFLATOXINS?**
+Aflatoxin B1 (AFB1) is the most toxic mycotoxin. These toxins are:
+- Colorless, odorless, and flavorless
+- Impossible to detect without lab testing
+- HEAT-STABLE—survive cooking and food processing
+
+**THIS IS DIFFERENT FROM TREMORGENIC MYCOTOXINS:**
+Aflatoxicosis causes LIVER FAILURE. Do not confuse with tremorgenic mycotoxin poisoning (see Moldy Foods entry), which causes neurological signs like tremors and seizures. Different toxins, different effects.
+
+**HOW CONTAMINATION OCCURS:**
+Aspergillus mold grows on grains and crops in hot, humid conditions. Common sources:
+- Corn (most common)
+- Peanuts
+- Grains (wheat, rice, sorghum)
+- Soybeans, cottonseed, tree nuts
+
+Most cases involve commercial pet food. Grain-free diets are NOT protective—aflatoxins can also contaminate legumes.
+
+**WHY DOGS ARE SO VULNERABLE:**
+Dogs have naturally low liver glutathione levels. Glutathione neutralizes aflatoxin metabolites. When toxin levels exceed detoxification capacity, metabolites damage liver cells and DNA.
+
+Because pets eat the same food daily, even low aflatoxin levels accumulate over time. Young dogs are more susceptible than adults.
+
+**PET FOOD RECALLS:**
+Major US outbreaks: 2005, 2011, 2020, 2021—numerous pet deaths. FDA maintains updated recall list at www.fda.gov.
+
+**WHAT TO DO:**
+- STOP feeding suspected food immediately
+- SAVE food and packaging (including lot number)
+- Contact veterinarian right away
+- Report to FDA: www.fda.gov/reportproblem
+""",
+                symptoms: [
+                    "EARLY SIGNS:",
+                    "Loss of appetite or sudden food refusal",
+                    "Lethargy and weakness",
+                    "Depression",
+                    "Vomiting",
+                    "Diarrhea",
+                    "",
+                    "LIVER DAMAGE SIGNS:",
+                    "Jaundice (yellowing of gums, skin, eyes)",
+                    "Abdominal swelling (ascites)",
+                    "Increased thirst and urination",
+                    "Progressive weight loss",
+                    "",
+                    "COAGULOPATHY (bleeding) SIGNS:",
+                    "Bloody vomit",
+                    "Bloody or dark tarry stool",
+                    "Blood in urine",
+                    "Bruising or petechiae",
+                    "Bleeding from gums or nose",
+                    "",
+                    "NEUROLOGICAL (advanced):",
+                    "Head pressing",
+                    "Blindness",
+                    "Pacing or circling",
+                    "Seizures",
+                    "Stupor or coma",
+                    "",
+                    "Sudden death (peracute cases)"
+                ],
+                onsetTime: OnsetTime(
+                    early: "1-2 days after eating heavily contaminated food",
+                    delayed: "Days to weeks with low-level chronic exposure"
+                ),
+                speciesRisks: [
+                    SpeciesRisk(
+                        species: .dog,
+                        severity: .severe,
+                        notes: "Dogs are among the MOST SUSCEPTIBLE species due to low liver glutathione levels. Young dogs more vulnerable than adults. Has caused numerous deaths from contaminated pet food. THIS IS AN EMERGENCY."
+                    ),
+                    SpeciesRisk(
+                        species: .cat,
+                        severity: .high,
+                        notes: "Cats are highly resistant to acute aflatoxicosis but susceptible to chronic exposure over time. Less commonly affected than dogs."
+                    )
+                ],
+                preventionTips: [
+                    "Store pet food in cool, dry conditions",
+                    "Use food within recommended timeframe after opening",
+                    "Check FDA pet food recall list regularly (www.fda.gov)",
+                    "Discard any food your pet suddenly refuses to eat",
+                    "Do NOT feed livestock feed to dogs or cats",
+                    "Grain-free diets are NOT protective—aflatoxins contaminate legumes too"
+                ],
+                sources: [
+                    "Veterinary Information Network (VIN)",
+                    "Merck Veterinary Manual",
+                    "U.S. Food and Drug Administration (FDA)",
+                    "American Veterinary Medical Association (AVMA)",
+                    "Cornell University College of Veterinary Medicine"
+                ],
+                relatedEntries: ["beacabe2-00ab-4e59-8c8c-c09665f940b6"]
+            ),
+
+            // MARK: - Hemlock (Poison Hemlock & Water Hemlock)
+            ToxicItem(
+                id: UUID(uuidString: "00112233-4455-6677-8899-aabbccddef16")!,
+                name: "Hemlock (Poison Hemlock & Water Hemlock)",
+                alternateNames: [
+                    "poison hemlock",
+                    "Conium maculatum",
+                    "poison parsley",
+                    "spotted hemlock",
+                    "California fern",
+                    "Nebraska fern",
+                    "deadly hemlock",
+                    "water hemlock",
+                    "Cicuta",
+                    "Cicuta maculata",
+                    "cowbane",
+                    "water cowbane",
+                    "poison parsnip",
+                    "spotted water hemlock",
+                    "spotted cowbane",
+                    "western water hemlock",
+                    "beaver poison",
+                    "musquash root",
+                    "hemlock plant",
+                    "wild hemlock"
+                ],
+                categories: [.plants],
+                summary: "TWO different deadly plants. Poison hemlock causes PARALYSIS. Water hemlock causes violent SEIZURES and is the most toxic plant in North America. Rare in pets (primarily affects livestock). Hemlock TREES are NOT toxic.",
+                description: """
+Hemlock refers to TWO different but equally dangerous plants: poison hemlock (Conium maculatum) and water hemlock (Cicuta species). Both are potentially lethal, but poisoning is RARE in dogs and cats—they typically don't consume enough. Primarily a livestock concern.
+
+**IMPORTANT: HEMLOCK TREES ARE NOT TOXIC**
+Do NOT confuse with hemlock trees (Tsuga species). Hemlock trees are evergreen conifers and are NOT toxic. The toxic hemlocks are herbaceous flowering plants resembling parsley or Queen Anne's lace.
+
+**TWO PLANTS, TWO DIFFERENT TOXINS:**
+
+**POISON HEMLOCK (Conium maculatum):**
+- Contains coniine (piperidine alkaloid)
+- Nicotine-like effects
+- Causes progressive PARALYSIS
+- Death from respiratory paralysis
+- Onset: 30 min to 2 hours
+
+**WATER HEMLOCK (Cicuta species):**
+- Contains cicutoxin
+- Most violently toxic plant in North America
+- Causes violent SEIZURES
+- Death can occur within 15 MINUTES
+- Onset: 15-60 minutes
+
+**WHY COMPANION ANIMAL CASES ARE RARE:**
+Dogs and cats are not grazers. Over 5 years, Pet Poison Helpline received only 19 calls for poison hemlock in pets. However, curious pets chewing on plants—especially water hemlock roots (highest toxin concentration)—can be affected.
+
+**PLANT IDENTIFICATION:**
+
+Poison hemlock: 3-8 feet tall, hollow PURPLE-SPOTTED stems, fern-like leaves, white flower clusters, musty odor when crushed. Found in fields, roadsides, ditches throughout US.
+
+Water hemlock: 3-6 feet tall near WATER sources, hollow stems with chambered rootstock containing yellowish oily liquid, white flower clusters. Found in marshes, wet meadows, stream banks.
+
+**PROGNOSIS:**
+- Poison hemlock: If pet survives, recovery usually complete within 1-2 days
+- Water hemlock: Guarded. Survival beyond 8 hours with mild signs = generally recover. Severe seizures = poor prognosis.
+""",
+                symptoms: [
+                    "SHARED EARLY SIGNS:",
+                    "Excessive drooling",
+                    "Agitation or nervousness",
+                    "Dilated pupils",
+                    "",
+                    "POISON HEMLOCK (paralysis syndrome):",
+                    "Weakness",
+                    "Tremors and muscle twitching",
+                    "Incoordination (ataxia)",
+                    "Progressive ascending paralysis",
+                    "Respiratory depression",
+                    "Difficulty breathing",
+                    "",
+                    "WATER HEMLOCK (seizure syndrome):",
+                    "Violent grand mal seizures",
+                    "Muscle rigidity",
+                    "Rapid heart rate",
+                    "Cardiac abnormalities",
+                    "",
+                    "SEVERE/TERMINAL:",
+                    "Respiratory failure",
+                    "Coma",
+                    "Death (water hemlock: can occur within 15 min)"
+                ],
+                onsetTime: OnsetTime(
+                    early: "Poison hemlock: 30 min to 2 hours",
+                    delayed: "Water hemlock: 15-60 min; death can occur within 15 min to 8 hours"
+                ),
+                speciesRisks: [
+                    SpeciesRisk(
+                        species: .dog,
+                        severity: .moderate,
+                        notes: "Dogs rarely ingest enough to cause severe toxicity. Poisoning primarily affects grazing livestock. However, both plants are potentially lethal if sufficient amount consumed. Curious dogs near waterways may encounter water hemlock roots."
+                    ),
+                    SpeciesRisk(
+                        species: .cat,
+                        severity: .moderate,
+                        notes: "Cats rarely ingest enough to cause severe toxicity. Poisoning primarily affects grazing livestock. Both plants are potentially lethal if sufficient amount consumed."
+                    )
+                ],
+                preventionTips: [
+                    "Learn to identify poison hemlock and water hemlock",
+                    "Remove hemlock plants from yards and pet-accessible areas",
+                    "Keep dogs leashed near streams and wet areas",
+                    "Do not allow pets to chew on unfamiliar plants",
+                    "Hemlock TREES (Tsuga species) are NOT toxic—different plants"
+                ],
+                sources: [
+                    "Veterinary Information Network (VIN)",
+                    "ASPCA Animal Poison Control Center",
+                    "Pet Poison Helpline",
+                    "Vetlexicon",
+                    "Merck Veterinary Manual"
+                ],
+                relatedEntries: nil
             )
         ]
     }
