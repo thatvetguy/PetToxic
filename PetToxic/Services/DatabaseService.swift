@@ -729,7 +729,7 @@ class DatabaseService {
                 ],
                 speciesRisks: [
                     SpeciesRisk(species: .dog, severity: .high, notes: "Dogs are most commonly affected due to scavenging behavior; roaming dogs and those with access to garbage or compost are at highest risk"),
-                    SpeciesRisk(species: .cat, severity: .moderate, notes: "Cats may also be affected but are less likely to consume moldy food due to more selective eating habits")
+                    SpeciesRisk(species: .cat, severity: .low, notes: "Tremorgenic mycotoxicosis has NOT been reported in domestic cats, likely due to their more selective eating habits. However, cats should still be prevented from accessing moldy foods as a precaution.")
                 ],
                 preventionTips: [
                     "Secure all garbage cans with tight-fitting, pet-proof lids",
@@ -10747,6 +10747,119 @@ Approximately 95% of affected dogs survive with prompt treatment. Fatalities occ
                     "PetMD"
                 ],
                 relatedEntries: ["00112233-4455-6677-8899-aabbccddef08"]
+            ),
+
+            // MARK: - Hops (Humulus lupulus)
+            ToxicItem(
+                id: UUID(uuidString: "00112233-4455-6677-8899-aabbccddef14")!,
+                name: "Hops",
+                alternateNames: [
+                    "beer hops",
+                    "brewing hops",
+                    "hop cones",
+                    "hop flowers",
+                    "hop plugs",
+                    "spent hops",
+                    "lupulin",
+                    "home brewing hops",
+                    "homebrew hops",
+                    "wort hops",
+                    "dried hops",
+                    "pellet hops",
+                    "Humulus lupulus",
+                    "Humulus"
+                ],
+                categories: [.foods, .householdItems],
+                summary: "EXTREMELY DANGEROUS to dogs. Causes malignant hyperthermia with body temperature exceeding 109°F. Death can occur within 3 HOURS without treatment. Home brewing supplies are primary source. Not reported in cats.",
+                description: """
+Hops (Humulus lupulus) are the flowering cones of the hop plant, used in beer brewing. Hops are EXTREMELY DANGEROUS to dogs and can cause a life-threatening condition characterized by rapidly rising body temperature. Without treatment, death can occur within hours.
+
+**WHY HOPS ARE DANGEROUS:**
+The exact toxic compound is unknown, but ingestion triggers a malignant hyperthermia-like reaction. Body temperature rises uncontrollably, sometimes exceeding 109°F (42.8°C). Severe hyperthermia leads to:
+- Rhabdomyolysis (muscle breakdown)
+- DIC (disseminated intravascular coagulopathy)
+- Kidney injury
+- Liver damage
+- Neurologic dysfunction
+
+In untreated dogs, death generally occurs within 3 HOURS of symptom onset.
+
+**HOW EXPOSURE OCCURS:**
+Dogs are typically exposed through home brewing:
+- Unused hop plugs (28-57 grams each)
+- Spent hops (discarded after brewing)
+
+A single 28-gram hop plug can expand to ~900 grams of rehydrated material in a dog's stomach. Toxicosis documented only from ingestion of compressed flowers (cones).
+
+**BREED PREDISPOSITION:**
+Large breed dogs appear overrepresented in case reports:
+- Labrador Retrievers
+- Saint Bernards
+- Doberman Pinschers
+- Golden Retrievers
+- Greyhounds
+- Border Collies
+- Northern breeds
+
+However, ANY dog can be affected.
+
+**THIS IS AN EMERGENCY:**
+If you suspect your dog has eaten hops—fresh, dried, or spent—seek IMMEDIATE veterinary care. Do NOT wait for symptoms. Time is critical.
+
+**PROGNOSIS:**
+With rapid veterinary intervention and aggressive cooling, clinical signs generally resolve within 24-72 hours and prognosis is good. Delayed treatment = guarded prognosis.
+
+**CATS:**
+Hops toxicosis has NOT been reported in cats. However, given the severity in dogs, prevent cat access as well.
+""",
+                symptoms: [
+                    "SEVERE and rapidly rising body temperature (hallmark sign)",
+                    "Temperature may exceed 109°F (42.8°C)",
+                    "Excessive panting",
+                    "Restlessness and anxiety",
+                    "Vomiting",
+                    "Abdominal pain or tenseness",
+                    "Rapid heart rate (tachycardia)",
+                    "Bright red mucous membranes",
+                    "Excessive salivation",
+                    "Vocalization or whining",
+                    "",
+                    "SEVERE SIGNS:",
+                    "Seizures",
+                    "Difficulty breathing or apnea",
+                    "Death (within 3 hours if untreated)"
+                ],
+                onsetTime: OnsetTime(
+                    early: "2-4 hours (symptoms begin and progress rapidly)",
+                    delayed: "24-72 hours for recovery WITH treatment"
+                ),
+                speciesRisks: [
+                    SpeciesRisk(
+                        species: .dog,
+                        severity: .severe,
+                        notes: "EXTREMELY DANGEROUS. Causes malignant hyperthermia with body temperature exceeding 109°F. Death can occur within 3 HOURS without treatment. Large breeds may be overrepresented but ANY dog is at risk. THIS IS AN EMERGENCY—seek immediate veterinary care."
+                    ),
+                    SpeciesRisk(
+                        species: .cat,
+                        severity: .low,
+                        notes: "Hops toxicosis has NOT been reported in cats. However, given the extreme severity in dogs, cats should also be prevented from accessing hops."
+                    )
+                ],
+                preventionTips: [
+                    "Store unused hops in sealed, dog-proof containers",
+                    "Never leave hop plugs or pellets unattended during brewing",
+                    "Dispose of spent hops IMMEDIATELY and securely",
+                    "Do NOT put spent hops in compost piles accessible to pets",
+                    "Consider brewing in an area completely off-limits to dogs",
+                    "Educate all household members about the danger to dogs",
+                    "A single 28g hop plug can be fatal"
+                ],
+                sources: [
+                    "Veterinary Information Network (VIN)",
+                    "ASPCA Animal Poison Control Center",
+                    "Pet Poison Helpline"
+                ],
+                relatedEntries: nil
             )
         ]
     }
