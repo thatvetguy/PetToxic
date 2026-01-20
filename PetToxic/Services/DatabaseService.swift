@@ -9349,6 +9349,301 @@ class DatabaseService {
                     "FDA Safety Communication: Benzocaine and methemoglobinemia risk (2018)"
                 ],
                 relatedEntries: ["bb223344-5566-7788-99aa-bbccddeeff11"]
+            ),
+
+            // MARK: - Paintballs
+            ToxicItem(
+                id: UUID(uuidString: "00112233-4455-6677-8899-aabbccddef01")!,
+                name: "Paintballs",
+                alternateNames: [
+                    "paintball",
+                    "paint balls",
+                    "paintball pellets",
+                    "paintball ammo",
+                    "paintball ammunition",
+                    "paintball capsules",
+                    "gelatin paintballs",
+                    "dog ate paintballs",
+                    "dog ate paintball"
+                ],
+                categories: [.otherHazards],
+                imageAsset: "paintballs",
+                description: "Paintballs are gelatin capsules containing brightly colored paint, used in recreational shooting sports. The paint is composed of water-soluble, non-toxic dyes mixed with osmotically-active ingredients including polyethylene glycol, glycerol (glycerin), sorbitol, propylene glycol, and oils. Dogs are attracted to paintballs due to the gelatin capsule, vegetable oil content, and sweet flavors of some ingredients. A single box of small paintballs may contain over 1,000 pellets. Despite being labeled 'non-toxic,' paintballs can cause severe illness and death in dogs. The danger comes from osmotic effects: polyethylene glycol, glycerol, and sorbitol draw water into the intestines, causing rapid fluid loss and relative hypernatremia (elevated blood sodium). This is NOT from eating salt — the sodium level rises because the body loses free water. The brain is particularly vulnerable to these fluid shifts, leading to severe neurological signs. Dogs have been known to ingest up to 500 paintballs at once.",
+                toxicityInfo: "The osmotically-active ingredients in paintballs (polyethylene glycol, glycerol, sorbitol) draw water into the gastrointestinal tract. This causes rapid fluid loss from the body and results in relative hypernatremia — elevated blood sodium not from salt ingestion, but from free water loss. The brain is particularly vulnerable to rapid changes in sodium concentration. CLINICAL STATISTICS (from case series): Vomiting occurred in 77% of cases; Ataxia/incoordination in 45%; Diarrhea in 27%; Tremors in 25%. Signs can develop rapidly (within 30-60 minutes) or be delayed up to 4-6 hours. Death can occur within 24 hours in severe untreated cases. A 41 kg (90 lb) Labrador showed clinical signs after ingesting only 15 paintballs.",
+                onsetTime: OnsetTime(
+                    early: "Vomiting often begins within 30-60 minutes of ingestion; vomit and diarrhea may be brightly colored from the paint.",
+                    delayed: "Neurological signs (ataxia, tremors, seizures, blindness) may develop within hours as sodium levels rise; death can occur within 24 hours in severe untreated cases."
+                ),
+                symptoms: [
+                    "Vomiting (77% of cases) — may be brightly colored",
+                    "Ataxia / incoordination (45% of cases)",
+                    "Diarrhea (27% of cases) — may be brightly colored",
+                    "Tremors (25% of cases)",
+                    "Lethargy or depression",
+                    "Tachycardia (rapid heart rate)",
+                    "Abdominal distention",
+                    "Disorientation or confusion",
+                    "Dehydration",
+                    "Recumbency (unable to stand)",
+                    "Panting",
+                    "Weakness",
+                    "Hyperactivity",
+                    "Hyperthermia (elevated body temperature)",
+                    "Excessive thirst",
+                    "Excessive urination",
+                    "Blindness",
+                    "Seizures",
+                    "Coma"
+                ],
+                speciesRisks: [
+                    SpeciesRisk(
+                        species: .dog,
+                        severity: .high,
+                        notes: "Dogs are most commonly affected due to attraction to the gelatin capsule and sweet ingredients. Fatalities have been reported. A 41 kg (90 lb) Labrador showed clinical signs after ingesting only 15 paintballs. Dogs have been known to ingest up to 500 paintballs at once."
+                    ),
+                    SpeciesRisk(
+                        species: .cat,
+                        severity: .high,
+                        notes: "Cats can also develop toxicity; no published case reports exist, but the same osmotic mechanism applies. Cats are less likely to consume large quantities but are still at risk."
+                    ),
+                    SpeciesRisk(
+                        species: .bird,
+                        severity: .high,
+                        notes: "Birds could be severely affected due to their small size; even a single paintball could cause significant osmotic imbalance."
+                    ),
+                    SpeciesRisk(
+                        species: .smallMammal,
+                        severity: .high,
+                        notes: "Small mammals would be at high risk due to their small body size relative to the osmotic load."
+                    ),
+                    SpeciesRisk(
+                        species: .reptile,
+                        severity: .moderate,
+                        notes: "Less information available; reptiles may have different susceptibility to osmotic disturbances."
+                    )
+                ],
+                preventionTips: [
+                    "Store paintballs in a locked cabinet or closed container that pets cannot access",
+                    "Never leave paintball containers or bags where dogs can reach them — dogs can chew through plastic packaging",
+                    "Clean up any spilled paintballs immediately, including outdoors after games",
+                    "Inform family members and guests that paintballs are dangerous to pets despite being labeled 'non-toxic'",
+                    "If you store paintballs in a garage or shed, ensure pets cannot access that area unsupervised",
+                    "Consider switching to airsoft or alternative recreational shooting sports if you have curious dogs"
+                ],
+                sources: [
+                    "Veterinary Information Network (VIN) — Paintballs Clinical Brief",
+                    "ASPCA Animal Poison Control Center",
+                    "Donaldson CW. Paintball toxicosis in dogs. Vet Med. 2003;98:995-998",
+                    "Pet Poison Helpline"
+                ],
+                relatedEntries: ["c9fb21d1-a66a-418e-a63f-1b754ec048f2"]
+            ),
+
+            // MARK: - Paints (Latex, Oil-Based, & Spray Paints)
+            ToxicItem(
+                id: UUID(uuidString: "00112233-4455-6677-8899-aabbccddef02")!,
+                name: "Paints (Latex, Oil-Based, & Spray Paints)",
+                alternateNames: [
+                    "latex paint",
+                    "acrylic paint",
+                    "water-based paint",
+                    "oil-based paint",
+                    "oil paint",
+                    "alkyd paint",
+                    "enamel paint",
+                    "spray paint",
+                    "aerosol paint",
+                    "house paint",
+                    "wall paint",
+                    "interior paint",
+                    "exterior paint",
+                    "craft paint",
+                    "artist paint",
+                    "tempera paint",
+                    "poster paint",
+                    "finger paint",
+                    "paint fumes",
+                    "wet paint",
+                    "dried paint",
+                    "paint on fur",
+                    "paint on paws",
+                    "dog ate paint",
+                    "cat ate paint",
+                    "dog stepped in paint"
+                ],
+                categories: [.otherHazards, .garageGarden],
+                imageAsset: "paints",
+                description: "Paints are liquid or paste products used for coating surfaces. Common types include latex (water-based) paints, oil-based (alkyd) paints, and spray paints. Most modern household paints have relatively low toxicity. Many products display an Art and Creative Materials Institute (ACMI) seal — if it shows 'AP' (Approved Product), the paint is certified non-toxic. Oil-based paints and spray paints contain petroleum distillates that pose aspiration risk. Very old paints (pre-1978 in the US) may contain lead. FOR PAINT ON FUR: Dried latex paint is generally not toxic. Do NOT use solvents (paint thinner, turpentine, mineral spirits) to remove it — these are more dangerous than the paint itself. Let dried latex paint wear off naturally or trim the affected fur. For wet paint, wash immediately with mild dish soap and warm water before it dries.",
+                toxicityInfo: "Most modern latex and water-based paints cause only mild gastrointestinal upset if ingested. Some latex paints contain small amounts of ethylene glycol (less than 10%) as a drying retardant, but this amount is generally not clinically significant. Oil-based paints and products containing petroleum distillates pose a greater concern — not from direct toxicity, but from aspiration risk if vomiting occurs. Aspiration of petroleum products into the lungs can cause chemical pneumonitis. Paint fumes can irritate the respiratory tract, especially in birds who are extremely sensitive. Very old paints may contain lead, which is a serious toxicity concern requiring veterinary evaluation. ACMI SEAL: Look for the Art and Creative Materials Institute 'AP' (Approved Product) seal on craft paints — this indicates the product is certified non-toxic.",
+                onsetTime: OnsetTime(
+                    early: "GI upset (drooling, vomiting, decreased appetite) may occur within a few hours of ingestion.",
+                    delayed: "If aspiration occurs with oil-based paints, respiratory signs may develop within 24-48 hours; lead paint toxicity develops over days to weeks with repeated exposure."
+                ),
+                symptoms: [
+                    "Drooling",
+                    "Vomiting",
+                    "Diarrhea",
+                    "Decreased appetite",
+                    "Abdominal discomfort",
+                    "Mouth or throat irritation (oil-based paints)",
+                    "Coughing or gagging (if fumes inhaled)",
+                    "Respiratory distress (if aspirated)",
+                    "Lethargy",
+                    "Paint-stained vomit or stool"
+                ],
+                speciesRisks: [
+                    SpeciesRisk(
+                        species: .dog,
+                        severity: .low,
+                        notes: "Latex and water-based paints typically cause only mild GI upset. Oil-based paints carry aspiration risk. Lead paint (pre-1978) is a serious concern requiring veterinary evaluation. Do not use solvents to remove paint from fur."
+                    ),
+                    SpeciesRisk(
+                        species: .cat,
+                        severity: .low,
+                        notes: "Same as dogs. Cats may groom paint off their fur — dried latex paint is generally safe to ingest in small amounts during grooming, but large amounts or oil-based paints warrant concern. Never use solvents on cats."
+                    ),
+                    SpeciesRisk(
+                        species: .bird,
+                        severity: .moderate,
+                        notes: "Birds are highly sensitive to fumes from oil-based and spray paints. Ensure excellent ventilation if painting near birds, or relocate them temporarily. Even 'low-VOC' paints can irritate avian respiratory systems."
+                    ),
+                    SpeciesRisk(
+                        species: .smallMammal,
+                        severity: .low,
+                        notes: "Similar to dogs and cats; mild GI upset expected with latex paints. Respiratory sensitivity to fumes may be higher."
+                    ),
+                    SpeciesRisk(
+                        species: .reptile,
+                        severity: .low,
+                        notes: "Limited information; GI effects expected if ingested. Ensure good ventilation in enclosure areas."
+                    )
+                ],
+                preventionTips: [
+                    "Keep pets out of freshly painted areas until paint is fully dry and fumes have dissipated",
+                    "Store paint cans securely with lids tightly sealed",
+                    "Clean up paint spills promptly before pets can walk through them",
+                    "If paint gets on your pet's fur, let dried latex paint wear off naturally or trim the affected fur — do NOT use solvents to remove it",
+                    "For wet paint on skin or fur, wash immediately with mild dish soap and warm water before it dries",
+                    "If your home was built before 1978 and paint is peeling or flaking, consider lead testing before renovation",
+                    "Keep birds away from painting areas — they are extremely sensitive to fumes",
+                    "Look for the ACMI 'AP' (Approved Product) seal when purchasing craft paints for use around pets"
+                ],
+                sources: [
+                    "Veterinary Information Network (VIN) — Paints Clinical Brief",
+                    "ASPCA Animal Poison Control Center",
+                    "Pet Poison Helpline",
+                    "Art and Creative Materials Institute (ACMI) — Product Safety Information"
+                ],
+                relatedEntries: [
+                    "edfcb0ed-52aa-44fb-a71f-060551350513",
+                    "3b605ff6-df0c-426f-8687-70226969f7c0"
+                ]
+            ),
+
+            // MARK: - Linear Foreign Bodies (Thread, String, Ribbon)
+            ToxicItem(
+                id: UUID(uuidString: "00112233-4455-6677-8899-aabbccddef03")!,
+                name: "Linear Foreign Bodies (Thread, String, Ribbon)",
+                alternateNames: [
+                    "linear foreign body",
+                    "string foreign body",
+                    "thread",
+                    "sewing thread",
+                    "dental floss",
+                    "yarn",
+                    "ribbon",
+                    "tinsel",
+                    "Christmas tinsel",
+                    "holiday ribbon",
+                    "gift ribbon",
+                    "curling ribbon",
+                    "twine",
+                    "string",
+                    "shoe laces",
+                    "shoelaces",
+                    "fishing line",
+                    "hair ties",
+                    "rubber bands",
+                    "elastic bands",
+                    "cassette tape",
+                    "VHS tape",
+                    "needle and thread",
+                    "sewing needle",
+                    "cat ate string",
+                    "dog ate ribbon",
+                    "cat ate tinsel",
+                    "cat ate thread",
+                    "dog ate string",
+                    "string hanging from mouth",
+                    "string coming out of cat"
+                ],
+                categories: [.otherHazards, .holidayHazards],
+                imageAsset: "linear_foreign_body",
+                description: "Linear foreign bodies are long, thin materials that pets — especially cats — may swallow. Common culprits include thread (particularly with a needle attached), yarn, ribbon, tinsel, dental floss, string, and hair ties. Unlike other swallowed objects, linear materials pose a unique and serious danger because they can anchor at one point in the digestive tract while the rest continues moving through the intestines. This is a PHYSICAL emergency, not a toxicity. When a linear object anchors (often at the base of the tongue or in the stomach), intestinal contractions continue trying to move it forward. This causes the intestines to 'bunch up' or plicate along the string like fabric on a drawstring. The bunched intestines can lose blood supply, become damaged, and eventually perforate (develop holes), leading to life-threatening peritonitis (abdominal infection). LINEAR FOREIGN BODIES ARE GENERALLY MORE DANGEROUS THAN NON-LINEAR FOREIGN OBJECTS because of this plication and perforation risk. Surgery is almost always required. If a needle is attached to thread, it may puncture the intestinal wall at any point along its path. WARNING: If you see string coming from your pet's mouth or anus, DO NOT PULL IT. Pulling can cause the intestines to tear or bunch up further, potentially causing fatal damage. Cut the visible portion close to the body and seek emergency veterinary care immediately.",
+                toxicityInfo: "This is a PHYSICAL hazard, not a chemical toxicity. The danger is mechanical damage to the gastrointestinal tract. MECHANISM OF INJURY: When a linear object anchors at one point (commonly the base of the tongue in cats, or the pylorus/stomach outlet), normal intestinal peristalsis continues trying to move the free end forward. Because the anchored end cannot move, the intestines 'bunch up' or plicate along the string. This plication: 1) Compromises blood supply to sections of intestine; 2) Causes pressure necrosis of intestinal wall; 3) Leads to perforation (holes) and leakage of intestinal contents; 4) Results in septic peritonitis (abdominal infection) — a life-threatening emergency. If a needle is attached, it may puncture the intestinal wall at any point. WHY LINEAR IS WORSE: Unlike a ball or toy that may pass or cause a single point obstruction, linear objects cause damage along their entire length. Multiple perforations are possible. Surgery almost always requires removing damaged sections of intestine.",
+                onsetTime: OnsetTime(
+                    early: "Vomiting may begin within hours if the object causes obstruction or irritation; some pets show no initial signs. String may be visible at the mouth or under the tongue.",
+                    delayed: "Severe signs (abdominal pain, fever, collapse) develop as plication worsens and perforation occurs — this can take 1-7 days depending on how quickly the string causes damage. By the time severe signs appear, emergency surgery is required."
+                ),
+                symptoms: [
+                    "Vomiting (may be repeated attempts with nothing produced)",
+                    "Decreased appetite or refusing to eat",
+                    "Lethargy or depression",
+                    "Abdominal pain (hunched posture, reluctance to move)",
+                    "Straining to defecate",
+                    "Diarrhea (may contain blood)",
+                    "String visible at mouth or under tongue (DO NOT PULL)",
+                    "String visible from anus (DO NOT PULL)",
+                    "Fever (indicates infection/perforation)",
+                    "Dehydration",
+                    "Collapse (in advanced cases)"
+                ],
+                speciesRisks: [
+                    SpeciesRisk(
+                        species: .cat,
+                        severity: .severe,
+                        notes: "Cats are at HIGHEST risk — they are attracted to string-like objects and often play with and swallow thread, yarn, tinsel, and ribbon. The rough texture of a cat's tongue makes it difficult to spit out string once it's in the mouth. Linear foreign bodies are one of the most common surgical emergencies in cats. If you see string under your cat's tongue or from the anus, DO NOT PULL — seek emergency care."
+                    ),
+                    SpeciesRisk(
+                        species: .dog,
+                        severity: .severe,
+                        notes: "While less common than in cats, dogs can also develop linear foreign body obstructions, particularly from ribbon, rope toys, or fabric. The same plication and perforation risk applies. Surgery is typically required."
+                    ),
+                    SpeciesRisk(
+                        species: .bird,
+                        severity: .high,
+                        notes: "Birds may ingest thread or fibers from toys or nesting materials. Obstruction risk is high due to their small GI tract. Contact an avian veterinarian immediately."
+                    ),
+                    SpeciesRisk(
+                        species: .smallMammal,
+                        severity: .severe,
+                        notes: "Small mammals like ferrets and rabbits can develop linear foreign bodies. Ferrets are particularly prone to chewing on soft, string-like materials. Emergency surgery may be required."
+                    ),
+                    SpeciesRisk(
+                        species: .reptile,
+                        severity: .moderate,
+                        notes: "Less common but possible; substrate or tank decoration fibers could potentially be ingested. Contact an exotic veterinarian if suspected."
+                    )
+                ],
+                preventionTips: [
+                    "Keep thread, yarn, ribbon, and tinsel completely away from cats — do not let them play with these materials under any circumstances",
+                    "Store sewing supplies in closed containers or rooms cats cannot access",
+                    "Supervise gift wrapping and immediately discard ribbon scraps in a pet-proof trash can",
+                    "Avoid using tinsel on Christmas trees if you have cats — consider pet-safe alternatives",
+                    "Choose cat toys without detachable string components; if toys have strings, use only under direct supervision",
+                    "Keep dental floss in closed cabinets — the mint flavor can attract pets",
+                    "Dispose of fishing line properly in sealed containers",
+                    "Regularly check rope toys for fraying and discard when worn",
+                    "Keep hair ties, rubber bands, and elastic bands in closed drawers or containers",
+                    "If you see string from your pet's mouth or anus, DO NOT PULL — cut the visible portion and seek emergency veterinary care"
+                ],
+                sources: [
+                    "Veterinary Information Network (VIN) — Linear Foreign Bodies",
+                    "ASPCA Animal Poison Control Center",
+                    "American College of Veterinary Surgeons — Gastrointestinal Foreign Bodies",
+                    "Pet Poison Helpline"
+                ],
+                relatedEntries: nil
             )
         ]
     }
