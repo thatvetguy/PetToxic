@@ -2672,6 +2672,150 @@ class DatabaseService {
                 ]
             ),
 
+            // MARK: - Psilocybin Mushrooms & Psychedelic Edibles
+            ToxicItem(
+                id: UUID(uuidString: "ff001122-3344-5566-7788-99aabbccdd04")!,
+                name: "Psilocybin Mushrooms & Psychedelic Edibles",
+                alternateNames: [
+                    // Primary terms
+                    "psilocybin",
+                    "psilocin",
+                    "magic mushrooms",
+                    "shrooms",
+                    "mushroom edibles",
+                    "mushroom chocolate",
+                    "mushroom gummies",
+                    "psychedelic mushrooms",
+                    "hallucinogenic mushrooms",
+
+                    // Species names
+                    "Psilocybe",
+                    "Psilocybe cubensis",
+                    "liberty caps",
+                    "golden teachers",
+                    "penis envy mushrooms",
+
+                    // Street terms
+                    "caps",
+                    "boomers",
+                    "zoomers",
+                    "fungi",
+                    "blue meanies",
+
+                    // Products/brands (for searchability)
+                    "mushroom bar",
+                    "shroom chocolate",
+                    "psilocybin chocolate",
+                    "mushroom candy",
+                    "microdose",
+                    "microdosing",
+
+                    // Research chemicals often in mislabeled products
+                    "4-AcO-DMT",
+                    "synthetic psilocybin",
+                    "psilacetin",
+
+                    // Common search queries
+                    "dog ate mushroom chocolate",
+                    "dog ate shrooms",
+                    "cat ate magic mushrooms",
+                    "dog ate mushroom gummy",
+                    "dog ate psychedelic mushrooms",
+                    "pet ate shroom chocolate",
+                    "dog ate mushroom edible"
+                ],
+                categories: [.recreationalSubstances],
+                imageAsset: "psilocybin_mushrooms",
+                description: "Psilocybin mushrooms (\"magic mushrooms,\" \"shrooms\") and psychedelic edibles contain compounds that affect serotonin receptors, causing hallucinogenic effects. Pure psilocybin is converted to psilocin in the body and is structurally related to serotonin. While genuine psilocybin has a relatively wide safety margin, dogs exposed to it experience an unpleasant but typically survivable intoxication with supportive care. YOUR PET'S HEALTH IS THE PRIORITY. Veterinarians are focused on treating your pet, not on the legal status of the substance. Being honest about what your pet was exposed to helps your veterinarian provide the best possible care. Veterinary professionals are NOT required to report illegal drug exposures to law enforcement. CRITICAL WARNING — MISLABELED PRODUCTS: Many \"mushroom\" chocolates, gummies, and edibles sold at smoke shops and online DO NOT contain actual psilocybin. Testing has found they may contain: Muscimol and ibotenic acid (from Amanita mushrooms) — can cause delirious stupor and SEIZURES; 4-AcO-DMT (\"synthetic psilocybin\") — research chemical with limited safety data; Unknown research chemicals — potentially dangerous with no established safety profiles; Other adulterants — prescription drugs, kava, bath salts. In 2024, the FDA recalled Diamond Shruumz products after 145 illnesses, 59 hospitalizations, and 2 deaths across 29 states. Testing revealed highly inconsistent contents even within the same product line. This entry covers psilocybin-type mushrooms ONLY. It does NOT cover deadly Amanita species (death cap, destroying angel) that cause liver failure — those are a separate, life-threatening emergency.",
+                toxicityInfo: "Psilocybin is a prodrug that is rapidly dephosphorylated to psilocin, the pharmacologically active compound. Psilocin is structurally similar to serotonin and acts primarily as an agonist at serotonin (5-HT) receptors, particularly 5-HT2A receptors. MECHANISM: Psilocin's serotonergic effects cause altered perception, disorientation, and anxiety in pets. Unlike humans who may find the experience meaningful, dogs find it distressing and frightening. The experience is sometimes described as causing \"apprehension\" or \"bad trip\" behavior in animals. SAFETY MARGIN: Pure psilocybin has a relatively wide safety margin. In experimental studies, the LD50 in mice was 293 mg/kg — approximately 1000 times the threshold psychoactive dose. Fatalities from pure psilocybin are extremely rare. MISLABELED PRODUCTS — THE REAL DANGER: Many \"mushroom edibles\" do not contain actual psilocybin. Common adulterants include: Muscimol/Ibotenic Acid from legal Amanita muscaria mushrooms — these are NOT classical hallucinogens, act on GABA receptors, and cause delirious stupor, confusion, and potentially SEIZURES; 4-AcO-DMT which converts to psilocin but is unregulated and may contain toxic contaminants; Unknown research chemicals with no safety data. MAO INHIBITOR COMBINATIONS: Some products combine psilocybin or DMT with MAO inhibitors (harmaline from Syrian Rue) to potentiate effects. This can significantly intensify and prolong the intoxication and increase serotonin-related effects.",
+                onsetTime: OnsetTime(
+                    early: "With genuine psilocybin: Clinical signs typically develop within 20-60 minutes after ingestion, though onset may be delayed up to 3 hours. Chocolates and edibles may have slightly faster onset than raw mushrooms. With mislabeled products: Onset can be unpredictable depending on contents. Muscimol from Amanita mushrooms may have onset within 30-90 minutes.",
+                    delayed: "Effects of genuine psilocybin typically last 2-4 hours, though prolonged effects up to 15 hours have been reported. Drowsiness, dilated pupils, and appearing \"out of it\" may persist up to 24 hours. With MAO inhibitor combinations, duration can be significantly prolonged."
+                ),
+                symptoms: [
+                    // CNS/Behavioral
+                    "Apprehension or anxiety",
+                    "Disorientation",
+                    "Agitation",
+                    "Hyperactivity",
+                    "Vocalization (howling, whining)",
+                    "Ataxia (incoordination, \"walking drunk\")",
+                    "Hyperesthesia (exaggerated response to touch or sound)",
+                    "Appearing to hallucinate (reacting to things that aren't there)",
+                    "Mydriasis (dilated pupils)",
+                    "Abnormal eye movements (nystagmus)",
+
+                    // Autonomic
+                    "Tachycardia (rapid heart rate)",
+                    "Hypertension (elevated blood pressure)",
+                    "Hyperthermia (elevated body temperature)",
+
+                    // GI Signs
+                    "Vomiting",
+                    "Drooling (hypersalivation)",
+                    "Diarrhea",
+
+                    // Severe/Rare (especially with mislabeled products)
+                    "Tremors",
+                    "Seizures (rare with psilocybin; more common with muscimol/ibotenic acid)",
+                    "Drowsiness or sedation",
+                    "Stupor (especially with Amanita compounds)"
+                ],
+                speciesRisks: [
+                    SpeciesRisk(
+                        species: .dog,
+                        severity: .moderate,
+                        notes: "Dogs exposed to genuine psilocybin typically experience an unpleasant but survivable intoxication. They appear distressed, disoriented, and anxious — clearly not enjoying the experience. Signs include vocalization, hyperesthesia, ataxia, mydriasis, and apprehension. Most dogs recover fully within 6-12 hours with supportive care. MISLABELED PRODUCTS: If the product contained muscimol/ibotenic acid (Amanita compounds), 4-AcO-DMT, or unknown research chemicals, the clinical presentation and severity may be unpredictable. Seizures are more likely with ibotenic acid. Always inform your veterinarian if the source was an edible product rather than actual mushrooms."
+                    ),
+                    SpeciesRisk(
+                        species: .cat,
+                        severity: .moderate,
+                        notes: "Cats exposed to psilocybin may show disorientation, dilated pupils, ataxia, and agitation. Some cats may begin frantically grooming themselves. Less clinical data exists for cats than dogs, but a similar clinical course is expected. Note: Amanita muscaria toxins (muscimol) can be more dangerous in cats. If the ingested product was an edible that may have been mislabeled, inform your veterinarian immediately."
+                    ),
+                    SpeciesRisk(
+                        species: .smallMammal,
+                        severity: .high,
+                        notes: "Small mammals are more susceptible due to their small body size. Hallucinogenic effects and altered mentation can be especially distressing. Unknown adulterants in edible products pose additional risks. Contact an exotic animal veterinarian immediately."
+                    ),
+                    SpeciesRisk(
+                        species: .bird,
+                        severity: .high,
+                        notes: "Limited data on psilocybin toxicity in birds. Altered mentation and serotonergic effects could be dangerous. Contact an avian veterinarian immediately."
+                    ),
+                    SpeciesRisk(
+                        species: .reptile,
+                        severity: .moderate,
+                        notes: "Very limited data available. Serotonergic effects expected but severity is unknown. Contact an exotic animal veterinarian for guidance."
+                    )
+                ],
+                preventionTips: [
+                    "Keep all psychedelic substances and edibles completely out of reach of pets in secure, locked containers",
+                    "Be aware that mushroom chocolates and edibles are often attractive to dogs — chocolate flavor makes them especially appealing",
+                    "NEVER assume a \"mushroom\" edible product contains what the label says — testing has shown widespread mislabeling",
+                    "If your pet ingests a psychedelic edible, bring the packaging to the veterinarian — it may help identify possible adulterants",
+                    "Be honest with your veterinarian about what your pet was exposed to — veterinarians are NOT required to report drug exposures and are focused solely on your pet's health",
+                    "Do not confuse psilocybin mushrooms with deadly Amanita species (death cap, destroying angel) — those cause liver failure and are life-threatening emergencies",
+                    "If you live in an area where psilocybin is decriminalized, be extra vigilant about storage — legal access may mean more products in homes",
+                    "If you or someone you know is struggling with substance use, resources are available — SAMHSA National Helpline: 1-800-662-4357"
+                ],
+                sources: [
+                    "VIN (Veterinary Information Network): Psilocybin Mushroom Toxicosis Monograph",
+                    "ASPCA Animal Poison Control Center: Hallucinogenic Mushroom Toxicosis in Animals",
+                    "Veterinary and Animal Science (2023): Intoxication of Dogs and Cats with Recreational Drugs — Psilocybin Section",
+                    "VCA Animal Hospitals: Mushroom Toxicity — Neurotoxic Mushrooms",
+                    "Veterinary Partner (VIN): Mushroom Poisoning in Dogs and Cats",
+                    "FDA (2024): Investigation of Illnesses — Diamond Shruumz Brand Products Recall",
+                    "CDC (November 2024): Severe Illness Associated with Diamond Shruumz Products — 145 Illnesses, 59 Hospitalizations",
+                    "Pet Health Network / Dr. Justine Lee: Dogs and Mushrooms — Hallucinogenic Types",
+                    "Longwood Veterinary Center: Mushroom Toxicity in Pets — Psilocybin Section",
+                    "Denver Post (2024): FDA Testing Reveals 4-AcO-DMT and Adulterants in Mushroom Edibles"
+                ],
+                relatedEntries: [
+                    "ff001122-3344-5566-7788-99aabbccdd03",
+                    "dd445566-7788-99aa-bbcc-ddeeff334455"
+                ]
+            ),
+
             // MARK: - Monkshood
             ToxicItem(
                 id: UUID(uuidString: "7e3f5e24-a4ef-4356-9445-16b8f37d6ab4")!,
