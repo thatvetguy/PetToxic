@@ -11106,6 +11106,502 @@ Water hemlock: 3-6 feet tall near WATER sources, hollow stems with chambered roo
                     "Merck Veterinary Manual"
                 ],
                 relatedEntries: nil
+            ),
+
+            // MARK: - Poison Ivy, Poison Oak & Poison Sumac
+            ToxicItem(
+                id: UUID(uuidString: "00112233-4455-6677-8899-aabbccddef17")!,
+                name: "Poison Ivy, Poison Oak & Poison Sumac",
+                alternateNames: [
+                    "poison ivy",
+                    "Toxicodendron radicans",
+                    "eastern poison ivy",
+                    "western poison ivy",
+                    "poison oak",
+                    "Toxicodendron diversilobum",
+                    "Pacific poison oak",
+                    "Atlantic poison oak",
+                    "poison sumac",
+                    "Toxicodendron vernix",
+                    "thunderwood",
+                    "poison elder",
+                    "urushiol",
+                    "Toxicodendron",
+                    "leaves of three"
+                ],
+                categories: [.plants],
+                summary: "PETS RARELY AFFECTED—fur protects skin from urushiol oil. Main concern: pets can TRANSFER oil to owners, causing rash in humans. ASPCA classifies as non-toxic to dogs, cats, and horses.",
+                description: """
+Poison ivy, poison oak, and poison sumac contain urushiol, an oily resin that causes an itchy, blistering rash in most humans. The good news: dogs and cats are RARELY affected. However, pets can carry the oil on their fur and transfer it to their owners.
+
+**THE GOOD NEWS: PETS ARE LARGELY PROTECTED**
+The ASPCA classifies poison ivy, oak, and sumac as NON-TOXIC to dogs, cats, and horses. While urushiol can technically cause allergic contact dermatitis, pets are naturally protected by their fur coat, which prevents oil from reaching skin. Allergic reactions in dogs and cats are uncommon.
+
+**WHEN REACTIONS CAN OCCUR:**
+Pets with short hair or exposed skin may develop mild irritation in:
+- Belly and groin (little fur coverage)
+- Muzzle and lips
+- Ear flaps
+- Between toes
+
+Signs: redness, itching, scratching, occasionally small bumps or blisters.
+
+**IF YOUR PET EATS THE PLANT:**
+Ingesting can cause mild GI upset—vomiting, diarrhea, drooling. Severe reactions are rare.
+
+**THE REAL CONCERN: YOUR PET AS A CARRIER**
+Urushiol oil can cling to fur for hours or days. When you pet, hug, or snuggle your pet, oil transfers to YOUR skin, potentially causing a rash. 50-75% of humans are allergic to urushiol.
+
+**WHAT TO DO:**
+If your pet may have contacted these plants:
+- Bathe promptly with pet-safe shampoo or mild dish soap
+- Wear rubber/nitrile gloves while bathing
+- Wash collar, harness, and leash
+- Avoid petting until bathed
+
+**PLANT IDENTIFICATION:**
+Poison ivy and oak: "Leaves of three, let it be"—clusters of three shiny leaflets.
+Poison sumac: 7-13 leaflets in pairs with one at tip; grows in swampy areas.
+""",
+                symptoms: [
+                    "DERMAL (uncommon in pets):",
+                    "Red, bumpy rash on areas with little fur",
+                    "Itching and scratching at affected area",
+                    "Blisters (rare)",
+                    "",
+                    "IF INGESTED:",
+                    "Vomiting",
+                    "Diarrhea",
+                    "Drooling",
+                    "Weakness (rare, large ingestion)"
+                ],
+                onsetTime: OnsetTime(
+                    early: "Skin irritation (if it occurs): 24 hours to several days",
+                    delayed: "GI upset from ingestion: within a few hours"
+                ),
+                speciesRisks: [
+                    SpeciesRisk(
+                        species: .dog,
+                        severity: .low,
+                        notes: "Dogs rarely develop reactions. Fur protects skin from urushiol oil. ASPCA classifies as non-toxic. Main concern is transferring oil to owners."
+                    ),
+                    SpeciesRisk(
+                        species: .cat,
+                        severity: .low,
+                        notes: "Cats rarely develop reactions. Fur protects skin from urushiol oil. Main concern is transferring oil to owners."
+                    )
+                ],
+                preventionTips: [
+                    "Learn to identify poison ivy, oak, and sumac",
+                    "Remember: 'Leaves of three, let it be'",
+                    "Keep pets on leash in wooded or brushy areas",
+                    "Bathe pets before petting if they may have contacted these plants",
+                    "Wear gloves when bathing a potentially exposed pet",
+                    "Remove these plants from your yard if possible"
+                ],
+                sources: [
+                    "ASPCA Animal Poison Control Center",
+                    "Pet Poison Helpline",
+                    "American Kennel Club",
+                    "Veterinary Information Network (VIN)"
+                ],
+                relatedEntries: nil
+            ),
+
+            // MARK: - MDR1 Gene Mutation (Multi-Drug Sensitivity)
+            ToxicItem(
+                id: UUID(uuidString: "00112233-4455-6677-8899-aabbccddef18")!,
+                name: "MDR1 Gene Mutation (Multi-Drug Sensitivity)",
+                alternateNames: [
+                    "MDR1 mutation",
+                    "MDR1 gene defect",
+                    "ABCB1 mutation",
+                    "ABCB1 gene mutation",
+                    "multi-drug resistance mutation",
+                    "multi-drug sensitivity",
+                    "ivermectin sensitivity",
+                    "herding breed drug sensitivity",
+                    "collie drug sensitivity",
+                    "white feet don't treat",
+                    "P-glycoprotein deficiency",
+                    "P-gp deficiency"
+                ],
+                categories: [.medications],
+                summary: "GENETIC CONDITION affecting drug metabolism in herding breeds. Dogs with this mutation can have SEVERE reactions to many common medications. Genetic testing available and recommended. See also: Ivermectin entry.",
+                description: """
+The MDR1 gene mutation is a genetic defect that affects how certain dogs metabolize many common medications. Dogs with this mutation can experience SEVERE, life-threatening reactions to drugs that are safe for other dogs. Essential information for owners of herding breeds.
+
+**WHAT IS THE MDR1 MUTATION?**
+MDR1 (Multi-Drug Resistance 1, also called ABCB1) gene produces P-glycoprotein, a pump that removes certain drugs from the brain. Dogs with the mutation have a defective pump, allowing drugs to accumulate to toxic levels in the brain.
+
+Inheritance: Dogs can be normal (two normal copies), carriers (one normal, one mutant), or affected (two mutant copies). Both carriers AND affected dogs may show drug sensitivity.
+
+**BREEDS COMMONLY AFFECTED:**
+- Collies (rough and smooth): Up to 70% affected
+- Australian Shepherds
+- Shetland Sheepdogs (Shelties)
+- English Shepherds
+- Old English Sheepdogs
+- Border Collies
+- German Shepherds
+- Longhaired Whippets
+- Mixed breeds with herding ancestry
+
+Memory aid: "White feet, don't treat" (referring to white markings common in affected breeds).
+
+**NOT ALL INDIVIDUALS ARE AFFECTED:**
+Not every dog of these breeds carries the mutation. GENETIC TESTING is available and highly recommended. A simple cheek swab determines status.
+
+**DRUGS THAT CAN BE DANGEROUS:**
+- Ivermectin (some heartworm preventives, livestock dewormers)
+- Loperamide (Imodium)
+- Acepromazine (sedative)
+- Butorphanol (pain medication)
+- Certain chemotherapy drugs
+- Apomorphine (induces vomiting)
+- Many others
+
+IMPORTANT: Standard-dose monthly heartworm preventives (like Heartgard) are generally SAFE for MDR1 dogs. Concern is with higher doses or livestock formulations.
+
+**TESTING:**
+Washington State University Veterinary Clinical Pharmacology Laboratory offers testing. Always inform ALL veterinarians of your dog's MDR1 status.
+""",
+                symptoms: [
+                    "SYMPTOMS OF DRUG TOXICITY IN MDR1-AFFECTED DOGS:",
+                    "(Varies by drug involved)",
+                    "",
+                    "Excessive sedation or depression",
+                    "Disorientation",
+                    "Drooling",
+                    "Dilated pupils",
+                    "Tremors",
+                    "Blindness",
+                    "Ataxia (difficulty walking)",
+                    "Seizures",
+                    "Coma",
+                    "Death (severe cases)"
+                ],
+                onsetTime: OnsetTime(
+                    early: "Varies by drug—hours after administration",
+                    delayed: "Effects may persist longer due to impaired drug clearance"
+                ),
+                speciesRisks: [
+                    SpeciesRisk(
+                        species: .dog,
+                        severity: .moderate,
+                        notes: "INFORMATIONAL ENTRY: Genetic mutation primarily affecting herding breeds. Not all individuals are affected. Genetic testing available and recommended for at-risk breeds. See Ivermectin entry for specific drug toxicity information."
+                    ),
+                    SpeciesRisk(
+                        species: .cat,
+                        severity: .low,
+                        notes: "MDR1 mutations have been identified in some cats but are far less common than in dogs."
+                    )
+                ],
+                preventionTips: [
+                    "Have herding breed dogs TESTED for the MDR1 mutation",
+                    "Inform ALL veterinarians that your dog is MDR1-affected",
+                    "Keep a list of drugs to avoid and share with your vet",
+                    "Never give ivermectin or related products without veterinary guidance",
+                    "Be cautious with OTC medications containing loperamide (Imodium)",
+                    "Consider a wallet card or collar tag indicating MDR1 status"
+                ],
+                sources: [
+                    "Washington State University Veterinary Clinical Pharmacology Lab",
+                    "Veterinary Information Network (VIN)",
+                    "American Kennel Club Canine Health Foundation",
+                    "Merck Veterinary Manual"
+                ],
+                relatedEntries: ["bbcc9900-ddee-ff11-2233-445566778899"]
+            ),
+
+            // MARK: - Corn Cob Ingestion
+            ToxicItem(
+                id: UUID(uuidString: "00112233-4455-6677-8899-aabbccddef19")!,
+                name: "Corn Cob Ingestion",
+                alternateNames: [
+                    "corn cob",
+                    "corn on the cob",
+                    "corn cob obstruction",
+                    "corn cob blockage",
+                    "corn core",
+                    "corncob",
+                    "maize cob",
+                    "sweetcorn cob",
+                    "BBQ hazard",
+                    "barbecue hazard",
+                    "summer cookout hazard"
+                ],
+                categories: [.foods],
+                summary: "NOT TOXIC but one of the MOST COMMON causes of intestinal obstruction in dogs. Cobs do not dissolve—they become lodged and often require SURGERY. Common during summer cookout season.",
+                description: """
+Corn cobs are one of the MOST COMMON causes of intestinal obstruction in dogs. While corn itself is not toxic, the cob is indigestible and the perfect size and shape to become lodged in a dog's intestines. Frequently requires emergency surgery.
+
+**WHY CORN COBS ARE DANGEROUS:**
+Unlike many foods, corn cobs do NOT dissolve or soften in the digestive system. When swallowed whole or in large pieces, the cob becomes stuck. The cylindrical shape wedges tightly in intestines, and the rough, fibrous texture prevents natural movement.
+
+Once lodged, the cob blocks food and fluid passage. Without treatment, intestinal tissue can become damaged, lose blood supply, and begin to die.
+
+**WHY DOGS EAT CORN COBS:**
+Dogs are attracted to the smell—butter, salt, and corn. They grab discarded cobs from trash, snatch them at barbecues, or find them in compost. Many dogs swallow quickly before owners can intervene.
+
+**THIS IS AN EMERGENCY:**
+If you know or suspect corn cob ingestion, contact your veterinarian IMMEDIATELY—even if your dog seems fine.
+
+Early intervention (within hours) may allow induced vomiting or retrieval BEFORE the cob reaches intestines. Once in intestines, surgery is often the only option.
+
+Do NOT wait to see if it will pass. Intestinal obstruction can be fatal if treatment is delayed.
+
+**CORN COB SEASON:**
+Veterinary ERs see spikes around Memorial Day, Fourth of July, and Labor Day when outdoor cookouts are common. Extra vigilance needed during grilling season.
+
+**CATS:**
+Cats rarely eat corn cobs due to selective eating habits.
+""",
+                symptoms: [
+                    "EARLY SIGNS:",
+                    "Vomiting (often repeated, unproductive)",
+                    "Loss of appetite",
+                    "Lethargy",
+                    "Abdominal pain or tenderness",
+                    "",
+                    "PROGRESSIVE OBSTRUCTION SIGNS:",
+                    "Inability to keep food or water down",
+                    "Straining to defecate with no result",
+                    "Abdominal bloating or distension",
+                    "Dehydration",
+                    "Weakness",
+                    "Depression"
+                ],
+                onsetTime: OnsetTime(
+                    early: "Vomiting may begin within hours",
+                    delayed: "Complete obstruction signs typically within 24-72 hours"
+                ),
+                speciesRisks: [
+                    SpeciesRisk(
+                        species: .dog,
+                        severity: .high,
+                        notes: "Corn cobs are one of the MOST COMMON causes of intestinal obstruction in dogs. Often requires surgical removal. This is an EMERGENCY—seek immediate veterinary care."
+                    ),
+                    SpeciesRisk(
+                        species: .cat,
+                        severity: .low,
+                        notes: "Cats rarely ingest corn cobs due to their selective eating habits."
+                    )
+                ],
+                preventionTips: [
+                    "Dispose of corn cobs in secure, dog-proof trash cans",
+                    "NEVER leave corn cobs unattended at barbecues",
+                    "Supervise dogs closely during outdoor gatherings",
+                    "Educate guests not to give corn on the cob to dogs",
+                    "Compost corn cobs in fenced or covered bins only"
+                ],
+                sources: [
+                    "Veterinary Information Network (VIN)",
+                    "American Kennel Club",
+                    "VCA Animal Hospitals",
+                    "BluePearl Specialty and Emergency Pet Hospital"
+                ],
+                relatedEntries: nil
+            ),
+
+            // MARK: - Foxtails (Grass Awns)
+            ToxicItem(
+                id: UUID(uuidString: "00112233-4455-6677-8899-aabbccddef20")!,
+                name: "Foxtails (Grass Awns)",
+                alternateNames: [
+                    "foxtail",
+                    "foxtail grass",
+                    "foxtail barley",
+                    "grass awn",
+                    "grass seed",
+                    "spear grass",
+                    "mean seeds",
+                    "timothy grass awn",
+                    "cheatgrass",
+                    "wild barley",
+                    "bristle grass",
+                    "June grass",
+                    "downy brome"
+                ],
+                categories: [.plants],
+                summary: "NOT TOXIC but serious PHYSICAL HAZARD. Barbed seeds burrow INTO tissue—never out. Can penetrate ears, nose, eyes, paws, skin. Can migrate internally causing severe damage. Most common in Western US.",
+                description: """
+Foxtails are barbed grass seed heads that pose a serious PHYSICAL hazard to dogs. Unlike other plant material, foxtails do NOT break down inside the body. Their barbed shape allows them to burrow DEEPER over time, never working back out. Can cause severe infections and damage.
+
+**WHAT ARE FOXTAILS?**
+Foxtails are seed heads of certain grasses. When dry, they break into individual seeds called awns. Each awn has microscopic barbs pointing backward like tiny fishhooks. Once a foxtail enters an animal's body, it can only move FORWARD, never backward.
+
+**WHERE FOXTAILS ARE FOUND:**
+Most prevalent in WESTERN US, especially California. Also found throughout North America. Range is expanding.
+
+Found in: roadsides, trails, vacant lots, fields, hiking paths, parks, yard edges. Most dangerous late spring through fall when grass dries.
+
+**IF YOU MOVED FROM SOUTHEAST/NORTHEAST:**
+Foxtails may be unfamiliar. This is essential information for West Coast residents.
+
+**HOW FOXTAILS CAUSE HARM:**
+- EARS: Works down ear canal → head shaking, scratching, pain, ruptured eardrum
+- NOSE: Violent sudden sneezing, bloody discharge
+- EYES: Squinting, tearing, redness, corneal damage
+- PAWS: Burrows between toes → painful swelling, abscesses, draining tracts
+- SKIN: Can penetrate anywhere, forming abscesses
+
+**MOST CONCERNING:** Inhaled or migrated foxtails have been found in lungs, abdominal cavity, spine, even internal organs like the spleen.
+
+**FOXTAILS DO NOT COME OUT ON THEIR OWN—ONLY DEEPER.**
+
+Early removal is much easier than waiting. May require sedation, scoping, or surgery depending on location.
+""",
+                symptoms: [
+                    "LOCATION-SPECIFIC SIGNS:",
+                    "",
+                    "NOSE: Violent sudden sneezing, bloody nasal discharge",
+                    "EAR: Head shaking, pawing at ear, discharge, pain",
+                    "EYE: Squinting, tearing, redness",
+                    "PAW: Limping, licking between toes, swelling",
+                    "SKIN: Swelling, draining wound that won't heal",
+                    "",
+                    "IF INHALED/MIGRATED:",
+                    "Coughing",
+                    "Difficulty breathing",
+                    "Fever",
+                    "Lethargy",
+                    "Unexplained abscess anywhere on body"
+                ],
+                onsetTime: OnsetTime(
+                    early: "Signs may appear within hours of exposure",
+                    delayed: "Internal migration can cause problems days to weeks later"
+                ),
+                speciesRisks: [
+                    SpeciesRisk(
+                        species: .dog,
+                        severity: .moderate,
+                        notes: "INFORMATIONAL ENTRY: Physical hazard, not a toxin. Dogs are commonly affected, especially active outdoor dogs. Can enter ears, nose, eyes, paws, skin. Seek veterinary care promptly—foxtails only burrow deeper, never out."
+                    ),
+                    SpeciesRisk(
+                        species: .cat,
+                        severity: .low,
+                        notes: "Cats can be affected but less commonly than dogs due to grooming habits and less frequent outdoor activity in foxtail areas."
+                    )
+                ],
+                preventionTips: [
+                    "Avoid areas with tall, dry grass during foxtail season",
+                    "CHECK DOG THOROUGHLY after EVERY outdoor walk",
+                    "Pay special attention to: ears, nose, eyes, armpits, between ALL toes",
+                    "Keep long-haired dogs trimmed during foxtail season",
+                    "Consider protective booties for hiking in high-risk areas",
+                    "Remove foxtail plants from your yard before they seed"
+                ],
+                sources: [
+                    "Veterinary Information Network (VIN)",
+                    "UC Davis School of Veterinary Medicine",
+                    "American Kennel Club",
+                    "VCA Animal Hospitals"
+                ],
+                relatedEntries: nil
+            ),
+
+            // MARK: - Tampon & Hygiene Product Ingestion
+            ToxicItem(
+                id: UUID(uuidString: "00112233-4455-6677-8899-aabbccddef21")!,
+                name: "Tampon & Hygiene Product Ingestion",
+                alternateNames: [
+                    "tampon",
+                    "tampon ingestion",
+                    "tampon obstruction",
+                    "used tampon",
+                    "sanitary pad",
+                    "sanitary napkin",
+                    "menstrual pad",
+                    "maxi pad",
+                    "panty liner",
+                    "diaper",
+                    "disposable diaper",
+                    "baby diaper",
+                    "adult diaper",
+                    "incontinence pad",
+                    "feminine hygiene product",
+                    "menstrual product"
+                ],
+                categories: [.householdItems],
+                summary: "NOT TOXIC but COMMON cause of intestinal obstruction. Dogs attracted to scent. Tampons expand when wet and strings create linear foreign body risk. Frequently requires surgical removal.",
+                description: """
+Tampons, sanitary pads, diapers, and similar absorbent products are a surprisingly COMMON reason for veterinary visits. Dogs are strongly attracted to these items due to scent, and ingestion can lead to serious gastrointestinal obstruction. One of the most frequently seen foreign body ingestions.
+
+**WHY DOGS EAT THESE ITEMS:**
+Dogs have incredibly sensitive smell and are attracted to biological scents. Bathroom trash cans are easily accessible. This is NORMAL canine behavior requiring management through prevention.
+
+**WHY THESE PRODUCTS ARE DANGEROUS:**
+
+**TAMPONS pose particular risk:**
+- Designed to absorb and EXPAND—swell significantly inside stomach/intestines
+- String creates LINEAR FOREIGN BODY risk (especially dangerous—can saw through intestinal walls)
+
+**PADS AND DIAPERS:**
+- Super-absorbent materials swell DRAMATICALLY when wet
+- Small pad can expand to many times original size
+
+**These products do NOT break down in the digestive system.**
+
+**LINEAR FOREIGN BODIES (tampon strings):**
+If you see string visible from mouth or rectum, NEVER PULL ON IT—this can cause severe intestinal damage.
+
+**THIS IS AN EMERGENCY:**
+Contact veterinarian IMMEDIATELY. Do NOT wait to see if it will pass.
+
+With recent ingestion (few hours), induced vomiting may retrieve the item. Once in intestines, surgery is often necessary.
+
+**SMALL DOGS AT HIGHER RISK:**
+Narrower intestines make obstruction more likely even with smaller items.
+""",
+                symptoms: [
+                    "EARLY SIGNS:",
+                    "Vomiting",
+                    "Gagging or retching",
+                    "Loss of appetite",
+                    "Lethargy",
+                    "",
+                    "OBSTRUCTION SIGNS:",
+                    "Repeated vomiting (often unproductive)",
+                    "Abdominal pain or tenderness",
+                    "Straining to defecate",
+                    "Inability to pass stool",
+                    "Abdominal bloating",
+                    "Dehydration",
+                    "Depression",
+                    "",
+                    "NOTE: If string visible, NEVER PULL"
+                ],
+                onsetTime: OnsetTime(
+                    early: "Vomiting may begin within hours",
+                    delayed: "Obstruction signs typically within 24-72 hours"
+                ),
+                speciesRisks: [
+                    SpeciesRisk(
+                        species: .dog,
+                        severity: .high,
+                        notes: "Dogs commonly ingest these items from bathroom trash. Tampons pose particular risk due to string (linear foreign body) and expansion when wet. Small dogs at higher risk. Often requires surgical removal."
+                    ),
+                    SpeciesRisk(
+                        species: .cat,
+                        severity: .low,
+                        notes: "Cats rarely ingest tampons or pads, though the string from tampons could pose a linear foreign body risk if ingested."
+                    )
+                ],
+                preventionTips: [
+                    "Keep bathroom doors CLOSED or use dog-proof trash cans",
+                    "Use trash cans with secure, LOCKING lids",
+                    "Empty bathroom trash frequently",
+                    "Consider baby gates to keep dogs out of bathrooms",
+                    "Keep diaper pails secured or behind closed doors"
+                ],
+                sources: [
+                    "Veterinary Information Network (VIN)",
+                    "VCA Animal Hospitals",
+                    "American Kennel Club",
+                    "PetMD"
+                ],
+                relatedEntries: nil
             )
         ]
     }
