@@ -4747,6 +4747,196 @@ class DatabaseService {
                 relatedEntries: nil
             ),
 
+            // MARK: - Essential Oils (Tea Tree, Pennyroyal, Eucalyptus & Others)
+            ToxicItem(
+                id: UUID(uuidString: "eeff2233-4455-6677-8899-aabbccddeeff")!,
+                name: "Essential Oils (Tea Tree, Pennyroyal, Eucalyptus & Others)",
+                alternateNames: [
+                    // General terms
+                    "essential oil",
+                    "essential oils",
+                    "aromatherapy oil",
+                    "diffuser oil",
+                    "fragrance oil",
+                    "volatile oil",
+
+                    // HIGH toxicity oils
+                    "pennyroyal oil",
+                    "pennyroyal",
+                    "pulegone",
+                    "Hedeoma pulegioides",
+                    "Mentha pulegium",
+                    "mosquito plant",
+                    "pudding grass",
+
+                    "wintergreen oil",
+                    "wintergreen",
+                    "methyl salicylate",
+                    "Gaultheria",
+
+                    "clove oil",
+                    "clove",
+                    "eugenol",
+
+                    "hyssop oil",
+                    "hyssop",
+
+                    // MEDIUM toxicity oils
+                    "tea tree oil",
+                    "tea tree",
+                    "melaleuca oil",
+                    "melaleuca",
+                    "Melaleuca alternifolia",
+
+                    "eucalyptus oil",
+                    "eucalyptus",
+                    "cineole",
+
+                    "peppermint oil",
+                    "peppermint",
+                    "menthol",
+                    "menthone",
+
+                    // LOW toxicity oils
+                    "pine oil",
+                    "pine",
+                    "pinene",
+
+                    "citrus oil",
+                    "d-limonene",
+                    "limonene",
+                    "orange oil",
+                    "lemon oil",
+
+                    "citronella oil",
+                    "citronella",
+
+                    // Other common oils
+                    "lavender oil",
+                    "cinnamon oil",
+                    "camphor oil",
+                    "camphor",
+                    "rosemary oil",
+                    "thyme oil",
+                    "oregano oil",
+                    "ylang ylang",
+                    "birch oil",
+                    "sweet birch",
+
+                    // Product types
+                    "oil diffuser",
+                    "reed diffuser",
+                    "aromatherapy diffuser",
+                    "natural flea treatment",
+                    "herbal flea product",
+
+                    // Common search terms
+                    "dog ate essential oil",
+                    "cat essential oil diffuser",
+                    "tea tree oil dog",
+                    "tea tree oil cat",
+                    "essential oil diffuser safe pets",
+                    "natural flea spray toxic"
+                ],
+                categories: [.householdItems],
+                imageAsset: "essential_oils",
+                description: "Essential oils are concentrated plant extracts used in aromatherapy, diffusers, cleaning products, cosmetics, and 'natural' flea treatments. Toxicity varies significantly by oil type. Some oils (pennyroyal, wintergreen, clove, hyssop) are highly toxic and can cause severe effects including liver failure, seizures, and death even with small exposures. Others (citrus, pine, citronella) typically cause only GI upset unless large amounts are ingested. CATS ARE ESPECIALLY VULNERABLE to essential oil toxicity due to their deficient liver metabolism (glucuronidation pathways). Even diffuser exposure can be problematic for cats. PENNYROYAL OIL is particularly dangerous and is sometimes found in 'all natural' flea products. It causes severe liver damage and has caused death in dogs within 48 hours of topical application. TEA TREE OIL (melaleuca) is a very common exposure. Even small amounts applied topically can cause CNS depression, weakness, tremors, and ataxia. 100% tea tree oil is especially dangerous. FOR TOPICAL EXPOSURE: Bathe your pet immediately with liquid dish soap and warm water until the oily residue is removed. Rinse thoroughly and keep warm until dry. Then seek veterinary care — bathing does not replace professional treatment.",
+                toxicityInfo: "Essential oils contain volatile compounds that can be absorbed through ingestion, skin contact, or inhalation. PENNYROYAL OIL: Primary toxin is pulegone, which is oxidized in the liver to menthofuran (hepatotoxic metabolite). This binds to cellular proteins causing hepatocellular injury/necrosis and depletes glutathione. A dog died within 48 hours of topical application at an estimated dose of 2 g/kg. TEA TREE OIL: Contains terpenes that cause CNS depression, ataxia, weakness, and muscle tremors. Toxic even at low concentrations when applied topically. WINTERGREEN OIL: Contains methyl salicylate (related to aspirin). Highly concentrated — 1 teaspoon contains approximately 7,000 mg salicylate equivalent. CAT VULNERABILITY: Cats are especially susceptible because of deficient glucuronidation and sulfation pathways, resulting in prolonged activity and increased toxicity of essential oils.",
+                onsetTime: OnsetTime(
+                    early: "Signs typically develop within 2-8 hours of exposure for most oils. Tea tree oil may cause signs within 2-12 hours. Pennyroyal oil can cause signs within hours, with liver failure developing over 24-72 hours.",
+                    delayed: "Hepatotoxicity from pennyroyal may progress over 24-72 hours. Skin reactions may develop or worsen over 24-48 hours. Full recovery from CNS effects may take 24-72 hours with supportive care."
+                ),
+                symptoms: [
+                    // GI signs (common to many)
+                    "Vomiting",
+                    "Diarrhea",
+                    "Hypersalivation (drooling)",
+                    "Loss of appetite",
+
+                    // CNS signs
+                    "Lethargy",
+                    "Depression",
+                    "Weakness",
+                    "Ataxia (wobbling, incoordination)",
+                    "Muscle tremors",
+                    "Abnormal mentation (confusion)",
+                    "Seizures",
+                    "Coma",
+
+                    // Liver-related signs (pennyroyal, clove, others)
+                    "Jaundice/icterus (yellowing of eyes, gums, skin)",
+                    "Abnormal bleeding (nosebleed, bloody stool, bloody vomit)",
+                    "Signs of hepatic encephalopathy",
+
+                    // Respiratory signs
+                    "Difficulty breathing (dyspnea)",
+                    "Rapid breathing",
+                    "Cyanosis (blue gums)",
+
+                    // Dermal signs
+                    "Skin irritation or redness",
+                    "Skin ulceration",
+                    "Hair loss (alopecia) at application site",
+                    "Itching (pruritus)",
+
+                    // Other
+                    "Hyperthermia (elevated temperature)",
+                    "Collapse",
+                    "Death (severe cases)"
+                ],
+                speciesRisks: [
+                    SpeciesRisk(
+                        species: .dog,
+                        severity: .high,
+                        notes: "Toxicity varies by oil type. HIGH-TOXICITY OILS (pennyroyal, wintergreen, clove, hyssop) can cause severe effects including liver failure, seizures, and death even at low doses. Pennyroyal oil found in some 'natural' flea products has caused death within 48 hours of topical application. MEDIUM-TOXICITY OILS (tea tree, eucalyptus, peppermint) can cause CNS depression, tremors, and ataxia, especially with concentrated products. LOW-TOXICITY OILS (citrus, pine, citronella) typically cause GI upset. For any topical exposure, immediately bathe with dish soap and warm water, then seek veterinary care."
+                    ),
+                    SpeciesRisk(
+                        species: .cat,
+                        severity: .severe,
+                        notes: "CATS ARE EXTREMELY SUSCEPTIBLE to essential oil toxicity due to deficient liver metabolism (glucuronidation and sulfation pathways). This causes prolonged activity and increased toxicity. Even diffuser exposure can be problematic — if your cat shows any signs of illness when a diffuser is running, discontinue use immediately. Topical application of essential oils to cats is especially dangerous. Tea tree oil, pennyroyal, wintergreen, eucalyptus, peppermint, and many others can cause severe toxicity. For any exposure, immediately bathe with dish soap and warm water, then seek emergency veterinary care."
+                    ),
+                    SpeciesRisk(
+                        species: .bird,
+                        severity: .severe,
+                        notes: "Birds have extremely sensitive respiratory systems. Essential oil diffusers and any aerosolized oils can cause severe respiratory distress. Never use essential oil diffusers, sprays, or heated oils in the same room as birds. Contact an avian veterinarian immediately if exposure occurs."
+                    ),
+                    SpeciesRisk(
+                        species: .smallMammal,
+                        severity: .high,
+                        notes: "Small mammals including rabbits, ferrets, guinea pigs, and hamsters can be affected by essential oil exposure. Their small size makes them vulnerable to concentrated oils. Avoid using essential oils around small mammals and contact an exotic animal veterinarian if exposure occurs."
+                    ),
+                    SpeciesRisk(
+                        species: .reptile,
+                        severity: .moderate,
+                        notes: "Limited data available for reptiles. Essential oils may cause respiratory irritation and other effects. Avoid using diffusers or applying oils in reptile enclosures. Contact an exotic animal veterinarian if exposure occurs."
+                    )
+                ],
+                preventionTips: [
+                    "Keep all essential oil products securely stored away from pets",
+                    "NEVER apply human essential oil products to pets — even 'natural' products can be toxic",
+                    "Be extremely cautious with 'natural' or 'herbal' flea products — many contain pennyroyal or other toxic oils",
+                    "If using diffusers, ensure the room is well-ventilated and your pet can leave the area freely",
+                    "NEVER use essential oil diffusers around birds — their respiratory systems are extremely sensitive",
+                    "Cats are especially vulnerable — consider avoiding diffusers entirely in homes with cats, or use only in areas cats cannot access",
+                    "Do not apply tea tree oil to pets — even diluted products have caused toxicity",
+                    "Wintergreen oil contains methyl salicylate (related to aspirin) and is highly toxic",
+                    "If essential oil contacts your pet's skin, immediately bathe with dish soap and warm water",
+                    "Read ingredient lists on 'natural' pet products — avoid those containing pennyroyal, tea tree, wintergreen, or clove oils",
+                    "Store essential oils in cabinets pets cannot access — cats are attracted to some oils"
+                ],
+                sources: [
+                    "VIN (Veterinary Information Network): Essential Oil Toxicosis",
+                    "VIN (Veterinary Information Network): Pennyroyal Oil Toxicosis",
+                    "ASPCA Animal Poison Control Center: Essential Oils and Pets",
+                    "Pet Poison Helpline: Essential Oil Toxicity in Pets",
+                    "Khan SA, et al. 'Tea tree oil toxicosis in dogs and cats.' JAVMA. 2014"
+                ],
+                relatedEntries: [
+                    "cc334455-6677-8899-aabb-ccddeeff2233",
+                    "e1f2a3b4-5c6d-7e8f-9a0b-1c2d3e4f5a6b"
+                ]
+            ),
+
             // MARK: - Soaps & Mild Detergents
             ToxicItem(
                 id: UUID(uuidString: "11223344-5566-7788-99aa-bbccddeeff00")!,
