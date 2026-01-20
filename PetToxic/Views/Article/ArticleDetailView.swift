@@ -2,6 +2,7 @@ import SwiftUI
 
 struct ArticleDetailView: View {
     let item: ToxicItem
+    var saveSearchTerm: Bool = false
     @StateObject private var viewModel = ArticleViewModel()
     @State private var isBookmarked = false
 
@@ -72,6 +73,9 @@ struct ArticleDetailView: View {
         .onAppear {
             isBookmarked = viewModel.isBookmarked(item)
             viewModel.recordView(of: item)
+            if saveSearchTerm {
+                SearchContext.shared.saveIfPending()
+            }
         }
         .navigationDestination(for: ToxicItem.self) { relatedItem in
             ArticleDetailView(item: relatedItem)

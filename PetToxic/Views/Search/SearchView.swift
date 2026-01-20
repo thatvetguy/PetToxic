@@ -28,8 +28,16 @@ struct SearchView: View {
                 text: $viewModel.searchText,
                 prompt: "Search foods, plants, medications..."
             )
+            .onSubmit(of: .search) {
+                // Save to recent searches when user presses Return/Search
+                viewModel.saveToRecentSearches(viewModel.searchText)
+            }
+            .onAppear {
+                // Reload recent searches in case they were added from detail view
+                viewModel.reloadRecentSearches()
+            }
             .navigationDestination(for: ToxicItem.self) { item in
-                ArticleDetailView(item: item)
+                ArticleDetailView(item: item, saveSearchTerm: true)
             }
         }
     }
@@ -44,7 +52,7 @@ struct SearchView: View {
                 )
             } else {
                 List {
-                    Section("Recent Searches") {
+                    Section {
                         ForEach(viewModel.recentSearches, id: \.self) { search in
                             Button {
                                 viewModel.searchText = search
@@ -55,6 +63,16 @@ struct SearchView: View {
                         }
                         .onDelete { indexSet in
                             viewModel.removeRecentSearch(at: indexSet)
+                        }
+                    } header: {
+                        HStack {
+                            Text("Recent Searches")
+                            Spacer()
+                            Button("Clear") {
+                                viewModel.clearAllRecentSearches()
+                            }
+                            .font(.subheadline)
+                            .textCase(nil)
                         }
                     }
                 }
@@ -75,6 +93,14 @@ struct SearchView: View {
             NavigationLink(value: result.item) {
                 SearchResultRow(result: result)
             }
+        }
+        .onChange(of: viewModel.searchText) { newValue in
+            // Keep the pending search term updated so it can be saved when navigating to detail
+            SearchContext.shared.pendingSearchTerm = newValue
+        }
+        .onAppear {
+            // Set initial pending term when results appear
+            SearchContext.shared.pendingSearchTerm = viewModel.searchText
         }
     }
 }

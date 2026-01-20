@@ -1,6 +1,32 @@
 import Foundation
 import Combine
 
+/// Shared context for passing search term to detail views
+@MainActor
+class SearchContext: ObservableObject {
+    static let shared = SearchContext()
+    @Published var pendingSearchTerm: String?
+
+    private init() {}
+
+    func saveIfPending() {
+        guard let term = pendingSearchTerm else { return }
+        let trimmed = term.trimmingCharacters(in: .whitespacesAndNewlines)
+        guard !trimmed.isEmpty else {
+            pendingSearchTerm = nil
+            return
+        }
+
+        var searches = UserDefaults.standard.stringArray(forKey: "recentSearches") ?? []
+        searches.removeAll { $0.lowercased() == trimmed.lowercased() }
+        searches.insert(trimmed, at: 0)
+        searches = Array(searches.prefix(10))
+        UserDefaults.standard.set(searches, forKey: "recentSearches")
+
+        pendingSearchTerm = nil
+    }
+}
+
 @MainActor
 class SearchViewModel: ObservableObject {
     @Published var searchText = ""
@@ -53,7 +79,6 @@ class SearchViewModel: ObservableObject {
                 species: selectedSpecies.isEmpty ? nil : Array(selectedSpecies)
             )
             searchResults = results
-            addRecentSearch(query)
         } catch {
             searchResults = []
         }
@@ -65,10 +90,24 @@ class SearchViewModel: ObservableObject {
         recentSearches = UserDefaults.standard.stringArray(forKey: "recentSearches") ?? []
     }
 
-    private func addRecentSearch(_ query: String) {
+    /// Reload recent searches from storage (call when view appears to pick up changes)
+    func reloadRecentSearches() {
+        loadRecentSearches()
+    }
+
+    /// Save a search term to recent searches. Call this only on explicit user actions:
+    /// - When user taps on a search result
+    /// - When user presses Return/Submit on the keyboard
+    func saveToRecentSearches(_ query: String) {
+        let trimmed = query.trimmingCharacters(in: .whitespacesAndNewlines)
+        guard !trimmed.isEmpty else { return }
+
         var searches = recentSearches
-        searches.removeAll { $0.lowercased() == query.lowercased() }
-        searches.insert(query, at: 0)
+        // Remove duplicate (case-insensitive) to avoid spam
+        searches.removeAll { $0.lowercased() == trimmed.lowercased() }
+        // Add to beginning (most recent first)
+        searches.insert(trimmed, at: 0)
+        // Limit to 10 most recent
         searches = Array(searches.prefix(10))
         recentSearches = searches
         UserDefaults.standard.set(searches, forKey: "recentSearches")
@@ -76,6 +115,11 @@ class SearchViewModel: ObservableObject {
 
     func removeRecentSearch(at offsets: IndexSet) {
         recentSearches.remove(atOffsets: offsets)
+        UserDefaults.standard.set(recentSearches, forKey: "recentSearches")
+    }
+
+    func clearAllRecentSearches() {
+        recentSearches.removeAll()
         UserDefaults.standard.set(recentSearches, forKey: "recentSearches")
     }
 }
