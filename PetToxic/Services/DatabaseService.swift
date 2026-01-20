@@ -10265,6 +10265,259 @@ Geographic location matters most. Outside Arizona bark scorpion range, severe sy
                     "Veterinary Clinics of North America — Envenomation in Small Animals"
                 ],
                 relatedEntries: ["00112233-4455-6677-8899-aabbccddef06"]
+            ),
+
+            // MARK: - Widow Spider Bites (Latrodectism)
+            ToxicItem(
+                id: UUID(uuidString: "00112233-4455-6677-8899-aabbccddef10")!,
+                name: "Widow Spider Bites",
+                alternateNames: [
+                    "black widow spider bite",
+                    "black widow bite",
+                    "latrodectism",
+                    "brown widow spider bite",
+                    "red widow spider bite",
+                    "western black widow bite",
+                    "southern black widow bite",
+                    "northern black widow bite",
+                    "widow spider envenomation",
+                    "spider bite",
+                    "spider envenomation",
+                    "arachnidism",
+                    "araneism",
+                    "latrodectus bite",
+                    "hourglass spider bite",
+                    "redback spider bite"
+                ],
+                categories: [.animalEncounters, .environmentalHazards],
+                summary: "NEUROTOXIC venom causes severe muscle pain, cramping, rigidity. CATS ARE MARKEDLY SUSCEPTIBLE—can be fatal without treatment. Dogs have relative resistance with good prognosis. Antivenom available.",
+                description: """
+Widow spiders (Latrodectus spp.) are the most medically significant spiders worldwide. Five species are found in the United States, with the black widow (Latrodectus mactans) being most common. Female black widows are identified by their shiny black color and distinctive red or orange hourglass marking on the underside of their globular abdomen. Males are much smaller and not considered a significant bite risk.
+
+**Identification:**
+- Female: Shiny black, red/orange hourglass on abdomen underside
+- Immature females may be red, brown, or beige without hourglass but still dangerous
+- Males: Much smaller, brown, generally not dangerous
+- Brown widow (spreading in southern states): Orange hourglass, similar venom
+
+**Habitat & Behavior:**
+Widow spiders prefer dark, warm, dry areas—basements, attics, garages, closets, woodpiles, and outdoor debris. They are not aggressive and typically bite only when accidentally disturbed.
+
+**Venom Mechanism:**
+Black widow venom contains alpha-latrotoxin, which causes massive release of neurotransmitters (acetylcholine, norepinephrine, dopamine). This results in severe muscle cramping, pain, and rigidity. Eventually, neurotransmitter stores become depleted, leading to flaccid paralysis and potentially respiratory failure.
+
+**CRITICAL—CAT SUSCEPTIBILITY:**
+Cats are MARKEDLY more susceptible to widow spider venom than dogs. In one veterinary study, 20 of 22 cats died following black widow spider bites. Without prompt treatment including antivenom, widow spider bites can be FATAL in cats.
+
+**Dry Bites:**
+Approximately 15% of widow spider bites are "dry" with no venom injection, but any suspected bite should be treated as a medical emergency.
+""",
+                symptoms: [
+                    "Initial painful bite (sharp pinch sensation)",
+                    "Mild redness or swelling at bite site",
+                    "Regional numbness spreading from bite",
+                    "Lymph node tenderness near bite",
+                    "",
+                    "PROGRESSIVE SIGNS:",
+                    "Severe muscle pain and cramping",
+                    "Muscle fasciculations (twitching)",
+                    "Rigid, board-like abdomen",
+                    "Restlessness or agitation",
+                    "Marked vocalization (especially cats)",
+                    "Excessive drooling",
+                    "Vomiting and diarrhea",
+                    "Rapid heart rate",
+                    "Elevated blood pressure",
+                    "Rapid or labored breathing",
+                    "Ataxia (wobbly gait)",
+                    "Tremors",
+                    "",
+                    "SEVERE/LATE SIGNS:",
+                    "Seizures",
+                    "Flaccid paralysis (neurotransmitter depletion)",
+                    "Respiratory failure"
+                ],
+                onsetTime: OnsetTime(
+                    early: "30 minutes to 8 hours (painful bite, then muscle signs)",
+                    delayed: "48-72 hours for acute signs to resolve; weakness may persist weeks"
+                ),
+                speciesRisks: [
+                    SpeciesRisk(
+                        species: .dog,
+                        severity: .moderate,
+                        notes: "Dogs have relative resistance to widow spider venom. Signs can still be severe—muscle pain, cramping, abdominal rigidity, restlessness, tachycardia. Smaller dogs at higher risk. Prognosis is GOOD—most recover with supportive care. Antivenom provides rapid relief if available."
+                    ),
+                    SpeciesRisk(
+                        species: .cat,
+                        severity: .severe,
+                        notes: "CATS ARE MARKEDLY SUSCEPTIBLE. In one study, 20 of 22 cats died from black widow bites. Signs include marked vocalization, drooling, muscle pain, abdominal rigidity, vomiting, ataxia. Without prompt treatment including antivenom, bites can be FATAL. SEEK EMERGENCY CARE IMMEDIATELY."
+                    ),
+                    SpeciesRisk(
+                        species: .smallMammal,
+                        severity: .severe,
+                        notes: "Guinea pigs are HIGHLY SUSCEPTIBLE—even more so than cats. Other small mammals including rabbits and ferrets are also at significant risk. Seek immediate veterinary care."
+                    ),
+                    SpeciesRisk(
+                        species: .bird,
+                        severity: .severe,
+                        notes: "Birds are vulnerable to neurotoxic venom effects. Seek immediate avian veterinary care if exposure is suspected."
+                    ),
+                    SpeciesRisk(
+                        species: .reptile,
+                        severity: .moderate,
+                        notes: "Limited data on widow spider bites in pet reptiles. Consult an exotic animal veterinarian if exposure is suspected."
+                    )
+                ],
+                preventionTips: [
+                    "Learn to identify black widows: shiny black with red/orange hourglass marking",
+                    "Found throughout continental US except Alaska",
+                    "Prefer dark, warm, dry areas—basements, attics, closets, garages, woodpiles",
+                    "Most bites occur during colder months when spiders move indoors",
+                    "Regularly clean and vacuum dark areas where spiders may hide",
+                    "Use sticky/glue traps in basements, garages, and storage areas",
+                    "Check areas where pets sleep, especially in basements or storage areas",
+                    "Seal cracks and gaps around windows, doors, and pipes",
+                    "Shake out blankets and bedding left on the floor",
+                    "Keep woodpiles and debris away from home foundation",
+                    "Brown widow (spreading in southern states) has orange hourglass"
+                ],
+                sources: [
+                    "Veterinary Information Network (VIN) — Black Widow Spider Envenomation",
+                    "Merck Veterinary Manual — Spider and Scorpion Bites in Animals (2024)",
+                    "Pet Poison Helpline — Black Widow Spider",
+                    "VCA Animal Hospitals — Spider Bites",
+                    "Small Animal Toxicology, 3rd Edition (Peterson)"
+                ],
+                relatedEntries: ["00112233-4455-6677-8899-aabbccddef11"]
+            ),
+
+            // MARK: - Brown Recluse Spider Bites (Loxoscelism)
+            ToxicItem(
+                id: UUID(uuidString: "00112233-4455-6677-8899-aabbccddef11")!,
+                name: "Brown Recluse Spider Bites",
+                alternateNames: [
+                    "brown recluse bite",
+                    "brown recluse spider bite",
+                    "loxoscelism",
+                    "necrotic arachnidism",
+                    "fiddle-back spider bite",
+                    "fiddleback spider bite",
+                    "violin spider bite",
+                    "brown spider bite",
+                    "loxosceles bite",
+                    "recluse spider bite",
+                    "spider bite",
+                    "spider envenomation",
+                    "arachnidism",
+                    "araneism",
+                    "dermonecrotic spider bite"
+                ],
+                categories: [.animalEncounters, .environmentalHazards],
+                summary: "CYTOTOXIC venom causes progressive necrotic skin wounds. Initial bite often PAINLESS. Limited to south-central/Midwest US. Systemic illness rare. Good prognosis. NO antivenom available.",
+                description: """
+The brown recluse spider (Loxosceles reclusa) is found in the south-central and midwestern United States—primarily from southeastern Nebraska through Texas, east to southwestern Ohio and northwestern Georgia.
+
+**IMPORTANT—OVER-DIAGNOSIS:**
+Brown recluse bites are frequently OVER-DIAGNOSED, especially outside their endemic range. Many suspicious wounds have other causes (abscesses, insect bites, infections). Unless the spider is seen and identified, diagnosis is presumptive.
+
+**Identification:**
+- Brown to yellow-brown, about 2-3 cm across
+- Distinctive violin-shaped marking on back ("fiddle-back" or "violin spider")
+- Six eyes in three pairs (most spiders have eight)
+- Females larger and more venomous than males
+
+**Habitat & Behavior:**
+Named for their reclusive nature—they hide in dark, undisturbed places and are NOT aggressive. They bite only when accidentally trapped or pressed against skin. Found in closets, attics, basements, under furniture, inside cardboard boxes, and in stored bedding.
+
+**Venom Mechanism:**
+Unlike widow spider neurotoxic venom, brown recluse venom is CYTOTOXIC—it destroys tissue locally. Sphingomyelinase D causes platelet aggregation, microvascular thrombosis, and progressive tissue necrosis. The result is the characteristic "bull's-eye" or "target" lesion that can ulcerate.
+
+**Clinical Course:**
+- Initial bite usually PAINLESS and may go unnoticed
+- ~90% of bites result in minimal reaction or small self-healing lesion
+- ~10% develop significant dermonecrotic lesions requiring prolonged care
+- Systemic effects (hemolytic anemia, kidney injury) are RARE
+
+**Geographic Limitations:**
+NOT found in California, Florida, Pacific Northwest, or Atlantic seaboard. Single spiders can be accidentally transported but do not establish populations outside endemic range.
+""",
+                symptoms: [
+                    "Initial bite often PAINLESS—may not be noticed",
+                    "Small red, itchy area at bite site (hours later)",
+                    "Blister formation at bite site",
+                    "",
+                    "CHARACTERISTIC WOUND PROGRESSION:",
+                    "'Bull's-eye' or 'target' lesion—red ring with pale center",
+                    "Progressive discoloration (pale → blue/purple → black)",
+                    "Ulceration of the bite wound",
+                    "Purulent (pus-filled) wound",
+                    "Necrotic (dead, black) tissue at center",
+                    "Wound spreading over days",
+                    "",
+                    "GENERAL SIGNS:",
+                    "Pain or reluctance to use affected limb",
+                    "Limping or favoring bitten area",
+                    "Fever",
+                    "Weakness or lethargy",
+                    "Decreased appetite",
+                    "",
+                    "RARE SYSTEMIC SIGNS:",
+                    "Dark or reddish-brown urine (hemolysis)",
+                    "Pale gums (hemolytic anemia)",
+                    "Signs of kidney injury"
+                ],
+                onsetTime: OnsetTime(
+                    early: "Hours—painless bite, then redness/blister within 2-8 hours",
+                    delayed: "2-7 days for full necrosis; healing takes 1-8 weeks (months if severe)"
+                ),
+                speciesRisks: [
+                    SpeciesRisk(
+                        species: .dog,
+                        severity: .moderate,
+                        notes: "Brown recluse bites are RARE in dogs, even in endemic areas. Typically cause local wound complications rather than systemic illness. 'Bull's-eye' lesion may ulcerate and take weeks to heal. Prognosis is GOOD—most heal within 1-8 weeks. Severely necrotic wounds may need surgical debridement."
+                    ),
+                    SpeciesRisk(
+                        species: .cat,
+                        severity: .moderate,
+                        notes: "Brown recluse bites are RARE in cats. Similar to dogs—primarily local skin lesions that may ulcerate and scar. Systemic illness and death are very rare. Prognosis is GOOD with appropriate wound care."
+                    ),
+                    SpeciesRisk(
+                        species: .smallMammal,
+                        severity: .moderate,
+                        notes: "Small mammals may be at increased risk for systemic effects due to small body size. The local wound may represent a proportionally larger injury. Seek veterinary care promptly."
+                    ),
+                    SpeciesRisk(
+                        species: .bird,
+                        severity: .moderate,
+                        notes: "Limited data on brown recluse bites in pet birds. Seek avian veterinary care for any suspected bite or unusual wound."
+                    ),
+                    SpeciesRisk(
+                        species: .reptile,
+                        severity: .low,
+                        notes: "Very limited data on brown recluse effects in reptiles. Consult an exotic animal veterinarian if exposure is suspected."
+                    )
+                ],
+                preventionTips: [
+                    "Learn to identify: brown with violin-shaped marking on back, six eyes in three pairs",
+                    "GEOGRAPHIC RANGE: South-central and Midwest US only (TX, OK, AR, MO, KS, NE, IA, IL, IN, OH, KY, TN, MS, LA, AL, GA)",
+                    "NOT found in California, Florida, Pacific Northwest, or Atlantic seaboard",
+                    "Prefer dark, undisturbed places—closets, attics, basements, stored boxes",
+                    "Named for reclusive nature—NOT aggressive, bite only when trapped",
+                    "Clean and vacuum dark areas regularly",
+                    "Shake out pet bedding and stored blankets",
+                    "Seal cracks where spiders can enter",
+                    "Keep pet sleeping areas free of clutter",
+                    "In endemic areas with many sightings, consult pest control"
+                ],
+                sources: [
+                    "Veterinary Information Network (VIN) — Brown Recluse Spider Envenomation",
+                    "Merck Veterinary Manual — Spider and Scorpion Bites in Animals (2024)",
+                    "Pet Poison Helpline — Brown Recluse Spider",
+                    "VCA Animal Hospitals — Spider Bites",
+                    "UC Riverside Entomology — Brown Recluse Spider Distribution",
+                    "Small Animal Toxicology, 3rd Edition (Peterson)"
+                ],
+                relatedEntries: ["00112233-4455-6677-8899-aabbccddef10"]
             )
         ]
     }
