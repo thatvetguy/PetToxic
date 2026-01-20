@@ -28,6 +28,12 @@ struct MainTabView: View {
                     Label("Emergency", systemImage: "phone.fill")
                 }
                 .tag(3)
+
+            SettingsView()
+                .tabItem {
+                    Label("Settings", systemImage: "gearshape")
+                }
+                .tag(4)
         }
         .tint(Color("AccentColor"))
     }

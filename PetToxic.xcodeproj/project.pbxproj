@@ -44,6 +44,8 @@
 		F1372C807BFFDC33BCD4A18F /* SpeciesRisk.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F4998CA510A72304A62AC03 /* SpeciesRisk.swift */; };
 		F31D053BA08F486404401C7A /* DisclaimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA5A3886892E1B5E6CAF9D5F /* DisclaimerView.swift */; };
 		FA855506E3D8A1DB2CC6BA80 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4AF21A98F3346F34930A106 /* LoadingView.swift */; };
+		C3D4E5F67890123456789ABC /* AppearanceSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4E5F6789012345678901234 /* AppearanceSettings.swift */; };
+		E5F67890123456789ABCDEF0 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6789012345678901234ABCD /* SettingsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -105,6 +107,8 @@
 		EDE88C278EF8FA0A290DE262 /* PetToxicTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetToxicTests.swift; sourceTree = "<group>"; };
 		F04351C3DD8FA41399338545 /* BrowseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrowseViewModel.swift; sourceTree = "<group>"; };
 		F4AF21A98F3346F34930A106 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
+		D4E5F6789012345678901234 /* AppearanceSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppearanceSettings.swift; sourceTree = "<group>"; };
+		F6789012345678901234ABCD /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXGroup section */
@@ -257,13 +261,23 @@
 				13D3A560E1B2E0E19F2EFA43 /* Emergency */,
 				5FE2C516FEEFABE91F5E3445 /* Saved */,
 				89DF736139B2CB886DC317BF /* Search */,
+				ABCD1234567890ABCDEF1234 /* Settings */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		ABCD1234567890ABCDEF1234 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				F6789012345678901234ABCD /* SettingsView.swift */,
+			);
+			path = Settings;
 			sourceTree = "<group>";
 		};
 		DC0E80D79B23D7496641FC90 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				D4E5F6789012345678901234 /* AppearanceSettings.swift */,
 				237521FB4875580645396715 /* BookmarkService.swift */,
 				4A373A23CBFA6D1C7461960B /* DatabaseService.swift */,
 				754F9D537CBB611A07FF9E8E /* SearchService.swift */,
@@ -444,6 +458,8 @@
 				4E934701319A0D79525B5FC1 /* SymptomsListView.swift in Sources */,
 				BD101F4DBB5A92DCFD01C09D /* ToxicItem.swift in Sources */,
 				1FF8DFAEF0DB676643C8C3B3 /* RelatedEntryButton.swift in Sources */,
+				C3D4E5F67890123456789ABC /* AppearanceSettings.swift in Sources */,
+				E5F67890123456789ABCDEF0 /* SettingsView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
