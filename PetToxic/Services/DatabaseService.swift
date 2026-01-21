@@ -5487,6 +5487,72 @@ class DatabaseService {
                 ]
             ),
 
+            // MARK: - Inhalant Toxins (PTFE / Teflon Toxicosis)
+            ToxicItem(
+                id: UUID(uuidString: "00112233-4455-6677-8899-aabbccddef22")!,
+                name: "Inhalant Toxins (PTFE / Teflon Toxicosis)",
+                alternateNames: [
+                    "teflon toxicity",
+                    "teflon poisoning",
+                    "PTFE toxicosis",
+                    "polytetrafluoroethylene",
+                    "non-stick cookware",
+                    "overheated pan",
+                    "polymer fume fever",
+                    "teflon fumes",
+                    "toxic fumes birds",
+                    "bird respiratory toxicity",
+                    "self-cleaning oven",
+                    "aerosol spray toxicity",
+                    "smoke inhalation birds",
+                    "avian inhalant toxicosis"
+                ],
+                categories: [.householdItems],
+                imageAsset: "inhalant_toxins",
+                description: "Inhalant toxicosis refers to poisoning caused by airborne fumes, gases, or aerosolized chemicals. Birds have an extremely efficient and sensitive respiratory system that makes them highly vulnerable to inhaled toxins—often fatally so.\n\nPTFE TOXICOSIS: The most well-known inhalant danger is polytetrafluoroethylene (PTFE), the coating on non-stick cookware commonly sold under brand names like Teflon. When PTFE-coated items are overheated above 280°F (137°C), they release colorless, odorless fumes that are rapidly fatal to birds—often within minutes. By the time an owner notices symptoms, it may already be too late.\n\nOTHER INHALANT HAZARDS: Many household items can release fumes dangerous to birds, including self-cleaning ovens, aerosol sprays, scented candles, air fresheners, cigarette smoke, paint fumes, cleaning products (ammonia, bleach), gasoline fumes, automobile exhaust, carbon monoxide, new carpet off-gassing, and fumigants or insecticides.",
+                toxicityInfo: "Birds have a highly efficient respiratory system with air sacs that allow continuous airflow through their lungs. While this adaptation is excellent for flight, it also means toxins are absorbed extremely rapidly and efficiently—far more so than in mammals.\n\nPTFE TOXICOSIS: When PTFE coatings are overheated, they release particles and acidic gases that cause severe damage to lung tissue. The fumes cause hemorrhage and congestion of the lungs, leading to acute respiratory failure. Death can occur within minutes of exposure.\n\nMECHANISM: The toxic particles and gases destroy the delicate air capillaries in avian lungs. The resulting pulmonary hemorrhage and edema prevent oxygen exchange, causing rapid suffocation.\n\nOTHER INHALANTS: Smoke, chemical fumes, and aerosolized products cause similar respiratory damage through direct irritation, inflammation, and destruction of lung tissue. Carbon monoxide binds to hemoglobin, preventing oxygen transport.",
+                onsetTime: OnsetTime(
+                    early: "PTFE toxicosis: Minutes—often death occurs before symptoms are noticed",
+                    delayed: "Other inhalants: Minutes to hours depending on concentration and substance"
+                ),
+                symptoms: [
+                    "Sudden death (often the only 'symptom' with PTFE)",
+                    "Labored or difficulty breathing",
+                    "Open-mouth breathing",
+                    "Tail bobbing while breathing",
+                    "Wheezing or clicking respiratory sounds",
+                    "Incoordination / ataxia",
+                    "Depression / lethargy",
+                    "Restless behavior / agitation",
+                    "Falling from perch",
+                    "Loss of consciousness"
+                ],
+                speciesRisks: [
+                    SpeciesRisk(
+                        species: .bird,
+                        severity: .severe,
+                        notes: "Birds are extremely sensitive to inhaled toxins due to their highly efficient respiratory system. PTFE (Teflon) fumes from overheated cookware can cause death within minutes—often before any symptoms are observed. ANY strong odor, smoke, or fumes should be considered potentially life-threatening. Never use non-stick cookware, self-cleaning ovens, or aerosol products near birds. Ensure birds are housed in well-ventilated areas away from kitchens. If exposure occurs, move the bird to fresh air IMMEDIATELY and seek emergency veterinary care."
+                    )
+                ],
+                preventionTips: [
+                    "Never use PTFE-coated (non-stick) cookware in homes with birds",
+                    "Do not use self-cleaning oven functions when birds are present",
+                    "Keep birds away from kitchens entirely if possible",
+                    "Never smoke near birds",
+                    "Avoid aerosol sprays, air fresheners, and scented candles near birds",
+                    "Ensure excellent ventilation in bird living areas",
+                    "Do not use harsh cleaning chemicals near birds",
+                    "Allow new carpets and painted rooms to off-gas completely before introducing birds",
+                    "Install carbon monoxide detectors in your home"
+                ],
+                sources: [
+                    "Veterinary Information Network (VIN)",
+                    "ASPCA Animal Poison Control Center",
+                    "Merck Veterinary Manual"
+                ],
+                relatedEntries: nil
+            ),
+
             // MARK: - Soaps & Mild Detergents
             ToxicItem(
                 id: UUID(uuidString: "11223344-5566-7788-99aa-bbccddeeff00")!,
