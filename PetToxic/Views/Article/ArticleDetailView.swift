@@ -64,11 +64,17 @@ struct ArticleDetailView: View {
         .navigationBarTitleDisplayMode(.inline)
         .toolbar {
             ToolbarItem(placement: .topBarTrailing) {
-                Button {
-                    isBookmarked.toggle()
-                    viewModel.toggleBookmark(for: item)
-                } label: {
-                    Image(systemName: isBookmarked ? "bookmark.fill" : "bookmark")
+                HStack(spacing: 16) {
+                    ShareLink(item: shareText) {
+                        Image(systemName: "square.and.arrow.up")
+                    }
+
+                    Button {
+                        isBookmarked.toggle()
+                        viewModel.toggleBookmark(for: item)
+                    } label: {
+                        Image(systemName: isBookmarked ? "bookmark.fill" : "bookmark")
+                    }
                 }
             }
         }
@@ -246,6 +252,23 @@ struct ArticleDetailView: View {
         case .high: return 2
         case .severe: return 3
         }
+    }
+
+    private var shareText: String {
+        let maxSeverity = item.speciesRisks
+            .map(\.severity)
+            .max(by: { severityOrder($0) < severityOrder($1) })
+
+        let severityText = maxSeverity?.rawValue.uppercased() ?? "POTENTIALLY TOXIC"
+        let speciesList = item.speciesRisks.map { $0.species.displayName.lowercased() }.joined(separator: " and ")
+
+        return """
+            ⚠️ PET SAFETY ALERT: \(item.name) is \(severityText) to \(speciesList).
+            If your pet ingested this substance, contact your veterinarian or poison control immediately.
+            - ASPCA Poison Control: (888) 426-4435
+            - Pet Poison Helpline: (855) 764-7661
+            (Shared from Pet Toxic app)
+            """
     }
 
     /// Formats text by detecting "ALL CAPS:" patterns and making them bold with paragraph breaks
