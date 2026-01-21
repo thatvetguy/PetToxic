@@ -65,3 +65,90 @@ Dynamic Type, VoiceOver, high contrast, 44pt minimum touch targets.
 4. Does it meet accessibility requirements?
 5. Is the code testable?
 6. Correct branch?
+
+## Project Structure
+
+```
+PetToxic/
+├── PetToxic/
+│   ├── App/
+│   │   └── PetToxicApp.swift          # App entry point
+│   ├── Components/                     # Reusable UI components
+│   │   ├── DisclaimerView.swift       # Legal disclaimer banner
+│   │   ├── EmptyStateView.swift
+│   │   ├── LoadingView.swift
+│   │   ├── PoisonControlButton.swift  # Emergency call buttons
+│   │   ├── RelatedEntryButton.swift
+│   │   └── SeverityBadge.swift        # Toxicity level indicator
+│   ├── Models/
+│   │   ├── Enums.swift                # Species, Severity, Category, MatchType
+│   │   ├── SearchResult.swift
+│   │   ├── SpeciesRisk.swift
+│   │   └── ToxicItem.swift            # Main toxin data model
+│   ├── Resources/
+│   │   ├── Assets.xcassets/           # App icons, colors, images
+│   │   ├── Info.plist
+│   │   └── LaunchScreen.storyboard
+│   ├── Services/
+│   │   ├── AppearanceSettings.swift   # Dark/light mode (default: dark)
+│   │   ├── BookmarkService.swift      # Save favorites
+│   │   ├── DatabaseService.swift      # Toxin data (hardcoded, SQLite planned)
+│   │   └── SearchService.swift        # FTS5 search
+│   ├── Utilities/
+│   │   ├── Constants.swift
+│   │   └── Extensions/
+│   │       └── Color+Hex.swift
+│   ├── ViewModels/
+│   │   ├── ArticleViewModel.swift
+│   │   ├── BrowseViewModel.swift
+│   │   ├── SavedViewModel.swift
+│   │   └── SearchViewModel.swift
+│   └── Views/
+│       ├── MainTabView.swift          # Tab bar controller
+│       ├── Article/
+│       │   ├── ArticleDetailView.swift # Toxin detail page + share
+│       │   ├── SeveritySection.swift
+│       │   └── SymptomsListView.swift
+│       ├── Browse/
+│       │   ├── BrowseView.swift
+│       │   └── CategoryGridItem.swift
+│       ├── Emergency/
+│       │   └── EmergencyView.swift    # Poison control contacts
+│       ├── Saved/
+│       │   ├── BookmarksListView.swift
+│       │   ├── HistoryListView.swift
+│       │   └── SavedView.swift
+│       ├── Search/
+│       │   ├── SearchResultRow.swift
+│       │   ├── SearchView.swift
+│       │   └── SpeciesFilterView.swift
+│       └── Settings/
+│           └── SettingsView.swift     # Appearance toggle
+├── PetToxicTests/
+│   └── PetToxicTests.swift
+├── PetToxicUITests/
+│   └── PetToxicUITests.swift
+├── Documentation/
+│   ├── DataModels.md
+│   ├── DesignDocument.md
+│   └── Design/
+│       ├── StyleGuide.md
+│       └── UI-Spec.md
+└── CLAUDE.md
+```
+
+## Common File Locations
+
+| Task | File(s) |
+|------|---------|
+| Add new toxin entry | `Services/DatabaseService.swift` |
+| Modify toxin data model | `Models/ToxicItem.swift`, `Models/SpeciesRisk.swift` |
+| Change severity levels/colors | `Models/Enums.swift` (Severity enum) |
+| Add new category | `Models/Enums.swift` (Category enum) |
+| Modify article display | `Views/Article/ArticleDetailView.swift` |
+| Change share text format | `Views/Article/ArticleDetailView.swift` (generateShareText) |
+| Update disclaimer text | `Components/DisclaimerView.swift` |
+| Modify search behavior | `Services/SearchService.swift` |
+| Change default appearance | `Services/AppearanceSettings.swift` |
+| Add new tab | `Views/MainTabView.swift` |
+| Emergency contacts | `Components/PoisonControlButton.swift` |
