@@ -2,9 +2,10 @@ import SwiftUI
 
 struct SearchView: View {
     @StateObject private var viewModel = SearchViewModel()
+    @State private var navigationPath = NavigationPath()
 
     var body: some View {
-        NavigationStack {
+        NavigationStack(path: $navigationPath) {
             VStack(spacing: 0) {
                 // Species filter
                 SpeciesFilterView(selectedSpecies: $viewModel.selectedSpecies)
