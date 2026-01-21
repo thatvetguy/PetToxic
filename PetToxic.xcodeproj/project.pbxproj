@@ -3,12 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 77;
+	objectVersion = 63;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		047D61DFD0831C22C171B07C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4892A0DA69F9D82CF1D8373B /* Assets.xcassets */; };
-		A1B2C3D4E5F6789012345678 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B2C3D4E5F67890123456789A /* LaunchScreen.storyboard */; };
 		0A35A2B438F7FE2009ABCC3C /* EmptyStateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24B2882F5F5387A02F14DC1B /* EmptyStateView.swift */; };
 		0ED8DF5F0BC3B56D614CF741 /* SpeciesFilterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81DA312D440067CFD3E192A8 /* SpeciesFilterView.swift */; };
 		17B80370F698B2819590C349 /* SavedViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CBB1717EB5134FC9FB2784A /* SavedViewModel.swift */; };
@@ -28,15 +27,18 @@
 		8DD5DCCAA60B3B1A47FA0426 /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 322031EFC0545ED5E7D81414 /* SearchViewModel.swift */; };
 		906D5BAF057ED35D8BAD06FB /* PetToxicTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDE88C278EF8FA0A290DE262 /* PetToxicTests.swift */; };
 		9CCFBBE79A93F89E39AC3DFE /* PetToxicUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CC831E76E0F0F17894ADA65 /* PetToxicUITests.swift */; };
+		A1B2C3D4E5F6789012345678 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B2C3D4E5F67890123456789A /* LaunchScreen.storyboard */; };
 		AAEF5C9F73EAA218C18A2A85 /* Color+Hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = C55E1542D6E35B1F63CDED27 /* Color+Hex.swift */; };
 		B4943E52DD3BFB9C5C556F3E /* CategoryGridItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2A1F327069C6F80D711B112 /* CategoryGridItem.swift */; };
 		BD101F4DBB5A92DCFD01C09D /* ToxicItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA6BC59CB914FF0A323C3DCC /* ToxicItem.swift */; };
 		BD7DB52CAC570F013059A80F /* SearchResultRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD01A1755E279E4482FD79C5 /* SearchResultRow.swift */; };
 		BEEF53A1E3402DA7D0C365E5 /* SeverityBadge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D0A536DAB60D4A56FC6C6B9 /* SeverityBadge.swift */; };
 		C36B4977AA78A0B98A512B6A /* SeveritySection.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC88BF3EB74D97FF8EF70C32 /* SeveritySection.swift */; };
+		C3D4E5F67890123456789ABC /* AppearanceSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4E5F6789012345678901234 /* AppearanceSettings.swift */; };
 		CA79B1FBAA2D70C587CD81B9 /* ArticleDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F222F1B00290D1DB61D22D2 /* ArticleDetailView.swift */; };
 		D44528F6CE6C54C2BD5B0EE0 /* DatabaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A373A23CBFA6D1C7461960B /* DatabaseService.swift */; };
 		DE84CAE9804BECF59AED1636 /* ArticleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 558D0A98607D43A5C5878676 /* ArticleViewModel.swift */; };
+		E5F67890123456789ABCDEF0 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6789012345678901234ABCD /* SettingsView.swift */; };
 		ECDBACA38D7B65E4448BB719 /* HistoryListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1B02F5CCAC1245C9103DF3A /* HistoryListView.swift */; };
 		EF977BE44A1CA4C9CE80A128 /* SavedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5C6C094D6B35157F81D7872 /* SavedView.swift */; };
 		EFB4BACA347E9C89515BEDED /* EmergencyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B85A0BAA5B698970D8F9ADA /* EmergencyView.swift */; };
@@ -44,8 +46,6 @@
 		F1372C807BFFDC33BCD4A18F /* SpeciesRisk.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F4998CA510A72304A62AC03 /* SpeciesRisk.swift */; };
 		F31D053BA08F486404401C7A /* DisclaimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA5A3886892E1B5E6CAF9D5F /* DisclaimerView.swift */; };
 		FA855506E3D8A1DB2CC6BA80 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4AF21A98F3346F34930A106 /* LoadingView.swift */; };
-		C3D4E5F67890123456789ABC /* AppearanceSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4E5F6789012345678901234 /* AppearanceSettings.swift */; };
-		E5F67890123456789ABCDEF0 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6789012345678901234ABCD /* SettingsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,14 +69,13 @@
 		0B85A0BAA5B698970D8F9ADA /* EmergencyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmergencyView.swift; sourceTree = "<group>"; };
 		1CC831E76E0F0F17894ADA65 /* PetToxicUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetToxicUITests.swift; sourceTree = "<group>"; };
 		1E1A648E35297523A4222EE2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
-		B2C3D4E5F67890123456789A /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		207482A283C5391FDFEFAFC1 /* PoisonControlButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoisonControlButton.swift; sourceTree = "<group>"; };
 		237521FB4875580645396715 /* BookmarkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarkService.swift; sourceTree = "<group>"; };
 		24B2882F5F5387A02F14DC1B /* EmptyStateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyStateView.swift; sourceTree = "<group>"; };
 		322031EFC0545ED5E7D81414 /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
 		3F222F1B00290D1DB61D22D2 /* ArticleDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleDetailView.swift; sourceTree = "<group>"; };
 		4287B0389C9E01E7BF8C74A2 /* PetToxicApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetToxicApp.swift; sourceTree = "<group>"; };
-		43492A46C658B52393AA5BA7 /* PetToxic.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = PetToxic.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		43492A46C658B52393AA5BA7 /* PetToxic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PetToxic.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4892A0DA69F9D82CF1D8373B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		48FB23F604DBF891410A2F23 /* PetToxicTests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = PetToxicTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		48FD14B94E272939D2281BD1 /* PetToxicUITests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = PetToxicUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -93,6 +92,7 @@
 		9D0A536DAB60D4A56FC6C6B9 /* SeverityBadge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeverityBadge.swift; sourceTree = "<group>"; };
 		AD01A1755E279E4482FD79C5 /* SearchResultRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultRow.swift; sourceTree = "<group>"; };
 		AF7B0E075A2786B63F29BED4 /* SymptomsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SymptomsListView.swift; sourceTree = "<group>"; };
+		B2C3D4E5F67890123456789A /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B53D68258BA348FBDC14FFB4 /* RelatedEntryButton.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = RelatedEntryButton.swift; sourceTree = "<group>"; };
 		C1B02F5CCAC1245C9103DF3A /* HistoryListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryListView.swift; sourceTree = "<group>"; };
 		C2A1F327069C6F80D711B112 /* CategoryGridItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryGridItem.swift; sourceTree = "<group>"; };
@@ -100,6 +100,7 @@
 		C55E1542D6E35B1F63CDED27 /* Color+Hex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Hex.swift"; sourceTree = "<group>"; };
 		C5C6C094D6B35157F81D7872 /* SavedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedView.swift; sourceTree = "<group>"; };
 		CA5A3886892E1B5E6CAF9D5F /* DisclaimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisclaimerView.swift; sourceTree = "<group>"; };
+		D4E5F6789012345678901234 /* AppearanceSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppearanceSettings.swift; sourceTree = "<group>"; };
 		D6CE357649A1298A4A9761B2 /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
 		E5D4123DE87463A4CF858927 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		EA6BC59CB914FF0A323C3DCC /* ToxicItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToxicItem.swift; sourceTree = "<group>"; };
@@ -107,7 +108,6 @@
 		EDE88C278EF8FA0A290DE262 /* PetToxicTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetToxicTests.swift; sourceTree = "<group>"; };
 		F04351C3DD8FA41399338545 /* BrowseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrowseViewModel.swift; sourceTree = "<group>"; };
 		F4AF21A98F3346F34930A106 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
-		D4E5F6789012345678901234 /* AppearanceSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppearanceSettings.swift; sourceTree = "<group>"; };
 		F6789012345678901234ABCD /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -216,6 +216,14 @@
 			path = Search;
 			sourceTree = "<group>";
 		};
+		ABCD1234567890ABCDEF1234 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				F6789012345678901234ABCD /* SettingsView.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
 		B839DF5B43840F6B6DE7DAC9 /* PetToxicUITests */ = {
 			isa = PBXGroup;
 			children = (
@@ -264,14 +272,6 @@
 				ABCD1234567890ABCDEF1234 /* Settings */,
 			);
 			path = Views;
-			sourceTree = "<group>";
-		};
-		ABCD1234567890ABCDEF1234 /* Settings */ = {
-			isa = PBXGroup;
-			children = (
-				F6789012345678901234ABCD /* SettingsView.swift */,
-			);
-			path = Settings;
 			sourceTree = "<group>";
 		};
 		DC0E80D79B23D7496641FC90 /* Services */ = {
@@ -377,10 +377,6 @@
 						DevelopmentTeam = "";
 						TestTargetID = 4997CE3AD1B9F84DD8CC6B02;
 					};
-					4997CE3AD1B9F84DD8CC6B02 = {
-						DevelopmentTeam = "";
-						ProvisioningStyle = Automatic;
-					};
 					4E2D792F5DB455D34D4A0EE0 = {
 						DevelopmentTeam = "";
 					};
@@ -396,7 +392,6 @@
 			);
 			mainGroup = EE5DA48B16C54F453B1773CE;
 			minimizedProjectReferenceProxies = 1;
-			preferredProjectObjectVersion = 77;
 			productRefGroup = F95BFEAAE9F71A6F51F04D61 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -532,15 +527,18 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6KA5CB5S3A;
 				GENERATE_INFOPLIST_FILE = NO;
 				INFOPLIST_FILE = PetToxic/Resources/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Pet Toxic";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.thatvetguy.PetToxic;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = iphoneos;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -709,15 +707,18 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6KA5CB5S3A;
 				GENERATE_INFOPLIST_FILE = NO;
 				INFOPLIST_FILE = PetToxic/Resources/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Pet Toxic";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.thatvetguy.PetToxic;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = iphoneos;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				TARGETED_DEVICE_FAMILY = 1;
