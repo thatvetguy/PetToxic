@@ -43,7 +43,7 @@ final class AppearanceSettings: ObservableObject {
            let mode = AppearanceMode(rawValue: saved) {
             self.mode = mode
         } else {
-            self.mode = .system
+            self.mode = .dark
         }
     }
 }
