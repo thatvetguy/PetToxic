@@ -255,20 +255,93 @@ struct ArticleDetailView: View {
     }
 
     private var shareText: String {
-        let maxSeverity = item.speciesRisks
-            .map(\.severity)
-            .max(by: { severityOrder($0) < severityOrder($1) })
+        generateShareText(for: item)
+    }
 
-        let severityText = maxSeverity?.rawValue.uppercased() ?? "POTENTIALLY TOXIC"
-        let speciesList = item.speciesRisks.map { $0.species.displayName.lowercased() }.joined(separator: " and ")
+    private func generateShareText(for item: ToxicItem) -> String {
+        var text = ""
 
-        return """
-            ⚠️ PET SAFETY ALERT: \(item.name) is \(severityText) to \(speciesList).
-            If your pet ingested this substance, contact your veterinarian or poison control immediately.
-            - ASPCA Poison Control: (888) 426-4435
-            - Pet Poison Helpline: (855) 764-7661
-            (Shared from Pet Toxic app)
-            """
+        // Header with warning emoji
+        text += "⚠️ PET SAFETY ALERT: \(item.name)\n"
+        text += String(repeating: "─", count: 40) + "\n\n"
+
+        // Species Severities
+        if !item.speciesRisks.isEmpty {
+            text += "TOXICITY BY SPECIES:\n"
+            for risk in item.speciesRisks {
+                let severityEmoji: String
+                switch risk.severity {
+                case .low: severityEmoji = "🟢"
+                case .moderate: severityEmoji = "🟡"
+                case .high: severityEmoji = "🟠"
+                case .severe: severityEmoji = "🔴"
+                }
+                text += "\(severityEmoji) \(risk.species.displayName): \(risk.severity.displayName.uppercased())"
+                if let notes = risk.notes, !notes.isEmpty {
+                    text += " — \(notes)"
+                }
+                text += "\n"
+            }
+            text += "\n"
+        }
+
+        // What Is It?
+        text += "WHAT IS IT?\n"
+        text += item.description + "\n\n"
+
+        // Why Is It Dangerous?
+        text += "WHY IS IT DANGEROUS?\n"
+        text += item.toxicityInfo + "\n\n"
+
+        // Onset Time (if present)
+        if let onset = item.onsetTime {
+            text += "WHEN DO SYMPTOMS APPEAR?\n"
+            if let early = onset.early, !early.isEmpty {
+                text += "• Early: \(early)\n"
+            }
+            if let delayed = onset.delayed, !delayed.isEmpty {
+                text += "• Delayed: \(delayed)\n"
+            }
+            text += "\n"
+        }
+
+        // Symptoms
+        if !item.symptoms.isEmpty {
+            text += "SYMPTOMS TO WATCH FOR:\n"
+            for symptom in item.symptoms {
+                text += "• \(symptom)\n"
+            }
+            text += "\n"
+        }
+
+        // Prevention Tips (if present)
+        if let tips = item.preventionTips, !tips.isEmpty {
+            text += "PREVENTION TIPS:\n"
+            for tip in tips {
+                text += "• \(tip)\n"
+            }
+            text += "\n"
+        }
+
+        // Disclaimer
+        text += String(repeating: "─", count: 40) + "\n"
+        text += "⚠️ DISCLAIMER: This information is for educational purposes only and does not constitute veterinary medical advice. If your pet has been exposed to a potentially toxic substance, contact a licensed veterinarian or animal poison control center immediately.\n\n"
+
+        // Emergency Contacts
+        text += "🚨 EMERGENCY CONTACTS:\n"
+        text += "• ASPCA Poison Control: (888) 426-4435\n"
+        text += "• Pet Poison Helpline: (855) 764-7661\n"
+        text += "(Consultation fees may apply)\n\n"
+
+        // App Download Link
+        text += String(repeating: "─", count: 40) + "\n"
+        text += "📱 Download Pet Toxic — the complete poison guide for pet owners:\n"
+        text += "[App Store link coming soon]\n\n"
+
+        // Attribution
+        text += "(Shared from Pet Toxic app)"
+
+        return text
     }
 
     /// Formats text by detecting "ALL CAPS:" patterns and making them bold with paragraph breaks
