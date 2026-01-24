@@ -24,7 +24,7 @@ struct BrowseView: View {
                 }
                 .padding()
             }
-            .navigationTitle("Browse")
+            .navigationTitle("Pick your poison...")
             .navigationDestination(for: Category.self) { category in
                 CategoryListView(category: category)
             }
