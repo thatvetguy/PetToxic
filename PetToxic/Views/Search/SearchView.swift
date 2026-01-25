@@ -10,35 +10,51 @@ struct SearchView: View {
                 AppBackground()
 
                 VStack(spacing: 0) {
-                    // Species filter
-                    SpeciesFilterView(selectedSpecies: $viewModel.selectedSpecies)
-                        .padding(.horizontal)
-                        .padding(.vertical, 8)
+                    // Custom header
+                    HomeHeader()
 
-                    // Content
+                    // Main content area
+                    ScrollView {
+                        VStack(spacing: 20) {
+                            // Content based on search state
+                            if viewModel.searchText.isEmpty {
+                                recentSearchesContent
+                            } else if viewModel.isSearching {
+                                ProgressView("Searching...")
+                                    .frame(maxWidth: .infinity)
+                                    .padding(.top, 40)
+                            } else if viewModel.searchResults.isEmpty {
+                                emptyResultsView
+                            } else {
+                                searchResultsContent
+                            }
+
+                            // My Pets section (always visible when not actively searching)
+                            if viewModel.searchText.isEmpty {
+                                MyPetsPlaceholder()
+                                    .padding(.top, 8)
+                            }
+                        }
+                        .padding(.top, 8)
+                    }
+
+                    Spacer(minLength: 0)
+
+                    // Ad banner at bottom
                     if viewModel.searchText.isEmpty {
-                        recentSearchesView
-                    } else if viewModel.isSearching {
-                        ProgressView("Searching...")
-                            .frame(maxWidth: .infinity, maxHeight: .infinity)
-                    } else if viewModel.searchResults.isEmpty {
-                        emptyResultsView
-                    } else {
-                        searchResultsList
+                        AdBannerPlaceholder()
                     }
                 }
             }
-            .navigationTitle("Home")
+            .toolbarBackground(.hidden, for: .navigationBar)
             .searchable(
                 text: $viewModel.searchText,
                 prompt: "Search foods, plants, medications..."
             )
             .onSubmit(of: .search) {
-                // Save to recent searches when user presses Return/Search
                 viewModel.saveToRecentSearches(viewModel.searchText)
             }
             .onAppear {
-                // Reload recent searches in case they were added from detail view
                 viewModel.reloadRecentSearches()
             }
             .navigationDestination(for: ToxicItem.self) { item in
@@ -47,64 +63,119 @@ struct SearchView: View {
         }
     }
 
-    private var recentSearchesView: some View {
-        VStack {
+    private var recentSearchesContent: some View {
+        Group {
             if viewModel.recentSearches.isEmpty {
-                EmptyStateView(
-                    "Start Searching",
-                    systemImage: "magnifyingglass",
-                    description: "Search for foods, plants, medications, and other substances to check their toxicity."
-                )
+                // Empty state
+                VStack(spacing: 12) {
+                    Image(systemName: "magnifyingglass")
+                        .font(.system(size: 40))
+                        .foregroundColor(.white.opacity(0.4))
+
+                    Text("No Recent Searches")
+                        .font(.headline)
+                        .foregroundColor(.white.opacity(0.8))
+
+                    Text("Search for foods, plants, medications, and other substances to check their toxicity.")
+                        .font(.subheadline)
+                        .foregroundColor(.white.opacity(0.5))
+                        .multilineTextAlignment(.center)
+                        .padding(.horizontal, 32)
+                }
+                .padding(.top, 32)
             } else {
-                List {
-                    Section {
+                // Recent searches list
+                VStack(alignment: .leading, spacing: 8) {
+                    HStack {
+                        Text("Recent Searches")
+                            .font(.headline)
+                            .foregroundColor(.white)
+                        Spacer()
+                        Button("Clear") {
+                            viewModel.clearAllRecentSearches()
+                        }
+                        .font(.subheadline)
+                        .foregroundColor(Color(red: 0.29, green: 0.61, blue: 0.61))
+                    }
+                    .padding(.horizontal)
+
+                    VStack(spacing: 0) {
                         ForEach(viewModel.recentSearches, id: \.self) { search in
                             Button {
                                 viewModel.searchText = search
                             } label: {
-                                Label(search, systemImage: "clock")
+                                HStack {
+                                    Image(systemName: "clock")
+                                        .foregroundColor(.white.opacity(0.5))
+                                    Text(search)
+                                        .foregroundColor(.white)
+                                    Spacer()
+                                    Image(systemName: "chevron.right")
+                                        .font(.caption)
+                                        .foregroundColor(.white.opacity(0.3))
+                                }
+                                .padding(.horizontal)
+                                .padding(.vertical, 12)
                             }
-                            .foregroundStyle(.primary)
-                        }
-                        .onDelete { indexSet in
-                            viewModel.removeRecentSearch(at: indexSet)
-                        }
-                    } header: {
-                        HStack {
-                            Text("Recent Searches")
-                            Spacer()
-                            Button("Clear") {
-                                viewModel.clearAllRecentSearches()
+
+                            if search != viewModel.recentSearches.last {
+                                Divider()
+                                    .background(Color.white.opacity(0.1))
+                                    .padding(.leading, 44)
                             }
-                            .font(.subheadline)
-                            .textCase(nil)
                         }
                     }
+                    .background(Color.white.opacity(0.08))
+                    .clipShape(RoundedRectangle(cornerRadius: 12))
+                    .padding(.horizontal)
                 }
             }
         }
     }
 
     private var emptyResultsView: some View {
-        EmptyStateView(
-            "No Results",
-            systemImage: "magnifyingglass",
-            description: "No results found for \"\(viewModel.searchText)\". Try a different search term."
-        )
+        VStack(spacing: 12) {
+            Image(systemName: "magnifyingglass")
+                .font(.system(size: 40))
+                .foregroundColor(.white.opacity(0.4))
+
+            Text("No Results")
+                .font(.headline)
+                .foregroundColor(.white.opacity(0.8))
+
+            Text("No results found for \"\(viewModel.searchText)\". Try a different search term.")
+                .font(.subheadline)
+                .foregroundColor(.white.opacity(0.5))
+                .multilineTextAlignment(.center)
+                .padding(.horizontal, 32)
+        }
+        .padding(.top, 32)
     }
 
-    private var searchResultsList: some View {
-        List(viewModel.searchResults) { result in
-            NavigationLink(value: result.item) {
-                SearchResultRow(result: result)
+    private var searchResultsContent: some View {
+        VStack(spacing: 0) {
+            ForEach(viewModel.searchResults) { result in
+                NavigationLink(value: result.item) {
+                    SearchResultRow(result: result)
+                        .padding(.horizontal)
+                        .padding(.vertical, 12)
+                }
+                .buttonStyle(.plain)
+
+                if result.id != viewModel.searchResults.last?.id {
+                    Divider()
+                        .background(Color.white.opacity(0.1))
+                        .padding(.leading, 16)
+                }
             }
         }
+        .background(Color.white.opacity(0.08))
+        .clipShape(RoundedRectangle(cornerRadius: 12))
+        .padding(.horizontal)
         .onChange(of: viewModel.searchText) { newValue in
-            // Keep the pending search term updated so it can be saved when navigating to detail
             SearchContext.shared.pendingSearchTerm = newValue
         }
         .onAppear {
-            // Set initial pending term when results appear
             SearchContext.shared.pendingSearchTerm = viewModel.searchText
         }
     }
