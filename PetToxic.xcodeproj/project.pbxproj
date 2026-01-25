@@ -60,10 +60,10 @@
 		F1372C807BFFDC33BCD4A18F /* SpeciesRisk.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F4998CA510A72304A62AC03 /* SpeciesRisk.swift */; };
 		F31D053BA08F486404401C7A /* DisclaimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA5A3886892E1B5E6CAF9D5F /* DisclaimerView.swift */; };
 		FA855506E3D8A1DB2CC6BA80 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4AF21A98F3346F34930A106 /* LoadingView.swift */; };
+		HOMESEC001CCCC1111111111 /* MyPetsHomeSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = HOMESEC002CCCC2222222222 /* MyPetsHomeSection.swift */; };
 		PHOTO001BBBB1111111111111 /* PetPhotoService.swift in Sources */ = {isa = PBXBuildFile; fileRef = PHOTO002BBBB2222222222222 /* PetPhotoService.swift */; };
 		PHOTO003BBBB3333333333333 /* PetAvatarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = PHOTO004BBBB4444444444444 /* PetAvatarView.swift */; };
 		PHOTO005BBBB5555555555555 /* PetPhotoPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = PHOTO006BBBB6666666666666 /* PetPhotoPickerView.swift */; };
-		HOMESEC001CCCC1111111111 /* MyPetsHomeSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = HOMESEC002CCCC2222222222 /* MyPetsHomeSection.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -141,10 +141,10 @@
 		F6789012345678901234ABCD /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		F95CC1681EAFCAC224A491ED /* AppBackground.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AppBackground.swift; sourceTree = "<group>"; };
 		FF6C448365FCE3CCE08553DE /* HomeHeader.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = HomeHeader.swift; sourceTree = "<group>"; };
+		HOMESEC002CCCC2222222222 /* MyPetsHomeSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPetsHomeSection.swift; sourceTree = "<group>"; };
 		PHOTO002BBBB2222222222222 /* PetPhotoService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetPhotoService.swift; sourceTree = "<group>"; };
 		PHOTO004BBBB4444444444444 /* PetAvatarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetAvatarView.swift; sourceTree = "<group>"; };
 		PHOTO006BBBB6666666666666 /* PetPhotoPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetPhotoPickerView.swift; sourceTree = "<group>"; };
-		HOMESEC002CCCC2222222222 /* MyPetsHomeSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPetsHomeSection.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXGroup section */
@@ -321,14 +321,6 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
-		HOMESEC003CCCC3333333333 /* Components */ = {
-			isa = PBXGroup;
-			children = (
-				HOMESEC002CCCC2222222222 /* MyPetsHomeSection.swift */,
-			);
-			path = Components;
-			sourceTree = "<group>";
-		};
 		DC0E80D79B23D7496641FC90 /* Services */ = {
 			isa = PBXGroup;
 			children = (
@@ -381,6 +373,14 @@
 				48FD14B94E272939D2281BD1 /* PetToxicUITests.xctest */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		HOMESEC003CCCC3333333333 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				HOMESEC002CCCC2222222222 /* MyPetsHomeSection.swift */,
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -617,7 +617,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 3;
+				CURRENT_PROJECT_VERSION = 20260125;
 				DEVELOPMENT_TEAM = 6KA5CB5S3A;
 				GENERATE_INFOPLIST_FILE = NO;
 				INFOPLIST_FILE = PetToxic/Resources/Info.plist;
@@ -803,7 +803,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 3;
+				CURRENT_PROJECT_VERSION = 20260125;
 				DEVELOPMENT_TEAM = 6KA5CB5S3A;
 				GENERATE_INFOPLIST_FILE = NO;
 				INFOPLIST_FILE = PetToxic/Resources/Info.plist;
