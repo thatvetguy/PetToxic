@@ -21,6 +21,11 @@ struct PetFormView: View {
     @State private var ageYears: Int = 0
     @State private var ageMonths: Int = 0
 
+    // Breed autocomplete
+    @State private var breedSearchText: String = ""
+    @State private var breedSuggestions: [String] = []
+    @State private var showBreedSuggestions: Bool = false
+
     enum WeightUnit: String, CaseIterable {
         case lbs, kg
     }
@@ -60,12 +65,44 @@ struct PetFormView: View {
                 }
                 .onChange(of: pet.speciesEnum) { triggerAutoSave() }
 
-                // Breed (simple text field for now - autocomplete in Phase 2)
-                TextField("Breed", text: Binding(
-                    get: { pet.breed ?? "" },
-                    set: { pet.breed = $0.isEmpty ? nil : $0 }
-                ))
-                .onChange(of: pet.breed) { triggerAutoSave() }
+                // Breed with Autocomplete
+                VStack(alignment: .leading, spacing: 4) {
+                    TextField("Breed", text: $breedSearchText)
+                        .onChange(of: breedSearchText) { _, newValue in
+                            updateBreedSuggestions(query: newValue)
+                            pet.breed = newValue.isEmpty ? nil : newValue
+                            triggerAutoSave()
+                        }
+                        .onChange(of: pet.speciesEnum) { _, _ in
+                            // Clear breed when species changes
+                            breedSearchText = ""
+                            pet.breed = nil
+                            breedSuggestions = []
+                        }
+
+                    // Autocomplete suggestions
+                    if showBreedSuggestions && !breedSuggestions.isEmpty {
+                        ScrollView {
+                            VStack(alignment: .leading, spacing: 0) {
+                                ForEach(breedSuggestions, id: \.self) { suggestion in
+                                    Button {
+                                        selectBreed(suggestion)
+                                    } label: {
+                                        Text(suggestion)
+                                            .foregroundColor(.primary)
+                                            .frame(maxWidth: .infinity, alignment: .leading)
+                                            .padding(.vertical, 10)
+                                            .padding(.horizontal, 8)
+                                    }
+                                    Divider()
+                                }
+                            }
+                        }
+                        .frame(maxHeight: 200)
+                        .background(Color(.systemGray6))
+                        .cornerRadius(8)
+                    }
+                }
 
                 // Sex Picker
                 Picker("Sex", selection: $pet.sexEnum) {
@@ -252,6 +289,9 @@ struct PetFormView: View {
             weightUnit = .lbs
         }
 
+        // Set up breed search text
+        breedSearchText = pet.breed ?? ""
+
         // Set up birthday mode
         if pet.birthday != nil {
             if pet.isBirthdayApproximate {
@@ -339,6 +379,22 @@ struct PetFormView: View {
         guard let phone = pet.vetPhone,
               let url = URL(string: "tel://\(phone.filter { $0.isNumber })") else { return }
         UIApplication.shared.open(url)
+    }
+
+    private func updateBreedSuggestions(query: String) {
+        let suggestions = BreedService.shared.searchBreeds(
+            query: query,
+            for: pet.speciesEnum
+        )
+        breedSuggestions = suggestions
+        showBreedSuggestions = !query.isEmpty && !suggestions.isEmpty
+    }
+
+    private func selectBreed(_ breed: String) {
+        breedSearchText = breed
+        pet.breed = breed
+        showBreedSuggestions = false
+        triggerAutoSave()
     }
 }
 

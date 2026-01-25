@@ -16,6 +16,7 @@ enum PetSpecies: String, CaseIterable, Codable {
     case mouse
     case hedgehog
     case sugarGlider
+    case otherSmallMammal
 
     // Birds
     case parakeet
@@ -28,6 +29,7 @@ enum PetSpecies: String, CaseIterable, Codable {
     case cockatoo
     case macaw
     case africanGrey
+    case otherBird
 
     // Reptiles
     case beardedDragon
@@ -39,6 +41,7 @@ enum PetSpecies: String, CaseIterable, Codable {
     case iguana
     case chameleon
     case blueTonguedSkink
+    case otherReptile
 
     var displayName: String {
         switch self {
@@ -46,12 +49,15 @@ enum PetSpecies: String, CaseIterable, Codable {
         case .feline: return "Feline (Cat)"
         case .guineaPig: return "Guinea Pig"
         case .sugarGlider: return "Sugar Glider"
+        case .otherSmallMammal: return "Other Small Mammal"
         case .africanGrey: return "African Grey"
+        case .otherBird: return "Other Bird"
         case .beardedDragon: return "Bearded Dragon"
         case .leopardGecko: return "Leopard Gecko"
         case .ballPython: return "Ball Python"
         case .cornSnake: return "Corn Snake"
         case .blueTonguedSkink: return "Blue-Tongued Skink"
+        case .otherReptile: return "Other Reptile"
         default:
             // Capitalize first letter for simple names
             return rawValue.prefix(1).uppercased() + rawValue.dropFirst()
@@ -62,22 +68,22 @@ enum PetSpecies: String, CaseIterable, Codable {
         switch self {
         case .canine, .feline:
             return .dogCat
-        case .rabbit, .ferret, .guineaPig, .hamster, .gerbil, .chinchilla, .rat, .mouse, .hedgehog, .sugarGlider:
+        case .rabbit, .ferret, .guineaPig, .hamster, .gerbil, .chinchilla, .rat, .mouse, .hedgehog, .sugarGlider, .otherSmallMammal:
             return .smallMammal
-        case .parakeet, .cockatiel, .parrot, .canary, .finch, .lovebird, .conure, .cockatoo, .macaw, .africanGrey:
+        case .parakeet, .cockatiel, .parrot, .canary, .finch, .lovebird, .conure, .cockatoo, .macaw, .africanGrey, .otherBird:
             return .bird
-        case .beardedDragon, .leopardGecko, .ballPython, .cornSnake, .turtle, .tortoise, .iguana, .chameleon, .blueTonguedSkink:
+        case .beardedDragon, .leopardGecko, .ballPython, .cornSnake, .turtle, .tortoise, .iguana, .chameleon, .blueTonguedSkink, .otherReptile:
             return .reptile
         }
     }
 
-    // Grouped for picker display
+    // Grouped for picker display - "Other" at end of each category
     static var grouped: [(category: PetSpeciesCategory, species: [PetSpecies])] {
         [
             (.dogCat, [.canine, .feline]),
-            (.smallMammal, [.rabbit, .ferret, .guineaPig, .hamster, .gerbil, .chinchilla, .rat, .mouse, .hedgehog, .sugarGlider]),
-            (.bird, [.parakeet, .cockatiel, .parrot, .canary, .finch, .lovebird, .conure, .cockatoo, .macaw, .africanGrey]),
-            (.reptile, [.beardedDragon, .leopardGecko, .ballPython, .cornSnake, .turtle, .tortoise, .iguana, .chameleon, .blueTonguedSkink])
+            (.smallMammal, [.rabbit, .ferret, .guineaPig, .hamster, .gerbil, .chinchilla, .rat, .mouse, .hedgehog, .sugarGlider, .otherSmallMammal]),
+            (.bird, [.parakeet, .cockatiel, .parrot, .canary, .finch, .lovebird, .conure, .cockatoo, .macaw, .africanGrey, .otherBird]),
+            (.reptile, [.beardedDragon, .leopardGecko, .ballPython, .cornSnake, .turtle, .tortoise, .iguana, .chameleon, .blueTonguedSkink, .otherReptile])
         ]
     }
 }
