@@ -63,6 +63,7 @@
 		PHOTO001BBBB1111111111111 /* PetPhotoService.swift in Sources */ = {isa = PBXBuildFile; fileRef = PHOTO002BBBB2222222222222 /* PetPhotoService.swift */; };
 		PHOTO003BBBB3333333333333 /* PetAvatarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = PHOTO004BBBB4444444444444 /* PetAvatarView.swift */; };
 		PHOTO005BBBB5555555555555 /* PetPhotoPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = PHOTO006BBBB6666666666666 /* PetPhotoPickerView.swift */; };
+		HOMESEC001CCCC1111111111 /* MyPetsHomeSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = HOMESEC002CCCC2222222222 /* MyPetsHomeSection.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -143,6 +144,7 @@
 		PHOTO002BBBB2222222222222 /* PetPhotoService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetPhotoService.swift; sourceTree = "<group>"; };
 		PHOTO004BBBB4444444444444 /* PetAvatarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetAvatarView.swift; sourceTree = "<group>"; };
 		PHOTO006BBBB6666666666666 /* PetPhotoPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetPhotoPickerView.swift; sourceTree = "<group>"; };
+		HOMESEC002CCCC2222222222 /* MyPetsHomeSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPetsHomeSection.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXGroup section */
@@ -309,6 +311,7 @@
 				D6CE357649A1298A4A9761B2 /* MainTabView.swift */,
 				19B1243262C65E98537E7913 /* Article */,
 				5391024E9B0E8F0AB0B8B7F9 /* Browse */,
+				HOMESEC003CCCC3333333333 /* Components */,
 				13D3A560E1B2E0E19F2EFA43 /* Emergency */,
 				ED2E81462F25FEEC008594E1 /* MyPets */,
 				5FE2C516FEEFABE91F5E3445 /* Saved */,
@@ -316,6 +319,14 @@
 				ABCD1234567890ABCDEF1234 /* Settings */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		HOMESEC003CCCC3333333333 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				HOMESEC002CCCC2222222222 /* MyPetsHomeSection.swift */,
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 		DC0E80D79B23D7496641FC90 /* Services */ = {
@@ -531,6 +542,7 @@
 				DC823648E61031D4B370EC20 /* MyPetsPlaceholder.swift in Sources */,
 				B60194578843DB25F5A029B8 /* AdBannerPlaceholder.swift in Sources */,
 				A4BF9C6FC72BB3FEA842FB5A /* Font+Poppins.swift in Sources */,
+				HOMESEC001CCCC1111111111 /* MyPetsHomeSection.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -31,7 +31,7 @@ struct SearchView: View {
 
                             // My Pets section (always visible when not actively searching)
                             if viewModel.searchText.isEmpty {
-                                MyPetsPlaceholder()
+                                MyPetsHomeSection()
                                     .padding(.top, 8)
                             }
                         }
