@@ -4,6 +4,17 @@ struct SettingsView: View {
     @ObservedObject private var appearance = AppearanceSettings.shared
     @ObservedObject private var proSettings = ProSettings.shared
 
+    @State private var versionTapCount = 0
+    @State private var showUnlockToast = false
+
+    private var appVersion: String {
+        Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String ?? "1.0.0"
+    }
+
+    private var buildNumber: String {
+        Bundle.main.infoDictionary?["CFBundleVersion"] as? String ?? "1"
+    }
+
     var body: some View {
         NavigationStack {
             List {
@@ -38,6 +49,7 @@ struct SettingsView: View {
                     Text("Manage your pet profiles for quick access during emergencies.")
                 }
 
+                // MARK: - Appearance
                 Section {
                     ForEach(AppearanceMode.allCases, id: \.self) { mode in
                         Button {
@@ -64,27 +76,114 @@ struct SettingsView: View {
                     Text("Appearance")
                 }
 
-                // MARK: - Debug (only in DEBUG builds)
-                #if DEBUG
-                Section {
-                    Toggle(isOn: $proSettings.debugProEnabled) {
-                        HStack {
-                            Image(systemName: "hammer.fill")
-                                .foregroundStyle(.orange)
-                                .frame(width: 24)
-                            Text("PRO Mode")
-                                .foregroundStyle(.primary)
+                // MARK: - Developer Options (hidden until unlocked)
+                if proSettings.developerOptionsUnlocked {
+                    Section {
+                        if proSettings.canOverridePro {
+                            Toggle(isOn: Binding(
+                                get: { proSettings.debugProEnabled },
+                                set: { proSettings.debugProEnabled = $0 }
+                            )) {
+                                HStack {
+                                    Image(systemName: "crown.fill")
+                                        .foregroundStyle(.yellow)
+                                        .frame(width: 24)
+                                    Text("PRO Mode")
+                                        .foregroundStyle(.primary)
+                                }
+                            }
+                            .tint(Color("AccentColor"))
+                        } else {
+                            HStack {
+                                Image(systemName: "crown.fill")
+                                    .foregroundStyle(.yellow)
+                                    .frame(width: 24)
+                                Text("PRO Mode")
+                                    .foregroundStyle(.primary)
+                                Spacer()
+                                Text("Release Build")
+                                    .font(.caption)
+                                    .foregroundStyle(.secondary)
+                            }
+                        }
+
+                        Button(role: .destructive) {
+                            proSettings.developerOptionsUnlocked = false
+                            versionTapCount = 0
+                        } label: {
+                            HStack {
+                                Image(systemName: "eye.slash.fill")
+                                    .foregroundStyle(.red)
+                                    .frame(width: 24)
+                                Text("Hide Developer Options")
+                                    .foregroundStyle(.red)
+                            }
+                        }
+                    } header: {
+                        Text("Developer Options")
+                    } footer: {
+                        if proSettings.canOverridePro {
+                            Text("Debug build: PRO mode can be toggled for testing.")
+                        } else {
+                            Text("Release build: PRO override not available.")
                         }
                     }
-                    .tint(Color("AccentColor"))
-                } header: {
-                    Text("Debug")
-                } footer: {
-                    Text("Enable PRO features for testing. This section only appears in debug builds.")
                 }
-                #endif
+
+                // MARK: - Version
+                Section {
+                    HStack {
+                        Spacer()
+                        Text("Version \(appVersion) (build \(buildNumber))")
+                            .font(.footnote)
+                            .foregroundStyle(.secondary)
+                            .onTapGesture {
+                                handleVersionTap()
+                            }
+                        Spacer()
+                    }
+                    .listRowBackground(Color.clear)
+                }
             }
             .navigationTitle("Settings")
+            .overlay(alignment: .bottom) {
+                if showUnlockToast {
+                    toastView
+                        .transition(.move(edge: .bottom).combined(with: .opacity))
+                }
+            }
+        }
+    }
+
+    private var toastView: some View {
+        Text("Developer Options Unlocked")
+            .font(.subheadline)
+            .fontWeight(.medium)
+            .foregroundStyle(.white)
+            .padding(.horizontal, 16)
+            .padding(.vertical, 10)
+            .background(Color("AccentColor"))
+            .clipShape(Capsule())
+            .shadow(radius: 4)
+            .padding(.bottom, 20)
+    }
+
+    private func handleVersionTap() {
+        guard !proSettings.developerOptionsUnlocked else { return }
+
+        versionTapCount += 1
+
+        if versionTapCount >= 5 {
+            withAnimation(.spring(response: 0.3)) {
+                proSettings.developerOptionsUnlocked = true
+                showUnlockToast = true
+            }
+
+            DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+                withAnimation {
+                    showUnlockToast = false
+                }
+            }
         }
     }
 
