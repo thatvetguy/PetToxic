@@ -79,33 +79,19 @@ struct SettingsView: View {
                 // MARK: - Developer Options (hidden until unlocked)
                 if proSettings.developerOptionsUnlocked {
                     Section {
-                        if proSettings.canOverridePro {
-                            Toggle(isOn: Binding(
-                                get: { proSettings.debugProEnabled },
-                                set: { proSettings.debugProEnabled = $0 }
-                            )) {
-                                HStack {
-                                    Image(systemName: "crown.fill")
-                                        .foregroundStyle(.yellow)
-                                        .frame(width: 24)
-                                    Text("PRO Mode")
-                                        .foregroundStyle(.primary)
-                                }
-                            }
-                            .tint(Color("AccentColor"))
-                        } else {
+                        Toggle(isOn: Binding(
+                            get: { proSettings.debugProEnabled },
+                            set: { proSettings.debugProEnabled = $0 }
+                        )) {
                             HStack {
                                 Image(systemName: "crown.fill")
                                     .foregroundStyle(.yellow)
                                     .frame(width: 24)
                                 Text("PRO Mode")
                                     .foregroundStyle(.primary)
-                                Spacer()
-                                Text("Release Build")
-                                    .font(.caption)
-                                    .foregroundStyle(.secondary)
                             }
                         }
+                        .tint(Color("AccentColor"))
 
                         Button(role: .destructive) {
                             proSettings.developerOptionsUnlocked = false
@@ -122,11 +108,7 @@ struct SettingsView: View {
                     } header: {
                         Text("Developer Options")
                     } footer: {
-                        if proSettings.canOverridePro {
-                            Text("Debug build: PRO mode can be toggled for testing.")
-                        } else {
-                            Text("Release build: PRO override not available.")
-                        }
+                        Text("Toggle PRO mode for testing.")
                     }
                 }
 

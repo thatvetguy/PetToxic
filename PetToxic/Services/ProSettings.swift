@@ -5,7 +5,7 @@ import SwiftUI
 class ProSettings: ObservableObject {
     static let shared = ProSettings()
 
-    /// Debug override for PRO status (only works in DEBUG builds)
+    /// Debug override for PRO status (accessible via Developer Options)
     @AppStorage("debug_pro_enabled") private var _debugProEnabled: Bool = true
 
     /// Whether developer options have been unlocked via easter egg
@@ -22,21 +22,14 @@ class ProSettings: ObservableObject {
 
     /// Whether the user has PRO access
     var isPro: Bool {
-        #if DEBUG
-        return _debugProEnabled
-        #else
         // TODO: Check actual subscription status via StoreKit
-        return false
-        #endif
+        // For now, use debug override (accessible via Developer Options)
+        return _debugProEnabled
     }
 
-    /// Whether PRO override is available (only in DEBUG builds)
+    /// Whether PRO override is available (enabled when Developer Options are unlocked)
     var canOverridePro: Bool {
-        #if DEBUG
         return true
-        #else
-        return false
-        #endif
     }
 
     private init() {}
