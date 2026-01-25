@@ -17,8 +17,9 @@ struct HistoryListView: View {
                         Section("Recent Searches") {
                             ForEach(viewModel.recentSearches, id: \.self) { search in
                                 Label(search, systemImage: "magnifyingglass")
-                                    .foregroundStyle(.primary)
+                                    .foregroundStyle(.white)
                             }
+                            .listRowBackground(Color.white.opacity(0.08))
                         }
                     }
 
@@ -28,10 +29,12 @@ struct HistoryListView: View {
                                 NavigationLink(value: item) {
                                     historyRow(item)
                                 }
+                                .listRowBackground(Color.white.opacity(0.08))
                             }
                         }
                     }
                 }
+                .scrollContentBackground(.hidden)
                 .toolbar {
                     ToolbarItem(placement: .topBarTrailing) {
                         Button("Clear") {
@@ -46,11 +49,12 @@ struct HistoryListView: View {
     private func historyRow(_ item: ToxicItem) -> some View {
         HStack {
             Image(systemName: item.categories.first?.icon ?? "questionmark.circle")
-                .foregroundStyle(.secondary)
+                .foregroundStyle(.white.opacity(0.6))
                 .frame(width: 24)
 
             Text(item.name)
                 .font(.body)
+                .foregroundColor(.white)
 
             Spacer()
         }

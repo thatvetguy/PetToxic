@@ -3,44 +3,51 @@ import SwiftUI
 struct EmergencyView: View {
     var body: some View {
         NavigationStack {
-            ScrollView {
-                VStack(alignment: .leading, spacing: 24) {
-                    // Header
-                    VStack(alignment: .leading, spacing: 8) {
-                        Text("Contact Poison Control")
-                            .font(.title)
-                            .fontWeight(.bold)
+            ZStack {
+                AppBackground()
 
-                        Text("If your pet has ingested or been exposed to a potentially toxic substance, call immediately.")
-                            .font(.body)
-                            .foregroundStyle(.secondary)
-                    }
+                ScrollView {
+                    VStack(alignment: .leading, spacing: 24) {
+                        // Header
+                        VStack(alignment: .leading, spacing: 8) {
+                            Text("Contact Poison Control")
+                                .font(.title)
+                                .fontWeight(.bold)
+                                .foregroundColor(.white)
 
-                    // Call buttons
-                    VStack(spacing: 16) {
-                        PoisonControlButton(contact: .aspca, style: .large)
-                        PoisonControlButton(contact: .petPoisonHelpline, style: .large)
-                    }
+                            Text("If your pet has ingested or been exposed to a potentially toxic substance, call immediately.")
+                                .font(.body)
+                                .foregroundStyle(.white.opacity(0.7))
+                        }
 
-                    // Fee notice
-                    HStack {
-                        Image(systemName: "info.circle")
-                            .foregroundStyle(.secondary)
-                        Text("Consultation fees may apply for both services.")
-                            .font(.caption)
-                            .foregroundStyle(.secondary)
+                        // Call buttons
+                        VStack(spacing: 16) {
+                            PoisonControlButton(contact: .aspca, style: .large)
+                            PoisonControlButton(contact: .petPoisonHelpline, style: .large)
+                        }
+
+                        // Fee notice
+                        HStack {
+                            Image(systemName: "info.circle")
+                                .foregroundStyle(.white.opacity(0.6))
+                            Text("Consultation fees may apply for both services.")
+                                .font(.caption)
+                                .foregroundStyle(.white.opacity(0.6))
+                        }
+                        .padding()
+                        .frame(maxWidth: .infinity)
+                        .background(Color.white.opacity(0.08))
+                        .clipShape(RoundedRectangle(cornerRadius: 8))
+
+                        // What to have ready
+                        whatToHaveReadySection
                     }
                     .padding()
-                    .frame(maxWidth: .infinity)
-                    .background(Color(.secondarySystemBackground))
-                    .clipShape(RoundedRectangle(cornerRadius: 8))
-
-                    // What to have ready
-                    whatToHaveReadySection
                 }
-                .padding()
             }
             .navigationTitle("Emergency")
+            .toolbarBackground(.hidden, for: .navigationBar)
+            .toolbarColorScheme(.dark, for: .navigationBar)
         }
     }
 
@@ -49,6 +56,7 @@ struct EmergencyView: View {
             Text("What to Have Ready")
                 .font(.title2)
                 .fontWeight(.semibold)
+                .foregroundColor(.white)
 
             VStack(alignment: .leading, spacing: 12) {
                 infoRow(icon: "pawprint", text: "Pet's species, breed, weight, and age")
@@ -57,7 +65,7 @@ struct EmergencyView: View {
                 infoRow(icon: "list.bullet.clipboard", text: "Current symptoms observed")
             }
             .padding()
-            .background(Color(.secondarySystemBackground))
+            .background(Color.white.opacity(0.08))
             .clipShape(RoundedRectangle(cornerRadius: 12))
         }
     }
@@ -70,6 +78,7 @@ struct EmergencyView: View {
 
             Text(text)
                 .font(.body)
+                .foregroundColor(.white)
         }
     }
 }

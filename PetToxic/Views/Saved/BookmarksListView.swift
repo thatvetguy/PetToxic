@@ -17,11 +17,13 @@ struct BookmarksListView: View {
                         NavigationLink(value: item) {
                             bookmarkRow(item)
                         }
+                        .listRowBackground(Color.white.opacity(0.08))
                     }
                     .onDelete { indexSet in
                         viewModel.removeBookmarks(at: indexSet)
                     }
                 }
+                .scrollContentBackground(.hidden)
             }
         }
     }
@@ -29,15 +31,16 @@ struct BookmarksListView: View {
     private func bookmarkRow(_ item: ToxicItem) -> some View {
         HStack {
             Image(systemName: item.categories.first?.icon ?? "questionmark.circle")
-                .foregroundStyle(.secondary)
+                .foregroundStyle(.white.opacity(0.6))
                 .frame(width: 24)
 
             VStack(alignment: .leading, spacing: 4) {
                 Text(item.name)
                     .font(.headline)
+                    .foregroundColor(.white)
                 Text(item.categories.map(\.displayName).joined(separator: ", "))
                     .font(.caption)
-                    .foregroundStyle(.secondary)
+                    .foregroundStyle(.white.opacity(0.6))
             }
 
             Spacer()
