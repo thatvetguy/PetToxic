@@ -1,8 +1,9 @@
 import SwiftUI
 
 struct MyPetsPlaceholder: View {
-    // TODO: Replace with actual paid user check
-    let isPaidUser: Bool = false
+    @ObservedObject private var proSettings = ProSettings.shared
+
+    private var isPaidUser: Bool { proSettings.isPro }
 
     var body: some View {
         VStack(spacing: 12) {

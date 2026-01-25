@@ -49,6 +49,7 @@
 		ED2E813E2F25FEB2008594E1 /* Pet.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED2E813A2F25FEB2008594E1 /* Pet.swift */; };
 		ED2E813F2F25FEB2008594E1 /* PetSex.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED2E813B2F25FEB2008594E1 /* PetSex.swift */; };
 		ED2E81412F25FEC5008594E1 /* PetStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED2E81402F25FEC5008594E1 /* PetStore.swift */; };
+		ED2E81472F25FF00008594E1 /* ProSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED2E81482F25FF00008594E1 /* ProSettings.swift */; };
 		ED2E81442F25FEEC008594E1 /* PetFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED2E81422F25FEEC008594E1 /* PetFormView.swift */; };
 		ED2E81452F25FEEC008594E1 /* PetListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED2E81432F25FEEC008594E1 /* PetListView.swift */; };
 		EF977BE44A1CA4C9CE80A128 /* SavedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5C6C094D6B35157F81D7872 /* SavedView.swift */; };
@@ -123,6 +124,7 @@
 		ED2E813B2F25FEB2008594E1 /* PetSex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetSex.swift; sourceTree = "<group>"; };
 		ED2E813C2F25FEB2008594E1 /* PetSpecies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetSpecies.swift; sourceTree = "<group>"; };
 		ED2E81402F25FEC5008594E1 /* PetStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetStore.swift; sourceTree = "<group>"; };
+		ED2E81482F25FF00008594E1 /* ProSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProSettings.swift; sourceTree = "<group>"; };
 		ED2E81422F25FEEC008594E1 /* PetFormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetFormView.swift; sourceTree = "<group>"; };
 		ED2E81432F25FEEC008594E1 /* PetListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetListView.swift; sourceTree = "<group>"; };
 		EDE88C278EF8FA0A290DE262 /* PetToxicTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetToxicTests.swift; sourceTree = "<group>"; };
@@ -316,10 +318,11 @@
 		DC0E80D79B23D7496641FC90 /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				ED2E81402F25FEC5008594E1 /* PetStore.swift */,
 				D4E5F6789012345678901234 /* AppearanceSettings.swift */,
 				237521FB4875580645396715 /* BookmarkService.swift */,
 				4A373A23CBFA6D1C7461960B /* DatabaseService.swift */,
+				ED2E81402F25FEC5008594E1 /* PetStore.swift */,
+				ED2E81482F25FF00008594E1 /* ProSettings.swift */,
 				754F9D537CBB611A07FF9E8E /* SearchService.swift */,
 			);
 			path = Services;
@@ -489,6 +492,7 @@
 				8DD5DCCAA60B3B1A47FA0426 /* SearchViewModel.swift in Sources */,
 				BEEF53A1E3402DA7D0C365E5 /* SeverityBadge.swift in Sources */,
 				ED2E81412F25FEC5008594E1 /* PetStore.swift in Sources */,
+				ED2E81472F25FF00008594E1 /* ProSettings.swift in Sources */,
 				C36B4977AA78A0B98A512B6A /* SeveritySection.swift in Sources */,
 				0ED8DF5F0BC3B56D614CF741 /* SpeciesFilterView.swift in Sources */,
 				F1372C807BFFDC33BCD4A18F /* SpeciesRisk.swift in Sources */,

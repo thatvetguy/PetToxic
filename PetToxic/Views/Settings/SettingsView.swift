@@ -2,11 +2,12 @@ import SwiftUI
 
 struct SettingsView: View {
     @ObservedObject private var appearance = AppearanceSettings.shared
+    @ObservedObject private var proSettings = ProSettings.shared
 
     var body: some View {
         NavigationStack {
             List {
-                // MARK: - My Pets (Test Section - Remove in Phase 4)
+                // MARK: - My Pets
                 Section {
                     NavigationLink {
                         PetListView()
@@ -18,16 +19,19 @@ struct SettingsView: View {
                             Text("My Pets")
                                 .foregroundStyle(.primary)
                             Spacer()
-                            Text("PRO")
-                                .font(.caption2)
-                                .fontWeight(.bold)
-                                .foregroundColor(.white)
-                                .padding(.horizontal, 8)
-                                .padding(.vertical, 4)
-                                .background(Color("AccentColor").opacity(0.8))
-                                .clipShape(Capsule())
+                            if !proSettings.isPro {
+                                Text("PRO")
+                                    .font(.caption2)
+                                    .fontWeight(.bold)
+                                    .foregroundColor(.white)
+                                    .padding(.horizontal, 8)
+                                    .padding(.vertical, 4)
+                                    .background(Color("AccentColor").opacity(0.8))
+                                    .clipShape(Capsule())
+                            }
                         }
                     }
+                    .disabled(!proSettings.isPro)
                 } header: {
                     Text("My Pets")
                 } footer: {
@@ -59,6 +63,26 @@ struct SettingsView: View {
                 } header: {
                     Text("Appearance")
                 }
+
+                // MARK: - Debug (only in DEBUG builds)
+                #if DEBUG
+                Section {
+                    Toggle(isOn: $proSettings.debugProEnabled) {
+                        HStack {
+                            Image(systemName: "hammer.fill")
+                                .foregroundStyle(.orange)
+                                .frame(width: 24)
+                            Text("PRO Mode")
+                                .foregroundStyle(.primary)
+                        }
+                    }
+                    .tint(Color("AccentColor"))
+                } header: {
+                    Text("Debug")
+                } footer: {
+                    Text("Enable PRO features for testing. This section only appears in debug builds.")
+                }
+                #endif
             }
             .navigationTitle("Settings")
         }
