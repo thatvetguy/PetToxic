@@ -99,32 +99,35 @@ struct SearchView: View {
                     }
                     .padding(.horizontal)
 
-                    VStack(spacing: 0) {
-                        ForEach(viewModel.recentSearches, id: \.self) { search in
-                            Button {
-                                viewModel.searchText = search
-                            } label: {
-                                HStack {
-                                    Image(systemName: "clock")
-                                        .foregroundColor(.white.opacity(0.5))
-                                    Text(search)
-                                        .foregroundColor(.white)
-                                    Spacer()
-                                    Image(systemName: "chevron.right")
-                                        .font(.caption)
-                                        .foregroundColor(.white.opacity(0.3))
+                    ScrollView {
+                        VStack(spacing: 0) {
+                            ForEach(viewModel.recentSearches.prefix(15), id: \.self) { search in
+                                Button {
+                                    viewModel.searchText = search
+                                } label: {
+                                    HStack {
+                                        Image(systemName: "clock")
+                                            .foregroundColor(.white.opacity(0.5))
+                                        Text(search)
+                                            .foregroundColor(.white)
+                                        Spacer()
+                                        Image(systemName: "chevron.right")
+                                            .font(.caption)
+                                            .foregroundColor(.white.opacity(0.3))
+                                    }
+                                    .padding(.horizontal)
+                                    .padding(.vertical, 12)
                                 }
-                                .padding(.horizontal)
-                                .padding(.vertical, 12)
-                            }
 
-                            if search != viewModel.recentSearches.last {
-                                Divider()
-                                    .background(Color.white.opacity(0.1))
-                                    .padding(.leading, 44)
+                                if search != viewModel.recentSearches.prefix(15).last {
+                                    Divider()
+                                        .background(Color.white.opacity(0.1))
+                                        .padding(.leading, 44)
+                                }
                             }
                         }
                     }
+                    .frame(maxHeight: 200)
                     .background(Color.white.opacity(0.08))
                     .clipShape(RoundedRectangle(cornerRadius: 12))
                     .padding(.horizontal)
