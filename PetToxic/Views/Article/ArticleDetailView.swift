@@ -92,33 +92,18 @@ struct ArticleDetailView: View {
 
     private var headerSection: some View {
         VStack(alignment: .leading, spacing: 12) {
-            // Category icon or image
+            // Thumbnail image (includes entry name and severity color)
             if let imageAsset = item.imageAsset {
                 Image(imageAsset)
                     .resizable()
                     .aspectRatio(contentMode: .fit)
-                    .frame(maxHeight: 200)
                     .frame(maxWidth: .infinity)
-                    .clipShape(RoundedRectangle(cornerRadius: 12))
             } else {
                 Image(systemName: item.categories.first?.icon ?? "questionmark.circle")
                     .font(.system(size: 60))
                     .foregroundStyle(Color("AccentColor"))
                     .frame(maxWidth: .infinity)
                     .padding(.vertical)
-            }
-
-            // Title and severity
-            HStack {
-                Text(item.name)
-                    .font(.largeTitle)
-                    .fontWeight(.bold)
-
-                Spacer()
-
-                if let maxSeverity = item.speciesRisks.map(\.severity).max(by: { severityOrder($0) < severityOrder($1) }) {
-                    SeverityBadge(severity: maxSeverity, size: .large)
-                }
             }
 
             // Categories
