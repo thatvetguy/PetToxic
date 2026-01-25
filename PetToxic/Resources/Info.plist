@@ -35,5 +35,9 @@
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>
 	</array>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>Pet Toxic needs access to your photos to set a profile picture for your pet.</string>
+	<key>NSCameraUsageDescription</key>
+	<string>Pet Toxic needs camera access to take a profile picture for your pet.</string>
 </dict>
 </plist>

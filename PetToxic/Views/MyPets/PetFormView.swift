@@ -1,6 +1,7 @@
 import SwiftUI
 import SwiftData
 import UIKit
+import AVFoundation
 
 struct PetFormView: View {
     @Environment(\.modelContext) private var modelContext
@@ -26,6 +27,10 @@ struct PetFormView: View {
     @State private var breedSuggestions: [String] = []
     @State private var showBreedSuggestions: Bool = false
 
+    // Photo
+    @State private var showPhotoPicker = false
+    @State private var currentPhoto: UIImage?
+
     enum WeightUnit: String, CaseIterable {
         case lbs, kg
     }
@@ -42,6 +47,41 @@ struct PetFormView: View {
 
     var body: some View {
         Form {
+            // MARK: - Photo Section
+            Section {
+                HStack {
+                    Spacer()
+
+                    Button {
+                        showPhotoPicker = true
+                    } label: {
+                        VStack(spacing: 8) {
+                            if let photo = currentPhoto {
+                                Image(uiImage: photo)
+                                    .resizable()
+                                    .scaledToFill()
+                                    .frame(width: 120, height: 120)
+                                    .clipShape(Circle())
+                                    .overlay(
+                                        Circle()
+                                            .stroke(Color.accentColor, lineWidth: 3)
+                                    )
+                            } else {
+                                PetAvatarView(photoFilename: pet.photoFilename, size: 120)
+                            }
+
+                            Text(currentPhoto != nil || pet.photoFilename != nil ? "Change Photo" : "Add Photo")
+                                .font(.caption)
+                                .foregroundColor(.accentColor)
+                        }
+                    }
+                    .buttonStyle(.plain)
+
+                    Spacer()
+                }
+                .listRowBackground(Color.clear)
+            }
+
             // MARK: - Basic Information
             Section("Basic Information") {
                 TextField("Name *", text: $pet.name)
@@ -278,11 +318,24 @@ struct PetFormView: View {
         .onAppear {
             setupInitialValues()
         }
+        .sheet(isPresented: $showPhotoPicker) {
+            PetPhotoPickerView(
+                selectedImage: $currentPhoto,
+                onImageSelected: { image in
+                    handlePhotoSelection(image)
+                }
+            )
+        }
     }
 
     // MARK: - Helper Methods
 
     private func setupInitialValues() {
+        // Load existing photo
+        if let filename = pet.photoFilename {
+            currentPhoto = PetPhotoService.shared.loadPhoto(filename: filename)
+        }
+
         // Set up weight input
         if let lbs = pet.weightLbs {
             weightInput = String(format: "%.1f", lbs)
@@ -370,9 +423,40 @@ struct PetFormView: View {
     }
 
     private func deletePet() {
+        // Delete photo file
+        if let filename = pet.photoFilename {
+            PetPhotoService.shared.deletePhoto(filename: filename)
+        }
+
         modelContext.delete(pet)
         try? modelContext.save()
         dismiss()
+    }
+
+    private func handlePhotoSelection(_ image: UIImage) {
+        // Check if this is a "remove" action (empty image)
+        if image.size == .zero {
+            // Delete existing photo
+            if let filename = pet.photoFilename {
+                PetPhotoService.shared.deletePhoto(filename: filename)
+            }
+            pet.photoFilename = nil
+            currentPhoto = nil
+            triggerAutoSave()
+            return
+        }
+
+        // Save new photo
+        currentPhoto = image
+
+        if let filename = PetPhotoService.shared.savePhoto(image, for: pet.id) {
+            // Delete old photo if exists
+            if let oldFilename = pet.photoFilename, oldFilename != filename {
+                PetPhotoService.shared.deletePhoto(filename: oldFilename)
+            }
+            pet.photoFilename = filename
+            triggerAutoSave()
+        }
     }
 
     private func callVet() {

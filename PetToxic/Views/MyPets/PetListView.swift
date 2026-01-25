@@ -75,14 +75,8 @@ struct PetRowView: View {
 
     var body: some View {
         HStack(spacing: 12) {
-            // Placeholder avatar (photo support in Phase 3)
-            Circle()
-                .fill(Color.gray.opacity(0.3))
-                .frame(width: 50, height: 50)
-                .overlay {
-                    Image(systemName: "pawprint.fill")
-                        .foregroundColor(.gray)
-                }
+            // Pet avatar
+            PetAvatarView(photoFilename: pet.photoFilename, size: 50)
 
             VStack(alignment: .leading, spacing: 4) {
                 Text(pet.name)
