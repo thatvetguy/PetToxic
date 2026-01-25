@@ -4,80 +4,137 @@ struct MainTabView: View {
     @State private var selectedTab = 0
     @State private var dragOffset: CGFloat = 0
     @State private var isDragging = false
+    @State private var isInQuickEmergency = false
 
     private let tabCount = 5
 
     var body: some View {
         GeometryReader { geometry in
             ZStack {
-                // Tab content with offset animation
-                tabContent(for: selectedTab)
-                    .offset(x: dragOffset)
+                // Current visible content
+                if isInQuickEmergency {
+                    // Show Emergency content when in quick-access mode
+                    EmergencyView()
+                        .offset(x: dragOffset)
+                } else {
+                    // Normal tab content
+                    tabContent(for: selectedTab)
+                        .offset(x: dragOffset)
+                }
 
                 // Preview of adjacent tab during drag
                 if isDragging {
-                    if dragOffset > 0 {
-                        // Dragging right - show previous tab (or Emergency from Home)
-                        let prevTab = selectedTab == 0 ? 3 : selectedTab - 1
-                        tabContent(for: prevTab)
-                            .offset(x: dragOffset - geometry.size.width)
-                    } else if dragOffset < 0 && selectedTab < tabCount - 1 {
-                        // Dragging left - show next tab
-                        tabContent(for: selectedTab + 1)
-                            .offset(x: dragOffset + geometry.size.width)
-                    }
+                    adjacentTabPreview(geometry: geometry)
                 }
             }
-            .gesture(
-                DragGesture()
-                    .onChanged { value in
-                        isDragging = true
-                        let translation = value.translation.width
-
-                        // Dragging right (to go left/previous)
-                        if translation > 0 {
-                            // Home can go to Emergency, others go to previous
-                            dragOffset = translation
-                        }
-                        // Dragging left (to go right/next)
-                        else if translation < 0 {
-                            if selectedTab < tabCount - 1 {
-                                dragOffset = translation
-                            } else {
-                                // Settings - add resistance
-                                dragOffset = translation * 0.3
-                            }
-                        }
-                    }
-                    .onEnded { value in
-                        let threshold = geometry.size.width * 0.25
-                        let translation = value.translation.width
-
-                        withAnimation(.easeOut(duration: 0.25)) {
-                            // Swipe right - go to previous (or Emergency from Home)
-                            if translation > threshold {
-                                if selectedTab == 0 {
-                                    selectedTab = 3 // Home → Emergency
-                                } else {
-                                    selectedTab -= 1
-                                }
-                            }
-                            // Swipe left - go to next
-                            else if translation < -threshold && selectedTab < tabCount - 1 {
-                                selectedTab += 1
-                            }
-
-                            // Reset offset
-                            dragOffset = 0
-                            isDragging = false
-                        }
-                    }
-            )
+            .gesture(dragGesture(geometry: geometry))
         }
-        // Tab bar at bottom
         .safeAreaInset(edge: .bottom) {
             customTabBar
         }
+    }
+
+    @ViewBuilder
+    private func adjacentTabPreview(geometry: GeometryProxy) -> some View {
+        if isInQuickEmergency {
+            // In quick emergency: only Home is to the right (swipe left to return)
+            if dragOffset < 0 {
+                tabContent(for: 0) // Home
+                    .offset(x: dragOffset + geometry.size.width)
+            }
+            // Nothing to the left (dragOffset > 0 shows nothing)
+        } else if selectedTab == 0 {
+            // On Home: Emergency quick-access to the left (swipe right reveals it)
+            if dragOffset > 0 {
+                EmergencyView()
+                    .offset(x: dragOffset - geometry.size.width)
+            }
+            // Browse to the right (swipe left)
+            if dragOffset < 0 {
+                tabContent(for: 1)
+                    .offset(x: dragOffset + geometry.size.width)
+            }
+        } else {
+            // Normal tab behavior
+            if dragOffset > 0 && selectedTab > 0 {
+                tabContent(for: selectedTab - 1)
+                    .offset(x: dragOffset - geometry.size.width)
+            }
+            if dragOffset < 0 && selectedTab < tabCount - 1 {
+                tabContent(for: selectedTab + 1)
+                    .offset(x: dragOffset + geometry.size.width)
+            }
+        }
+    }
+
+    private func dragGesture(geometry: GeometryProxy) -> some Gesture {
+        DragGesture()
+            .onChanged { value in
+                isDragging = true
+                let translation = value.translation.width
+
+                if isInQuickEmergency {
+                    // In quick emergency mode
+                    if translation < 0 {
+                        // Swiping left - can go back to Home
+                        dragOffset = translation
+                    } else {
+                        // Swiping right - nothing there, add resistance
+                        dragOffset = translation * 0.3
+                    }
+                } else if selectedTab == 0 {
+                    // On Home - can go either direction
+                    dragOffset = translation
+                } else if selectedTab == tabCount - 1 {
+                    // On Settings (last tab)
+                    if translation > 0 {
+                        // Swiping right - go to Emergency
+                        dragOffset = translation
+                    } else {
+                        // Swiping left - nothing there, add resistance
+                        dragOffset = translation * 0.3
+                    }
+                } else {
+                    // Normal middle tabs
+                    dragOffset = translation
+                }
+            }
+            .onEnded { value in
+                isDragging = false
+                let threshold = geometry.size.width * 0.25
+                let translation = value.translation.width
+
+                withAnimation(.easeOut(duration: 0.25)) {
+                    if isInQuickEmergency {
+                        // In quick emergency mode
+                        if translation < -threshold {
+                            // Swipe left - return to Home
+                            isInQuickEmergency = false
+                            selectedTab = 0
+                        }
+                        // Swipe right does nothing (already at edge)
+                    } else if selectedTab == 0 {
+                        // On Home
+                        if translation > threshold {
+                            // Swipe right - enter quick Emergency
+                            isInQuickEmergency = true
+                        } else if translation < -threshold {
+                            // Swipe left - go to Browse
+                            selectedTab = 1
+                        }
+                    } else {
+                        // Normal tab navigation
+                        if translation > threshold && selectedTab > 0 {
+                            selectedTab -= 1
+                        } else if translation < -threshold && selectedTab < tabCount - 1 {
+                            selectedTab += 1
+                        }
+                    }
+
+                    // Reset offset
+                    dragOffset = 0
+                }
+            }
     }
 
     @ViewBuilder
@@ -118,6 +175,8 @@ struct MainTabView: View {
     private func tabBarButton(icon: String, title: String, index: Int) -> some View {
         Button(action: {
             withAnimation(.easeOut(duration: 0.25)) {
+                // Tapping any tab exits quick emergency mode
+                isInQuickEmergency = false
                 selectedTab = index
             }
         }) {
@@ -127,9 +186,18 @@ struct MainTabView: View {
                 Text(title)
                     .font(.caption2)
             }
-            .foregroundColor(selectedTab == index ? Color("AccentColor") : .gray)
+            // Highlight: Home stays selected when in quick emergency
+            .foregroundColor(tabIsSelected(index) ? Color("AccentColor") : .gray)
             .frame(maxWidth: .infinity)
         }
+    }
+
+    private func tabIsSelected(_ index: Int) -> Bool {
+        if isInQuickEmergency {
+            // In quick emergency, keep Home highlighted (user's "anchor" point)
+            return index == 0
+        }
+        return selectedTab == index
     }
 }
 
