@@ -253,6 +253,15 @@
 			path = Settings;
 			sourceTree = "<group>";
 		};
+		ED2E81462F25FEEC008594E1 /* MyPets */ = {
+			isa = PBXGroup;
+			children = (
+				ED2E81422F25FEEC008594E1 /* PetFormView.swift */,
+				ED2E81432F25FEEC008594E1 /* PetListView.swift */,
+			);
+			path = MyPets;
+			sourceTree = "<group>";
+		};
 		B839DF5B43840F6B6DE7DAC9 /* PetToxicUITests */ = {
 			isa = PBXGroup;
 			children = (
@@ -292,12 +301,11 @@
 		DBA2C9489FCBF717DF3F4F30 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				ED2E81422F25FEEC008594E1 /* PetFormView.swift */,
-				ED2E81432F25FEEC008594E1 /* PetListView.swift */,
 				D6CE357649A1298A4A9761B2 /* MainTabView.swift */,
 				19B1243262C65E98537E7913 /* Article */,
 				5391024E9B0E8F0AB0B8B7F9 /* Browse */,
 				13D3A560E1B2E0E19F2EFA43 /* Emergency */,
+				ED2E81462F25FEEC008594E1 /* MyPets */,
 				5FE2C516FEEFABE91F5E3445 /* Saved */,
 				89DF736139B2CB886DC317BF /* Search */,
 				ABCD1234567890ABCDEF1234 /* Settings */,

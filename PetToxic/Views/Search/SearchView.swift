@@ -175,7 +175,7 @@ struct SearchView: View {
         .background(Color.white.opacity(0.08))
         .clipShape(RoundedRectangle(cornerRadius: 12))
         .padding(.horizontal)
-        .onChange(of: viewModel.searchText) { newValue in
+        .onChange(of: viewModel.searchText) { _, newValue in
             SearchContext.shared.pendingSearchTerm = newValue
         }
         .onAppear {
