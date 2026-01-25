@@ -1,4 +1,5 @@
 import SwiftUI
+import SwiftData
 
 @main
 struct PetToxicApp: App {
@@ -9,5 +10,6 @@ struct PetToxicApp: App {
             MainTabView()
                 .preferredColorScheme(appearance.colorScheme)
         }
+        .modelContainer(for: Pet.self)
     }
 }
