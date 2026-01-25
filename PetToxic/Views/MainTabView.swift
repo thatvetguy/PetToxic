@@ -48,15 +48,18 @@ struct MainTabView: View {
     private var swipeGesture: some Gesture {
         DragGesture(minimumDistance: 50, coordinateSpace: .local)
             .onEnded { value in
-                // Swipe right (positive x) = go to previous tab
-                if value.translation.width > 50 && selectedTab > 0 {
-                    withAnimation(.easeInOut(duration: 0.25)) {
-                        selectedTab -= 1
+                withAnimation(.easeInOut(duration: 0.25)) {
+                    // Swipe RIGHT (finger L→R, positive translation) = go to previous tab
+                    if value.translation.width > 50 {
+                        if selectedTab == 0 {
+                            // Special: Home swipe right → Emergency (quick access)
+                            selectedTab = 3
+                        } else {
+                            selectedTab -= 1
+                        }
                     }
-                }
-                // Swipe left (negative x) = go to next tab
-                if value.translation.width < -50 && selectedTab < tabCount - 1 {
-                    withAnimation(.easeInOut(duration: 0.25)) {
+                    // Swipe LEFT (finger R→L, negative translation) = go to next tab
+                    if value.translation.width < -50 && selectedTab < tabCount - 1 {
                         selectedTab += 1
                     }
                 }
