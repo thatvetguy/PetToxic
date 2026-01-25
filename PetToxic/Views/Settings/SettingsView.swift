@@ -1,7 +1,6 @@
 import SwiftUI
 
 struct SettingsView: View {
-    @ObservedObject private var appearance = AppearanceSettings.shared
     @ObservedObject private var proSettings = ProSettings.shared
 
     @State private var versionTapCount = 0
@@ -17,117 +16,104 @@ struct SettingsView: View {
 
     var body: some View {
         NavigationStack {
-            List {
-                // MARK: - My Pets
-                Section {
-                    NavigationLink {
-                        PetListView()
-                    } label: {
-                        HStack {
-                            Image(systemName: "pawprint.fill")
-                                .foregroundStyle(Color("AccentColor"))
-                                .frame(width: 24)
-                            Text("My Pets")
-                                .foregroundStyle(.primary)
-                            Spacer()
-                            if !proSettings.isPro {
-                                Text("PRO")
-                                    .font(.caption2)
-                                    .fontWeight(.bold)
-                                    .foregroundColor(.white)
-                                    .padding(.horizontal, 8)
-                                    .padding(.vertical, 4)
-                                    .background(Color("AccentColor").opacity(0.8))
-                                    .clipShape(Capsule())
-                            }
-                        }
-                    }
-                    .disabled(!proSettings.isPro)
-                } header: {
-                    Text("My Pets")
-                } footer: {
-                    Text("Manage your pet profiles for quick access during emergencies.")
-                }
+            ZStack {
+                AppBackground()
 
-                // MARK: - Appearance
-                Section {
-                    ForEach(AppearanceMode.allCases, id: \.self) { mode in
-                        Button {
-                            appearance.mode = mode
+                List {
+                    // MARK: - My Pets
+                    Section {
+                        NavigationLink {
+                            PetListView()
                         } label: {
                             HStack {
-                                Image(systemName: mode.icon)
-                                    .foregroundStyle(iconColor(for: mode))
+                                Image(systemName: "pawprint.fill")
+                                    .foregroundStyle(Color("AccentColor"))
                                     .frame(width: 24)
-
-                                Text(mode.rawValue)
-                                    .foregroundStyle(.primary)
-
+                                Text("My Pets")
+                                    .foregroundStyle(.white)
                                 Spacer()
-
-                                if appearance.mode == mode {
-                                    Image(systemName: "checkmark")
-                                        .foregroundStyle(Color("AccentColor"))
+                                if !proSettings.isPro {
+                                    Text("PRO")
+                                        .font(.caption2)
+                                        .fontWeight(.bold)
+                                        .foregroundColor(.white)
+                                        .padding(.horizontal, 8)
+                                        .padding(.vertical, 4)
+                                        .background(Color("AccentColor").opacity(0.8))
+                                        .clipShape(Capsule())
                                 }
                             }
                         }
-                    }
-                } header: {
-                    Text("Appearance")
-                }
-
-                // MARK: - Developer Options (hidden until unlocked)
-                if proSettings.developerOptionsUnlocked {
-                    Section {
-                        Toggle(isOn: Binding(
-                            get: { proSettings.debugProEnabled },
-                            set: { proSettings.debugProEnabled = $0 }
-                        )) {
-                            HStack {
-                                Image(systemName: "crown.fill")
-                                    .foregroundStyle(.yellow)
-                                    .frame(width: 24)
-                                Text("PRO Mode")
-                                    .foregroundStyle(.primary)
-                            }
-                        }
-                        .tint(Color("AccentColor"))
-
-                        Button(role: .destructive) {
-                            proSettings.developerOptionsUnlocked = false
-                            versionTapCount = 0
-                        } label: {
-                            HStack {
-                                Image(systemName: "eye.slash.fill")
-                                    .foregroundStyle(.red)
-                                    .frame(width: 24)
-                                Text("Hide Developer Options")
-                                    .foregroundStyle(.red)
-                            }
-                        }
+                        .disabled(!proSettings.isPro)
+                        .listRowBackground(Color.white.opacity(0.08))
                     } header: {
-                        Text("Developer Options")
+                        Text("My Pets")
+                            .foregroundStyle(.white.opacity(0.7))
                     } footer: {
-                        Text("Toggle PRO mode for testing.")
+                        Text("Manage your pet profiles for quick access during emergencies.")
+                            .foregroundStyle(.white.opacity(0.5))
                     }
-                }
 
-                // MARK: - Version
-                Section {
-                    HStack {
-                        Spacer()
-                        Text("Version \(appVersion) (build \(buildNumber))")
-                            .font(.footnote)
-                            .foregroundStyle(.secondary)
-                            .onTapGesture {
-                                handleVersionTap()
+                    // MARK: - Developer Options (hidden until unlocked)
+                    if proSettings.developerOptionsUnlocked {
+                        Section {
+                            Toggle(isOn: Binding(
+                                get: { proSettings.debugProEnabled },
+                                set: { proSettings.debugProEnabled = $0 }
+                            )) {
+                                HStack {
+                                    Image(systemName: "crown.fill")
+                                        .foregroundStyle(.yellow)
+                                        .frame(width: 24)
+                                    Text("PRO Mode")
+                                        .foregroundStyle(.white)
+                                }
                             }
-                        Spacer()
+                            .tint(Color("AccentColor"))
+                            .listRowBackground(Color.white.opacity(0.08))
+
+                            Button(role: .destructive) {
+                                proSettings.developerOptionsUnlocked = false
+                                versionTapCount = 0
+                            } label: {
+                                HStack {
+                                    Image(systemName: "eye.slash.fill")
+                                        .foregroundStyle(.red)
+                                        .frame(width: 24)
+                                    Text("Hide Developer Options")
+                                        .foregroundStyle(.red)
+                                }
+                            }
+                            .listRowBackground(Color.white.opacity(0.08))
+                        } header: {
+                            Text("Developer Options")
+                                .foregroundStyle(.white.opacity(0.7))
+                        } footer: {
+                            Text("Toggle PRO mode for testing.")
+                                .foregroundStyle(.white.opacity(0.5))
+                        }
                     }
-                    .listRowBackground(Color.clear)
+
+                    // MARK: - Version
+                    Section {
+                        HStack {
+                            Spacer()
+                            Text("Version \(appVersion) (build \(buildNumber))")
+                                .font(.footnote)
+                                .foregroundStyle(.white.opacity(0.5))
+                                .onTapGesture {
+                                    handleVersionTap()
+                                }
+                            Spacer()
+                        }
+                        .listRowBackground(Color.clear)
+                    }
                 }
+                .scrollContentBackground(.hidden)
             }
             .navigationTitle("Settings")
+            .toolbarBackground(.hidden, for: .navigationBar)
+            .toolbarColorScheme(.dark, for: .navigationBar)
             .overlay(alignment: .bottom) {
                 if showUnlockToast {
                     toastView
@@ -166,14 +152,6 @@ struct SettingsView: View {
                     showUnlockToast = false
                 }
             }
-        }
-    }
-
-    private func iconColor(for mode: AppearanceMode) -> Color {
-        switch mode {
-        case .system: return .secondary
-        case .light: return .orange
-        case .dark: return .indigo
         }
     }
 }

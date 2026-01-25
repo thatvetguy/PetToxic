@@ -8,6 +8,9 @@ struct EmergencyView: View {
 
                 ScrollView {
                     VStack(alignment: .leading, spacing: 24) {
+                        // Pet info card (PRO feature)
+                        EmergencyPetInfoCard()
+
                         // Header
                         VStack(alignment: .leading, spacing: 8) {
                             Text("Contact Poison Control")
