@@ -7,7 +7,7 @@ struct MainTabView: View {
         TabView(selection: $selectedTab) {
             SearchView()
                 .tabItem {
-                    Label("Search", systemImage: "magnifyingglass")
+                    Label("Home", systemImage: "house.fill")
                 }
                 .tag(0)
 

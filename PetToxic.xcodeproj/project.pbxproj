@@ -29,6 +29,7 @@
 		9CCFBBE79A93F89E39AC3DFE /* PetToxicUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CC831E76E0F0F17894ADA65 /* PetToxicUITests.swift */; };
 		A1B2C3D4E5F6789012345678 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B2C3D4E5F67890123456789A /* LaunchScreen.storyboard */; };
 		AAEF5C9F73EAA218C18A2A85 /* Color+Hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = C55E1542D6E35B1F63CDED27 /* Color+Hex.swift */; };
+		ADBAB1D16F4857D0AF2E2664 /* AppBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = F95CC1681EAFCAC224A491ED /* AppBackground.swift */; };
 		B4943E52DD3BFB9C5C556F3E /* CategoryGridItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2A1F327069C6F80D711B112 /* CategoryGridItem.swift */; };
 		BD101F4DBB5A92DCFD01C09D /* ToxicItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA6BC59CB914FF0A323C3DCC /* ToxicItem.swift */; };
 		BD7DB52CAC570F013059A80F /* SearchResultRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD01A1755E279E4482FD79C5 /* SearchResultRow.swift */; };
@@ -109,6 +110,7 @@
 		F04351C3DD8FA41399338545 /* BrowseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrowseViewModel.swift; sourceTree = "<group>"; };
 		F4AF21A98F3346F34930A106 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		F6789012345678901234ABCD /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		F95CC1681EAFCAC224A491ED /* AppBackground.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AppBackground.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXGroup section */
@@ -166,6 +168,7 @@
 				207482A283C5391FDFEFAFC1 /* PoisonControlButton.swift */,
 				9D0A536DAB60D4A56FC6C6B9 /* SeverityBadge.swift */,
 				B53D68258BA348FBDC14FFB4 /* RelatedEntryButton.swift */,
+				F95CC1681EAFCAC224A491ED /* AppBackground.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -455,6 +458,7 @@
 				1FF8DFAEF0DB676643C8C3B3 /* RelatedEntryButton.swift in Sources */,
 				C3D4E5F67890123456789ABC /* AppearanceSettings.swift in Sources */,
 				E5F67890123456789ABCDEF0 /* SettingsView.swift in Sources */,
+				ADBAB1D16F4857D0AF2E2664 /* AppBackground.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -6,25 +6,29 @@ struct SearchView: View {
 
     var body: some View {
         NavigationStack(path: $navigationPath) {
-            VStack(spacing: 0) {
-                // Species filter
-                SpeciesFilterView(selectedSpecies: $viewModel.selectedSpecies)
-                    .padding(.horizontal)
-                    .padding(.vertical, 8)
+            ZStack {
+                AppBackground()
 
-                // Content
-                if viewModel.searchText.isEmpty {
-                    recentSearchesView
-                } else if viewModel.isSearching {
-                    ProgressView("Searching...")
-                        .frame(maxWidth: .infinity, maxHeight: .infinity)
-                } else if viewModel.searchResults.isEmpty {
-                    emptyResultsView
-                } else {
-                    searchResultsList
+                VStack(spacing: 0) {
+                    // Species filter
+                    SpeciesFilterView(selectedSpecies: $viewModel.selectedSpecies)
+                        .padding(.horizontal)
+                        .padding(.vertical, 8)
+
+                    // Content
+                    if viewModel.searchText.isEmpty {
+                        recentSearchesView
+                    } else if viewModel.isSearching {
+                        ProgressView("Searching...")
+                            .frame(maxWidth: .infinity, maxHeight: .infinity)
+                    } else if viewModel.searchResults.isEmpty {
+                        emptyResultsView
+                    } else {
+                        searchResultsList
+                    }
                 }
             }
-            .navigationTitle("Search")
+            .navigationTitle("Home")
             .searchable(
                 text: $viewModel.searchText,
                 prompt: "Search foods, plants, medications..."
