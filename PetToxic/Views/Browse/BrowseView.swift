@@ -10,21 +10,27 @@ struct BrowseView: View {
 
     var body: some View {
         NavigationStack {
-            ScrollView {
-                LazyVGrid(columns: columns, spacing: 16) {
-                    ForEach(Category.allCases) { category in
-                        NavigationLink(value: category) {
-                            CategoryGridItem(
-                                category: category,
-                                itemCount: viewModel.itemCount(for: category)
-                            )
+            ZStack {
+                AppBackground()
+
+                ScrollView {
+                    LazyVGrid(columns: columns, spacing: 16) {
+                        ForEach(Category.allCases) { category in
+                            NavigationLink(value: category) {
+                                CategoryGridItem(
+                                    category: category,
+                                    itemCount: viewModel.itemCount(for: category)
+                                )
+                            }
+                            .buttonStyle(.plain)
                         }
-                        .buttonStyle(.plain)
                     }
+                    .padding()
                 }
-                .padding()
             }
             .navigationTitle("Pick your poison...")
+            .toolbarBackground(.hidden, for: .navigationBar)
+            .toolbarColorScheme(.dark, for: .navigationBar)
             .navigationDestination(for: Category.self) { category in
                 CategoryListView(category: category)
             }
@@ -59,22 +65,28 @@ struct CategoryListView: View {
     }
 
     var body: some View {
-        ScrollView {
-            LazyVGrid(columns: columns, spacing: 8) {
-                ForEach(sortedItems) { item in
-                    NavigationLink(value: item) {
-                        Image(item.imageAsset ?? "placeholder")
-                            .resizable()
-                            .aspectRatio(1, contentMode: .fit)
-                            .clipShape(RoundedRectangle(cornerRadius: 12))
+        ZStack {
+            AppBackground()
+
+            ScrollView {
+                LazyVGrid(columns: columns, spacing: 8) {
+                    ForEach(sortedItems) { item in
+                        NavigationLink(value: item) {
+                            Image(item.imageAsset ?? "placeholder")
+                                .resizable()
+                                .aspectRatio(1, contentMode: .fit)
+                                .clipShape(RoundedRectangle(cornerRadius: 12))
+                        }
+                        .buttonStyle(.plain)
                     }
-                    .buttonStyle(.plain)
                 }
+                .padding(.horizontal, 16)
+                .padding(.vertical, 8)
             }
-            .padding(.horizontal, 16)
-            .padding(.vertical, 8)
         }
         .navigationTitle(category.displayName)
+        .toolbarBackground(.hidden, for: .navigationBar)
+        .toolbarColorScheme(.dark, for: .navigationBar)
         .navigationDestination(for: ToxicItem.self) { item in
             ArticleDetailView(item: item)
         }
