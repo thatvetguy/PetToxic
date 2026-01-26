@@ -59,6 +59,7 @@ struct ArticleDetailView: View {
                 sourcesSection
             }
             .padding()
+            .padding(.bottom, 80) // Space for tab bar
         }
         .navigationTitle(item.name)
         .navigationBarTitleDisplayMode(.inline)

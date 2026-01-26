@@ -15,10 +15,12 @@ struct MainTabView: View {
                 if isInQuickEmergency {
                     // Show Emergency content when in quick-access mode
                     EmergencyView()
+                        .frame(width: geometry.size.width, height: geometry.size.height)
                         .offset(x: dragOffset)
                 } else {
                     // Normal tab content
                     tabContent(for: selectedTab)
+                        .frame(width: geometry.size.width, height: geometry.size.height)
                         .offset(x: dragOffset)
                 }
 
@@ -40,6 +42,7 @@ struct MainTabView: View {
             // In quick emergency: only Home is to the right (swipe left to return)
             if dragOffset < 0 {
                 tabContent(for: 0) // Home
+                    .frame(width: geometry.size.width, height: geometry.size.height)
                     .offset(x: dragOffset + geometry.size.width)
             }
             // Nothing to the left (dragOffset > 0 shows nothing)
@@ -47,21 +50,25 @@ struct MainTabView: View {
             // On Home: Emergency quick-access to the left (swipe right reveals it)
             if dragOffset > 0 {
                 EmergencyView()
+                    .frame(width: geometry.size.width, height: geometry.size.height)
                     .offset(x: dragOffset - geometry.size.width)
             }
             // Browse to the right (swipe left)
             if dragOffset < 0 {
                 tabContent(for: 1)
+                    .frame(width: geometry.size.width, height: geometry.size.height)
                     .offset(x: dragOffset + geometry.size.width)
             }
         } else {
             // Normal tab behavior
             if dragOffset > 0 && selectedTab > 0 {
                 tabContent(for: selectedTab - 1)
+                    .frame(width: geometry.size.width, height: geometry.size.height)
                     .offset(x: dragOffset - geometry.size.width)
             }
             if dragOffset < 0 && selectedTab < tabCount - 1 {
                 tabContent(for: selectedTab + 1)
+                    .frame(width: geometry.size.width, height: geometry.size.height)
                     .offset(x: dragOffset + geometry.size.width)
             }
         }
