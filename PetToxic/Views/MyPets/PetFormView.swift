@@ -315,6 +315,15 @@ struct PetFormView: View {
         } message: {
             Text("This cannot be undone.")
         }
+        .scrollDismissesKeyboard(.interactively)
+        .toolbar {
+            ToolbarItemGroup(placement: .keyboard) {
+                Spacer()
+                Button("Done") {
+                    hideKeyboard()
+                }
+            }
+        }
         .onAppear {
             setupInitialValues()
         }
@@ -478,7 +487,12 @@ struct PetFormView: View {
         breedSearchText = breed
         pet.breed = breed
         showBreedSuggestions = false
+        hideKeyboard()
         triggerAutoSave()
+    }
+
+    private func hideKeyboard() {
+        UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
     }
 }
 

@@ -68,7 +68,7 @@ struct MainTabView: View {
     }
 
     private func dragGesture(geometry: GeometryProxy) -> some Gesture {
-        DragGesture()
+        DragGesture(minimumDistance: 20)
             .onChanged { value in
                 isDragging = true
                 let translation = value.translation.width
@@ -101,13 +101,18 @@ struct MainTabView: View {
             }
             .onEnded { value in
                 isDragging = false
-                let threshold = geometry.size.width * 0.25
+                let threshold = geometry.size.width * 0.20
                 let translation = value.translation.width
+                let velocity = value.predictedEndTranslation.width - value.translation.width
 
-                withAnimation(.easeOut(duration: 0.25)) {
+                // Consider velocity for quick flicks
+                let shouldSwipeLeft = translation < -threshold || velocity < -200
+                let shouldSwipeRight = translation > threshold || velocity > 200
+
+                withAnimation(.easeOut(duration: 0.2)) {
                     if isInQuickEmergency {
                         // In quick emergency mode
-                        if translation < -threshold {
+                        if shouldSwipeLeft {
                             // Swipe left - return to Home
                             isInQuickEmergency = false
                             selectedTab = 0
@@ -115,18 +120,18 @@ struct MainTabView: View {
                         // Swipe right does nothing (already at edge)
                     } else if selectedTab == 0 {
                         // On Home
-                        if translation > threshold {
+                        if shouldSwipeRight {
                             // Swipe right - enter quick Emergency
                             isInQuickEmergency = true
-                        } else if translation < -threshold {
+                        } else if shouldSwipeLeft {
                             // Swipe left - go to Browse
                             selectedTab = 1
                         }
                     } else {
                         // Normal tab navigation
-                        if translation > threshold && selectedTab > 0 {
+                        if shouldSwipeRight && selectedTab > 0 {
                             selectedTab -= 1
-                        } else if translation < -threshold && selectedTab < tabCount - 1 {
+                        } else if shouldSwipeLeft && selectedTab < tabCount - 1 {
                             selectedTab += 1
                         }
                     }
