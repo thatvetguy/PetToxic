@@ -187,7 +187,7 @@ struct EmergencyPetInfoCard: View {
             .background(Color.white.opacity(0.2))
 
         VStack(alignment: .leading, spacing: 8) {
-            Text("Case Numbers")
+            Text("Poison Control Case Numbers")
                 .font(.caption)
                 .foregroundColor(.gray)
 
