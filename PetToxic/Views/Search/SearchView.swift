@@ -13,6 +13,9 @@ struct SearchView: View {
                     // Custom header
                     HomeHeader()
 
+                    // Custom search bar
+                    searchBar
+
                     // Main content area
                     ScrollView {
                         VStack(spacing: 20) {
@@ -47,13 +50,6 @@ struct SearchView: View {
                 }
             }
             .toolbarBackground(.hidden, for: .navigationBar)
-            .searchable(
-                text: $viewModel.searchText,
-                prompt: "Search foods, plants, medications..."
-            )
-            .onSubmit(of: .search) {
-                viewModel.saveToRecentSearches(viewModel.searchText)
-            }
             .onAppear {
                 viewModel.reloadRecentSearches()
             }
@@ -61,6 +57,39 @@ struct SearchView: View {
                 ArticleDetailView(item: item, saveSearchTerm: true)
             }
         }
+    }
+
+    // MARK: - Custom Search Bar
+
+    private var searchBar: some View {
+        HStack(spacing: 8) {
+            Image(systemName: "magnifyingglass")
+                .foregroundColor(.white.opacity(0.5))
+
+            TextField("Search foods, plants, medications...", text: $viewModel.searchText)
+                .foregroundColor(.white)
+                .autocorrectionDisabled()
+                .textInputAutocapitalization(.never)
+                .submitLabel(.search)
+                .onSubmit {
+                    viewModel.saveToRecentSearches(viewModel.searchText)
+                }
+
+            if !viewModel.searchText.isEmpty {
+                Button {
+                    viewModel.searchText = ""
+                } label: {
+                    Image(systemName: "xmark.circle.fill")
+                        .foregroundColor(.white.opacity(0.5))
+                }
+            }
+        }
+        .padding(.horizontal, 12)
+        .padding(.vertical, 10)
+        .background(Color.white.opacity(0.1))
+        .clipShape(RoundedRectangle(cornerRadius: 12))
+        .padding(.horizontal, 16)
+        .padding(.bottom, 8)
     }
 
     private var recentSearchesContent: some View {
