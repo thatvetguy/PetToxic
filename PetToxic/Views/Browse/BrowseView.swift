@@ -27,6 +27,7 @@ struct BrowseView: View {
                         }
                     }
                     .padding()
+                    .padding(.bottom, 80) // Extra space for tab bar
                 }
             }
             .navigationTitle("Pick your poison...")

@@ -46,6 +46,7 @@ struct SearchView: View {
                     // Ad banner at bottom
                     if viewModel.searchText.isEmpty {
                         AdBannerPlaceholder()
+                            .padding(.bottom, 80) // Extra space for tab bar
                     }
                 }
             }

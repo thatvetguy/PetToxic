@@ -108,6 +108,12 @@ struct SettingsView: View {
                         }
                         .listRowBackground(Color.clear)
                     }
+
+                    // Extra space for tab bar
+                    Section {
+                        Color.clear.frame(height: 60)
+                    }
+                    .listRowBackground(Color.clear)
                 }
                 .scrollContentBackground(.hidden)
             }
@@ -133,7 +139,7 @@ struct SettingsView: View {
             .background(Color("AccentColor"))
             .clipShape(Capsule())
             .shadow(radius: 4)
-            .padding(.bottom, 20)
+            .padding(.bottom, 100) // Extra space for tab bar
     }
 
     private func handleVersionTap() {

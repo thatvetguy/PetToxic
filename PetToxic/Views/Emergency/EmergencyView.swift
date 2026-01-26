@@ -46,6 +46,7 @@ struct EmergencyView: View {
                         whatToHaveReadySection
                     }
                     .padding()
+                    .padding(.bottom, 80) // Extra space for tab bar
                 }
             }
             .navigationTitle("Emergency")

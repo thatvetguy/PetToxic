@@ -33,6 +33,12 @@ struct HistoryListView: View {
                             }
                         }
                     }
+
+                    // Extra space for tab bar
+                    Section {
+                        Color.clear.frame(height: 60)
+                    }
+                    .listRowBackground(Color.clear)
                 }
                 .scrollContentBackground(.hidden)
                 .toolbar {
