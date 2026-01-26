@@ -123,6 +123,7 @@ struct CategoryListView: View {
                     }
                     .padding(.horizontal, 16)
                     .padding(.vertical, 8)
+                    .padding(.bottom, 80) // Extra space for tab bar
                 }
             }
         }
