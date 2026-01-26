@@ -20,6 +20,7 @@ final class Pet {
     var dateCreated: Date
     var dateModified: Date
     var sortOrder: Int
+    var prioritizeInBrowse: Bool = true
 
     init(
         id: UUID = UUID(),
@@ -36,7 +37,8 @@ final class Pet {
         vetClinicName: String? = nil,
         vetPhone: String? = nil,
         notes: String? = nil,
-        sortOrder: Int = 0
+        sortOrder: Int = 0,
+        prioritizeInBrowse: Bool = true
     ) {
         self.id = id
         self.name = name
@@ -55,6 +57,7 @@ final class Pet {
         self.dateCreated = Date()
         self.dateModified = Date()
         self.sortOrder = sortOrder
+        self.prioritizeInBrowse = prioritizeInBrowse
     }
 
     // MARK: - Computed Properties

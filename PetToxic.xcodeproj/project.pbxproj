@@ -56,6 +56,7 @@
 		ED2E81472F25FF00008594E1 /* ProSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED2E81482F25FF00008594E1 /* ProSettings.swift */; };
 		EF977BE44A1CA4C9CE80A128 /* SavedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5C6C094D6B35157F81D7872 /* SavedView.swift */; };
 		EFB4BACA347E9C89515BEDED /* EmergencyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B85A0BAA5B698970D8F9ADA /* EmergencyView.swift */; };
+		EMRGPET001DDDD1111111111 /* EmergencyPetInfoCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = EMRGPET002DDDD2222222222 /* EmergencyPetInfoCard.swift */; };
 		F03D63A2599562E0A66DEB2E /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5D4123DE87463A4CF858927 /* Constants.swift */; };
 		F1372C807BFFDC33BCD4A18F /* SpeciesRisk.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F4998CA510A72304A62AC03 /* SpeciesRisk.swift */; };
 		F31D053BA08F486404401C7A /* DisclaimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA5A3886892E1B5E6CAF9D5F /* DisclaimerView.swift */; };
@@ -64,7 +65,7 @@
 		PHOTO001BBBB1111111111111 /* PetPhotoService.swift in Sources */ = {isa = PBXBuildFile; fileRef = PHOTO002BBBB2222222222222 /* PetPhotoService.swift */; };
 		PHOTO003BBBB3333333333333 /* PetAvatarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = PHOTO004BBBB4444444444444 /* PetAvatarView.swift */; };
 		PHOTO005BBBB5555555555555 /* PetPhotoPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = PHOTO006BBBB6666666666666 /* PetPhotoPickerView.swift */; };
-		EMRGPET001DDDD1111111111 /* EmergencyPetInfoCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = EMRGPET002DDDD2222222222 /* EmergencyPetInfoCard.swift */; };
+		BRWFLT001EEEE1111111111 /* BrowseFilterService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BRWFLT002EEEE2222222222 /* BrowseFilterService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -137,6 +138,7 @@
 		ED2E81432F25FEEC008594E1 /* PetListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetListView.swift; sourceTree = "<group>"; };
 		ED2E81482F25FF00008594E1 /* ProSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProSettings.swift; sourceTree = "<group>"; };
 		EDE88C278EF8FA0A290DE262 /* PetToxicTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetToxicTests.swift; sourceTree = "<group>"; };
+		EMRGPET002DDDD2222222222 /* EmergencyPetInfoCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmergencyPetInfoCard.swift; sourceTree = "<group>"; };
 		F04351C3DD8FA41399338545 /* BrowseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrowseViewModel.swift; sourceTree = "<group>"; };
 		F4AF21A98F3346F34930A106 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		F6789012345678901234ABCD /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
@@ -146,7 +148,7 @@
 		PHOTO002BBBB2222222222222 /* PetPhotoService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetPhotoService.swift; sourceTree = "<group>"; };
 		PHOTO004BBBB4444444444444 /* PetAvatarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetAvatarView.swift; sourceTree = "<group>"; };
 		PHOTO006BBBB6666666666666 /* PetPhotoPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetPhotoPickerView.swift; sourceTree = "<group>"; };
-		EMRGPET002DDDD2222222222 /* EmergencyPetInfoCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmergencyPetInfoCard.swift; sourceTree = "<group>"; };
+		BRWFLT002EEEE2222222222 /* BrowseFilterService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrowseFilterService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXGroup section */
@@ -330,6 +332,7 @@
 				D4E5F6789012345678901234 /* AppearanceSettings.swift */,
 				237521FB4875580645396715 /* BookmarkService.swift */,
 				BREED002AAAA2222222222222 /* BreedService.swift */,
+				BRWFLT002EEEE2222222222 /* BrowseFilterService.swift */,
 				4A373A23CBFA6D1C7461960B /* DatabaseService.swift */,
 				PHOTO002BBBB2222222222222 /* PetPhotoService.swift */,
 				ED2E81402F25FEC5008594E1 /* PetStore.swift */,
@@ -499,6 +502,7 @@
 				57A1C02F3A6667A7E948CBD6 /* BookmarkService.swift in Sources */,
 				3B01471FEB78A195C78968FB /* BookmarksListView.swift in Sources */,
 				BREED001AAAA1111111111111 /* BreedService.swift in Sources */,
+				BRWFLT001EEEE1111111111 /* BrowseFilterService.swift in Sources */,
 				315314F5C314F8DF1D589D6A /* BrowseView.swift in Sources */,
 				6C18E8975926D8C0099F3AE6 /* BrowseViewModel.swift in Sources */,
 				B4943E52DD3BFB9C5C556F3E /* CategoryGridItem.swift in Sources */,
@@ -621,7 +625,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 20260125;
+				CURRENT_PROJECT_VERSION = 20260125.2;
 				DEVELOPMENT_TEAM = 6KA5CB5S3A;
 				GENERATE_INFOPLIST_FILE = NO;
 				INFOPLIST_FILE = PetToxic/Resources/Info.plist;
@@ -807,7 +811,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 20260125;
+				CURRENT_PROJECT_VERSION = 20260125.2;
 				DEVELOPMENT_TEAM = 6KA5CB5S3A;
 				GENERATE_INFOPLIST_FILE = NO;
 				INFOPLIST_FILE = PetToxic/Resources/Info.plist;

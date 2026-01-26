@@ -265,6 +265,21 @@ struct PetFormView: View {
                 }
             }
 
+            // MARK: - Browse Filter
+            Section {
+                Toggle(isOn: $pet.prioritizeInBrowse) {
+                    VStack(alignment: .leading, spacing: 2) {
+                        Text("Prioritize in browse filter")
+                            .font(.subheadline)
+                        Text("Browse will default to showing entries relevant to \(pet.speciesEnum.displayName.lowercased())")
+                            .font(.caption)
+                            .foregroundColor(.secondary)
+                    }
+                }
+                .tint(.teal)
+                .onChange(of: pet.prioritizeInBrowse) { triggerAutoSave() }
+            }
+
             // MARK: - Delete Button (only for existing pets)
             if !isNewPet {
                 Section {

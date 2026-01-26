@@ -1,4 +1,5 @@
 import SwiftUI
+import SwiftData
 
 struct BrowseView: View {
     @StateObject private var viewModel = BrowseViewModel()
@@ -38,11 +39,22 @@ struct BrowseView: View {
     }
 }
 
+// MARK: - Species Filter
+
+enum SpeciesFilter: Equatable {
+    case auto
+    case all
+    case specific(Species)
+    case informational
+}
+
 struct CategoryListView: View {
     let category: Category
     @StateObject private var viewModel = BrowseViewModel()
+    @Query private var pets: [Pet]
     @AppStorage("gridColumnCount") private var columnCount: Int = 2
     @AppStorage("entrySortBySeverity") private var sortBySeverity: Bool = true
+    @State private var selectedSpeciesFilter: SpeciesFilter = .auto
 
     private var columns: [GridItem] {
         Array(repeating: GridItem(.flexible(), spacing: 8), count: columnCount)
@@ -52,16 +64,38 @@ struct CategoryListView: View {
         category == .informational
     }
 
-    private var sortedItems: [ToxicItem] {
+    private var autoFilterSpecies: Set<Species>? {
+        BrowseFilterService.getDefaultSpeciesFilter(pets: pets)
+    }
+
+    private var filteredItems: [ToxicItem] {
         let items = viewModel.items(for: category)
+
+        // Apply species filter
+        let speciesFiltered: [ToxicItem]
+
+        switch selectedSpeciesFilter {
+        case .auto:
+            speciesFiltered = items.filter {
+                BrowseFilterService.entryMatchesFilter(entry: $0, speciesFilter: autoFilterSpecies)
+            }
+        case .all:
+            speciesFiltered = items
+        case .specific(let species):
+            speciesFiltered = items.filter {
+                BrowseFilterService.entryMatchesFilter(entry: $0, speciesFilter: [species])
+            }
+        case .informational:
+            speciesFiltered = items.filter { $0.speciesRisks.isEmpty }
+        }
 
         // Informational category always sorts alphabetically
         if isInformationalCategory || !sortBySeverity {
-            return items.sorted { $0.name.localizedCaseInsensitiveCompare($1.name) == .orderedAscending }
+            return speciesFiltered.sorted { $0.name.localizedCaseInsensitiveCompare($1.name) == .orderedAscending }
         }
 
         // Sort by severity (highest first)
-        return items.sorted { maxSeverity(for: $0) > maxSeverity(for: $1) }
+        return speciesFiltered.sorted { maxSeverity(for: $0) > maxSeverity(for: $1) }
     }
 
     var body: some View {
@@ -69,19 +103,26 @@ struct CategoryListView: View {
             AppBackground()
 
             ScrollView {
-                LazyVGrid(columns: columns, spacing: 8) {
-                    ForEach(sortedItems) { item in
-                        NavigationLink(value: item) {
-                            Image(item.imageAsset ?? "placeholder")
-                                .resizable()
-                                .aspectRatio(1, contentMode: .fit)
-                                .clipShape(RoundedRectangle(cornerRadius: 12))
-                        }
-                        .buttonStyle(.plain)
+                VStack(spacing: 0) {
+                    // Species filter chips
+                    if !isInformationalCategory {
+                        speciesFilterChips
                     }
+
+                    LazyVGrid(columns: columns, spacing: 8) {
+                        ForEach(filteredItems) { item in
+                            NavigationLink(value: item) {
+                                Image(item.imageAsset ?? "placeholder")
+                                    .resizable()
+                                    .aspectRatio(1, contentMode: .fit)
+                                    .clipShape(RoundedRectangle(cornerRadius: 12))
+                            }
+                            .buttonStyle(.plain)
+                        }
+                    }
+                    .padding(.horizontal, 16)
+                    .padding(.vertical, 8)
                 }
-                .padding(.horizontal, 16)
-                .padding(.vertical, 8)
             }
         }
         .navigationTitle(category.displayName)
@@ -110,6 +151,77 @@ struct CategoryListView: View {
             }
         }
     }
+
+    // MARK: - Species Filter Chips
+
+    private var speciesFilterChips: some View {
+        VStack(spacing: 4) {
+            ScrollView(.horizontal, showsIndicators: false) {
+                HStack(spacing: 8) {
+                    filterChip(title: "Auto", filter: .auto, icon: "sparkles")
+                    filterChip(title: "All", filter: .all, icon: nil)
+                    filterChip(title: "Dogs", filter: .specific(.dog), icon: "dog")
+                    filterChip(title: "Cats", filter: .specific(.cat), icon: "cat")
+                    filterChip(title: "Birds", filter: .specific(.bird), icon: "bird")
+                    filterChip(title: "Small Mammals", filter: .specific(.smallMammal), icon: "hare")
+                    filterChip(title: "Reptiles", filter: .specific(.reptile), icon: "lizard")
+                }
+                .padding(.horizontal, 16)
+            }
+            .padding(.vertical, 8)
+
+            // Auto filter indicator
+            if selectedSpeciesFilter == .auto, let species = autoFilterSpecies, !species.isEmpty {
+                HStack(spacing: 4) {
+                    Image(systemName: "pawprint.fill")
+                        .font(.caption2)
+                    Text("Showing: \(species.map { $0.displayName }.sorted().joined(separator: ", "))")
+                        .font(.caption)
+                    Spacer()
+                }
+                .foregroundColor(.teal)
+                .padding(.horizontal, 16)
+                .padding(.bottom, 4)
+            } else if selectedSpeciesFilter == .auto && autoFilterSpecies == nil {
+                HStack(spacing: 4) {
+                    Image(systemName: "info.circle")
+                        .font(.caption2)
+                    Text("Add pets in Settings to personalize")
+                        .font(.caption)
+                    Spacer()
+                }
+                .foregroundColor(.secondary)
+                .padding(.horizontal, 16)
+                .padding(.bottom, 4)
+            }
+        }
+    }
+
+    @ViewBuilder
+    private func filterChip(title: String, filter: SpeciesFilter, icon: String?) -> some View {
+        Button {
+            withAnimation(.easeInOut(duration: 0.2)) {
+                selectedSpeciesFilter = filter
+            }
+        } label: {
+            HStack(spacing: 4) {
+                if let icon = icon {
+                    Image(systemName: icon)
+                        .font(.caption)
+                }
+                Text(title)
+                    .font(.caption)
+                    .fontWeight(selectedSpeciesFilter == filter ? .semibold : .regular)
+            }
+            .padding(.horizontal, 12)
+            .padding(.vertical, 6)
+            .background(selectedSpeciesFilter == filter ? Color.teal : Color.white.opacity(0.1))
+            .foregroundColor(selectedSpeciesFilter == filter ? .white : .gray)
+            .cornerRadius(16)
+        }
+    }
+
+    // MARK: - Helper Methods
 
     private func maxSeverity(for item: ToxicItem) -> Int {
         let severityOrder: [Severity: Int] = [
