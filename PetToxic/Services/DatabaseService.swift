@@ -1339,7 +1339,7 @@ class DatabaseService {
                 id: UUID(uuidString: "f122f209-b845-4921-a9e1-235abcd6876b")!,
                 name: "Blue-Green Algae (Cyanobacteria)",
                 alternateNames: ["cyanobacteria", "cyanobacterial poisoning", "blue green algae", "pond scum", "pond algae", "lake algae", "algae bloom", "algal bloom", "harmful algal bloom", "HAB", "microcystins", "anatoxins", "toxic algae", "green pond water", "pea soup water"],
-                categories: [.plants, .environmentalHazards],
+                categories: [.plants, .outdoorHazards],
                 imageAsset: "p_blue_green_algae_thumb",
                 description: "Blue-green algae (cyanobacteria) are microscopic bacteria found in freshwater lakes, streams, ponds, and brackish water. Despite the name, they are bacteria rather than true algae. They grow and colonize to form 'blooms' that give water a blue-green or 'pea soup' appearance, or may look like blue or green paint on the surface. Wind can blow floating algae into thick mats near shorelines, making them easily accessible to pets. Blooms are most common during hot weather in mid- to late-summer and thrive in warm, stagnant, nutrient-rich water.",
                 toxicityInfo: "Blue-green algae can produce toxins that cause rapid, severe illness — even a few mouthfuls of contaminated water can be fatal. Not all blooms produce toxins, but it is impossible to tell by appearance alone; all blooms should be treated as potentially deadly. There are two main toxin types that cause very different syndromes:\n\nMicrocystins are hepatotoxic (liver-damaging). They cause acute liver failure with signs including vomiting, diarrhea, bloody stool, weakness, pale gums, jaundice, seizures, and shock. Death typically occurs within days.\n\nAnatoxins are neurotoxic. They act as irreversible acetylcholinesterase inhibitors, causing a SLUDGE-like syndrome (Salivation, Lacrimation, Urination, Defecation, GI distress, Emesis) along with muscle tremors, rigidity, paralysis, and cyanosis (blue-tinged gums from lack of oxygen). Death can occur within minutes to hours from respiratory paralysis.\n\nThere is no antidote for either toxin type. The prognosis is poor once clinical signs develop. Dogs are most commonly affected because they swim in and drink from contaminated water, and may lick algae off their fur after swimming.",
@@ -9732,7 +9732,7 @@ class DatabaseService {
                     "skunk sprayed dog",
                     "skunk sprayed cat"
                 ],
-                categories: [.animalEncounters, .environmentalHazards],
+                categories: [.outdoorHazards],
                 imageAsset: "a_skunk_spray_thumb",
                 description: "Skunk spray is a defensive secretion produced by skunks when threatened. The spray is an oily, yellow liquid containing thiols (sulfur-containing compounds) that produce an intensely unpleasant odor. Dogs are commonly sprayed when they encounter skunks, particularly at dawn, dusk, or night. While most skunk encounters result in nothing more than a terrible smell, the thiols in skunk spray can occasionally cause more serious effects. In rare cases, the thiols can cause oxidative damage to red blood cells, leading to Heinz body anemia. Thiols react with oxyhemoglobin, forming methemoglobin, thiyl radicals, and hydrogen peroxide. These highly reactive compounds can damage hemoglobin, producing Heinz bodies (clumps of damaged hemoglobin) and subsequent hemolysis (red blood cell destruction). This can lead to severe anemia. Thiols are readily absorbed orally (if the pet licks the spray) within hours; dermal absorption is minimal. Direct spray to the eyes can cause significant ocular irritation and temporary vision changes. DEODORIZING: Do NOT use tomato juice — it doesn't work. Use a commercial skunk odor remover or a mixture of hydrogen peroxide (1 quart 3%), baking soda (1/4 cup), and dish soap (1 teaspoon). Do not get this mixture in the eyes.",
                 toxicityInfo: "Most skunk spray exposures cause only local irritation and the characteristic foul odor — no treatment beyond deodorizing is needed. However, in rare cases, the thiols in skunk spray can cause oxidative damage to red blood cells, particularly if the pet is sprayed directly in the face and ingests the spray by licking. MECHANISM: Thiols react with oxyhemoglobin in a redox reaction, forming methemoglobin, thiyl radicals, and hydrogen peroxide. These reactive compounds damage hemoglobin sulfhydryl groups, producing Heinz bodies and subsequent hemolysis. A documented case in 2005 (Zaks et al., JAVMA) reported severe Heinz body anemia in a dog 3 days after being sprayed by a skunk. CATS may be more susceptible to oxidative RBC damage than dogs. OCULAR EXPOSURE: Direct spray to the eyes can cause significant irritation, corneal edema, and temporary vision changes.",
@@ -9831,7 +9831,7 @@ class DatabaseService {
                     "cat ate toad",
                     "poisonous toad"
                 ],
-                categories: [.animalEncounters, .environmentalHazards],
+                categories: [.outdoorHazards],
                 imageAsset: "a_bufo_toad_thumb",
                 description: "Bufo toad poisoning occurs when pets — usually dogs — mouth, lick, or eat certain toxic toad species. Two species are of primary concern in the United States: the Cane Toad (Bufo marinus/Rhinella marina), found in Florida, southern Texas, Louisiana, and Hawaii; and the Colorado River Toad (Bufo alvarius/Incilius alvarius), found in the Sonoran Desert regions of Arizona and California. These large toads (7-9 inches) secrete potent toxins from large parotid glands behind their eyes and smaller glands throughout their skin. The toxin is a thick, white, creamy liquid released when the toad is threatened. Bufo toads are most active during breeding season (March through September), particularly after rainfall and during dawn, dusk, and nighttime hours. The Cane Toad is MORE toxic than the Colorado River Toad. The toxin content of both parotid glands from a single Cane Toad is sufficient to kill a 10-15 kg (22-33 lb) dog. SMALL DOGS ARE AT HIGHEST RISK — in one study, 76% of Cane Toad poisoning cases were small breed dogs. IMMEDIATE ACTION: If your pet mouths a toad, immediately rinse the mouth with water using a hose or faucet, pointing the head DOWN to prevent swallowing. Wipe the gums and tongue with a wet cloth. Then seek emergency veterinary care immediately — do not wait for symptoms to appear.",
                 toxicityInfo: "Bufo toad toxin contains several dangerous compounds: BUFAGENINS and BUFOTOXINS are cardioactive glycosides similar to digitalis (digoxin) that cause cardiac arrhythmias — these are the primary cause of death. BUFOTENINES have hallucinogenic, blood pressure-raising, and muscle-contracting properties. The toxin also contains catecholamines and serotonin. EXPOSURE ROUTES: Toxin is absorbed through the mouth, nose, and eyes when dogs mouth or bite the toad. Toads that sit in outdoor water bowls can leave behind enough toxin in the water to poison pets that drink from the bowl. Dried toads, toad eggs, and tadpoles can also be toxic if ingested. CARDIAC EFFECTS: The cardioactive glycosides cause effects similar to digitalis toxicity — bradycardia, AV block, ventricular arrhythmias. Atropine may paradoxically worsen arrhythmias in these cases. ENTEROHEPATIC RECIRCULATION: Cardiac toxins may be reabsorbed from the intestines, which can delay or prolong cardiac effects for up to 4 hours after exposure.",
@@ -9945,7 +9945,7 @@ class DatabaseService {
                     "cat ate bee",
                     "dog bit wasp"
                 ],
-                categories: [.animalEncounters, .environmentalHazards],
+                categories: [.outdoorHazards],
                 imageAsset: "a_bee_wasp_thumb",
                 description: "Hymenoptera envenomation refers to stings from insects in the order Hymenoptera, which includes bees (honey bees, Africanized 'killer' bees, carpenter bees), wasps, hornets, yellow jackets, fire ants, and velvet ants. These insects account for the majority of insect sting cases in veterinary patients. Dogs and cats are typically stung when they disturb a nest, step on an insect, or try to bite or play with one. Most stings occur on the paws, muzzle, or inside the mouth. While most single stings cause only localized pain and swelling, some pets develop life-threatening allergic reactions (anaphylaxis) even from a single sting, and mass envenomation from swarms or fire ant mounds can be fatal. IMMEDIATE ACTION (Bee Stings Only): FIRST — If your pet shows ANY signs of a serious reaction (difficulty breathing, facial swelling, collapse, vomiting, weakness, or pale gums), GO TO A VETERINARIAN IMMEDIATELY. Do not delay to search for a stinger. If your pet appears stable and you can easily see a stinger, remove it quickly by scraping sideways across the skin with a credit card, fingernail, or other flat edge. Do NOT squeeze the stinger with tweezers or fingers — this can inject more venom. Then monitor closely for any developing signs of allergic reaction. Note: Only BEES leave stingers behind. Wasps, hornets, yellow jackets, and fire ants do not.",
                 toxicityInfo: "Hymenoptera venom contains a complex mixture of allergenic proteins, enzymes, peptides, and vasoactive amines. Key components include phospholipase A2, hyaluronidase, and melittin (in bee venom), which work together to disrupt cell membranes and break down connective tissue. Fire ant venom is composed primarily of alkaloids. The venom promotes histamine and heparin release from mast cells, causing local inflammation. IMPORTANT DISTINCTIONS: (1) BEES have BARBED stingers that detach and remain in the victim — the venom sac can continue pumping venom for up to 60 seconds even after the bee dies; (2) Wasps, hornets, yellow jackets, fire ants, and velvet ants have SMOOTH stingers and can sting MULTIPLE TIMES; (3) Fire ants bite with their mandibles to anchor themselves, then sting in a circular pattern from their abdomen, delivering multiple stings per ant. ANAPHYLAXIS: Allergic reactions are NOT dose-dependent — some pets react severely to a single sting while others tolerate multiple stings. MASS ENVENOMATION: Dozens to hundreds of stings can be fatal even in non-allergic animals due to the sheer volume of venom. The estimated lethal dose is approximately 20 stings per kilogram of body weight.",
@@ -10055,7 +10055,7 @@ class DatabaseService {
                     "dog snake bite",
                     "cat snake bite"
                 ],
-                categories: [.animalEncounters, .environmentalHazards],
+                categories: [.outdoorHazards],
                 imageAsset: "a_pit_vipers_thumb",
                 description: "Pit viper envenomation occurs when a pet is bitten by a venomous snake in the Crotalinae subfamily, which includes rattlesnakes, copperheads, and water moccasins (cottonmouths). These snakes account for approximately 99% of venomous snake bites in the United States, with an estimated 150,000 or more companion animals bitten annually. Pit vipers are found throughout most of the continental US — only Maine, Alaska, and Hawaii lack native venomous snakes. Approximately 90% of bites occur between April and October. Pit viper venom contains enzymes and toxins that destroy tissue, impair blood clotting, and can cause life-threatening systemic effects. THIS IS A MEDICAL EMERGENCY REQUIRING IMMEDIATE VETERINARY CARE. ANTIVENOM is the only treatment that directly neutralizes snake venom and is most effective when administered within the first 4-6 hours after a bite. DO: Get to an emergency veterinarian IMMEDIATELY — call ahead if possible so they can prepare antivenom. Keep your pet as calm and still as possible during transport (activity spreads venom faster). Carry your pet if possible. Remove collars if the bite is on the neck/head and swelling rapidly. DO NOT: Wait to see if symptoms develop. Attempt to capture, kill, or identify the snake. Apply ice, heat, tourniquets, or suction devices. Cut the wound or try to suck out venom. Even if you're unsure whether the snake was venomous, treat all snake bites as emergencies.",
                 toxicityInfo: "Pit viper venom is a complex mixture of over 50 enzymes and toxins including myotoxins (muscle damage), cytotoxins (cell death), hemorrhagic toxins (bleeding), and in some species like the Mojave rattlesnake, potent neurotoxins. Hyaluronidase breaks down connective tissue, allowing venom to spread rapidly. Phospholipase A disrupts cell membranes and releases inflammatory mediators. The venom destroys blood vessel walls, causes blood to pool abnormally (in splanchnic vessels in dogs, pulmonary vessels in cats), and impairs the blood's ability to clot. Disseminated intravascular coagulopathy (DIC), hemolysis, acute kidney failure, and cardiovascular collapse can occur. DRY BITES: Bites without venom injection occur in approximately 20-25% of pit viper bites, but this CANNOT be determined at the time of the bite — all snake bites must be treated as emergencies. SPECIES TOXICITY: Rattlesnakes are most dangerous (especially Mojave with neurotoxin), then water moccasins, then copperheads. Venom toxicity also varies by snake size and whether the snake recently fed.",
@@ -10155,7 +10155,7 @@ class DatabaseService {
                     "Arizona coral snake",
                     "Sonoran coral snake"
                 ],
-                categories: [.animalEncounters],
+                categories: [.outdoorHazards],
                 imageAsset: "a_coral_snake_thumb",
                 description: """
 Coral snakes are elapids with potent NEUROTOXIC venom distinct from pit viper hemotoxic venom. Three species exist in the US: Eastern coral snake (Micrurus fulvius) in Southeast, Texas coral snake (M. tener) in Texas/Louisiana, and Arizona/Sonoran coral snake (Micruroides euryxanthus) in Southwest.
@@ -10249,7 +10249,7 @@ Coral snakes are secretive and rarely encountered, but pets investigating leaf l
                     "scorpion envenomation",
                     "scorpion venom"
                 ],
-                categories: [.animalEncounters],
+                categories: [.outdoorHazards],
                 imageAsset: "a_bark_scorpion_thumb",
                 description: """
 Over 70 scorpion species exist in the US, but only the Arizona bark scorpion (Centruroides sculpturatus/exilicauda) causes significant systemic envenomation. Found primarily in Arizona, New Mexico, and adjacent areas of California, Nevada, Utah, and Mexico.
@@ -10357,7 +10357,7 @@ Geographic location matters most. Outside Arizona bark scorpion range, severe sy
                     "hourglass spider bite",
                     "redback spider bite"
                 ],
-                categories: [.animalEncounters, .environmentalHazards],
+                categories: [.outdoorHazards],
                 imageAsset: "a_widow_spiders_thumb",
                 description: """
 Widow spiders (Latrodectus spp.) are the most medically significant spiders worldwide. Five species are found in the United States, with the black widow (Latrodectus mactans) being most common. Female black widows are identified by their shiny black color and distinctive red or orange hourglass marking on the underside of their globular abdomen. Males are much smaller and not considered a significant bite risk.
@@ -10481,7 +10481,7 @@ Approximately 15% of widow spider bites are "dry" with no venom injection, but a
                     "araneism",
                     "dermonecrotic spider bite"
                 ],
-                categories: [.animalEncounters, .environmentalHazards],
+                categories: [.outdoorHazards],
                 imageAsset: "a_recluse_thumb",
                 description: """
 The brown recluse spider (Loxosceles reclusa) is found in the south-central and midwestern United States—primarily from southeastern Nebraska through Texas, east to southwestern Ohio and northwestern Georgia.
@@ -10618,7 +10618,7 @@ NOT found in California, Florida, Pacific Northwest, or Atlantic seaboard. Singl
                     "caterpillar sting",
                     "erucism"
                 ],
-                categories: [.animalEncounters, .environmentalHazards],
+                categories: [.outdoorHazards],
                 imageAsset: "a_puss_caterpillar_thumb",
                 description: """
 The asp or puss caterpillar (Megalopyge opercularis), also known as the southern flannel moth caterpillar, is considered the most dangerous caterpillar in the United States. Despite its soft, fluffy appearance that resembles a tuft of fur or cotton, this caterpillar conceals venomous spines beneath its hair.
@@ -10724,7 +10724,7 @@ Pet fur provides some protection from skin exposure, but oral exposure from mout
                     "wood tick paralysis",
                     "dog tick paralysis"
                 ],
-                categories: [.animalEncounters, .environmentalHazards],
+                categories: [.outdoorHazards],
                 imageAsset: "a_ticks_thumb",
                 description: """
 Tick paralysis is a potentially life-threatening but FULLY REVERSIBLE condition caused by neurotoxins secreted in tick saliva during feeding. In North America, tick paralysis affects dogs but has NOT been reported in domestic cats.
