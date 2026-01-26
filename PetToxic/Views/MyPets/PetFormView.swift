@@ -13,6 +13,18 @@ struct PetFormView: View {
     @State private var showingDeleteAlert = false
     @State private var showingSavedIndicator = false
 
+    // Case number management
+    @State private var newCaseNumber = ""
+    @State private var showAddCaseNoteAlert = false
+    @State private var pendingCaseNumber = ""
+    @State private var caseNote = ""
+    @State private var showDeleteCaseAlert = false
+    @State private var caseToDelete: PoisonControlCase?
+    @State private var showEditCaseAlert = false
+    @State private var caseToEdit: PoisonControlCase?
+    @State private var editCaseNumber = ""
+    @State private var editCaseNote = ""
+
     // Weight input
     @State private var weightInput: String = ""
     @State private var weightUnit: WeightUnit = .lbs
@@ -265,6 +277,87 @@ struct PetFormView: View {
                 }
             }
 
+            // MARK: - Poison Control Case Numbers
+            Section("Poison Control Case Numbers") {
+                // Add new case number
+                HStack(spacing: 8) {
+                    TextField("Case number", text: $newCaseNumber)
+                        .textInputAutocapitalization(.characters)
+                        .autocorrectionDisabled()
+
+                    Button {
+                        promptForCaseNote()
+                    } label: {
+                        Image(systemName: "plus.circle.fill")
+                            .font(.title2)
+                            .foregroundColor(newCaseNumber.trimmingCharacters(in: .whitespaces).isEmpty ? .gray : .accentColor)
+                    }
+                    .disabled(newCaseNumber.trimmingCharacters(in: .whitespaces).isEmpty)
+                }
+
+                // List existing case numbers
+                let sortedCases = pet.poisonControlCases.sorted { $0.dateAdded > $1.dateAdded }
+                ForEach(sortedCases) { caseItem in
+                    Button {
+                        startEditingCase(caseItem)
+                    } label: {
+                        HStack {
+                            VStack(alignment: .leading, spacing: 2) {
+                                Text(caseItem.caseNumber)
+                                    .font(.system(.body, design: .monospaced))
+                                    .fontWeight(.medium)
+                                    .foregroundColor(.primary)
+
+                                HStack(spacing: 4) {
+                                    Text(caseItem.dateAdded, style: .date)
+                                        .font(.caption)
+                                        .foregroundColor(.secondary)
+
+                                    if let note = caseItem.note, !note.isEmpty {
+                                        Text("•")
+                                            .font(.caption)
+                                            .foregroundColor(.secondary)
+                                        Text(note)
+                                            .font(.caption)
+                                            .foregroundColor(.secondary)
+                                            .lineLimit(1)
+                                    }
+                                }
+                            }
+
+                            Spacer()
+
+                            Image(systemName: "chevron.right")
+                                .font(.caption)
+                                .foregroundColor(.secondary)
+                        }
+                    }
+                    .swipeActions(edge: .trailing, allowsFullSwipe: true) {
+                        Button(role: .destructive) {
+                            caseToDelete = caseItem
+                            showDeleteCaseAlert = true
+                        } label: {
+                            Label("Delete", systemImage: "trash")
+                        }
+                    }
+                    .swipeActions(edge: .leading) {
+                        Button {
+                            copyToClipboard(caseItem.caseNumber)
+                        } label: {
+                            Label("Copy", systemImage: "doc.on.doc")
+                        }
+                        .tint(.blue)
+                    }
+                }
+
+                if sortedCases.isEmpty {
+                    Text("No case numbers saved")
+                        .font(.subheadline)
+                        .foregroundColor(.secondary)
+                        .italic()
+                }
+            }
+
             // MARK: - Browse Filter
             Section {
                 Toggle(isOn: $pet.prioritizeInBrowse) {
@@ -329,6 +422,42 @@ struct PetFormView: View {
             }
         } message: {
             Text("This cannot be undone.")
+        }
+        .alert("Add Note?", isPresented: $showAddCaseNoteAlert) {
+            TextField("Note (optional)", text: $caseNote)
+            Button("Skip") {
+                addCaseNumber(withNote: false)
+            }
+            Button("Save") {
+                addCaseNumber(withNote: true)
+            }
+        } message: {
+            Text("Add an optional note for case \(pendingCaseNumber)")
+        }
+        .alert("Edit Case Number", isPresented: $showEditCaseAlert) {
+            TextField("Case number", text: $editCaseNumber)
+            TextField("Note (optional)", text: $editCaseNote)
+            Button("Cancel", role: .cancel) {
+                caseToEdit = nil
+            }
+            Button("Save") {
+                saveEditedCase()
+            }
+        }
+        .alert("Delete Case Number?", isPresented: $showDeleteCaseAlert) {
+            Button("Cancel", role: .cancel) {
+                caseToDelete = nil
+            }
+            Button("Delete", role: .destructive) {
+                if let caseItem = caseToDelete {
+                    deleteCaseNumber(caseItem)
+                }
+                caseToDelete = nil
+            }
+        } message: {
+            if let caseItem = caseToDelete {
+                Text("Delete case number \(caseItem.caseNumber)?")
+            }
         }
         .scrollDismissesKeyboard(.interactively)
         .toolbar {
@@ -509,11 +638,64 @@ struct PetFormView: View {
     private func hideKeyboard() {
         UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
     }
+
+    // MARK: - Case Number Methods
+
+    private func promptForCaseNote() {
+        let trimmed = newCaseNumber.trimmingCharacters(in: .whitespaces)
+        guard !trimmed.isEmpty else { return }
+        pendingCaseNumber = trimmed
+        caseNote = ""
+        showAddCaseNoteAlert = true
+    }
+
+    private func addCaseNumber(withNote: Bool) {
+        let newCase = PoisonControlCase(
+            caseNumber: pendingCaseNumber,
+            note: withNote && !caseNote.isEmpty ? caseNote : nil,
+            pet: pet
+        )
+        modelContext.insert(newCase)
+        pet.poisonControlCases.append(newCase)
+        newCaseNumber = ""
+        pendingCaseNumber = ""
+        caseNote = ""
+        triggerAutoSave()
+    }
+
+    private func startEditingCase(_ caseItem: PoisonControlCase) {
+        caseToEdit = caseItem
+        editCaseNumber = caseItem.caseNumber
+        editCaseNote = caseItem.note ?? ""
+        showEditCaseAlert = true
+    }
+
+    private func saveEditedCase() {
+        guard let caseItem = caseToEdit else { return }
+        let trimmed = editCaseNumber.trimmingCharacters(in: .whitespaces)
+        guard !trimmed.isEmpty else { return }
+
+        caseItem.caseNumber = trimmed
+        caseItem.note = editCaseNote.isEmpty ? nil : editCaseNote
+        caseToEdit = nil
+        editCaseNumber = ""
+        editCaseNote = ""
+        triggerAutoSave()
+    }
+
+    private func deleteCaseNumber(_ caseItem: PoisonControlCase) {
+        modelContext.delete(caseItem)
+        triggerAutoSave()
+    }
+
+    private func copyToClipboard(_ text: String) {
+        UIPasteboard.general.string = text
+    }
 }
 
 #Preview {
     NavigationStack {
         PetFormView(pet: Pet(name: "Bella", species: .canine), isNewPet: true)
     }
-    .modelContainer(for: Pet.self, inMemory: true)
+    .modelContainer(for: [Pet.self, PoisonControlCase.self], inMemory: true)
 }

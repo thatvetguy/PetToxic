@@ -22,6 +22,9 @@ final class Pet {
     var sortOrder: Int
     var prioritizeInBrowse: Bool = true
 
+    @Relationship(deleteRule: .cascade, inverse: \PoisonControlCase.pet)
+    var poisonControlCases: [PoisonControlCase] = []
+
     init(
         id: UUID = UUID(),
         name: String,

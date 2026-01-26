@@ -8,6 +8,6 @@ struct PetToxicApp: App {
             MainTabView()
                 .preferredColorScheme(.dark)
         }
-        .modelContainer(for: Pet.self)
+        .modelContainer(for: [Pet.self, PoisonControlCase.self])
     }
 }
