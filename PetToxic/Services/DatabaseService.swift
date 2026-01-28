@@ -1199,7 +1199,9 @@ class DatabaseService {
                 speciesRisks: [
                     SpeciesRisk(species: .dog, severity: .severe, notes: "Dogs may ingest larger quantities due to curious behavior; cardiac effects can be life-threatening; the long half-life of digitoxin means repeated small exposures can accumulate"),
                     SpeciesRisk(species: .cat, severity: .moderate, notes: "The most common signs in cats are vomiting and lethargy; cardiovascular effects are rare in cats according to toxicology specialists"),
-                    SpeciesRisk(species: .bird, severity: .severe, notes: "Birds are susceptible to cardiac glycoside toxicity; small body size increases risk")
+                    SpeciesRisk(species: .bird, severity: .severe, notes: "Birds are susceptible to cardiac glycoside toxicity; small body size increases risk"),
+                    SpeciesRisk(species: .smallMammal, severity: .severe, notes: "Small mammals are highly susceptible to cardiac glycoside toxicity; a retrospective study documented a 36.2% mortality rate in guinea pigs after foxglove ingestion"),
+                    SpeciesRisk(species: .reptile, severity: .severe, notes: "Reptiles are susceptible to cardiac glycosides; the mechanism affecting sodium-potassium ATPase pump function is universal across species")
                 ],
                 preventionTips: [
                     "Do not plant foxglove in areas accessible to pets",
@@ -1209,7 +1211,7 @@ class DatabaseService {
                     "Supervise pets around foxglove, especially young curious animals",
                     "Wear gloves when handling foxglove and wash hands thoroughly afterward"
                 ],
-                sources: ["Veterinary Information Network (VIN)", "ASPCA Animal Poison Control Center", "Pet Poison Helpline", "VETgirl"],
+                sources: ["ASPCA Animal Poison Control Center", "Pet Poison Helpline", "VETgirl", "Vetlexicon Exotis"],
                 relatedEntries: nil
             ),
 
@@ -1300,7 +1302,9 @@ class DatabaseService {
                 speciesRisks: [
                     SpeciesRisk(species: .dog, severity: .severe, notes: "Dogs are most commonly affected; severity depends on number of beans, degree of chewing, and time to treatment; patients with only GI signs tend to have good prognosis, but liver injury carries a guarded prognosis; mortality from beans is ~9%, but mortality from castor bean fertilizer/castor cake is ~85%"),
                     SpeciesRisk(species: .cat, severity: .severe, notes: "Cats are rarely affected (likely due to discerning palate) but are equally susceptible if exposure occurs; same severe toxicity expected"),
-                    SpeciesRisk(species: .bird, severity: .severe, notes: "Birds are susceptible to ricin toxicity; small body size increases risk from even minimal exposure")
+                    SpeciesRisk(species: .bird, severity: .severe, notes: "Birds are susceptible to ricin toxicity; small body size increases risk from even minimal exposure"),
+                    SpeciesRisk(species: .smallMammal, severity: .severe, notes: "Small mammals including rabbits and guinea pigs are highly susceptible to ricin toxicity; documented LD50 data confirms severe sensitivity and small body size increases risk of fatal outcomes"),
+                    SpeciesRisk(species: .reptile, severity: .severe, notes: "Reptiles are susceptible to ricin toxicity; the mechanism of blocking protein synthesis affects all species with eukaryotic cells")
                 ],
                 preventionTips: [
                     "Do not plant castor bean plants in areas accessible to pets — the risk is too high",
@@ -1310,7 +1314,7 @@ class DatabaseService {
                     "Be aware that castor bean plants may grow wild in warm climates — learn to identify them",
                     "If you suspect any exposure, seek emergency veterinary care immediately — there is no antidote and early intervention is critical"
                 ],
-                sources: ["Veterinary Information Network (VIN)", "ASPCA Animal Poison Control Center", "Pet Poison Helpline", "PubMed (case studies)"],
+                sources: ["ASPCA Animal Poison Control Center", "Pet Poison Helpline", "PubMed (case studies)", "Cornell University Poisonous Plants Database"],
                 relatedEntries: nil
             ),
 
@@ -11313,13 +11317,28 @@ Water hemlock: 3-6 feet tall near WATER sources, hollow stems with chambered roo
                 speciesRisks: [
                     SpeciesRisk(
                         species: .dog,
-                        severity: .moderate,
+                        severity: .severe,
                         notes: "Dogs rarely ingest enough to cause severe toxicity. Poisoning primarily affects grazing livestock. However, both plants are potentially lethal if sufficient amount consumed. Curious dogs near waterways may encounter water hemlock roots."
                     ),
                     SpeciesRisk(
                         species: .cat,
-                        severity: .moderate,
+                        severity: .severe,
                         notes: "Cats rarely ingest enough to cause severe toxicity. Poisoning primarily affects grazing livestock. Both plants are potentially lethal if sufficient amount consumed."
+                    ),
+                    SpeciesRisk(
+                        species: .bird,
+                        severity: .severe,
+                        notes: "Birds including turkeys and poultry are susceptible to hemlock alkaloids; poisoning is documented in diverse avian species"
+                    ),
+                    SpeciesRisk(
+                        species: .smallMammal,
+                        severity: .severe,
+                        notes: "Small mammals including rabbits are highly susceptible to coniine and cicutoxin; documented poisoning cases in rabbits and other small mammals"
+                    ),
+                    SpeciesRisk(
+                        species: .reptile,
+                        severity: .severe,
+                        notes: "Reptiles are likely susceptible to hemlock alkaloids; the neuromuscular blocking mechanism affects all vertebrate species"
                     )
                 ],
                 preventionTips: [
@@ -11330,11 +11349,11 @@ Water hemlock: 3-6 feet tall near WATER sources, hollow stems with chambered roo
                     "Hemlock TREES (Tsuga species) are NOT toxic—different plants"
                 ],
                 sources: [
-                    "Veterinary Information Network (VIN)",
                     "ASPCA Animal Poison Control Center",
                     "Pet Poison Helpline",
                     "Vetlexicon",
-                    "Merck Veterinary Manual"
+                    "Merck Veterinary Manual",
+                    "Colorado State University Poisonous Plants Database"
                 ],
                 relatedEntries: nil
             ),
