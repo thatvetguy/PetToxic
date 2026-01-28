@@ -1681,7 +1681,7 @@ class DatabaseService {
                 alternateNames: ["Poinsettia", "Euphorbia pulcherrima", "Christmas flower", "Christmas plant", "Mexican flame leaf", "Iris", "iris rhizome", "flag iris", "bearded iris", "Chrysanthemum", "chrysanthemums", "mums", "garden mums", "florist's mum", "Hosta", "hostas", "plantain lily", "funkia", "Baby's breath", "babys breath", "Gypsophila", "Gypsophila paniculata", "Carnation", "carnations", "Dianthus", "Dianthus caryophyllus", "pinks", "Jade plant", "jade plant", "Crassula ovata", "Crassula argentea", "money plant", "money tree", "lucky plant", "friendship tree", "Mistletoe", "mistletoe", "Phoradendron", "Phoradendron leucarpum", "American mistletoe", "Christmas mistletoe", "Holly", "holly", "Ilex", "Ilex aquifolium", "English holly", "Christmas holly", "holly berries", "Christmas cactus", "Schlumbergera", "Schlumbergera truncata", "crab claw cactus", "Thanksgiving cactus", "Easter cactus", "holiday cactus", "Clematis", "clematis vine", "Clematis spp", "virgin's bower", "leather flower", "leatherflower", "old man's beard", "traveller's joy", "Asparagus fern", "asparagus fern", "Asparagus setaceus", "Asparagus densiflorus", "Asparagus aethiopicus", "sprengeri fern", "foxtail fern", "plumosa fern", "lace fern", "emerald fern", "climbing asparagus", "asparagus fern berries", "Spring crocus", "spring crocus", "Crocus vernus", "Crocus spp", "Dutch crocus", "giant crocus", "snow crocus", "crocus bulb", "crocus corm"],
                 categories: [.plants, .holidayHazards],
                 imageAsset: "gi_irritants_thumb",
-                description: "Many common houseplants, garden plants, and cut flowers contain substances that can cause mild gastrointestinal irritation when ingested by pets. While these plants are technically 'toxic,' they rarely cause serious illness — symptoms are generally limited to vomiting, diarrhea, drooling, and temporary loss of appetite. This entry covers several frequently searched plants that fall into this mild GI irritant category: Poinsettia, Iris, Chrysanthemums (mums), Hosta, Baby's Breath, Carnations, Jade Plant, Mistletoe, Holly, Christmas Cactus, Clematis, Asparagus Fern, and Spring Crocus.",
+                description: "Many common houseplants, garden plants, and cut flowers contain substances that can cause mild gastrointestinal irritation when ingested by pets. While these plants are technically 'toxic,' they rarely cause serious illness — symptoms are generally limited to vomiting, diarrhea, drooling, and temporary loss of appetite. Plants in this category include: **Poinsettia**, **Iris**, **Chrysanthemums** (mums), **Hosta**, **Baby's Breath**, **Carnations**, **Jade Plant**, **Mistletoe** (American), **Holly**, **Christmas Cactus**, **Clematis**, **Asparagus Fern**, and **Spring Crocus**. Note: Spring Crocus is NOT the same as Autumn Crocus (Colchicum), which is extremely dangerous — see separate entry.",
                 toxicityInfo: "The plants in this group contain various irritating compounds but share a common characteristic: they cause only mild to moderate GI upset in the vast majority of cases. Animals can generally ingest these plants without severe repercussions.\n\n**Poinsettia** — Perhaps the most overhyped 'toxic' plant. The milky sap can cause mild oral irritation and GI upset, but poinsettia is NOT the deadly poison popular culture suggests. Studies have shown that a 50-pound dog would need to eat over 500 poinsettia leaves to approach a potentially toxic dose. Most pets that chew on poinsettia experience mild drooling or vomiting at worst.\n\n**Iris** — The rhizomes (underground stems) are more irritating than the foliage. Contains pentacyclic terpenoids (irisin, iridin) that cause GI upset. Most cases involve only vomiting and diarrhea. Severe bloody diarrhea is primarily a concern in grazing livestock, not household pets.\n\n**Chrysanthemums (Mums)** — Contain pyrethrins, sesquiterpene lactones, and other irritants. While pyrethrins are used in flea products, the concentration in mums is low. Ingestion typically causes drooling, vomiting, and diarrhea. Skin contact may cause mild dermatitis in sensitive animals.\n\n**Hosta** — Contains saponins that cause GI irritation. Very popular shade garden plants that dogs sometimes dig up. Effects are limited to vomiting, diarrhea, and depression.\n\n**Baby's Breath** — Common in floral bouquets. Contains gyposenin (a saponin) that causes mild GI upset. Dried baby's breath in arrangements is less toxic than fresh.\n\n**Carnations** — Contain unknown GI irritants. Ingestion causes mild vomiting, diarrhea, or drooling. Very low toxicity concern.\n\n**Jade Plant** — A popular succulent houseplant. The resins can cause mild GI irritation, but jade plants are considered essentially non-toxic by the ASPCA. Ingestion typically causes only mild vomiting, similar to any other greenery.\n\n**Mistletoe (American)** — The American mistletoe (Phoradendron species) used in holiday decorations contains compounds that are theoretically cardiotoxic (phoratoxins), but clinically significant cardiac effects are extremely rare in dogs and cats. The most common signs reported to ASPCA APCC are depression and vomiting. Much of the 'deadly mistletoe' reputation comes from European mistletoe (Viscum album), which is more toxic but rarely encountered in North America.\n\n**Holly** — The berries and leaves contain saponins that cause GI irritation. Signs include salivation, vomiting, lip smacking, head shaking, and diarrhea. Effects are self-limiting. Serious toxicity is rare despite holly's reputation.\n\n**Christmas Cactus** — Members of the Schlumbergera genus (Christmas, Thanksgiving, and Easter cacti) are not considered toxic. Ingestion may cause mild gastric upset at most. These are among the safest 'holiday plants' to have around pets.\n\n**Clematis** — This popular flowering vine contains irritating glycosides that can cause drooling, vomiting, and diarrhea if ingested. Thankfully, clematis has a very bitter taste that deters most pets from consuming significant amounts. Effects are self-limiting and rarely require more than monitoring.\n\n**Asparagus Fern** — Despite the name, asparagus ferns are not true ferns — they belong to the lily family. The plant contains sapogenins (steroidal saponins) that cause GI irritation. The small red berries are the most toxic part, but the foliage can also cause problems. Ingestion typically results in vomiting, diarrhea, and abdominal discomfort. Additionally, repeated skin contact with the plant can cause allergic dermatitis (skin irritation and rash) in both pets and humans. Effects are generally mild and self-limiting.\n\n**Spring Crocus** — IMPORTANT: Spring crocus (Crocus vernus and related Crocus species) is completely different from Autumn Crocus (Colchicum autumnale) and does NOT contain colchicine. Spring crocus belongs to the Iridaceae family and causes only mild GI upset if ingested — vomiting, diarrhea, and drooling that typically resolves without treatment. Do not confuse this with Autumn Crocus, which is extremely dangerous and can cause multi-organ failure. If you are unsure which type of crocus your pet ingested, treat it as an emergency and contact your veterinarian or poison control immediately.",
                 onsetTime: OnsetTime(
                     early: "GI signs (vomiting, diarrhea, drooling, loss of appetite) typically appear within a few hours of ingestion",
@@ -1700,7 +1700,9 @@ class DatabaseService {
                 speciesRisks: [
                     SpeciesRisk(species: .dog, severity: .low, notes: "All plants in this group cause only mild GI upset in dogs; serious complications are rare; symptomatic care is usually sufficient"),
                     SpeciesRisk(species: .cat, severity: .low, notes: "Same mild effects as dogs; cats may be more likely to chew on cut flowers and houseplants"),
-                    SpeciesRisk(species: .smallMammal, severity: .low, notes: "Rabbits and other small mammals may experience GI upset; because rabbits cannot vomit, monitor for lethargy, anorexia, abdominal pain, or diarrhea")
+                    SpeciesRisk(species: .smallMammal, severity: .low, notes: "Rabbits and other small mammals may experience GI upset; because rabbits cannot vomit, monitor for lethargy, anorexia, abdominal pain, or diarrhea"),
+                    SpeciesRisk(species: .bird, severity: .low, notes: "Most plants in this category cause only mild GI upset in birds; holly berries may be more concerning due to small body size; monitor for lethargy and decreased appetite"),
+                    SpeciesRisk(species: .reptile, severity: .low, notes: "Herbivorous reptiles may sample these plants; effects are generally limited to mild GI upset; spring crocus and mistletoe should be kept away from tortoises and iguanas")
                 ],
                 preventionTips: [
                     "While these plants are low-toxicity, it's still best to keep them out of reach of pets that like to chew on vegetation",
@@ -1715,7 +1717,7 @@ class DatabaseService {
                     "Asparagus fern berries are the most toxic part — remove berries if you keep this plant around pets",
                     "Spring crocus causes only mild GI upset, but if you're unsure whether a crocus is spring or autumn variety, treat any ingestion as an emergency"
                 ],
-                sources: ["ASPCA Animal Poison Control Center", "Pet Poison Helpline", "Veterinary Information Network (VIN)", "VCA Animal Hospitals"],
+                sources: ["ASPCA Animal Poison Control Center", "Pet Poison Helpline", "VCA Animal Hospitals", "Merck Veterinary Manual"],
                 relatedEntries: nil
             ),
 
@@ -2310,7 +2312,9 @@ class DatabaseService {
                 speciesRisks: [
                     SpeciesRisk(species: .dog, severity: .moderate, notes: "Dogs are commonly affected. Small dogs are at particular risk — they can suffer liver and kidney damage with relatively limited exposure. Progression: trembling → staggering → recumbency → tetanus-like seizures. Liver and kidney damage can be permanent if not treated promptly."),
                     SpeciesRisk(species: .cat, severity: .moderate, notes: "Cats are susceptible to the same neurologic and organ toxicity as dogs. The bitter taste may limit ingestion, but any exposure should be taken seriously."),
-                    SpeciesRisk(species: .smallMammal, severity: .moderate, notes: "Limited data in small mammals; small body size increases risk. Seek veterinary care for any ingestion.")
+                    SpeciesRisk(species: .smallMammal, severity: .moderate, notes: "Limited data in small mammals; small body size increases risk. Seek veterinary care for any ingestion."),
+                    SpeciesRisk(species: .bird, severity: .moderate, notes: "Limited data; isoquinoline alkaloids affect GABA receptors across species; birds' small body size increases risk — any ingestion should prompt veterinary consultation"),
+                    SpeciesRisk(species: .reptile, severity: .moderate, notes: "Limited data on reptile susceptibility; the alkaloids' neurologic effects (GABA antagonism) likely affect reptiles similarly to other species; keep herbivorous reptiles away from bleeding heart plants")
                 ],
                 preventionTips: [
                     "The roots are the most toxic part — if you grow bleeding heart, ensure dogs cannot dig up the roots",
@@ -2320,7 +2324,7 @@ class DatabaseService {
                     "If you see your pet eating any part of this plant, seek veterinary care immediately — do not wait for symptoms to appear",
                     "Bring a piece of the plant to the veterinarian if possible to confirm identification"
                 ],
-                sources: ["IVIS - Guide to Poisonous House and Garden Plants (Colorado State University)", "Pet Poison Helpline", "WagWalking Veterinary Resources", "Veterinary Information Network (VIN)"],
+                sources: ["Pet Poison Helpline", "ASPCA Animal Poison Control Center", "Colorado State University Guide to Poisonous Plants", "WagWalking Veterinary Resources"],
                 relatedEntries: nil
             ),
 
@@ -2964,11 +2968,11 @@ class DatabaseService {
                 ],
                 entrySeverity: .severe,
                 speciesRisks: [
-                    SpeciesRisk(species: .dog, severity: .high, notes: "Dogs may be attracted to dig up roots or chew on plants. Cardiac and neurological effects can be life-threatening. There is no antidote — all exposure should be treated as an emergency."),
-                    SpeciesRisk(species: .cat, severity: .high, notes: "Cats are susceptible to aconitine toxicity. Any ingestion warrants immediate veterinary care. Cardiac arrhythmias are the primary concern."),
-                    SpeciesRisk(species: .smallMammal, severity: .high, notes: "Small body size increases risk of severe toxicity. Limited data available — treat any exposure as potentially life-threatening."),
-                    SpeciesRisk(species: .bird, severity: .moderate, notes: "Limited data available. Assume toxicity and seek veterinary care for any suspected exposure."),
-                    SpeciesRisk(species: .reptile, severity: .moderate, notes: "Limited data available. Avoid exposure and seek veterinary care if ingestion is suspected.")
+                    SpeciesRisk(species: .dog, severity: .severe, notes: "Dogs may be attracted to dig up roots or chew on plants. Cardiac and neurological effects can be life-threatening. There is no antidote — all exposure should be treated as an emergency."),
+                    SpeciesRisk(species: .cat, severity: .severe, notes: "Cats are susceptible to aconitine toxicity. Any ingestion warrants immediate veterinary care. Cardiac arrhythmias are the primary concern."),
+                    SpeciesRisk(species: .smallMammal, severity: .severe, notes: "Rabbits, guinea pigs, and other small mammals are susceptible to aconitine poisoning; laboratory studies confirm toxicity in multiple rodent species; there is no antidote — any suspected exposure requires immediate veterinary care"),
+                    SpeciesRisk(species: .bird, severity: .severe, notes: "Birds are highly susceptible to aconitine toxicity; the cardiac and neurological effects occur across all vertebrate species; even minimal exposure can be fatal due to small body size"),
+                    SpeciesRisk(species: .reptile, severity: .severe, notes: "Aconitine affects sodium channels in nerve and cardiac tissue — a mechanism conserved across vertebrates; reptiles are assumed to be equally susceptible; keep all reptile enclosures far from monkshood plants")
                 ],
                 preventionTips: [
                     "Do not plant monkshood in areas accessible to pets",
@@ -2978,7 +2982,7 @@ class DatabaseService {
                     "Be aware that dried plant material remains toxic",
                     "Learn to identify monkshood — it has distinctive hooded flowers on tall spikes"
                 ],
-                sources: ["Veterinary Information Network (VIN)", "ASPCA Animal Poison Control Center", "Tilley and Smith, The 5-Minute Veterinary Consult: Canine and Feline", "Merck Veterinary Manual"],
+                sources: ["ASPCA Animal Poison Control Center", "Pet Poison Helpline", "National Capital Poison Center", "Colorado State University Guide to Poisonous Plants"],
                 relatedEntries: nil
             ),
 
@@ -3015,11 +3019,11 @@ class DatabaseService {
                 ],
                 entrySeverity: .high,
                 speciesRisks: [
-                    SpeciesRisk(species: .dog, severity: .moderate, notes: "Dogs may ingest plant material while exploring. Leaf ingestion may cause mild or no signs; flowers and seeds are significantly more dangerous. Monitor for anticholinergic signs (dilated pupils, dry mouth, rapid heart rate, agitation)."),
+                    SpeciesRisk(species: .dog, severity: .high, notes: "Dogs may ingest plant material while exploring. Leaf ingestion may cause mild or no signs; flowers and seeds are significantly more dangerous. Monitor for anticholinergic signs (dilated pupils, dry mouth, rapid heart rate, agitation)."),
                     SpeciesRisk(species: .cat, severity: .high, notes: "Cats ingesting flowers or seeds are at higher risk for significant toxicity. CNS effects and hyperthermia can be severe. Seek veterinary care promptly for any suspected ingestion."),
-                    SpeciesRisk(species: .smallMammal, severity: .moderate, notes: "Rabbits and some herbivores show relative resistance to tropane alkaloids. However, ferrets and other small mammals may be more susceptible. Seek veterinary care for any suspected exposure."),
-                    SpeciesRisk(species: .bird, severity: .moderate, notes: "Limited data available. Assume susceptibility and seek veterinary care for any suspected exposure."),
-                    SpeciesRisk(species: .reptile, severity: .low, notes: "Limited data available. Seek veterinary care for any suspected exposure.")
+                    SpeciesRisk(species: .smallMammal, severity: .high, notes: "Rabbits and other small mammals are susceptible to anticholinergic toxicity from Datura; small body size increases risk; seeds are the most toxic part"),
+                    SpeciesRisk(species: .bird, severity: .high, notes: "Birds are susceptible to tropane alkaloid toxicity; poisoning in birds often occurs when Datura seeds contaminate grain or feed; pet birds may be exposed to seeds in dried flower arrangements — remove seeds from pods before using decoratively"),
+                    SpeciesRisk(species: .reptile, severity: .high, notes: "Limited data but reptiles are likely susceptible to tropane alkaloids; Datura is listed as toxic to herbivorous reptiles by exotic animal veterinary resources; keep away from tortoise and iguana enclosures")
                 ],
                 preventionTips: [
                     "Learn to identify jimsonweed (Datura stramonium) — it commonly grows as a weed in yards, fields, and disturbed areas",
@@ -3029,7 +3033,7 @@ class DatabaseService {
                     "Be aware that all parts of these plants are toxic, but flowers and seeds contain the highest alkaloid concentrations",
                     "Educate family members about the toxicity of these attractive but dangerous plants"
                 ],
-                sources: ["Veterinary Information Network (VIN)", "ASPCA Animal Poison Control Center", "Tilley and Smith, The 5-Minute Veterinary Consult: Canine and Feline", "Pet Poison Helpline"],
+                sources: ["ASPCA Animal Poison Control Center", "Pet Poison Helpline", "Colorado State University Guide to Poisonous Plants (IVIS)", "Cornell University Poisonous Plants Database"],
                 relatedEntries: nil
             ),
 
@@ -3082,7 +3086,7 @@ class DatabaseService {
                     "Educate children that the seeds are not edible peas or beans — human poisonings have occurred",
                     "Consider removing golden chain trees from your property if you have pets, especially dogs that tend to chew on things"
                 ],
-                sources: ["Veterinary Information Network (VIN)", "Pet Poison Helpline — Golden Chain Tree", "Clarke ML, Clarke EG, King T. Fatal laburnum poisoning in a dog. Vet Rec. 1971;88(7):199-200", "Clinical Veterinary Toxicology (Plumlee KH, ed.)", "Vetlexicon Canis — Cardiotoxic Plant Poisoning"],
+                sources: ["Pet Poison Helpline", "ASPCA Animal Poison Control Center", "Clinical Veterinary Toxicology (Plumlee)", "Cornell University Poisonous Plants Database"],
                 relatedEntries: nil
             ),
 
@@ -3164,8 +3168,9 @@ class DatabaseService {
                 speciesRisks: [
                     SpeciesRisk(species: .dog, severity: .moderate, notes: "Dogs may dig up and chew hellebore roots when investigating garden beds. The bitter taste usually limits ingestion. Cardiac glycoside effects are possible with large ingestions — seek veterinary care."),
                     SpeciesRisk(species: .cat, severity: .moderate, notes: "Cats are less likely to ingest hellebores but may chew on leaves. GI upset is the most common presentation. Contact your veterinarian for any ingestion."),
-                    SpeciesRisk(species: .smallMammal, severity: .moderate, notes: "Small body size may increase risk. Keep rabbits and guinea pigs away from hellebore plants in the garden."),
-                    SpeciesRisk(species: .bird, severity: .moderate, notes: "Limited data available. Assume susceptibility and seek veterinary care for any suspected ingestion.")
+                    SpeciesRisk(species: .smallMammal, severity: .moderate, notes: "Rabbits and guinea pigs are susceptible to hellebore toxicity; the cardiac glycosides and protoanemonin irritants affect all mammalian species; the bitter taste usually limits ingestion but any exposure warrants monitoring"),
+                    SpeciesRisk(species: .bird, severity: .high, notes: "Limited data available. Assume susceptibility and seek veterinary care for any suspected ingestion."),
+                    SpeciesRisk(species: .reptile, severity: .moderate, notes: "Herbivorous reptiles should be kept away from hellebores; the cardiac glycosides can affect reptile hearts similarly to other vertebrates; limited specific data but assume susceptibility")
                 ],
                 preventionTips: [
                     "Wear gloves when handling hellebores — the sap can cause skin irritation",
@@ -3174,7 +3179,7 @@ class DatabaseService {
                     "Keep hellebore holiday arrangements out of reach of pets",
                     "If your pet is attracted to chewing plants, hellebores are not a good choice for accessible garden areas"
                 ],
-                sources: ["ASPCA Animal Poison Control Center", "Veterinary Information Network (VIN)", "Pet Poison Helpline", "Merck Veterinary Manual", "Plants of the Pacific Northwest Coast (Pojar & MacKinnon)"],
+                sources: ["ASPCA Animal Poison Control Center", "Pet Poison Helpline", "Cornell University Poisonous Plants Database", "Merck Veterinary Manual"],
                 relatedEntries: nil
             ),
 
