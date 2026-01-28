@@ -838,7 +838,9 @@ class DatabaseService {
                 speciesRisks: [
                     SpeciesRisk(species: .dog, severity: .severe, notes: "Dogs are most commonly affected; young dogs are especially prone to chewing on the plant; even one seed can be fatal"),
                     SpeciesRisk(species: .cat, severity: .severe, notes: "No published case reports exist in cats, but toxic effects are anticipated to be the same as or worse than in dogs; cats should be considered equally at risk"),
-                    SpeciesRisk(species: .bird, severity: .low, notes: "Insufficient data on cycad toxicity in birds; avoid exposure as a precaution")
+                    SpeciesRisk(species: .bird, severity: .low, notes: "Insufficient data on cycad toxicity in birds; avoid exposure as a precaution"),
+                    SpeciesRisk(species: .smallMammal, severity: .severe, notes: "Small mammals are susceptible to cycasin hepatotoxicity; the liver-damaging mechanism affects all mammals. Rabbits, guinea pigs, and other small mammals should be considered at severe risk. Even minimal ingestion can be fatal due to small body size."),
+                    SpeciesRisk(species: .reptile, severity: .severe, notes: "Limited specific data on reptiles, but cycasin's hepatotoxic mechanism would likely affect any animal with a liver. Avoid all exposure; seek veterinary care immediately if ingestion suspected.")
                 ],
                 preventionTips: [
                     "Do not keep sago palms or any cycad species in homes or yards where dogs or cats have access",
@@ -848,7 +850,7 @@ class DatabaseService {
                     "Young dogs are especially prone to chewing on plants — supervise puppies around all landscaping",
                     "If you suspect any exposure, seek emergency veterinary care immediately — do not wait for symptoms to appear"
                 ],
-                sources: ["Veterinary Information Network (VIN)", "ASPCA Animal Poison Control Center", "Pet Poison Helpline", "Merck Veterinary Manual"],
+                sources: ["ASPCA Animal Poison Control Center", "Pet Poison Helpline", "Merck Veterinary Manual"],
                 relatedEntries: nil
             ),
 
@@ -1460,7 +1462,8 @@ class DatabaseService {
                     SpeciesRisk(species: .dog, severity: .severe, notes: "Dogs may chew on yew branches or eat fallen berries; a lethal dose can be consumed simply by playing with branches; death can occur rapidly with no warning signs; no antidote exists"),
                     SpeciesRisk(species: .cat, severity: .severe, notes: "Cats are equally susceptible to taxine cardiotoxicity; smaller body size means even minimal ingestion can be fatal"),
                     SpeciesRisk(species: .smallMammal, severity: .severe, notes: "Chinchillas are potentially susceptible to yew toxicity"),
-                    SpeciesRisk(species: .bird, severity: .severe, notes: "Budgerigars and canaries are susceptible; interestingly, macaws appear to be resistant, but other pet bird species should be considered at risk")
+                    SpeciesRisk(species: .bird, severity: .severe, notes: "Budgerigars and canaries are susceptible; interestingly, macaws appear to be resistant, but other pet bird species should be considered at risk"),
+                    SpeciesRisk(species: .reptile, severity: .severe, notes: "Taxine alkaloids block sodium and calcium channels in cardiac tissue, a mechanism that would affect any vertebrate with a heart. Limited reptile-specific data, but the universal cardiotoxic mechanism warrants severe classification. Avoid all exposure.")
                 ],
                 preventionTips: [
                     "Do not plant yew in areas accessible to pets — the risk of sudden death is too high",
@@ -1471,7 +1474,7 @@ class DatabaseService {
                     "Toxin concentrations are highest in winter — be extra vigilant during cold months",
                     "If you suspect any yew ingestion, seek emergency veterinary care immediately — do not wait for symptoms; death can occur within hours"
                 ],
-                sources: ["Veterinary Information Network (VIN)", "ASPCA Animal Poison Control Center", "Pet Poison Helpline", "Merck Veterinary Manual"],
+                sources: ["ASPCA Animal Poison Control Center", "Pet Poison Helpline", "Merck Veterinary Manual", "dvm360 Toxicology Brief"],
                 relatedEntries: nil
             ),
 
@@ -3436,7 +3439,9 @@ class DatabaseService {
                 speciesRisks: [
                     SpeciesRisk(species: .dog, severity: .severe, notes: "EXTREMELY TOXIC — documented fatalities from eating flowers or minimal plant material; bright flowers may attract curious dogs; treat ANY exposure as a life-threatening emergency"),
                     SpeciesRisk(species: .cat, severity: .severe, notes: "Same extreme toxicity as dogs; all exposures should be treated as emergencies"),
-                    SpeciesRisk(species: .bird, severity: .severe, notes: "Highly toxic to birds; nectar is toxic to honey bees as well")
+                    SpeciesRisk(species: .bird, severity: .severe, notes: "Highly toxic to birds; nectar is toxic to honey bees as well"),
+                    SpeciesRisk(species: .smallMammal, severity: .severe, notes: "Research confirms rabbits and guinea pigs are highly susceptible to Gelsemium alkaloids, showing marked organ congestion, respiratory depression, and severe liver, kidney, and cardiac effects. The minimal lethal dose in small mammals is extremely low. All small mammal exposure should be treated as a life-threatening emergency."),
+                    SpeciesRisk(species: .reptile, severity: .severe, notes: "The neurotoxic alkaloids (gelsemine) cause progressive paralysis and respiratory failure through effects on nerve transmission. This mechanism would affect any vertebrate with a nervous system. Treat any exposure as an emergency.")
                 ],
                 preventionTips: [
                     "Do NOT plant yellow jessamine in areas accessible to pets — this plant is too dangerous for pet-friendly landscaping",
@@ -3446,7 +3451,7 @@ class DatabaseService {
                     "Do not confuse with true jasmine (Jasminum) which is non-toxic — yellow jessamine is NOT a jasmine despite similar names",
                     "If your pet eats ANY part of this plant, seek emergency veterinary care IMMEDIATELY — do not wait for symptoms"
                 ],
-                sources: ["Veterinary Information Network (VIN)", "ASPCA Animal Poison Control Center", "Pet Poison Helpline", "Colorado State University Guide to Poisonous Plants"],
+                sources: ["ASPCA Animal Poison Control Center", "Pet Poison Helpline", "Colorado State University Guide to Poisonous Plants"],
                 relatedEntries: nil
             ),
 
