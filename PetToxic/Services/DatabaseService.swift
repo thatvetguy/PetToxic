@@ -11281,7 +11281,7 @@ Water hemlock: 3-6 feet tall near WATER sources, hollow stems with chambered roo
 
 **PROGNOSIS:**
 - Poison hemlock: If pet survives, recovery usually complete within 1-2 days
-- Water hemlock: Guarded. Survival beyond 8 hours with mild signs = generally recover. Severe seizures = poor prognosis.
+- Water hemlock: Guarded to poor prognosis
 """,
                 toxicityInfo: "TWO different toxins from TWO different plants: Poison hemlock contains coniine (piperidine alkaloid) with nicotine-like effects causing progressive PARALYSIS and death from respiratory failure. Water hemlock contains cicutoxin and is the most violently toxic plant in North America, causing violent SEIZURES with death possible within 15 MINUTES. Companion animal cases are rare—dogs and cats typically don't consume enough.",
                 onsetTime: OnsetTime(
@@ -11346,7 +11346,8 @@ Water hemlock: 3-6 feet tall near WATER sources, hollow stems with chambered roo
                     "Remove hemlock plants from yards and pet-accessible areas",
                     "Keep dogs leashed near streams and wet areas",
                     "Do not allow pets to chew on unfamiliar plants",
-                    "Hemlock TREES (Tsuga species) are NOT toxic—different plants"
+                    "Hemlock TREES (Tsuga species) are NOT toxic—different plants",
+                    "If you suspect any hemlock ingestion, seek emergency veterinary care immediately — water hemlock can kill within minutes"
                 ],
                 sources: [
                     "ASPCA Animal Poison Control Center",
