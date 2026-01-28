@@ -973,7 +973,9 @@ class DatabaseService {
                 speciesRisks: [
                     SpeciesRisk(species: .dog, severity: .severe, notes: "Dogs are highly susceptible; even small amounts can cause life-threatening cardiac effects; this toxicosis is less commonly seen in small animal practice but poses significant risk when it occurs"),
                     SpeciesRisk(species: .cat, severity: .severe, notes: "Cats are highly susceptible to cardiac glycosides; smaller body size increases risk from even minimal exposure"),
-                    SpeciesRisk(species: .bird, severity: .severe, notes: "Birds (including budgerigars and parakeets) are susceptible to oleander toxicity")
+                    SpeciesRisk(species: .bird, severity: .severe, notes: "Birds (including budgerigars and parakeets) are susceptible to oleander toxicity"),
+                    SpeciesRisk(species: .smallMammal, severity: .severe, notes: "Small mammals including rabbits are highly susceptible to oleander toxicity; rodents may have some resistance to cardiac effects but can still develop neurological signs"),
+                    SpeciesRisk(species: .reptile, severity: .severe, notes: "Reptiles including tortoises are susceptible to oleander toxicity; documented cases confirm cardiac glycosides affect reptilian species")
                 ],
                 preventionTips: [
                     "Do not plant oleander in yards where pets have access — there is no safe way to have this plant around animals",
@@ -983,7 +985,7 @@ class DatabaseService {
                     "Be aware that oleander is commonly planted along highways and in public spaces in warm climates",
                     "Do not burn oleander clippings — the smoke can also be toxic if inhaled"
                 ],
-                sources: ["Veterinary Information Network (VIN)", "ASPCA Animal Poison Control Center", "Pet Poison Helpline", "DVM360"],
+                sources: ["ASPCA Animal Poison Control Center", "Pet Poison Helpline", "DVM360", "dvm360"],
                 relatedEntries: nil
             ),
 
@@ -1249,7 +1251,9 @@ class DatabaseService {
                 speciesRisks: [
                     SpeciesRisk(species: .dog, severity: .severe, notes: "Dogs are susceptible to serious cardiac effects; a published case report documented sudden collapse and death after ingestion; even small amounts can be dangerous"),
                     SpeciesRisk(species: .cat, severity: .severe, notes: "Cats are equally susceptible to cardiac glycoside toxicity; this plant does NOT cause kidney failure like true lilies — the danger is cardiac, not renal"),
-                    SpeciesRisk(species: .bird, severity: .severe, notes: "Birds are highly susceptible due to small body size; even minimal exposure can be dangerous")
+                    SpeciesRisk(species: .bird, severity: .severe, notes: "Birds are highly susceptible due to small body size; even minimal exposure can be dangerous"),
+                    SpeciesRisk(species: .smallMammal, severity: .severe, notes: "Small mammals including rabbits, hamsters, and guinea pigs are susceptible to the cardiac glycosides in lily of the valley; the mechanism affecting heart function is consistent across mammalian species"),
+                    SpeciesRisk(species: .reptile, severity: .severe, notes: "Reptiles are susceptible to cardiac glycoside toxicity; the mechanism affecting cellular ion pumps is universal across vertebrate species")
                 ],
                 preventionTips: [
                     "Do not plant lily of the valley in areas accessible to pets — there is no safe way to have this plant around animals",
@@ -1259,7 +1263,7 @@ class DatabaseService {
                     "Lily of the valley spreads aggressively via underground rhizomes — check for it spreading into pet-accessible areas",
                     "If you suspect any exposure, seek veterinary care immediately — do not wait for symptoms"
                 ],
-                sources: ["Veterinary Information Network (VIN)", "ASPCA Animal Poison Control Center", "Pet Poison Helpline", "JAVMA (case report)"],
+                sources: ["ASPCA Animal Poison Control Center", "Pet Poison Helpline", "JAVMA (case report)", "Merck Veterinary Manual"],
                 relatedEntries: nil
             ),
 
@@ -3296,7 +3300,9 @@ class DatabaseService {
                 speciesRisks: [
                     SpeciesRisk(species: .dog, severity: .severe, notes: "EXTREMELY TOXIC if seeds are chewed; intact seeds may pass without harm but ANY suspected ingestion should be treated as an emergency; NO ANTIDOTE exists"),
                     SpeciesRisk(species: .cat, severity: .severe, notes: "Same extreme toxicity as dogs; cats may encounter seeds if brought into the home as jewelry or crafts"),
-                    SpeciesRisk(species: .bird, severity: .severe, notes: "Wild birds appear immune and spread the seeds, but pet birds are likely susceptible; the attractive red seeds may be appealing to caged birds")
+                    SpeciesRisk(species: .bird, severity: .severe, notes: "Wild birds appear unaffected as they typically pass intact seeds without damage; however, if seeds are chewed or damaged, birds can develop severe toxicity from abrin exposure"),
+                    SpeciesRisk(species: .smallMammal, severity: .severe, notes: "Small mammals including rabbits are highly susceptible to abrin toxicity; even minimal amounts of the toxin from damaged seeds can cause severe poisoning"),
+                    SpeciesRisk(species: .reptile, severity: .severe, notes: "Reptiles are susceptible to abrin toxicity if exposed to damaged seeds; the ribosome-inhibiting mechanism affects all species with eukaryotic cells")
                 ],
                 preventionTips: [
                     "Learn to identify rosary pea vines if you live in warm climates (Florida, Hawaii, Caribbean, Gulf Coast) — the distinctive red and black seeds are unmistakable",
@@ -3306,7 +3312,7 @@ class DatabaseService {
                     "If your pet is exposed to rosary pea seeds, contact your veterinarian or poison control immediately — even if the seeds appear intact",
                     "Time is critical: early decontamination (inducing vomiting, activated charcoal) offers the best chance of preventing absorption"
                 ],
-                sources: ["ASPCA Animal Poison Control Center", "National Poison Control Center (Poison.org)", "IVIS - Guide to Poisonous House and Garden Plants", "Veterinary Information Network (VIN)", "International Programme on Chemical Safety (INCHEM)"],
+                sources: ["ASPCA Animal Poison Control Center", "National Poison Control Center (Poison.org)", "IVIS (International Veterinary Information Service)", "International Programme on Chemical Safety (INCHEM)"],
                 relatedEntries: nil
             ),
 
