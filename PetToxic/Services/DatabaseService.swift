@@ -931,7 +931,9 @@ class DatabaseService {
                 speciesRisks: [
                     SpeciesRisk(species: .dog, severity: .moderate, notes: "Dogs are most commonly affected because they dig up and chew on bulbs; ingestion of flowers or leaves typically causes only mild, transient GI upset"),
                     SpeciesRisk(species: .cat, severity: .moderate, notes: "Cats may chew on leaves or flowers; bulb ingestion is less common but equally dangerous; note that cats with nausea may seek out plants to help them vomit, so plant material in vomitus is not always the primary cause of illness"),
-                    SpeciesRisk(species: .bird, severity: .moderate, notes: "Birds may be affected if they chew on plant material; limited data available")
+                    SpeciesRisk(species: .bird, severity: .moderate, notes: "Birds may be affected if they chew on plant material; limited data available"),
+                    SpeciesRisk(species: .smallMammal, severity: .high, notes: "Tulips and hyacinths are toxic to rabbits, guinea pigs, hamsters, and chinchillas; all bulb plants are considered dangerous to small mammals; can cause severe GI upset, weakness, and potentially fatal outcomes in small pets"),
+                    SpeciesRisk(species: .reptile, severity: .high, notes: "Both tulips and hyacinths are listed as toxic to tortoises and reptiles; the alkaloid compounds (tulipalin A and B) and glycosides affect reptiles similarly to mammals; should not be planted in or near reptile enclosures")
                 ],
                 preventionTips: [
                     "Store unplanted bulbs in a secure location out of pet reach — a bag of bulbs is a common source of serious poisoning",
@@ -940,7 +942,7 @@ class DatabaseService {
                     "Keep cut tulips and hyacinths in vases out of pet reach; the water may also contain irritating compounds",
                     "If you see your pet chewing on tulip or hyacinth plants, contact your veterinarian even if symptoms haven't appeared yet"
                 ],
-                sources: ["Veterinary Information Network (VIN)", "ASPCA Animal Poison Control Center", "Pet Poison Helpline", "DVM360"],
+                sources: ["ASPCA Animal Poison Control Center", "Pet Poison Helpline", "California Turtle & Tortoise Club (CTTC)", "DVM360"],
                 relatedEntries: nil
             ),
 
@@ -1816,7 +1818,9 @@ class DatabaseService {
                 speciesRisks: [
                     SpeciesRisk(species: .dog, severity: .moderate, notes: "Causes intense GI distress (vomiting, diarrhea, abdominal pain); severe effects are unlikely unless very large amounts are ingested"),
                     SpeciesRisk(species: .cat, severity: .moderate, notes: "Same GI effects as dogs; cats may be attracted to trailing vines indoors"),
-                    SpeciesRisk(species: .bird, severity: .moderate, notes: "Limited data; birds should be kept away from English ivy")
+                    SpeciesRisk(species: .bird, severity: .moderate, notes: "Limited data; birds should be kept away from English ivy"),
+                    SpeciesRisk(species: .smallMammal, severity: .moderate, notes: "Rabbits, guinea pigs, and other small mammals are susceptible to English ivy toxicity; the saponins and falcarinol cause GI irritation similar to dogs and cats; secondary GI stasis is a concern in rabbits"),
+                    SpeciesRisk(species: .reptile, severity: .moderate, notes: "English ivy is listed as toxic to tortoises and herbivorous reptiles; contains saponins that cause digestive upset; should not be planted in tortoise enclosures or used as vivarium decoration for herbivorous species")
                 ],
                 preventionTips: [
                     "Keep indoor English ivy plants in hanging baskets or on high shelves out of pet reach",
@@ -1826,7 +1830,7 @@ class DatabaseService {
                     "Never burn English ivy clippings — toxins can become airborne",
                     "If your pet develops vomiting after chewing on ivy, contact your veterinarian"
                 ],
-                sources: ["Veterinary Information Network (VIN)", "ASPCA Animal Poison Control Center", "Pet Poison Helpline"],
+                sources: ["ASPCA Animal Poison Control Center", "Pet Poison Helpline", "The Tortoise Table"],
                 relatedEntries: nil
             ),
 
@@ -1858,7 +1862,9 @@ class DatabaseService {
                 speciesRisks: [
                     SpeciesRisk(species: .dog, severity: .high, notes: "Seeds and pods are most dangerous — as few as two seeds can cause severe illness in small dogs; entire plant is toxic"),
                     SpeciesRisk(species: .cat, severity: .high, notes: "Same toxicity concerns as dogs; smaller body size increases risk from even minimal seed ingestion"),
-                    SpeciesRisk(species: .bird, severity: .high, notes: "Birds are susceptible; small body size makes even small exposures potentially serious")
+                    SpeciesRisk(species: .bird, severity: .high, notes: "Birds are susceptible; small body size makes even small exposures potentially serious"),
+                    SpeciesRisk(species: .smallMammal, severity: .high, notes: "All parts of wisteria are toxic to rabbits, guinea pigs, and other small mammals; the seeds and pods are most dangerous and can cause severe GI upset; small body size increases risk from even minimal seed ingestion"),
+                    SpeciesRisk(species: .reptile, severity: .high, notes: "Wisteria is listed as toxic to tortoises and reptiles; the lectin and wisterin glycoside cause GI distress; should not be planted near tortoise enclosures")
                 ],
                 preventionTips: [
                     "Keep dogs away from wisteria vines, especially when seed pods are present",
@@ -1868,7 +1874,7 @@ class DatabaseService {
                     "If you suspect your pet has eaten any part of a wisteria plant, especially seeds or pods, contact your veterinarian immediately",
                     "Consider fencing off wisteria or choosing non-toxic climbing vines if you have curious pets"
                 ],
-                sources: ["Veterinary Information Network (VIN)", "ASPCA Animal Poison Control Center", "Pet Poison Helpline"],
+                sources: ["ASPCA Animal Poison Control Center", "Pet Poison Helpline", "Tye-Dyed Iguana Reptile Care"],
                 relatedEntries: nil
             ),
 
@@ -1998,7 +2004,9 @@ class DatabaseService {
                 speciesRisks: [
                     SpeciesRisk(species: .dog, severity: .moderate, notes: "GI upset is the most common outcome; neurological signs are uncommon in dogs in the US because American varieties are less toxic and dogs rarely eat enough; European horse chestnut is more toxic; nuts also pose foreign body/obstruction risk"),
                     SpeciesRisk(species: .cat, severity: .moderate, notes: "Cats are susceptible but rarely ingest these nuts due to their selective eating habits"),
-                    SpeciesRisk(species: .bird, severity: .moderate, notes: "Limited data; birds should be kept away from horse chestnuts as a precaution")
+                    SpeciesRisk(species: .bird, severity: .moderate, notes: "Limited data; birds should be kept away from horse chestnuts as a precaution"),
+                    SpeciesRisk(species: .smallMammal, severity: .high, notes: "Horse chestnut is toxic to rabbits, guinea pigs, and hamsters; a PubMed study documented toxicity in hamsters with effects including depression, incoordination, paralysis, and death; small body size means even one or two seeds could cause serious illness"),
+                    SpeciesRisk(species: .reptile, severity: .moderate, notes: "Horse chestnut is listed as toxic to tortoises on multiple reptile care resources; the saponins (aesculin) that affect mammals are expected to cause similar GI effects in reptiles; limited species-specific data available but ingestion should be prevented")
                 ],
                 preventionTips: [
                     "Rake up fallen horse chestnuts and buckeyes from your yard regularly, especially in autumn",
@@ -2008,7 +2016,7 @@ class DatabaseService {
                     "The bitter taste usually deters dogs from eating large amounts, but some determined chewers may still be at risk",
                     "If your dog ingests horse chestnuts or buckeyes, contact your veterinarian — monitor for GI upset and potential obstruction"
                 ],
-                sources: ["Veterinary Information Network (VIN)", "ASPCA Animal Poison Control Center", "Pet Poison Helpline", "Clinical Veterinary Toxicology (Plumlee)"],
+                sources: ["ASPCA Animal Poison Control Center", "Pet Poison Helpline", "PubMed (Williams & Olsen, 1984)", "Clinical Veterinary Toxicology (Plumlee)"],
                 relatedEntries: nil
             ),
 
@@ -3087,7 +3095,8 @@ class DatabaseService {
                     SpeciesRisk(species: .dog, severity: .moderate, notes: "Dogs may be attracted to lupine seed pods. Seeds have the highest toxin concentration. Most ingestions cause GI upset and mild neurological signs. Large seed ingestions warrant veterinary evaluation."),
                     SpeciesRisk(species: .cat, severity: .moderate, notes: "Cats are less likely to ingest lupine but should be monitored if exposure is suspected. Seek veterinary care for any ingestion."),
                     SpeciesRisk(species: .smallMammal, severity: .high, notes: "Small body size increases risk of serious toxicity. Rabbits and guinea pigs are susceptible. Keep pregnant animals away — quinolizidine alkaloids are teratogenic."),
-                    SpeciesRisk(species: .bird, severity: .moderate, notes: "Limited data available. Assume susceptibility and seek veterinary care for any suspected ingestion.")
+                    SpeciesRisk(species: .bird, severity: .moderate, notes: "Limited data available. Assume susceptibility and seek veterinary care for any suspected ingestion."),
+                    SpeciesRisk(species: .reptile, severity: .high, notes: "Limited species-specific data for reptiles, but lupine alkaloids (quinolizidine alkaloids) affect nervous system function across species; the Tortoise Trust notes wild tortoises occasionally consume lupine without apparent harm, but captive reptiles may not recognize toxic plants; err on the side of caution and prevent access")
                 ],
                 preventionTips: [
                     "If you grow ornamental lupines, remove spent flower stalks before seed pods develop — the seeds are the most toxic part",
@@ -3096,7 +3105,7 @@ class DatabaseService {
                     "Be aware of wild lupines on hiking trails, especially in western North America where they are abundant",
                     "Do not feed lupini beans (even prepared human-food varieties) to pets"
                 ],
-                sources: ["ASPCA Animal Poison Control Center", "Veterinary Information Network (VIN)", "Merck Veterinary Manual — Quinolizidine Alkaloid Toxicosis", "Pet Poison Helpline", "Panter KE, et al. Natural toxins of plant origin. In: Toxins and Other Harmful Compounds in Foods. RSC Publishing. 2017"],
+                sources: ["ASPCA Animal Poison Control Center", "Pet Poison Helpline", "Merck Veterinary Manual — Quinolizidine Alkaloid Toxicosis", "Tortoise Trust", "Panter KE, et al. Natural toxins of plant origin. In: Toxins and Other Harmful Compounds in Foods. RSC Publishing. 2017"],
                 relatedEntries: nil
             ),
 
