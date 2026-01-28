@@ -1023,7 +1023,9 @@ class DatabaseService {
                 speciesRisks: [
                     SpeciesRisk(species: .dog, severity: .severe, notes: "Extremely toxic; even small amounts can cause life-threatening multi-organ failure; no antidote exists; prognosis is guarded even with aggressive treatment"),
                     SpeciesRisk(species: .cat, severity: .severe, notes: "Extremely toxic; smaller body size increases risk; signs may be delayed up to 10 hours, making early recognition important"),
-                    SpeciesRisk(species: .bird, severity: .severe, notes: "Birds are susceptible to colchicine toxicity; extremely small amounts can be fatal due to small body size")
+                    SpeciesRisk(species: .bird, severity: .severe, notes: "Birds are susceptible to colchicine toxicity; extremely small amounts can be fatal due to small body size"),
+                    SpeciesRisk(species: .smallMammal, severity: .severe, notes: "Small mammals including rabbits are susceptible to colchicine toxicity; small body size increases risk of fatal multi-organ effects from even minimal ingestion"),
+                    SpeciesRisk(species: .reptile, severity: .severe, notes: "Reptiles are susceptible to colchicine toxicity; the mechanism of blocking cell division affects all species")
                 ],
                 preventionTips: [
                     "Do not plant autumn crocus in areas accessible to pets",
@@ -1032,7 +1034,7 @@ class DatabaseService {
                     "If you have autumn crocus in your garden, consider removing it entirely or fencing it off",
                     "If you are unsure whether a crocus is spring crocus or autumn crocus, treat any ingestion as an emergency"
                 ],
-                sources: ["Veterinary Information Network (VIN)", "ASPCA Animal Poison Control Center", "Pet Poison Helpline", "Merck Veterinary Manual"],
+                sources: ["ASPCA Animal Poison Control Center", "Pet Poison Helpline", "Merck Veterinary Manual"],
                 relatedEntries: nil
             ),
 
@@ -1400,7 +1402,9 @@ class DatabaseService {
                 speciesRisks: [
                     SpeciesRisk(species: .dog, severity: .severe, notes: "Dogs are most commonly affected — they swim in contaminated water, drink from lakes and ponds, and lick algae off their fur; even minimal exposure (a few mouthfuls) can be fatal"),
                     SpeciesRisk(species: .cat, severity: .severe, notes: "Cats are equally susceptible but less commonly exposed due to their aversion to swimming; cats drinking from outdoor water sources are still at risk"),
-                    SpeciesRisk(species: .bird, severity: .severe, notes: "Birds drinking from contaminated water sources are at high risk due to small body size")
+                    SpeciesRisk(species: .bird, severity: .severe, notes: "Birds drinking from contaminated water sources are at high risk due to small body size"),
+                    SpeciesRisk(species: .smallMammal, severity: .severe, notes: "Small mammals including rabbits are highly susceptible to cyanotoxins; even small amounts of contaminated water can be fatal due to small body size"),
+                    SpeciesRisk(species: .reptile, severity: .severe, notes: "Reptiles are susceptible to microcystin toxicity; outdoor water bowls and ponds can become contaminated during algae blooms")
                 ],
                 preventionTips: [
                     "Keep dogs away from any water that appears discolored, has visible scum or mats, or smells foul",
@@ -1410,7 +1414,7 @@ class DatabaseService {
                     "Blooms can appear and disappear quickly — a body of water that was safe last week may not be safe today",
                     "If you suspect any exposure, seek emergency veterinary care immediately — do not wait for symptoms; minutes can matter with this toxin"
                 ],
-                sources: ["Veterinary Information Network (VIN)", "ASPCA Animal Poison Control Center", "Pet Poison Helpline", "EPA (Environmental Protection Agency)"],
+                sources: ["ASPCA Animal Poison Control Center", "Pet Poison Helpline", "EPA (Environmental Protection Agency)"],
                 relatedEntries: nil
             ),
 
@@ -3471,7 +3475,8 @@ class DatabaseService {
                     SpeciesRisk(species: .dog, severity: .severe, notes: "Mortality rate of 59-70% even with treatment. Dogs may appear to briefly improve before rapid deterioration. Kidney failure typically develops 24-72 hours after ingestion."),
                     SpeciesRisk(species: .cat, severity: .severe, notes: "EXTREMELY DANGEROUS — mortality rate approaches 96-100%. Cats are more sensitive than dogs and can develop irreversible kidney failure within 12-24 hours. Any suspected exposure requires immediate emergency care."),
                     SpeciesRisk(species: .smallMammal, severity: .severe, notes: "Small body size makes even tiny amounts potentially lethal. Seek immediate veterinary care for any suspected exposure."),
-                    SpeciesRisk(species: .bird, severity: .severe, notes: "Birds are highly susceptible due to small body size and rapid metabolism. Any exposure should be treated as an emergency.")
+                    SpeciesRisk(species: .bird, severity: .severe, notes: "Birds are highly susceptible due to small body size and rapid metabolism. Any exposure should be treated as an emergency."),
+                    SpeciesRisk(species: .reptile, severity: .severe, notes: "Reptiles are susceptible to ethylene glycol toxicity; any animal with functioning kidneys can develop calcium oxalate crystal deposition and kidney failure")
                 ],
                 preventionTips: [
                     "Clean up any antifreeze spills immediately and thoroughly",
@@ -3485,7 +3490,7 @@ class DatabaseService {
                     "When winterizing RVs or toilets, prevent pet access to treated areas",
                     "Note: Fully dried antifreeze spills pose minimal risk, but wet spills are extremely dangerous"
                 ],
-                sources: ["VIN Toxicology Resources — Ethylene Glycol Toxicosis", "ASPCA Animal Poison Control Center", "Pet Poison Helpline — Antifreeze Poisoning", "Merck Veterinary Manual — Ethylene Glycol Toxicosis"],
+                sources: ["ASPCA Animal Poison Control Center", "Pet Poison Helpline — Antifreeze Poisoning", "Merck Veterinary Manual — Ethylene Glycol Toxicosis"],
                 relatedEntries: nil
             ),
 
