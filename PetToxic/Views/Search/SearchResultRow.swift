@@ -24,20 +24,13 @@ struct SearchResultRow: View {
             Spacer()
 
             // Severity badge
-            if let maxSeverity = result.item.speciesRisks.map(\.severity).max(by: { severityOrder($0) < severityOrder($1) }) {
+            if let severity = result.item.entrySeverity {
+                SeverityBadge(severity: severity)
+            } else if let maxSeverity = result.item.speciesRisks.map(\.severity).max() {
                 SeverityBadge(severity: maxSeverity)
             }
         }
         .padding(.vertical, 4)
-    }
-
-    private func severityOrder(_ severity: Severity) -> Int {
-        switch severity {
-        case .low: return 0
-        case .moderate: return 1
-        case .high: return 2
-        case .severe: return 3
-        }
     }
 }
 

@@ -38,6 +38,7 @@ class DatabaseService {
                     "Seizures (severe cases)",
                     "Very high doses: low blood pressure, slow heart rate, coma"
                 ],
+                entrySeverity: .severe,
                 speciesRisks: [
                     SpeciesRisk(species: .dog, severity: .high, notes: "Dogs are commonly affected due to indiscriminate eating habits. Hospitalization is often required for treatment."),
                     SpeciesRisk(species: .cat, severity: .severe, notes: "Cats are more sensitive to methylxanthines than dogs, though they rarely consume chocolate voluntarily.")
@@ -77,6 +78,7 @@ class DatabaseService {
                     "Tremors",
                     "Decreased urination (as kidney failure develops)"
                 ],
+                entrySeverity: .severe,
                 speciesRisks: [
                     SpeciesRisk(species: .dog, severity: .severe, notes: "Unpredictable toxicity — any amount should be considered dangerous. Hospitalization is typically recommended."),
                     SpeciesRisk(species: .cat, severity: .low, notes: "Rare anecdotal reports exist, but in one study of 13 cats with known ingestion, none developed kidney injury.")
@@ -116,6 +118,7 @@ class DatabaseService {
                     "Abdominal pain (liver failure)",
                     "Abnormal bleeding or bruising (liver failure)"
                 ],
+                entrySeverity: .severe,
                 speciesRisks: [
                     SpeciesRisk(species: .dog, severity: .severe, notes: "Even small amounts can be life-threatening. Individual response varies. Hospitalization is typically recommended."),
                     SpeciesRisk(species: .cat, severity: .low, notes: "Cats do not appear to develop hypoglycemia or liver injury from xylitol based on available studies.")
@@ -156,6 +159,7 @@ class DatabaseService {
                     "Brown-colored urine",
                     "Jaundice/yellowing (severe cases)"
                 ],
+                entrySeverity: .severe,
                 speciesRisks: [
                     SpeciesRisk(species: .dog, severity: .high, notes: "Japanese breeds (Akita, Shiba Inu, Shikoku, Kai Ken, Japanese Terrier, Tosa, Japanese Spitz, Hokkaido) are at increased risk due to a hereditary red blood cell condition."),
                     SpeciesRisk(species: .cat, severity: .severe, notes: "Cats are more susceptible than dogs. Heinz body anemia can occur with very small amounts. Caution with baby foods that may contain onion powder."),
@@ -197,6 +201,7 @@ class DatabaseService {
                     "Brown-colored urine",
                     "Jaundice/yellowing (severe cases)"
                 ],
+                entrySeverity: .severe,
                 speciesRisks: [
                     SpeciesRisk(species: .dog, severity: .high, notes: "3-5 times more toxic than onion. Japanese breeds (Akita, Shiba Inu, Shikoku, Kai Ken, Japanese Terrier, Tosa, Japanese Spitz, Hokkaido) are at increased risk."),
                     SpeciesRisk(species: .cat, severity: .severe, notes: "Cats are more susceptible than dogs and can develop toxicosis from very small amounts. Any exposure is potentially dangerous."),
@@ -236,6 +241,7 @@ class DatabaseService {
                     "Joint stiffness or muscle pain",
                     "Abdominal discomfort"
                 ],
+                entrySeverity: .moderate,
                 speciesRisks: [
                     SpeciesRisk(species: .dog, severity: .moderate, notes: "Dogs are the only species in which toxicity has been documented; symptoms typically resolve within 24-48 hours but veterinary guidance is recommended"),
                     SpeciesRisk(species: .cat, severity: .low, notes: "Toxicity has not been reported in cats; whether cats are resistant or simply don't consume enough is unknown")
@@ -277,6 +283,7 @@ class DatabaseService {
                     "Seizures (in severe cases)",
                     "Collapse or coma (in severe cases)"
                 ],
+                entrySeverity: .severe,
                 speciesRisks: [
                     SpeciesRisk(species: .dog, severity: .high, notes: "Dogs are highly susceptible; even small amounts can cause signs of inebriation"),
                     SpeciesRisk(species: .cat, severity: .severe, notes: "Cats are especially sensitive to alcohol; smaller body size increases risk"),
@@ -320,6 +327,7 @@ class DatabaseService {
                     "Seizures (in severe cases)",
                     "Collapse or coma (in severe cases)"
                 ],
+                entrySeverity: .severe,
                 speciesRisks: [
                     SpeciesRisk(species: .dog, severity: .severe, notes: "Dogs are most commonly affected; deep-chested breeds face additional GDV risk from stomach distention"),
                     SpeciesRisk(species: .cat, severity: .severe, notes: "Cats are also at risk for both bloating and alcohol poisoning from raw dough")
@@ -363,6 +371,7 @@ class DatabaseService {
                     "Seizures (in severe cases)",
                     "Collapse (in severe cases)"
                 ],
+                entrySeverity: .severe,
                 speciesRisks: [
                     SpeciesRisk(species: .dog, severity: .high, notes: "Dogs are more sensitive to caffeine than humans; coffee grounds and caffeine pills pose the greatest risk"),
                     SpeciesRisk(species: .cat, severity: .severe, notes: "Cats are highly sensitive to caffeine and cannot metabolize it effectively; even small amounts can cause serious toxicity")
@@ -403,6 +412,7 @@ class DatabaseService {
                     "Swelling around neck and chest (birds)",
                     "Sudden death (birds, small mammals)"
                 ],
+                entrySeverity: .severe,
                 speciesRisks: [
                     SpeciesRisk(species: .dog, severity: .low, notes: "Dogs are relatively resistant to persin; main risks are pancreatitis from high fat content and GI obstruction from swallowing the pit"),
                     SpeciesRisk(species: .cat, severity: .low, notes: "Cats are relatively resistant to persin; may experience mild GI upset"),
@@ -445,6 +455,7 @@ class DatabaseService {
                     "Tremors",
                     "Seizures (in severe cases)"
                 ],
+                entrySeverity: .moderate,
                 speciesRisks: [
                     SpeciesRisk(species: .dog, severity: .moderate, notes: "Large amounts can cause hallucinogenic and cardiovascular effects; culinary amounts in baked goods are generally not a serious concern"),
                     SpeciesRisk(species: .cat, severity: .moderate, notes: "Cats are also susceptible to myristicin; similar effects expected at high doses")
@@ -484,6 +495,7 @@ class DatabaseService {
                     "Seizures",
                     "Coma (in severe cases)"
                 ],
+                entrySeverity: .high,
                 speciesRisks: [
                     SpeciesRisk(species: .dog, severity: .high, notes: "Dogs are frequently affected due to eating play dough, de-icing salt, or drinking sea water at the beach"),
                     SpeciesRisk(species: .cat, severity: .high, notes: "Cats can develop toxicity from ocean water exposure or licking salt from surfaces"),
@@ -529,6 +541,7 @@ class DatabaseService {
                     "Fever",
                     "Dehydration"
                 ],
+                entrySeverity: .lowModerate,
                 speciesRisks: [
                     SpeciesRisk(species: .dog, severity: .moderate, notes: "Dogs are commonly affected; miniature schnauzers, Yorkshire terriers, cocker spaniels, and poodles are at higher risk; overweight and older dogs also more susceptible"),
                     SpeciesRisk(species: .cat, severity: .low, notes: "Cats are less commonly affected by diet-induced pancreatitis; feline pancreatitis often occurs spontaneously or with other conditions like inflammatory bowel disease")
@@ -571,6 +584,7 @@ class DatabaseService {
                     "Lethargy",
                     "Signs of shock (pale gums, rapid breathing, collapse) if perforation occurs"
                 ],
+                entrySeverity: nil,
                 speciesRisks: [
                     SpeciesRisk(species: .dog, severity: .high, notes: "Dogs commonly chew and swallow bone fragments; larger pieces pose obstruction risk, smaller splinters pose perforation risk"),
                     SpeciesRisk(species: .cat, severity: .moderate, notes: "Cats may chew on smaller bones like fish or poultry; fish bones are particularly hazardous due to their thin, sharp structure")
@@ -608,6 +622,7 @@ class DatabaseService {
                     "Nausea",
                     "Loose or watery stool"
                 ],
+                entrySeverity: .low,
                 speciesRisks: [
                     SpeciesRisk(species: .dog, severity: .low, notes: "Many dogs are lactose intolerant but some retain the ability to digest dairy; high-fat dairy poses additional pancreatitis risk"),
                     SpeciesRisk(species: .cat, severity: .low, notes: "Cats are more likely to be lactose intolerant than dogs; despite popular belief, milk is not recommended for cats")
@@ -648,6 +663,7 @@ class DatabaseService {
                     "Disorientation",
                     "Seizures (severe cases, more common with wood ingestion)"
                 ],
+                entrySeverity: .high,
                 speciesRisks: [
                     SpeciesRisk(species: .dog, severity: .high, notes: "Dogs are commonly affected; neurologic signs are 4x more likely with wood/shavings than with nuts/hulls; Labrador retrievers and golden retrievers overrepresented in case reports"),
                     SpeciesRisk(species: .cat, severity: .low, notes: "Limited data; cats less commonly exposed due to feeding habits")
@@ -688,6 +704,7 @@ class DatabaseService {
                     "Dilated pupils (rare, cyanide poisoning)",
                     "Weakness or collapse (rare, cyanide poisoning)"
                 ],
+                entrySeverity: nil,
                 speciesRisks: [
                     SpeciesRisk(species: .dog, severity: .moderate, notes: "Obstruction is the primary concern, especially in smaller dogs; cyanide poisoning is rare unless large quantities of seeds are thoroughly crushed and consumed"),
                     SpeciesRisk(species: .cat, severity: .low, notes: "Cats are very unlikely to consume enough pits or seeds to cause cyanide toxicity; leaves may cause hypersalivation from natural resins")
@@ -727,6 +744,7 @@ class DatabaseService {
                     "Stiffness",
                     "Weakness"
                 ],
+                entrySeverity: .high,
                 speciesRisks: [
                     SpeciesRisk(species: .dog, severity: .high, notes: "Dogs are most commonly affected due to scavenging behavior; roaming dogs and those with access to garbage or compost are at highest risk"),
                     SpeciesRisk(species: .cat, severity: .low, notes: "Tremorgenic mycotoxicosis has NOT been reported in domestic cats, likely due to their more selective eating habits. However, cats should still be prevented from accessing moldy foods as a precaution.")
@@ -769,6 +787,7 @@ class DatabaseService {
                     "Seizures (terminal stages)",
                     "Death"
                 ],
+                entrySeverity: .severe,
                 speciesRisks: [
                     SpeciesRisk(species: .cat, severity: .severe, notes: "EXTREMELY TOXIC — even tiny exposures (a few pollen grains, one leaf bite, vase water) can cause fatal kidney failure; all cats are susceptible regardless of age or health status"),
                     SpeciesRisk(species: .dog, severity: .low, notes: "True lily toxicity (kidney failure) has not been documented in dogs; severity is 'low' rather than 'none' because ingestion of plant material may still cause mild GI upset such as vomiting or diarrhea")
@@ -815,6 +834,7 @@ class DatabaseService {
                     "Collapse or coma",
                     "Death"
                 ],
+                entrySeverity: .severe,
                 speciesRisks: [
                     SpeciesRisk(species: .dog, severity: .severe, notes: "Dogs are most commonly affected; young dogs are especially prone to chewing on the plant; even one seed can be fatal"),
                     SpeciesRisk(species: .cat, severity: .severe, notes: "No published case reports exist in cats, but toxic effects are anticipated to be the same as or worse than in dogs; cats should be considered equally at risk"),
@@ -861,6 +881,7 @@ class DatabaseService {
                     "Coma (severe cases)",
                     "Death (severe cases)"
                 ],
+                entrySeverity: .high,
                 speciesRisks: [
                     SpeciesRisk(species: .dog, severity: .moderate, notes: "Most cases result in GI upset only (vomiting in ~29% of cases); cardiac arrhythmias are rare (~2%) because dogs typically do not eat enough to cause severe toxicity; large ingestions can be serious"),
                     SpeciesRisk(species: .cat, severity: .moderate, notes: "Vomiting is the main sign; diarrhea is rare in cats; cardiac signs can persist for days if they occur — veterinary evaluation recommended for any ingestion"),
@@ -902,6 +923,7 @@ class DatabaseService {
                     "Increased heart rate (large ingestions, rare)",
                     "Difficulty breathing (large ingestions, rare)"
                 ],
+                entrySeverity: .moderate,
                 speciesRisks: [
                     SpeciesRisk(species: .dog, severity: .moderate, notes: "Dogs are most commonly affected because they dig up and chew on bulbs; ingestion of flowers or leaves typically causes only mild, transient GI upset"),
                     SpeciesRisk(species: .cat, severity: .moderate, notes: "Cats may chew on leaves or flowers; bulb ingestion is less common but equally dangerous; note that cats with nausea may seek out plants to help them vomit, so plant material in vomitus is not always the primary cause of illness"),
@@ -947,6 +969,7 @@ class DatabaseService {
                     "Seizures",
                     "Sudden death"
                 ],
+                entrySeverity: .severe,
                 speciesRisks: [
                     SpeciesRisk(species: .dog, severity: .severe, notes: "Dogs are highly susceptible; even small amounts can cause life-threatening cardiac effects; this toxicosis is less commonly seen in small animal practice but poses significant risk when it occurs"),
                     SpeciesRisk(species: .cat, severity: .severe, notes: "Cats are highly susceptible to cardiac glycosides; smaller body size increases risk from even minimal exposure"),
@@ -996,6 +1019,7 @@ class DatabaseService {
                     "Cardiac arrhythmias",
                     "Death"
                 ],
+                entrySeverity: .severe,
                 speciesRisks: [
                     SpeciesRisk(species: .dog, severity: .severe, notes: "Extremely toxic; even small amounts can cause life-threatening multi-organ failure; no antidote exists; prognosis is guarded even with aggressive treatment"),
                     SpeciesRisk(species: .cat, severity: .severe, notes: "Extremely toxic; smaller body size increases risk; signs may be delayed up to 10 hours, making early recognition important"),
@@ -1036,6 +1060,7 @@ class DatabaseService {
                     "Difficulty breathing (rare, if severe throat/laryngeal swelling occurs)",
                     "Eye pain, swelling, and sensitivity to light (rare, if ocular exposure)"
                 ],
+                entrySeverity: .moderate,
                 speciesRisks: [
                     SpeciesRisk(species: .dog, severity: .low, notes: "Effects are localized to the mouth and throat; generally self-limiting; kidney damage does not occur with these plants"),
                     SpeciesRisk(species: .cat, severity: .low, notes: "Cats may be more likely to chew on houseplants; same localized, self-limiting effects; no systemic toxicity")
@@ -1076,6 +1101,7 @@ class DatabaseService {
                     "Decreased urination (as kidney injury progresses)",
                     "Blood in urine"
                 ],
+                entrySeverity: .moderate,
                 speciesRisks: [
                     SpeciesRisk(species: .dog, severity: .moderate, notes: "Large ingestions can cause hypocalcemia and potential kidney injury; dehydrated dogs or those with pre-existing kidney disease are at higher risk"),
                     SpeciesRisk(species: .cat, severity: .moderate, notes: "Same concerns as dogs; cats with chronic kidney disease (common in older cats) may be more vulnerable"),
@@ -1121,6 +1147,7 @@ class DatabaseService {
                     "Seizures or convulsions (large ingestions)",
                     "Difficulty breathing (rare, severe cases)"
                 ],
+                entrySeverity: .high,
                 speciesRisks: [
                     SpeciesRisk(species: .dog, severity: .moderate, notes: "Dogs are most commonly affected because they dig up and chew on bulbs; ingestion of flowers or leaves typically causes GI upset, while bulb ingestion can cause more serious cardiovascular effects"),
                     SpeciesRisk(species: .cat, severity: .moderate, notes: "Cats can develop significant cardiovascular effects including hypothermia, bradycardia, and hypotension; a published case report documented full recovery with supportive care"),
@@ -1166,6 +1193,7 @@ class DatabaseService {
                     "Seizures (severe cases)",
                     "Collapse"
                 ],
+                entrySeverity: .severe,
                 speciesRisks: [
                     SpeciesRisk(species: .dog, severity: .severe, notes: "Dogs may ingest larger quantities due to curious behavior; cardiac effects can be life-threatening; the long half-life of digitoxin means repeated small exposures can accumulate"),
                     SpeciesRisk(species: .cat, severity: .moderate, notes: "The most common signs in cats are vomiting and lethargy; cardiovascular effects are rare in cats according to toxicology specialists"),
@@ -1213,6 +1241,7 @@ class DatabaseService {
                     "Collapse",
                     "Sudden death"
                 ],
+                entrySeverity: .severe,
                 speciesRisks: [
                     SpeciesRisk(species: .dog, severity: .severe, notes: "Dogs are susceptible to serious cardiac effects; a published case report documented sudden collapse and death after ingestion; even small amounts can be dangerous"),
                     SpeciesRisk(species: .cat, severity: .severe, notes: "Cats are equally susceptible to cardiac glycoside toxicity; this plant does NOT cause kidney failure like true lilies — the danger is cardiac, not renal"),
@@ -1265,6 +1294,7 @@ class DatabaseService {
                     "Coma",
                     "Death"
                 ],
+                entrySeverity: .severe,
                 speciesRisks: [
                     SpeciesRisk(species: .dog, severity: .severe, notes: "Dogs are most commonly affected; severity depends on number of beans, degree of chewing, and time to treatment; patients with only GI signs tend to have good prognosis, but liver injury carries a guarded prognosis; mortality from beans is ~9%, but mortality from castor bean fertilizer/castor cake is ~85%"),
                     SpeciesRisk(species: .cat, severity: .severe, notes: "Cats are rarely affected (likely due to discerning palate) but are equally susceptible if exposure occurs; same severe toxicity expected"),
@@ -1316,6 +1346,7 @@ class DatabaseService {
                     "Collapse",
                     "Death"
                 ],
+                entrySeverity: .high,
                 speciesRisks: [
                     SpeciesRisk(species: .dog, severity: .high, notes: "Dogs are most commonly affected due to scavenging behavior; dogs may be attracted to certain mushrooms (Amanita, Inocybe) due to their fishy odor; severity ranges from mild GI upset to life-threatening liver failure depending on species — all wild mushroom ingestions should be treated as potential emergencies"),
                     SpeciesRisk(species: .cat, severity: .high, notes: "Cats rarely eat mushrooms but can be seriously affected when they do; cats are particularly attracted to DRIED Amanita muscaria and A. pantherina, sometimes with fatal results"),
@@ -1365,6 +1396,7 @@ class DatabaseService {
                     "Collapse or shock",
                     "Sudden death"
                 ],
+                entrySeverity: .severe,
                 speciesRisks: [
                     SpeciesRisk(species: .dog, severity: .severe, notes: "Dogs are most commonly affected — they swim in contaminated water, drink from lakes and ponds, and lick algae off their fur; even minimal exposure (a few mouthfuls) can be fatal"),
                     SpeciesRisk(species: .cat, severity: .severe, notes: "Cats are equally susceptible but less commonly exposed due to their aversion to swimming; cats drinking from outdoor water sources are still at risk"),
@@ -1411,6 +1443,7 @@ class DatabaseService {
                     "Seizures",
                     "Collapse"
                 ],
+                entrySeverity: .severe,
                 speciesRisks: [
                     SpeciesRisk(species: .dog, severity: .severe, notes: "Dogs may chew on yew branches or eat fallen berries; a lethal dose can be consumed simply by playing with branches; death can occur rapidly with no warning signs; no antidote exists"),
                     SpeciesRisk(species: .cat, severity: .severe, notes: "Cats are equally susceptible to taxine cardiotoxicity; smaller body size means even minimal ingestion can be fatal"),
@@ -1455,6 +1488,7 @@ class DatabaseService {
                     "Incoordination or stumbling (rare, large ingestions)",
                     "Changes in heart rate or blood pressure (rare, large ingestions)"
                 ],
+                entrySeverity: .low,
                 speciesRisks: [
                     SpeciesRisk(species: .dog, severity: .low, notes: "Toxicity is mild in most cases; bitter taste limits ingestion; GI upset is the primary concern; severe effects are rare"),
                     SpeciesRisk(species: .cat, severity: .low, notes: "Cats may chew on the long leaves; toxicity is typically mild with GI symptoms; may develop dilated pupils; same low risk as dogs"),
@@ -1496,6 +1530,7 @@ class DatabaseService {
                     "Change in urine color (red or dark)",
                     "Tremors (rare, large ingestions)"
                 ],
+                entrySeverity: .moderate,
                 speciesRisks: [
                     SpeciesRisk(species: .dog, severity: .low, notes: "Toxicity is usually mild to moderate with GI upset; severe symptoms are uncommon unless large amounts are ingested"),
                     SpeciesRisk(species: .cat, severity: .low, notes: "Same toxicity as dogs; cats may be attracted to chewing on the fleshy leaves")
@@ -1538,6 +1573,7 @@ class DatabaseService {
                     "Tremors (severe cases)",
                     "Weakness or pale gums (anemia, rare)"
                 ],
+                entrySeverity: .moderate,
                 speciesRisks: [
                     SpeciesRisk(species: .dog, severity: .low, notes: "Foliage causes only mild GI upset; seed ingestion in large quantities can cause hallucinogenic effects, incoordination, and rarely liver damage — severity depends on amount and species of morning glory"),
                     SpeciesRisk(species: .cat, severity: .low, notes: "Same as dogs; cats are less likely to consume large quantities of seeds"),
@@ -1581,6 +1617,7 @@ class DatabaseService {
                     "Seizures (severe cyanide poisoning — rare)",
                     "Collapse (severe cyanide poisoning — rare)"
                 ],
+                entrySeverity: .severe,
                 speciesRisks: [
                     SpeciesRisk(species: .dog, severity: .moderate, notes: "Nandina berries and wilted Prunus leaves pose the highest risk; hydrangea and photinia typically cause only mild GI upset; true cyanide poisoning is uncommon but possible with large ingestions"),
                     SpeciesRisk(species: .cat, severity: .moderate, notes: "Same concerns as dogs; cats are less likely to consume large quantities but smaller body size means less plant material is needed to cause effects"),
@@ -1619,6 +1656,7 @@ class DatabaseService {
                     "Oral irritation (pawing at mouth) — especially with poinsettia sap",
                     "Mild skin irritation (chrysanthemums, with direct contact)"
                 ],
+                entrySeverity: .low,
                 speciesRisks: [
                     SpeciesRisk(species: .dog, severity: .low, notes: "All plants in this group cause only mild GI upset in dogs; serious complications are rare; symptomatic care is usually sufficient"),
                     SpeciesRisk(species: .cat, severity: .low, notes: "Same mild effects as dogs; cats may be more likely to chew on cut flowers and houseplants"),
@@ -1669,6 +1707,7 @@ class DatabaseService {
                     "Coughing",
                     "Death (without treatment)"
                 ],
+                entrySeverity: .high,
                 speciesRisks: [
                     SpeciesRisk(species: .dog, severity: .high, notes: "Dogs are the primary species affected; the juicy fruit is particularly attractive to dogs; signs mimic strychnine poisoning and can last for several days"),
                     SpeciesRisk(species: .cat, severity: .moderate, notes: "Cats appear less commonly affected, possibly due to more selective eating habits; if ingestion occurs, similar severe neurological effects are expected"),
@@ -1708,6 +1747,7 @@ class DatabaseService {
                     "Weakness (rare, large ingestions)",
                     "Collapse (rare, large ingestions)"
                 ],
+                entrySeverity: .severe,
                 speciesRisks: [
                     SpeciesRisk(species: .dog, severity: .low, notes: "Most ingestions cause only vomiting and GI upset; dogs typically do not eat enough to cause cardiac effects"),
                     SpeciesRisk(species: .cat, severity: .low, notes: "Same as dogs — GI upset is the primary concern; cardiac effects are rare"),
@@ -1749,6 +1789,7 @@ class DatabaseService {
                     "Dilated pupils (large ingestions, rare)",
                     "Difficulty breathing (large ingestions, rare)"
                 ],
+                entrySeverity: .moderate,
                 speciesRisks: [
                     SpeciesRisk(species: .dog, severity: .moderate, notes: "Causes intense GI distress (vomiting, diarrhea, abdominal pain); severe effects are unlikely unless very large amounts are ingested"),
                     SpeciesRisk(species: .cat, severity: .moderate, notes: "Same GI effects as dogs; cats may be attracted to trailing vines indoors"),
@@ -1790,6 +1831,7 @@ class DatabaseService {
                     "Weakness",
                     "Collapse (severe cases)"
                 ],
+                entrySeverity: .high,
                 speciesRisks: [
                     SpeciesRisk(species: .dog, severity: .high, notes: "Seeds and pods are most dangerous — as few as two seeds can cause severe illness in small dogs; entire plant is toxic"),
                     SpeciesRisk(species: .cat, severity: .high, notes: "Same toxicity concerns as dogs; smaller body size increases risk from even minimal seed ingestion"),
@@ -1834,6 +1876,7 @@ class DatabaseService {
                     "Tremors or seizures (with neurotoxic species)",
                     "Collapse (severe cases)"
                 ],
+                entrySeverity: .high,
                 speciesRisks: [
                     SpeciesRisk(species: .dog, severity: .moderate, notes: "GI signs are most common; cardiac effects can occur with larger ingestions; the bitter taste typically limits consumption"),
                     SpeciesRisk(species: .cat, severity: .moderate, notes: "Similar effects to dogs; cats are less likely to consume significant amounts due to taste aversion"),
@@ -1879,6 +1922,7 @@ class DatabaseService {
                     "Abnormal heart rhythm",
                     "Collapse"
                 ],
+                entrySeverity: .high,
                 speciesRisks: [
                     SpeciesRisk(species: .dog, severity: .moderate, notes: "Dogs rarely consume large amounts; GI upset is most likely with smaller ingestions; neuromuscular effects possible with larger amounts; puppies may be more prone to chewing on plants"),
                     SpeciesRisk(species: .cat, severity: .moderate, notes: "Cats have the same susceptibility as dogs; smaller body size means less plant material is needed to cause effects"),
@@ -1923,6 +1967,7 @@ class DatabaseService {
                     "Seizures or convulsions (large ingestions, rare)",
                     "Coma (severe cases, rare)"
                 ],
+                entrySeverity: .high,
                 speciesRisks: [
                     SpeciesRisk(species: .dog, severity: .moderate, notes: "GI upset is the most common outcome; neurological signs are uncommon in dogs in the US because American varieties are less toxic and dogs rarely eat enough; European horse chestnut is more toxic; nuts also pose foreign body/obstruction risk"),
                     SpeciesRisk(species: .cat, severity: .moderate, notes: "Cats are susceptible but rarely ingest these nuts due to their selective eating habits"),
@@ -1969,6 +2014,7 @@ class DatabaseService {
                     "Seizures (severe cases)",
                     "Difficulty breathing (severe cases)"
                 ],
+                entrySeverity: .moderate,
                 speciesRisks: [
                     SpeciesRisk(species: .dog, severity: .moderate, notes: "Most cases cause only GI upset; severe toxicity requires ingestion of large amounts of green plant material; puppies and small dogs are at higher risk; documented cases of seizures exist with significant green tomato ingestion"),
                     SpeciesRisk(species: .cat, severity: .moderate, notes: "Cats are susceptible but rarely consume enough plant material to cause severe toxicity; same clinical signs as dogs expected"),
@@ -2013,6 +2059,7 @@ class DatabaseService {
                     "Dark urine",
                     "Photosensitization (skin sensitivity to sunlight — more common in livestock)"
                 ],
+                entrySeverity: .moderate,
                 speciesRisks: [
                     SpeciesRisk(species: .dog, severity: .moderate, notes: "Most cases involve GI upset; liver damage is possible with significant ingestions, particularly of unripe berries; less commonly reported than in livestock but mechanism of toxicity is the same"),
                     SpeciesRisk(species: .cat, severity: .moderate, notes: "Same concerns as dogs; cats are less likely to consume large amounts but smaller body size means less plant material needed for effects"),
@@ -2058,6 +2105,7 @@ class DatabaseService {
                     "Seizures (severe cases)",
                     "Collapse (severe cases)"
                 ],
+                entrySeverity: .severe,
                 speciesRisks: [
                     SpeciesRisk(species: .dog, severity: .moderate, notes: "Dogs are more likely than cats to dig up and consume tubers due to their less discriminating eating habits; tuber ingestion can cause cardiac arrhythmias and seizures"),
                     SpeciesRisk(species: .cat, severity: .moderate, notes: "Cats typically only nibble leaves and flowers (lower toxin levels); GI upset is the most common outcome; serious toxicity is less common but possible with large ingestions"),
@@ -2098,6 +2146,7 @@ class DatabaseService {
                     "Incoordination (ataxia)",
                     "Weakness"
                 ],
+                entrySeverity: .severe,
                 speciesRisks: [
                     SpeciesRisk(species: .dog, severity: .moderate, notes: "Dogs may be attracted to the seed pods; causes intense oral irritation and GI upset; incoordination possible with larger ingestions"),
                     SpeciesRisk(species: .cat, severity: .moderate, notes: "Same toxicity concerns as dogs; cats are less likely to consume large amounts due to the intense oral irritation"),
@@ -2148,6 +2197,7 @@ class DatabaseService {
                     "Obtundation or coma (severe cases)",
                     "Hyperthermia (severe cases)"
                 ],
+                entrySeverity: .moderate,
                 speciesRisks: [
                     SpeciesRisk(species: .dog, severity: .moderate, notes: "Dogs are most commonly affected. Classic presentation: depressed/somnolent, hypothermic, bradycardic, and dribbling urine. External stimulation causes brief hyperesthesia followed by return to somnolence. With legalization, more severe cases (seizures, coma, death) are being reported — whether from more potent products or adulterants is unknown. Deaths have occurred, particularly with concentrated products or cannabutter."),
                     SpeciesRisk(species: .cat, severity: .moderate, notes: "Cats may show different signs than dogs, including increased locomotor activity (wandering aimlessly, spontaneous jumping), head bobbing/weaving, swaying, anxiety, aggression, polydipsia, polyuria, polyphagia, and difficulty swallowing. Sedation and depression also occur. Seizures and coma are possible with large exposures."),
@@ -2194,6 +2244,7 @@ class DatabaseService {
                     "Paralysis (severe cases)",
                     "Skin irritation (from contact with sap)"
                 ],
+                entrySeverity: .high,
                 speciesRisks: [
                     SpeciesRisk(species: .dog, severity: .moderate, notes: "Dogs are commonly affected. Small dogs are at particular risk — they can suffer liver and kidney damage with relatively limited exposure. Progression: trembling → staggering → recumbency → tetanus-like seizures. Liver and kidney damage can be permanent if not treated promptly."),
                     SpeciesRisk(species: .cat, severity: .moderate, notes: "Cats are susceptible to the same neurologic and organ toxicity as dogs. The bitter taste may limit ingestion, but any exposure should be taken seriously."),
@@ -2245,6 +2296,7 @@ class DatabaseService {
                     "Respiratory arrest",
                     "Cardiac arrest"
                 ],
+                entrySeverity: .severe,
                 speciesRisks: [
                     SpeciesRisk(species: .dog, severity: .severe, notes: "Dogs are most commonly affected due to their scavenging behavior. Cigarette butts in ashtrays, discarded chewing tobacco, and e-liquids are frequent exposure sources. Nicotine gum and lozenges containing xylitol pose a double toxicity risk. Even small exposures to concentrated nicotine liquids can be rapidly fatal."),
                     SpeciesRisk(species: .cat, severity: .severe, notes: "Cats are highly susceptible to nicotine toxicity. Exposure is less common than in dogs but equally dangerous. Dermal exposure can occur if cats walk through spilled e-liquids and groom themselves."),
@@ -2346,6 +2398,7 @@ class DatabaseService {
                     "Coma (severe cases)",
                     "Death (if untreated)"
                 ],
+                entrySeverity: .severe,
                 speciesRisks: [
                     SpeciesRisk(
                         species: .dog,
@@ -2487,6 +2540,7 @@ class DatabaseService {
                     "Collapse",
                     "Death (cardiac or respiratory arrest, hyperthermia)"
                 ],
+                entrySeverity: .severe,
                 speciesRisks: [
                     SpeciesRisk(
                         species: .dog,
@@ -2620,6 +2674,7 @@ class DatabaseService {
                     "Collapse",
                     "Death (if untreated)"
                 ],
+                entrySeverity: .severe,
                 speciesRisks: [
                     SpeciesRisk(
                         species: .dog,
@@ -2761,6 +2816,7 @@ class DatabaseService {
                     "Drowsiness or sedation",
                     "Stupor (especially with Amanita compounds)"
                 ],
+                entrySeverity: .high,
                 speciesRisks: [
                     SpeciesRisk(
                         species: .dog,
@@ -2844,6 +2900,7 @@ class DatabaseService {
                     "Collapse",
                     "Death (in severe cases)"
                 ],
+                entrySeverity: .severe,
                 speciesRisks: [
                     SpeciesRisk(species: .dog, severity: .high, notes: "Dogs may be attracted to dig up roots or chew on plants. Cardiac and neurological effects can be life-threatening. There is no antidote — all exposure should be treated as an emergency."),
                     SpeciesRisk(species: .cat, severity: .high, notes: "Cats are susceptible to aconitine toxicity. Any ingestion warrants immediate veterinary care. Cardiac arrhythmias are the primary concern."),
@@ -2894,6 +2951,7 @@ class DatabaseService {
                     "Coma (severe cases)",
                     "Death (from respiratory failure)"
                 ],
+                entrySeverity: .high,
                 speciesRisks: [
                     SpeciesRisk(species: .dog, severity: .moderate, notes: "Dogs may ingest plant material while exploring. Leaf ingestion may cause mild or no signs; flowers and seeds are significantly more dangerous. Monitor for anticholinergic signs (dilated pupils, dry mouth, rapid heart rate, agitation)."),
                     SpeciesRisk(species: .cat, severity: .high, notes: "Cats ingesting flowers or seeds are at higher risk for significant toxicity. CNS effects and hyperthermia can be severe. Seek veterinary care promptly for any suspected ingestion."),
@@ -2945,6 +3003,7 @@ class DatabaseService {
                     "Coma (severe cases)",
                     "Respiratory depression (severe cases)"
                 ],
+                entrySeverity: .high,
                 speciesRisks: [
                     SpeciesRisk(species: .dog, severity: .moderate, notes: "Fatal poisonings in dogs are rare, but even small ingestions can cause significant GI upset. Dogs may be attracted to the bean-like seed pods. The nicotine-like effects can cause neurological signs in larger ingestions."),
                     SpeciesRisk(species: .cat, severity: .moderate, notes: "Cats are susceptible to cytisine toxicity. Any ingestion should be evaluated by a veterinarian. GI upset is the most common presentation."),
@@ -2993,6 +3052,7 @@ class DatabaseService {
                     "Seizures (rare, with large ingestions)",
                     "Collapse"
                 ],
+                entrySeverity: .high,
                 speciesRisks: [
                     SpeciesRisk(species: .dog, severity: .moderate, notes: "Dogs may be attracted to lupine seed pods. Seeds have the highest toxin concentration. Most ingestions cause GI upset and mild neurological signs. Large seed ingestions warrant veterinary evaluation."),
                     SpeciesRisk(species: .cat, severity: .moderate, notes: "Cats are less likely to ingest lupine but should be monitored if exposure is suspected. Seek veterinary care for any ingestion."),
@@ -3037,6 +3097,7 @@ class DatabaseService {
                     "Collapse (severe cases)",
                     "Contact dermatitis (skin exposure to sap)"
                 ],
+                entrySeverity: .moderate,
                 speciesRisks: [
                     SpeciesRisk(species: .dog, severity: .moderate, notes: "Dogs may dig up and chew hellebore roots when investigating garden beds. The bitter taste usually limits ingestion. Cardiac glycoside effects are possible with large ingestions — seek veterinary care."),
                     SpeciesRisk(species: .cat, severity: .moderate, notes: "Cats are less likely to ingest hellebores but may chew on leaves. GI upset is the most common presentation. Contact your veterinarian for any ingestion."),
@@ -3081,6 +3142,7 @@ class DatabaseService {
                     "Tremors",
                     "Seizures (rare, with large ingestions)"
                 ],
+                entrySeverity: .moderate,
                 speciesRisks: [
                     SpeciesRisk(species: .dog, severity: .moderate, notes: "Dogs may chew on bittersweet wreaths and decorations, ingesting the berries. Most cases result in GI upset. Large ingestions warrant veterinary evaluation for potential cardiac or neurological effects."),
                     SpeciesRisk(species: .cat, severity: .moderate, notes: "Cats may be attracted to swinging bittersweet decorations as play objects. Contact your veterinarian for any ingestion."),
@@ -3127,6 +3189,7 @@ class DatabaseService {
                     "Skin blistering (with dermal contact)",
                     "Eye irritation and pain (with ocular exposure)"
                 ],
+                entrySeverity: .severe,
                 speciesRisks: [
                     SpeciesRisk(species: .dog, severity: .high, notes: "All parts are toxic; berries are most dangerous; bitter taste usually limits ingestion but even a few berries can cause serious illness; hemorrhagic diarrhea is a hallmark sign"),
                     SpeciesRisk(species: .cat, severity: .high, notes: "Same concerns as dogs; cats may be attracted to the plant's fragrant flowers"),
@@ -3173,6 +3236,7 @@ class DatabaseService {
                     "Paralysis (severe cases)",
                     "Collapse"
                 ],
+                entrySeverity: .severe,
                 speciesRisks: [
                     SpeciesRisk(species: .dog, severity: .severe, notes: "Dogs are particularly susceptible to fatal chinaberry poisoning; multiple documented fatalities within 24-36 hours; ALL chinaberry ingestions should be treated as emergencies"),
                     SpeciesRisk(species: .cat, severity: .high, notes: "Similar toxicity concerns as dogs; cats are less likely to consume fallen berries but should be monitored if exposure occurs"),
@@ -3220,6 +3284,7 @@ class DatabaseService {
                     "Shock",
                     "Multi-organ failure (liver, kidneys)"
                 ],
+                entrySeverity: .severe,
                 speciesRisks: [
                     SpeciesRisk(species: .dog, severity: .severe, notes: "EXTREMELY TOXIC if seeds are chewed; intact seeds may pass without harm but ANY suspected ingestion should be treated as an emergency; NO ANTIDOTE exists"),
                     SpeciesRisk(species: .cat, severity: .severe, notes: "Same extreme toxicity as dogs; cats may encounter seeds if brought into the home as jewelry or crafts"),
@@ -3260,6 +3325,7 @@ class DatabaseService {
                     "Depression or lethargy",
                     "Collapse (severe cases)"
                 ],
+                entrySeverity: .high,
                 speciesRisks: [
                     SpeciesRisk(species: .dog, severity: .high, notes: "Convulsions are the hallmark sign; can be fatal; dogs may mistake berries for grapes and consume them"),
                     SpeciesRisk(species: .cat, severity: .high, notes: "Same toxicity concerns as dogs; cats are less likely to consume berries but should be monitored if exposure occurs"),
@@ -3305,6 +3371,7 @@ class DatabaseService {
                     "Muscle twitching (fasciculations — severe cases)",
                     "Weakness of hind legs (pelvic limb paresis — severe cases)"
                 ],
+                entrySeverity: .low,
                 speciesRisks: [
                     SpeciesRisk(species: .dog, severity: .low, notes: "Most cases involve localized skin irritation that resolves within hours; hunting and working dogs with heavy exposure may develop more serious symptoms; hair coat provides some protection"),
                     SpeciesRisk(species: .cat, severity: .low, notes: "Similar to dogs; cats are less likely to have heavy exposure due to lifestyle; localized skin reaction is most common"),
@@ -3351,6 +3418,7 @@ class DatabaseService {
                     "Respiratory failure",
                     "Death"
                 ],
+                entrySeverity: .severe,
                 speciesRisks: [
                     SpeciesRisk(species: .dog, severity: .severe, notes: "EXTREMELY TOXIC — documented fatalities from eating flowers or minimal plant material; bright flowers may attract curious dogs; treat ANY exposure as a life-threatening emergency"),
                     SpeciesRisk(species: .cat, severity: .severe, notes: "Same extreme toxicity as dogs; all exposures should be treated as emergencies"),
@@ -3398,6 +3466,7 @@ class DatabaseService {
                     "Coma",
                     "Sudden death"
                 ],
+                entrySeverity: .severe,
                 speciesRisks: [
                     SpeciesRisk(species: .dog, severity: .severe, notes: "Mortality rate of 59-70% even with treatment. Dogs may appear to briefly improve before rapid deterioration. Kidney failure typically develops 24-72 hours after ingestion."),
                     SpeciesRisk(species: .cat, severity: .severe, notes: "EXTREMELY DANGEROUS — mortality rate approaches 96-100%. Cats are more sensitive than dogs and can develop irreversible kidney failure within 12-24 hours. Any suspected exposure requires immediate emergency care."),
@@ -3451,6 +3520,7 @@ class DatabaseService {
                     "Tremors (with significant absorption)",
                     "Collapse (severe cases)"
                 ],
+                entrySeverity: .high,
                 speciesRisks: [
                     SpeciesRisk(species: .dog, severity: .high, notes: "Severity depends on product type: gasoline/kerosene exposure is HIGH risk; motor oil exposure is MODERATE risk. Dogs may ingest petroleum products from spills or by chewing containers. Aspiration pneumonia is the primary concern with volatile products."),
                     SpeciesRisk(species: .cat, severity: .high, notes: "Cats are frequently exposed through grooming contaminated fur. Even small amounts of gasoline on fur can cause irritation; prompt bathing with dish soap is important. Respiratory signs warrant immediate veterinary evaluation."),
@@ -3500,6 +3570,7 @@ class DatabaseService {
                     "Difficulty breathing (rare, severe cases)",
                     "Seizures (rare)"
                 ],
+                entrySeverity: .moderate,
                 speciesRisks: [
                     SpeciesRisk(species: .dog, severity: .moderate, notes: "Methanol causes alcohol-like intoxication. Signs typically appear within 30-60 minutes. Prognosis is generally good with prompt veterinary care. Does NOT cause blindness or kidney failure like ethylene glycol antifreeze."),
                     SpeciesRisk(species: .cat, severity: .moderate, notes: "Similar to dogs — causes intoxication symptoms. Cats may be exposed by grooming washer fluid residue from fur. If no signs within 60 minutes of exposure, significant problems are unlikely."),
@@ -3553,6 +3624,7 @@ class DatabaseService {
                     "Increased thirst and urination",
                     "Pale gums (from anemia)"
                 ],
+                entrySeverity: .high,
                 speciesRisks: [
                     SpeciesRisk(species: .dog, severity: .high, notes: "Dogs are most commonly affected, especially those under 2 years old. Dogs absorb lead readily at any age (unlike most species where young animals absorb more). Chewing behavior increases exposure risk. GI and neurological signs are most common."),
                     SpeciesRisk(species: .cat, severity: .high, notes: "Less common than in dogs — cats are more fastidious and less likely to chew on objects or lick painted surfaces. However, cats can be exposed through grooming dust from renovations. Lead is one of few causes of intermittent seizures in cats."),
@@ -3604,6 +3676,7 @@ class DatabaseService {
                     "Collapse",
                     "Sudden death (if bleeding occurs in critical areas)"
                 ],
+                entrySeverity: .high,
                 speciesRisks: [
                     SpeciesRisk(species: .dog, severity: .high, notes: "Most commonly affected species; second-generation products remain in the body for 3-4 weeks requiring prolonged treatment"),
                     SpeciesRisk(species: .cat, severity: .high, notes: "Less commonly exposed than dogs but equally susceptible; outdoor cats hunting poisoned rodents may have cumulative exposure"),
@@ -3654,6 +3727,7 @@ class DatabaseService {
                     "Coma",
                     "Sudden death (with high doses)"
                 ],
+                entrySeverity: .severe,
                 speciesRisks: [
                     SpeciesRisk(species: .dog, severity: .severe, notes: "Two syndromes possible: rapid convulsant form (high dose) or delayed paralytic form (lower dose); puppies more sensitive than adults"),
                     SpeciesRisk(species: .cat, severity: .severe, notes: "EXTREMELY sensitive—approximately 5-10 times more sensitive than dogs; typically develop paralytic syndrome regardless of dose"),
@@ -3705,6 +3779,7 @@ class DatabaseService {
                     "Decreased or absent urination (in kidney failure)",
                     "Seizures (severe cases)"
                 ],
+                entrySeverity: .severe,
                 speciesRisks: [
                     SpeciesRisk(species: .dog, severity: .severe, notes: "Extremely narrow margin of safety; even approximately half a tablespoon of bait can cause life-threatening hypercalcemia in a 40-pound dog"),
                     SpeciesRisk(species: .cat, severity: .severe, notes: "Equally susceptible; any ingestion should be treated as an emergency"),
@@ -3756,6 +3831,7 @@ class DatabaseService {
                     "Decreased or absent urination (in kidney failure)",
                     "Seizures (severe cases)"
                 ],
+                entrySeverity: .high,
                 speciesRisks: [
                     SpeciesRisk(species: .dog, severity: .high, notes: "Severity depends on product and amount; standard multivitamins are low risk, but high-dose D3 supplements (5,000+ IU) or psoriasis creams can cause severe toxicity"),
                     SpeciesRisk(species: .cat, severity: .high, notes: "Equally susceptible to vitamin D toxicity; cats may lick psoriasis cream from owners' skin"),
@@ -3806,6 +3882,7 @@ class DatabaseService {
                     "Coma",
                     "Sudden death (can occur within hours)"
                 ],
+                entrySeverity: .severe,
                 speciesRisks: [
                     SpeciesRisk(species: .dog, severity: .severe, notes: "Most commonly affected species; vomiting may limit absorption but releases toxic gas; relay toxicosis from eating poisoned rodents has been reported"),
                     SpeciesRisk(species: .cat, severity: .severe, notes: "Equally susceptible; less commonly exposed than dogs"),
@@ -3858,6 +3935,7 @@ class DatabaseService {
                     "Depression progressing to coma",
                     "Respiratory failure"
                 ],
+                entrySeverity: .severe,
                 speciesRisks: [
                     SpeciesRisk(species: .dog, severity: .severe, notes: "Dogs are most commonly affected due to their indiscriminate eating habits. The bran and molasses in baits are highly attractive to dogs. Even very small amounts can be fatal."),
                     SpeciesRisk(species: .cat, severity: .severe, notes: "Less commonly affected than dogs, but equally susceptible to toxicity. Cats may be exposed by walking through treated areas and grooming metaldehyde off their paws. Nystagmus (rapid eye movements) is particularly noted in cats."),
@@ -3905,6 +3983,7 @@ class DatabaseService {
                     "Diarrhea (early)",
                     "Absence of stool (later, as obstruction progresses)"
                 ],
+                entrySeverity: .high,
                 speciesRisks: [
                     SpeciesRisk(species: .dog, severity: .high, notes: "Dogs are overwhelmingly the most commonly affected species, typically from chewing on glue bottles. The sweet smell and taste of these products attracts dogs. Surgery is almost always required to remove the hardened mass."),
                     SpeciesRisk(species: .cat, severity: .high, notes: "Expanding glue ingestion has not been reported in cats in the veterinary literature, but the same mechanism would apply if a cat ingested the product. Cats may be exposed if they groom glue off their fur.")
@@ -3953,6 +4032,7 @@ class DatabaseService {
                     "Seizures (with organophosphate or moldy products)",
                     "Difficulty breathing (severe cases)"
                 ],
+                entrySeverity: .moderate,
                 speciesRisks: [
                     SpeciesRisk(species: .dog, severity: .moderate, notes: "Dogs are most commonly affected because they find organic fertilizers (bone meal, blood meal) highly palatable and will often eat large quantities directly from bags. Risk increases significantly with combination products containing organophosphates."),
                     SpeciesRisk(species: .cat, severity: .low, notes: "Cats are less commonly affected as they are typically less interested in eating fertilizers. However, they can be exposed by walking through treated areas and grooming their paws."),
@@ -4011,6 +4091,7 @@ class DatabaseService {
                     "Paralysis (severe cases)",
                     "Coma (severe cases)"
                 ],
+                entrySeverity: .severe,
                 speciesRisks: [
                     SpeciesRisk(species: .cat, severity: .severe, notes: "EXTREMELY SENSITIVE. Cats lack the liver enzymes to efficiently metabolize pyrethroids. Over 96% of cats exposed to concentrated products develop toxic signs. Dog flea products should NEVER be applied to cats. Cats should also be separated from treated dogs for 72 hours after application."),
                     SpeciesRisk(species: .dog, severity: .low, notes: "Dogs tolerate pyrethroids well when used according to label directions. Toxicosis is rare but can occur with significant overdose (large-dog product on small puppy), ingestion of flea collars, or ingestion of large amounts of yard/garden products. Very young or very small dogs may be more susceptible."),
@@ -4069,6 +4150,7 @@ class DatabaseService {
                     "Collapse",
                     "Respiratory failure"
                 ],
+                entrySeverity: .high,
                 speciesRisks: [
                     SpeciesRisk(species: .dog, severity: .high, notes: "Dogs are frequently poisoned by ingesting rose care products mixed with attractive fertilizers (bone meal, blood meal), fly baits, or cattle ear tags. In one study of 102 dogs, 17% died despite treatment. Signs associated with death included weakness, mental dullness, and respiratory failure."),
                     SpeciesRisk(species: .cat, severity: .high, notes: "Cats are particularly sensitive to many OPs, especially chlorpyrifos. Exposure often occurs through grooming after walking through treated areas or from topical flea products. Cats may show chronic toxicosis from fat-stored OPs. Muscarinic signs (SLUDGE) are often LESS prominent in cats. One study reported 15% mortality."),
@@ -4094,7 +4176,7 @@ class DatabaseService {
                 id: UUID(uuidString: "f6a7b8c9-0d1e-4f2a-b3c4-5d6e7f8a9b0c")!,
                 name: "Neonicotinoids (Imidacloprid)",
                 alternateNames: ["imidacloprid", "neonicotinoid", "Advantage", "Advantage II", "Advantage Multi", "Advocate", "Seresto", "K9 Advantix", "flea treatment licked", "cat licked flea medicine", "dog licked flea treatment", "spot-on flea treatment", "dinotefuran", "nitenpyram", "Capstar", "clothianidin", "acetamiprid", "thiamethoxam", "thiacloprid"],
-                categories: [.garageGarden],
+                categories: [.garageGarden, .medications],
                 imageAsset: "imidaclopride_thumb",
                 description: "Neonicotinoids (including imidacloprid, the active ingredient in Advantage® and Seresto®) are modern insecticides commonly used in flea and tick products for dogs and cats. They have a very favorable safety profile for mammals.\n\nThese products work by targeting nicotinic acetylcholine receptors in insect nervous systems. Neonicotinoids bind much more strongly to insect receptors than mammalian receptors, and they do not easily cross the blood-brain barrier in mammals. This makes them much safer for pets than older insecticides like organophosphates.\n\n**Common concern:** \"My pet licked the flea treatment!\" This is very common and usually causes only mild, self-limiting effects such as drooling (from the bitter taste) or mild stomach upset. These typically resolve without treatment.\n\nImidacloprid has been extensively studied: dogs given 41 mg/kg daily by mouth for an entire year showed no adverse effects. Topical application at 5 times the recommended dose causes no adverse effects in dogs or cats.\n\nThese products are approved for use in pregnant and nursing dogs and cats.",
                 toxicityInfo: "Neonicotinoids have very low mammalian toxicity. Imidacloprid preferentially binds to insect nicotinic receptors (not mammalian receptors) and does not readily cross the blood-brain barrier in mammals.\n\nMost \"toxicity\" reports are actually taste reactions from licking the application site. The bitter taste causes hypersalivation (drooling), and ingestion may cause mild vomiting or diarrhea that is typically self-limiting.\n\nThere is NO specific antidote because one is rarely needed. For oral exposure, dilution with water or milk is usually sufficient. Vomiting is typically self-limiting; antiemetics are only needed if persistent.\n\nSerious toxicity requiring veterinary intervention is rare and would only occur with massive ingestion of product (far exceeding normal use).",
@@ -4112,6 +4194,7 @@ class DatabaseService {
                     "Lethargy (uncommon)",
                     "Hyperactivity (uncommon, reported in dogs)"
                 ],
+                entrySeverity: .lowModerate,
                 speciesRisks: [
                     SpeciesRisk(species: .dog, severity: .low, notes: "Very well tolerated. Dogs given 5 times the topical dose or 41 mg/kg/day orally for one year showed no adverse effects. Main concern is taste reaction from licking. Safe for pregnant and nursing dogs."),
                     SpeciesRisk(species: .cat, severity: .low, notes: "Very well tolerated when using CAT-SPECIFIC products. Cats are more prone to licking and may show more drooling. Do not use products containing permethrin on cats (some combination products like K9 Advantix contain permethrin and are for dogs only)."),
@@ -4155,6 +4238,7 @@ class DatabaseService {
                     "At toxic doses only: convulsions/seizures",
                     "At toxic doses only: ataxia (incoordination)"
                 ],
+                entrySeverity: .severe,
                 speciesRisks: [
                     SpeciesRisk(species: .dog, severity: .low, notes: "Very well tolerated. Dogs given 5 times the topical dose or 0.5 mg/kg/day orally for 13 weeks showed no adverse effects. Main concern is taste reaction from licking. Safe for pregnant and nursing dogs."),
                     SpeciesRisk(species: .cat, severity: .low, notes: "Very well tolerated at label doses. Cats given 5 times the topical dose showed no adverse effects. Do not use on kittens under 8 weeks of age."),
@@ -4205,6 +4289,7 @@ class DatabaseService {
                     "Difficulty breathing (inhalation exposure)",
                     "Lethargy or depression"
                 ],
+                entrySeverity: .high,
                 speciesRisks: [
                     SpeciesRisk(species: .dog, severity: .moderate, notes: "Should never have DEET applied. Neurological signs (tremors, ataxia, seizures) can occur. Higher concentration products pose greater risk. Generally short duration with treatment."),
                     SpeciesRisk(species: .cat, severity: .high, notes: "Cats are reported to be MORE SENSITIVE than dogs to DEET. Never apply any DEET product to cats. Seek veterinary care immediately for any exposure."),
@@ -4246,6 +4331,7 @@ class DatabaseService {
                     "Lethargy (uncommon)",
                     "Tremors (rare, mainly with large ingestions in MDR-1 dogs)"
                 ],
+                entrySeverity: .low,
                 speciesRisks: [
                     SpeciesRisk(species: .dog, severity: .low, notes: "Most common species to eat bait stations due to food attractants. Generally only causes mild GI upset. Main concern is foreign body risk from plastic housing. MDR-1 gene dogs may be more sensitive to abamectin-containing baits."),
                     SpeciesRisk(species: .cat, severity: .low, notes: "Less commonly affected (less attracted to baits). Same low toxicity concerns apply."),
@@ -4292,6 +4378,7 @@ class DatabaseService {
                     "Excessive tearing",
                     "Frequent urination"
                 ],
+                entrySeverity: nil,
                 speciesRisks: [
                     SpeciesRisk(species: .dog, severity: .moderate, notes: "Risk varies by pesticide type. Dogs generally tolerate most modern flea products well. Main concerns are organophosphates (HIGH risk) and accidental massive ingestion of any product."),
                     SpeciesRisk(species: .cat, severity: .severe, notes: "CATS ARE EXTREMELY SENSITIVE TO PYRETHROIDS (especially permethrin). Never use dog flea products on cats. Keep cats separated from treated dogs for 72 hours. Other modern flea products (imidacloprid, fipronil) are generally safe for cats."),
@@ -4333,6 +4420,7 @@ class DatabaseService {
                     "Cholecalciferol: increased thirst/urination, vomiting, kidney failure signs",
                     "Zinc phosphide: rapid vomiting, anxiety, difficulty breathing, collapse"
                 ],
+                entrySeverity: nil,
                 speciesRisks: [
                     SpeciesRisk(species: .dog, severity: .severe, notes: "Most commonly poisoned species; dogs often find and consume bait or poisoned rodents"),
                     SpeciesRisk(species: .cat, severity: .severe, notes: "Less commonly exposed but equally susceptible; outdoor cats may consume poisoned rodents"),
@@ -4379,6 +4467,7 @@ class DatabaseService {
                     "Eye irritation or redness (if splashed)",
                     "Skin irritation or burns (if contact with concentrated product)"
                 ],
+                entrySeverity: .severe,
                 speciesRisks: [
                     SpeciesRisk(species: .dog, severity: .high, notes: "Most likely to ingest tablets or drink from pools; corrosive burns can be severe—do NOT induce vomiting"),
                     SpeciesRisk(species: .cat, severity: .high, notes: "Less likely to consume but equally susceptible to corrosive injury and fumes"),
@@ -4426,6 +4515,7 @@ class DatabaseService {
                     "Seizures (severe or paraquat exposure)",
                     "Difficulty breathing (paraquat exposure)"
                 ],
+                entrySeverity: .high,
                 speciesRisks: [
                     SpeciesRisk(species: .dog, severity: .moderate, notes: "Most common exposure through eating grass or licking paws; most products cause only GI upset unless large amounts consumed"),
                     SpeciesRisk(species: .cat, severity: .moderate, notes: "Exposure through grooming after walking on treated areas; less likely to eat grass but still at risk"),
@@ -4476,6 +4566,7 @@ class DatabaseService {
                     "Dark or discolored urine",
                     "Collapse or coma (severe cases)"
                 ],
+                entrySeverity: .severe,
                 speciesRisks: [
                     SpeciesRisk(species: .dog, severity: .high, notes: "Dogs are more likely to ingest mothballs; naphthalene causes hemolytic anemia; one PDB mothball is generally tolerated but naphthalene is more dangerous"),
                     SpeciesRisk(species: .cat, severity: .severe, notes: "Cats are more sensitive to toxic effects; even one mothball can cause serious illness"),
@@ -4521,6 +4612,7 @@ class DatabaseService {
                     "Seizures (severe cases)",
                     "Cardiac arrhythmias (severe cases)"
                 ],
+                entrySeverity: .high,
                 speciesRisks: [
                     SpeciesRisk(species: .dog, severity: .high, notes: "Dogs are most at risk—attracted to chocolate scent and more likely to consume mulch; theobromine is poorly metabolized"),
                     SpeciesRisk(species: .cat, severity: .moderate, notes: "Cats are less likely to eat cocoa mulch; no documented cases of feline cocoa mulch poisoning, but cats are sensitive to theobromine"),
@@ -4592,6 +4684,7 @@ class DatabaseService {
                     "Coughing or respiratory distress (if esophageal perforation occurs)",
                     "Collapse (severe cases)"
                 ],
+                entrySeverity: .severe,
                 speciesRisks: [
                     SpeciesRisk(species: .dog, severity: .severe, notes: "Dogs commonly ingest button batteries; esophageal lodgment causes rapid, severe burns; immediate veterinary care essential"),
                     SpeciesRisk(species: .cat, severity: .severe, notes: "Less common than dogs but equally dangerous if ingested; cats' smaller esophagus increases lodgment risk"),
@@ -4654,6 +4747,7 @@ class DatabaseService {
                     "Lethargy",
                     "Fever (if secondary infection develops)"
                 ],
+                entrySeverity: .high,
                 speciesRisks: [
                     SpeciesRisk(species: .dog, severity: .moderate, notes: "Most commonly affected species; caustic burns if battery is punctured; intact batteries often pass without issue in larger dogs"),
                     SpeciesRisk(species: .cat, severity: .moderate, notes: "Less likely to chew batteries than dogs; same caustic burn risk if battery contents are released"),
@@ -4705,6 +4799,7 @@ class DatabaseService {
                     "Drooling (if packet material irritates mouth)",
                     "Most pets show no symptoms at all"
                 ],
+                entrySeverity: .low,
                 speciesRisks: [
                     SpeciesRisk(species: .dog, severity: .low, notes: "Generally non-toxic; mild GI upset possible; no treatment usually needed for standard white/clear silica gel"),
                     SpeciesRisk(species: .cat, severity: .low, notes: "Non-toxic; cats less likely to ingest; monitor for mild GI upset"),
@@ -4765,6 +4860,7 @@ class DatabaseService {
                     "Eye irritation if splashed (redness, pawing at eyes)",
                     "Skin irritation if liquid contacts fur"
                 ],
+                entrySeverity: .low,
                 speciesRisks: [
                     SpeciesRisk(species: .dog, severity: .low, notes: "Dogs may show mild drooling or no reaction at all; behavioral effects are rare; low toxicity"),
                     SpeciesRisk(species: .cat, severity: .low, notes: "Cats have more dramatic reactions to the bitter taste—profuse drooling, hyperactivity, aggression—but actual toxicity is still low; cats may re-expose themselves while grooming contaminated fur"),
@@ -4830,6 +4926,7 @@ class DatabaseService {
                     "Seizures",
                     "Sudden death (severe cases)"
                 ],
+                entrySeverity: .high,
                 speciesRisks: [
                     SpeciesRisk(species: .dog, severity: .high, notes: "Puppies are most commonly affected due to chewing behavior; oral burns common; pulmonary edema is the main life-threatening risk"),
                     SpeciesRisk(species: .cat, severity: .high, notes: "Kittens and young cats are most at risk; same concerns as dogs—oral burns and delayed pulmonary edema"),
@@ -4905,6 +5002,7 @@ class DatabaseService {
                     "Coagulopathy (bleeding disorders)",
                     "Seizures (severe cases)"
                 ],
+                entrySeverity: .severe,
                 speciesRisks: [
                     SpeciesRisk(species: .dog, severity: .high, notes: "Dogs are most commonly affected—they get into treat bags containing these packets; small dogs (<15 lbs) at highest risk for serious poisoning"),
                     SpeciesRisk(species: .cat, severity: .high, notes: "Less commonly affected than dogs but equally susceptible to iron toxicity if ingested"),
@@ -4984,6 +5082,7 @@ class DatabaseService {
                     "Seizures (severe cases)",
                     "Kidney failure signs (decreased urination, vomiting)"
                 ],
+                entrySeverity: .severe,
                 speciesRisks: [
                     SpeciesRisk(species: .dog, severity: .high, notes: "Most commonly affected species; dogs frequently swallow coins and small objects; small dogs (<24 kg) at greatest risk because objects more likely to remain in stomach"),
                     SpeciesRisk(species: .cat, severity: .high, notes: "Rare due to more selective eating habits, but equally susceptible to zinc toxicosis if ingestion occurs"),
@@ -5056,6 +5155,7 @@ class DatabaseService {
                     "Weakness or wobbliness (CNS depression from essential oils)",
                     "Fever"
                 ],
+                entrySeverity: .high,
                 speciesRisks: [
                     SpeciesRisk(species: .cat, severity: .high, notes: "Most commonly and severely affected; attracted to warm liquids; groom contaminated fur causing repeated exposure; sensitive to essential oils; cationic detergent burns are particularly severe"),
                     SpeciesRisk(species: .dog, severity: .moderate, notes: "Less commonly affected than cats; similar risk of corrosive burns if product is ingested; less likely to groom contaminated fur"),
@@ -5113,6 +5213,7 @@ class DatabaseService {
                     "Wobbliness or 'drunken' gait (rare, with large propylene glycol ingestion)",
                     "Most pets show no symptoms at all"
                 ],
+                entrySeverity: .low,
                 speciesRisks: [
                     SpeciesRisk(species: .dog, severity: .low, notes: "Most common species to chew into ice packs; usually only mild GI upset or no symptoms; monitor for vomiting"),
                     SpeciesRisk(species: .cat, severity: .low, notes: "Less likely to chew ice packs; same low risk profile as dogs"),
@@ -5167,6 +5268,7 @@ class DatabaseService {
                     "Pale gums (rare, with zinc toxicity)",
                     "Orange or dark urine (rare, with zinc toxicity)"
                 ],
+                entrySeverity: .lowModerate,
                 speciesRisks: [
                     SpeciesRisk(species: .dog, severity: .low, notes: "Most commonly affected; usually only GI upset; large ingestions of zinc oxide or salicylate-containing products warrant veterinary consultation"),
                     SpeciesRisk(species: .cat, severity: .moderate, notes: "Cats are more sensitive to salicylates than dogs; even moderate ingestion warrants veterinary consultation"),
@@ -5222,6 +5324,7 @@ class DatabaseService {
                     "Signs of shock (pale gums, rapid heart rate, weakness)",
                     "Single magnet ingestion may cause no symptoms"
                 ],
+                entrySeverity: .high,
                 speciesRisks: [
                     SpeciesRisk(species: .dog, severity: .high, notes: "High risk if MULTIPLE magnets ingested; single magnet often passes without issue; small dogs at higher risk for obstruction"),
                     SpeciesRisk(species: .cat, severity: .high, notes: "Same risk as dogs; less likely to ingest magnets but serious if multiple are swallowed"),
@@ -5279,6 +5382,7 @@ class DatabaseService {
                     "Fur matting (if glue on coat)",
                     "Most pets show no symptoms if glue was swallowed after hardening"
                 ],
+                entrySeverity: .lowModerate,
                 speciesRisks: [
                     SpeciesRisk(species: .dog, severity: .low, notes: "Low toxicity; main concern is adhesion of eyelids, lips, or tongue; hardened glue passes safely if swallowed"),
                     SpeciesRisk(species: .cat, severity: .low, notes: "Same low toxicity as dogs; may get glue on paws and transfer to face during grooming; eyelid adhesion possible"),
@@ -5434,6 +5538,7 @@ class DatabaseService {
                     "Collapse",
                     "Death (severe cases)"
                 ],
+                entrySeverity: .severe,
                 speciesRisks: [
                     SpeciesRisk(
                         species: .dog,
@@ -5527,6 +5632,7 @@ class DatabaseService {
                     "Falling from perch",
                     "Loss of consciousness"
                 ],
+                entrySeverity: .severe,
                 speciesRisks: [
                     SpeciesRisk(
                         species: .bird,
@@ -5597,6 +5703,7 @@ class DatabaseService {
                     "Eye redness or squinting (if eye exposure)",
                     "Coughing or difficulty breathing (if aspirated—seek immediate veterinary care)"
                 ],
+                entrySeverity: .low,
                 speciesRisks: [
                     SpeciesRisk(species: .dog, severity: .low, notes: "Low toxicity; most cases involve only mild, self-limiting GI upset; large ingestions or aspiration warrant veterinary consultation"),
                     SpeciesRisk(species: .cat, severity: .low, notes: "Same low toxicity as dogs; may develop respiratory sounds after grooming sodium lauryl sulfate from fur; monitor breathing"),
@@ -5660,6 +5767,7 @@ class DatabaseService {
                     "Skin irritation or redness (if dermal exposure)",
                     "Mouth or esophageal burns (concentrated products—seek immediate veterinary care)"
                 ],
+                entrySeverity: .high,
                 speciesRisks: [
                     SpeciesRisk(species: .dog, severity: .moderate, notes: "Diluted bleach causes mild GI upset; concentrated products can cause burns; dogs may drink from mop buckets or lick cleaned floors"),
                     SpeciesRisk(species: .cat, severity: .moderate, notes: "Similar to dogs; cats may walk on bleached surfaces and ingest during grooming; some cats are attracted to the chlorine smell"),
@@ -5729,6 +5837,7 @@ class DatabaseService {
                     "Skin burns or ulceration (if dermal exposure)",
                     "Eye pain, redness, or cloudiness (if eye exposure—emergency)"
                 ],
+                entrySeverity: .severe,
                 speciesRisks: [
                     SpeciesRisk(species: .dog, severity: .severe, notes: "EMERGENCY—caustic burns to mouth, esophagus, and stomach can be life-threatening; do NOT induce vomiting; seek immediate veterinary care"),
                     SpeciesRisk(species: .cat, severity: .severe, notes: "EMERGENCY—same severe risk as dogs; cats may also be exposed by walking through spills and grooming; seek immediate veterinary care"),
@@ -5791,6 +5900,7 @@ class DatabaseService {
                     "Coughing or difficulty breathing (if aspirated—seek immediate veterinary care)",
                     "Eye irritation or injury (if splashed in eyes)"
                 ],
+                entrySeverity: .severe,
                 speciesRisks: [
                     SpeciesRisk(species: .dog, severity: .high, notes: "Caustic burns to mouth, esophagus, and stomach possible; dogs may bite into pods or lick residue from open dishwashers; do NOT induce vomiting"),
                     SpeciesRisk(species: .cat, severity: .high, notes: "Same caustic risk as dogs; cats may walk through spills and ingest during grooming; less likely to bite pods but still at risk"),
@@ -5852,6 +5962,7 @@ class DatabaseService {
                     "Skin irritation (if on fur)",
                     "Diarrhea"
                 ],
+                entrySeverity: .severe,
                 speciesRisks: [
                     SpeciesRisk(species: .dog, severity: .high, notes: "Dogs account for >90% of pod poisonings; tendency to bite with force causes pressurized release; ~20% develop respiratory symptoms; monitor for aspiration pneumonia"),
                     SpeciesRisk(species: .cat, severity: .moderate, notes: "Less likely to bite into pods than dogs (~7% of cases); more likely to be exposed by walking through spills and grooming; monitor for respiratory signs"),
@@ -5916,6 +6027,7 @@ class DatabaseService {
                     "Lethargy",
                     "Blue or colored staining around mouth (if product contained dye)"
                 ],
+                entrySeverity: .high,
                 speciesRisks: [
                     SpeciesRisk(species: .dog, severity: .high, notes: "Dogs commonly drink from toilets; diluted water causes mild GI upset, but concentrated product or tablets can cause corrosive burns; do NOT induce vomiting"),
                     SpeciesRisk(species: .cat, severity: .high, notes: "Cats also drink from toilets; same corrosive risk as dogs with concentrated products; may be attracted to blue dye in some products"),
@@ -5976,6 +6088,7 @@ class DatabaseService {
                     "Skin burns (if dermal exposure)",
                     "Eye injury (if splashed—emergency)"
                 ],
+                entrySeverity: .severe,
                 speciesRisks: [
                     SpeciesRisk(species: .dog, severity: .severe, notes: "EMERGENCY—caustic burns identical to drain cleaner exposure; dogs may lick residue from oven surfaces; do NOT induce vomiting"),
                     SpeciesRisk(species: .cat, severity: .severe, notes: "EMERGENCY—same caustic risk; cats may walk through spills and ingest during grooming; seek immediate veterinary care"),
@@ -6039,6 +6152,7 @@ class DatabaseService {
                     "Muscle weakness (severe cases)",
                     "CNS depression (severe cases)"
                 ],
+                entrySeverity: .high,
                 speciesRisks: [
                     SpeciesRisk(species: .dog, severity: .moderate, notes: "Can cause oral irritation and GI upset; less sensitive than cats; concentrated products or large exposures more concerning"),
                     SpeciesRisk(species: .cat, severity: .high, notes: "Cats are notably more sensitive to QACs—oral ulcers can occur at concentrations as low as 2%; commonly exposed by grooming paws after walking on cleaned surfaces"),
@@ -6098,6 +6212,7 @@ class DatabaseService {
                     "Eye irritation (if splashed)",
                     "Coughing or difficulty breathing (rare—if aspirated, seek veterinary care)"
                 ],
+                entrySeverity: .low,
                 speciesRisks: [
                     SpeciesRisk(species: .dog, severity: .low, notes: "Low toxicity; usually just mild GI upset; dogs may drink from buckets or lick spills; large ingestions may cause more persistent vomiting"),
                     SpeciesRisk(species: .cat, severity: .low, notes: "Low toxicity; cats commonly exposed by walking through spills and grooming; may develop transient respiratory sounds but usually mild"),
@@ -6308,6 +6423,7 @@ class DatabaseService {
                     "Seizures (severe toxicosis)",
                     "Coma (severe toxicosis)"
                 ],
+                entrySeverity: .severe,
                 speciesRisks: [
                     SpeciesRisk(species: .dog, severity: .high, notes: "Dogs are frequently affected due to their willingness to eat found medications and chewable veterinary NSAIDs; German Shepherds may be more sensitive; GI ulceration typically seen first, followed by kidney injury at higher doses; veterinary chewable NSAIDs (Rimadyl, Deramaxx, Previcox) are common sources because dogs may consume entire bottles"),
                     SpeciesRisk(species: .cat, severity: .severe, notes: "Cats are MUCH more sensitive to NSAIDs than dogs due to deficient liver glucuronidation; severe acute kidney injury can occur at doses that might only cause mild GI upset in dogs; even a single human ibuprofen tablet can be dangerous for a cat; NEVER give human NSAIDs to cats"),
@@ -6448,6 +6564,7 @@ class DatabaseService {
                     "Thick eye discharge",
                     "Red eyes"
                 ],
+                entrySeverity: .severe,
                 speciesRisks: [
                     SpeciesRisk(species: .cat, severity: .severe, notes: "EXTREMELY DANGEROUS. Cats cannot properly metabolize acetaminophen due to deficient glucuronidation. Even a single regular-strength Tylenol tablet (325 mg) can be fatal to a cat. One kitten developed toxicosis after playing with an empty pill container. NEVER give acetaminophen to cats under any circumstances."),
                     SpeciesRisk(species: .dog, severity: .high, notes: "Dogs are more resistant than cats but can still develop serious hepatotoxicity from overdose. Methemoglobinemia and keratoconjunctivitis sicca (dry eye) can also occur at higher doses. While acetaminophen is sometimes used therapeutically in dogs under veterinary supervision, owner-administered doses frequently cause toxicity. Contact poison control for any exposure."),
@@ -6560,6 +6677,7 @@ class DatabaseService {
                     "Strong wintergreen odor on breath",
                     "Rapid onset of severe symptoms"
                 ],
+                entrySeverity: .severe,
                 speciesRisks: [
                     SpeciesRisk(species: .dog, severity: .high, notes: "GI ulceration is the primary concern; can occur even at 'therapeutic' doses without food. Dogs lack the ability to safely metabolize aspirin over extended periods. Never give without veterinary guidance."),
                     SpeciesRisk(species: .cat, severity: .severe, notes: "EXTREMELY DANGEROUS. Cats cannot effectively glucuronidate salicylates—half-life is 38+ hours vs 7.5 hours in dogs. A single 325 mg aspirin can cause severe toxicity. ONE Pepto-Bismol dose can be toxic. Oil of wintergreen is rapidly fatal."),
@@ -6745,6 +6863,7 @@ class DatabaseService {
                     "Coma",
                     "Respiratory difficulty"
                 ],
+                entrySeverity: .high,
                 speciesRisks: [
                     SpeciesRisk(
                         species: .dog,
@@ -6930,6 +7049,7 @@ class DatabaseService {
                     "Seizures (more common with withdrawal than overdose)",
                     "Coma"
                 ],
+                entrySeverity: .high,
                 speciesRisks: [
                     SpeciesRisk(
                         species: .dog,
@@ -7106,6 +7226,7 @@ class DatabaseService {
                     "Hyperthermia (elevated body temperature)",
                     "Hypothermia (low body temperature)"
                 ],
+                entrySeverity: .moderate,
                 speciesRisks: [
                     SpeciesRisk(
                         species: .dog,
@@ -7341,6 +7462,7 @@ class DatabaseService {
                     "Loss of appetite",
                     "Death (from respiratory failure in severe cases)"
                 ],
+                entrySeverity: .high,
                 speciesRisks: [
                     SpeciesRisk(
                         species: .dog,
@@ -7523,6 +7645,7 @@ class DatabaseService {
                     "Collapse (severe cases)",
                     "Death (if untreated)"
                 ],
+                entrySeverity: .severe,
                 speciesRisks: [
                     SpeciesRisk(
                         species: .dog,
@@ -7758,6 +7881,7 @@ class DatabaseService {
                     "Dilated pupils",
                     "Death (if untreated)"
                 ],
+                entrySeverity: .severe,
                 speciesRisks: [
                     SpeciesRisk(
                         species: .dog,
@@ -7932,6 +8056,7 @@ class DatabaseService {
                     "Loss of appetite",
                     "Drooling"
                 ],
+                entrySeverity: .severe,
                 speciesRisks: [
                     SpeciesRisk(
                         species: .dog,
@@ -8091,6 +8216,7 @@ class DatabaseService {
                     "Dilated or constricted pupils",
                     "Death (especially baclofen)"
                 ],
+                entrySeverity: .severe,
                 speciesRisks: [
                     SpeciesRisk(
                         species: .dog,
@@ -8225,6 +8351,7 @@ class DatabaseService {
                     "Facial swelling — may indicate dye allergy",
                     "Alopecia (hair loss)"
                 ],
+                entrySeverity: .moderate,
                 speciesRisks: [
                     SpeciesRisk(
                         species: .dog,
@@ -8375,6 +8502,7 @@ class DatabaseService {
                     "Vocalization",
                     "Death (severe cases, especially pseudoephedrine)"
                 ],
+                entrySeverity: .high,
                 speciesRisks: [
                     SpeciesRisk(
                         species: .dog,
@@ -8510,6 +8638,7 @@ class DatabaseService {
                     "Loss of appetite (possible obstruction)",
                     "Abdominal discomfort"
                 ],
+                entrySeverity: .moderate,
                 speciesRisks: [
                     SpeciesRisk(
                         species: .dog,
@@ -8629,6 +8758,7 @@ class DatabaseService {
                     "Coma",
                     "Death"
                 ],
+                entrySeverity: .severe,
                 speciesRisks: [
                     SpeciesRisk(
                         species: .dog,
@@ -8759,6 +8889,7 @@ class DatabaseService {
                     "Collapse",
                     "Sudden death (may be preceded by vocalization)"
                 ],
+                entrySeverity: .high,
                 speciesRisks: [
                     SpeciesRisk(
                         species: .dog,
@@ -8884,6 +9015,7 @@ class DatabaseService {
                     "Seizures (rare)",
                     "Tremors"
                 ],
+                entrySeverity: .moderate,
                 speciesRisks: [
                     SpeciesRisk(
                         species: .dog,
@@ -9057,6 +9189,7 @@ class DatabaseService {
                     "Respiratory depression",
                     "Hyperthermia (with prolonged tremors/seizures)"
                 ],
+                entrySeverity: .severe,
                 speciesRisks: [
                     SpeciesRisk(
                         species: .dog,
@@ -9235,6 +9368,7 @@ class DatabaseService {
                     "Rapid breathing (tachypnea)",
                     "Rapid heart rate (tachycardia)"
                 ],
+                entrySeverity: .high,
                 speciesRisks: [
                     SpeciesRisk(
                         species: .dog,
@@ -9376,6 +9510,7 @@ class DatabaseService {
                     "Hypothermia (low body temperature)",
                     "Death (untreated severe cases)"
                 ],
+                entrySeverity: .severe,
                 speciesRisks: [
                     SpeciesRisk(
                         species: .dog,
@@ -9461,6 +9596,7 @@ class DatabaseService {
                     "Seizures",
                     "Coma"
                 ],
+                entrySeverity: .high,
                 speciesRisks: [
                     SpeciesRisk(
                         species: .dog,
@@ -9557,6 +9693,7 @@ class DatabaseService {
                     "Lethargy",
                     "Paint-stained vomit or stool"
                 ],
+                entrySeverity: .lowModerate,
                 speciesRisks: [
                     SpeciesRisk(
                         species: .dog,
@@ -9664,6 +9801,7 @@ class DatabaseService {
                     "Dehydration",
                     "Collapse (in advanced cases)"
                 ],
+                entrySeverity: nil,
                 speciesRisks: [
                     SpeciesRisk(
                         species: .cat,
@@ -9757,6 +9895,7 @@ class DatabaseService {
                     "Rapid breathing (compensating for anemia)",
                     "Collapse (in severe anemia)"
                 ],
+                entrySeverity: .lowModerate,
                 speciesRisks: [
                     SpeciesRisk(
                         species: .dog,
@@ -9861,6 +10000,7 @@ class DatabaseService {
                     "Coma",
                     "Sudden death"
                 ],
+                entrySeverity: .severe,
                 speciesRisks: [
                     SpeciesRisk(
                         species: .dog,
@@ -9975,6 +10115,7 @@ class DatabaseService {
                     "Seizures (rare)",
                     "Sudden death (severe anaphylaxis or massive envenomation)"
                 ],
+                entrySeverity: .moderate,
                 speciesRisks: [
                     SpeciesRisk(
                         species: .dog,
@@ -10091,6 +10232,7 @@ class DatabaseService {
                     "Shock",
                     "Sudden death"
                 ],
+                entrySeverity: .severe,
                 speciesRisks: [
                     SpeciesRisk(
                         species: .dog,
@@ -10206,6 +10348,7 @@ Coral snakes are secretive and rarely encountered, but pets investigating leaf l
                     "Respiratory depression → paralysis",
                     "Altered mentation progressing to obtundation"
                 ],
+                entrySeverity: .severe,
                 speciesRisks: [
                     SpeciesRisk(
                         species: .dog,
@@ -10304,6 +10447,7 @@ Geographic location matters most. Outside Arizona bark scorpion range, severe sy
                     "Hypertension",
                     "Vomiting"
                 ],
+                entrySeverity: .high,
                 speciesRisks: [
                     SpeciesRisk(
                         species: .dog,
@@ -10410,6 +10554,7 @@ Approximately 15% of widow spider bites are "dry" with no venom injection, but a
                     "Flaccid paralysis (neurotransmitter depletion)",
                     "Respiratory failure"
                 ],
+                entrySeverity: .severe,
                 speciesRisks: [
                     SpeciesRisk(
                         species: .dog,
@@ -10540,6 +10685,7 @@ NOT found in California, Florida, Pacific Northwest, or Atlantic seaboard. Singl
                     "Pale gums (hemolytic anemia)",
                     "Signs of kidney injury"
                 ],
+                entrySeverity: .moderate,
                 speciesRisks: [
                     SpeciesRisk(
                         species: .dog,
@@ -10676,6 +10822,7 @@ Pet fur provides some protection from skin exposure, but oral exposure from mout
                     "Restlessness or distress",
                     "Rarely, allergic reactions"
                 ],
+                entrySeverity: .moderate,
                 speciesRisks: [
                     SpeciesRisk(
                         species: .dog,
@@ -10790,6 +10937,7 @@ Approximately 95% of affected dogs survive with prompt treatment. Fatalities occ
                     "",
                     "NOTE: Mental alertness and pain sensation remain NORMAL"
                 ],
+                entrySeverity: .moderate,
                 speciesRisks: [
                     SpeciesRisk(
                         species: .dog,
@@ -10906,6 +11054,7 @@ Hops toxicosis has NOT been reported in cats. However, given the severity in dog
                     "Difficulty breathing or apnea",
                     "Death (within 3 hours if untreated)"
                 ],
+                entrySeverity: .severe,
                 speciesRisks: [
                     SpeciesRisk(
                         species: .dog,
@@ -11031,6 +11180,7 @@ Major US outbreaks: 2005, 2011, 2020, 2021—numerous pet deaths. FDA maintains 
                     "",
                     "Sudden death (peracute cases)"
                 ],
+                entrySeverity: .severe,
                 speciesRisks: [
                     SpeciesRisk(
                         species: .dog,
@@ -11154,6 +11304,7 @@ Water hemlock: 3-6 feet tall near WATER sources, hollow stems with chambered roo
                     "Coma",
                     "Death (water hemlock: can occur within 15 min)"
                 ],
+                entrySeverity: .severe,
                 speciesRisks: [
                     SpeciesRisk(
                         species: .dog,
@@ -11255,6 +11406,7 @@ Poison sumac: 7-13 leaflets in pairs with one at tip; grows in swampy areas.
                     "Drooling",
                     "Weakness (rare, large ingestion)"
                 ],
+                entrySeverity: .low,
                 speciesRisks: [
                     SpeciesRisk(
                         species: .dog,
@@ -11362,6 +11514,7 @@ Washington State University Veterinary Clinical Pharmacology Laboratory offers t
                     "Coma",
                     "Death (severe cases)"
                 ],
+                entrySeverity: nil,
                 speciesRisks: [
                     SpeciesRisk(
                         species: .dog,
@@ -11454,6 +11607,7 @@ Cats rarely eat corn cobs due to selective eating habits.
                     "Weakness",
                     "Depression"
                 ],
+                entrySeverity: nil,
                 speciesRisks: [
                     SpeciesRisk(
                         species: .dog,
@@ -11551,6 +11705,7 @@ Early removal is much easier than waiting. May require sedation, scoping, or sur
                     "Lethargy",
                     "Unexplained abscess anywhere on body"
                 ],
+                entrySeverity: nil,
                 speciesRisks: [
                     SpeciesRisk(
                         species: .dog,
@@ -11656,6 +11811,7 @@ Narrower intestines make obstruction more likely even with smaller items.
                     "",
                     "NOTE: If string visible, NEVER PULL"
                 ],
+                entrySeverity: nil,
                 speciesRisks: [
                     SpeciesRisk(
                         species: .dog,

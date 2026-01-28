@@ -51,7 +51,9 @@ struct BookmarksListView: View {
 
             Spacer()
 
-            if let maxSeverity = item.speciesRisks.map(\.severity).max(by: { severityOrder($0) < severityOrder($1) }) {
+            if let severity = item.entrySeverity {
+                SeverityBadge(severity: severity)
+            } else if let maxSeverity = item.speciesRisks.map(\.severity).max() {
                 SeverityBadge(severity: maxSeverity)
             }
         }
@@ -60,9 +62,10 @@ struct BookmarksListView: View {
     private func severityOrder(_ severity: Severity) -> Int {
         switch severity {
         case .low: return 0
-        case .moderate: return 1
-        case .high: return 2
-        case .severe: return 3
+        case .lowModerate: return 1
+        case .moderate: return 2
+        case .high: return 3
+        case .severe: return 4
         }
     }
 }

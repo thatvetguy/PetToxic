@@ -19,6 +19,7 @@ struct ToxicItem: Identifiable, Codable, Hashable {
     let toxicityInfo: String
     let onsetTime: OnsetTime?
     let symptoms: [String]
+    let entrySeverity: Severity?    // Overall entry severity (nil for Informational)
     let speciesRisks: [SpeciesRisk]
     let preventionTips: [String]?
     let sources: [String]
@@ -62,6 +63,7 @@ extension ToxicItem {
             "Seizures (severe cases)",
             "Very high doses: low blood pressure, slow heart rate, coma"
         ],
+        entrySeverity: .severe,
         speciesRisks: [
             SpeciesRisk(species: .dog, severity: .high, notes: "Dogs are commonly affected due to indiscriminate eating habits. Hospitalization is often required for treatment."),
             SpeciesRisk(species: .cat, severity: .severe, notes: "Cats are more sensitive to methylxanthines than dogs, though they rarely consume chocolate voluntarily.")

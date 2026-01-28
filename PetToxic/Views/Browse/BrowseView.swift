@@ -226,13 +226,18 @@ struct CategoryListView: View {
     // MARK: - Helper Methods
 
     private func maxSeverity(for item: ToxicItem) -> Int {
-        let severityOrder: [Severity: Int] = [
-            .severe: 4,
-            .high: 3,
-            .moderate: 2,
-            .low: 1
-        ]
-        return item.speciesRisks.map { severityOrder[$0.severity] ?? 0 }.max() ?? 0
+        // Use entrySeverity if available, otherwise fall back to computed max from speciesRisks
+        if let entrySeverity = item.entrySeverity {
+            switch entrySeverity {
+            case .severe: return 5
+            case .high: return 4
+            case .moderate: return 3
+            case .lowModerate: return 2
+            case .low: return 1
+            }
+        }
+        // Fallback for items without entrySeverity (Informational entries sort last)
+        return 0
     }
 
     private func cycleGridSize() {

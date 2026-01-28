@@ -34,19 +34,27 @@ enum Species: String, Codable, CaseIterable, Identifiable {
 
 // MARK: - Severity
 
-enum Severity: String, Codable, CaseIterable {
+enum Severity: String, Codable, CaseIterable, Comparable {
     case low
+    case lowModerate
     case moderate
     case high
     case severe
 
     var displayName: String {
-        rawValue.capitalized
+        switch self {
+        case .low: return "Low"
+        case .lowModerate: return "Low-Moderate"
+        case .moderate: return "Moderate"
+        case .high: return "High"
+        case .severe: return "Severe"
+        }
     }
 
     var color: Color {
         switch self {
         case .low: return Color(red: 144/255, green: 238/255, blue: 144/255)
+        case .lowModerate: return Color(red: 255/255, green: 222/255, blue: 50/255)  // #FFDE32
         case .moderate: return Color(red: 255/255, green: 215/255, blue: 0/255)
         case .high: return Color(red: 255/255, green: 165/255, blue: 0/255)
         case .severe: return Color(red: 255/255, green: 68/255, blue: 68/255)
@@ -56,10 +64,27 @@ enum Severity: String, Codable, CaseIterable {
     var description: String {
         switch self {
         case .low: return "Mild GI upset possible; monitor at home"
+        case .lowModerate: return "May cause mild to moderate effects; monitor closely"
         case .moderate: return "Vet consultation recommended"
         case .high: return "Seek veterinary care promptly"
         case .severe: return "Potentially life-threatening; emergency care needed"
         }
+    }
+
+    // MARK: - Comparable
+
+    private var sortOrder: Int {
+        switch self {
+        case .low: return 1
+        case .lowModerate: return 2
+        case .moderate: return 3
+        case .high: return 4
+        case .severe: return 5
+        }
+    }
+
+    static func < (lhs: Severity, rhs: Severity) -> Bool {
+        lhs.sortOrder < rhs.sortOrder
     }
 }
 
