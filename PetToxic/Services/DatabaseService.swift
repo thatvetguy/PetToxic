@@ -3214,8 +3214,9 @@ class DatabaseService {
                 speciesRisks: [
                     SpeciesRisk(species: .dog, severity: .moderate, notes: "Dogs may chew on bittersweet wreaths and decorations, ingesting the berries. Most cases result in GI upset. Large ingestions warrant veterinary evaluation for potential cardiac or neurological effects."),
                     SpeciesRisk(species: .cat, severity: .moderate, notes: "Cats may be attracted to swinging bittersweet decorations as play objects. Contact your veterinarian for any ingestion."),
-                    SpeciesRisk(species: .smallMammal, severity: .moderate, notes: "Small body size may increase risk of more significant effects. Keep decorations out of reach of rabbits, guinea pigs, and other small pets."),
-                    SpeciesRisk(species: .bird, severity: .moderate, notes: "Limited data available. Wild birds do eat bittersweet berries, but pet birds may be more sensitive. Seek veterinary care for any suspected ingestion.")
+                    SpeciesRisk(species: .smallMammal, severity: .low, notes: "Bittersweet berries are listed on rabbit poison plant databases; the saponins and alkaloids can cause GI upset; however, wild rabbits and squirrels reportedly eat the berries without apparent ill effects; domestic small mammals may be more sensitive"),
+                    SpeciesRisk(species: .bird, severity: .low, notes: "Wild birds eat bittersweet berries and are the primary seed dispersers; pet birds may be more sensitive but serious toxicity is unlikely"),
+                    SpeciesRisk(species: .reptile, severity: .low, notes: "Listed on reptile toxic plant databases; tortoises and herbivorous reptiles should be kept away from bittersweet; the berries are the most concerning part")
                 ],
                 preventionTips: [
                     "Keep bittersweet wreaths, garlands, and centerpieces out of reach of pets",
@@ -3224,7 +3225,7 @@ class DatabaseService {
                     "Do not allow pets to chew on bittersweet decorations — the berries can detach and be swallowed",
                     "Learn to identify bittersweet nightshade, which may grow as a weed in gardens and wooded areas"
                 ],
-                sources: ["ASPCA Animal Poison Control Center", "Pet Poison Helpline", "Veterinary Information Network (VIN)", "Cornell University Poisonous Plants Database", "USDA Plant Database"],
+                sources: ["ASPCA Animal Poison Control Center", "Pet Poison Helpline", "Dogs Trust Poisonous Plants Database", "MediRabbit Toxic Plants Database"],
                 relatedEntries: nil
             ),
 
@@ -3403,7 +3404,9 @@ class DatabaseService {
                 speciesRisks: [
                     SpeciesRisk(species: .dog, severity: .high, notes: "Convulsions are the hallmark sign; can be fatal; dogs may mistake berries for grapes and consume them"),
                     SpeciesRisk(species: .cat, severity: .high, notes: "Same toxicity concerns as dogs; cats are less likely to consume berries but should be monitored if exposure occurs"),
-                    SpeciesRisk(species: .smallMammal, severity: .high, notes: "Toxic to all mammals; small body size increases vulnerability")
+                    SpeciesRisk(species: .smallMammal, severity: .high, notes: "Toxic to all mammals; small body size increases vulnerability"),
+                    SpeciesRisk(species: .bird, severity: .low, notes: "Wild birds eat moonseed berries without apparent ill effects and are the primary seed dispersers; pet birds may have similar resistance but should be kept away as a precaution"),
+                    SpeciesRisk(species: .reptile, severity: .high, notes: "Dauricine alkaloids affect cardiac potassium channels in all vertebrates; reptiles should be assumed susceptible to the same cardiac and neurological effects as mammals; herbivorous reptiles are at greatest risk")
                 ],
                 preventionTips: [
                     "Learn to identify moonseed — it grows as a climbing vine in moist woodlands and along stream banks in eastern North America",
@@ -3412,7 +3415,7 @@ class DatabaseService {
                     "Remember the key difference: moonseed has a single crescent-shaped seed, while grapes have round seeds",
                     "If your pet eats unknown berries and develops convulsions, seek veterinary care immediately"
                 ],
-                sources: ["Veterinary Information Network (VIN)", "Cornell University Poisonous Plants Informational Database", "Missouri Department of Conservation", "USDA Forest Service"],
+                sources: ["Cornell University Poisonous Plants Database", "Missouri Department of Conservation", "USDA Forest Service", "North Carolina State Extension", "Oxford University Herbaria"],
                 relatedEntries: nil
             ),
 
@@ -3449,7 +3452,9 @@ class DatabaseService {
                 speciesRisks: [
                     SpeciesRisk(species: .dog, severity: .low, notes: "Most cases involve localized skin irritation that resolves within hours; hunting and working dogs with heavy exposure may develop more serious symptoms; hair coat provides some protection"),
                     SpeciesRisk(species: .cat, severity: .low, notes: "Similar to dogs; cats are less likely to have heavy exposure due to lifestyle; localized skin reaction is most common"),
-                    SpeciesRisk(species: .smallMammal, severity: .moderate, notes: "Rabbits and small mammals may be more vulnerable due to smaller size; outdoor rabbits in nettle-prone areas should be protected")
+                    SpeciesRisk(species: .smallMammal, severity: .low, notes: "Stinging hairs cause contact irritation to exposed skin; dried nettle is commonly used as a safe supplement for rabbits and other small mammals; the main concern is immediate discomfort from contact with fresh plants"),
+                    SpeciesRisk(species: .bird, severity: .low, notes: "The danger from stinging nettle is primarily contact irritation from the stinging hairs, not systemic toxicity from ingestion; dried or cooked nettle is safe and used in animal feeds; pet birds may experience oral irritation if they contact fresh plant material"),
+                    SpeciesRisk(species: .reptile, severity: .low, notes: "Contact with stinging hairs may cause localized irritation; reptile scales provide some protection but mouth and eye areas are vulnerable; dried nettle does not retain stinging properties and is safe")
                 ],
                 preventionTips: [
                     "Learn to identify stinging nettle — it has serrated, heart-shaped leaves and grows in clusters in moist areas",
@@ -3459,7 +3464,7 @@ class DatabaseService {
                     "Keep outdoor rabbit hutches away from areas where nettles grow",
                     "Dock leaves (Rumex species), which often grow near nettles, contain compounds that may help soothe nettle stings — crush and apply to affected skin"
                 ],
-                sources: ["Veterinary Information Network (VIN)", "Pet Poison Helpline", "Burrows & Tyrl's Toxic Plants of North America", "Animal Poisons Helpline"],
+                sources: ["ASPCA Animal Poison Control Center", "Pet Poison Helpline", "NCBI LiverTox Database", "Britannica Encyclopedia"],
                 relatedEntries: nil
             ),
 
@@ -11142,6 +11147,21 @@ Hops toxicosis has NOT been reported in cats. However, given the severity in dog
                         species: .cat,
                         severity: .low,
                         notes: "Hops toxicosis has NOT been reported in cats. However, given the extreme severity in dogs, cats should also be prevented from accessing hops."
+                    ),
+                    SpeciesRisk(
+                        species: .bird,
+                        severity: .low,
+                        notes: "The malignant hyperthermia reaction from hops appears to be specific to dogs; there are no documented cases of hops toxicity in birds; small amounts of hop extract are actually used in some avian calming supplements"
+                    ),
+                    SpeciesRisk(
+                        species: .smallMammal,
+                        severity: .low,
+                        notes: "Hops toxicosis has only been documented in dogs (and rarely cats); no cases have been reported in rabbits, guinea pigs, or other small mammals; hop extracts in small doses are used in some small animal calming formulations"
+                    ),
+                    SpeciesRisk(
+                        species: .reptile,
+                        severity: .low,
+                        notes: "No documented cases of hops toxicity in reptiles; the malignant hyperthermia-like reaction appears to be mammal-specific and primarily affects dogs; reptiles are unlikely to consume hops but should still be kept away as a precaution"
                     )
                 ],
                 preventionTips: [
@@ -11154,9 +11174,9 @@ Hops toxicosis has NOT been reported in cats. However, given the severity in dog
                     "A single 28g hop plug can be fatal"
                 ],
                 sources: [
-                    "Veterinary Information Network (VIN)",
                     "ASPCA Animal Poison Control Center",
-                    "Pet Poison Helpline"
+                    "Pet Poison Helpline",
+                    "American Kennel Club"
                 ],
                 relatedEntries: nil
             ),
@@ -11510,6 +11530,21 @@ Poison sumac: 7-13 leaflets in pairs with one at tip; grows in swampy areas.
                         species: .cat,
                         severity: .low,
                         notes: "Cats rarely develop reactions. Fur protects skin from urushiol oil. Main concern is transferring oil to owners."
+                    ),
+                    SpeciesRisk(
+                        species: .bird,
+                        severity: .low,
+                        notes: "Birds are largely protected from urushiol by their feathers; unfeathered areas (feet, around beak) could potentially be irritated by direct contact; the main concern is birds transferring oil to owners when handled"
+                    ),
+                    SpeciesRisk(
+                        species: .smallMammal,
+                        severity: .low,
+                        notes: "Small mammals are protected by their fur similar to dogs and cats; allergic contact dermatitis is uncommon; the primary concern is that they can carry urushiol oil on their coat and transfer it to humans"
+                    ),
+                    SpeciesRisk(
+                        species: .reptile,
+                        severity: .low,
+                        notes: "Reptile scales provide protection from urushiol contact; herbivorous reptiles kept in outdoor enclosures may contact these plants; the main concern is oil transfer to handlers rather than harm to the reptile"
                     )
                 ],
                 preventionTips: [
@@ -11524,7 +11559,7 @@ Poison sumac: 7-13 leaflets in pairs with one at tip; grows in swampy areas.
                     "ASPCA Animal Poison Control Center",
                     "Pet Poison Helpline",
                     "American Kennel Club",
-                    "Veterinary Information Network (VIN)"
+                    "San Diego Turtle and Tortoise Society"
                 ],
                 relatedEntries: nil
             ),
