@@ -1766,7 +1766,9 @@ class DatabaseService {
                 speciesRisks: [
                     SpeciesRisk(species: .dog, severity: .low, notes: "Most ingestions cause only vomiting and GI upset; dogs typically do not eat enough to cause cardiac effects"),
                     SpeciesRisk(species: .cat, severity: .low, notes: "Same as dogs — GI upset is the primary concern; cardiac effects are rare"),
-                    SpeciesRisk(species: .bird, severity: .high, notes: "Birds are more susceptible to cardiac glycosides due to small body size; can cause depression, ataxia, tremors, seizures, and cardiac effects")
+                    SpeciesRisk(species: .bird, severity: .high, notes: "Birds are more susceptible to cardiac glycosides due to small body size; can cause depression, ataxia, tremors, seizures, and cardiac effects"),
+                    SpeciesRisk(species: .smallMammal, severity: .high, notes: "Bufadienolides (cardiac glycosides) documented to affect rabbit and guinea pig cardiac tissue in research studies; mechanism of Na+/K+-ATPase inhibition is universal to all mammals"),
+                    SpeciesRisk(species: .reptile, severity: .high, notes: "Cardiac glycosides affect all vertebrates through Na+/K+-ATPase inhibition; limited direct reptile data but the mechanism is not species-specific")
                 ],
                 preventionTips: [
                     "Keep kalanchoe plants on high shelves or in rooms inaccessible to pets",
@@ -1775,7 +1777,7 @@ class DatabaseService {
                     "Consider pet-safe succulent alternatives like Haworthia or Echeveria",
                     "Dispose of fallen flowers and leaves promptly"
                 ],
-                sources: ["Veterinary Information Network (VIN)", "ASPCA Animal Poison Control Center", "Pet Poison Helpline", "Veterinary Medicine (peer-reviewed journal)"],
+                sources: ["ASPCA Animal Poison Control Center", "Pet Poison Helpline", "dvm360 — Toxicology Brief: Kalanchoe species poisoning in pets", "PubMed — Krimpsiekte and acute cardiac glycoside poisoning"],
                 relatedEntries: nil
             ),
 
@@ -2124,7 +2126,9 @@ class DatabaseService {
                 speciesRisks: [
                     SpeciesRisk(species: .dog, severity: .moderate, notes: "Dogs are more likely than cats to dig up and consume tubers due to their less discriminating eating habits; tuber ingestion can cause cardiac arrhythmias and seizures"),
                     SpeciesRisk(species: .cat, severity: .moderate, notes: "Cats typically only nibble leaves and flowers (lower toxin levels); GI upset is the most common outcome; serious toxicity is less common but possible with large ingestions"),
-                    SpeciesRisk(species: .smallMammal, severity: .severe, notes: "Rabbits are particularly at risk — cyclamen can be life-threatening because rabbits cannot vomit to expel the toxin")
+                    SpeciesRisk(species: .smallMammal, severity: .severe, notes: "Rabbits are particularly at risk — cyclamen can be life-threatening because rabbits cannot vomit to expel the toxin"),
+                    SpeciesRisk(species: .bird, severity: .high, notes: "Terpenoid saponins are toxic to all pet species; small body size increases risk; saponins cause GI irritation and potential hemolysis through a mechanism that affects all vertebrates"),
+                    SpeciesRisk(species: .reptile, severity: .high, notes: "Saponins interfere with cell membrane lipids in all species; mechanism is not species-specific; limited direct reptile data but caution warranted")
                 ],
                 preventionTips: [
                     "Keep cyclamen plants out of reach of pets, especially dogs that may dig in potted plants",
@@ -2166,7 +2170,8 @@ class DatabaseService {
                     SpeciesRisk(species: .dog, severity: .moderate, notes: "Dogs may be attracted to the seed pods; causes intense oral irritation and GI upset; incoordination possible with larger ingestions"),
                     SpeciesRisk(species: .cat, severity: .moderate, notes: "Same toxicity concerns as dogs; cats are less likely to consume large amounts due to the intense oral irritation"),
                     SpeciesRisk(species: .smallMammal, severity: .severe, notes: "Deaths have been documented in rabbits; small mammals are at higher risk due to small body size"),
-                    SpeciesRisk(species: .bird, severity: .moderate, notes: "Limited data; birds should be kept away from this plant as a precaution")
+                    SpeciesRisk(species: .bird, severity: .moderate, notes: "Limited data; birds should be kept away from this plant as a precaution"),
+                    SpeciesRisk(species: .reptile, severity: .high, notes: "Tortoise Trust specifically identifies Caesalpinia gilliesii seed pods as toxic to tortoises; hydrocyanic acid mechanism affects all vertebrates; keep tortoises and other reptiles away from this plant")
                 ],
                 preventionTips: [
                     "Keep dogs away from Bird of Paradise shrubs, especially when seed pods are present — the pods and seeds are the most toxic parts",
@@ -2175,7 +2180,7 @@ class DatabaseService {
                     "The intense oral irritation usually limits how much a pet will eat, but any ingestion should prompt a call to your veterinarian",
                     "If you have rabbits or other small mammals, keep them completely away from this plant — deaths have been documented"
                 ],
-                sources: ["ASPCA Animal Poison Control Center", "Pet Poison Helpline", "WagWalking Veterinary Resources", "Hunker Home & Garden"],
+                sources: ["ASPCA Animal Poison Control Center", "Pet Poison Helpline", "Tortoise Trust — Toxic Plants and Tortoises", "WagWalking Veterinary Resources"],
                 relatedEntries: nil
             ),
 
@@ -3208,7 +3213,9 @@ class DatabaseService {
                 speciesRisks: [
                     SpeciesRisk(species: .dog, severity: .high, notes: "All parts are toxic; berries are most dangerous; bitter taste usually limits ingestion but even a few berries can cause serious illness; hemorrhagic diarrhea is a hallmark sign"),
                     SpeciesRisk(species: .cat, severity: .high, notes: "Same concerns as dogs; cats may be attracted to the plant's fragrant flowers"),
-                    SpeciesRisk(species: .bird, severity: .severe, notes: "Small body size makes birds extremely vulnerable; berries may be attractive to caged birds if accessible")
+                    SpeciesRisk(species: .bird, severity: .severe, notes: "Small body size makes birds extremely vulnerable; berries may be attractive to caged birds if accessible"),
+                    SpeciesRisk(species: .smallMammal, severity: .severe, notes: "Toxic to rabbits and guinea pigs; diterpene toxins (mezerein, daphnin) cause severe vesication and GI damage; small body size increases risk of fatal outcomes from even small ingestions"),
+                    SpeciesRisk(species: .reptile, severity: .high, notes: "Diterpene toxins cause irritation and tissue damage through a mechanism that affects all vertebrates; limited direct reptile data but caution warranted")
                 ],
                 preventionTips: [
                     "Consider removing daphne plants from areas where pets have unsupervised access — the berries are particularly attractive and dangerous",
@@ -3218,7 +3225,7 @@ class DatabaseService {
                     "Teach children not to eat any berries from garden plants",
                     "If your pet shows signs of oral pain or bloody diarrhea after being in the garden, seek veterinary care immediately"
                 ],
-                sources: ["Veterinary Information Network (VIN)", "Pet Poison Helpline", "ASPCA Animal Poison Control Center", "Animal Poisons Helpline (Australia)"],
+                sources: ["ASPCA Animal Poison Control Center", "Pet Poison Helpline", "BBC Gardeners World Magazine — Dangerous Plants to Pets", "NC State Extension Gardener Plant Toolbox"],
                 relatedEntries: nil
             ),
 
@@ -3255,7 +3262,9 @@ class DatabaseService {
                 speciesRisks: [
                     SpeciesRisk(species: .dog, severity: .severe, notes: "Dogs are particularly susceptible to fatal chinaberry poisoning; multiple documented fatalities within 24-36 hours; ALL chinaberry ingestions should be treated as emergencies"),
                     SpeciesRisk(species: .cat, severity: .high, notes: "Similar toxicity concerns as dogs; cats are less likely to consume fallen berries but should be monitored if exposure occurs"),
-                    SpeciesRisk(species: .bird, severity: .moderate, notes: "Some birds appear more resistant to chinaberry toxicity and may spread seeds; pet birds should still be kept away from these trees")
+                    SpeciesRisk(species: .bird, severity: .moderate, notes: "Some birds appear more resistant to chinaberry toxicity and may spread seeds; pet birds should still be kept away from these trees"),
+                    SpeciesRisk(species: .smallMammal, severity: .severe, notes: "Documented poisonings in rabbits, guinea pigs, and rats; feeding experiments established toxic doses; meliatoxins cause severe GI and neurological effects regardless of species"),
+                    SpeciesRisk(species: .reptile, severity: .severe, notes: "Meliatoxins (tetranortriterpenes) affect all vertebrate species; mechanism of toxicity is not species-specific; limited direct reptile data but extrapolation from mammalian studies indicates severe risk")
                 ],
                 preventionTips: [
                     "If you have a chinaberry tree in your yard, consider removing it — especially if you have dogs",
@@ -3265,7 +3274,7 @@ class DatabaseService {
                     "If your dog eats chinaberry berries, contact your veterinarian immediately — do not wait for symptoms to develop",
                     "Bring a sample of the berries or a photo of the tree to help your veterinarian identify the exposure"
                 ],
-                sources: ["ASPCA Animal Poison Control Center", "Pet Poison Helpline", "Veterinary Information Network (VIN)", "IVIS - Guide to Poisonous House and Garden Plants", "Clinical Veterinary Toxicology (Plumlee)"],
+                sources: ["ASPCA Animal Poison Control Center", "Pet Poison Helpline", "Texas A&M AgriLife Extension — Plants of Texas Rangelands", "ScienceDirect — Clinical Veterinary Toxicology", "PMC — Emerging Plant Intoxications in Domestic Animals"],
                 relatedEntries: nil
             ),
 
