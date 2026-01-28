@@ -1053,7 +1053,7 @@ class DatabaseService {
                 alternateNames: ["Dieffenbachia", "dumbcane", "dumb cane", "Philodendron", "heartleaf philodendron", "split-leaf philodendron", "Pothos", "golden pothos", "devil's ivy", "Peace lily", "Spathiphyllum", "Calla lily", "Zantedeschia", "Caladium", "angel wings", "Elephant ear", "Alocasia", "Colocasia", "Arrowhead vine", "Syngonium", "Monstera", "Swiss cheese plant", "Chinese evergreen", "Aglaonema", "Anthurium", "flamingo flower", "flamingo lily", "Araceae", "aroid", "arum family", "calcium oxalate crystals", "raphides", "ZZ plant", "Zamioculcas zamiifolia", "Zanzibar gem", "eternity plant", "aroid palm", "emerald palm", "Raven ZZ", "ZZ Raven", "Schefflera", "Schefflera actinophylla", "Schefflera arboricola", "umbrella tree", "umbrella plant", "dwarf umbrella tree", "octopus tree", "starleaf", "Queensland umbrella tree", "Australian ivy palm", "Jack-in-the-pulpit", "Arisaema", "Arisaema triphyllum", "Indian turnip", "bog onion", "brown dragon", "wild turnip", "dragon root", "pepper turnip", "three-leaved Indian turnip", "wake robin"],
                 categories: [.plants],
                 imageAsset: "insol_caox_thumb",
-                description: "The Araceae (aroid) family includes many of the most popular houseplants: Dieffenbachia (dumbcane), Philodendron, Pothos (devil's ivy), Peace lily, Calla lily, Caladium, Elephant ear, Monstera, Chinese evergreen, Anthurium, and Arrowhead vine. These plants are favored because they tolerate low light and infrequent watering, making them common in homes and offices. According to the ASPCA Animal Poison Control Center, the Araceae family is the most common plant exposure reported in pets. Also included in this family is the increasingly popular ZZ plant (Zamioculcas zamiifolia), known for its glossy, dark green leaves and extreme tolerance of neglect. Jack-in-the-pulpit (Arisaema triphyllum) is a native woodland wildflower in the same family, recognized by its distinctive hooded spathe and bright red berry cluster in fall — pets may encounter it on hiking trails or in wooded yards. Schefflera (umbrella tree), while belonging to a different plant family (Araliaceae), also contains insoluble calcium oxalate crystals and causes the same localized oral irritation.",
+                description: "The Araceae (aroid) family includes many of the most popular houseplants: Dieffenbachia (dumbcane), Philodendron, Pothos (devil's ivy), Peace lily, Calla lily, Caladium, Elephant ear, Monstera, Chinese evergreen, Anthurium, and Arrowhead vine. These plants are favored because they tolerate low light and infrequent watering, making them common in homes and offices. According to the ASPCA Animal Poison Control Center, the Araceae family is the most common plant exposure reported in pets. Also included in this family is the increasingly popular ZZ plant (Zamioculcas zamiifolia), known for its glossy, dark green leaves and extreme tolerance of neglect. Jack-in-the-pulpit (Arisaema triphyllum) is a native woodland wildflower in the same family, recognized by its distinctive hooded spathe and bright red berry cluster in fall — pets may encounter it on hiking trails or in wooded yards. Schefflera (umbrella tree), while belonging to a different plant family (Araliaceae), also contains insoluble calcium oxalate crystals and causes the same localized oral irritation.\n\nCommon plants in this category include:\n• Pothos (Devil's Ivy)\n• Philodendron species\n• Peace Lily (Spathiphyllum)\n• Dieffenbachia (Dumb Cane)\n• Chinese Evergreen (Aglaonema)\n• Elephant's Ear (Alocasia, Colocasia)\n• Caladium\n• Calla Lily\n• Arrowhead Vine (Syngonium)\n• Monstera (Swiss Cheese Plant)\n• Flamingo Plant (Anthurium)\n• Jack-in-the-Pulpit\n• Schefflera (Umbrella Plant)",
                 toxicityInfo: "These plants contain insoluble calcium oxalate crystals called raphides — microscopic needle-sharp structures bundled inside specialized cells. When a pet bites or chews the plant, these crystals are forcibly ejected into the mouth and throat tissues, causing immediate intense pain. The crystals also contain irritating compounds like proteases that worsen local inflammation. Importantly, because the crystals are insoluble, they are NOT absorbed into the bloodstream and do NOT cause kidney damage — the effects are limited to the mouth, tongue, and throat. While symptoms can look alarming to pet owners (dramatic drooling, pawing at the mouth), the condition is generally self-limiting. The concentration of calcium oxalate varies between plants, so some cause more irritation than others. Note: 'Mother-in-law's tongue' can refer to both Dieffenbachia (covered here) and Snake Plant (Sansevieria), which contains different toxins — see separate entry for Snake Plant.\n\n**ZZ Plant (Zamioculcas zamiifolia)** — Despite sometimes being marketed as 'pet-safe,' ZZ plants are members of the Araceae family and contain the same insoluble calcium oxalate crystals. Chewing on the leaves or stems causes the same immediate oral pain and irritation as other plants in this group. The sap can also cause skin irritation on contact. Effects are localized and self-limiting — no systemic toxicity occurs.\n\n**Schefflera (Umbrella Tree)** — This popular indoor tree contains insoluble calcium oxalate crystals identical to those found in Araceae plants. Chewing on the leaves causes immediate oral pain, drooling, and pawing at the mouth. Effects are localized and self-limiting — no systemic toxicity occurs. The dwarf variety (Schefflera arboricola) is more common as a houseplant than the larger Queensland umbrella tree (Schefflera actinophylla).\n\n**Jack-in-the-pulpit (Arisaema)** — This native woodland wildflower contains the same insoluble calcium oxalate crystals as other Araceae family members. All parts are toxic, but the corm (underground bulb-like structure) and berries have the highest crystal concentration. The bright red berry cluster that forms in late summer and fall may attract curious pets on woodland walks. Despite the common name 'Indian turnip,' the raw corm is intensely acrid and causes severe oral pain if chewed. Effects are localized and self-limiting — no systemic toxicity occurs.",
                 onsetTime: OnsetTime(
                     early: "Signs appear immediately or within minutes of chewing the plant — the pain response is rapid and dramatic",
@@ -1073,7 +1073,10 @@ class DatabaseService {
                 entrySeverity: .moderate,
                 speciesRisks: [
                     SpeciesRisk(species: .dog, severity: .low, notes: "Effects are localized to the mouth and throat; generally self-limiting; kidney damage does not occur with these plants"),
-                    SpeciesRisk(species: .cat, severity: .low, notes: "Cats may be more likely to chew on houseplants; same localized, self-limiting effects; no systemic toxicity")
+                    SpeciesRisk(species: .cat, severity: .low, notes: "Cats may be more likely to chew on houseplants; same localized, self-limiting effects; no systemic toxicity"),
+                    SpeciesRisk(species: .smallMammal, severity: .moderate, notes: "Plants in the Araceae family containing insoluble calcium oxalate crystals are toxic to rabbits, guinea pigs, and other small mammals. The needle-like crystals cause immediate pain and irritation to the mouth and throat. Symptoms include hypersalivation, oral pain, and possible swelling. Small mammals cannot vomit, so any ingested material remains in their system."),
+                    SpeciesRisk(species: .bird, severity: .moderate, notes: "Birds can develop digestive upset, mouth pain, and rarely difficulty breathing when these plants are ingested. Dieffenbachia and Philodendron are commonly reported. The calcium oxalate crystals cause mechanical irritation to oral tissues. Most exposures result in self-limiting symptoms, but veterinary consultation is recommended."),
+                    SpeciesRisk(species: .reptile, severity: .moderate, notes: "Calcium oxalate plants can cause oral irritation and GI upset in herbivorous reptiles. The needle-like crystals cause immediate pain when chewed. Tortoises and other herbivorous reptiles should be kept away from these common houseplants.")
                 ],
                 preventionTips: [
                     "Keep Araceae family plants out of reach of pets, especially cats and puppies prone to chewing",
@@ -1082,7 +1085,7 @@ class DatabaseService {
                     "Supervise pets around houseplants and redirect chewing behavior",
                     "If you see your pet chewing on one of these plants, contact your veterinarian for guidance even though effects are usually mild"
                 ],
-                sources: ["ASPCA Animal Poison Control Center", "Veterinary Information Network (VIN)", "Pet Poison Helpline", "Merck Veterinary Manual"],
+                sources: ["ASPCA Animal Poison Control Center", "Pet Poison Helpline", "Merck Veterinary Manual", "VCA Animal Hospitals", "Vetlexicon - Guinea Pig Poisoning Overview"],
                 relatedEntries: nil
             ),
 
@@ -1598,7 +1601,9 @@ class DatabaseService {
                 speciesRisks: [
                     SpeciesRisk(species: .dog, severity: .low, notes: "Foliage causes only mild GI upset; seed ingestion in large quantities can cause hallucinogenic effects, incoordination, and rarely liver damage — severity depends on amount and species of morning glory"),
                     SpeciesRisk(species: .cat, severity: .low, notes: "Same as dogs; cats are less likely to consume large quantities of seeds"),
-                    SpeciesRisk(species: .smallMammal, severity: .low, notes: "Rabbits and other small mammals: foliage may cause GI upset; monitor for lethargy, anorexia, abdominal pain, or diarrhea")
+                    SpeciesRisk(species: .smallMammal, severity: .low, notes: "Rabbits and other small mammals: foliage may cause GI upset; monitor for lethargy, anorexia, abdominal pain, or diarrhea"),
+                    SpeciesRisk(species: .bird, severity: .moderate, notes: "Morning glory seeds contain lysergic acid amide (LSA), a hallucinogenic alkaloid similar to LSD. Birds can develop digestive upset, mouth pain, and in rare cases difficulty breathing when seeds are ingested. The seeds are the most toxic part of the plant. Foliage ingestion typically causes milder symptoms."),
+                    SpeciesRisk(species: .reptile, severity: .moderate, notes: "The Tortoise Table advises against feeding morning glory to tortoises. The seeds contain small amounts of hallucinogenic alkaloids and are also a diuretic. While the leaves may cause less severe effects than seeds, the plant should be avoided. Can cause vomiting, diarrhea, lethargy, and loss of appetite if ingested.")
                 ],
                 preventionTips: [
                     "Store morning glory seeds securely — the seeds are the most toxic part of the plant",
@@ -1607,7 +1612,7 @@ class DatabaseService {
                     "If your pet eats morning glory seeds, contact your veterinarian — the quantity consumed matters significantly",
                     "Supervise pets in gardens where morning glories are growing, especially when seed pods are forming"
                 ],
-                sources: ["Veterinary Information Network (VIN)", "ASPCA Animal Poison Control Center", "Pet Poison Helpline", "Merck Veterinary Manual"],
+                sources: ["ASPCA Animal Poison Control Center", "Pet Poison Helpline", "VCA Animal Hospitals", "The Tortoise Table"],
                 relatedEntries: nil
             ),
 
@@ -2053,7 +2058,9 @@ class DatabaseService {
                 speciesRisks: [
                     SpeciesRisk(species: .dog, severity: .moderate, notes: "Most cases cause only GI upset; severe toxicity requires ingestion of large amounts of green plant material; puppies and small dogs are at higher risk; documented cases of seizures exist with significant green tomato ingestion"),
                     SpeciesRisk(species: .cat, severity: .moderate, notes: "Cats are susceptible but rarely consume enough plant material to cause severe toxicity; same clinical signs as dogs expected"),
-                    SpeciesRisk(species: .bird, severity: .moderate, notes: "Birds may be affected; small body size increases risk from smaller exposures")
+                    SpeciesRisk(species: .bird, severity: .moderate, notes: "Birds may be affected; small body size increases risk from smaller exposures"),
+                    SpeciesRisk(species: .smallMammal, severity: .moderate, notes: "The leaves, stems, and green parts of tomato and potato plants contain glycoalkaloids (solanine and tomatine) that are toxic to rabbits, guinea pigs, and other small mammals. Green potatoes and sprouts are especially dangerous. Can cause digestive upset, decreased appetite, lethargy, abdominal pain, and in severe cases neurological symptoms."),
+                    SpeciesRisk(species: .reptile, severity: .high, notes: "All parts of the potato plant are highly toxic to tortoises, whether raw or cooked. The glycoalkaloids solanine and chaconine can cause neurological and digestive issues. In large amounts, these compounds can be fatal to tortoises. Tomato plant leaves and stems are also toxic. Contact a veterinarian immediately if ingestion is suspected.")
                 ],
                 preventionTips: [
                     "Fence off vegetable gardens or supervise pets around tomato and potato plants",
@@ -2065,7 +2072,7 @@ class DatabaseService {
                     "Dispose of plant trimmings where pets cannot access them",
                     "If your pet shows signs after eating any part of these plants, contact your veterinarian"
                 ],
-                sources: ["ASPCA Animal Poison Control Center", "Pet Poison Helpline", "Veterinary Information Network (VIN)", "Vetlexicon - Plant Poisoning: Solanine and Related Glycoalkaloids"],
+                sources: ["ASPCA Animal Poison Control Center", "Pet Poison Helpline", "Oxbow Animal Health", "The Tortoise Table", "Vetlexicon - Plant Poisoning: Solanine and Related Glycoalkaloids"],
                 relatedEntries: nil
             ),
 
@@ -2098,7 +2105,9 @@ class DatabaseService {
                 speciesRisks: [
                     SpeciesRisk(species: .dog, severity: .moderate, notes: "Most cases involve GI upset; liver damage is possible with significant ingestions, particularly of unripe berries; less commonly reported than in livestock but mechanism of toxicity is the same"),
                     SpeciesRisk(species: .cat, severity: .moderate, notes: "Same concerns as dogs; cats are less likely to consume large amounts but smaller body size means less plant material needed for effects"),
-                    SpeciesRisk(species: .bird, severity: .high, notes: "Birds may be attracted to the berries; small body size increases risk of serious toxicity")
+                    SpeciesRisk(species: .bird, severity: .high, notes: "Birds may be attracted to the berries; small body size increases risk of serious toxicity"),
+                    SpeciesRisk(species: .smallMammal, severity: .high, notes: "Guinea pigs are particularly susceptible to lantana toxicity and are used as animal models in toxicity studies. All parts of the plant are toxic, with unripe berries being most dangerous. Small mammals cannot vomit, so ingested toxins remain in their system. Can cause serious illness including liver damage and potentially death."),
+                    SpeciesRisk(species: .reptile, severity: .high, notes: "Highly toxic to tortoises and other herbivorous reptiles. The Tortoise Table lists all parts as highly toxic. Green berries and foliage can cause fatal damage to the kidneys, lungs, heart, and nervous system in tortoises. Multiple tortoise care resources note lantana ingestion can be fatal.")
                 ],
                 preventionTips: [
                     "Keep pets away from lantana plants, especially when berries are present",
@@ -2108,7 +2117,7 @@ class DatabaseService {
                     "Do not let pets eat any part of the lantana plant, including fallen flowers or leaves",
                     "If you suspect your pet has eaten lantana, especially the berries, contact your veterinarian"
                 ],
-                sources: ["ASPCA Animal Poison Control Center", "Pet Poison Helpline", "Veterinary Information Network (VIN)", "Merck Veterinary Manual"],
+                sources: ["ASPCA Animal Poison Control Center", "Pet Poison Helpline", "Merck Veterinary Manual", "BMC Veterinary Research - Lantadene Toxicity Study in Guinea Pigs", "The Tortoise Table", "San Diego Turtle and Tortoise Society"],
                 relatedEntries: nil
             ),
 
@@ -2240,7 +2249,8 @@ class DatabaseService {
                     SpeciesRisk(species: .dog, severity: .moderate, notes: "Dogs are most commonly affected. Classic presentation: depressed/somnolent, hypothermic, bradycardic, and dribbling urine. External stimulation causes brief hyperesthesia followed by return to somnolence. With legalization, more severe cases (seizures, coma, death) are being reported — whether from more potent products or adulterants is unknown. Deaths have occurred, particularly with concentrated products or cannabutter."),
                     SpeciesRisk(species: .cat, severity: .moderate, notes: "Cats may show different signs than dogs, including increased locomotor activity (wandering aimlessly, spontaneous jumping), head bobbing/weaving, swaying, anxiety, aggression, polydipsia, polyuria, polyphagia, and difficulty swallowing. Sedation and depression also occur. Seizures and coma are possible with large exposures."),
                     SpeciesRisk(species: .smallMammal, severity: .moderate, notes: "Limited data available; small body size means even small exposures could cause significant effects. Seek veterinary care for any cannabis exposure in small mammals."),
-                    SpeciesRisk(species: .bird, severity: .moderate, notes: "Limited data available; birds are susceptible to respiratory irritants from smoke. Seek veterinary care for any suspected exposure.")
+                    SpeciesRisk(species: .bird, severity: .moderate, notes: "Limited data available; birds are susceptible to respiratory irritants from smoke. Seek veterinary care for any suspected exposure."),
+                    SpeciesRisk(species: .reptile, severity: .moderate, notes: "Reptiles have cannabinoid receptors and can be affected by THC. While limited research exists specifically for reptiles, cannabis is listed as toxic to reptiles by Reptiles Magazine. Exposure through ingestion or secondhand smoke can cause disorientation, lethargy, and respiratory distress. Tortoises and lizards should be kept away from all cannabis products.")
                 ],
                 preventionTips: [
                     "Store all cannabis products (edibles, plant material, vapes, concentrates) in pet-proof containers and locations your pet cannot access",
@@ -2251,7 +2261,7 @@ class DatabaseService {
                     "If your pet ingests an edible, also consider toxicity from other ingredients (chocolate, xylitol, raisins, macadamia nuts)",
                     "With legalization, highly concentrated products are more available — even small amounts of vape liquid or concentrates can cause severe toxicity"
                 ],
-                sources: ["Veterinary Information Network (VIN)", "ASPCA Animal Poison Control Center", "Pet Poison Helpline", "Veterinary Partner"],
+                sources: ["ASPCA Animal Poison Control Center", "Pet Poison Helpline", "Veterinary Partner", "Reptiles Magazine - Toxic Plants List"],
                 relatedEntries: nil
             ),
 
