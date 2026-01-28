@@ -887,7 +887,9 @@ class DatabaseService {
                 speciesRisks: [
                     SpeciesRisk(species: .dog, severity: .moderate, notes: "Most cases result in GI upset only (vomiting in ~29% of cases); cardiac arrhythmias are rare (~2%) because dogs typically do not eat enough to cause severe toxicity; large ingestions can be serious"),
                     SpeciesRisk(species: .cat, severity: .moderate, notes: "Vomiting is the main sign; diarrhea is rare in cats; cardiac signs can persist for days if they occur — veterinary evaluation recommended for any ingestion"),
-                    SpeciesRisk(species: .bird, severity: .high, notes: "Birds are highly susceptible to grayanotoxins due to their small body mass; birds that chew on leaves or flowers are at risk")
+                    SpeciesRisk(species: .bird, severity: .high, notes: "Birds are highly susceptible to grayanotoxins due to their small body mass; birds that chew on leaves or flowers are at risk"),
+                    SpeciesRisk(species: .smallMammal, severity: .high, notes: "Rhododendrons and azaleas are highly toxic to rabbits and other small mammals; grayanotoxins affect nerve and muscle function; only 0.2% of body weight in plant material can cause serious illness"),
+                    SpeciesRisk(species: .reptile, severity: .high, notes: "Grayanotoxins affect sodium channels in all vertebrates; documented toxicity in multiple species; mechanism is not species-specific")
                 ],
                 preventionTips: [
                     "Supervise pets in yards where azaleas or rhododendrons are planted",
@@ -897,7 +899,7 @@ class DatabaseService {
                     "Be aware that mountain laurel grows wild in many eastern U.S. forests — keep pets supervised when hiking in these areas",
                     "All three plants (azalea, rhododendron, mountain laurel) pose the same level of risk — do not assume one is safer than others"
                 ],
-                sources: ["Veterinary Information Network (VIN)", "ASPCA Animal Poison Control Center", "Pet Poison Helpline", "Merck Veterinary Manual"],
+                sources: ["ASPCA Animal Poison Control Center", "Pet Poison Helpline", "FirstVet — Azalea Toxicity in Dogs and Cats", "ScienceDirect — Grayanotoxin", "Supreme Petfoods — Toxic Plants in Rabbits"],
                 relatedEntries: nil
             ),
 
@@ -1157,7 +1159,9 @@ class DatabaseService {
                 speciesRisks: [
                     SpeciesRisk(species: .dog, severity: .moderate, notes: "Dogs are most commonly affected because they dig up and chew on bulbs; ingestion of flowers or leaves typically causes GI upset, while bulb ingestion can cause more serious cardiovascular effects"),
                     SpeciesRisk(species: .cat, severity: .moderate, notes: "Cats can develop significant cardiovascular effects including hypothermia, bradycardia, and hypotension; a published case report documented full recovery with supportive care"),
-                    SpeciesRisk(species: .bird, severity: .moderate, notes: "Limited data available; birds should be kept away from daffodils as a precaution")
+                    SpeciesRisk(species: .bird, severity: .moderate, notes: "Limited data available; birds should be kept away from daffodils as a precaution"),
+                    SpeciesRisk(species: .smallMammal, severity: .high, notes: "Lycorine and other alkaloids are toxic to rabbits and guinea pigs; bulbs are most dangerous; can cause severe nausea, GI pain, and potentially fatal consequences"),
+                    SpeciesRisk(species: .reptile, severity: .high, notes: "Lycorine alkaloids affect all vertebrates; mechanism involves GI irritation and potential cardiac effects at high doses; limited direct reptile data")
                 ],
                 preventionTips: [
                     "Store unplanted bulbs in a secure location out of pet reach — a bag of bulbs is a common source of poisoning",
@@ -1168,7 +1172,7 @@ class DatabaseService {
                     "Dispose of dead plant material securely — dried stems and leaves can still cause toxicity",
                     "Amaryllis bulbs are popular holiday gifts — keep them out of reach of pets, especially during the winter holiday season"
                 ],
-                sources: ["Veterinary Information Network (VIN)", "ASPCA Animal Poison Control Center", "Pet Poison Helpline", "Canadian Veterinary Journal (case report)"],
+                sources: ["ASPCA Animal Poison Control Center", "Pet Poison Helpline", "Poison Control — Daffodils: Beautiful But Potentially Toxic", "Rabbit Hole Hay — Narcissus Toxicity"],
                 relatedEntries: nil
             ),
 
@@ -1726,7 +1730,9 @@ class DatabaseService {
                 speciesRisks: [
                     SpeciesRisk(species: .dog, severity: .high, notes: "Dogs are the primary species affected; the juicy fruit is particularly attractive to dogs; signs mimic strychnine poisoning and can last for several days"),
                     SpeciesRisk(species: .cat, severity: .moderate, notes: "Cats appear less commonly affected, possibly due to more selective eating habits; if ingestion occurs, similar severe neurological effects are expected"),
-                    SpeciesRisk(species: .bird, severity: .moderate, notes: "Limited data available; birds should be kept away from Brunfelsia as a precaution due to small body size")
+                    SpeciesRisk(species: .bird, severity: .moderate, notes: "Limited data available; birds should be kept away from Brunfelsia as a precaution due to small body size"),
+                    SpeciesRisk(species: .smallMammal, severity: .high, notes: "Brunfelsamidine and hopeanine cause neurotoxicosis documented in mice and rats; mechanism similar to strychnine affects all mammals; small body size increases risk of fatal outcomes"),
+                    SpeciesRisk(species: .reptile, severity: .high, notes: "Neurotoxins affect neuromuscular transmission in all vertebrates; limited direct reptile data but mechanism is not species-specific")
                 ],
                 preventionTips: [
                     "Do not plant Brunfelsia in areas accessible to dogs — the berries are especially attractive and dangerous",
@@ -1735,7 +1741,7 @@ class DatabaseService {
                     "The berries (fruit) are the most dangerous part — they are juicy and palatable to dogs",
                     "If you suspect your dog has ingested any part of a Brunfelsia plant, seek emergency veterinary care immediately — do not wait for symptoms to appear"
                 ],
-                sources: ["ASPCA Animal Poison Control Center", "Pet Poison Helpline", "Veterinary Information Network (VIN)", "dvm360 (ASPCA APCC case review)"],
+                sources: ["ASPCA Animal Poison Control Center", "Pet Poison Helpline", "dvm360 — Toxicology Brief: Brunfelsia species", "IVIS — Brunfelsia pauciflora: Yesterday, today and tomorrow"],
                 relatedEntries: nil
             ),
 
@@ -1897,7 +1903,9 @@ class DatabaseService {
                 speciesRisks: [
                     SpeciesRisk(species: .dog, severity: .moderate, notes: "GI signs are most common; cardiac effects can occur with larger ingestions; the bitter taste typically limits consumption"),
                     SpeciesRisk(species: .cat, severity: .moderate, notes: "Similar effects to dogs; cats are less likely to consume significant amounts due to taste aversion"),
-                    SpeciesRisk(species: .bird, severity: .high, notes: "Birds are more susceptible to cardiac glycosides due to small body size; pet birds should be kept away from milkweed")
+                    SpeciesRisk(species: .bird, severity: .high, notes: "Birds are more susceptible to cardiac glycosides due to small body size; pet birds should be kept away from milkweed"),
+                    SpeciesRisk(species: .smallMammal, severity: .high, notes: "Cardenolides (cardiac glycosides) are toxic to all mammals; mechanism inhibits Na+/K+-ATPase affecting heart and nervous system; all parts of plant contain toxins"),
+                    SpeciesRisk(species: .reptile, severity: .high, notes: "Cardiac glycosides affect all vertebrates through Na+/K+-ATPase inhibition; the mechanism is universal and not species-specific")
                 ],
                 preventionTips: [
                     "If you grow milkweed for monarch butterflies, plant it in an area your pets cannot access",
@@ -1907,7 +1915,7 @@ class DatabaseService {
                     "If your pet shows interest in milkweed, redirect them to other areas of the garden",
                     "Contact your veterinarian if you suspect your pet has ingested milkweed"
                 ],
-                sources: ["Veterinary Information Network (VIN)", "ASPCA Animal Poison Control Center", "Pet Poison Helpline"],
+                sources: ["ASPCA Animal Poison Control Center", "Pet Poison Helpline", "Wisconsin Horticulture — Milkweed and Milkweed Toxicity", "ScienceDirect — Asclepias (Milkweed)"],
                 relatedEntries: nil
             ),
 
@@ -1943,7 +1951,9 @@ class DatabaseService {
                 speciesRisks: [
                     SpeciesRisk(species: .dog, severity: .moderate, notes: "Dogs rarely consume large amounts; GI upset is most likely with smaller ingestions; neuromuscular effects possible with larger amounts; puppies may be more prone to chewing on plants"),
                     SpeciesRisk(species: .cat, severity: .moderate, notes: "Cats have the same susceptibility as dogs; smaller body size means less plant material is needed to cause effects"),
-                    SpeciesRisk(species: .bird, severity: .high, notes: "Small body size makes birds more vulnerable to the neurotoxic effects; keep pet birds away from larkspur and delphinium")
+                    SpeciesRisk(species: .bird, severity: .high, notes: "Small body size makes birds more vulnerable to the neurotoxic effects; keep pet birds away from larkspur and delphinium"),
+                    SpeciesRisk(species: .smallMammal, severity: .high, notes: "Diterpene alkaloids cause neuromuscular toxicosis documented in mice, hamsters, and rats; mechanism acts at neuromuscular junctions causing paralysis; rabbits should be kept away from this plant"),
+                    SpeciesRisk(species: .reptile, severity: .high, notes: "Research documents Delphinium alkaloids blocking neuromuscular transmission in lizards; diterpene alkaloids affect all vertebrates through nicotinic receptor antagonism")
                 ],
                 preventionTips: [
                     "Keep dogs and cats away from larkspur and delphinium, especially during spring when young shoots are most toxic",
@@ -1953,7 +1963,7 @@ class DatabaseService {
                     "The plants become less toxic as they mature, but all growth stages should be considered potentially dangerous",
                     "If you suspect your pet has ingested any part of these plants, contact your veterinarian immediately"
                 ],
-                sources: ["ASPCA Animal Poison Control Center", "Pet Poison Helpline", "Veterinary Information Network (VIN)"],
+                sources: ["ASPCA Animal Poison Control Center", "Pet Poison Helpline", "Cornell University Poisonous Plants — Polycyclic Diterpene Alkaloids", "Colorado State University Guide to Poisonous Plants", "ScienceDirect — Toxicity of extracts of tall larkspur"],
                 relatedEntries: nil
             ),
 
