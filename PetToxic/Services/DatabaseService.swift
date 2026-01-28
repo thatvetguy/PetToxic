@@ -790,7 +790,10 @@ class DatabaseService {
                 entrySeverity: .severe,
                 speciesRisks: [
                     SpeciesRisk(species: .cat, severity: .severe, notes: "EXTREMELY TOXIC — even tiny exposures (a few pollen grains, one leaf bite, vase water) can cause fatal kidney failure; all cats are susceptible regardless of age or health status"),
-                    SpeciesRisk(species: .dog, severity: .low, notes: "True lily toxicity (kidney failure) has not been documented in dogs; severity is 'low' rather than 'none' because ingestion of plant material may still cause mild GI upset such as vomiting or diarrhea")
+                    SpeciesRisk(species: .dog, severity: .low, notes: "True lily toxicity (kidney failure) has not been documented in dogs; severity is 'low' rather than 'none' because ingestion of plant material may still cause mild GI upset such as vomiting or diarrhea"),
+                    SpeciesRisk(species: .bird, severity: .low, notes: "Limited data; birds may experience GI upset from ingestion but the cat-specific nephrotoxicity (kidney failure) has not been documented in birds"),
+                    SpeciesRisk(species: .smallMammal, severity: .low, notes: "Rabbits and other small mammals do not appear to develop the severe kidney failure seen in cats; GI upset may occur; limited studies available"),
+                    SpeciesRisk(species: .reptile, severity: .low, notes: "No documented cases of lily-induced nephrotoxicity in reptiles; the cat-specific sensitivity does not appear to extend to reptiles")
                 ],
                 preventionTips: [
                     "Never bring true lilies (Easter, Asiatic, Tiger, Stargazer, Oriental, Daylilies) into homes with cats — there is no safe way to have these plants around cats",
@@ -800,7 +803,7 @@ class DatabaseService {
                     "If your cat has any potential exposure to lilies — even brushing against pollen — seek veterinary care immediately; do not wait for symptoms",
                     "Educate family members, pet sitters, and houseguests about the danger of lilies to cats"
                 ],
-                sources: ["Veterinary Information Network (VIN)", "ASPCA Animal Poison Control Center", "Pet Poison Helpline", "Merck Veterinary Manual"],
+                sources: ["ASPCA Animal Poison Control Center", "Pet Poison Helpline", "Merck Veterinary Manual", "Journal of Veterinary Emergency and Critical Care"],
                 relatedEntries: nil
             ),
 
@@ -1096,7 +1099,7 @@ class DatabaseService {
                 alternateNames: ["Rhubarb", "rhubarb leaves", "garden rhubarb", "common rhubarb", "Rheum rhabarbarum", "Star fruit", "starfruit", "carambola", "Averrhoa carambola", "Shamrock", "shamrock plant", "Oxalis", "wood sorrel", "sorrel", "oxalic acid", "soluble oxalates", "Begonia", "Begonia spp", "wax begonia", "rex begonia", "tuberous begonia", "angel wing begonia", "begonia tuber", "elephant ear begonia", "polka dot begonia"],
                 categories: [.plants, .foods],
                 imageAsset: "soluble_caox_thumb",
-                description: "Soluble calcium oxalate plants contain oxalic acid and oxalate salts that can be absorbed into the bloodstream — making them fundamentally different from the insoluble calcium oxalate houseplants (Philodendron, Pothos, etc.) that only cause local mouth irritation. The most common soluble oxalate plants encountered by pets are rhubarb (the leaves, not the edible stems), star fruit (carambola), shamrock plants (Oxalis), and begonias (especially the tubers). This type of toxicity is less commonly seen in small animals and is more of a concern in livestock that graze on these plants chronically.",
+                description: "Soluble calcium oxalate plants contain oxalic acid and oxalate salts that can be absorbed into the bloodstream — making them fundamentally different from the insoluble calcium oxalate houseplants (Philodendron, Pothos, etc.). Plants in this category include: **Rhubarb** (leaves), **Shamrock/Oxalis** (wood sorrel), **Star Fruit** (carambola), and **Sorrel**. When ingested, soluble oxalates bind with calcium in the body to form calcium oxalate crystals that can deposit in the kidneys and other tissues, potentially causing serious systemic effects including kidney damage. This is in contrast to insoluble calcium oxalate plants, which cause only local mouth and throat irritation.",
                 toxicityInfo: "When soluble oxalates are absorbed from the GI tract, they bind with calcium in the bloodstream, causing a sudden drop in blood calcium levels (acute hypocalcemia). The calcium oxalate crystals that form can then accumulate in the kidneys, potentially causing acute kidney injury (AKI). While kidney damage from these plants is rare in dogs and cats, there is no established safe dose. Pets that are dehydrated or have pre-existing kidney disease may be at higher risk and should be treated more aggressively. Note that rhubarb toxicity applies to the LEAVES only — the stems (stalks) that humans eat are safe, though not particularly good for pets due to their tartness. Star fruit poses an additional concern because it can cause neurological effects in humans and animals with kidney disease.\n\n**Begonia** — All parts of begonias contain soluble oxalates, but the tubers (underground portions) have the highest concentration. Chewing on leaves typically causes only mild oral irritation and GI upset. However, if a pet digs up and consumes the tubers, more significant toxicity is possible, including the same hypocalcemia and potential kidney effects seen with other soluble oxalate plants. Tuberous begonias, commonly planted outdoors, pose a higher risk than wax begonias or rex begonias typically kept as houseplants.",
                 onsetTime: OnsetTime(
                     early: "GI signs (hypersalivation, vomiting, diarrhea, loss of appetite) and signs of hypocalcemia (weakness, tremors, muscle twitching) may appear within hours of ingestion",
@@ -1118,7 +1121,9 @@ class DatabaseService {
                 speciesRisks: [
                     SpeciesRisk(species: .dog, severity: .moderate, notes: "Large ingestions can cause hypocalcemia and potential kidney injury; dehydrated dogs or those with pre-existing kidney disease are at higher risk"),
                     SpeciesRisk(species: .cat, severity: .moderate, notes: "Same concerns as dogs; cats with chronic kidney disease (common in older cats) may be more vulnerable"),
-                    SpeciesRisk(species: .bird, severity: .high, notes: "Birds are more susceptible due to small body size; star fruit in particular has caused toxicity in pet birds")
+                    SpeciesRisk(species: .bird, severity: .high, notes: "Birds are more susceptible due to small body size; star fruit in particular has caused toxicity in pet birds"),
+                    SpeciesRisk(species: .smallMammal, severity: .moderate, notes: "Rabbits and guinea pigs are susceptible to soluble oxalate toxicity; can cause GI upset and potentially kidney damage with significant ingestion; rabbits cannot vomit so monitor for lethargy and anorexia"),
+                    SpeciesRisk(species: .reptile, severity: .moderate, notes: "Herbivorous reptiles (tortoises, iguanas) should avoid high-oxalate plants; oxalates can bind dietary calcium leading to calcium deficiency and potential kidney issues over time")
                 ],
                 preventionTips: [
                     "If you grow rhubarb, fence off the garden or keep pets away — the large leaves can be tempting to chew",
@@ -1128,7 +1133,7 @@ class DatabaseService {
                     "Pets with kidney disease should be kept away from all oxalate-containing plants",
                     "If you plant tuberous begonias outdoors, be aware that dogs may dig up and chew the tubers — the most toxic part of the plant"
                 ],
-                sources: ["Veterinary Information Network (VIN)", "ASPCA Animal Poison Control Center", "Pet Poison Helpline", "Merck Veterinary Manual"],
+                sources: ["ASPCA Animal Poison Control Center", "Pet Poison Helpline", "Merck Veterinary Manual", "Cornell University Poisonous Plants Database"],
                 relatedEntries: nil
             ),
 
@@ -1371,7 +1376,9 @@ class DatabaseService {
                 speciesRisks: [
                     SpeciesRisk(species: .dog, severity: .high, notes: "Dogs are most commonly affected due to scavenging behavior; dogs may be attracted to certain mushrooms (Amanita, Inocybe) due to their fishy odor; severity ranges from mild GI upset to life-threatening liver failure depending on species — all wild mushroom ingestions should be treated as potential emergencies"),
                     SpeciesRisk(species: .cat, severity: .high, notes: "Cats rarely eat mushrooms but can be seriously affected when they do; cats are particularly attracted to DRIED Amanita muscaria and A. pantherina, sometimes with fatal results"),
-                    SpeciesRisk(species: .bird, severity: .high, notes: "Limited data but birds are assumed to be susceptible; small body size increases risk from even small exposures")
+                    SpeciesRisk(species: .bird, severity: .high, notes: "Limited data but birds are assumed to be susceptible; small body size increases risk from even small exposures"),
+                    SpeciesRisk(species: .smallMammal, severity: .high, notes: "Rabbits, guinea pigs, and other small mammals are susceptible to mushroom toxins; small body size increases risk; rabbits cannot vomit so toxin elimination is impaired — treat any wild mushroom ingestion as an emergency"),
+                    SpeciesRisk(species: .reptile, severity: .high, notes: "Limited data on reptile susceptibility to mushroom toxins; herbivorous reptiles housed outdoors may encounter wild mushrooms; assume toxicity similar to other species and seek veterinary care if ingestion suspected")
                 ],
                 preventionTips: [
                     "Regularly inspect your yard for mushrooms, especially after rain or during warm, wet weather — remove any you find before your pet can access them",
@@ -1382,7 +1389,7 @@ class DatabaseService {
                     "If possible, collect a sample of the mushroom: wrap in a damp paper or wax paper towel (NOT plastic), place in a paper bag, and refrigerate; note where you found it and what it was growing on",
                     "For emergency mushroom identification, contact the North American Mycological Association (NAMA) at namyco.org, or the Facebook group 'Poisons Help; Emergency Identification for Mushrooms & Plants' — provide clear photos (including gills/underside), geographic location, and what the mushroom was growing on"
                 ],
-                sources: ["Veterinary Information Network (VIN)", "ASPCA Animal Poison Control Center", "North American Mycological Association (NAMA)", "VCA Animal Hospitals", "UC Davis School of Veterinary Medicine"],
+                sources: ["ASPCA Animal Poison Control Center", "Pet Poison Helpline", "North American Mycological Association (NAMA)", "VCA Animal Hospitals", "dvm360"],
                 relatedEntries: nil
             ),
 
@@ -1516,7 +1523,9 @@ class DatabaseService {
                 speciesRisks: [
                     SpeciesRisk(species: .dog, severity: .low, notes: "Toxicity is mild in most cases; bitter taste limits ingestion; GI upset is the primary concern; severe effects are rare"),
                     SpeciesRisk(species: .cat, severity: .low, notes: "Cats may chew on the long leaves; toxicity is typically mild with GI symptoms; may develop dilated pupils; same low risk as dogs"),
-                    SpeciesRisk(species: .smallMammal, severity: .low, notes: "Rabbits are susceptible to saponin toxicity; keep snake plants and dracaenas out of reach")
+                    SpeciesRisk(species: .smallMammal, severity: .low, notes: "Rabbits are susceptible to saponin toxicity; keep snake plants and dracaenas out of reach"),
+                    SpeciesRisk(species: .bird, severity: .low, notes: "Birds appear to be less susceptible to saponin toxicity from snake plants; ingestion may cause mild GI upset but serious toxicity is not expected"),
+                    SpeciesRisk(species: .reptile, severity: .low, notes: "Limited data; saponins may cause mild GI irritation in reptiles if ingested; snake plants are not palatable and significant ingestion is unlikely")
                 ],
                 preventionTips: [
                     "Place snake plants and dracaenas on high shelves or in rooms inaccessible to pets",
@@ -1526,7 +1535,7 @@ class DatabaseService {
                     "If your pet ingests snake plant or dracaena and develops vomiting or diarrhea, contact your veterinarian for guidance",
                     "All Dracaena species (corn plant, dragon tree, lucky bamboo, etc.) contain the same saponin toxins as snake plant"
                 ],
-                sources: ["ASPCA Animal Poison Control Center", "Pet Poison Helpline", "University of North Carolina Department of Horticultural Science", "Wag Walking Veterinary Resources"],
+                sources: ["ASPCA Animal Poison Control Center", "Pet Poison Helpline", "Merck Veterinary Manual", "Iowa State University Extension"],
                 relatedEntries: nil
             ),
 
@@ -1557,7 +1566,10 @@ class DatabaseService {
                 entrySeverity: .moderate,
                 speciesRisks: [
                     SpeciesRisk(species: .dog, severity: .low, notes: "Toxicity is usually mild to moderate with GI upset; severe symptoms are uncommon unless large amounts are ingested"),
-                    SpeciesRisk(species: .cat, severity: .low, notes: "Same toxicity as dogs; cats may be attracted to chewing on the fleshy leaves")
+                    SpeciesRisk(species: .cat, severity: .low, notes: "Same toxicity as dogs; cats may be attracted to chewing on the fleshy leaves"),
+                    SpeciesRisk(species: .bird, severity: .low, notes: "Limited data on bird toxicity; the latex/sap contains anthraquinones that may cause GI upset; keep aloe plants away from pet birds as a precaution"),
+                    SpeciesRisk(species: .smallMammal, severity: .moderate, notes: "Aloe vera is toxic to rabbits, guinea pigs, and other small mammals; the saponins and anthraquinones in the latex can cause GI upset, diarrhea, tremors, and potentially serious illness — do not allow small mammals access to aloe plants"),
+                    SpeciesRisk(species: .reptile, severity: .low, notes: "Tortoises can safely eat aloe vera in moderation — it provides hydration and some nutrients; however, excessive consumption may have a laxative effect; aloe is listed as safe for tortoises by The Tortoise Table")
                 ],
                 preventionTips: [
                     "Keep aloe vera plants out of reach of pets — place on high shelves or in inaccessible rooms",
@@ -1567,7 +1579,7 @@ class DatabaseService {
                     "Do not give aloe vera juice or supplements to pets without veterinary guidance",
                     "If your pet ingests aloe vera and develops vomiting or diarrhea, contact your veterinarian — dehydration can become serious if untreated"
                 ],
-                sources: ["Veterinary Information Network (VIN)", "ASPCA Animal Poison Control Center", "Pet Poison Helpline", "Wag Walking Veterinary Resources"],
+                sources: ["ASPCA Animal Poison Control Center", "Pet Poison Helpline", "The Tortoise Table", "Rabbit Hole Hay", "Cornell University Poisonous Plants Database"],
                 relatedEntries: nil
             ),
 
@@ -1623,7 +1635,7 @@ class DatabaseService {
                 alternateNames: ["Nandina", "Nandina domestica", "heavenly bamboo", "sacred bamboo", "nandina berries", "Hydrangea", "Hydrangea macrophylla", "hortensia", "hydrangea leaves", "hydrangea flowers", "Cherry laurel", "Prunus laurocerasus", "English laurel", "Chokecherry", "Prunus virginiana", "Photinia", "red tip photinia", "Photinia fraseri", "cyanide plants", "hydrogen cyanide", "amygdalin", "prunasin"],
                 categories: [.plants],
                 imageAsset: "cyanogenic_glycosides_thumb",
-                description: "Several common ornamental plants contain cyanogenic glycosides — compounds that can release hydrogen cyanide when plant tissue is damaged (chewed). This group includes Nandina (heavenly bamboo), Hydrangea, Prunus ornamentals (cherry laurel, chokecherry), and Photinia (red tip). Despite the theoretical danger of cyanide, severe toxicity is uncommon in dogs and cats because they rarely consume enough plant material. However, some plants in this group are more concerning than others.",
+                description: "Several common ornamental plants contain cyanogenic glycosides — compounds that can release hydrogen cyanide when plant tissue is damaged (chewed). Plants in this category include: **Nandina** (heavenly bamboo), **Hydrangea**, **Cherry Laurel** and other **Prunus** species (ornamental cherry, chokecherry), and **Photinia** (red tip photinia). The danger varies significantly between plants: Nandina berries are the most dangerous (documented bird deaths), while Hydrangea rarely causes serious illness despite its reputation. Wilted leaves from Prunus species are more toxic than fresh leaves due to higher cyanide release.",
                 toxicityInfo: "Cyanogenic glycosides are converted to hydrogen cyanide when plant cells are crushed during chewing. Cyanide blocks cellular oxygen utilization, which can theoretically cause rapid death. However, the reality in small animal practice is more nuanced:\n\n**Nandina (Heavenly Bamboo)** — The most concerning plant in this group. The berries contain the highest concentration of cyanogenic glycosides and have caused documented deaths in birds (cedar waxwings, robins) that gorge on the berries in winter. Dogs and cats that eat Nandina berries can develop cyanide toxicity, though cases are less commonly reported than in birds. The leaves are also toxic but less so than the berries.\n\n**Hydrangea** — Despite widespread concern, severe hydrangea toxicity is rare. According to ASPCA data, most hydrangea ingestions result in only mild GI upset (vomiting, diarrhea, lethargy). Actual cyanide poisoning from hydrangea is uncommon in dogs and cats. The buds and leaves contain the highest concentration of toxins.\n\n**Prunus Ornamentals (Cherry Laurel, Chokecherry)** — The leaves, especially when wilted or damaged, can concentrate cyanogenic glycosides. Fresh, healthy leaves are less dangerous. These plants are more of a concern for livestock that graze on large quantities, but dogs chewing on branches or wilted leaves can be affected.\n\n**Photinia (Red Tip)** — Similar to Prunus; the young red leaves contain cyanogenic glycosides but severe toxicity is uncommon in pets.\n\nClassic signs of cyanide poisoning include bright cherry-red gums (due to inability to use oxygen), rapid breathing, dilated pupils, and collapse. However, most pet exposures to these plants result only in GI upset.",
                 onsetTime: OnsetTime(
                     early: "GI signs (vomiting, diarrhea, drooling) typically appear within a few hours. True cyanide poisoning signs (if they occur) can develop within 15-60 minutes of ingestion.",
@@ -1647,7 +1659,9 @@ class DatabaseService {
                 speciesRisks: [
                     SpeciesRisk(species: .dog, severity: .moderate, notes: "Nandina berries and wilted Prunus leaves pose the highest risk; hydrangea and photinia typically cause only mild GI upset; true cyanide poisoning is uncommon but possible with large ingestions"),
                     SpeciesRisk(species: .cat, severity: .moderate, notes: "Same concerns as dogs; cats are less likely to consume large quantities but smaller body size means less plant material is needed to cause effects"),
-                    SpeciesRisk(species: .bird, severity: .severe, notes: "Birds are highly susceptible to Nandina berry toxicity — documented mass die-offs of cedar waxwings and robins have occurred; birds should never have access to Nandina")
+                    SpeciesRisk(species: .bird, severity: .severe, notes: "Birds are highly susceptible to Nandina berry toxicity — documented mass die-offs of cedar waxwings and robins have occurred; birds should never have access to Nandina"),
+                    SpeciesRisk(species: .smallMammal, severity: .moderate, notes: "Rabbits and other small mammals are susceptible to cyanogenic glycoside toxicity; Nandina berries and wilted Prunus leaves pose the greatest risk; small body size increases vulnerability"),
+                    SpeciesRisk(species: .reptile, severity: .moderate, notes: "Herbivorous reptiles should avoid cyanogenic plants; tortoises and iguanas may be attracted to fallen berries or leaves; cyanide affects cellular respiration in all species")
                 ],
                 preventionTips: [
                     "Nandina (heavenly bamboo) poses the highest risk in this group — consider removing it from your landscaping if you have pets, especially birds",
@@ -1656,7 +1670,7 @@ class DatabaseService {
                     "Hydrangea, while commonly listed as toxic, rarely causes serious problems — monitor for GI upset if your pet chews on it",
                     "If you see bright cherry-red gums, rapid breathing, or sudden weakness after plant ingestion, seek emergency veterinary care immediately — these are signs of cyanide poisoning"
                 ],
-                sources: ["Veterinary Information Network (VIN)", "ASPCA Animal Poison Control Center", "Pet Poison Helpline", "Merck Veterinary Manual"],
+                sources: ["ASPCA Animal Poison Control Center", "Pet Poison Helpline", "Merck Veterinary Manual", "Cornell University Poisonous Plants Database"],
                 relatedEntries: nil
             ),
 
