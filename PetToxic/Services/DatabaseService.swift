@@ -416,8 +416,9 @@ class DatabaseService {
                 speciesRisks: [
                     SpeciesRisk(species: .dog, severity: .low, notes: "Dogs are relatively resistant to persin; main risks are pancreatitis from high fat content and GI obstruction from swallowing the pit"),
                     SpeciesRisk(species: .cat, severity: .low, notes: "Cats are relatively resistant to persin; may experience mild GI upset"),
-                    SpeciesRisk(species: .bird, severity: .severe, notes: "Birds are extremely susceptible—even small amounts can cause cardiovascular damage and death; never feed avocado to birds"),
-                    SpeciesRisk(species: .smallMammal, severity: .severe, notes: "Rabbits, guinea pigs, and other small mammals are highly susceptible to persin toxicity")
+                    SpeciesRisk(species: .bird, severity: .severe, notes: "Avocado is extremely toxic to birds. Persin, a fungicidal toxin found in all parts of the avocado, causes myocardial necrosis (heart muscle death) in birds. Lethal doses are as low as 2 grams in canaries and 3.5 grams in budgerigars. Death typically occurs within 24-47 hours of ingestion. Signs include lethargy, respiratory distress, weakness, and sudden death. There is no antidote. Never feed any part of avocado to birds."),
+                    SpeciesRisk(species: .smallMammal, severity: .severe, notes: "Rabbits, guinea pigs, and other small mammals are highly susceptible to persin toxicity. Documented cases of rabbit deaths have occurred within 30 hours of ingesting avocado leaves. Persin causes myocardial necrosis and congestive heart failure. All parts of the avocado plant (fruit, leaves, bark, pit) are toxic. Never feed avocado to small mammals."),
+                    SpeciesRisk(species: .reptile, severity: .high, notes: "Avocado is toxic to tortoises and other reptiles. The Tortoise Table lists avocado as dangerous for tortoises. Persin can cause fluid accumulation around the heart, tissue damage to organs, and potentially death. While less data exists for reptiles than birds or mammals, the conserved cardiac toxicity mechanism warrants avoiding all exposure.")
                 ],
                 preventionTips: [
                     "Never feed avocado to birds, rabbits, guinea pigs, or other small mammals",
@@ -426,7 +427,7 @@ class DatabaseService {
                     "Store ripe avocados in the refrigerator out of pet reach",
                     "Be cautious with guacamole at parties—it may also contain onion and garlic"
                 ],
-                sources: ["Merck Veterinary Manual", "ASPCA Animal Poison Control Center", "Pet Poison Helpline"],
+                sources: ["ASPCA Animal Poison Control Center", "Pet Poison Helpline", "Merck Veterinary Manual", "University of Illinois College of Veterinary Medicine", "Rabbit Hole Hay"],
                 relatedEntries: nil
             ),
 
@@ -647,7 +648,7 @@ class DatabaseService {
                 categories: [.foods, .plants],
                 imageAsset: "black_walnut_thumb",
                 description: "Black walnuts come from the black walnut tree (Juglans nigra), common in parks and yards throughout eastern North America. The tree is grown for its premium hardwood and edible nuts. Dogs may be exposed to fallen nuts, hulls, sawdust, wood shavings, or branches. Importantly, there are two distinct clinical syndromes depending on which part of the tree is ingested.",
-                toxicityInfo: "Black walnuts can cause two different clinical syndromes in dogs. Wood and shavings (including sawdust and branches) cause primarily neurologic and musculoskeletal signs—the relative risk of developing neurologic signs after ingesting wood is approximately 4 times higher than after ingesting nuts or hulls. Nuts and hulls most commonly cause vomiting and GI upset, with fewer neurologic signs. The toxicity is often attributed to tremorgenic mycotoxins (mold) on decomposing nuts, but fresh wood can also cause toxicity. Juglone, a naturally occurring compound found in all parts of the black walnut tree (highest concentrations in buds, nut hulls, and roots), is a respiration inhibitor that may also contribute to toxicity in dogs. Even small exposures to sawdust have caused clinical signs in some dogs. Note: English walnuts (the kind sold in grocery stores) are not considered toxic, though they can cause GI upset if eaten in large amounts.",
+                toxicityInfo: "Black walnuts can cause two different clinical syndromes in dogs. Wood and shavings (including sawdust and branches) cause primarily neurologic and musculoskeletal signs—the relative risk of developing neurologic signs after ingesting wood is approximately 4 times higher than after ingesting nuts or hulls. Nuts and hulls most commonly cause vomiting and GI upset, with fewer neurologic signs. The toxicity is often attributed to tremorgenic mycotoxins (mold) on decomposing nuts, but fresh wood can also cause toxicity. Juglone, a naturally occurring compound found in all parts of the black walnut tree (highest concentrations in buds, nut hulls, and roots), is a respiration inhibitor that may also contribute to toxicity in dogs. Even small exposures to sawdust have caused clinical signs in some dogs. In addition to dogs, juglone is toxic to horses (causing laminitis) and can cause respiratory distress in reptiles—black walnut wood, bark, and shavings should never be used in animal enclosures or as bedding material. Black walnuts are also dangerous to rabbits: the husks are toxic, and the high fat content can cause fatal GI stasis and fatty liver disease. Note: English walnuts (the kind sold in grocery stores) are not considered toxic, though they can cause GI upset if eaten in large amounts.",
                 onsetTime: OnsetTime(
                     early: "Signs from wood/shavings may appear within minutes to 19 hours; signs from nuts/hulls may appear within minutes to hours",
                     delayed: "Most clinical signs resolve within 9-33 hours with supportive care; all dogs with documented follow-up recovered fully"
@@ -666,7 +667,10 @@ class DatabaseService {
                 entrySeverity: .high,
                 speciesRisks: [
                     SpeciesRisk(species: .dog, severity: .high, notes: "Dogs are commonly affected; neurologic signs are 4x more likely with wood/shavings than with nuts/hulls; Labrador retrievers and golden retrievers overrepresented in case reports"),
-                    SpeciesRisk(species: .cat, severity: .low, notes: "Limited data; cats less commonly exposed due to feeding habits")
+                    SpeciesRisk(species: .cat, severity: .low, notes: "Limited data; cats less commonly exposed due to feeding habits"),
+                    SpeciesRisk(species: .bird, severity: .low, notes: "Black walnut nuts (kernels only) are generally considered safe treats for parrots when fresh and uncontaminated. However, black walnut WOOD and shavings should be avoided due to juglone content. The primary toxicity concerns for dogs (tremorgenic mycotoxins from mold) do not appear to significantly affect birds. Only offer fresh, uncontaminated nut meat in moderation; never use black walnut wood for perches or cage materials."),
+                    SpeciesRisk(species: .smallMammal, severity: .moderate, notes: "Black walnuts are dangerous to rabbits and potentially other small mammals. The husks are specifically toxic, and the plant contains tannins that negatively affect rabbits. The high fat content can cause fatal digestive issues including GI stasis and fatty liver disease in rabbits, who are hindgut fermenters designed for high-fiber, low-fat diets. Moldy husks can also contain potent neurotoxins. Do not feed any part of a black walnut tree to rabbits or other small mammals."),
+                    SpeciesRisk(species: .reptile, severity: .moderate, notes: "Black walnuts contain juglone, a compound toxic to reptiles that can cause respiratory distress and allergic reactions. Black walnut wood, shavings, and bark should NEVER be used in reptile enclosures as substrate or decoration. While documented fatal cases in reptiles are limited, the high juglone concentrations make black walnut dangerous. Safe alternatives include oak or cork. The nuts themselves pose less risk than wood products, but are not recommended.")
                 ],
                 preventionTips: [
                     "Keep dogs away from black walnut trees, especially fallen nuts and debris",
@@ -675,7 +679,7 @@ class DatabaseService {
                     "Be extra vigilant in fall (September-December) when nuts are dropping and in spring when buried nuts resurface",
                     "If you have black walnut trees cut down or trimmed, keep dogs away from sawdust and debris"
                 ],
-                sources: ["Veterinary Information Network (VIN) - ASPCA APCC Case Series Study", "ASPCA Animal Poison Control Center", "Merck Veterinary Manual"],
+                sources: ["ASPCA Animal Poison Control Center", "Pet Poison Helpline", "Merck Veterinary Manual", "Journal of the American Veterinary Medical Association"],
                 relatedEntries: nil
             ),
 
@@ -11071,7 +11075,7 @@ Approximately 95% of affected dogs survive with prompt treatment. Fatalities occ
                     "Humulus lupulus",
                     "Humulus"
                 ],
-                categories: [.foods, .householdItems],
+                categories: [.foods, .householdItems, .plants],
                 imageAsset: "hops_thumb",
                 description: """
 Hops (Humulus lupulus) are the flowering cones of the hop plant, used in beer brewing. Hops are EXTREMELY DANGEROUS to dogs and can cause a life-threatening condition characterized by rapidly rising body temperature. Without treatment, death can occur within hours.
