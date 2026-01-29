@@ -43,6 +43,8 @@
 		C36B4977AA78A0B98A512B6A /* SeveritySection.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC88BF3EB74D97FF8EF70C32 /* SeveritySection.swift */; };
 		C3D4E5F67890123456789ABC /* AppearanceSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4E5F6789012345678901234 /* AppearanceSettings.swift */; };
 		CA79B1FBAA2D70C587CD81B9 /* ArticleDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F222F1B00290D1DB61D22D2 /* ArticleDetailView.swift */; };
+		CASEFIELD001CCCC11111111 /* AddCaseNumberField.swift in Sources */ = {isa = PBXBuildFile; fileRef = CASEFIELD002CCCC22222222 /* AddCaseNumberField.swift */; };
+		CASEROW001BBBB1111111111 /* CaseNumberRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = CASEROW002BBBB2222222222 /* CaseNumberRow.swift */; };
 		D44528F6CE6C54C2BD5B0EE0 /* DatabaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A373A23CBFA6D1C7461960B /* DatabaseService.swift */; };
 		DC823648E61031D4B370EC20 /* MyPetsPlaceholder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E15382E138BA940EDEC2577 /* MyPetsPlaceholder.swift */; };
 		DE84CAE9804BECF59AED1636 /* ArticleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 558D0A98607D43A5C5878676 /* ArticleViewModel.swift */; };
@@ -67,8 +69,6 @@
 		PHOTO003BBBB3333333333333 /* PetAvatarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = PHOTO004BBBB4444444444444 /* PetAvatarView.swift */; };
 		PHOTO005BBBB5555555555555 /* PetPhotoPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = PHOTO006BBBB6666666666666 /* PetPhotoPickerView.swift */; };
 		POISONCASE001AAAA111111 /* PoisonControlCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = POISONCASE002AAAA222222 /* PoisonControlCase.swift */; };
-		CASEROW001BBBB1111111111 /* CaseNumberRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = CASEROW002BBBB2222222222 /* CaseNumberRow.swift */; };
-		CASEFIELD001CCCC11111111 /* AddCaseNumberField.swift in Sources */ = {isa = PBXBuildFile; fileRef = CASEFIELD002CCCC22222222 /* AddCaseNumberField.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -129,6 +129,8 @@
 		C55E1542D6E35B1F63CDED27 /* Color+Hex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Hex.swift"; sourceTree = "<group>"; };
 		C5C6C094D6B35157F81D7872 /* SavedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedView.swift; sourceTree = "<group>"; };
 		CA5A3886892E1B5E6CAF9D5F /* DisclaimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisclaimerView.swift; sourceTree = "<group>"; };
+		CASEFIELD002CCCC22222222 /* AddCaseNumberField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCaseNumberField.swift; sourceTree = "<group>"; };
+		CASEROW002BBBB2222222222 /* CaseNumberRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaseNumberRow.swift; sourceTree = "<group>"; };
 		D4E5F6789012345678901234 /* AppearanceSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppearanceSettings.swift; sourceTree = "<group>"; };
 		D6CE357649A1298A4A9761B2 /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
 		E5D4123DE87463A4CF858927 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
@@ -153,8 +155,6 @@
 		PHOTO004BBBB4444444444444 /* PetAvatarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetAvatarView.swift; sourceTree = "<group>"; };
 		PHOTO006BBBB6666666666666 /* PetPhotoPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetPhotoPickerView.swift; sourceTree = "<group>"; };
 		POISONCASE002AAAA222222 /* PoisonControlCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoisonControlCase.swift; sourceTree = "<group>"; };
-		CASEROW002BBBB2222222222 /* CaseNumberRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaseNumberRow.swift; sourceTree = "<group>"; };
-		CASEFIELD002CCCC22222222 /* AddCaseNumberField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCaseNumberField.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXGroup section */
@@ -637,7 +637,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 20260125.3;
+				CURRENT_PROJECT_VERSION = 20260127;
 				DEVELOPMENT_TEAM = 6KA5CB5S3A;
 				GENERATE_INFOPLIST_FILE = NO;
 				INFOPLIST_FILE = PetToxic/Resources/Info.plist;
@@ -823,7 +823,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 20260125.3;
+				CURRENT_PROJECT_VERSION = 20260127;
 				DEVELOPMENT_TEAM = 6KA5CB5S3A;
 				GENERATE_INFOPLIST_FILE = NO;
 				INFOPLIST_FILE = PetToxic/Resources/Info.plist;
