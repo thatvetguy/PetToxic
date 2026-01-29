@@ -41,7 +41,10 @@ class DatabaseService {
                 entrySeverity: .severe,
                 speciesRisks: [
                     SpeciesRisk(species: .dog, severity: .high, notes: "Dogs are commonly affected due to indiscriminate eating habits. Hospitalization is often required for treatment."),
-                    SpeciesRisk(species: .cat, severity: .severe, notes: "Cats are more sensitive to methylxanthines than dogs, though they rarely consume chocolate voluntarily.")
+                    SpeciesRisk(species: .cat, severity: .severe, notes: "Cats are more sensitive to methylxanthines than dogs, though they rarely consume chocolate voluntarily."),
+                    SpeciesRisk(species: .bird, severity: .severe, notes: "Birds are extremely sensitive to theobromine and caffeine due to their fast metabolism and small body size. Even tiny amounts of chocolate can be fatal. Documented deaths in parrots and mynah birds from small quantities of dark chocolate. Causes cardiac arrhythmias, seizures, and acute liver/kidney damage."),
+                    SpeciesRisk(species: .smallMammal, severity: .high, notes: "Rabbits, guinea pigs, hamsters, and other small mammals cannot efficiently metabolize theobromine. Even small amounts can cause digestive issues, cardiac problems, and potentially death. Keep all chocolate products away from small pets."),
+                    SpeciesRisk(species: .reptile, severity: .low, notes: "Limited data available. Reptiles are unlikely to consume chocolate voluntarily due to dietary preferences, but the methylxanthines in chocolate could potentially affect them if ingested. Avoid exposure as a precaution.")
                 ],
                 preventionTips: [
                     "Store all chocolate products in closed cabinets out of pet reach",
@@ -49,7 +52,7 @@ class DatabaseService {
                     "Educate children not to share chocolate with pets",
                     "Remember that baking chocolate and dark chocolate are most dangerous"
                 ],
-                sources: ["ASPCA Animal Poison Control Center", "Merck Veterinary Manual", "Veterinary Information Network (VIN)", "VCA Animal Hospitals"],
+                sources: ["ASPCA Animal Poison Control Center", "Pet Poison Helpline", "Merck Veterinary Manual", "VCA Animal Hospitals"],
                 relatedEntries: ["f2a3b4c5-6d7e-8f9a-0b1c-2d3e4f5a6b7c"]
             ),
 
@@ -81,7 +84,10 @@ class DatabaseService {
                 entrySeverity: .severe,
                 speciesRisks: [
                     SpeciesRisk(species: .dog, severity: .severe, notes: "Unpredictable toxicity — any amount should be considered dangerous. Hospitalization is typically recommended."),
-                    SpeciesRisk(species: .cat, severity: .low, notes: "Rare anecdotal reports exist, but in one study of 13 cats with known ingestion, none developed kidney injury.")
+                    SpeciesRisk(species: .cat, severity: .low, notes: "Rare anecdotal reports exist, but in one study of 13 cats with known ingestion, none developed kidney injury."),
+                    SpeciesRisk(species: .bird, severity: .low, notes: "Grapes are commonly fed as treats to pet birds without reported toxicity issues. The tartaric acid sensitivity that causes kidney failure in dogs does not appear to affect birds. Fresh grapes in moderation are generally considered safe for most bird species."),
+                    SpeciesRisk(species: .smallMammal, severity: .low, notes: "Guinea pigs and rabbits can eat grapes as occasional treats (1-3 grapes per week maximum) without documented kidney toxicity. The high sugar content is the main concern—excessive consumption can cause digestive upset and obesity. The tartaric acid toxicity seen in dogs has not been documented in small mammals. Avoid raisins due to concentrated sugar."),
+                    SpeciesRisk(species: .reptile, severity: .low, notes: "No documented toxicity in reptiles. Some herbivorous reptiles like tortoises may eat grapes as occasional fruit treats. The tartaric acid sensitivity appears specific to dogs. As with any fruit, offer only occasionally due to sugar content.")
                 ],
                 preventionTips: [
                     "Store grapes, raisins, and currants out of pet reach",
@@ -89,7 +95,7 @@ class DatabaseService {
                     "Be cautious with grape juice and wine—both contain the same toxic compounds",
                     "Dispose of fallen grapes promptly if you have grapevines"
                 ],
-                sources: ["ASPCA Animal Poison Control Center", "Pet Poison Helpline", "Merck Veterinary Manual", "Veterinary Information Network (VIN)"],
+                sources: ["ASPCA Animal Poison Control Center", "Pet Poison Helpline", "Merck Veterinary Manual", "Cornell University College of Veterinary Medicine", "VCA Animal Hospitals"],
                 relatedEntries: nil
             ),
 
@@ -121,7 +127,10 @@ class DatabaseService {
                 entrySeverity: .severe,
                 speciesRisks: [
                     SpeciesRisk(species: .dog, severity: .severe, notes: "Even small amounts can be life-threatening. Individual response varies. Hospitalization is typically recommended."),
-                    SpeciesRisk(species: .cat, severity: .low, notes: "Cats do not appear to develop hypoglycemia or liver injury from xylitol based on available studies.")
+                    SpeciesRisk(species: .cat, severity: .low, notes: "Cats do not appear to develop hypoglycemia or liver injury from xylitol based on available studies."),
+                    SpeciesRisk(species: .bird, severity: .high, notes: "Birds have fast metabolisms that may make them sensitive to xylitol's effects. A documented case of fatal xylitol toxicosis occurred in wild Cape sugarbirds that consumed xylitol nectar solution. While data in pet birds is limited, the potential for rapid blood sugar changes makes xylitol dangerous. Avoid all xylitol-containing products around birds."),
+                    SpeciesRisk(species: .smallMammal, severity: .high, notes: "Rabbits have demonstrated sensitivity to xylitol, experiencing effects similar to dogs. Ferrets, hamsters, and guinea pigs may also be affected, though published data is limited. Given the documented sensitivity in rabbits and the severity of effects in dogs, avoid all xylitol exposure in small mammals."),
+                    SpeciesRisk(species: .reptile, severity: .low, notes: "No documented cases of xylitol toxicity in reptiles. Reptiles have very different glucose metabolism than mammals and are unlikely to experience the insulin surge that causes hypoglycemia in dogs. However, data is extremely limited. Avoid exposure as a precaution.")
                 ],
                 preventionTips: [
                     "Check ingredient labels for xylitol (also listed as birch sugar or E967)",
@@ -129,7 +138,7 @@ class DatabaseService {
                     "Keep sugar-free peanut butter away from pets; always check labels before sharing",
                     "Be aware that some medications and supplements contain xylitol as a sweetener"
                 ],
-                sources: ["ASPCA Animal Poison Control Center", "Pet Poison Helpline", "Merck Veterinary Manual", "Veterinary Information Network (VIN)"],
+                sources: ["ASPCA Animal Poison Control Center", "Pet Poison Helpline", "VCA Animal Hospitals", "FDA Consumer Updates"],
                 relatedEntries: nil
             ),
 
