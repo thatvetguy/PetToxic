@@ -483,7 +483,10 @@ class DatabaseService {
                 entrySeverity: .moderate,
                 speciesRisks: [
                     SpeciesRisk(species: .dog, severity: .moderate, notes: "Large amounts can cause hallucinogenic and cardiovascular effects; culinary amounts in baked goods are generally not a serious concern"),
-                    SpeciesRisk(species: .cat, severity: .moderate, notes: "Cats are also susceptible to myristicin; similar effects expected at high doses")
+                    SpeciesRisk(species: .cat, severity: .moderate, notes: "Cats are also susceptible to myristicin; similar effects expected at high doses"),
+                    SpeciesRisk(species: .bird, severity: .moderate, notes: "Limited safety data for birds and spices. Myristicin acts as a central nervous system depressant and can cause disorientation, sedation, and potentially more serious effects. World Parrot Trust recommends avoiding nutmeg and other spices in birds due to insufficient safety studies. Keep spices away from bird-accessible areas."),
+                    SpeciesRisk(species: .smallMammal, severity: .moderate, notes: "Laboratory studies have documented hepatotoxicity (liver damage) and death in rabbits and guinea pigs given myristicin. CNS effects including hyperactivity followed by sedation have been observed in guinea pigs. While culinary amounts are unlikely to cause serious harm, large ingestions should be treated as potentially dangerous."),
+                    SpeciesRisk(species: .reptile, severity: .low, notes: "Nutmeg and spices are not part of any reptile's natural diet. Accidental exposure is unlikely, and no specific toxicity data exists for reptiles. If ingestion occurs, monitor for GI upset and CNS signs. Not a significant concern due to dietary incompatibility.")
                 ],
                 preventionTips: [
                     "Store whole nutmeg seeds and ground nutmeg in closed cabinets out of pet reach",
@@ -491,7 +494,7 @@ class DatabaseService {
                     "Keep nutmeg essential oil secured—it is more concentrated than the ground spice",
                     "A small bite of baked goods with nutmeg is unlikely to cause serious harm, but avoid sharing intentionally"
                 ],
-                sources: ["Veterinary Information Network (VIN)", "Pet Poison Helpline", "PetMD"],
+                sources: ["Pet Poison Helpline", "PetMD", "NCBI Toxicity Report on Myristicin", "World Parrot Trust - Dangerous Foods for Parrots"],
                 relatedEntries: nil
             ),
 
@@ -524,7 +527,9 @@ class DatabaseService {
                 speciesRisks: [
                     SpeciesRisk(species: .dog, severity: .high, notes: "Dogs are frequently affected due to eating play dough, de-icing salt, or drinking sea water at the beach"),
                     SpeciesRisk(species: .cat, severity: .high, notes: "Cats can develop toxicity from ocean water exposure or licking salt from surfaces"),
-                    SpeciesRisk(species: .bird, severity: .high, notes: "Birds are also susceptible to salt toxicity")
+                    SpeciesRisk(species: .bird, severity: .high, notes: "Birds are also susceptible to salt toxicity"),
+                    SpeciesRisk(species: .smallMammal, severity: .high, notes: "Salt toxicity has been documented in pet rabbits. A 2020 case report in the Journal of Exotic Pet Medicine documented the first clinical case of sodium chloride toxicosis in a pet rabbit from a Himalayan salt lick—the rabbit developed seizures, ataxia, and obtunded mentation. Guinea pigs are also at risk, and excess salt/minerals can contribute to bladder sludge and urinary stones. Never provide salt licks to rabbits or guinea pigs."),
+                    SpeciesRisk(species: .reptile, severity: .moderate, notes: "Many reptiles (iguanas, chameleons, desert species) have specialized nasal salt glands that help excrete excess sodium, providing some protection. However, reptile kidneys are less efficient than mammalian kidneys at handling sodium loads. Excessive salt intake should be avoided. Common pet reptiles should not be fed salty foods or exposed to salt products.")
                 ],
                 preventionTips: [
                     "Keep homemade play dough and salt dough out of pet reach—these contain dangerously high salt levels",
@@ -539,7 +544,7 @@ class DatabaseService {
                     "Avoid sharing salty snacks like chips, pretzels, or salted popcorn with pets",
                     "Never use salt to induce vomiting—this outdated practice can cause salt poisoning"
                 ],
-                sources: ["Veterinary Information Network (VIN)", "ASPCA Animal Poison Control Center", "Pet Poison Helpline"],
+                sources: ["ASPCA Animal Poison Control Center", "Pet Poison Helpline", "Merck Veterinary Manual - Salt Toxicosis in Animals", "Journal of Exotic Pet Medicine (2020) - Sodium intoxication in a domestic rabbit"],
                 relatedEntries: ["00112233-4455-6677-8899-aabbccddef01"]
             ),
 
@@ -569,7 +574,10 @@ class DatabaseService {
                 entrySeverity: .lowModerate,
                 speciesRisks: [
                     SpeciesRisk(species: .dog, severity: .moderate, notes: "Dogs are commonly affected; miniature schnauzers, Yorkshire terriers, cocker spaniels, and poodles are at higher risk; overweight and older dogs also more susceptible"),
-                    SpeciesRisk(species: .cat, severity: .low, notes: "Cats are less commonly affected by diet-induced pancreatitis; feline pancreatitis often occurs spontaneously or with other conditions like inflammatory bowel disease")
+                    SpeciesRisk(species: .cat, severity: .low, notes: "Cats are less commonly affected by diet-induced pancreatitis; feline pancreatitis often occurs spontaneously or with other conditions like inflammatory bowel disease"),
+                    SpeciesRisk(species: .bird, severity: .moderate, notes: "High-fat diets can cause serious health problems in birds including hepatic lipidosis (fatty liver disease), atherosclerosis (fat deposits in arteries), obesity, and heart disease. Amazon parrots and Quaker parrots are particularly prone to high cholesterol. Overindulgence in high-fat foods like peanut butter, cheese, or fatty seeds contributes to these conditions. Limit fatty treats and prioritize a balanced pellet-based diet."),
+                    SpeciesRisk(species: .smallMammal, severity: .high, notes: "Rabbits, guinea pigs, and chinchillas require high-fiber, low-fat diets. High-fat foods can cause life-threatening GI stasis (gut slowdown), hepatic lipidosis (fatty liver disease), obesity, and digestive upset. These herbivores cannot properly process fatty foods. Even small amounts of greasy table scraps can be dangerous. Never feed fatty foods, nuts, or seeds in significant amounts to small herbivorous mammals."),
+                    SpeciesRisk(species: .reptile, severity: .low, notes: "Fatty foods are not a natural part of most reptile diets. While not acutely toxic, high-fat foods are inappropriate and can contribute to obesity in captive reptiles if fed regularly. Herbivorous reptiles like iguanas and tortoises should never be offered fatty human foods. Carnivorous reptiles may occasionally consume prey with higher fat content naturally. Overall risk is low due to dietary incompatibility.")
                 ],
                 preventionTips: [
                     "Never feed pets table scraps, especially fatty meat trimmings or poultry skin",
