@@ -596,7 +596,7 @@ class DatabaseService {
                 id: UUID(uuidString: "59cf7dc4-5d83-4811-97f1-ce1d0162cd28")!,
                 name: "Cooked Bones",
                 alternateNames: ["chicken bones", "turkey bones", "pork bones", "beef bones cooked", "rib bones", "poultry bones", "fish bones", "lamb bones cooked", "ham bones", "steak bones", "pork chop bones", "t-bone", "drumstick bones", "wing bones", "spare ribs"],
-                categories: [.informational],
+                categories: [.informational, .foods],
                 imageAsset: "cooked_bones_thumb",
                 description: "Cooked bones from meat, poultry, or fish are common table scraps that pose serious mechanical hazards to pets. Cooking causes bones to become brittle and prone to splintering into sharp fragments when chewed.",
                 toxicityInfo: "Cooked bones are not toxic, but they present dangerous mechanical risks. When cooked, bones lose moisture and become brittle, causing them to splinter into sharp shards when chewed. These fragments can cause lacerations to the mouth, throat, and digestive tract; become lodged in the esophagus or intestines causing obstruction; or perforate the stomach or intestinal wall, leading to life-threatening peritonitis (infection of the abdominal cavity). Bone fragments may require endoscopic removal or emergency surgery.",
@@ -620,7 +620,10 @@ class DatabaseService {
                 entrySeverity: nil,
                 speciesRisks: [
                     SpeciesRisk(species: .dog, severity: .high, notes: "Dogs commonly chew and swallow bone fragments; larger pieces pose obstruction risk, smaller splinters pose perforation risk"),
-                    SpeciesRisk(species: .cat, severity: .moderate, notes: "Cats may chew on smaller bones like fish or poultry; fish bones are particularly hazardous due to their thin, sharp structure")
+                    SpeciesRisk(species: .cat, severity: .moderate, notes: "Cats may chew on smaller bones like fish or poultry; fish bones are particularly hazardous due to their thin, sharp structure"),
+                    SpeciesRisk(species: .bird, severity: .low, notes: "Pet birds (budgies, parrots, canaries) do not naturally consume bones. Raptors and wild birds of prey can digest RAW bones using highly acidic stomachs, but cooked bone exposure is extremely unlikely in pet bird species. If a pet bird somehow ingested cooked bone fragments, obstruction or injury would be possible but this scenario is uncommon."),
+                    SpeciesRisk(species: .smallMammal, severity: .moderate, notes: "Ferrets (obligate carnivores) can safely consume RAW bones as part of a whole-prey diet, but cooked bones become brittle and can splinter, posing obstruction and perforation risks. Herbivorous small mammals (rabbits, guinea pigs, hamsters, chinchillas) do not consume bones and would not typically be exposed."),
+                    SpeciesRisk(species: .reptile, severity: .low, notes: "Carnivorous reptiles (snakes, monitor lizards) regularly swallow whole prey including bones, which they digest completely using highly acidic stomachs. However, their natural diet consists of RAW bones—cooked bones are not part of any reptile's normal diet, and the scenario of a pet reptile encountering cooked bones is extremely unlikely.")
                 ],
                 preventionTips: [
                     "Never give pets cooked bones of any kind",
@@ -658,7 +661,10 @@ class DatabaseService {
                 entrySeverity: .low,
                 speciesRisks: [
                     SpeciesRisk(species: .dog, severity: .low, notes: "Many dogs are lactose intolerant but some retain the ability to digest dairy; high-fat dairy poses additional pancreatitis risk"),
-                    SpeciesRisk(species: .cat, severity: .low, notes: "Cats are more likely to be lactose intolerant than dogs; despite popular belief, milk is not recommended for cats")
+                    SpeciesRisk(species: .cat, severity: .low, notes: "Cats are more likely to be lactose intolerant than dogs; despite popular belief, milk is not recommended for cats"),
+                    SpeciesRisk(species: .bird, severity: .low, notes: "Birds lack the lactase enzyme needed to digest lactose, making them lactose intolerant. They never encounter dairy products in nature. Ingestion may cause diarrhea but is not typically dangerous. There is no nutritional benefit to feeding dairy to birds. Aged cheeses contain less lactose and may be tolerated in tiny amounts as an occasional treat."),
+                    SpeciesRisk(species: .smallMammal, severity: .moderate, notes: "Rabbits, guinea pigs, and chinchillas are strictly lactose intolerant. Adult rabbits lack the lactase enzyme, and dairy can cause severe GI upset, diarrhea, and potentially life-threatening GI stasis. Because rabbits cannot vomit, GI disturbances can quickly become serious. Ferrets may tolerate very small amounts but still lack sufficient lactase for significant dairy consumption."),
+                    SpeciesRisk(species: .reptile, severity: .low, notes: "Dairy products are completely foreign to reptile physiology and are not part of any reptile's natural diet. There is limited research on reptile lactose tolerance. Incidental exposure is unlikely to cause serious harm but may cause digestive upset. Dairy should simply be avoided entirely for all reptile species.")
                 ],
                 preventionTips: [
                     "Avoid giving pets milk or dairy products as treats",
@@ -720,7 +726,7 @@ class DatabaseService {
                 id: UUID(uuidString: "f1369ae0-b97d-424d-98b7-b46a9b245109")!,
                 name: "Fruit Pits & Seeds",
                 alternateNames: ["apple seeds", "apple core", "cherry pits", "cherry seeds", "peach pits", "peach seeds", "apricot pits", "apricot seeds", "plum pits", "plum seeds", "nectarine pits", "stone fruit pits", "cyanogenic glycosides", "amygdalin"],
-                categories: [.informational],
+                categories: [.informational, .foods],
                 imageAsset: "fruit_pits_thumb",
                 description: "The pits and seeds of certain common fruits—including apples, cherries, peaches, apricots, plums, and nectarines—contain compounds that can release cyanide when crushed. However, the primary risk to most pets is actually choking and intestinal obstruction rather than cyanide poisoning.",
                 toxicityInfo: "The pits and seeds of certain fruits—including apples, cherries, peaches, apricots, plums, and nectarines—contain cyanogenic glycosides (primarily amygdalin), which can release hydrogen cyanide when crushed. However, cyanide poisoning from fruit pits is rare in dogs and cats for several reasons: the seeds must be thoroughly crushed (not just swallowed whole), a large quantity of crushed seeds is required to cause toxicity, and the bitter taste discourages consumption. This type of toxicity is more commonly a concern for grazing animals. Leaves and stems may cause hypersalivation and GI irritation from natural resins, separate from any cyanide concern. The more common and immediate danger for pets is mechanical: pits can cause choking, tooth fractures, or intestinal obstruction requiring surgery—especially in smaller dogs.",
@@ -743,7 +749,10 @@ class DatabaseService {
                 entrySeverity: nil,
                 speciesRisks: [
                     SpeciesRisk(species: .dog, severity: .moderate, notes: "Obstruction is the primary concern, especially in smaller dogs; cyanide poisoning is rare unless large quantities of seeds are thoroughly crushed and consumed"),
-                    SpeciesRisk(species: .cat, severity: .low, notes: "Cats are very unlikely to consume enough pits or seeds to cause cyanide toxicity; leaves may cause hypersalivation from natural resins")
+                    SpeciesRisk(species: .cat, severity: .low, notes: "Cats are very unlikely to consume enough pits or seeds to cause cyanide toxicity; leaves may cause hypersalivation from natural resins"),
+                    SpeciesRisk(species: .bird, severity: .moderate, notes: "Apple seeds, cherry pits, and stone fruit pits (peach, plum, apricot, nectarine) contain cyanogenic glycosides that release hydrogen cyanide when crushed or chewed. Birds are highly susceptible due to their small body size and fast metabolism. Even a few crushed apple seeds could potentially harm small birds like budgies or canaries. Always remove all seeds and pits from fruit before offering to pet birds—the fruit flesh is safe."),
+                    SpeciesRisk(species: .smallMammal, severity: .low, notes: "Herbivorous small mammals (rabbits, guinea pigs, hamsters) do not typically consume hard fruit pits or seeds. If somehow chewed, the cyanogenic glycosides would pose a theoretical risk, but this exposure scenario is uncommon in practice. Carnivorous small mammals (ferrets) would not consume fruit pits. Primary concern would be accidental access to fruit scraps containing pits."),
+                    SpeciesRisk(species: .reptile, severity: .low, notes: "Fruit pits and seeds are not part of any reptile's natural diet. Carnivorous reptiles eat animal prey, while herbivorous reptiles (tortoises, iguanas) eat leaves, flowers, and soft fruits—not hard pits. The risk of a pet reptile encountering and consuming fruit pits is extremely low. Cyanogenic glycosides would theoretically be harmful if ingested, but this scenario is highly unlikely.")
                 ],
                 preventionTips: [
                     "Always remove pits and cores before sharing fruit with pets",
@@ -753,7 +762,7 @@ class DatabaseService {
                     "Keep compost bins secure; fermenting fruit can also cause alcohol toxicity",
                     "A single swallowed pit may pass without issue, but contact your vet for guidance, especially for smaller dogs"
                 ],
-                sources: ["ASPCA Animal Poison Control Center", "Pet Poison Helpline", "Veterinary Information Network (VIN)"],
+                sources: ["ASPCA Animal Poison Control Center", "Pet Poison Helpline", "Poison Control (poison.org)", "BirdTricks"],
                 relatedEntries: nil
             ),
 
@@ -783,7 +792,10 @@ class DatabaseService {
                 entrySeverity: .high,
                 speciesRisks: [
                     SpeciesRisk(species: .dog, severity: .high, notes: "Dogs are most commonly affected due to scavenging behavior; roaming dogs and those with access to garbage or compost are at highest risk"),
-                    SpeciesRisk(species: .cat, severity: .low, notes: "Tremorgenic mycotoxicosis has NOT been reported in domestic cats, likely due to their more selective eating habits. However, cats should still be prevented from accessing moldy foods as a precaution.")
+                    SpeciesRisk(species: .cat, severity: .low, notes: "Tremorgenic mycotoxicosis has NOT been reported in domestic cats, likely due to their more selective eating habits. However, cats should still be prevented from accessing moldy foods as a precaution."),
+                    SpeciesRisk(species: .bird, severity: .high, notes: "Birds may be MORE sensitive to mycotoxins than mammals due to their high metabolic rate and unique physiology. Tremorgenic mycotoxins can cause neurological symptoms including tremors, incoordination, and seizures. Mycotoxins are also very damaging to birds' livers. Common contaminated foods include peanuts, sunflower seeds, corn, and bread—all frequently fed to pet birds. Seed mixes may be contaminated if they contain peanuts, sunflower seeds, or corn."),
+                    SpeciesRisk(species: .smallMammal, severity: .high, notes: "Small mammals are susceptible to tremorgenic mycotoxins through the same mechanisms as dogs and cats. Rabbits and guinea pigs may encounter moldy hay, vegetables, or treats. Signs would include tremors, incoordination, and neurological symptoms. Any food showing visible mold should be discarded immediately. Store hay and food in cool, dry conditions to prevent mold growth."),
+                    SpeciesRisk(species: .reptile, severity: .moderate, notes: "Limited direct research exists on tremorgenic mycotoxicosis in reptiles. All vertebrates appear susceptible to mycotoxins, and reptiles would likely be affected through contaminated food items. Herbivorous reptiles could encounter moldy produce, while carnivorous reptiles could theoretically be exposed through contaminated feeder insects raised on moldy grain. Practical exposure is less common than in mammals.")
                 ],
                 preventionTips: [
                     "Secure all garbage cans with tight-fitting, pet-proof lids",
@@ -11322,6 +11334,21 @@ Major US outbreaks: 2005, 2011, 2020, 2021—numerous pet deaths. FDA maintains 
                         species: .cat,
                         severity: .high,
                         notes: "Cats are highly resistant to acute aflatoxicosis but susceptible to chronic exposure over time. Less commonly affected than dogs."
+                    ),
+                    SpeciesRisk(
+                        species: .bird,
+                        severity: .severe,
+                        notes: "Birds are extremely susceptible to aflatoxins. Aflatoxin was first discovered after approximately 100,000 turkey poults died from contaminated peanut meal in 1960 ('Turkey X disease'). Ducklings and young turkeys are most vulnerable, but all bird species are at risk. Aflatoxins cause severe liver damage, immunosuppression, and neurological symptoms in birds. Pet birds may be exposed through contaminated seeds, corn, or peanuts in their diet."
+                    ),
+                    SpeciesRisk(
+                        species: .smallMammal,
+                        severity: .severe,
+                        notes: "Rabbits and guinea pigs are highly sensitive to aflatoxin B1. Studies show these species are more susceptible than mice, hamsters, and rats. Aflatoxins cause hepatotoxicity (liver damage), immunosuppression, and can be fatal. Small mammals may be exposed through contaminated hay, grains, or commercial pellets containing corn or peanut products. Young animals are more vulnerable than adults."
+                    ),
+                    SpeciesRisk(
+                        species: .reptile,
+                        severity: .high,
+                        notes: "No animal species is known to be immune to the acute toxic effects of aflatoxins. Reptiles may be exposed through contaminated feeder insects (crickets, mealworms) raised on moldy grain—this exposure route has been suspected in chameleon deaths. Carnivorous reptiles consuming whole prey should have lower risk. Limited direct research exists, but hepatotoxicity would be expected based on the known mechanism of aflatoxin toxicity in other vertebrates."
                     )
                 ],
                 preventionTips: [
@@ -11333,11 +11360,11 @@ Major US outbreaks: 2005, 2011, 2020, 2021—numerous pet deaths. FDA maintains 
                     "Grain-free diets are NOT protective—aflatoxins contaminate legumes too"
                 ],
                 sources: [
-                    "Veterinary Information Network (VIN)",
                     "Merck Veterinary Manual",
                     "U.S. Food and Drug Administration (FDA)",
                     "American Veterinary Medical Association (AVMA)",
-                    "Cornell University College of Veterinary Medicine"
+                    "Cornell University College of Veterinary Medicine",
+                    "NCBI Bookshelf - Aflatoxin Toxicity (StatPearls)"
                 ],
                 relatedEntries: ["beacabe2-00ab-4e59-8c8c-c09665f940b6"]
             ),
