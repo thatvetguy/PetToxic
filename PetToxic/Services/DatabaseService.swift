@@ -172,7 +172,9 @@ class DatabaseService {
                 speciesRisks: [
                     SpeciesRisk(species: .dog, severity: .high, notes: "Japanese breeds (Akita, Shiba Inu, Shikoku, Kai Ken, Japanese Terrier, Tosa, Japanese Spitz, Hokkaido) are at increased risk due to a hereditary red blood cell condition."),
                     SpeciesRisk(species: .cat, severity: .severe, notes: "Cats are more susceptible than dogs. Heinz body anemia can occur with very small amounts. Caution with baby foods that may contain onion powder."),
-                    SpeciesRisk(species: .bird, severity: .high, notes: "Birds are susceptible to Allium toxicity.")
+                    SpeciesRisk(species: .bird, severity: .high, notes: "All Allium family plants (onions, garlic, leeks, chives) are toxic to birds. Onions have caused deaths in geese and other bird species. The sulfur compounds cause hemolytic anemia—destruction of red blood cells—leading to weakness, respiratory distress, and potentially death. Even small amounts relative to body weight can cause toxicity."),
+                    SpeciesRisk(species: .smallMammal, severity: .high, notes: "Onions are highly toxic to rabbits, guinea pigs, and other small mammals. The bulbs contain compounds that cause hemolytic anemia, destroying red blood cells. Can cause severe illness, anemia, and death. Never feed any part of onions or other Allium plants to small mammals."),
+                    SpeciesRisk(species: .reptile, severity: .low, notes: "Limited data available. Reptiles are unlikely to consume onions due to dietary preferences. The hemolytic effects documented in mammals and birds have not been studied in reptiles. Avoid exposure as a precaution, but accidental exposure is unlikely to occur.")
                 ],
                 preventionTips: [
                     "Keep all Allium vegetables (onions, garlic, leeks, chives, shallots, scallions) out of pet reach",
@@ -180,7 +182,7 @@ class DatabaseService {
                     "Check ingredient lists on baby food, soups, and prepared foods",
                     "Remember that all forms are toxic: raw, cooked, powdered, and dehydrated"
                 ],
-                sources: ["ASPCA Animal Poison Control Center", "Pet Poison Helpline", "Merck Veterinary Manual", "Veterinary Information Network (VIN)"],
+                sources: ["ASPCA Animal Poison Control Center", "Pet Poison Helpline", "Merck Veterinary Manual", "American College of Veterinary Pharmacists"],
                 relatedEntries: nil
             ),
 
@@ -214,7 +216,9 @@ class DatabaseService {
                 speciesRisks: [
                     SpeciesRisk(species: .dog, severity: .high, notes: "3-5 times more toxic than onion. Japanese breeds (Akita, Shiba Inu, Shikoku, Kai Ken, Japanese Terrier, Tosa, Japanese Spitz, Hokkaido) are at increased risk."),
                     SpeciesRisk(species: .cat, severity: .severe, notes: "Cats are more susceptible than dogs and can develop toxicosis from very small amounts. Any exposure is potentially dangerous."),
-                    SpeciesRisk(species: .bird, severity: .high, notes: "Birds are susceptible to Allium toxicity.")
+                    SpeciesRisk(species: .bird, severity: .high, notes: "Garlic and all Allium family plants are toxic to birds. A documented case describes a Dusky-headed conure that died after being force-fed garlic, with necropsy confirming hemolytic anemia. The sulfur compounds in garlic cause destruction of red blood cells. Garlic is approximately 3-5 times more toxic than onions."),
+                    SpeciesRisk(species: .smallMammal, severity: .high, notes: "Garlic is toxic to rabbits, guinea pigs, and other small mammals. Contains thiosulphate and other sulfur compounds that cause hemolytic anemia. Garlic has immunosuppressive effects in rabbits and can cause anaphylactic reactions. Never feed garlic or garlic-containing supplements to small mammals."),
+                    SpeciesRisk(species: .reptile, severity: .low, notes: "Limited data available. Reptiles are unlikely to consume garlic due to dietary preferences. While the hemolytic effects seen in mammals and birds could theoretically affect reptiles, no documented cases exist. Avoid exposure as a precaution.")
                 ],
                 preventionTips: [
                     "Store fresh garlic bulbs and garlic powder in closed cabinets",
@@ -222,7 +226,7 @@ class DatabaseService {
                     "Avoid garlic-based pet supplements unless specifically directed by a veterinarian",
                     "Check ingredient lists on prepared foods, sauces, and seasonings"
                 ],
-                sources: ["ASPCA Animal Poison Control Center", "Pet Poison Helpline", "Merck Veterinary Manual", "Veterinary Information Network (VIN)"],
+                sources: ["ASPCA Animal Poison Control Center", "Pet Poison Helpline", "Merck Veterinary Manual", "Colorado State University Guide to Poisonous Plants"],
                 relatedEntries: nil
             ),
 
@@ -253,7 +257,10 @@ class DatabaseService {
                 entrySeverity: .moderate,
                 speciesRisks: [
                     SpeciesRisk(species: .dog, severity: .moderate, notes: "Dogs are the only species in which toxicity has been documented; symptoms typically resolve within 24-48 hours but veterinary guidance is recommended"),
-                    SpeciesRisk(species: .cat, severity: .low, notes: "Toxicity has not been reported in cats; whether cats are resistant or simply don't consume enough is unknown")
+                    SpeciesRisk(species: .cat, severity: .moderate, notes: "While macadamia nut toxicity is most well-documented in dogs, cats can also be affected. Symptoms may include lethargy, vomiting, ataxia (wobbly gait), tremors, and weakness. The high fat content can also cause pancreatitis. Veterinarians recommend avoiding macadamia nuts in cats entirely."),
+                    SpeciesRisk(species: .bird, severity: .low, notes: "Macadamia nuts are generally considered safe for parrots and other pet birds. They are commonly recommended as occasional treats for macaws and large parrots. The toxicity seen in dogs and cats has not been documented in birds. Offer only unsalted, raw macadamia nuts in moderation due to high fat content."),
+                    SpeciesRisk(species: .smallMammal, severity: .moderate, notes: "While the specific macadamia toxicity seen in dogs has not been documented in small mammals, nuts in general should NOT be fed to rabbits and other small mammals. Nuts are too high in fat for their digestive systems, which require high fiber and low fat. Can cause GI stasis, obesity, fatty liver disease, and other serious health problems. Avoid all nuts."),
+                    SpeciesRisk(species: .reptile, severity: .low, notes: "Macadamia nut toxicity appears to be primarily a concern for dogs and cats. No toxicity has been documented in reptiles. Nuts are not a natural part of most reptile diets, so accidental ingestion is unlikely. Not recommended as food due to dietary incompatibility.")
                 ],
                 preventionTips: [
                     "Store macadamia nuts and products containing them in closed cabinets",
@@ -261,7 +268,7 @@ class DatabaseService {
                     "Be aware that macadamia nuts are often paired with chocolate, which is also toxic",
                     "Keep baked goods containing macadamia nuts out of pet reach"
                 ],
-                sources: ["Veterinary Information Network (VIN)", "ASPCA Animal Poison Control Center", "Pet Poison Helpline", "Merck Veterinary Manual"],
+                sources: ["ASPCA Animal Poison Control Center", "Pet Poison Helpline", "VCA Animal Hospitals", "Merck Veterinary Manual"],
                 relatedEntries: nil
             ),
 
