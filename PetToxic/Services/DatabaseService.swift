@@ -303,7 +303,9 @@ class DatabaseService {
                 speciesRisks: [
                     SpeciesRisk(species: .dog, severity: .high, notes: "Dogs are highly susceptible; even small amounts can cause signs of inebriation"),
                     SpeciesRisk(species: .cat, severity: .severe, notes: "Cats are especially sensitive to alcohol; smaller body size increases risk"),
-                    SpeciesRisk(species: .bird, severity: .severe, notes: "Birds are highly sensitive due to small body size and rapid metabolism")
+                    SpeciesRisk(species: .bird, severity: .severe, notes: "Birds are highly sensitive due to small body size and rapid metabolism"),
+                    SpeciesRisk(species: .smallMammal, severity: .high, notes: "Rabbits, guinea pigs, and ferrets lack efficient alcohol metabolism. Guinea pigs have genetically lost the ADH7 enzyme for ethanol processing. Ferrets are extremely sensitive and can absorb alcohol through their skin. Small body size means rapid intoxication from even tiny amounts. Do not allow any alcohol exposure."),
+                    SpeciesRisk(species: .reptile, severity: .moderate, notes: "Ethanol causes CNS depression in reptiles and can lead to dehydration and organ damage. A study in bearded dragons showed significant metabolic and body temperature changes from ethanol exposure. Isopropyl alcohol can cause chemical burns and systemic toxicity through skin absorption. Limited research but avoid all exposure.")
                 ],
                 preventionTips: [
                     "Keep alcoholic beverages out of reach, especially during parties when drinks may be left unattended",
@@ -312,7 +314,7 @@ class DatabaseService {
                     "Dispose of fermenting or rotting fruits promptly",
                     "Be aware that cocktails made with milk or cream may be especially attractive to pets"
                 ],
-                sources: ["Veterinary Information Network (VIN)", "ASPCA Animal Poison Control Center", "Pet Poison Helpline", "Merck Veterinary Manual", "VCA Animal Hospitals"],
+                sources: ["ASPCA Animal Poison Control Center", "Pet Poison Helpline", "Merck Veterinary Manual", "VCA Animal Hospitals", "Today's Veterinary Practice"],
                 relatedEntries: nil
             ),
 
@@ -346,7 +348,10 @@ class DatabaseService {
                 entrySeverity: .severe,
                 speciesRisks: [
                     SpeciesRisk(species: .dog, severity: .severe, notes: "Dogs are most commonly affected; deep-chested breeds face additional GDV risk from stomach distention"),
-                    SpeciesRisk(species: .cat, severity: .severe, notes: "Cats are also at risk for both bloating and alcohol poisoning from raw dough")
+                    SpeciesRisk(species: .cat, severity: .severe, notes: "Cats are also at risk for both bloating and alcohol poisoning from raw dough"),
+                    SpeciesRisk(species: .bird, severity: .severe, notes: "Birds are highly susceptible due to their warm body temperature (which promotes rapid yeast fermentation), small body size (meaning ethanol affects them quickly), and inability to vomit effectively. The combination of gastric distension and alcohol production is life-threatening. Never allow birds access to rising dough."),
+                    SpeciesRisk(species: .smallMammal, severity: .severe, notes: "Rabbits, guinea pigs, and ferrets cannot vomit, making raw yeast dough extremely dangerous. Once consumed, the dough cannot be expelled and will continue fermenting. Small body size means both the gastric distension and ethanol production are life-threatening. Ferrets are especially sensitive to alcohol toxicity."),
+                    SpeciesRisk(species: .reptile, severity: .moderate, notes: "Reptiles have lower body temperatures which may slow yeast fermentation, but the mechanism of ethanol production would still occur if dough is consumed. Reptiles are unlikely to consume bread dough voluntarily due to dietary preferences, but any ingestion should be treated as potentially serious due to alcohol toxicity.")
                 ],
                 preventionTips: [
                     "Never leave dough out to rise in areas accessible to pets, including countertops",
@@ -355,7 +360,7 @@ class DatabaseService {
                     "Dispose of unused or old dough in a secure trash container outside the home",
                     "Be extra vigilant during holiday baking when dough is frequently left to rise"
                 ],
-                sources: ["Veterinary Information Network (VIN)", "ASPCA Animal Poison Control Center", "Pet Poison Helpline", "Merck Veterinary Manual", "VCA Animal Hospitals"],
+                sources: ["ASPCA Animal Poison Control Center", "Pet Poison Helpline", "Merck Veterinary Manual", "VCA Animal Hospitals"],
                 relatedEntries: nil
             ),
 
@@ -390,7 +395,10 @@ class DatabaseService {
                 entrySeverity: .severe,
                 speciesRisks: [
                     SpeciesRisk(species: .dog, severity: .high, notes: "Dogs are more sensitive to caffeine than humans; coffee grounds and caffeine pills pose the greatest risk"),
-                    SpeciesRisk(species: .cat, severity: .severe, notes: "Cats are highly sensitive to caffeine and cannot metabolize it effectively; even small amounts can cause serious toxicity")
+                    SpeciesRisk(species: .cat, severity: .severe, notes: "Cats are highly sensitive to caffeine and cannot metabolize it effectively; even small amounts can cause serious toxicity"),
+                    SpeciesRisk(species: .bird, severity: .severe, notes: "Birds are extremely sensitive to caffeine due to their high metabolic rate and small body size. A 2022 study in pigeons documented rapid onset of neurological and cardiac symptoms. Documented parrot deaths from chocolate (which contains caffeine and theobromine) confirm methylxanthine toxicity is fatal. Coffee, tea, energy drinks, and caffeine pills pose severe risks."),
+                    SpeciesRisk(species: .smallMammal, severity: .high, notes: "Ferrets are especially sensitive to caffeine—even a few sips can be dangerous. Rabbits, guinea pigs, and other small mammals are also vulnerable due to their small body size and different metabolism. Caffeine causes cardiac stimulation, tremors, and seizures. Keep all caffeinated products away from small pets."),
+                    SpeciesRisk(species: .reptile, severity: .moderate, notes: "Limited specific research on caffeine toxicity in reptiles, but as a CNS stimulant, caffeine would affect reptile nervous systems. Reptiles are unlikely to consume caffeinated beverages voluntarily, but any exposure should be treated seriously. Coffee grounds, tea bags, and caffeine pills should be kept away from reptile enclosures.")
                 ],
                 preventionTips: [
                     "Store coffee grounds, beans, and pods in sealed containers out of pet reach",
@@ -399,7 +407,7 @@ class DatabaseService {
                     "Keep diet pills, pre-workout supplements, and caffeine pills in closed cabinets",
                     "Be aware that some medications and herbal supplements contain caffeine"
                 ],
-                sources: ["Veterinary Information Network (VIN)", "ASPCA Animal Poison Control Center", "Pet Poison Helpline", "VCA Animal Hospitals"],
+                sources: ["ASPCA Animal Poison Control Center", "Pet Poison Helpline", "Merck Veterinary Manual", "VCA Animal Hospitals"],
                 relatedEntries: nil
             ),
 
