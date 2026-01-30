@@ -3779,7 +3779,7 @@ class DatabaseService {
                     "Keep costume jewelry, especially children's jewelry, away from pets — cheap imported jewelry may contain lead"
                 ],
                 sources: ["ASPCA Animal Poison Control Center", "Veterinary Partner (VIN) — Lead Poisoning in Dogs and Cats", "VCA Animal Hospitals — Lead Poisoning", "Merck Veterinary Manual — Lead Poisoning"],
-                relatedEntries: nil
+                relatedEntries: ["00112233-4455-6677-8899-aabbccddef23"]
             ),
 
             // MARK: - Anticoagulant Rodenticides
@@ -4506,7 +4506,7 @@ class DatabaseService {
                 id: UUID(uuidString: "c9d0e1f2-3a4b-5c6d-e7f8-9a0b1c2d3e4f")!,
                 name: "Pesticides & Insecticides",
                 alternateNames: ["pesticide", "insecticide", "bug killer", "bug spray", "flea product poisoning", "tick product poisoning", "flea medicine toxicity", "garden pesticide", "lawn insecticide", "ant killer", "roach killer", "wasp spray", "insect poison"],
-                categories: [.informational],
+                categories: [.informational, .garageGarden, .medications],
                 imageAsset: "pesticides_thumb",
                 description: "Pesticides and insecticides are chemicals designed to kill or repel insects and other pests. They are found in garden products, household bug sprays, flea and tick preventatives, and agricultural applications. Pet exposure is common and toxicity varies dramatically depending on the type of product.\n\nThere are several major classes of pesticides, each with different mechanisms, toxicity levels, and treatment approaches:\n\n• **Pyrethrins/Pyrethroids** (including permethrin) — EXTREMELY TOXIC TO CATS. Found in many flea products. Dog products should never be used on cats.\n\n• **Organophosphates & Carbamates** — Cholinesterase inhibitors causing \"SLUDGE\" signs. Found in some garden products and older flea treatments. Declining in use but still encountered.\n\n• **Neonicotinoids** (imidacloprid) — LOW TOXICITY to mammals. Found in Advantage®, Seresto®. Generally very safe for dogs and cats.\n\n• **Fipronil** — LOW TOXICITY to dogs and cats but DANGEROUS TO RABBITS. Found in Frontline®.\n\n• **Ant & Roach Baits** — LOW TOXICITY. Main concern is foreign body risk from plastic housing, not the insecticide.\n\n• **DEET** — Human insect repellent. Should NEVER be applied to pets.\n\nIdentifying the specific product is critical for appropriate treatment. Different pesticide classes require different approaches.",
                 toxicityInfo: "WHY IDENTIFICATION MATTERS\n\nPesticides are not a single poison—they are a category containing multiple distinct chemical classes that work in completely different ways:\n\n**Pyrethrins/Pyrethroids (e.g., permethrin)**\n• Mechanism: Sodium channel disruption\n• Key concern: EXTREMELY TOXIC TO CATS due to deficient liver metabolism\n• Dog flea products on cats = most common serious exposure\n• No specific antidote\n\n**Organophosphates & Carbamates**\n• Mechanism: Cholinesterase inhibition\n• Key signs: SLUDGE (Salivation, Lacrimation, Urination, Defecation, GI distress, Emesis)\n• Antidotes exist (atropine, pralidoxime for OPs)\n• 15-17% mortality even with treatment\n\n**Neonicotinoids (e.g., imidacloprid)**\n• Mechanism: Insect-selective nicotinic receptor binding\n• Key point: VERY LOW mammalian toxicity\n• \"My pet licked the flea treatment\" — usually causes only mild, self-limiting effects\n\n**Fipronil**\n• Mechanism: GABA receptor blocker (insect-selective)\n• Key point: Safe for dogs and cats; DANGEROUS TO RABBITS\n• Generally very well tolerated\n\n**Ant & Roach Bait Stations**\n• Active ingredients: Abamectin, borates, fipronil, hydramethylnon, indoxacarb\n• Key point: LOW TOXICITY—concentrations too low to harm pets\n• Main concern: Plastic housing can cause GI irritation or obstruction\n• MDR-1 gene dogs (Collies, etc.) may be more sensitive to abamectin\n\n**DEET**\n• Mechanism: Neurological (not fully understood)\n• Key point: Human product—NEVER apply to pets\n• Causes tremors, ataxia, seizures\n\nBring product packaging to the veterinary clinic whenever possible.",
@@ -4558,7 +4558,7 @@ class DatabaseService {
                 id: UUID(uuidString: "049e1259-f968-4e23-aa8c-5110cb52a08c")!,
                 name: "Rodenticides (Overview)",
                 alternateNames: ["rat poison", "mouse poison", "rodent bait", "rodent poison", "rodenticide", "rat bait", "mouse bait", "gopher poison", "mole poison", "vole poison", "rodent killer"],
-                categories: [.informational],
+                categories: [.informational, .garageGarden],
                 imageAsset: "rodenticides_thumb",
                 description: "Rodenticides are poisons designed to kill rodents such as rats, mice, gophers, moles, and voles. These products are a leading cause of pet poisoning—the ASPCA Animal Poison Control Center receives thousands of rodenticide-related calls annually. Four main types of rodenticides are used in the United States, each working through a completely different mechanism. Identifying the exact product is critical because treatment varies dramatically between types. Product appearance (color, shape, size) does NOT reliably indicate the active ingredient—always check the packaging or contact poison control.\n\n**Important:** In 2011, the EPA restricted consumer rodenticide sales, causing many manufacturers to reformulate their products. The same brand name (such as d-CON) may contain different active ingredients depending on when it was purchased. Older products stored in garages or sheds may be anticoagulants, while newer purchases of the same brand may contain bromethalin or another non-anticoagulant toxin. Always check the active ingredient on the label — never assume based on brand name alone.",
                 toxicityInfo: "The four major rodenticide types are: (1) Anticoagulant rodenticides (warfarin, brodifacoum, bromadiolone) prevent blood clotting and have an antidote (vitamin K1); (2) Bromethalin causes fatal brain swelling with NO ANTIDOTE; (3) Cholecalciferol (vitamin D3) causes fatal calcium elevation with NO ANTIDOTE; (4) Zinc phosphide releases toxic phosphine gas in the stomach with NO ANTIDOTE. Treatment success depends heavily on knowing the specific product and acting quickly. For detailed information on each type, see the related entries below.",
@@ -4856,8 +4856,8 @@ class DatabaseService {
                     "Keep new batteries in original packaging until use",
                     "Check children's toys and holiday decorations for accessible battery compartments"
                 ],
-                sources: ["ASPCA Animal Poison Control Center", "Pet Poison Helpline", "Veterinary Information Network (VIN)", "Merck Veterinary Manual", "National Capital Poison Center"],
-                relatedEntries: ["b2c3d4e5-6f7a-8b9c-0d1e-2f3a4b5c6d7e"]
+                sources: ["ASPCA Animal Poison Control Center", "Pet Poison Helpline", "Merck Veterinary Manual", "National Capital Poison Center"],
+                relatedEntries: ["b2c3d4e5-6f7a-8b9c-0d1e-2f3a4b5c6d7e", "00112233-4455-6677-8899-aabbccddef23"]
             ),
 
             // MARK: - Alkaline Batteries
@@ -4919,8 +4919,8 @@ class DatabaseService {
                     "If a device is chewed, immediately check whether the batteries are intact or missing",
                     "Never leave remotes, flashlights, or other battery-containing items where pets can chew them"
                 ],
-                sources: ["ASPCA Animal Poison Control Center", "Pet Poison Helpline", "Veterinary Information Network (VIN)", "Merck Veterinary Manual", "Vetlexicon"],
-                relatedEntries: ["a1b2c3d4-5e6f-7a8b-9c0d-1e2f3a4b5c6d"]
+                sources: ["ASPCA Animal Poison Control Center", "Pet Poison Helpline", "Merck Veterinary Manual", "Vetlexicon"],
+                relatedEntries: ["a1b2c3d4-5e6f-7a8b-9c0d-1e2f3a4b5c6d", "00112233-4455-6677-8899-aabbccddef23"]
             ),
 
             // MARK: - Silica Gel Packets
@@ -5255,8 +5255,8 @@ class DatabaseService {
                     "Keep board games stored securely—game pieces and tokens often contain zinc",
                     "If your pet is diagnosed with zinc toxicosis from an unknown source, carefully search your home for accessible zinc objects"
                 ],
-                sources: ["Veterinary Information Network (VIN)", "ASPCA Animal Poison Control Center", "Pet Poison Helpline", "Merck Veterinary Manual", "Journal of Veterinary Emergency and Critical Care"],
-                relatedEntries: ["d0e1f2a3-4b5c-6d7e-8f9a-0b1c2d3e4f5a"]
+                sources: ["ASPCA Animal Poison Control Center", "Pet Poison Helpline", "Merck Veterinary Manual", "Journal of Veterinary Emergency and Critical Care"],
+                relatedEntries: ["d0e1f2a3-4b5c-6d7e-8f9a-0b1c2d3e4f5a", "00112233-4455-6677-8899-aabbccddef23"]
             ),
 
             // MARK: - Liquid Potpourri & Scented Products
@@ -12256,6 +12256,122 @@ Many bird owners don't realize the kitchen poses multiple simultaneous risks. A 
                     "00112233-4455-6677-8899-aabbccddef22",
                     "eeff2233-4455-6677-8899-aabbccddeeff",
                     "b8c9d0e1-2f3a-4b5c-6d7e-8f9a0b1c2d3e"
+                ]
+            ),
+
+            // MARK: - Heavy Metal Toxicosis (Lead, Zinc, Copper & Others)
+            ToxicItem(
+                id: UUID(uuidString: "00112233-4455-6677-8899-aabbccddef23")!,
+                name: "Heavy Metal Toxicosis (Lead, Zinc, Copper & Others)",
+                alternateNames: [
+                    "heavy metal poisoning",
+                    "heavy metal toxicity",
+                    "metal poisoning",
+                    "plumbism",
+                    "lead poisoning",
+                    "zinc toxicosis",
+                    "zinc poisoning",
+                    "copper toxicosis",
+                    "copper poisoning",
+                    "new wire disease",
+                    "galvanized wire disease"
+                ],
+                categories: [.informational, .householdItems, .garageGarden],
+                imageAsset: "heavy_metals_thumb",
+                description: """
+Heavy metal toxicosis occurs when pets ingest items containing metals such as lead, zinc, or copper. These metals accumulate in the body and cause damage to multiple organ systems including the gastrointestinal tract, blood cells, nervous system, kidneys, and liver.
+
+**Birds are particularly susceptible** due to their efficient respiratory system and tendency to chew on metal objects in their environment—heavy metal toxicosis is the most commonly reported toxic disease in companion birds.
+
+In dogs and cats, young animals are most commonly affected due to their chewing behavior. Identifying the source of exposure can be challenging—in up to 90% of lead toxicosis cases, the source is never definitively identified.
+
+**Diagnostic Note:** Metallic objects typically show up as bright white areas on X-rays, which can be a valuable tool in identifying ingested metal. However, the absence of visible metal on X-rays does not rule out heavy metal toxicosis—some metal may have already passed or been absorbed.
+""",
+                toxicityInfo: """
+**How Heavy Metals Cause Harm**
+
+Heavy metals interfere with normal cell function throughout the body. They disrupt enzyme activity, damage cell membranes, and can cause oxidative stress (damage from unstable molecules). Each metal has somewhat different effects:
+
+**Lead** is absorbed through the gastrointestinal tract and stored primarily in bone (up to 97% of body stores), where it can remain for months to years. During times of calcium mobilization—such as pregnancy, nursing, or bone healing—lead can be released back into the bloodstream and cause symptoms. Lead damages red blood cells (causing anemia), nerve tissue, and developing brains, making it especially dangerous for young animals. Dogs absorb lead more readily than other species regardless of age.
+
+**Zinc** is an essential mineral in small amounts, but excessive zinc causes severe hemolytic anemia (destruction of red blood cells). The acidic environment of the stomach dissolves zinc-containing objects, allowing rapid absorption. Zinc toxicosis can progress from gastrointestinal upset to life-threatening anemia within hours to days.
+
+**Copper** accumulates in the liver and can cause chronic liver disease. In dogs, copper toxicosis is often related to genetic predisposition (certain breeds like Bedlington Terriers, Labrador Retrievers, and West Highland White Terriers) combined with dietary copper levels. Acute copper poisoning from environmental ingestion is less common.
+
+**A Note About Pennies:** US pennies minted after 1982 are 97.5% zinc with a thin copper coating. A single penny can cause zinc toxicosis in small dogs. Canadian pennies minted 1997-2001 also contain 96% zinc.
+
+**What to Expect at the Veterinarian**
+
+If your pet has swallowed a metallic object, your veterinarian may recommend X-rays to locate it. Depending on the object's location, size, and composition, removal may be needed via endoscopy (a camera and retrieval tool passed through the mouth) or surgery. Chelation therapy (medications that bind to metals and help the body excrete them) may also be required.
+""",
+                onsetTime: OnsetTime(
+                    early: "Hours to days — GI signs (vomiting, diarrhea, loss of appetite) often appear first; zinc toxicosis can cause hemolytic anemia within hours",
+                    delayed: "Days to weeks — Neurological signs (lead), chronic liver disease (copper), or progressive anemia (zinc) may develop with continued exposure"
+                ),
+                symptoms: [
+                    "Vomiting and diarrhea",
+                    "Loss of appetite (anorexia)",
+                    "Lethargy and weakness",
+                    "Abdominal pain or discomfort",
+                    "Pale or yellow gums (anemia or jaundice)",
+                    "Dark or red-brown urine (hemoglobinuria)",
+                    "Seizures or tremors (especially with lead)",
+                    "Behavioral changes (aggression, depression, confusion)",
+                    "Uncoordinated movement (ataxia)",
+                    "Weight loss",
+                    "In birds: regurgitation, wing droop, leg paralysis, head tilt, dark green droppings"
+                ],
+                entrySeverity: nil,
+                speciesRisks: [
+                    SpeciesRisk(
+                        species: .dog,
+                        severity: .high,
+                        notes: "Young dogs (<2 years) most commonly affected. Dogs absorb lead readily regardless of age. Small dogs are at higher risk for zinc toxicosis from pennies because objects may lodge in stomach rather than passing through. Certain breeds (Bedlington Terrier, Labrador Retriever, West Highland White Terrier) have genetic predisposition to copper accumulation."
+                    ),
+                    SpeciesRisk(
+                        species: .cat,
+                        severity: .high,
+                        notes: "Less common due to discriminating eating habits. Often exposed through grooming lead-contaminated dust/paint during home renovation. Vomiting, seizures, and anorexia are common signs. Lead is one of few causes of intermittent seizures in cats."
+                    ),
+                    SpeciesRisk(
+                        species: .bird,
+                        severity: .severe,
+                        notes: "MOST SUSCEPTIBLE SPECIES. Heavy metal toxicosis is the most commonly reported toxic disease in companion birds. Birds chew on cage hardware, toys, and jewelry out of curiosity. 'New wire disease' (chronic zinc toxicosis from galvanized cages) is common but underdiagnosed. Neurological signs may be permanent even after treatment. Use only stainless steel cages and accessories."
+                    ),
+                    SpeciesRisk(
+                        species: .smallMammal,
+                        severity: .high,
+                        notes: "Documented in rabbits, ferrets, and guinea pigs. Rabbits may present with GI stasis (stopped gut movement) rather than obvious toxicity signs—investigate for heavy metal exposure in any rabbit with unexplained GI stasis. Ferrets can develop GI bleeding and kidney injury from zinc."
+                    ),
+                    SpeciesRisk(
+                        species: .reptile,
+                        severity: .moderate,
+                        notes: "Less commonly reported, but zinc toxicosis documented in turtles and crocodilians from coin ingestion. Lead toxicosis documented in red-eared sliders and other species. Note: Snakes naturally have very high blood zinc levels (5-50 times mammalian normal), so blood tests must be interpreted carefully by a veterinarian familiar with reptile medicine."
+                    )
+                ],
+                preventionTips: [
+                    "Keep pennies and small metal objects out of reach of all pets, especially curious chewers",
+                    "For birds: Use ONLY stainless steel cages, food bowls, and toys—avoid galvanized wire entirely",
+                    "Scrub new galvanized wire with vinegar and rinse thoroughly if stainless steel is unavailable",
+                    "During home renovation in pre-1978 buildings, confine pets away from work areas and clean dust thoroughly",
+                    "Store fishing tackle, ammunition, and hobby supplies (stained glass, soldering) securely",
+                    "Do not allow pets to chew on costume jewelry, especially items marketed for children",
+                    "If your pet is diagnosed with lead poisoning, family members (especially children) should also be tested"
+                ],
+                sources: [
+                    "ASPCA Animal Poison Control Center",
+                    "Pet Poison Helpline",
+                    "Merck Veterinary Manual — Lead Poisoning in Animals",
+                    "Merck Veterinary Manual — Zinc Toxicosis in Animals",
+                    "LafeberVet — Heavy Metal Poisoning in Birds",
+                    "Today's Veterinary Practice — Lead and Zinc Toxicity in Birds",
+                    "Cornell University College of Veterinary Medicine — Poisons"
+                ],
+                relatedEntries: [
+                    "3b605ff6-df0c-426f-8687-70226969f7c0",
+                    "a7b8c9d0-1e2f-3a4b-5c6d-7e8f9a0b1c2d",
+                    "a1b2c3d4-5e6f-7a8b-9c0d-1e2f3a4b5c6d",
+                    "b2c3d4e5-6f7a-8b9c-0d1e-2f3a4b5c6d7e"
                 ]
             )
         ]
