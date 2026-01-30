@@ -7523,6 +7523,14 @@ class DatabaseService {
                     "Logen",
                     "Lonox",
 
+                    // Illegal/illicit forms and herbal opioids
+                    "illicit fentanyl",
+                    "street fentanyl",
+                    "fentanyl powder",
+                    "kratom",
+                    "Mitragyna speciosa",
+                    "mitragynine",
+
                     // Common search queries
                     "dog ate Vicodin",
                     "dog ate Percocet",
@@ -7538,7 +7546,7 @@ class DatabaseService {
                 ],
                 categories: [.medications],
                 imageAsset: "opioids_thumb",
-                description: "Opioids are powerful pain-relieving medications that act on opioid receptors in the brain and body. This class includes prescription pain medications (Vicodin, Percocet, OxyContin), fentanyl patches, tramadol, cough suppressants containing codeine or hydrocodone, and anti-diarrheal medications (Imodium, Lomotil). Opioids are rapidly absorbed and can cause life-threatening effects, particularly respiratory depression (slowed breathing). COMBINATION PRODUCTS: Many opioids are combined with acetaminophen (Percocet, Vicodin, Tylenol #3) or ibuprofen (Vicoprofen), which add significant toxicity — especially acetaminophen, which is deadly to cats at very small amounts. FENTANYL PATCHES: Dogs may chew on transdermal fentanyl patches. Even used patches contain substantial residual fentanyl and can cause severe poisoning or death if chewed. MDR1/ABCB1 MUTATION: Collies, Australian Shepherds, Shetland Sheepdogs, and related herding breeds may carry a genetic mutation that prevents them from excluding certain drugs (including loperamide/Imodium) from the brain. These dogs can experience severe, life-threatening neurological toxicity from opioids at much lower doses. SPECIES DIFFERENCES: Cats, horses, cattle, and swine may show CNS EXCITATION rather than depression after opioid exposure.",
+                description: "Opioids are powerful pain-relieving medications that act on opioid receptors in the brain and body. This class includes prescription pain medications (Vicodin, Percocet, OxyContin), fentanyl patches, tramadol, cough suppressants containing codeine or hydrocodone, and anti-diarrheal medications (Imodium, Lomotil). Opioids are rapidly absorbed and can cause life-threatening effects, particularly respiratory depression (slowed breathing). COMBINATION PRODUCTS: Many opioids are combined with acetaminophen (Percocet, Vicodin, Tylenol #3) or ibuprofen (Vicoprofen), which add significant toxicity — especially acetaminophen, which is deadly to cats at very small amounts. FENTANYL PATCHES: Dogs may chew on transdermal fentanyl patches. Even used patches contain substantial residual fentanyl and can cause severe poisoning or death if chewed.\n\n⚠️ ILLICIT FENTANYL: With the ongoing opioid crisis, pets are increasingly exposed to illicit fentanyl in the form of powders, counterfeit pills, or residue on surfaces. Even tiny amounts of illicit fentanyl can be lethal to pets. If you suspect your pet has been exposed to any illicit drug, seek emergency veterinary care immediately and inform the veterinarian of the suspected substance. MDR1/ABCB1 MUTATION: Collies, Australian Shepherds, Shetland Sheepdogs, and related herding breeds may carry a genetic mutation that prevents them from excluding certain drugs (including loperamide/Imodium) from the brain. These dogs can experience severe, life-threatening neurological toxicity from opioids at much lower doses. SPECIES DIFFERENCES: Cats, horses, cattle, and swine may show CNS EXCITATION rather than depression after opioid exposure.\n\n⚠️ KRATOM: Kratom (Mitragyna speciosa) is an herbal substance that acts on opioid receptors and can cause similar toxicity. It is sold as capsules, powders, and teas. Pets exposed to kratom may show sedation, agitation, vomiting, tremors, or seizures.",
                 toxicityInfo: "Opioids produce their effects by binding to mu, kappa, and delta opioid receptors found in the brain, spinal cord, and gastrointestinal tract. This causes pain relief, sedation, respiratory depression, and decreased GI motility. CNS Depression: The primary effect in most dogs is CNS depression — sedation, drowsiness, weakness, and incoordination. In severe cases, animals may become unresponsive or comatose. Respiratory depression (dangerously slow or shallow breathing) is the most life-threatening effect. CNS Excitation (Cats and Other Species): Instead of sedation, cats may show excitement, agitation, restlessness, and hyperactivity. This paradoxical reaction also occurs in horses, cattle, and swine. Pupil Changes: Dogs typically develop pinpoint pupils (miosis), while cats may have dilated pupils. GI Effects: Vomiting commonly occurs shortly after ingestion, followed by constipation (opioids slow gut motility). MDR1/ABCB1 Mutation: Dogs with this genetic mutation (common in Collies and related breeds) cannot effectively pump certain drugs out of the central nervous system. Loperamide (Imodium) is particularly dangerous in these dogs, causing severe neurological depression, ataxia, drooling, blindness, and potentially death at doses that would be safe in other dogs. Serotonin Syndrome (Tramadol): Tramadol inhibits serotonin reuptake in addition to its opioid effects. When combined with other serotonergic drugs (SSRIs, SNRIs, tricyclic antidepressants), it can precipitate serotonin syndrome. Cats Metabolize Slowly: Due to deficient glucuronidation, cats may have prolonged drug effects from some opioids.",
                 onsetTime: OnsetTime(
                     early: "Clinical signs typically begin within 30 minutes to 2 hours of oral ingestion. Transdermal (patch) absorption may take longer initially but can produce effects for days. Loperamide toxicity signs usually appear within 30 minutes to 6 hours.",
@@ -7944,6 +7952,31 @@ class DatabaseService {
                     "Univasc",
                     "imidapril",
 
+                    // ANGIOTENSIN RECEPTOR BLOCKERS (ARBs)
+                    "ARB",
+                    "angiotensin receptor blocker",
+                    // Losartan
+                    "losartan",
+                    "Cozaar",
+                    // Valsartan
+                    "valsartan",
+                    "Diovan",
+                    // Irbesartan
+                    "irbesartan",
+                    "Avapro",
+                    // Olmesartan
+                    "olmesartan",
+                    "Benicar",
+                    // Candesartan
+                    "candesartan",
+                    "Atacand",
+                    // Telmisartan
+                    "telmisartan",
+                    "Micardis",
+                    // Azilsartan
+                    "azilsartan",
+                    "Edarbi",
+
                     // DIGOXIN / CARDIAC GLYCOSIDES
                     "digoxin",
                     "Lanoxin",
@@ -7962,8 +7995,8 @@ class DatabaseService {
                 ],
                 categories: [.medications],
                 imageAsset: "heart_meds_thumb",
-                description: "Heart and blood pressure medications are widely used in both human and veterinary medicine. This category includes calcium channel blockers, beta-blockers, ACE inhibitors, and digoxin (cardiac glycosides). These medications have VERY DIFFERENT safety profiles. DANGEROUS — NARROW MARGIN OF SAFETY: Calcium channel blockers (Norvasc, Cardizem, Procardia) — Even small amounts can cause severe poisoning. Deaths have been reported. Beta-blockers (Atenolol, Metoprolol, Propranolol) — Very narrow margin of safety. Small overdoses can be life-threatening. Digoxin (Lanoxin) — Extremely narrow margin between therapeutic and toxic doses. Cats are MORE SENSITIVE than dogs. MODERATE RISK — WIDER MARGIN OF SAFETY: ACE inhibitors (Lisinopril, Enalapril, Benazepril) — Relatively safer than other cardiac medications. Small ingestions in healthy pets MAY be monitored at home after consulting a veterinarian, but pets with existing kidney or heart disease are at higher risk. IMPORTANT: Many of these medications are used therapeutically in veterinary medicine. Toxicity can occur from pets eating their own prescribed medications (overdose), eating human family members' medications, or exposure to sustained-release formulations.",
-                toxicityInfo: "CALCIUM CHANNEL BLOCKERS: Block calcium entry into heart and blood vessel cells. Overdose causes life-threatening hypotension (low blood pressure), severe bradycardia (slow heart rate), heart failure, and secondary acute kidney injury from poor blood flow. Signs can be DELAYED by many hours, especially with sustained-release formulations. Deaths have been reported to ASPCA APCC. BETA-BLOCKERS: Block effects of adrenaline on the heart. Overdose causes severe bradycardia, hypotension, heart failure, and secondary acute kidney failure. Some beta-blockers can also cause hypoglycemia (low blood sugar), respiratory depression, and seizures. Signs typically appear within 4 hours but can persist 24-48+ hours. ACE INHIBITORS: Block production of angiotensin II, causing blood vessels to relax. Have a WIDER margin of safety than CCBs and beta-blockers. Primary concern is hypotension with reflex tachycardia. Pets with underlying kidney or heart disease are MORE SENSITIVE. Hypotension can occur within hours and persist 12-24 hours. DIGOXIN (Cardiac Glycosides): Increases heart contractility and slows heart rate. Has an EXTREMELY narrow margin of safety — the difference between therapeutic and toxic doses is small. Toxicity can occur from medication overdose OR from eating plants containing cardiac glycosides (foxglove, oleander, lily of the valley). About 25% of dogs on digoxin therapy experience toxicity. CATS ARE MORE SENSITIVE than dogs. Toxicity can resemble worsening heart disease, making it difficult to recognize.",
+                description: "Heart and blood pressure medications are widely used in both human and veterinary medicine. This category includes calcium channel blockers, beta-blockers, ACE inhibitors, and digoxin (cardiac glycosides). These medications have VERY DIFFERENT safety profiles. DANGEROUS — NARROW MARGIN OF SAFETY: Calcium channel blockers (Norvasc, Cardizem, Procardia) — Even small amounts can cause severe poisoning. Deaths have been reported. Beta-blockers (Atenolol, Metoprolol, Propranolol) — Very narrow margin of safety. Small overdoses can be life-threatening. Digoxin (Lanoxin) — Extremely narrow margin between therapeutic and toxic doses. Cats are MORE SENSITIVE than dogs. MODERATE RISK — WIDER MARGIN OF SAFETY: ACE inhibitors (Lisinopril, Enalapril, Benazepril) — Relatively safer than other cardiac medications. Small ingestions in healthy pets MAY be monitored at home after consulting a veterinarian, but pets with existing kidney or heart disease are at higher risk.\n5. ARBs (Angiotensin Receptor Blockers) — Losartan, Valsartan, Irbesartan (similar safety profile to ACE inhibitors)\n\nIMPORTANT: Many of these medications are used therapeutically in veterinary medicine. Toxicity can occur from pets eating their own prescribed medications (overdose), eating human family members' medications, or exposure to sustained-release formulations.",
+                toxicityInfo: "CALCIUM CHANNEL BLOCKERS: Block calcium entry into heart and blood vessel cells. Overdose causes life-threatening hypotension (low blood pressure), severe bradycardia (slow heart rate), heart failure, and secondary acute kidney injury from poor blood flow. Signs can be DELAYED by many hours, especially with sustained-release formulations. Deaths have been reported to ASPCA APCC. BETA-BLOCKERS: Block effects of adrenaline on the heart. Overdose causes severe bradycardia, hypotension, heart failure, and secondary acute kidney failure. Some beta-blockers can also cause hypoglycemia (low blood sugar), respiratory depression, and seizures. Signs typically appear within 4 hours but can persist 24-48+ hours. ACE INHIBITORS: Block production of angiotensin II, causing blood vessels to relax. Have a WIDER margin of safety than CCBs and beta-blockers. Primary concern is hypotension with reflex tachycardia. Pets with underlying kidney or heart disease are MORE SENSITIVE. Hypotension can occur within hours and persist 12-24 hours.\n\nANGIOTENSIN RECEPTOR BLOCKERS (ARBs): Losartan, valsartan, irbesartan, and similar \"-sartan\" drugs block the effects of angiotensin II (rather than blocking its production like ACE inhibitors). ARBs have a similar safety profile to ACE inhibitors — a WIDER margin of safety compared to CCBs and beta-blockers. Primary concern is hypotension. Telmisartan is sometimes used therapeutically in cats for protein-losing kidney disease.\n\nDIGOXIN (Cardiac Glycosides): Increases heart contractility and slows heart rate. Has an EXTREMELY narrow margin of safety — the difference between therapeutic and toxic doses is small. Toxicity can occur from medication overdose OR from eating plants containing cardiac glycosides (foxglove, oleander, lily of the valley). About 25% of dogs on digoxin therapy experience toxicity. CATS ARE MORE SENSITIVE than dogs. Toxicity can resemble worsening heart disease, making it difficult to recognize.",
                 onsetTime: OnsetTime(
                     early: "Varies by medication class: Calcium channel blockers — Signs can appear within 20-45 minutes for immediate-release forms, but may be DELAYED MANY HOURS for sustained-release formulations. Beta-blockers — Signs typically appear within 4 hours of ingestion. ACE inhibitors — Hypotension can occur within a few hours. Digoxin — GI signs (vomiting, loss of appetite) often appear first; cardiac signs may follow.",
                     delayed: "Duration varies significantly: Calcium channel blockers — Effects may persist 24-48+ hours; sustained-release formulations can cause prolonged toxicity. Beta-blockers — Signs can persist 24-48 hours, or longer for extended-release forms. ACE inhibitors — Effects typically last 12-24 hours but can be longer with extended-release. Digoxin — Half-life is 23-39 hours in dogs (extremely variable in cats); effects can be prolonged."
@@ -8137,6 +8170,17 @@ class DatabaseService {
                     "acarbose",
                     "Precose",
 
+                    // SGLT2 INHIBITORS (newer diabetes drugs)
+                    "SGLT2 inhibitor",
+                    "empagliflozin",
+                    "Jardiance",
+                    "dapagliflozin",
+                    "Farxiga",
+                    "canagliflozin",
+                    "Invokana",
+                    "ertugliflozin",
+                    "Steglatro",
+
                     // Common search queries
                     "dog ate insulin",
                     "cat ate insulin",
@@ -8147,7 +8191,7 @@ class DatabaseService {
                 ],
                 categories: [.medications],
                 imageAsset: "diabetes_thumb",
-                description: "Diabetes medications include injectable insulin and oral hypoglycemic agents used to control blood sugar. The primary danger for pets is HYPOGLYCEMIA (dangerously low blood sugar), which can be life-threatening. Insulin and sulfonylurea drugs (glipizide, glyburide) carry the highest risk because they directly lower blood sugar. Metformin works differently and does not typically cause hypoglycemia in overdose. INSULIN CONCENTRATION WARNING: Veterinary insulin (Vetsulin/Caninsulin) is 40 U/mL while human insulin is typically 100 U/mL. Using the wrong syringe type can cause a dangerous dosing error. IMMEDIATE ACTION FOR HYPOGLYCEMIA: If your pet shows signs of hypoglycemia (weakness, wobbling, glassy eyes, seizures, collapse) and is still conscious, apply a small amount of corn syrup (Karo) or honey to the gums while preparing to seek veterinary care. Do NOT attempt this if your pet is unconscious or seizing actively.",
+                description: "Diabetes medications include injectable insulin and oral hypoglycemic agents used to control blood sugar. The primary danger for pets is HYPOGLYCEMIA (dangerously low blood sugar), which can be life-threatening. Insulin and sulfonylurea drugs (glipizide, glyburide) carry the highest risk because they directly lower blood sugar. Metformin works differently and does not typically cause hypoglycemia in overdose. INSULIN CONCENTRATION WARNING: Veterinary insulin (Vetsulin/Caninsulin) is 40 U/mL while human insulin is typically 100 U/mL. Using the wrong syringe type can cause a dangerous dosing error. IMMEDIATE ACTION FOR HYPOGLYCEMIA: If your pet shows signs of hypoglycemia (weakness, wobbling, glassy eyes, seizures, collapse) and is still conscious, apply a small amount of corn syrup (Karo) or honey to the gums while preparing to seek veterinary care. Do NOT attempt this if your pet is unconscious or seizing actively.\n\n**SGLT2 INHIBITORS (Jardiance, Farxiga, Invokana):**\nThese newer diabetes medications work differently — they cause excess glucose to be excreted in the urine. Unlike insulin and sulfonylureas, SGLT2 inhibitors do NOT typically cause hypoglycemia. However, they can cause dehydration, increased urination, and electrolyte imbalances. Contact poison control for guidance on any ingestion.",
                 toxicityInfo: "INSULIN: Insulin promotes cellular uptake of glucose. Overdose or accidental ingestion by non-diabetic pets causes hypoglycemia (low blood sugar), which can rapidly become life-threatening. Signs include weakness, lethargy, wobbling, disorientation, tremors, seizures, and death. Obese diabetic cats are at higher risk for overdose than dogs. SULFONYLUREAS (Glipizide, Glyburide): These medications stimulate the pancreas to release more insulin. They have a NARROW margin of safety. Even small amounts can cause hypoglycemia in pets. Glipizide is sometimes prescribed for diabetic cats but is NOT effective in dogs due to different disease mechanisms — however, it can still cause toxic hypoglycemia if ingested. METFORMIN (Glucophage): Metformin works by reducing glucose production in the liver and improving insulin sensitivity. Unlike insulin and sulfonylureas, metformin does NOT typically cause hypoglycemia in overdose. The primary concerns are gastrointestinal upset (vomiting, diarrhea) and, in very large ingestions, potentially lactic acidosis.",
                 onsetTime: OnsetTime(
                     early: "Hypoglycemia signs typically appear within 30 minutes to 2 hours: weakness, lethargy, wobbling, incoordination, hunger, restlessness, trembling, muscle twitching, glassy eyes. Metformin: GI signs (vomiting, diarrhea) may appear within 1-4 hours.",
@@ -8223,7 +8267,6 @@ class DatabaseService {
                     "Educate all family members about the dangers of diabetes medications for pets"
                 ],
                 sources: [
-                    "VIN (Veterinary Information Network): Insulin — Prescriber Highlights, Adverse Effects, Clinical Pearls",
                     "Veterinary Partner (VIN): Glipizide (Glucotrol)",
                     "ASPCA Animal Poison Control Center: Anti-Diabetic Medication Toxicity",
                     "AAHA Diabetes Management Guidelines for Dogs and Cats (2018)",
@@ -8296,7 +8339,7 @@ class DatabaseService {
                 ],
                 categories: [.medications],
                 imageAsset: "muscle_relaxants_thumb",
-                description: "Muscle relaxants are medications used in humans to treat muscle spasms and spasticity. Several are EXTREMELY DANGEROUS for pets, especially baclofen, which has a very narrow margin of safety — a single dropped tablet can cause serious toxicosis in a small dog, and NO DOSE IS CONSIDERED SAFE FOR CATS. BACLOFEN IS THE MOST DANGEROUS: Signs can appear within MINUTES and effects can persist 72-96+ hours. Development of seizures is associated with worse outcomes. Delay in seeking treatment significantly worsens prognosis. METHOCARBAMOL (Robaxin-V) IS THE SAFEST: It is the only muscle relaxant FDA-approved for veterinary use and has a wider margin of safety. However, extreme overdose can still be dangerous.",
+                description: "Muscle relaxants are medications used in humans to treat muscle spasms and spasticity. Several are EXTREMELY DANGEROUS for pets, especially baclofen, which has a very narrow margin of safety — a single dropped tablet can cause serious toxicosis in a small dog, and NO DOSE IS CONSIDERED SAFE FOR CATS. BACLOFEN IS THE MOST DANGEROUS: Signs can appear within MINUTES and effects can persist 72-96+ hours. Development of seizures is associated with worse outcomes. Delay in seeking treatment significantly worsens prognosis.\n\n**NOTE:** Baclofen is prescribed not only as a muscle relaxant but also increasingly for alcohol use disorder and alcohol withdrawal. This means baclofen may be present in households where you might not expect a \"muscle relaxant.\"\n\nMETHOCARBAMOL (Robaxin-V) IS THE SAFEST: It is the only muscle relaxant FDA-approved for veterinary use and has a wider margin of safety. However, extreme overdose can still be dangerous.",
                 toxicityInfo: "BACLOFEN (Lioresal) — VERY NARROW MARGIN OF SAFETY: A GABA receptor agonist that causes profound CNS depression. NO therapeutic dose is considered safe in cats. Dogs can develop serious toxicosis from a single tablet. Signs appear rapidly (within minutes to hours) and can persist 72-96+ hours. Development of seizures indicates a worse prognosis. Delay in treatment dramatically worsens outcomes. CYCLOBENZAPRINE (Flexeril): Structurally related to tricyclic antidepressants. Causes CNS depression, tachycardia, and can lead to seizures. Effects can be prolonged due to enterohepatic recirculation. CARISOPRODOL (Soma): Metabolized to meprobamate, a sedative. Causes CNS depression progressing to seizures and coma. Effects from the metabolite can be prolonged. TIZANIDINE (Zanaflex): An alpha-2 adrenergic agonist with narrow safety margin in pets. Causes sedation, bradycardia, and hypotension. METHOCARBAMOL (Robaxin-V): The SAFEST muscle relaxant — FDA-approved for dogs, cats, and horses. Used therapeutically to treat muscle spasms from injury, IVDD, and certain poisonings. Has a wider margin of safety, but extreme overdose can still cause respiratory depression.",
                 onsetTime: OnsetTime(
                     early: "BACLOFEN: Signs can appear within MINUTES to a few hours — vocalization (often dramatic), salivation, drooling, vomiting, ataxia (wobbling), weakness. Other muscle relaxants: Signs typically appear within 30 minutes to 2 hours.",
@@ -8372,6 +8415,7 @@ class DatabaseService {
                 ],
                 preventionTips: [
                     "BACLOFEN: Never take this medication when pets are present — a single dropped tablet can cause serious poisoning",
+                    "Be aware that baclofen is also prescribed for alcohol use disorder — not just as a muscle relaxant — so it may be present in unexpected households",
                     "Store ALL muscle relaxants in secure, closed containers completely out of pet reach",
                     "Pick up dropped pills IMMEDIATELY — do not turn away even for a second",
                     "Be aware that many people who take baclofen also take other medications — multiple drug exposure is possible",
@@ -8383,7 +8427,6 @@ class DatabaseService {
                     "Seek veterinary care IMMEDIATELY for any suspected ingestion — delay worsens outcomes"
                 ],
                 sources: [
-                    "VIN (Veterinary Information Network): Baclofen Toxicosis — Definition, Etiology, Pathophysiology, Clinical Signs, Prognosis",
                     "Merck Veterinary Manual: Toxicoses from Skeletal Muscle Relaxants in Animals (2024)",
                     "Merck Veterinary Manual: Skeletal Muscle Relaxants for Animals",
                     "ASPCA Animal Poison Control Center: Tips for Treating Baclofen Poisoning",
@@ -8515,7 +8558,6 @@ class DatabaseService {
                     "Inform your veterinarian if your pet takes other medications that might interact with levothyroxine"
                 ],
                 sources: [
-                    "VIN (Veterinary Information Network): Levothyroxine — Prescriber Highlights, Clinical Pearls, Adverse Effects, Overdosage",
                     "Merck Veterinary Manual: Thyroid Hormones",
                     "Veterinary Partner (VIN): Levothyroxine",
                     "VCA Animal Hospitals: Levothyroxine",
