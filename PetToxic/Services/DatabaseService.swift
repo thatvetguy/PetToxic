@@ -6561,7 +6561,7 @@ class DatabaseService {
                     SpeciesRisk(species: .dog, severity: .high, notes: "Dogs are frequently affected due to their willingness to eat found medications and chewable veterinary NSAIDs; German Shepherds may be more sensitive; GI ulceration typically seen first, followed by kidney injury at higher doses; veterinary chewable NSAIDs (Rimadyl, Deramaxx, Previcox) are common sources because dogs may consume entire bottles"),
                     SpeciesRisk(species: .cat, severity: .severe, notes: "Cats are MUCH more sensitive to NSAIDs than dogs due to deficient liver glucuronidation; severe acute kidney injury can occur at doses that might only cause mild GI upset in dogs; even a single human ibuprofen tablet can be dangerous for a cat; NEVER give human NSAIDs to cats"),
                     SpeciesRisk(species: .smallMammal, severity: .high, notes: "Small mammals including rabbits, ferrets, and guinea pigs are likely sensitive to NSAIDs given their small body size; limited toxicity data available; contact poison control for guidance"),
-                    SpeciesRisk(species: .bird, severity: .high, notes: "Some NSAIDs are highly toxic to birds; limited species-specific data available; contact an avian veterinarian or poison control immediately"),
+                    SpeciesRisk(species: .bird, severity: .high, notes: "Some NSAIDs are highly toxic to birds. Diclofenac caused catastrophic vulture population declines in Asia, and deaths have been documented with ibuprofen, carprofen, and flunixin in raptors, storks, cranes, and owls. Meloxicam appears to be safer for birds when used under veterinary supervision. Contact an avian veterinarian or poison control immediately."),
                     SpeciesRisk(species: .reptile, severity: .moderate, notes: "Some NSAIDs (meloxicam) are used therapeutically in reptiles under veterinary supervision; toxicity from overdose is possible but less documented than in mammals; contact a reptile veterinarian or poison control for guidance")
                 ],
                 preventionTips: [
@@ -6576,7 +6576,7 @@ class DatabaseService {
                     "Do not give NSAIDs with corticosteroids—this dramatically increases ulcer risk",
                     "Inform pet sitters and house guests about medication safety"
                 ],
-                sources: ["VIN Toxicology Resources: NSAID Toxicosis", "ASPCA Animal Poison Control Center: NSAID Statistics and Clinical Data", "Merck Veterinary Manual: NSAID Toxicosis in Animals", "Pet Poison Helpline: Ibuprofen and Naproxen Toxicity", "Veterinary Partner / VCA Hospitals: Ibuprofen Toxicity in Dogs and Cats"],
+                sources: ["ASPCA Animal Poison Control Center: NSAID Statistics and Clinical Data", "Merck Veterinary Manual: NSAID Toxicosis in Animals", "Pet Poison Helpline: Ibuprofen and Naproxen Toxicity", "Veterinary Partner / VCA Hospitals: Ibuprofen Toxicity in Dogs and Cats"],
                 relatedEntries: ["bb223344-5566-7788-99aa-bbccddeeff11", "cc334455-6677-8899-aabb-ccddeeff2233"]
             ),
 
@@ -6703,7 +6703,7 @@ class DatabaseService {
                     SpeciesRisk(species: .dog, severity: .high, notes: "Dogs are more resistant than cats but can still develop serious hepatotoxicity from overdose. Methemoglobinemia and keratoconjunctivitis sicca (dry eye) can also occur at higher doses. While acetaminophen is sometimes used therapeutically in dogs under veterinary supervision, owner-administered doses frequently cause toxicity. Contact poison control for any exposure."),
                     SpeciesRisk(species: .smallMammal, severity: .severe, notes: "Ferrets, rabbits, and other small mammals are likely highly sensitive to acetaminophen given their small body size and potentially limited metabolic capacity. Assume extreme danger. Contact poison control immediately."),
                     SpeciesRisk(species: .bird, severity: .high, notes: "Limited data on avian acetaminophen toxicity. Birds have unique metabolic pathways and should be considered at high risk. Contact an avian veterinarian immediately."),
-                    SpeciesRisk(species: .reptile, severity: .high, notes: "Limited data on reptile acetaminophen toxicity. Given the drug's mammalian toxicity profile and reptiles' unique physiology, assume significant risk. Contact a reptile veterinarian immediately.")
+                    SpeciesRisk(species: .reptile, severity: .severe, notes: "EXTREMELY DANGEROUS. Snakes and many other reptiles lack the liver enzyme (UDP-glucuronosyltransferase) needed to safely metabolize acetaminophen — the same deficiency that makes cats so sensitive. Acetaminophen causes methemoglobinemia in snakes and is so reliably lethal that it is used as a reptile control agent for invasive brown tree snakes in wildlife management programs. Assume any reptile exposure is life-threatening and seek emergency veterinary care immediately.")
                 ],
                 preventionTips: [
                     "NEVER give acetaminophen to cats—there is no safe dose",
@@ -6717,7 +6717,7 @@ class DatabaseService {
                     "If a pet is in pain, contact your veterinarian for species-appropriate pain relief",
                     "Inform pet sitters and house guests about the danger of acetaminophen to pets"
                 ],
-                sources: ["VIN Toxicology Resources: Acetaminophen Toxicosis", "ASPCA Animal Poison Control Center: Acetaminophen Toxicity", "Merck Veterinary Manual: Acetaminophen Toxicosis", "Pet Poison Helpline: Tylenol Toxicity in Cats and Dogs", "Veterinary Partner / VCA Hospitals: Acetaminophen Toxicity"],
+                sources: ["ASPCA Animal Poison Control Center: Acetaminophen Toxicity", "Merck Veterinary Manual: Acetaminophen Toxicosis", "Pet Poison Helpline: Tylenol Toxicity in Cats and Dogs", "Veterinary Partner / VCA Hospitals: Acetaminophen Toxicity"],
                 relatedEntries: ["aa112233-4455-6677-8899-aabbccddeef0", "cc334455-6677-8899-aabb-ccddeeff2233", "ff667788-99aa-bbcc-ddee-ff0011223355", "66dd4455-eeff-0011-2233-445566778899", "ddee1122-ff33-4455-6677-889900aabbcc"]
             ),
 
@@ -6831,7 +6831,6 @@ class DatabaseService {
                     "Inform pet sitters that common human GI remedies (Pepto-Bismol) are not safe for cats"
                 ],
                 sources: [
-                    "VIN Toxicology Resources: Salicylate Toxicosis in Small Animals",
                     "ASPCA Animal Poison Control Center: Aspirin and Salicylate Toxicity",
                     "Merck Veterinary Manual: Aspirin Toxicosis",
                     "Pet Poison Helpline: Aspirin and Oil of Wintergreen Toxicity",
