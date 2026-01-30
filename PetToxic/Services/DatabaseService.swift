@@ -5383,7 +5383,7 @@ class DatabaseService {
                     "Supervise pets around coolers and lunch boxes containing ice packs",
                     "Consider using frozen water bottles as a pet-proof alternative to gel packs"
                 ],
-                sources: ["Veterinary Information Network (VIN)", "ASPCA Animal Poison Control Center", "Pet Poison Helpline"],
+                sources: ["ASPCA Animal Poison Control Center", "Pet Poison Helpline", "PetMD"],
                 relatedEntries: nil
             ),
 
@@ -5439,7 +5439,7 @@ class DatabaseService {
                     "Be especially careful with spray sunscreens around pets to avoid inhalation",
                     "If using sunscreen on pets (as sometimes recommended for hairless or light-skinned dogs), use only pet-safe products approved by your veterinarian"
                 ],
-                sources: ["Veterinary Information Network (VIN)", "ASPCA Animal Poison Control Center", "Pet Poison Helpline"],
+                sources: ["ASPCA Animal Poison Control Center", "Pet Poison Helpline", "Veterinary Partner"],
                 relatedEntries: ["a7b8c9d0-1e2f-3a4b-5c6d-7e8f9a0b1c2d"]
             ),
 
@@ -5553,8 +5553,8 @@ class DatabaseService {
                     "Be especially careful with nail glue and eyelash glue, which are often left on countertops",
                     "Know the difference: superglue (cyanoacrylate) is low toxicity; expanding glues like Gorilla Glue Original are dangerous and require emergency care"
                 ],
-                sources: ["Veterinary Information Network (VIN)", "ASPCA Animal Poison Control Center", "Pet Poison Helpline"],
-                relatedEntries: ["d8c34930-fe78-414c-a182-49521dbfc266"]
+                sources: ["ASPCA Animal Poison Control Center", "Pet Poison Helpline", "Animal Poisons Helpline (Australia)"],
+                relatedEntries: nil
             ),
 
             // MARK: - Essential Oils (Tea Tree, Pennyroyal, Eucalyptus & Others)
