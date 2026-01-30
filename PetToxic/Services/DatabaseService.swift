@@ -8710,7 +8710,6 @@ class DatabaseService {
                     "Pick up dropped pills immediately — many dogs will eat anything"
                 ],
                 sources: [
-                    "VIN (Veterinary Information Network): Decongestant Toxicity",
                     "ASPCA Animal Poison Control Center: Pseudoephedrine Toxicity in Pets",
                     "Merck Veterinary Manual: Toxicoses in Animals from Human Cold and Allergy Medications (2025)",
                     "dvm360: Toxicology Brief — Phenylephrine Ingestion in Dogs (Wegenast, 2012)",
@@ -9062,7 +9061,7 @@ class DatabaseService {
                     SpeciesRisk(
                         species: .dog,
                         severity: .high,
-                        notes: "PPA is commonly prescribed for dogs with urinary incontinence — toxicosis occurs with overdose or in sensitive individuals. Some dogs may show signs even at therapeutic doses. Older dogs and those with pre-existing heart disease, hypertension, kidney disease, or diabetes may be more sensitive. The CHEWABLE TABLETS are palatable — dogs have consumed entire bottles by chewing through vials. With appropriate treatment, prognosis is generally good, but severe cases can be life-threatening."
+                        notes: "PPA is commonly prescribed for dogs with urinary incontinence — toxicosis occurs with overdose or in sensitive individuals. Some dogs may show signs even at therapeutic doses. Older dogs and those with pre-existing heart disease, hypertension, kidney disease, or diabetes may be more sensitive. The CHEWABLE TABLETS are palatable — dogs have consumed entire bottles by chewing through vials. Severe cases can be life-threatening and require immediate veterinary intervention."
                     ),
                     SpeciesRisk(
                         species: .cat,
@@ -9098,7 +9097,6 @@ class DatabaseService {
                     "Blood pressure should be monitored regularly in dogs on long-term PPA therapy"
                 ],
                 sources: [
-                    "VIN (Veterinary Information Network): Phenylpropanolamine Toxicosis",
                     "ASPCA Animal Poison Control Center: PPA Toxicity Database (823 cases, 2003-2011)",
                     "Ginn JA, et al. 'Phenylpropanolamine toxicosis in dogs: 170 cases (2004-2009).' JAVMA. 2011",
                     "dvm360: 'Toxicology Brief: Phenylpropanolamine toxicosis in dogs and cats'",
@@ -9552,6 +9550,16 @@ class DatabaseService {
                         species: .smallMammal,
                         severity: .moderate,
                         notes: "Limited data available for small mammals. Ferrets have been reported with signs following topical estrogen exposure. Contact an exotic animal veterinarian if exposure occurs."
+                    ),
+                    SpeciesRisk(
+                        species: .bird,
+                        severity: .high,
+                        notes: "Birds are MORE SENSITIVE to estrogen than mammals. Even relatively low doses of estrogen can cause bone marrow suppression in birds, which may progress to fatal aplastic anemia. Any estrogen exposure in a bird should be evaluated by an avian veterinarian immediately. Do not wait for symptoms to develop."
+                    ),
+                    SpeciesRisk(
+                        species: .reptile,
+                        severity: .low,
+                        notes: "Very limited data available on estrogen toxicity in reptiles. Contact an exotic animal veterinarian if estrogen exposure occurs."
                     )
                 ],
                 preventionTips: [
@@ -9566,7 +9574,6 @@ class DatabaseService {
                     "Know the signs of estrogen toxicity: vulvar swelling, hair loss, and mammary changes (feminization); lethargy, pale gums, bruising, and bleeding (bone marrow suppression)"
                 ],
                 sources: [
-                    "VIN (Veterinary Information Network): Estrogen Toxicosis",
                     "PMC/Can Vet J: 'Estrogen-induced myelotoxicity in dogs: A review'",
                     "Merck Veterinary Manual: Pharmacotherapeutics in Urinary Incontinence in Dogs and Cats",
                     "PetMD: Diethylstilbestrol for Dogs; Hormone Replacement Product Poisoning in Dogs",
