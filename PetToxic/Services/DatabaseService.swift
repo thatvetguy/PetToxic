@@ -5502,7 +5502,7 @@ class DatabaseService {
 
             // MARK: - Superglue
             ToxicItem(
-                id: UUID(uuidString: "f2a3b4c5-6d7e-8f9a-0b1c-2d3e4f5a6b7c")!,
+                id: UUID(uuidString: "00112233-4455-6677-8899-aabbccddef25")!,
                 name: "Superglue",
                 alternateNames: [
                     "Super glue",
