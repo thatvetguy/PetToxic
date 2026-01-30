@@ -7000,12 +7000,12 @@ class DatabaseService {
                     SpeciesRisk(
                         species: .dog,
                         severity: .high,
-                        notes: "Dogs commonly develop serotonin syndrome from antidepressant ingestion. Signs typically begin within 1-2 hours. Fluoxetine (Reconcile®) and clomipramine (Clomicalm®) are prescribed for behavioral issues — be aware if your dog is already on these medications. With treatment, prognosis is generally excellent."
+                        notes: "Dogs commonly develop serotonin syndrome from antidepressant ingestion. Signs typically begin within 1-2 hours. Fluoxetine (Reconcile) and clomipramine (Clomicalm) are prescribed for behavioral issues — be aware if your dog is already on these medications, as additional serotonergic exposure increases risk."
                     ),
                     SpeciesRisk(
                         species: .cat,
                         severity: .high,
-                        notes: "Cats can develop serotonin syndrome, often from prescribed medications like mirtazapine (appetite stimulant) or trazodone (anxiety). Dosing errors and accidental overdoses are common causes in cats. Venlafaxine and fluoxetine exposures are frequently reported. With treatment, prognosis is generally good with recovery in 12-48 hours."
+                        notes: "Cats can develop serotonin syndrome, often from prescribed medications like mirtazapine (appetite stimulant) or trazodone (anxiety). Dosing errors and accidental overdoses are common causes. Cats appear to preferentially ingest venlafaxine (Effexor) capsules. If your cat is already on a serotonergic medication, any additional exposure requires immediate veterinary evaluation."
                     ),
                     SpeciesRisk(
                         species: .smallMammal,
@@ -7036,7 +7036,6 @@ class DatabaseService {
                     "Guests and pet sitters should be warned to keep their medications secured"
                 ],
                 sources: [
-                    "VIN Toxicology Resources: Serotonin Syndrome (Canine and Feline)",
                     "ASPCA Animal Poison Control Center: Antidepressant Toxicity Data",
                     "Merck Veterinary Manual: Serotonin Syndrome in Animals",
                     "Pet Poison Helpline: SSRI and SNRI Toxicity in Dogs and Cats"
@@ -7220,7 +7219,6 @@ class DatabaseService {
                     "Do not abruptly stop benzodiazepines in pets receiving chronic therapy — withdrawal can cause seizures"
                 ],
                 sources: [
-                    "VIN (Veterinary Information Network): Benzodiazepine Class Monograph",
                     "Merck Veterinary Manual: Toxicoses from Antidepressants, Anxiolytics, and Sleep Aids",
                     "Pet Poison Helpline: Benzodiazepines Toxicity",
                     "ASPCA Animal Poison Control Center: Human Prescription Medications",
@@ -7363,7 +7361,7 @@ class DatabaseService {
                     SpeciesRisk(
                         species: .dog,
                         severity: .moderate,
-                        notes: "Dogs frequently develop paradoxical CNS stimulation (40-50%) rather than sedation — agitation, hyperactivity, aggression, and tremors may occur instead of drowsiness. Healthy, non-geriatric adults are most prone to this reaction. Prognosis is generally excellent with appropriate supportive care. CRITICAL: If the product contains acetaminophen (Tylenol PM) or ibuprofen (Advil PM), the risk is significantly higher."
+                        notes: "Dogs frequently develop paradoxical CNS stimulation (40-50%) rather than sedation — agitation, hyperactivity, aggression, and tremors may occur instead of drowsiness. Healthy, non-geriatric adults are most prone to this reaction. CRITICAL: If the product contains acetaminophen (Tylenol PM) or ibuprofen (Advil PM), the risk is significantly higher — identify the exact product immediately."
                     ),
                     SpeciesRisk(
                         species: .cat,
@@ -7399,7 +7397,6 @@ class DatabaseService {
                     "Consider that some melatonin products contain xylitol, which is toxic to dogs"
                 ],
                 sources: [
-                    "VIN (Veterinary Information Network): Sleep Aid Toxicosis",
                     "Pet Poison Helpline: Sleep Aids Toxicity",
                     "Merck Veterinary Manual: Toxicoses from Antidepressants, Anxiolytics, and Sleep Aids",
                     "ASPCA Animal Poison Control Center: Sleep Aids Safety",
