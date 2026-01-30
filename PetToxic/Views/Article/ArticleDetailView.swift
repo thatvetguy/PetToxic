@@ -22,14 +22,14 @@ struct ArticleDetailView: View {
 
                 // Description
                 section(title: "What is it?") {
-                    Text(formatSectionText(item.description))
+                    MarkdownText(content: item.description)
                         .font(.body)
                         .lineSpacing(4)
                 }
 
                 // Toxicity info
                 section(title: "Why is it toxic?") {
-                    Text(formatSectionText(item.toxicityInfo))
+                    MarkdownText(content: item.toxicityInfo)
                         .font(.body)
                         .lineSpacing(4)
                 }
@@ -126,7 +126,7 @@ struct ArticleDetailView: View {
                         Text("Early signs")
                             .font(.headline)
                             .foregroundStyle(Color("AccentColor"))
-                        Text(early)
+                        MarkdownText(content: early)
                             .font(.body)
                     }
                 }
@@ -136,7 +136,7 @@ struct ArticleDetailView: View {
                         Text("Delayed signs")
                             .font(.headline)
                             .foregroundStyle(.orange)
-                        Text(delayed)
+                        MarkdownText(content: delayed)
                             .font(.body)
                     }
                 }
@@ -160,7 +160,7 @@ struct ArticleDetailView: View {
                         Image(systemName: "checkmark.shield.fill")
                             .foregroundStyle(.green)
                             .frame(width: 20)
-                        Text(tip)
+                        MarkdownText(content: tip)
                             .font(.body)
                     }
                 }
@@ -332,57 +332,6 @@ struct ArticleDetailView: View {
         return text
     }
 
-    /// Formats text by detecting "ALL CAPS:" patterns and making them bold with paragraph breaks
-    private func formatSectionText(_ text: String) -> AttributedString {
-        // Pattern: 2+ capital letters (with optional spaces between words), followed by colon
-        // Examples: "DRY BITES:", "SPECIES TOXICITY:", "WARNING:", "NOTE:"
-        let pattern = #"[A-Z]{2,}(?:\s+[A-Z]+)*:"#
-
-        guard let regex = try? NSRegularExpression(pattern: pattern, options: []) else {
-            return AttributedString(text)
-        }
-
-        let nsRange = NSRange(text.startIndex..., in: text)
-        let matches = regex.matches(in: text, options: [], range: nsRange)
-
-        // If no matches, return plain text
-        guard !matches.isEmpty else {
-            return AttributedString(text)
-        }
-
-        var result = AttributedString()
-        var currentIndex = text.startIndex
-
-        for match in matches {
-            guard let matchRange = Range(match.range, in: text) else { continue }
-
-            // Add text before the match
-            if currentIndex < matchRange.lowerBound {
-                let precedingText = String(text[currentIndex..<matchRange.lowerBound])
-                result += AttributedString(precedingText)
-            }
-
-            // Add paragraph break before header (if not at the very start of the text)
-            if matchRange.lowerBound != text.startIndex {
-                result += AttributedString("\n\n")
-            }
-
-            // Add the bold header
-            var headerAttr = AttributedString(String(text[matchRange]))
-            headerAttr.font = .body.bold()
-            result += headerAttr
-
-            currentIndex = matchRange.upperBound
-        }
-
-        // Add remaining text after last match
-        if currentIndex < text.endIndex {
-            let remainingText = String(text[currentIndex...])
-            result += AttributedString(remainingText)
-        }
-
-        return result
-    }
 }
 
 #Preview {

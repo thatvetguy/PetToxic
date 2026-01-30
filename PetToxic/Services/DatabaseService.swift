@@ -5058,7 +5058,7 @@ class DatabaseService {
                     "Wire chewing",
                     "Cord chewing"
                 ],
-                categories: [.householdItems],
+                categories: [.householdItems, .informational],
                 imageAsset: "electrical_cords_thumb",
                 description: "Electrical cord injuries occur when pets—most commonly puppies and kittens—chew on live electrical cords. This is the most common type of electrical injury in companion animals. When a pet bites through the protective covering of an energized wire, electrical current passes through their body, causing burns at the contact point (usually the mouth) and potentially affecting the heart, lungs, and nervous system. While oral burns are the most visible injury, the most serious complication is non-cardiogenic pulmonary edema (fluid in the lungs), which can be life-threatening and may not develop until hours after the incident.",
                 toxicityInfo: "Electrical injury severity depends on the voltage, current type, duration of contact, and path through the body. Standard household current in the US is 110-120 volts (low voltage), which typically causes localized thermal burns where the electricity enters the body—usually the lips, tongue, gums, and palate. The current can also disrupt the heart's electrical activity, causing arrhythmias or cardiac arrest, and stimulate the nervous system in ways that lead to non-cardiogenic pulmonary edema (NCPE). NCPE occurs when the electrical shock triggers a massive sympathetic nervous system response, causing fluid to leak into the lungs. This is the most common life-threatening complication and may develop 12-36 hours after the incident—even in pets that initially appear fine. High-voltage electrocution (>1000 volts) from sources like power lines is usually immediately fatal.",
@@ -5082,7 +5082,7 @@ class DatabaseService {
                     "Seizures",
                     "Sudden death (severe cases)"
                 ],
-                entrySeverity: .high,
+                entrySeverity: nil,
                 speciesRisks: [
                     SpeciesRisk(species: .dog, severity: .high, notes: "Puppies are most commonly affected due to chewing behavior; oral burns common; pulmonary edema is the main life-threatening risk"),
                     SpeciesRisk(species: .cat, severity: .high, notes: "Kittens and young cats are most at risk; same concerns as dogs—oral burns and delayed pulmonary edema"),
@@ -5330,7 +5330,7 @@ class DatabaseService {
                     "Keep reed diffusers out of reach—cats may knock them over and walk through the spilled oil"
                 ],
                 sources: ["Veterinary Information Network (VIN)", "ASPCA Animal Poison Control Center", "Pet Poison Helpline", "Merck Veterinary Manual"],
-                relatedEntries: ["11223344-5566-7788-99aa-bbccddeeff00", "88990011-aabb-ccdd-eeff-223344556677"]
+                relatedEntries: ["11223344-5566-7788-99aa-bbccddeeff00", "88990011-aabb-ccdd-eeff-223344556677", "00112233-4455-6677-8899-aabbccddef24"]
             ),
 
             // MARK: - Ice Packs
@@ -5461,7 +5461,7 @@ class DatabaseService {
                     "Magnetic jewelry",
                     "Magnetic clasps"
                 ],
-                categories: [.householdItems],
+                categories: [.householdItems, .informational],
                 imageAsset: "magnets_thumb",
                 description: "Magnet ingestion is a physical hazard rather than a toxicity concern. A single magnet that is swallowed will often pass through the GI tract without incident. However, ingestion of multiple magnets—or a magnet plus a metallic object—creates a serious and potentially life-threatening situation. If two or more magnets are in different loops of intestine, they can attract each other through the intestinal walls, trapping tissue between them. This causes pressure necrosis, leading to tissue death, perforation, and potentially fatal peritonitis. Small, powerful rare earth magnets (neodymium) found in toys, jewelry, and household items are particularly dangerous because of their strong attractive force.",
                 toxicityInfo: "Magnets do not cause chemical toxicity—the danger is purely mechanical. When multiple magnets (or a magnet and a metal object) are swallowed, they may attract each other while in different sections of the intestine. The tissue caught between them undergoes pressure necrosis, which can lead to perforation within hours to days. This is a surgical emergency. A single magnet is much less concerning and will often pass on its own, though monitoring (and sometimes induced vomiting if recent and the magnet is still in the stomach) is recommended. The strength of rare earth magnets makes them especially hazardous—even small magnets can exert enough force to cause tissue damage. X-rays cannot always distinguish between a single magnet and multiple stacked magnets, so the history of how many magnets are missing is critically important.",
@@ -5480,7 +5480,7 @@ class DatabaseService {
                     "Signs of shock (pale gums, rapid heart rate, weakness)",
                     "Single magnet ingestion may cause no symptoms"
                 ],
-                entrySeverity: .high,
+                entrySeverity: nil,
                 speciesRisks: [
                     SpeciesRisk(species: .dog, severity: .high, notes: "High risk if MULTIPLE magnets ingested; single magnet often passes without issue; small dogs at higher risk for obstruction"),
                     SpeciesRisk(species: .cat, severity: .high, notes: "Same risk as dogs; less likely to ingest magnets but serious if multiple are swallowed"),
@@ -5744,7 +5744,8 @@ class DatabaseService {
                 ],
                 relatedEntries: [
                     "cc334455-6677-8899-aabb-ccddeeff2233",
-                    "e1f2a3b4-5c6d-7e8f-9a0b-1c2d3e4f5a6b"
+                    "e1f2a3b4-5c6d-7e8f-9a0b-1c2d3e4f5a6b",
+                    "00112233-4455-6677-8899-aabbccddef24"
                 ]
             ),
 
@@ -5812,7 +5813,7 @@ class DatabaseService {
                     "ASPCA Animal Poison Control Center",
                     "Merck Veterinary Manual"
                 ],
-                relatedEntries: nil
+                relatedEntries: ["00112233-4455-6677-8899-aabbccddef24"]
             ),
 
             // MARK: - Soaps & Mild Detergents
@@ -12111,6 +12112,151 @@ Narrower intestines make obstruction more likely even with smaller items.
                     "PetMD"
                 ],
                 relatedEntries: nil
+            ),
+
+            // MARK: - Inhalant Toxicity (Birds & Respiratory Hazards)
+            ToxicItem(
+                id: UUID(uuidString: "00112233-4455-6677-8899-aabbccddef24")!,
+                name: "Inhalant Toxicity (Birds & Respiratory Hazards)",
+                alternateNames: [
+                    "inhalant toxicity birds",
+                    "avian respiratory hazards",
+                    "toxic fumes birds",
+                    "bird respiratory sensitivity",
+                    "air sac system birds",
+                    "bird lung sensitivity",
+                    "aerosol spray toxic birds",
+                    "scented candle birds",
+                    "air freshener birds",
+                    "smoke inhalation birds",
+                    "cigarette smoke birds",
+                    "cooking fumes birds",
+                    "carbon monoxide pets",
+                    "CO poisoning pets",
+                    "polymer fume fever",
+                    "inhalation hazards",
+                    "airborne toxins",
+                    "fumes dangerous birds",
+                    "bird safe home",
+                    "respiratory toxicosis avian"
+                ],
+                categories: [.informational, .householdItems],
+                imageAsset: "inhalant_toxicity_thumb",
+                description: """
+Inhalant toxicity refers to poisoning from breathing airborne fumes, gases, particles, or aerosolized chemicals. While all pets can be affected by inhaled toxins, **birds are extraordinarily vulnerable** due to their unique and highly efficient respiratory system.
+
+**WHY BIRDS ARE SO SENSITIVE**
+
+Unlike mammals, birds have a respiratory system designed for the extreme oxygen demands of flight. Their lungs are connected to a series of air sacs (usually 9) distributed throughout their body. This system creates continuous, one-directional airflow — fresh air passes through the lungs on both inhalation AND exhalation. While this makes birds incredibly efficient at extracting oxygen, it also means they absorb airborne toxins far more rapidly and completely than mammals. A bird's respiratory system comprises about 20% of its body volume (compared to only 5% in mammals), and they breathe much faster — a canary takes 60-100 breaths per minute compared to 12-16 in humans. The result: what seems like a faint smell to us can deliver a massive toxic dose to a bird.
+
+**COMMON INHALANT HAZARDS**
+
+Kitchen hazards are among the most dangerous. PTFE-coated (Teflon, non-stick) cookware releases invisible, odorless fumes when overheated that can kill birds within minutes. Self-cleaning oven cycles produce similar deadly fumes. Even cooking smoke, burned food, and overheated cooking oils pose risks.
+
+Household products including aerosol sprays (air fresheners, hairspray, cleaning products), scented candles, plug-in air fresheners, incense, and essential oil diffusers release volatile organic compounds that irritate or damage avian respiratory tissue. Strong cleaning products (ammonia, bleach) and paint fumes are also hazardous.
+
+Smoke from cigarettes, fireplaces, cooking, or wildfires is dangerous to all birds. New carpet and furniture can release formaldehyde and other chemicals (off-gassing) that affect sensitive species.
+
+**CARBON MONOXIDE — A DANGER TO ALL SPECIES**
+
+Carbon monoxide (CO) deserves special mention as an inhalant hazard affecting all pets, not just birds. This colorless, odorless gas binds to hemoglobin over 200 times more readily than oxygen, preventing red blood cells from carrying oxygen to tissues. Sources include vehicle exhaust, malfunctioning furnaces, water heaters, fireplaces, and generators. While birds show symptoms at lower concentrations due to their respiratory efficiency, dogs and cats are also at significant risk — pets may show signs before humans because they're smaller and often spend more time indoors.
+
+**Delayed neurological effects** are a particularly concerning aspect of CO poisoning that is well-documented in human medicine and likely occurs in animals as well. Even after apparent recovery from acute exposure, damage may continue. Carbon monoxide can cause changes to myelin (the protective coating around nerve fibers), triggering an immune response that attacks the brain's own tissue. In laboratory studies, animals exposed to non-lethal CO levels showed significant learning and memory impairment a month after exposure. In humans, this manifests as loss of "executive functions" — difficulty with complex thinking, problem-solving, and multitasking — along with potential permanent hearing loss. Affected individuals may appear tired or normal to others, but internally experience thoughts that feel slow, simple, or superficial. Similar effects likely occur in dogs and cats, though they may be difficult for owners to recognize.
+""",
+                toxicityInfo: """
+**MECHANISM OF INJURY**
+
+Inhaled toxins damage avian respiratory tissue through several mechanisms: irritation and inflammation of the delicate air sacs and parabronchi (lung tubules), direct chemical burns to respiratory epithelium, hemorrhage and fluid accumulation in the lungs (pulmonary edema), and interference with oxygen exchange. Birds may die before showing any warning signs because toxin absorption is so rapid.
+
+**SIGNS OF INHALANT EXPOSURE IN BIRDS**
+
+Signs may include tail bobbing (indicating respiratory effort), open-mouth breathing, wheezing or clicking sounds, fluffed feathers and lethargy, loss of balance or falling from perch, and sudden death with no prior symptoms.
+
+**SIGNS OF CARBON MONOXIDE POISONING (ALL SPECIES)**
+
+Acute signs include weakness, lethargy, vomiting, difficulty breathing, disorientation, bright red or cherry-colored gums, collapse, and seizures. However, owners should be aware that **neurological problems may develop days to weeks after exposure**, even if the pet initially seemed to recover. Watch for changes in behavior, difficulty learning or responding to commands, confusion, or hearing problems. These delayed effects can sometimes be permanent. Any pet exposed to carbon monoxide should receive veterinary evaluation and monitoring — don't assume recovery from initial symptoms means complete recovery.
+
+**A WORD ON THE KITCHEN**
+
+Many bird owners don't realize the kitchen poses multiple simultaneous risks. A bird owner cooking with non-stick cookware faces the dual hazard of PTFE fumes AND potentially toxic food (like onions) being prepared — the Teflon pan itself may be more dangerous than the food inside it.
+""",
+                onsetTime: OnsetTime(
+                    early: "PTFE and some inhalants: Minutes — birds may die before symptoms appear",
+                    delayed: "Carbon monoxide neurological effects: Days to weeks after apparent recovery"
+                ),
+                symptoms: [
+                    "Tail bobbing (birds — indicates respiratory effort)",
+                    "Open-mouth breathing",
+                    "Wheezing or clicking sounds",
+                    "Fluffed feathers and lethargy (birds)",
+                    "Loss of balance or falling from perch (birds)",
+                    "Sudden death with no prior symptoms",
+                    "Weakness and lethargy (all species)",
+                    "Vomiting",
+                    "Difficulty breathing",
+                    "Disorientation or confusion",
+                    "Bright red or cherry-colored gums (CO poisoning)",
+                    "Collapse",
+                    "Seizures",
+                    "Delayed behavior changes (days to weeks after CO exposure)",
+                    "Hearing problems (delayed CO effect)"
+                ],
+                entrySeverity: nil,
+                speciesRisks: [
+                    SpeciesRisk(
+                        species: .dog,
+                        severity: .high,
+                        notes: "Vulnerable to carbon monoxide and smoke inhalation. May show CO poisoning symptoms before humans due to smaller size and time spent indoors. Watch for delayed neurological effects after any CO exposure — behavior changes, confusion, or hearing problems may develop weeks later."
+                    ),
+                    SpeciesRisk(
+                        species: .cat,
+                        severity: .high,
+                        notes: "Similar vulnerability to dogs for carbon monoxide and smoke. Cats may be more sensitive to certain aerosolized essential oils due to their unique liver metabolism. Monitor closely for delayed neurological effects after any CO exposure."
+                    ),
+                    SpeciesRisk(
+                        species: .bird,
+                        severity: .severe,
+                        notes: "Extremely vulnerable to virtually ALL inhalant hazards. Highly efficient air sac respiratory system absorbs toxins rapidly — PTFE fumes can kill within minutes. Even scented candles, aerosol sprays, and essential oil diffusers pose risk. If you can smell it, your bird is breathing it — and absorbing it far more efficiently than you."
+                    ),
+                    SpeciesRisk(
+                        species: .smallMammal,
+                        severity: .high,
+                        notes: "Rabbits, guinea pigs, and small rodents are at significant risk from carbon monoxide and smoke due to smaller body size and higher metabolic rates. House in well-ventilated areas away from kitchens and potential fume sources. Monitor for delayed neurological effects after any CO exposure."
+                    ),
+                    SpeciesRisk(
+                        species: .reptile,
+                        severity: .moderate,
+                        notes: "Limited research exists on reptile-specific inhalant sensitivity. Lower metabolic rate and slower respiration provides some protection compared to birds and mammals. However, reptiles still use hemoglobin and ARE vulnerable to carbon monoxide poisoning, smoke inhalation, and prolonged exposure to strong chemical fumes. Keep enclosures well-ventilated and away from recently cleaned areas (wait 24+ hours after using bleach or strong disinfectants)."
+                    )
+                ],
+                preventionTips: [
+                    "Never use PTFE-coated (non-stick) cookware in homes with birds — consider ceramic or stainless steel alternatives",
+                    "Keep birds out of kitchens entirely when possible",
+                    "Do not use self-cleaning oven functions with birds in the home",
+                    "Avoid aerosol sprays, plug-in air fresheners, and scented candles near birds",
+                    "Do not burn incense or use essential oil diffusers in rooms accessible to birds",
+                    "Never smoke indoors with any pets",
+                    "Install carbon monoxide detectors on every floor of your home",
+                    "Ensure all fuel-burning appliances (furnaces, water heaters) are properly maintained and ventilated",
+                    "Never run vehicles or generators in enclosed spaces where pets are present",
+                    "Allow new carpets, paint, and furniture to off-gas in well-ventilated areas before exposing birds",
+                    "If your pet has been exposed to carbon monoxide, seek veterinary care even if they seem to recover — delayed neurological effects can develop weeks later",
+                    "Remember: if you can smell it, your bird is breathing it — and absorbing it much more efficiently than you"
+                ],
+                sources: [
+                    "ASPCA Animal Poison Control Center — Protecting Your Pets from Carbon Monoxide Poisoning",
+                    "ASPCApro — The Antidote to Carbon Monoxide Poisoning (veterinary guidance)",
+                    "Pet Poison Helpline — Carbon Monoxide Toxicity",
+                    "VCA Animal Hospitals — Teflon (PTFE) Poisoning in Birds",
+                    "Cornell University College of Veterinary Medicine — PTFE Toxicosis in Ducks",
+                    "BC SPCA — Safety Alert: The Dangers of Essential Oils and Pets",
+                    "CO Headquarters (coheadquarters.com) — Delayed Neurological Effects of Carbon Monoxide Poisoning (human medicine, applicable to mammals)"
+                ],
+                relatedEntries: [
+                    "00112233-4455-6677-8899-aabbccddef22",
+                    "eeff2233-4455-6677-8899-aabbccddeeff",
+                    "b8c9d0e1-2f3a-4b5c-6d7e-8f9a0b1c2d3e"
+                ]
             )
         ]
     }

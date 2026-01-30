@@ -29,7 +29,7 @@ struct SeveritySection: View {
                     .clipShape(RoundedRectangle(cornerRadius: 8))
 
                     if let notes = risk.notes, !notes.isEmpty {
-                        Text(notes)
+                        MarkdownText(content: notes)
                             .font(.callout)
                             .foregroundStyle(.primary)
                             .padding(.horizontal)

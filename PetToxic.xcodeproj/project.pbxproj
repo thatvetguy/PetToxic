@@ -65,6 +65,7 @@
 		F31D053BA08F486404401C7A /* DisclaimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA5A3886892E1B5E6CAF9D5F /* DisclaimerView.swift */; };
 		FA855506E3D8A1DB2CC6BA80 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4AF21A98F3346F34930A106 /* LoadingView.swift */; };
 		HOMESEC001CCCC1111111111 /* MyPetsHomeSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = HOMESEC002CCCC2222222222 /* MyPetsHomeSection.swift */; };
+		MKDWN001FFFF1111111111111 /* MarkdownText.swift in Sources */ = {isa = PBXBuildFile; fileRef = MKDWN002FFFF2222222222222 /* MarkdownText.swift */; };
 		PHOTO001BBBB1111111111111 /* PetPhotoService.swift in Sources */ = {isa = PBXBuildFile; fileRef = PHOTO002BBBB2222222222222 /* PetPhotoService.swift */; };
 		PHOTO003BBBB3333333333333 /* PetAvatarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = PHOTO004BBBB4444444444444 /* PetAvatarView.swift */; };
 		PHOTO005BBBB5555555555555 /* PetPhotoPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = PHOTO006BBBB6666666666666 /* PetPhotoPickerView.swift */; };
@@ -151,6 +152,7 @@
 		F95CC1681EAFCAC224A491ED /* AppBackground.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AppBackground.swift; sourceTree = "<group>"; };
 		FF6C448365FCE3CCE08553DE /* HomeHeader.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = HomeHeader.swift; sourceTree = "<group>"; };
 		HOMESEC002CCCC2222222222 /* MyPetsHomeSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPetsHomeSection.swift; sourceTree = "<group>"; };
+		MKDWN002FFFF2222222222222 /* MarkdownText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarkdownText.swift; sourceTree = "<group>"; };
 		PHOTO002BBBB2222222222222 /* PetPhotoService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetPhotoService.swift; sourceTree = "<group>"; };
 		PHOTO004BBBB4444444444444 /* PetAvatarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetAvatarView.swift; sourceTree = "<group>"; };
 		PHOTO006BBBB6666666666666 /* PetPhotoPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetPhotoPickerView.swift; sourceTree = "<group>"; };
@@ -216,6 +218,7 @@
 				24B2882F5F5387A02F14DC1B /* EmptyStateView.swift */,
 				FF6C448365FCE3CCE08553DE /* HomeHeader.swift */,
 				F4AF21A98F3346F34930A106 /* LoadingView.swift */,
+				MKDWN002FFFF2222222222222 /* MarkdownText.swift */,
 				2E15382E138BA940EDEC2577 /* MyPetsPlaceholder.swift */,
 				PHOTO004BBBB4444444444444 /* PetAvatarView.swift */,
 				207482A283C5391FDFEFAFC1 /* PoisonControlButton.swift */,
@@ -526,6 +529,7 @@
 				ECDBACA38D7B65E4448BB719 /* HistoryListView.swift in Sources */,
 				FA855506E3D8A1DB2CC6BA80 /* LoadingView.swift in Sources */,
 				4646AE231055E3C7AD2D1590 /* MainTabView.swift in Sources */,
+				MKDWN001FFFF1111111111111 /* MarkdownText.swift in Sources */,
 				28656B569411963894CA0019 /* PetToxicApp.swift in Sources */,
 				833289444FE091B4D966C6C4 /* PoisonControlButton.swift in Sources */,
 				EF977BE44A1CA4C9CE80A128 /* SavedView.swift in Sources */,
@@ -637,7 +641,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 20260127;
+				CURRENT_PROJECT_VERSION = 20260129;
 				DEVELOPMENT_TEAM = 6KA5CB5S3A;
 				GENERATE_INFOPLIST_FILE = NO;
 				INFOPLIST_FILE = PetToxic/Resources/Info.plist;
@@ -823,7 +827,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 20260127;
+				CURRENT_PROJECT_VERSION = 20260129;
 				DEVELOPMENT_TEAM = 6KA5CB5S3A;
 				GENERATE_INFOPLIST_FILE = NO;
 				INFOPLIST_FILE = PetToxic/Resources/Info.plist;
