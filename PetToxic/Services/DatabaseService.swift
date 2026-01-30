@@ -3927,17 +3927,17 @@ class DatabaseService {
                     "Do not rely on bait appearance to identify the product"
                 ],
                 sources: ["VIN Toxicology Resources", "ASPCA Animal Poison Control Center", "Merck Veterinary Manual — Cholecalciferol Poisoning in Animals", "Pet Poison Helpline", "VCA Animal Hospitals", "Purdue University College of Veterinary Medicine"],
-                relatedEntries: ["049e1259-f968-4e23-aa8c-5110cb52a08c"]
+                relatedEntries: ["049e1259-f968-4e23-aa8c-5110cb52a08c", "c492d990-4222-44a0-8546-634118f68f71"]
             ),
 
             // MARK: - Vitamin D Overdose (Supplements & Medications)
             ToxicItem(
                 id: UUID(uuidString: "c492d990-4222-44a0-8546-634118f68f71")!,
                 name: "Vitamin D Overdose (Supplements & Medications)",
-                alternateNames: ["vitamin D toxicity", "vitamin D3 overdose", "vitamin D2 overdose", "cholecalciferol overdose", "ergocalciferol overdose", "vitamin D supplements", "vitamin D3 supplements", "calcipotriene", "calcipotriol", "tacalcitol", "calcitriol", "Dovonex", "Taclonex", "Sorilux", "Enstilar", "Wynzora", "Rocaltrol", "Vectical", "psoriasis cream", "dog ate vitamins", "pet ate supplements"],
+                alternateNames: ["vitamin D toxicity", "vitamin D3 overdose", "vitamin D2 overdose", "cholecalciferol overdose", "ergocalciferol overdose", "vitamin D supplements", "vitamin D3 supplements", "calcipotriene", "calcipotriol", "tacalcitol", "calcitriol", "Dovonex", "Taclonex", "Sorilux", "Enstilar", "Wynzora", "Rocaltrol", "Vectical", "psoriasis cream", "dog ate vitamins", "pet ate supplements", "gummy vitamins", "vitamin gummies", "gummy vitamin D", "chewable vitamins", "vitamin D gummies", "dog ate gummy vitamins"],
                 categories: [.medications],
                 imageAsset: "vit_d_thumb",
-                description: "Vitamin D toxicity occurs when pets ingest human vitamin D supplements or topical medications containing vitamin D analogues. Most standard multivitamins contain low amounts of vitamin D (100-400 IU) and pose minimal risk unless a very small dog eats a large quantity. However, high-dose vitamin D3 supplements (5,000-50,000 IU per capsule) have become increasingly popular and can cause serious toxicity if multiple capsules are ingested. Topical psoriasis medications containing calcipotriene (Dovonex, Taclonex, Enstilar) or tacalcitol are also dangerous—dogs can be poisoned by licking the cream from a person's skin or directly from the tube. Vitamin D2 (ergocalciferol, from plants) has a wider margin of safety than vitamin D3 (cholecalciferol, from animals).",
+                description: "Vitamin D toxicity occurs when pets ingest human vitamin D supplements or topical medications containing vitamin D analogues. Most standard multivitamins contain low amounts of vitamin D (100-400 IU) and pose minimal risk unless a very small dog eats a large quantity. However, high-dose vitamin D3 supplements (5,000-50,000 IU per capsule) have become increasingly common as health trends have popularized vitamin D supplementation. Gummy vitamins are particularly appealing to dogs and may be consumed in large quantities if left accessible. These high-dose supplements can cause serious toxicity if multiple capsules are ingested. Topical psoriasis medications containing calcipotriene (Dovonex, Taclonex, Enstilar) or tacalcitol are also dangerous—dogs can be poisoned by licking the cream from a person's skin or directly from the tube. Vitamin D2 (ergocalciferol, from plants) has a wider margin of safety than vitamin D3 (cholecalciferol, from animals).",
                 toxicityInfo: "Vitamin D increases calcium absorption from the gut and bones while decreasing excretion through the kidneys. Excessive vitamin D causes dangerously high blood calcium (hypercalcemia) and phosphorus levels, leading to mineralization (calcium deposits) in kidneys, heart, blood vessels, and other soft tissues. Kidney failure is the most serious consequence. Vitamin D and its metabolites are fat-soluble and stored in body fat, so effects can persist for weeks to months. There is NO ANTIDOTE—treatment focuses on lowering calcium levels and may require weeks of monitoring. For vitamin D toxicity from rodenticides, see the separate 'Cholecalciferol Rodenticide' entry.",
                 onsetTime: OnsetTime(
                     early: "Increased thirst and urination may appear within 12-24 hours",
@@ -3977,8 +3977,8 @@ class DatabaseService {
                     "Store topical medication tubes securely—small amounts can be toxic if a pet chews the tube",
                     "If ingestion is suspected, note the product name and strength, and contact a veterinarian immediately"
                 ],
-                sources: ["VIN Toxicology Resources", "ASPCA Animal Poison Control Center", "Merck Veterinary Manual — Cholecalciferol Poisoning in Animals", "Pet Poison Helpline", "VCA Animal Hospitals"],
-                relatedEntries: nil
+                sources: ["ASPCA Animal Poison Control Center", "Merck Veterinary Manual — Cholecalciferol Poisoning in Animals", "Pet Poison Helpline", "VCA Animal Hospitals"],
+                relatedEntries: ["3c40b99c-5653-4195-a821-19dde4e1c8f8"]
             ),
 
             // MARK: - Zinc Phosphide
@@ -9371,7 +9371,7 @@ class DatabaseService {
                     SpeciesRisk(
                         species: .dog,
                         severity: .high,
-                        notes: "Toxicity depends heavily on DOSE and GENETICS. Dogs with the ABCB1/MDR1 mutation (common in Collies, Australian Shepherds, Shetland Sheepdogs, Border Collies, Old English Sheepdogs, and other herding breeds) are extremely sensitive. Heartworm preventatives are safe at labeled doses for ALL dogs. Horse/livestock dewormers and off-label high-dose treatments are dangerous. Genetic testing is available. Recovery can take days to weeks; prognosis is generally good with supportive care but guarded in severe cases."
+                        notes: "Toxicity depends heavily on DOSE and GENETICS. Dogs with the ABCB1/MDR1 mutation (common in Collies, Australian Shepherds, Shetland Sheepdogs, Border Collies, Old English Sheepdogs, and other herding breeds) are extremely sensitive. Heartworm preventatives are safe at labeled doses for ALL dogs. Horse/livestock dewormers and off-label high-dose treatments are dangerous. Genetic testing is available through Washington State University and other laboratories. Recovery can take days to weeks with supportive veterinary care."
                     ),
                     SpeciesRisk(
                         species: .cat,
@@ -9406,7 +9406,6 @@ class DatabaseService {
                     "If using topical products (pour-ons), prevent pets from licking treated animals"
                 ],
                 sources: [
-                    "VIN (Veterinary Information Network): Macrocyclic Lactone Toxicosis",
                     "Merola VM, Eubig PA. 'Toxicology of Avermectins and Milbemycins and the Role of P-Glycoprotein in Dogs and Cats.' Vet Clin North Am Small Anim Pract. 2012",
                     "ASPCA Animal Poison Control Center: Ivermectin Toxicity",
                     "Pet Poison Helpline: Ivermectin",
@@ -9712,6 +9711,16 @@ class DatabaseService {
                         species: .smallMammal,
                         severity: .severe,
                         notes: "Rabbits are highly susceptible to benzocaine-induced methemoglobinemia, similar to cats. Ferrets have also shown positive methemoglobin responses. Never use human benzocaine products on small mammals. Contact an exotic animal veterinarian immediately if exposure occurs."
+                    ),
+                    SpeciesRisk(
+                        species: .bird,
+                        severity: .high,
+                        notes: "Limited data available. Birds may be susceptible to methemoglobinemia from benzocaine exposure due to their small body size and potentially similar hemoglobin oxidation mechanisms. Any exposure should be treated as potentially serious. Contact an avian veterinarian immediately if exposure occurs."
+                    ),
+                    SpeciesRisk(
+                        species: .reptile,
+                        severity: .moderate,
+                        notes: "Toxicity not well-established in reptiles. Reptile physiology differs significantly from mammals, and susceptibility to benzocaine-induced methemoglobinemia is unknown. Contact an exotic animal veterinarian if exposure occurs."
                     )
                 ],
                 preventionTips: [
@@ -9727,7 +9736,6 @@ class DatabaseService {
                     "Certain dog breeds (Chihuahua, Borzoi, English Setter, Welsh Corgi, Poodles, Cocker Spaniel) may be at higher risk due to enzyme deficiencies"
                 ],
                 sources: [
-                    "VIN (Veterinary Information Network): Benzocaine Toxicosis",
                     "Davis JA, et al. 'Benzocaine-induced methemoglobinemia attributed to topical application of the anesthetic in several laboratory animal species.' Am J Vet Res. 1993",
                     "Harvey JW, et al. 'Benzocaine-induced methemoglobinemia in dogs.' J Am Vet Med Assoc. 1979",
                     "Wilkie DA, Kirby R. 'Methemoglobinemia associated with dermal application of benzocaine cream in a cat.' J Am Vet Med Assoc. 1988",
