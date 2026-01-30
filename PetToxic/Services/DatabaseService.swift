@@ -4970,7 +4970,7 @@ class DatabaseService {
                     "If your pet ingests a packet from a food product and you're unsure what it is, use a magnet to test—if it sticks, the packet may contain iron",
                     "Store pet treats in containers rather than original bags to avoid packet ingestion"
                 ],
-                sources: ["ASPCA Animal Poison Control Center", "Pet Poison Helpline", "PetMD", "Veterinary Information Network (VIN)"],
+                sources: ["ASPCA Animal Poison Control Center", "Pet Poison Helpline", "PetMD"],
                 relatedEntries: ["f6a7b8c9-0d1e-2f3a-4b5c-6d7e8f9a0b1c"]
             ),
 
@@ -4998,7 +4998,7 @@ class DatabaseService {
                 categories: [.householdItems],
                 imageAsset: "glow_sticks_thumb",
                 description: "Glow sticks and glow jewelry (necklaces, bracelets) are popular novelty items sold at fairs, carnivals, concerts, and around holidays like Halloween and the Fourth of July. They contain dibutyl phthalate (DBP), an oily liquid that produces the characteristic glow through a chemical reaction. Despite the dramatic symptoms pets may display after biting into these products, glow sticks are considered low toxicity. The extremely bitter taste of dibutyl phthalate typically limits how much a pet will ingest.",
-                toxicityInfo: "Dibutyl phthalate is the primary luminescent agent in glow products. It has low systemic toxicity (LD50 >8,000 mg/kg in rats), so serious poisoning is unlikely from the amounts in glow sticks. However, the intensely bitter taste causes dramatic immediate reactions—especially in cats. Signs appear within seconds of biting into the product and are primarily a taste aversion response rather than true poisoning. Cats tend to have much more exaggerated reactions than dogs, displaying profuse drooling, foaming, head shaking, and behavioral changes (hyperactivity, aggression, hiding). Dogs typically show milder reactions or none at all. The liquid can also irritate the skin and eyes on contact.",
+                toxicityInfo: "Dibutyl phthalate is the primary luminescent agent in glow products. It has low systemic toxicity, so serious poisoning is unlikely from the amounts in glow sticks. However, the intensely bitter taste causes dramatic immediate reactions—especially in cats. Signs appear within seconds of biting into the product and are primarily a taste aversion response rather than true poisoning. Cats tend to have much more exaggerated reactions than dogs, displaying profuse drooling, foaming, head shaking, and behavioral changes (hyperactivity, aggression, hiding). Dogs typically show milder reactions or none at all. The liquid can also irritate the skin and eyes on contact.",
                 onsetTime: OnsetTime(
                     early: "Signs appear within seconds to minutes of biting into the glow stick—drooling, gagging, and behavioral changes occur almost immediately",
                     delayed: "Signs are self-limiting and typically resolve within 30-60 minutes once the taste is diluted; no delayed systemic effects expected"
@@ -5031,7 +5031,7 @@ class DatabaseService {
                     "If a glow stick breaks, take the pet to a dark room to identify glowing residue on fur and clean it off",
                     "Remember that the dramatic drooling and behavioral signs look scary but are not dangerous"
                 ],
-                sources: ["ASPCA Animal Poison Control Center", "Pet Poison Helpline", "Veterinary Information Network (VIN)", "PetMD", "Vetstreet"],
+                sources: ["ASPCA Animal Poison Control Center", "Pet Poison Helpline", "PetMD", "Vetstreet"],
                 relatedEntries: nil
             ),
 
@@ -5139,7 +5139,7 @@ class DatabaseService {
                 categories: [.householdItems],
                 imageAsset: "iron_thumb",
                 description: "Iron-containing oxygen absorbers are small packets found in packages of dried foods such as beef jerky, pepperoni, dried fruits, and pet treats. Disposable hand warmers and toe warmers also contain elemental iron powder—when exposed to air, the iron oxidizes and generates heat. These products contain 50-70% elemental iron, which can cause serious iron poisoning if ingested. The packets are commonly confused with non-toxic silica gel desiccants, making identification difficult. While silica gel is essentially non-toxic, iron-containing packets can cause iron poisoning, particularly in small dogs. Hand warmers pose a seasonal risk during cold months when they are commonly carried in pockets, bags, and outdoor gear accessible to pets.",
-                toxicityInfo: "Elemental iron can cause severe poisoning even in the small amounts contained in a single oxygen absorber packet. The iron content of these packets ranges from 50-70% total iron. Iron is highly irritating to the gastrointestinal tract and has direct corrosive effects, causing bloody vomiting and diarrhea. If a toxic dose is absorbed, iron overwhelms the body's protein carriers (transferrin and ferritin), and free iron causes oxidative damage to the liver and other organs. Severe metabolic acidosis, shock, and hepatic failure can develop 1-5 days after ingestion. Small dogs (<15 pounds) are at greatest risk—the most severe poisoning cases reported have occurred in small breed dogs. Larger dogs ingesting a single small packet are less likely to develop serious toxicity. Once iron has fully oxidized ('spent' absorbers), it becomes iron oxide, which has poor bioavailability and is less toxic—but the degree of oxidation cannot be determined by appearance.",
+                toxicityInfo: "Elemental iron can cause severe poisoning even in the small amounts contained in a single oxygen absorber packet. The iron content of these packets ranges from 50-70% total iron. Iron is highly irritating to the gastrointestinal tract and has direct corrosive effects, causing bloody vomiting and diarrhea. If a toxic dose is absorbed, iron overwhelms the body's protein carriers (transferrin and ferritin—proteins that safely transport and store iron), and free iron causes oxidative damage to the liver and other organs. Severe metabolic acidosis, shock, and hepatic failure can develop 1-5 days after ingestion. Small dogs (<15 pounds) are at greatest risk—the most severe poisoning cases reported have occurred in small breed dogs. Larger dogs ingesting a single small packet are less likely to develop serious toxicity. Once iron has fully oxidized ('spent' absorbers), it becomes iron oxide, which has poor bioavailability and is less toxic—but the degree of oxidation cannot be determined by appearance.",
                 onsetTime: OnsetTime(
                     early: "Vomiting (often with blood) typically occurs within 1-6 hours of ingestion; absence of vomiting suggests a non-toxic dose was ingested",
                     delayed: "Hepatic toxicity, metabolic acidosis, and shock may develop 1-5 days after exposure; a 'latent period' of apparent improvement may precede organ failure"
@@ -5176,8 +5176,8 @@ class DatabaseService {
                     "Dispose of used hand warmers in a sealed trash container—even 'spent' warmers may still contain some unoxidized iron",
                     "Keep outdoor gear containing hand warmers (gloves, jacket pockets, boots) away from curious pets"
                 ],
-                sources: ["Pet Poison Helpline", "Veterinary Information Network (VIN)", "Journal of Medical Toxicology (Brutlag et al., 2012)", "dvm360", "Animal Poisons Helpline (Australia)"],
-                relatedEntries: ["c3d4e5f6-7a8b-9c0d-1e2f-3a4b5c6d7e8f"]
+                sources: ["Pet Poison Helpline", "Journal of Medical Toxicology", "dvm360", "Animal Poisons Helpline (Australia)"],
+                relatedEntries: ["c3d4e5f6-7a8b-9c0d-1e2f-3a4b5c6d7e8f", "00112233-4455-6677-8899-aabbccddef23"]
             ),
 
             // MARK: - Pennies & Zinc Objects
@@ -12371,7 +12371,8 @@ If your pet has swallowed a metallic object, your veterinarian may recommend X-r
                     "3b605ff6-df0c-426f-8687-70226969f7c0",
                     "a7b8c9d0-1e2f-3a4b-5c6d-7e8f9a0b1c2d",
                     "a1b2c3d4-5e6f-7a8b-9c0d-1e2f3a4b5c6d",
-                    "b2c3d4e5-6f7a-8b9c-0d1e-2f3a4b5c6d7e"
+                    "b2c3d4e5-6f7a-8b9c-0d1e-2f3a4b5c6d7e",
+                    "f6a7b8c9-0d1e-2f3a-4b5c-6d7e8f9a0b1c"
                 ]
             )
         ]
