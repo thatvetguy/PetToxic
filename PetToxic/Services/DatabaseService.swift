@@ -4099,7 +4099,7 @@ class DatabaseService {
                 id: UUID(uuidString: "b2e4f7a1-8c3d-4e6f-a9b2-1d5c8e3f7a2b")!,
                 name: "Expanding Glues (Gorilla Glue)",
                 alternateNames: ["Gorilla Glue", "polyurethane glue", "expanding glue", "foaming glue", "wood glue", "construction glue", "diisocyanate glue", "isocyanate glue", "Elmer's ProBond", "Titebond polyurethane", "expanding adhesive", "foaming adhesive", "polyurethane adhesive", "Grizzly glue", "expanding wood glue", "Loctite polyurethane", "MDI glue", "diphenylmethane diisocyanate"],
-                categories: [.garageGarden],
+                categories: [.garageGarden, .informational],
                 imageAsset: "expanding_glue_thumb",
                 description: "Expanding polyurethane glues—sold under brand names like Gorilla Glue, Elmer's ProBond, and Titebond—contain diisocyanates that react with moisture to create an expanding foam that hardens into an extremely strong bond. These glues are commonly labeled as \"expanding\" or \"foaming\" adhesives and are popular for woodworking and construction projects.\n\nWhen a dog chews on a bottle and swallows even a small amount of liquid glue, the warm, moist environment of the stomach triggers rapid expansion. The glue can expand to many times its original volume—sometimes filling the entire stomach—and then hardens into a rock-solid mass within minutes. This mass cannot be vomited up because it becomes too large to pass through the esophagus, and it cannot pass into the intestines. The result is a complete gastrointestinal obstruction.\n\nAccording to the ASPCA Animal Poison Control Center, cases of expanding glue ingestion have increased over 300% since 2002. Dogs are overwhelmingly the most common victims, often attracted by the sweet smell or taste of these products. Cats are rarely affected.\n\n**Critical:** Do NOT induce vomiting and do NOT give water or any fluids—this will cause the glue to expand faster and larger. Surgery is almost always required to remove the mass.",
                 toxicityInfo: "The danger from expanding glues is physical obstruction, not chemical toxicity. The diisocyanates in these products react with water and stomach acid to produce an expanding foam that hardens rapidly. Heat and carbon dioxide are byproducts of this reaction, which accelerates in the warm stomach environment.\n\nAs little as half an ounce (about 15 mL) of glue has been sufficient to cause gastric obstruction in dogs. The hardened mass rubs against the stomach lining, causing irritation and potentially ulceration. If the glue expands in the esophagus or small intestine rather than the stomach, the risk of perforation and rupture is higher due to the limited space.\n\nThe glue mass does not break down in the stomach and cannot be digested. Without surgical removal, the obstruction will persist indefinitely. Some dogs have survived for weeks with a glue mass in the stomach before the obstruction became critical, but most require emergency surgery.",
@@ -4121,10 +4121,13 @@ class DatabaseService {
                     "Diarrhea (early)",
                     "Absence of stool (later, as obstruction progresses)"
                 ],
-                entrySeverity: .high,
+                entrySeverity: nil,
                 speciesRisks: [
                     SpeciesRisk(species: .dog, severity: .high, notes: "Dogs are overwhelmingly the most commonly affected species, typically from chewing on glue bottles. The sweet smell and taste of these products attracts dogs. Surgery is almost always required to remove the hardened mass."),
-                    SpeciesRisk(species: .cat, severity: .high, notes: "Expanding glue ingestion has not been reported in cats in the veterinary literature, but the same mechanism would apply if a cat ingested the product. Cats may be exposed if they groom glue off their fur.")
+                    SpeciesRisk(species: .cat, severity: .high, notes: "Expanding glue ingestion has not been reported in cats in the veterinary literature, but the same mechanism would apply if a cat ingested the product. Cats may be exposed if they groom glue off their fur."),
+                    SpeciesRisk(species: .smallMammal, severity: .severe, notes: "No documented cases, but the same obstruction mechanism applies. Ferrets are particularly at risk as they commonly chew on rubber and foam objects. Rabbits and rodents cannot vomit to expel the material. Small body size means even tiny amounts could cause complete obstruction. GI surgery in small mammals carries higher risk than in dogs. Seek immediate veterinary care for any suspected ingestion."),
+                    SpeciesRisk(species: .bird, severity: .high, notes: "No documented cases, but exposure is theoretically possible if a bird chews on a glue bottle or walks through fresh glue. The expanding mechanism would cause crop or GI obstruction. Birds can regurgitate but may not be able to expel hardened material. Additionally, fumes from these products can cause respiratory irritation in birds. The risk is mechanical obstruction, not chemical toxicity."),
+                    SpeciesRisk(species: .reptile, severity: .moderate, notes: "No documented cases and exposure is unlikely given reptile behavior and diet. However, if ingested, the same expanding/hardening mechanism could cause GI obstruction. Reptiles kept free-roaming in homes may have higher exposure risk. Limited data available; avoid any exposure as a precaution.")
                 ],
                 preventionTips: [
                     "Store all expanding glues in locked cabinets or sturdy toolboxes completely inaccessible to pets",
@@ -4136,7 +4139,7 @@ class DatabaseService {
                     "Not all Gorilla Glue products contain expanding diisocyanates—check labels, but treat all as potentially dangerous",
                     "If you see your dog with a chewed glue bottle, contact your veterinarian immediately even if you're not sure any was swallowed"
                 ],
-                sources: ["VIN Toxicology Resources: Expanding Wood Glue Ingestion", "ASPCA Animal Poison Control Center: Polyurethane Glue Ingestion Statistics", "Pet Poison Helpline / VCA Hospitals: Expanding Glues", "Veterinary Partner (VIN): Expandable Foaming Glues Cause Obstructions in Pets", "PetMD: Gorilla Glue Poisoning in Dogs"],
+                sources: ["ASPCA Animal Poison Control Center", "Pet Poison Helpline", "Veterinary Partner: Expandable Foaming Glues Cause Obstructions in Pets", "PetMD: Gorilla Glue Poisoning in Dogs", "VCA Animal Hospitals"],
                 relatedEntries: nil
             ),
 
@@ -4697,7 +4700,7 @@ class DatabaseService {
                 categories: [.garageGarden],
                 imageAsset: "mothballs_thumb",
                 description: "Mothballs are solid pesticides that slowly release vapor to kill and repel moths, their larvae, and other insects in stored clothing and fabric. They contain either naphthalene (older formulations, more toxic), paradichlorobenzene/PDB (modern formulations, less toxic), or camphor (rare in the US but may be found in products imported from Asia, particularly India and China). Paradichlorobenzene is also used in urinal deodorizing cakes. Mothballs are sometimes misused to repel snakes, mice, or other animals, which increases the risk of pet exposure. Fresh mothballs typically weigh 2.5-5 grams each.",
-                toxicityInfo: "Naphthalene mothballs are significantly more toxic than paradichlorobenzene (PDB) types—approximately twice as toxic. A single paradichlorobenzene mothball is generally well tolerated by most dogs, while naphthalene ingestion can cause serious illness even from one mothball in smaller pets. Camphor mothballs, though less common, can cause severe CNS effects including seizures. Naphthalene damages red blood cells through oxidative injury, causing methemoglobinemia, Heinz body formation, and hemolytic anemia. It can also affect the liver and kidneys. PDB primarily causes gastrointestinal upset and trembling; large ingestions may cause hepatic or renal injury. Mothballs dissolve slowly in the digestive tract, so toxicity may be delayed. Cats are more sensitive to mothball toxicity than dogs, but dogs are more likely to ingest them.",
+                toxicityInfo: "Naphthalene mothballs are significantly more toxic than paradichlorobenzene (PDB) types. Camphor mothballs, though less common in the US, can cause severe CNS effects including seizures. Naphthalene damages red blood cells through oxidative injury, causing methemoglobinemia (a condition where the blood cannot carry oxygen properly), Heinz body formation, and hemolytic anemia (destruction of red blood cells). It can also affect the liver and kidneys. PDB primarily causes gastrointestinal upset and trembling; large ingestions may cause liver or kidney injury. Mothballs dissolve slowly in the digestive tract, so toxicity may be delayed and symptoms can persist. Cats are more sensitive to mothball toxicity than dogs, but dogs are more likely to ingest them. Any mothball ingestion warrants veterinary evaluation.",
                 onsetTime: OnsetTime(
                     early: "GI signs (vomiting, loss of appetite) typically appear within hours of ingestion",
                     delayed: "Hemolytic anemia and organ damage may develop 1-5 days after naphthalene ingestion; signs can persist due to slow dissolution"
@@ -4721,7 +4724,7 @@ class DatabaseService {
                 ],
                 entrySeverity: .severe,
                 speciesRisks: [
-                    SpeciesRisk(species: .dog, severity: .high, notes: "Dogs are more likely to ingest mothballs; naphthalene causes hemolytic anemia; one PDB mothball is generally tolerated but naphthalene is more dangerous"),
+                    SpeciesRisk(species: .dog, severity: .high, notes: "Dogs are more likely to ingest mothballs; naphthalene causes hemolytic anemia and is particularly dangerous"),
                     SpeciesRisk(species: .cat, severity: .severe, notes: "Cats are more sensitive to toxic effects; even one mothball can cause serious illness"),
                     SpeciesRisk(species: .smallMammal, severity: .severe, notes: "Small body size increases risk; rabbits and rodents cannot vomit to expel toxin"),
                     SpeciesRisk(species: .bird, severity: .severe, notes: "Highly sensitive to both ingestion and fumes; respiratory exposure especially dangerous"),
@@ -4735,7 +4738,7 @@ class DatabaseService {
                     "If you must use mothballs, choose PDB formulations over naphthalene (check label)",
                     "Keep storage containers locked and out of pet reach"
                 ],
-                sources: ["ASPCA Animal Poison Control Center", "Pet Poison Helpline", "VCA Animal Hospitals", "Merck Veterinary Manual", "Veterinary Information Network (VIN)"],
+                sources: ["ASPCA Animal Poison Control Center", "Pet Poison Helpline", "VCA Animal Hospitals", "Merck Veterinary Manual"],
                 relatedEntries: nil
             ),
 
