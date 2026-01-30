@@ -8769,6 +8769,15 @@ class DatabaseService {
                     "DES",
                     "diethylstilbestrol",
 
+                    // Emergency contraceptives
+                    "Plan B",
+                    "Plan B One-Step",
+                    "ella",
+                    "emergency contraceptive",
+                    "morning after pill",
+                    "levonorgestrel emergency",
+                    "ulipristal",
+
                     // Common search queries
                     "dog ate birth control",
                     "cat ate birth control pill",
@@ -8777,7 +8786,7 @@ class DatabaseService {
                 ],
                 categories: [.medications],
                 imageAsset: "birth_control_thumb",
-                description: "Birth control pills contain low doses of hormones (estrogen and/or progestin) and are generally considered to have LOW TOXICITY for pets. Most birth control pills contain only 0.020-0.035 mg of estrogen per tablet — far below levels that would cause toxicity. A medium-sized dog would need to eat over 100 active pills to reach a concerning dose. THE PACKAGING IS OFTEN MORE CONCERNING THAN THE PILLS: Dogs are often attracted to the plastic pill packs. Ingesting large amounts of plastic can cause intestinal obstruction, which may require surgery. SPECIAL SITUATIONS THAT ARE MORE CONCERNING: Pills containing IRON supplements (some placebo pills) — iron can be toxic. HORMONE REPLACEMENT THERAPY (HRT) products — contain MUCH higher hormone levels. Massive ingestion (hundreds of pills). Birds are especially sensitive to estrogen.",
+                description: "Birth control pills contain low doses of hormones (estrogen and/or progestin) and are generally considered to have LOW TOXICITY for pets. Most birth control pills contain only 0.020-0.035 mg of estrogen per tablet — far below levels that would cause toxicity. A medium-sized dog would need to eat over 100 active pills to reach a concerning dose. THE PACKAGING IS OFTEN MORE CONCERNING THAN THE PILLS: Dogs are often attracted to the plastic pill packs. Ingesting large amounts of plastic can cause intestinal obstruction, which may require surgery. SPECIAL SITUATIONS THAT ARE MORE CONCERNING: Pills containing IRON supplements (some placebo pills) — iron can be toxic. HORMONE REPLACEMENT THERAPY (HRT) products — contain MUCH higher hormone levels. Massive ingestion (hundreds of pills). Birds are especially sensitive to estrogen. Emergency contraceptives (Plan B, ella) contain higher hormone doses than regular daily birth control pills (0.75-1.5 mg levonorgestrel vs. 0.02-0.035 mg estrogen), but single-pill ingestion is still unlikely to cause serious toxicity in most pets.",
                 toxicityInfo: "HORMONE TOXICITY: Birth control pills typically contain 21 active hormone pills and 7 placebo pills per pack. The active pills contain very low doses of estrogen (0.020-0.035 mg) and progestin. These doses are far below the level needed to cause significant toxicity. Even ingesting an entire 28-day pack is unlikely to cause hormone-related problems in most pets. IRON IN PLACEBO PILLS: Some birth control packs include iron supplements (ferrous fumarate) in the 7 placebo pills. If a pet ingests multiple iron-containing pills, iron toxicity can occur, causing GI irritation, liver damage, and other serious effects. BONE MARROW SUPPRESSION: Very high estrogen doses can cause aplastic anemia and bone marrow suppression (decreased production of red blood cells, white blood cells, and platelets). However, this requires massive ingestion — far more than a single pill pack. HORMONE REPLACEMENT THERAPY (HRT) IS MORE DANGEROUS: HRT products contain much higher concentrations of estrogen than birth control pills. Ingestion of HRT medications warrants more aggressive evaluation.",
                 onsetTime: OnsetTime(
                     early: "Most ingestions cause NO SIGNS or only mild GI upset: vomiting within 1-2 hours, diarrhea, decreased appetite. Iron toxicity (if iron-containing pills ingested): GI signs within 6 hours.",
@@ -8825,7 +8834,7 @@ class DatabaseService {
                     SpeciesRisk(
                         species: .bird,
                         severity: .moderate,
-                        notes: "BIRDS ARE MORE SENSITIVE to estrogen than mammals. Even lower doses of estrogen can cause bone marrow suppression in birds. Any birth control or estrogen ingestion in a bird should be evaluated by an avian veterinarian."
+                        notes: "BIRDS ARE MORE SENSITIVE to estrogen than mammals. Even relatively small amounts of estrogen can cause bone marrow suppression in birds, potentially leading to fatal aplastic anemia with large ingestions. Any birth control or estrogen ingestion in a bird should be evaluated by an avian veterinarian immediately."
                     ),
                     SpeciesRisk(
                         species: .reptile,
@@ -8843,7 +8852,6 @@ class DatabaseService {
                     "Save the packaging to show your veterinarian — different formulations have different hormone and iron content"
                 ],
                 sources: [
-                    "VIN (Veterinary Information Network): Birth Control Pills Toxicity",
                     "ASPCA Animal Poison Control Center: Birth Control Pill and HRT Exposure in Pets",
                     "Pet Poison Helpline: Human Medications Poisonous to Pets — Birth Control",
                     "PetMD: My Dog Ate Birth Control — Now What?",
@@ -8881,6 +8889,11 @@ class DatabaseService {
                     "weight loss supplement",
                     "nerve support supplement",
 
+                    // Pet supplement terms
+                    "pet antioxidant supplement",
+                    "diabetic pet supplement",
+                    "pet diabetes supplement",
+
                     // Common search terms
                     "cat ate supplement",
                     "dog ate ALA",
@@ -8890,7 +8903,7 @@ class DatabaseService {
                 ],
                 categories: [.medications],
                 imageAsset: "ala_thumb",
-                description: "Alpha lipoic acid (ALA) is an over-the-counter antioxidant supplement used in humans for diabetes management, weight loss, nerve support, and other conditions. It is found naturally in foods like yeast, liver, broccoli, spinach, potatoes, and meats, but is also sold as concentrated supplements in 100-300 mg capsules. CATS ARE EXTREMELY SENSITIVE: Cats are approximately 10 times more susceptible to ALA toxicity than dogs, humans, or rats. Even relatively small amounts can cause life-threatening effects in cats. In one published case series of 4 cats with known ALA ingestions, all developed clinical signs and 2 died. RAPID ONSET: Signs can develop within 30 minutes of ingestion — do not wait to seek veterinary care.",
+                description: "Alpha lipoic acid (ALA) is an over-the-counter antioxidant supplement used in humans for diabetes management, weight loss, nerve support, and other conditions. It is found naturally in foods like yeast, liver, broccoli, spinach, potatoes, and meats, but is also sold as concentrated supplements in 100-300 mg capsules. ALA is also marketed in some pet supplements for diabetes management, joint support, and antioxidant benefits. Pets may access these products just as easily as human supplements — store all supplements securely. CATS ARE EXTREMELY SENSITIVE: Cats are approximately 10 times more susceptible to ALA toxicity than dogs, humans, or rats. Even relatively small amounts can cause life-threatening effects in cats. In one published case series of 4 cats with known ALA ingestions, all developed clinical signs and 2 died. RAPID ONSET: Signs can develop within 30 minutes of ingestion — do not wait to seek veterinary care.",
                 toxicityInfo: "Alpha lipoic acid is a potent antioxidant that acts synergistically with insulin in the body. This interaction with glucose metabolism is why HYPOGLYCEMIA (dangerously low blood sugar) is a primary concern in pets who ingest ALA supplements. Mechanism of Toxicity: ALA increases intracellular glutathione and regenerates other antioxidants (vitamins C and E, coenzyme Q10). In overdose, it binds to copper, manganese, and zinc, and its synergistic activity with insulin causes blood sugar to drop dangerously low. Organ Systems Affected: Metabolic (hypoglycemia causing weakness, tremors, seizures, collapse), Neurologic (ataxia, tremors, hypersalivation, seizures), Hepatic (hepatocellular damage, elevated liver enzymes), Renal (acute kidney injury has been reported). Why Cats Are So Sensitive: Research has demonstrated that cats develop hepatocellular toxicity at doses tolerated by other species. The exact mechanism is unclear, but cats appear to have limited ability to safely metabolize ALA. Absorption: ALA is rapidly absorbed with peak levels occurring 2-4 hours post-ingestion. It is metabolized by the liver and cleared by the kidneys.",
                 onsetTime: OnsetTime(
                     early: "Signs can appear as quickly as 30 minutes after ingestion. Early signs include hypersalivation, vomiting, and behavioral changes. Neurologic signs (ataxia, tremors) may develop rapidly.",
@@ -8965,7 +8978,6 @@ class DatabaseService {
                     "Inform pet sitters and houseguests about the danger of leaving supplements accessible"
                 ],
                 sources: [
-                    "VIN (Veterinary Information Network): Alpha Lipoic Acid Toxicosis",
                     "Hill AS, et al. 'Lipoic acid is 10 times more toxic in cats than reported in humans, dogs or rats.' J Anim Physiol Anim Nutr. 2004;88:150-156",
                     "Carpenter MM, Hovda LR. 'Alpha lipoic acid toxicosis in cats (2008-2016): Four cases.' J Vet Emerg Crit Care. 2022",
                     "ASPCA Animal Poison Control Center: Alpha Lipoic Acid",
@@ -9140,7 +9152,7 @@ class DatabaseService {
                 ],
                 categories: [.medications],
                 imageAsset: "metronidazole_thumb",
-                description: "Metronidazole (Flagyl) is an antibiotic commonly prescribed in veterinary medicine for anaerobic bacterial infections, giardiasis (intestinal parasites), inflammatory bowel disease, and hepatic encephalopathy. While generally safe at standard doses for short periods, metronidazole can cause NEUROTOXICITY — particularly with high doses or prolonged treatment. Unlike many toxicoses, metronidazole neurotoxicity is usually related to cumulative dose over time rather than a single acute ingestion. GOOD NEWS: Neurologic signs are typically REVERSIBLE once the medication is stopped. Most dogs recover within 1-2 weeks of discontinuation. KEY WARNING SIGNS: Wide-based stance, wobbling (ataxia), head tilt, abnormal eye movements (nystagmus), and difficulty walking are classic signs of metronidazole neurotoxicity.",
+                description: "Metronidazole (Flagyl) is an antibiotic commonly prescribed in veterinary medicine for anaerobic bacterial infections, giardiasis (intestinal parasites), inflammatory bowel disease, and hepatic encephalopathy. While generally safe at standard doses for short periods, metronidazole can cause NEUROTOXICITY — particularly with high doses or prolonged treatment. Unlike many toxicoses, metronidazole neurotoxicity is usually related to cumulative dose over time rather than a single acute ingestion. GOOD NEWS: Neurologic signs are typically REVERSIBLE once the medication is stopped. Most dogs recover within 1-2 weeks of discontinuation. KEY WARNING SIGNS: Wide-based stance, wobbling (ataxia), head tilt, abnormal eye movements (nystagmus), and difficulty walking are classic signs of metronidazole neurotoxicity. Note: Metronidazole has an extremely bitter taste, which may limit voluntary ingestion by pets.",
                 toxicityInfo: "Metronidazole neurotoxicity primarily affects the vestibular and cerebellar systems, causing balance and coordination problems. Mechanism: The exact mechanism is unknown. Proposed mechanisms include inhibition of neuronal protein synthesis by binding to RNA, antagonism of GABA receptors in the cerebellum and vestibular system, and axonal degeneration and demyelination in affected brain regions. Risk Factors: HIGH daily doses (particularly above recommended amounts), PROLONGED treatment (weeks to months of therapy), pre-existing liver disease (impairs drug metabolism), individual sensitivity varies — some animals develop signs at doses tolerated by others. Important Distinction: This is NOT a typical acute poisoning. A single accidental ingestion of an extra dose or two is unlikely to cause neurotoxicity. The concern is with high doses over extended periods. GI Effects: Separate from neurotoxicity, metronidazole can cause gastrointestinal upset (vomiting, diarrhea, loss of appetite) at any dose. These GI effects are usually mild and resolve when the drug is stopped. Hepatotoxicity: Rarely, metronidazole may cause liver toxicity, though this is uncommon.",
                 onsetTime: OnsetTime(
                     early: "GI signs (vomiting, loss of appetite, nausea) can occur shortly after starting treatment or with any dose. Neurologic signs from toxicity typically develop after days to weeks of treatment, though onset can vary based on dose and individual sensitivity.",
@@ -9191,7 +9203,7 @@ class DatabaseService {
                     SpeciesRisk(
                         species: .cat,
                         severity: .moderate,
-                        notes: "Cats can develop CNS signs from metronidazole toxicosis, including ataxia, weakness, disorientation, diminished postural reactions, seizures, and APPARENT BLINDNESS. Forebrain involvement may be more prominent in cats than dogs. Signs are generally reversible upon discontinuation. NOTE: Diazepam, which can speed recovery in dogs, should NOT be used long-term in cats due to rare risk of fatal hepatic necrosis."
+                        notes: "Cats can develop CNS signs from metronidazole toxicosis, including ataxia, weakness, disorientation, diminished postural reactions, seizures, and APPARENT BLINDNESS. Forebrain involvement may be more prominent in cats than dogs. Signs are generally reversible upon discontinuation."
                     ),
                     SpeciesRisk(
                         species: .smallMammal,
@@ -9221,7 +9233,6 @@ class DatabaseService {
                     "Remember: most metronidazole neurotoxicity is reversible — early recognition and drug discontinuation lead to better outcomes"
                 ],
                 sources: [
-                    "VIN (Veterinary Information Network): Metronidazole Toxicosis",
                     "Evans J, et al. 'Diazepam as a treatment for metronidazole toxicosis in dogs.' J Vet Intern Med. 2003;17:304-310",
                     "dvm360: 'Metronidazole: Uses, toxicity and management of neurologic sequelae'",
                     "Kinga KE, et al. 'Metronidazole-induced neurotoxicity in 26 dogs.' Vet Rec. 2018",
