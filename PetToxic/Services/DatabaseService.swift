@@ -4290,7 +4290,9 @@ class DatabaseService {
                 speciesRisks: [
                     SpeciesRisk(species: .dog, severity: .high, notes: "Dogs are frequently poisoned by ingesting rose care products mixed with attractive fertilizers (bone meal, blood meal), fly baits, or cattle ear tags. In one study of 102 dogs, 17% died despite treatment. Signs associated with death included weakness, mental dullness, and respiratory failure."),
                     SpeciesRisk(species: .cat, severity: .high, notes: "Cats are particularly sensitive to many OPs, especially chlorpyrifos. Exposure often occurs through grooming after walking through treated areas or from topical flea products. Cats may show chronic toxicosis from fat-stored OPs. Muscarinic signs (SLUDGE) are often LESS prominent in cats. One study reported 15% mortality."),
-                    SpeciesRisk(species: .bird, severity: .high, notes: "Birds are highly susceptible. Carbofuran (Furadan) has been documented as extremely toxic to birds including poultry, ducks, pheasants, and wild birds, with oral LD50 values as low as 0.4 mg/kg in some species.")
+                    SpeciesRisk(species: .bird, severity: .high, notes: "Birds are highly susceptible to organophosphates and carbamates. Carbofuran (Furadan) is extremely toxic to birds — even tiny amounts can be fatal to poultry, ducks, pheasants, and wild birds."),
+                    SpeciesRisk(species: .smallMammal, severity: .high, notes: "Small mammals are highly susceptible due to their small body size. Cholinesterase-inhibiting pesticides affect all mammals. Any exposure warrants immediate veterinary care."),
+                    SpeciesRisk(species: .reptile, severity: .high, notes: "Reptiles have acetylcholinesterase and are susceptible to these toxins. Limited clinical data exists, but the mechanism of toxicity applies across vertebrates. Contact a reptile-experienced veterinarian for any exposure.")
                 ],
                 preventionTips: [
                     "Store all insecticides securely out of reach of pets",
@@ -4303,7 +4305,7 @@ class DatabaseService {
                     "If using any OP/CM product, read labels carefully and follow all safety precautions",
                     "Outdoor cats may be exposed by walking through treated areas—consider keeping cats indoors during and after pesticide applications"
                 ],
-                sources: ["VIN Toxicology Resources: Organophosphate and Carbamate Toxicosis", "ASPCA Animal Poison Control Center", "Merck Veterinary Manual: Carbamate Toxicosis in Animals", "Pet Poison Helpline: Organophosphates", "Klainbart S, et al. Clinical manifestations, laboratory findings, treatment and outcome of acute organophosphate or carbamate intoxication in 102 dogs. Vet J. 2019"],
+                sources: ["ASPCA Animal Poison Control Center", "Merck Veterinary Manual: Carbamate Toxicosis in Animals", "Pet Poison Helpline: Organophosphates", "Klainbart S, et al. Clinical manifestations, laboratory findings, treatment and outcome of acute organophosphate or carbamate intoxication in 102 dogs. Vet J. 2019"],
                 relatedEntries: ["c3f5a8b2-7d4e-4f1a-b6c9-2e8d7f4a5b3c", "c9d0e1f2-3a4b-5c6d-e7f8-9a0b1c2d3e4f"]
             ),
 
@@ -4432,7 +4434,8 @@ class DatabaseService {
                     SpeciesRisk(species: .dog, severity: .moderate, notes: "Should never have DEET applied. Neurological signs (tremors, ataxia, seizures) can occur. Higher concentration products pose greater risk. Generally short duration with treatment."),
                     SpeciesRisk(species: .cat, severity: .high, notes: "Cats are reported to be MORE SENSITIVE than dogs to DEET. Never apply any DEET product to cats. Seek veterinary care immediately for any exposure."),
                     SpeciesRisk(species: .smallMammal, severity: .high, notes: "Do not use DEET products on small mammals. Their small body size increases risk of toxicity."),
-                    SpeciesRisk(species: .bird, severity: .moderate, notes: "Avoid using DEET sprays around birds. Inhalation in enclosed spaces is a concern.")
+                    SpeciesRisk(species: .bird, severity: .moderate, notes: "Avoid using DEET sprays around birds. Inhalation in enclosed spaces is a concern."),
+                    SpeciesRisk(species: .reptile, severity: .moderate, notes: "Limited data available. DEET is a neurotoxic compound that could affect reptiles. Avoid any exposure and contact a reptile-experienced veterinarian if exposure occurs.")
                 ],
                 preventionTips: [
                     "NEVER apply human insect repellent containing DEET to dogs, cats, or other pets",
@@ -4521,7 +4524,8 @@ class DatabaseService {
                     SpeciesRisk(species: .dog, severity: .moderate, notes: "Risk varies by pesticide type. Dogs generally tolerate most modern flea products well. Main concerns are organophosphates (HIGH risk) and accidental massive ingestion of any product."),
                     SpeciesRisk(species: .cat, severity: .severe, notes: "CATS ARE EXTREMELY SENSITIVE TO PYRETHROIDS (especially permethrin). Never use dog flea products on cats. Keep cats separated from treated dogs for 72 hours. Other modern flea products (imidacloprid, fipronil) are generally safe for cats."),
                     SpeciesRisk(species: .smallMammal, severity: .high, notes: "FIPRONIL IS DANGEROUS TO RABBITS. Use only imidacloprid-based products on rabbits. Small body size increases risk for all pesticide types."),
-                    SpeciesRisk(species: .bird, severity: .high, notes: "Birds are sensitive to many pesticides, particularly fipronil and organophosphates. Avoid using pesticide sprays around birds.")
+                    SpeciesRisk(species: .bird, severity: .high, notes: "Birds are sensitive to many pesticides, particularly fipronil and organophosphates. Avoid using pesticide sprays around birds."),
+                    SpeciesRisk(species: .reptile, severity: .moderate, notes: "Toxicity varies by pesticide type. Pyrethroids and organophosphates pose the greatest risk. Limited clinical data for reptiles — contact a reptile-experienced veterinarian for any pesticide exposure.")
                 ],
                 preventionTips: [
                     "Always read product labels completely before use",
@@ -4534,7 +4538,7 @@ class DatabaseService {
                     "Keep records of all pesticide products used in and around your home",
                     "Cover or remove fish tanks when using any pesticide sprays indoors"
                 ],
-                sources: ["ASPCA Animal Poison Control Center", "Pet Poison Helpline", "Merck Veterinary Manual: Insecticide Toxicosis", "VIN Toxicology Resources"],
+                sources: ["ASPCA Animal Poison Control Center", "Pet Poison Helpline", "Merck Veterinary Manual: Insecticide Toxicosis"],
                 relatedEntries: ["d4e5f6a7-8b9c-4d0e-a1b2-3c4d5e6f7a8b", "e5f6a7b8-9c0d-4e1f-b2a3-4c5d6e7f8a9b", "f6a7b8c9-0d1e-4f2a-b3c4-5d6e7f8a9b0c", "a7b8c9d0-1e2f-4a3b-c4d5-6e7f8a9b0c1d", "d0e1f2a3-4b5c-6d7e-f8a9-0b1c2d3e4f5a", "b8c9d0e1-2f3a-4b5c-d6e7-8f9a0b1c2d3e", "b4c5d6e7-8f9a-0b1c-2d3e-4f5a6b7c8d9e"]
             ),
 
