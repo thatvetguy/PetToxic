@@ -4226,7 +4226,8 @@ class DatabaseService {
                     SpeciesRisk(species: .cat, severity: .severe, notes: "EXTREMELY SENSITIVE. Cats lack the liver enzymes to efficiently metabolize pyrethroids. Over 96% of cats exposed to concentrated products develop toxic signs. Dog flea products should NEVER be applied to cats. Cats should also be separated from treated dogs for 72 hours after application."),
                     SpeciesRisk(species: .dog, severity: .low, notes: "Dogs tolerate pyrethroids well when used according to label directions. Toxicosis is rare but can occur with significant overdose (large-dog product on small puppy), ingestion of flea collars, or ingestion of large amounts of yard/garden products. Very young or very small dogs may be more susceptible."),
                     SpeciesRisk(species: .bird, severity: .low, notes: "Birds generally have low sensitivity to pyrethrins and pyrethroids. However, products should still be used according to label directions and birds should not be exposed to concentrated applications."),
-                    SpeciesRisk(species: .reptile, severity: .moderate, notes: "Reptiles can be safely treated with pyrethrin/pyrethroid products for parasites when used correctly, but care must be taken to avoid the eyes and mouth. Excessive exposure can cause toxicosis. Fish in the same environment are extremely sensitive and may die from minimal exposure.")
+                    SpeciesRisk(species: .reptile, severity: .moderate, notes: "Reptiles can be safely treated with pyrethrin/pyrethroid products for parasites when used correctly, but care must be taken to avoid the eyes and mouth. Excessive exposure can cause toxicosis. Fish in the same environment are extremely sensitive and may die from minimal exposure."),
+                    SpeciesRisk(species: .smallMammal, severity: .moderate, notes: "Small mammals including rabbits and guinea pigs can be affected by pyrethrin and pyrethroid toxicity. Studies show rabbits exposed to high doses exhibited tremors, convulsions, liver damage, and kidney effects. While mammals are generally less sensitive than cats (which have deficient glucuronidation), small body size increases risk. Ferrets may be more sensitive due to their carnivorous metabolism. Contact a veterinarian or poison control if exposure occurs.")
                 ],
                 preventionTips: [
                     "NEVER apply dog flea or tick products to cats—even in smaller amounts",
@@ -4240,7 +4241,7 @@ class DatabaseService {
                     "Cover or remove aquariums when using any pyrethroid sprays in the home—fish are extremely sensitive",
                     "When using household insect sprays, remove all pets and allow the area to dry completely before allowing pets back"
                 ],
-                sources: ["VIN Toxicology Resources: Pyrethrins and Pyrethroids", "ASPCA Animal Poison Control Center: Permethrin Spot-On Toxicoses in Cats", "Merck Veterinary Manual: Plant-Derived Insecticide Toxicosis in Animals", "Pet Poison Helpline / VCA Hospitals: Pyrethrin/Pyrethroid Poisoning in Cats", "International Cat Care: Permethrin Poisoning", "American Association of Feline Practitioners (AAFP): Permethrin Poisoning Campaign", "Boland LA, Angles JM. Feline permethrin toxicity: Retrospective study of 42 cases. J Feline Med Surg. 2010", "Sutton NM, et al. Clinical effects and outcome of feline permethrin spot-on poisonings. J Feline Med Surg. 2007"],
+                sources: ["ASPCA Animal Poison Control Center: Permethrin Spot-On Toxicoses in Cats", "Merck Veterinary Manual: Plant-Derived Insecticide Toxicosis in Animals", "Pet Poison Helpline / VCA Hospitals: Pyrethrin/Pyrethroid Poisoning in Cats", "International Cat Care: Permethrin Poisoning", "American Association of Feline Practitioners (AAFP): Permethrin Poisoning Campaign", "Boland LA, Angles JM. Feline permethrin toxicity: Retrospective study of 42 cases. J Feline Med Surg. 2010", "Sutton NM, et al. Clinical effects and outcome of feline permethrin spot-on poisonings. J Feline Med Surg. 2007"],
                 relatedEntries: ["c9d0e1f2-3a4b-5c6d-e7f8-9a0b1c2d3e4f"]
             ),
 
@@ -4329,7 +4330,8 @@ class DatabaseService {
                     SpeciesRisk(species: .dog, severity: .low, notes: "Very well tolerated. Dogs given 5 times the topical dose or 41 mg/kg/day orally for one year showed no adverse effects. Main concern is taste reaction from licking. Safe for pregnant and nursing dogs."),
                     SpeciesRisk(species: .cat, severity: .low, notes: "Very well tolerated when using CAT-SPECIFIC products. Cats are more prone to licking and may show more drooling. Do not use products containing permethrin on cats (some combination products like K9 Advantix contain permethrin and are for dogs only)."),
                     SpeciesRisk(species: .smallMammal, severity: .low, notes: "Imidacloprid is approved for use on rabbits and ferrets at appropriate doses. It is the only flea product authorized for rabbits in many countries."),
-                    SpeciesRisk(species: .bird, severity: .low, notes: "Low toxicity to birds based on available data.")
+                    SpeciesRisk(species: .bird, severity: .low, notes: "Low toxicity to birds based on available data."),
+                    SpeciesRisk(species: .reptile, severity: .low, notes: "Limited toxicity data exists for reptiles. Studies on Chinese lizards (Eremias argus) documented neurotoxic effects and gonadal damage at experimental doses. Neonicotinoids are designed to bind more strongly to insect receptors than vertebrate receptors, resulting in lower toxicity to reptiles compared to insects. However, reptile-specific research is limited. Contact an exotic animal veterinarian if significant exposure occurs.")
                 ],
                 preventionTips: [
                     "Apply spot-on treatments to the back of the neck where pets cannot lick",
@@ -4340,7 +4342,7 @@ class DatabaseService {
                     "Do not use on puppies under 7 weeks or kittens under 8 weeks of age",
                     "Store flea products securely away from pets"
                 ],
-                sources: ["VIN Prescriber Highlights: Imidacloprid", "Merck Veterinary Manual: Neonicotinoid Toxicosis in Animals", "VCA Hospitals: Imidacloprid - Topical", "Parasitipedia: Imidacloprid Safety Summary"],
+                sources: ["ASPCA Animal Poison Control Center", "Merck Veterinary Manual: Neonicotinoid Toxicosis in Animals", "VCA Hospitals: Imidacloprid - Topical", "Pet Poison Helpline: Imidacloprid", "NPIC: Imidacloprid General Fact Sheet", "Parasitipedia: Imidacloprid Safety Summary"],
                 relatedEntries: ["c9d0e1f2-3a4b-5c6d-e7f8-9a0b1c2d3e4f"]
             ),
 
@@ -4373,7 +4375,8 @@ class DatabaseService {
                     SpeciesRisk(species: .dog, severity: .low, notes: "Very well tolerated. Dogs given 5 times the topical dose or 0.5 mg/kg/day orally for 13 weeks showed no adverse effects. Main concern is taste reaction from licking. Safe for pregnant and nursing dogs."),
                     SpeciesRisk(species: .cat, severity: .low, notes: "Very well tolerated at label doses. Cats given 5 times the topical dose showed no adverse effects. Do not use on kittens under 8 weeks of age."),
                     SpeciesRisk(species: .smallMammal, severity: .severe, notes: "⚠️ DANGEROUS TO RABBITS. Fipronil has been associated with deaths in rabbits and should NEVER be used on them. Use imidacloprid-based products (Advantage) for rabbits instead."),
-                    SpeciesRisk(species: .bird, severity: .high, notes: "Birds are significantly more sensitive to fipronil than mammals. Oral LD50 values are 31 mg/kg in pheasants and 11.3 mg/kg in bobwhite quail (compared to 97 mg/kg in rats). Keep pet birds away from treated animals.")
+                    SpeciesRisk(species: .bird, severity: .high, notes: "Birds are significantly more sensitive to fipronil than mammals. Oral LD50 values are 31 mg/kg in pheasants and 11.3 mg/kg in bobwhite quail (compared to 97 mg/kg in rats). Keep pet birds away from treated animals."),
+                    SpeciesRisk(species: .reptile, severity: .high, notes: "Fipronil is documented as highly toxic to reptiles, particularly lizards. Research shows an LD50 of just 30 micrograms per gram body weight in lacertid lizards. A green iguana death has been reported from fipronil exposure. Studies on bearded dragons showed fipronil reduced activity by nearly 50% and the toxin persisted in blood for over 4 weeks. Reptiles have lower cytochrome P450 activity, impairing their ability to clear the toxin. Never use fipronil-containing flea products near reptile enclosures. Seek immediate veterinary care if exposure occurs.")
                 ],
                 preventionTips: [
                     "Apply spot-on treatments to the back of the neck where pets cannot lick",
@@ -4385,7 +4388,7 @@ class DatabaseService {
                     "Follow label weight restrictions",
                     "Store flea products securely away from pets"
                 ],
-                sources: ["VIN Prescriber Highlights: Fipronil", "Merck Veterinary Manual: Phenylpyrazole (Fipronil) Toxicosis in Animals", "EPA: Fipronil Safety Determination for Dogs and Cats"],
+                sources: ["ASPCA Animal Poison Control Center", "Merck Veterinary Manual: Phenylpyrazole (Fipronil) Toxicosis in Animals", "Pet Poison Helpline: Fipronil", "EPA: Fipronil Safety Determination for Dogs and Cats", "NPIC: Fipronil General Fact Sheet"],
                 relatedEntries: ["c9d0e1f2-3a4b-5c6d-e7f8-9a0b1c2d3e4f"]
             ),
 
