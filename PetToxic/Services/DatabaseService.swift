@@ -7634,7 +7634,6 @@ class DatabaseService {
                     "Inform guests about medication safety, especially those with chronic pain prescriptions"
                 ],
                 sources: [
-                    "VIN (Veterinary Information Network): Opioid Toxicosis Monograph",
                     "Merck Veterinary Manual: Toxicities from Illicit and Abused Drugs — Opioids",
                     "Pet Poison Helpline: Opioids & Opiates Toxicity in Dogs",
                     "ASPCA Animal Poison Control Center: Human Prescription Medications",
@@ -7816,7 +7815,6 @@ class DatabaseService {
                     "Dispose of expired or unused ADHD medications at pharmacy take-back programs"
                 ],
                 sources: [
-                    "VIN (Veterinary Information Network): Lisdexamfetamine and Amphetamines Monographs",
                     "ASPCA Animal Poison Control Center: ADHD Medication Dangers in Pets",
                     "Pet Poison Helpline: Amphetamines and Methylphenidate Toxicity",
                     "VCA Animal Hospitals: Behavioral Health Medication Poisoning",
@@ -8051,7 +8049,6 @@ class DatabaseService {
                     "Inform pet sitters and houseguests about medication safety around your pets"
                 ],
                 sources: [
-                    "VIN (Veterinary Information Network): Cardiac Medications Toxicity",
                     "Pet Poison Helpline: Calcium Channel Blockers, Beta-Blockers, ACE Inhibitors, Cardiac Glycosides",
                     "Merck Veterinary Manual: Toxicoses from Cardiovascular Medications",
                     "ASPCA APCC: Calcium Channel Blocker Toxicity in Dogs and Cats",
