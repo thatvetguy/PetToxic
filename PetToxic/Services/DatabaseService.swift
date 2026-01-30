@@ -4043,10 +4043,11 @@ class DatabaseService {
             ToxicItem(
                 id: UUID(uuidString: "a7d3e8f2-6b4c-4a1e-9f5d-2c8b7a3e6d1f")!,
                 name: "Slug & Snail Bait (Metaldehyde)",
-                alternateNames: ["slug bait", "snail bait", "slug pellets", "snail pellets", "slug killer", "snail killer", "metaldehyde", "metaldehyde poisoning", "molluscicide", "slug poison", "snail poison", "garden slug bait", "slug and snail bait", "Deadline", "Slug-Tox", "Bug-Geta", "Sluggo Plus", "Corry's Slug & Snail Killer", "camping stove fuel", "solid fuel tablets", "camp stove fuel", "Esbit fuel tablets"],
+                alternateNames: ["slug bait", "snail bait", "slug pellets", "snail pellets", "slug killer", "snail killer", "metaldehyde", "metaldehyde poisoning",
+"metaldahyde", "molluscicide", "slug poison", "snail poison", "garden slug bait", "slug and snail bait", "Deadline", "Slug-Tox", "Bug-Geta", "Sluggo Plus", "Corry's Slug & Snail Killer", "camping stove fuel", "solid fuel tablets", "camp stove fuel", "Esbit fuel tablets"],
                 categories: [.garageGarden],
                 imageAsset: "slug_snail_thumb",
-                description: "Metaldehyde is the primary toxic ingredient in most commercial slug and snail baits used in gardens. It is extremely toxic to dogs, cats, birds, and wildlife. The baits are typically formulated as pellets, granules, powders, or liquids, and often contain bran or molasses to attract slugs and snails—unfortunately, these additives also make the bait highly attractive to pets, especially dogs.\n\nMetaldehyde is also found in solid fuel tablets used for camping stoves and lamps, particularly products from Europe where concentrations can be much higher than in garden baits.\n\nThis poisoning is classically described as \"shake and bake\" because affected animals develop severe muscle tremors or seizures combined with dangerously elevated body temperature. There is NO specific antidote for metaldehyde poisoning. Very small amounts can cause life-threatening toxicosis—ingestion of less than a teaspoon of bait can be fatal in small dogs.\n\nDogs are far more commonly affected than cats, likely due to their less discriminating eating habits, but cats can also be poisoned if they walk through treated areas and groom the product off their paws.",
+                description: "Metaldehyde is the primary toxic ingredient in most commercial slug and snail baits used in gardens. It is extremely toxic to dogs, cats, birds, and wildlife. The baits are typically formulated as pellets, granules, powders, or liquids, and often contain bran or molasses to attract slugs and snails—unfortunately, these additives also make the bait highly attractive to pets, especially dogs.\n\nMetaldehyde is also found in solid fuel tablets used for camping stoves and lamps, particularly products from Europe where concentrations can be much higher than in garden baits.\n\nMost slug baits come as distinctive blue or green pellets — if your pet has eaten something matching this description, contact poison control immediately and mention metaldehyde.\n\nSlug bait poisoning peaks in spring and fall when slugs are most active and gardeners are most likely to apply these products.\n\nThis poisoning is classically described as \"shake and bake\" because affected animals develop severe muscle tremors or seizures combined with dangerously elevated body temperature. There is NO specific antidote for metaldehyde poisoning. Very small amounts can cause life-threatening toxicosis—ingestion of less than a teaspoon of bait can be fatal in small dogs.\n\nDogs are far more commonly affected than cats, likely due to their less discriminating eating habits, but cats can also be poisoned if they walk through treated areas and groom the product off their paws.\n\n⚠️ NOTE ON \"PET-SAFE\" ALTERNATIVES: Iron phosphate-based baits (such as Sluggo®) are marketed as pet-safe, but large ingestions can still cause GI upset or iron toxicity. No slug bait should be considered completely safe for pets.",
                 toxicityInfo: "Metaldehyde is a neurotoxin that affects the central nervous system. The exact mechanism is not fully understood, but it appears to affect GABA (an inhibitory neurotransmitter) and lower the seizure threshold. After ingestion, metaldehyde readily crosses the blood-brain barrier.\n\nThe severe muscle tremors and seizures cause body temperature to rise to dangerous levels (hyperthermia), which can lead to organ damage, metabolic acidosis, and multi-organ failure. Even pets that survive the initial neurological crisis may develop liver failure days later, though this is uncommon.\n\nThere is NO specific antidote. Treatment focuses on controlling tremors, managing body temperature, and supportive care. Early veterinary intervention dramatically improves outcomes.",
                 onsetTime: OnsetTime(
                     early: "30 minutes to 3 hours — anxiety, muscle twitching, hypersalivation, vomiting",
@@ -4074,7 +4075,9 @@ class DatabaseService {
                 speciesRisks: [
                     SpeciesRisk(species: .dog, severity: .severe, notes: "Dogs are most commonly affected due to their indiscriminate eating habits. The bran and molasses in baits are highly attractive to dogs. Even very small amounts can be fatal."),
                     SpeciesRisk(species: .cat, severity: .severe, notes: "Less commonly affected than dogs, but equally susceptible to toxicity. Cats may be exposed by walking through treated areas and grooming metaldehyde off their paws. Nystagmus (rapid eye movements) is particularly noted in cats."),
-                    SpeciesRisk(species: .bird, severity: .severe, notes: "Birds are highly susceptible to metaldehyde poisoning. Backyard poultry and wild birds can be affected by consuming bait pellets or poisoned slugs/snails.")
+                    SpeciesRisk(species: .bird, severity: .severe, notes: "Birds are highly susceptible to metaldehyde poisoning. Backyard poultry and wild birds can be affected by consuming bait pellets or poisoned slugs/snails."),
+                    SpeciesRisk(species: .smallMammal, severity: .severe, notes: "Small mammals are extremely susceptible due to their small body size. The 'shake and bake' syndrome (tremors plus hyperthermia) affects all mammals. Any exposure is a medical emergency."),
+                    SpeciesRisk(species: .reptile, severity: .high, notes: "Metaldehyde is a neurotoxin that can affect reptiles. Limited clinical data exists, but the mechanism of toxicity applies across vertebrates. Contact a reptile-experienced veterinarian immediately for any exposure.")
                 ],
                 preventionTips: [
                     "Store all slug and snail baits in sealed containers in locked cabinets inaccessible to pets",
@@ -4087,8 +4090,8 @@ class DatabaseService {
                     "Use non-chemical slug deterrents: copper bands around plants, crushed eggshells, lava rock, or beer traps",
                     "If your pet has access to areas where slugs are common, inspect regularly for any bait products"
                 ],
-                sources: ["VIN Toxicology Resources: Metaldehyde Toxicosis", "ASPCA Animal Poison Control Center: Tips for Treating Metaldehyde Poisoning", "Merck Veterinary Manual: Metaldehyde Poisoning in Animals", "Pet Poison Helpline / VCA Hospitals: Metaldehyde Toxicity (Slug Bait Poisoning)", "Bates NS, et al. Suspected metaldehyde slug bait poisoning in dogs: a retrospective analysis. Vet Rec. 2012"],
-                relatedEntries: nil
+                sources: ["ASPCA Animal Poison Control Center: Tips for Treating Metaldehyde Poisoning", "Merck Veterinary Manual: Metaldehyde Poisoning in Animals", "Pet Poison Helpline / VCA Hospitals: Metaldehyde Toxicity (Slug Bait Poisoning)", "Bates NS, et al. Suspected metaldehyde slug bait poisoning in dogs: a retrospective analysis. Vet Rec. 2012"],
+                relatedEntries: ["c9d0e1f2-3a4b-5c6d-e7f8-9a0b1c2d3e4f"]
             ),
 
             // MARK: - Expanding Glues (Gorilla Glue)
@@ -4141,10 +4144,10 @@ class DatabaseService {
             ToxicItem(
                 id: UUID(uuidString: "c3f5a8b2-7d4e-4f1a-b6c9-2e8d7f4a5b3c")!,
                 name: "Fertilizers",
-                alternateNames: ["lawn fertilizer", "garden fertilizer", "plant food", "plant fertilizer", "bone meal", "blood meal", "fish meal", "feather meal", "organic fertilizer", "rose fertilizer", "Miracle-Gro", "Scotts fertilizer", "lawn food", "garden soil", "potting soil with fertilizer", "slow release fertilizer", "granular fertilizer", "liquid fertilizer", "NPK fertilizer", "nitrogen fertilizer", "iron fertilizer", "compost fertilizer"],
+                alternateNames: ["lawn fertilizer", "garden fertilizer", "plant food", "plant fertilizer", "bone meal", "blood meal", "fish meal", "feather meal", "organic fertilizer", "rose fertilizer", "Miracle-Gro", "Scotts fertilizer", "lawn food", "garden soil", "potting soil with fertilizer", "slow release fertilizer", "granular fertilizer", "liquid fertilizer", "NPK fertilizer", "nitrogen fertilizer", "iron fertilizer", "compost fertilizer", "weed and feed", "weed & feed"],
                 categories: [.garageGarden],
                 imageAsset: "fertilizers_thumb",
-                description: "Lawn and garden fertilizers are among the most common products pets are exposed to. Basic fertilizers containing nitrogen, phosphorus, and potassium (N-P-K) generally have a wide margin of safety and typically cause only mild gastrointestinal upset. However, certain types of fertilizers and additives pose more serious risks.\n\n**Organic fertilizers** such as bone meal and blood meal are highly palatable to dogs—they will often tear open bags to eat large quantities. Bone meal can form a cement-like mass (bezoar) in the stomach that may require surgical removal. Blood meal can cause severe pancreatitis and may contain added iron.\n\n**Combination products** are a major concern: some fertilizers (especially rose fertilizers) contain organophosphate insecticides like disulfoton, which are extremely toxic—as little as one teaspoon of 1% disulfoton can kill a large dog.\n\nAlways check product labels carefully, as fertilizers are often mixed with herbicides, insecticides, or other additives that significantly increase toxicity.",
+                description: "Lawn and garden fertilizers are among the most common products pets are exposed to. Basic fertilizers containing nitrogen, phosphorus, and potassium (N-P-K) generally have a wide margin of safety and typically cause only mild gastrointestinal upset. However, certain types of fertilizers and additives pose more serious risks.\n\n**Organic fertilizers** such as bone meal and blood meal are highly palatable to dogs—they will often tear open bags to eat large quantities. Bone meal can form a cement-like mass (bezoar) in the stomach that may require surgical removal. Blood meal can cause severe pancreatitis and may contain added iron.\n\n**Combination products** are a major concern: some fertilizers (especially rose fertilizers) contain organophosphate insecticides like disulfoton, which are extremely toxic—as little as one teaspoon of 1% disulfoton can kill a large dog.\n\nAlways check product labels carefully, as fertilizers are often mixed with herbicides, insecticides, or other additives that significantly increase toxicity.\n\n**\"Weed and feed\" products** combine fertilizers with herbicides — if your pet ingests one of these, you're dealing with two types of potential toxicity. Always identify the specific product before calling your veterinarian.\n\nFertilizer exposures peak in spring (planting season) and fall (lawn winterizing).",
                 toxicityInfo: "The toxicity of fertilizers varies greatly by type:\n\n**Basic N-P-K fertilizers:** Low toxicity; cause mild GI irritation. Once properly applied and dried, treated lawns pose minimal risk.\n\n**Bone meal:** Forms a hard, cement-like mass in the stomach that cannot be digested or vomited. Can cause gastrointestinal obstruction requiring surgery. Also associated with pancreatitis.\n\n**Blood meal:** Contains approximately 12% nitrogen. Can cause vomiting, diarrhea, and severe pancreatitis. Some products are fortified with iron, adding risk of iron toxicity.\n\n**Iron-containing fertilizers:** Elemental iron can cause iron toxicity with vomiting, bloody diarrhea, and potential cardiac and liver effects.\n\n**Organophosphate-containing products:** Rose and systemic fertilizers may contain disulfoton or other organophosphates that cause severe cholinergic toxicity (salivation, urination, defecation, tremors, seizures, death).\n\n**Moldy fertilizers:** Old or improperly stored fertilizers can develop mold that produces tremorgenic mycotoxins.",
                 onsetTime: OnsetTime(
                     early: "Few hours — vomiting, diarrhea, muscle stiffness with basic fertilizers; minutes to hours with organophosphates",
@@ -4171,7 +4174,9 @@ class DatabaseService {
                 speciesRisks: [
                     SpeciesRisk(species: .dog, severity: .moderate, notes: "Dogs are most commonly affected because they find organic fertilizers (bone meal, blood meal) highly palatable and will often eat large quantities directly from bags. Risk increases significantly with combination products containing organophosphates."),
                     SpeciesRisk(species: .cat, severity: .low, notes: "Cats are less commonly affected as they are typically less interested in eating fertilizers. However, they can be exposed by walking through treated areas and grooming their paws."),
-                    SpeciesRisk(species: .bird, severity: .moderate, notes: "Birds may be exposed to fertilizers in outdoor environments. Small body size increases risk from smaller exposures.")
+                    SpeciesRisk(species: .bird, severity: .moderate, notes: "Birds may be exposed to fertilizers in outdoor environments. Small body size increases risk from smaller exposures."),
+                    SpeciesRisk(species: .smallMammal, severity: .moderate, notes: "Rabbits, guinea pigs, and other small mammals face similar GI risks. Bone meal poses obstruction risk. Small body size means smaller amounts can cause problems."),
+                    SpeciesRisk(species: .reptile, severity: .low, notes: "Reptiles are unlikely to consume fertilizers directly. Risk mainly from contaminated water sources or substrate. Contact a reptile-experienced veterinarian if exposure occurs.")
                 ],
                 preventionTips: [
                     "Store all fertilizer bags in sealed containers in locked cabinets or areas completely inaccessible to pets",
@@ -4185,8 +4190,11 @@ class DatabaseService {
                     "Wipe pets' paws after walks if you suspect they've walked through treated areas",
                     "If your pet ingests fertilizer, try to identify the specific product and ingredients before calling your veterinarian"
                 ],
-                sources: ["VIN Toxicology Resources: Fertilizers and Bone/Blood Meal", "ASPCA Animal Poison Control Center: Fertilizers: A Growing Problem for Pets", "Pet Poison Helpline: Bone Meal & Blood Meal Toxicity", "PetMD: My Dog Ate Fertilizer", "DVM360: Spring Toxin - Fertilizers"],
-                relatedEntries: ["e5f6a7b8-9c0d-4e1f-b2a3-4c5d6e7f8a9b"]
+                sources: ["ASPCA Animal Poison Control Center: Fertilizers: A Growing Problem for Pets", "Pet Poison Helpline: Bone Meal & Blood Meal Toxicity", "PetMD: My Dog Ate Fertilizer", "DVM360: Spring Toxin - Fertilizers"],
+                relatedEntries: [
+                    "e5f6a7b8-9c0d-4e1f-b2a3-4c5d6e7f8a9b",
+                    "b4c5d6e7-8f9a-0b1c-2d3e-4f5a6b7c8d9e"
+                ]
             ),
 
             // MARK: - Pyrethrins & Pyrethroids (Permethrin)
@@ -4539,7 +4547,7 @@ class DatabaseService {
                     "Cover or remove fish tanks when using any pesticide sprays indoors"
                 ],
                 sources: ["ASPCA Animal Poison Control Center", "Pet Poison Helpline", "Merck Veterinary Manual: Insecticide Toxicosis"],
-                relatedEntries: ["d4e5f6a7-8b9c-4d0e-a1b2-3c4d5e6f7a8b", "e5f6a7b8-9c0d-4e1f-b2a3-4c5d6e7f8a9b", "f6a7b8c9-0d1e-4f2a-b3c4-5d6e7f8a9b0c", "a7b8c9d0-1e2f-4a3b-c4d5-6e7f8a9b0c1d", "d0e1f2a3-4b5c-6d7e-f8a9-0b1c2d3e4f5a", "b8c9d0e1-2f3a-4b5c-d6e7-8f9a0b1c2d3e", "b4c5d6e7-8f9a-0b1c-2d3e-4f5a6b7c8d9e"]
+                relatedEntries: ["d4e5f6a7-8b9c-4d0e-a1b2-3c4d5e6f7a8b", "e5f6a7b8-9c0d-4e1f-b2a3-4c5d6e7f8a9b", "f6a7b8c9-0d1e-4f2a-b3c4-5d6e7f8a9b0c", "a7b8c9d0-1e2f-4a3b-c4d5-6e7f8a9b0c1d", "d0e1f2a3-4b5c-6d7e-f8a9-0b1c2d3e4f5a", "b8c9d0e1-2f3a-4b5c-d6e7-8f9a0b1c2d3e", "b4c5d6e7-8f9a-0b1c-2d3e-4f5a6b7c8d9e", "a7d3e8f2-6b4c-4a1e-9f5d-2c8b7a3e6d1f"]
             ),
 
             // MARK: - Rodenticides (Overview)
@@ -4637,8 +4645,8 @@ class DatabaseService {
                 alternateNames: ["Weed killer", "Weed killers", "Roundup", "Glyphosate", "2,4-D", "Dicamba", "Triclopyr", "Weed-B-Gon", "Weed and feed", "Lawn herbicide", "Brush killer", "Vegetation killer", "Grass killer", "Crabgrass killer", "Dandelion killer", "Broadleaf weed killer", "Pre-emergent herbicide", "Post-emergent herbicide"],
                 categories: [.garageGarden],
                 imageAsset: "herbicides_thumb",
-                description: "Herbicides are chemicals used to control unwanted plants and weeds. Over 200 active ingredients are used in herbicide products, with varying levels of toxicity. Common active ingredients include glyphosate (Roundup), 2,4-D, dicamba, and triclopyr. Most modern herbicides have relatively low acute toxicity to mammals when used as directed, but exposure to concentrated products or recently treated vegetation can cause gastrointestinal upset and, in some cases, more serious effects. Pets are typically exposed by walking on treated lawns and then licking their paws, or by eating treated grass.",
-                toxicityInfo: "Most household herbicides have a wide safety margin, and serious poisoning is uncommon when products are used as directed. Glyphosate (found in Roundup) is generally considered low toxicity but can cause GI upset, especially when vegetation is still wet. The 2,4-D family of herbicides can cause more significant effects including vomiting, diarrhea, loss of appetite, muscle weakness, and incoordination; severe exposures may cause seizures. The surfactants and other 'inert' ingredients in herbicide formulations can be more irritating than the active ingredients themselves. The greatest risk is from exposure to concentrated products or freshly sprayed vegetation before it has dried.",
+                description: "Herbicides are chemicals used to control unwanted plants and weeds. Over 200 active ingredients are used in herbicide products, with varying levels of toxicity. Common active ingredients include glyphosate (Roundup), 2,4-D, dicamba, and triclopyr. Most modern herbicides have relatively low acute toxicity to mammals when used as directed, but exposure to concentrated products or recently treated vegetation can cause gastrointestinal upset and, in some cases, more serious effects. Pets are typically exposed by walking on treated lawns and then licking their paws, or by eating treated grass.\n\n**Important:** Herbicide residue can be reactivated by rain or irrigation even after initially drying. Keep pets off treated areas until after the next watering AND complete drying.",
+                toxicityInfo: "Most household herbicides have a wide safety margin, and serious poisoning is uncommon when products are used as directed.\n\n⚠️ EXCEPTION — PARAQUAT: This is an extremely toxic restricted-use herbicide sometimes encountered in agricultural areas. Paraquat poisoning is a medical emergency with a high fatality rate. If you suspect paraquat exposure, contact poison control immediately. Glyphosate (found in Roundup) is generally considered low toxicity but can cause GI upset, especially when vegetation is still wet. The 2,4-D family of herbicides can cause more significant effects including vomiting, diarrhea, loss of appetite, muscle weakness, and incoordination; severe exposures may cause seizures. The surfactants and other 'inert' ingredients in herbicide formulations can be more irritating than the active ingredients themselves. The greatest risk is from exposure to concentrated products or freshly sprayed vegetation before it has dried.",
                 onsetTime: OnsetTime(
                     early: "GI signs (vomiting, drooling, diarrhea) typically appear within 30 minutes to a few hours of exposure",
                     delayed: "Neurological signs from 2,4-D or paraquat exposure may develop 24-48 hours after ingestion; liver or kidney effects may take days to manifest"
@@ -4666,7 +4674,7 @@ class DatabaseService {
                     SpeciesRisk(species: .reptile, severity: .moderate, notes: "Risk from contaminated water or prey items; limited direct data available")
                 ],
                 preventionTips: [
-                    "Keep pets off treated lawns until the product has completely dried (typically 24-48 hours)",
+                    "Keep pets off treated lawns until the product has completely dried (typically 24-48 hours), and again after rain or irrigation until fully dry",
                     "Store all herbicides in original containers in a secure location",
                     "Read and follow all label directions—many specify when it's safe for pets to re-enter treated areas",
                     "Rinse your pet's paws after walks if you suspect they've crossed treated areas",
@@ -4675,7 +4683,10 @@ class DatabaseService {
                     "Never let pets drink from puddles in areas that may have been treated"
                 ],
                 sources: ["Merck Veterinary Manual", "ASPCA Animal Poison Control Center", "Pet Poison Helpline", "PetMD", "National Pesticide Information Center"],
-                relatedEntries: ["c9d0e1f2-3a4b-5c6d-e7f8-9a0b1c2d3e4f"]
+                relatedEntries: [
+                    "c9d0e1f2-3a4b-5c6d-e7f8-9a0b1c2d3e4f",
+                    "c3f5a8b2-7d4e-4f1a-b6c9-2e8d7f4a5b3c"
+                ]
             ),
 
             // MARK: - Mothballs
