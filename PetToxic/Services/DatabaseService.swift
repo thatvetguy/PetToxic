@@ -588,18 +588,18 @@ class DatabaseService {
                     "Store cooking grease and drippings securely before disposal"
                 ],
                 sources: ["Pet Poison Helpline", "ASPCA Animal Poison Control Center", "Merck Veterinary Manual", "American Veterinary Medical Association (JAVMA)"],
-                relatedEntries: nil
+                relatedEntries: ["59cf7dc4-5d83-4811-97f1-ce1d0162cd28"]
             ),
 
             // MARK: - Cooked Bones
             ToxicItem(
                 id: UUID(uuidString: "59cf7dc4-5d83-4811-97f1-ce1d0162cd28")!,
                 name: "Cooked Bones",
-                alternateNames: ["chicken bones", "turkey bones", "pork bones", "beef bones cooked", "rib bones", "poultry bones", "fish bones", "lamb bones cooked", "ham bones", "steak bones", "pork chop bones", "t-bone", "drumstick bones", "wing bones", "spare ribs"],
+                alternateNames: ["chicken bones", "turkey bones", "pork bones", "beef bones cooked", "rib bones", "poultry bones", "fish bones", "lamb bones cooked", "ham bones", "steak bones", "pork chop bones", "t-bone", "drumstick bones", "wing bones", "spare ribs", "rotisserie chicken bones", "turkey carcass", "wishbone", "bone splinters", "bone fragments"],
                 categories: [.informational, .foods],
                 imageAsset: "cooked_bones_thumb",
                 description: "Cooked bones from meat, poultry, or fish are common table scraps that pose serious mechanical hazards to pets. Cooking causes bones to become brittle and prone to splintering into sharp fragments when chewed.",
-                toxicityInfo: "Cooked bones are not toxic, but they present dangerous mechanical risks. When cooked, bones lose moisture and become brittle, causing them to splinter into sharp shards when chewed. These fragments can cause lacerations to the mouth, throat, and digestive tract; become lodged in the esophagus or intestines causing obstruction; or perforate the stomach or intestinal wall, leading to life-threatening peritonitis (infection of the abdominal cavity). Bone fragments may require endoscopic removal or emergency surgery.",
+                toxicityInfo: "Cooked bones are not toxic, but they present dangerous mechanical risks. When cooked, bones lose moisture and become brittle, causing them to splinter into sharp shards when chewed. These fragments can cause lacerations to the mouth, throat, and digestive tract; become lodged in the esophagus or intestines causing obstruction; or perforate the stomach or intestinal wall, leading to life-threatening peritonitis (infection of the abdominal cavity). Bone fragments may require endoscopic removal or emergency surgery. Poultry bones (chicken, turkey, duck) are hollow and splinter especially easily into sharp, needle-like fragments, making them particularly dangerous compared to denser mammal bones. Fish bones are thin and sharp, and can easily become lodged in a cat's throat or esophagus—cats should never be given fish with bones intact. The FDA has issued a consumer update warning that bones of any size can be dangerous to dogs and may result in emergency surgery or death. If bone fragments perforate the intestinal wall, bacteria can leak into the abdomen causing peritonitis—a life-threatening infection requiring emergency surgery. Thanksgiving and Christmas see increased cooked bone ingestion cases as leftover turkey and ham bones become accessible to pets rummaging through trash or receiving table scraps.",
                 onsetTime: OnsetTime(
                     early: "Choking, gagging, or oral injuries may occur immediately during or after chewing",
                     delayed: "Signs of obstruction or perforation may develop 12-72 hours after ingestion; some cases may not show symptoms for several days"
@@ -633,7 +633,7 @@ class DatabaseService {
                     "If you want to give your dog a bone, consult your veterinarian about appropriate raw bone options and supervision requirements"
                 ],
                 sources: ["ASPCA Animal Poison Control Center", "Pet Poison Helpline", "American Kennel Club", "FDA (U.S. Food and Drug Administration)"],
-                relatedEntries: nil
+                relatedEntries: ["00112233-4455-6677-8899-aabbccddef19", "2e094121-64ea-499c-bfb4-6db98f139b55"]
             ),
 
             // MARK: - Milk & Dairy Products
@@ -763,7 +763,7 @@ class DatabaseService {
                     "A single swallowed pit may pass without issue, but contact your vet for guidance, especially for smaller dogs"
                 ],
                 sources: ["ASPCA Animal Poison Control Center", "Pet Poison Helpline", "Poison Control (poison.org)", "BirdTricks"],
-                relatedEntries: nil
+                relatedEntries: ["00112233-4455-6677-8899-aabbccddef19"]
             ),
 
             // MARK: - Moldy Foods
@@ -4855,7 +4855,7 @@ class DatabaseService {
                     "Coughing or respiratory distress (if esophageal perforation occurs)",
                     "Collapse (severe cases)"
                 ],
-                entrySeverity: .severe,
+                entrySeverity: .high,
                 speciesRisks: [
                     SpeciesRisk(species: .dog, severity: .severe, notes: "Dogs commonly ingest button batteries; esophageal lodgment causes rapid, severe burns; immediate veterinary care essential"),
                     SpeciesRisk(species: .cat, severity: .severe, notes: "Less common than dogs but equally dangerous if ingested; cats' smaller esophagus increases lodgment risk"),
@@ -5511,8 +5511,8 @@ class DatabaseService {
                     "If you suspect your pet swallowed magnets, try to determine exactly how many are missing—this information is critical for your veterinarian",
                     "Rare earth magnets (small, silver, very strong) are more dangerous than traditional ceramic refrigerator magnets"
                 ],
-                sources: ["Veterinary Information Network (VIN)", "ASPCA Animal Poison Control Center", "Journal of Veterinary Emergency and Critical Care", "Pet Poison Helpline"],
-                relatedEntries: nil
+                sources: ["ASPCA Animal Poison Control Center", "Journal of Veterinary Emergency and Critical Care", "Pet Poison Helpline"],
+                relatedEntries: ["00112233-4455-6677-8899-aabbccddef19"]
             ),
 
             // MARK: - Superglue
@@ -10027,12 +10027,18 @@ class DatabaseService {
                     "cat ate thread",
                     "dog ate string",
                     "string hanging from mouth",
-                    "string coming out of cat"
+                    "string coming out of cat",
+                    "carpet fibers",
+                    "Berber carpet",
+                    "pantyhose",
+                    "underwear",
+                    "thong",
+                    "socks unraveling"
                 ],
                 categories: [.informational],
                 imageAsset: "strings_thumb",
                 description: "Linear foreign bodies are long, thin materials that pets — especially cats — may swallow. Common culprits include thread (particularly with a needle attached), yarn, ribbon, tinsel, dental floss, string, and hair ties. Unlike other swallowed objects, linear materials pose a unique and serious danger because they can anchor at one point in the digestive tract while the rest continues moving through the intestines. This is a PHYSICAL emergency, not a toxicity. When a linear object anchors (often at the base of the tongue or in the stomach), intestinal contractions continue trying to move it forward. This causes the intestines to 'bunch up' or plicate along the string like fabric on a drawstring. The bunched intestines can lose blood supply, become damaged, and eventually perforate (develop holes), leading to life-threatening peritonitis (abdominal infection). LINEAR FOREIGN BODIES ARE GENERALLY MORE DANGEROUS THAN NON-LINEAR FOREIGN OBJECTS because of this plication and perforation risk. Surgery is almost always required. If a needle is attached to thread, it may puncture the intestinal wall at any point along its path. WARNING: If you see string coming from your pet's mouth or anus, DO NOT PULL IT. Pulling can cause the intestines to tear or bunch up further, potentially causing fatal damage. Cut the visible portion close to the body and seek emergency veterinary care immediately.",
-                toxicityInfo: "This is a PHYSICAL hazard, not a chemical toxicity. The danger is mechanical damage to the gastrointestinal tract. MECHANISM OF INJURY: When a linear object anchors at one point (commonly the base of the tongue in cats, or the pylorus/stomach outlet), normal intestinal peristalsis continues trying to move the free end forward. Because the anchored end cannot move, the intestines 'bunch up' or plicate along the string. This plication: 1) Compromises blood supply to sections of intestine; 2) Causes pressure necrosis of intestinal wall; 3) Leads to perforation (holes) and leakage of intestinal contents; 4) Results in septic peritonitis (abdominal infection) — a life-threatening emergency. If a needle is attached, it may puncture the intestinal wall at any point. WHY LINEAR IS WORSE: Unlike a ball or toy that may pass or cause a single point obstruction, linear objects cause damage along their entire length. Multiple perforations are possible. Surgery almost always requires removing damaged sections of intestine.",
+                toxicityInfo: "This is a PHYSICAL hazard, not a chemical toxicity. The danger is mechanical damage to the gastrointestinal tract. MECHANISM OF INJURY: When a linear object anchors at one point (commonly the base of the tongue in cats, or the pylorus/stomach outlet), normal intestinal peristalsis continues trying to move the free end forward. Because the anchored end cannot move, the intestines 'bunch up' or plicate along the string. This plication: 1) Compromises blood supply to sections of intestine; 2) Causes pressure necrosis of intestinal wall; 3) Leads to perforation (holes) and leakage of intestinal contents; 4) Results in septic peritonitis (abdominal infection) — a life-threatening emergency. If a needle is attached, it may puncture the intestinal wall at any point. WHY LINEAR IS WORSE: Unlike a ball or toy that may pass or cause a single point obstruction, linear objects cause damage along their entire length. Multiple perforations are possible. Surgery almost always requires removing damaged sections of intestine. Cats are particularly vulnerable because their rough, backward-facing tongue papillae make it nearly impossible to spit out string once it enters the mouth—the string can only move backward toward the throat. On X-rays, veterinarians look for a characteristic 'string of pearls' or 'accordion' pattern—this bunched appearance of the intestines indicates plication caused by a linear foreign body. In cats, one end of the string often becomes anchored under the tongue at the frenulum; veterinarians routinely check under the tongue when examining vomiting cats for this reason. Ferrets are notorious for ingesting soft, string-like materials and should never have access to fabric toys or loose threads. Veterinary emergency clinics see a sharp increase in linear foreign body cases during the holiday season, when tinsel, ribbon, and gift-wrapping materials are abundant in homes.",
                 onsetTime: OnsetTime(
                     early: "Vomiting may begin within hours if the object causes obstruction or irritation; some pets show no initial signs. String may be visible at the mouth or under the tongue.",
                     delayed: "Severe signs (abdominal pain, fever, collapse) develop as plication worsens and perforation occurs — this can take 1-7 days depending on how quickly the string causes damage. By the time severe signs appear, emergency surgery is required."
@@ -10091,12 +10097,12 @@ class DatabaseService {
                     "If you see string from your pet's mouth or anus, DO NOT PULL — cut the visible portion and seek emergency veterinary care"
                 ],
                 sources: [
-                    "Veterinary Information Network (VIN) — Linear Foreign Bodies",
                     "ASPCA Animal Poison Control Center",
                     "American College of Veterinary Surgeons — Gastrointestinal Foreign Bodies",
-                    "Pet Poison Helpline"
+                    "Pet Poison Helpline",
+                    "VCA Animal Hospitals"
                 ],
-                relatedEntries: nil
+                relatedEntries: ["00112233-4455-6677-8899-aabbccddef21", "00112233-4455-6677-8899-aabbccddef19"]
             ),
 
             // MARK: - Skunk Spray
@@ -11936,7 +11942,11 @@ Washington State University Veterinary Clinical Pharmacology Laboratory offers t
                     "sweetcorn cob",
                     "BBQ hazard",
                     "barbecue hazard",
-                    "summer cookout hazard"
+                    "summer cookout hazard",
+                    "corn husk",
+                    "sweetcorn",
+                    "maize",
+                    "corn on cob"
                 ],
                 categories: [.informational],
                 imageAsset: "corn_cob_thumb",
@@ -11964,7 +11974,7 @@ Veterinary ERs see spikes around Memorial Day, Fourth of July, and Labor Day whe
 **CATS:**
 Cats rarely eat corn cobs due to selective eating habits.
 """,
-                toxicityInfo: "NOT TOXIC—this is a PHYSICAL HAZARD causing intestinal obstruction. Corn cobs do NOT dissolve or soften in the digestive system. The cylindrical shape wedges tightly in intestines, and the rough, fibrous texture prevents natural movement. Once lodged, the cob blocks food and fluid passage. Without treatment, intestinal tissue can lose blood supply and die. Surgery is often required.",
+                toxicityInfo: "NOT TOXIC—this is a PHYSICAL HAZARD causing intestinal obstruction. Corn cobs do NOT dissolve or soften in the digestive system. The cylindrical shape wedges tightly in intestines, and the rough, fibrous texture prevents natural movement. Once lodged, the cob blocks food and fluid passage. Without treatment, intestinal tissue can lose blood supply and die. Surgery is often required. Corn cobs can remain in a dog's stomach for days, weeks, or even months before causing obstruction—symptoms may appear long after the ingestion occurred. Corn cobs can be visible on X-rays, though they are not always easy to identify; veterinarians may use ultrasound for additional evaluation. Veterinary emergency rooms see a spike in corn cob cases around Memorial Day, Fourth of July, and Labor Day—prime BBQ and cookout season. Dogs often find discarded corn cobs in trash cans, compost piles, or dropped at outdoor gatherings, and many dogs swallow the cob quickly before owners can intervene.",
                 onsetTime: OnsetTime(
                     early: "Vomiting may begin within hours",
                     delayed: "Complete obstruction signs typically within 24-72 hours"
@@ -11995,6 +12005,21 @@ Cats rarely eat corn cobs due to selective eating habits.
                         species: .cat,
                         severity: .low,
                         notes: "Cats rarely ingest corn cobs due to their selective eating habits."
+                    ),
+                    SpeciesRisk(
+                        species: .bird,
+                        severity: .low,
+                        notes: "Birds do not consume corn cobs. This is not a relevant hazard for avian species."
+                    ),
+                    SpeciesRisk(
+                        species: .smallMammal,
+                        severity: .moderate,
+                        notes: "Corn cobs have been marketed as 'enrichment' items for small mammals, but they are not digestible. Rabbits, guinea pigs, and rodents can develop GI impaction if large pieces are consumed."
+                    ),
+                    SpeciesRisk(
+                        species: .reptile,
+                        severity: .low,
+                        notes: "Reptiles do not consume corn cobs. Not a relevant hazard for reptilian species."
                     )
                 ],
                 preventionTips: [
@@ -12005,12 +12030,12 @@ Cats rarely eat corn cobs due to selective eating habits.
                     "Compost corn cobs in fenced or covered bins only"
                 ],
                 sources: [
-                    "Veterinary Information Network (VIN)",
                     "American Kennel Club",
                     "VCA Animal Hospitals",
-                    "BluePearl Specialty and Emergency Pet Hospital"
+                    "BluePearl Specialty and Emergency Pet Hospital",
+                    "Merck Veterinary Manual"
                 ],
-                relatedEntries: nil
+                relatedEntries: ["00112233-4455-6677-8899-aabbccddef03", "f1369ae0-b97d-424d-98b7-b46a9b245109", "59cf7dc4-5d83-4811-97f1-ce1d0162cd28", "e1f2a3b4-5c6d-7e8f-9a0b-1c2d3e4f5a6b", "00112233-4455-6677-8899-aabbccddef21"]
             ),
 
             // MARK: - Foxtails (Grass Awns)
@@ -12209,12 +12234,11 @@ Narrower intestines make obstruction more likely even with smaller items.
                     "Keep diaper pails secured or behind closed doors"
                 ],
                 sources: [
-                    "Veterinary Information Network (VIN)",
                     "VCA Animal Hospitals",
                     "American Kennel Club",
                     "PetMD"
                 ],
-                relatedEntries: nil
+                relatedEntries: ["00112233-4455-6677-8899-aabbccddef19", "00112233-4455-6677-8899-aabbccddef03"]
             ),
 
             // MARK: - Inhalant Toxicity (Birds & Respiratory Hazards)
