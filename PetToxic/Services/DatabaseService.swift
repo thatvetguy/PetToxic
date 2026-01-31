@@ -4638,7 +4638,7 @@ class DatabaseService {
                     "Consider alternatives like bromine which is slightly less irritating to pets"
                 ],
                 sources: ["ASPCA Animal Poison Control Center", "Pet Poison Helpline", "American Kennel Club", "VCA Animal Hospitals"],
-                relatedEntries: nil
+                relatedEntries: ["22334455-6677-8899-aabb-ccddeeff0011"]
             ),
 
             // MARK: - Herbicides
@@ -4857,7 +4857,7 @@ class DatabaseService {
                     "Check children's toys and holiday decorations for accessible battery compartments"
                 ],
                 sources: ["ASPCA Animal Poison Control Center", "Pet Poison Helpline", "Merck Veterinary Manual", "National Capital Poison Center"],
-                relatedEntries: ["b2c3d4e5-6f7a-8b9c-0d1e-2f3a4b5c6d7e", "00112233-4455-6677-8899-aabbccddef23"]
+                relatedEntries: ["b2c3d4e5-6f7a-8b9c-0d1e-2f3a4b5c6d7e", "00112233-4455-6677-8899-aabbccddef23", "33445566-7788-99aa-bbcc-ddeeff001122"]
             ),
 
             // MARK: - Alkaline Batteries
@@ -5862,8 +5862,8 @@ class DatabaseService {
                 ],
                 categories: [.cleaningProducts],
                 imageAsset: "mild_soaps_thumb",
-                description: "Soaps and mild detergents—including hand soap, dish soap, shampoo, and body wash—are among the most common household products pets encounter. These products contain anionic or non-ionic surfactants, which are gastrointestinal irritants but have very low systemic toxicity. While ingestion typically causes only mild, self-limiting symptoms like drooling, vomiting, or diarrhea, these products can also cause eye irritation if splashed into the eyes. Mild detergents are very different from cationic detergents (found in fabric softeners and some disinfectants), which are more corrosive and dangerous.",
-                toxicityInfo: "Anionic and non-ionic detergents found in most household soaps and dish detergents have low toxicity. They work by disrupting surface tension, which can irritate the gastrointestinal tract and cause vomiting or diarrhea. However, these effects are typically mild and self-limiting. Large ingestions may cause more significant vomiting (occasionally with blood) and can lead to dehydration if vomiting is prolonged. A more serious concern is aspiration—if a pet inhales liquid detergent during vomiting, it can cause chemical pneumonitis with respiratory distress. Eye exposure causes mild irritation but rarely results in corneal injury. These products are fundamentally different from concentrated detergent pods, automatic dishwasher detergent, or cationic detergents—all of which are more dangerous.",
+                description: "Soaps and mild detergents—including hand soap, dish soap, shampoo, and body wash—are among the most common household products pets encounter. These products contain anionic or non-ionic surfactants, which are gastrointestinal irritants but have very low systemic toxicity. While ingestion typically causes only mild, self-limiting symptoms like drooling, vomiting, or diarrhea, these products can also cause eye irritation if splashed into the eyes. Notably, Dawn dish soap is specifically used by wildlife rescuers to safely clean oil from animals—a testament to its relative gentleness compared to other cleaning products. However, 'natural' or plant-based soaps still contain surfactants and cause the same GI irritation as conventional products—marketing claims do not change the chemistry. Mild detergents are very different from cationic detergents (found in fabric softeners and some disinfectants), which are more corrosive and dangerous.",
+                toxicityInfo: "Anionic and non-ionic detergents found in most household soaps and dish detergents have low toxicity. They work by disrupting surface tension, which can irritate the gastrointestinal tract and cause vomiting or diarrhea. However, these effects are typically mild and self-limiting. Large ingestions may cause more significant vomiting (occasionally with blood) and can lead to dehydration if vomiting is prolonged. A more serious concern is aspiration—if a pet inhales liquid detergent during vomiting, it can cause chemical pneumonitis with respiratory distress. The foaming action of these products increases aspiration risk, as the suds created during vomiting can more easily enter the airways. Eye exposure causes mild irritation but rarely results in corneal injury. These products are fundamentally different from concentrated detergent pods, automatic dishwasher detergent, or cationic detergents—all of which are more dangerous.",
                 onsetTime: OnsetTime(
                     early: "Drooling, vomiting, and mild GI upset typically appear within 15-30 minutes of ingestion",
                     delayed: "Symptoms usually resolve within a few hours; prolonged vomiting may cause dehydration"
@@ -5892,7 +5892,7 @@ class DatabaseService {
                     "Don't leave buckets of soapy water unattended—curious pets may drink from them",
                     "If soap contacts your pet's eyes, flush gently with water and contact your veterinarian if irritation persists"
                 ],
-                sources: ["Veterinary Information Network (VIN)", "ASPCA Animal Poison Control Center", "Merck Veterinary Manual", "Pet Poison Helpline"],
+                sources: ["ASPCA Animal Poison Control Center", "Merck Veterinary Manual", "Pet Poison Helpline"],
                 relatedEntries: ["b8c9d0e1-2f3a-4b5c-6d7e-8f9a0b1c2d3e", "44556677-8899-aabb-ccdd-eeff00112233", "55667788-99aa-bbcc-ddee-ff0011223344", "99001122-aabb-ccdd-eeff-334455667788"]
             ),
 
@@ -5924,7 +5924,7 @@ class DatabaseService {
                 categories: [.cleaningProducts],
                 imageAsset: "bleach_thumb",
                 description: "Bleach is one of the most common household cleaning products, used for disinfection and stain removal. Household liquid bleach typically contains 3-6% sodium hypochlorite with a pH around 11, making it a mild-to-moderate irritant. Most pet exposures involve diluted bleach (from mopping water or cleaned surfaces) and cause only mild symptoms. However, concentrated bleach products, 'ultra' bleach (>6% concentration), and pool chlorination products (up to 70-80% concentration) can cause significant corrosive injury. Color-safe or 'oxygen' bleaches contain hydrogen peroxide or percarbonates instead of chlorine and tend to cause more vomiting but are generally less corrosive.",
-                toxicityInfo: "The severity of bleach exposure depends on concentration, pH, and the amount ingested. Diluted household bleach typically causes only mild gastrointestinal irritation—drooling, vomiting, and possibly diarrhea. Concentrated products with sodium hypochlorite above 10% or pH above 11 can cause burns to the mouth, esophagus, and stomach. Color-safe bleaches release hydrogen peroxide on contact with water, often causing protracted vomiting but rarely serious injury at household concentrations. Inhalation of bleach fumes can irritate the respiratory tract, causing coughing, wheezing, and difficulty breathing. A critical safety note: mixing bleach with ammonia-containing products produces toxic chloramine gas, which can cause severe respiratory distress in both pets and humans.",
+                toxicityInfo: "The severity of bleach exposure depends on concentration, pH, and the amount ingested. Diluted household bleach typically causes only mild gastrointestinal irritation—drooling, vomiting, and possibly diarrhea. Concentrated products with sodium hypochlorite above 10% or pH above 11 can cause burns to the mouth, esophagus, and stomach. Color-safe bleaches release hydrogen peroxide on contact with water, often causing protracted vomiting but rarely serious injury at household concentrations. Inhalation of bleach fumes can irritate the respiratory tract, causing coughing, wheezing, and difficulty breathing. Important: Many cats are attracted to the smell of chlorine and may roll on freshly bleached surfaces or lick areas cleaned with bleach—this is a common and often unexpected exposure route. A critical safety note: mixing bleach with ammonia-containing products produces toxic chloramine gas, which can cause severe respiratory distress in both pets and humans.",
                 onsetTime: OnsetTime(
                     early: "Drooling, vomiting, and oral irritation typically appear within minutes of ingestion; eye or skin irritation is immediate",
                     delayed: "Respiratory symptoms from fume inhalation may develop over several hours; esophageal strictures are a rare late complication of severe burns"
@@ -5958,8 +5958,8 @@ class DatabaseService {
                     "Rinse pet bowls, toys, and bedding thoroughly after disinfecting with bleach",
                     "Use extra caution with birds—even diluted bleach fumes can cause respiratory distress"
                 ],
-                sources: ["Veterinary Information Network (VIN)", "ASPCA Animal Poison Control Center", "Merck Veterinary Manual", "Pet Poison Helpline"],
-                relatedEntries: ["66778899-aabb-ccdd-eeff-001122334455"]
+                sources: ["ASPCA Animal Poison Control Center", "Merck Veterinary Manual", "Pet Poison Helpline"],
+                relatedEntries: ["66778899-aabb-ccdd-eeff-001122334455", "a3b4c5d6-7e8f-9a0b-1c2d-3e4f5a6b7c8d"]
             ),
 
             // MARK: - Drain Cleaners & Caustic Alkalis
@@ -5974,8 +5974,6 @@ class DatabaseService {
                     "Caustic soda",
                     "Sodium hydroxide",
                     "Potassium hydroxide",
-                    "Oven cleaner",
-                    "Easy-Off",
                     "Industrial cleaner",
                     "Pipe cleaner",
                     "Clog remover",
@@ -5990,7 +5988,7 @@ class DatabaseService {
                 categories: [.cleaningProducts],
                 imageAsset: "drain_cleaner_thumb",
                 description: "Drain cleaners and other strongly alkaline products are among the most dangerous household chemicals pets can encounter. Products containing sodium hydroxide (lye), potassium hydroxide, or ammonium hydroxide with pH greater than 11 can cause severe, penetrating chemical burns. Unlike acids, which cause immediate pain that often limits exposure, alkaline products cause little pain on initial contact—allowing pets to swallow more before realizing something is wrong. The alkali rapidly penetrates deep into tissue, causing liquefactive necrosis (tissue dissolution). Damage continues for hours after exposure, and the full extent of injury may not be apparent for up to 12 hours. Esophageal burns, perforation, and stricture formation are serious risks.",
-                toxicityInfo: "Strongly alkaline substances (pH >11) cause liquefactive necrosis—they dissolve fats, denature proteins, and penetrate deeply into tissue layers. This is fundamentally different from acidic burns, which cause surface coagulation that somewhat limits penetration. Because alkaline products are often tasteless and cause little immediate pain, pets may swallow significant amounts before showing distress. The initial injury can worsen for up to 12 hours as the alkali continues to penetrate tissue. Esophageal involvement is more common with alkaline products than with acids. Burns may initially appear white or gray, then turn black. Potential complications include esophageal or gastric perforation, secondary infection, and esophageal stricture formation during healing. CRITICAL: Do not induce vomiting—this re-exposes the esophagus to the caustic material. Do not attempt to neutralize with acids—this produces an exothermic reaction causing thermal burns.",
+                toxicityInfo: "Strongly alkaline substances (pH >11) cause liquefactive necrosis—they dissolve fats, denature proteins, and penetrate deeply into tissue layers. This is fundamentally different from acidic burns, which cause surface coagulation that somewhat limits penetration. Because alkaline products are often tasteless and cause little immediate pain, pets may swallow significant amounts before showing distress. The initial injury can worsen for up to 12 hours as the alkali continues to penetrate tissue. Granular or crystal drain cleaners may be even more dangerous than liquid forms—the crystals can adhere to moist tissue and concentrate the caustic burn at contact points. Some drain cleaners contain aluminum that reacts with lye to generate heat and hydrogen gas, causing thermal burns on top of the chemical injury. Esophageal involvement is more common with alkaline products than with acids. Burns may initially appear white or gray, then turn black. Potential complications include esophageal or gastric perforation, secondary infection, and esophageal stricture formation during healing. CRITICAL: Do not induce vomiting—this re-exposes the esophagus to the caustic material. Do not attempt to neutralize with acids—this produces an exothermic reaction causing thermal burns.",
                 onsetTime: OnsetTime(
                     early: "Drooling, vocalization, and difficulty swallowing may appear immediately or within minutes; however, significant pain and visible oral burns may be delayed",
                     delayed: "Full extent of tissue damage may not be apparent for 12 hours; esophageal strictures can develop weeks later during healing"
@@ -6028,8 +6026,8 @@ class DatabaseService {
                     "Consider using enzymatic or mechanical drain cleaning methods as safer alternatives",
                     "If working with wet concrete or cement, keep pets away from the work area until fully cured"
                 ],
-                sources: ["Veterinary Information Network (VIN)", "ASPCA Animal Poison Control Center", "Merck Veterinary Manual", "Pet Poison Helpline", "MSD Veterinary Manual"],
-                relatedEntries: ["44556677-8899-aabb-ccdd-eeff00112233", "66778899-aabb-ccdd-eeff-001122334455", "77889900-aabb-ccdd-eeff-112233445566"]
+                sources: ["ASPCA Animal Poison Control Center", "Merck Veterinary Manual", "Pet Poison Helpline", "MSD Veterinary Manual"],
+                relatedEntries: ["44556677-8899-aabb-ccdd-eeff00112233", "66778899-aabb-ccdd-eeff-001122334455", "77889900-aabb-ccdd-eeff-112233445566", "a1b2c3d4-5e6f-7a8b-9c0d-1e2f3a4b5c6d"]
             ),
 
             // MARK: - Automatic Dishwasher Detergent
@@ -7586,7 +7584,7 @@ class DatabaseService {
                     "dog ate cough syrup",
                     "collie ate Imodium"
                 ],
-                categories: [.medications],
+                categories: [.medications, .recreationalSubstances],
                 imageAsset: "opioids_thumb",
                 description: "Opioids are powerful pain-relieving medications that act on opioid receptors in the brain and body. This class includes prescription pain medications (Vicodin, Percocet, OxyContin), fentanyl patches, tramadol, cough suppressants containing codeine or hydrocodone, and anti-diarrheal medications (Imodium, Lomotil). Opioids are rapidly absorbed and can cause life-threatening effects, particularly respiratory depression (slowed breathing). COMBINATION PRODUCTS: Many opioids are combined with acetaminophen (Percocet, Vicodin, Tylenol #3) or ibuprofen (Vicoprofen), which add significant toxicity — especially acetaminophen, which is deadly to cats at very small amounts. FENTANYL PATCHES: Dogs may chew on transdermal fentanyl patches. Even used patches contain substantial residual fentanyl and can cause severe poisoning or death if chewed.\n\n⚠️ ILLICIT FENTANYL: With the ongoing opioid crisis, pets are increasingly exposed to illicit fentanyl in the form of powders, counterfeit pills, or residue on surfaces. Even tiny amounts of illicit fentanyl can be lethal to pets. If you suspect your pet has been exposed to any illicit drug, seek emergency veterinary care immediately and inform the veterinarian of the suspected substance. MDR1/ABCB1 MUTATION: Collies, Australian Shepherds, Shetland Sheepdogs, and related herding breeds may carry a genetic mutation that prevents them from excluding certain drugs (including loperamide/Imodium) from the brain. These dogs can experience severe, life-threatening neurological toxicity from opioids at much lower doses. SPECIES DIFFERENCES: Cats, horses, cattle, and swine may show CNS EXCITATION rather than depression after opioid exposure.\n\n⚠️ KRATOM: Kratom (Mitragyna speciosa) is an herbal substance that acts on opioid receptors and can cause similar toxicity. It is sold as capsules, powders, and teas. Pets exposed to kratom may show sedation, agitation, vomiting, tremors, or seizures.",
                 toxicityInfo: "Opioids produce their effects by binding to mu, kappa, and delta opioid receptors found in the brain, spinal cord, and gastrointestinal tract. This causes pain relief, sedation, respiratory depression, and decreased GI motility. CNS Depression: The primary effect in most dogs is CNS depression — sedation, drowsiness, weakness, and incoordination. In severe cases, animals may become unresponsive or comatose. Respiratory depression (dangerously slow or shallow breathing) is the most life-threatening effect. CNS Excitation (Cats and Other Species): Instead of sedation, cats may show excitement, agitation, restlessness, and hyperactivity. This paradoxical reaction also occurs in horses, cattle, and swine. Pupil Changes: Dogs typically develop pinpoint pupils (miosis), while cats may have dilated pupils. GI Effects: Vomiting commonly occurs shortly after ingestion, followed by constipation (opioids slow gut motility). MDR1/ABCB1 Mutation: Dogs with this genetic mutation (common in Collies and related breeds) cannot effectively pump certain drugs out of the central nervous system. Loperamide (Imodium) is particularly dangerous in these dogs, causing severe neurological depression, ataxia, drooling, blindness, and potentially death at doses that would be safe in other dogs. Serotonin Syndrome (Tramadol): Tramadol inhibits serotonin reuptake in addition to its opioid effects. When combined with other serotonergic drugs (SSRIs, SNRIs, tricyclic antidepressants), it can precipitate serotonin syndrome. Cats Metabolize Slowly: Due to deficient glucuronidation, cats may have prolonged drug effects from some opioids.",
