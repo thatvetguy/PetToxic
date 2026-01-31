@@ -11217,7 +11217,7 @@ Most common spring through early summer when adult ticks are active. Peak in som
 Tick paralysis has NOT been reported in domestic cats in North America. While cats can get tick-borne diseases, they do not develop tick paralysis from North American tick species. (Australian Ixodes holocyclus DOES cause tick paralysis in cats but is not present in North America.)
 
 **PROGNOSIS:**
-Approximately 95% of affected dogs survive with prompt treatment. Fatalities occur when ticks are not discovered or treatment is delayed.
+With prompt tick removal and appropriate care, most affected dogs recover fully. Fatalities occur when ticks are not discovered or treatment is delayed.
 """,
                 toxicityInfo: "Neurotoxin secreted in tick saliva during feeding blocks nerve-to-muscle signal transmission, causing ascending paralysis. Requires 5-9 days of tick attachment—toxin not present in early feeding stages. A SINGLE tick can cause paralysis. FULLY REVERSIBLE with prompt tick removal; most dogs recover within 24-72 hours. Tick paralysis affects dogs but has NOT been reported in domestic cats in North America.",
                 onsetTime: OnsetTime(
@@ -11249,12 +11249,27 @@ Approximately 95% of affected dogs survive with prompt treatment. Fatalities occ
                     SpeciesRisk(
                         species: .dog,
                         severity: .moderate,
-                        notes: "Dogs are susceptible to tick paralysis from Dermacentor species. Ascending paralysis develops after 5-9 days of tick attachment. FULLY REVERSIBLE—most dogs recover within 24-72 hours of tick removal. ~95% survival rate. Long-haired dogs at higher risk because ticks harder to detect."
+                        notes: "Dogs are susceptible to tick paralysis from Dermacentor species. Ascending paralysis develops after 5-9 days of tick attachment. FULLY REVERSIBLE—most dogs recover within 24-72 hours of tick removal. Long-haired dogs at higher risk because ticks harder to detect."
                     ),
                     SpeciesRisk(
                         species: .cat,
                         severity: .low,
                         notes: "Tick paralysis has NOT been reported in domestic cats in North America. Cats can still get tick-borne diseases but do not develop paralysis from North American tick species. (Different situation in Australia with Ixodes holocyclus.)"
+                    ),
+                    SpeciesRisk(
+                        species: .bird,
+                        severity: .low,
+                        notes: "Tick paralysis has not been documented in pet birds. Feathers may provide some protection from tick attachment. Seek avian veterinary care if a tick is found on a bird showing weakness."
+                    ),
+                    SpeciesRisk(
+                        species: .smallMammal,
+                        severity: .moderate,
+                        notes: "Tick paralysis has been documented in rabbits and other small mammals. Small body size may increase vulnerability to the neurotoxin effects. Check small mammals for ticks regularly during tick season and seek veterinary care for any signs of weakness or paralysis."
+                    ),
+                    SpeciesRisk(
+                        species: .reptile,
+                        severity: .low,
+                        notes: "Tick paralysis has not been documented in pet reptiles. While reptiles can host ticks, their scales may limit tick attachment to softer areas. Consult an exotic animal veterinarian if a tick is found on a reptile."
                     )
                 ],
                 preventionTips: [
@@ -11267,7 +11282,6 @@ Approximately 95% of affected dogs survive with prompt treatment. Fatalities occ
                     "Wooded and grassy areas are highest risk"
                 ],
                 sources: [
-                    "Veterinary Information Network (VIN)",
                     "Merck Veterinary Manual",
                     "ASPCA Animal Poison Control Center",
                     "Veterinary Partner (VIN)",
@@ -11703,7 +11717,7 @@ Water hemlock: 3-6 feet tall near WATER sources, hollow stems with chambered roo
                     "Toxicodendron",
                     "leaves of three"
                 ],
-                categories: [.plants],
+                categories: [.plants, .outdoorHazards, .informational],
                 imageAsset: "poison_ivy_thumb",
                 description: """
 Poison ivy, poison oak, and poison sumac contain urushiol, an oily resin that causes an itchy, blistering rash in most humans. The good news: dogs and cats are RARELY affected. However, pets can carry the oil on their fur and transfer it to their owners.
@@ -11754,32 +11768,32 @@ Poison sumac: 7-13 leaflets in pairs with one at tip; grows in swampy areas.
                     "Drooling",
                     "Weakness (rare, large ingestion)"
                 ],
-                entrySeverity: .low,
+                entrySeverity: nil,
                 speciesRisks: [
                     SpeciesRisk(
                         species: .dog,
                         severity: .low,
-                        notes: "Dogs rarely develop reactions. Fur protects skin from urushiol oil. ASPCA classifies as non-toxic. Main concern is transferring oil to owners."
+                        notes: "Dogs rarely develop reactions to urushiol oil. Their fur protects skin from direct contact. The main concern is transferring oil to owners when petted."
                     ),
                     SpeciesRisk(
                         species: .cat,
                         severity: .low,
-                        notes: "Cats rarely develop reactions. Fur protects skin from urushiol oil. Main concern is transferring oil to owners."
+                        notes: "Cats rarely develop reactions to urushiol oil. Their fur protects skin from direct contact. The main concern is transferring oil to owners when petted."
                     ),
                     SpeciesRisk(
                         species: .bird,
                         severity: .low,
-                        notes: "Birds are largely protected from urushiol by their feathers; unfeathered areas (feet, around beak) could potentially be irritated by direct contact; the main concern is birds transferring oil to owners when handled"
+                        notes: "Birds are largely protected from urushiol by their feathers. Unfeathered areas could potentially be irritated by direct contact. The main concern is birds transferring oil to owners when handled."
                     ),
                     SpeciesRisk(
                         species: .smallMammal,
                         severity: .low,
-                        notes: "Small mammals are protected by their fur similar to dogs and cats; allergic contact dermatitis is uncommon; the primary concern is that they can carry urushiol oil on their coat and transfer it to humans"
+                        notes: "Small mammals are protected by their fur similar to dogs and cats. Allergic contact dermatitis is uncommon. The primary concern is that they can carry urushiol oil on their coat and transfer it to humans."
                     ),
                     SpeciesRisk(
                         species: .reptile,
                         severity: .low,
-                        notes: "Reptile scales provide protection from urushiol contact; herbivorous reptiles kept in outdoor enclosures may contact these plants; the main concern is oil transfer to handlers rather than harm to the reptile"
+                        notes: "Reptile scales provide protection from urushiol contact. Herbivorous reptiles in outdoor enclosures may contact these plants. The main concern is oil transfer to handlers rather than harm to the reptile."
                     )
                 ],
                 preventionTips: [
