@@ -10447,12 +10447,15 @@ class DatabaseService {
                     "dog bitten by snake",
                     "cat bitten by snake",
                     "dog snake bite",
-                    "cat snake bite"
+                    "cat snake bite",
+                    "swollen face dog",
+                    "snake bit my dog",
+                    "dog snake bite swelling"
                 ],
                 categories: [.outdoorHazards],
                 imageAsset: "pit_vipers_thumb",
-                description: "Pit viper envenomation occurs when a pet is bitten by a venomous snake in the Crotalinae subfamily, which includes rattlesnakes, copperheads, and water moccasins (cottonmouths). These snakes account for approximately 99% of venomous snake bites in the United States, with an estimated 150,000 or more companion animals bitten annually. Pit vipers are found throughout most of the continental US — only Maine, Alaska, and Hawaii lack native venomous snakes. Approximately 90% of bites occur between April and October. Pit viper venom contains enzymes and toxins that destroy tissue, impair blood clotting, and can cause life-threatening systemic effects. THIS IS A MEDICAL EMERGENCY REQUIRING IMMEDIATE VETERINARY CARE. ANTIVENOM is the only treatment that directly neutralizes snake venom and is most effective when administered within the first 4-6 hours after a bite. DO: Get to an emergency veterinarian IMMEDIATELY — call ahead if possible so they can prepare antivenom. Keep your pet as calm and still as possible during transport (activity spreads venom faster). Carry your pet if possible. Remove collars if the bite is on the neck/head and swelling rapidly. DO NOT: Wait to see if symptoms develop. Attempt to capture, kill, or identify the snake. Apply ice, heat, tourniquets, or suction devices. Cut the wound or try to suck out venom. Even if you're unsure whether the snake was venomous, treat all snake bites as emergencies.",
-                toxicityInfo: "Pit viper venom is a complex mixture of over 50 enzymes and toxins including myotoxins (muscle damage), cytotoxins (cell death), hemorrhagic toxins (bleeding), and in some species like the Mojave rattlesnake, potent neurotoxins. Hyaluronidase breaks down connective tissue, allowing venom to spread rapidly. Phospholipase A disrupts cell membranes and releases inflammatory mediators. The venom destroys blood vessel walls, causes blood to pool abnormally (in splanchnic vessels in dogs, pulmonary vessels in cats), and impairs the blood's ability to clot. Disseminated intravascular coagulopathy (DIC), hemolysis, acute kidney failure, and cardiovascular collapse can occur. DRY BITES: Bites without venom injection occur in approximately 20-25% of pit viper bites, but this CANNOT be determined at the time of the bite — all snake bites must be treated as emergencies. SPECIES TOXICITY: Rattlesnakes are most dangerous (especially Mojave with neurotoxin), then water moccasins, then copperheads. Venom toxicity also varies by snake size and whether the snake recently fed.",
+                description: "Pit viper envenomation occurs when a pet is bitten by a venomous snake in the Crotalinae subfamily, which includes rattlesnakes, copperheads, and water moccasins (cottonmouths). These snakes account for approximately 99% of venomous snake bites in the United States, with an estimated 150,000 or more companion animals bitten annually. Pit vipers are found throughout most of the continental US — only Maine, Alaska, and Hawaii lack native venomous snakes. Approximately 90% of bites occur between April and October. Pit viper venom contains enzymes and toxins that destroy tissue, impair blood clotting, and can cause life-threatening systemic effects. THIS IS A MEDICAL EMERGENCY REQUIRING IMMEDIATE VETERINARY CARE. THIS IS A TIME-CRITICAL EMERGENCY. Outcomes are significantly better with early treatment — do not wait to see if symptoms develop. DO: Get to an emergency veterinarian IMMEDIATELY — call ahead if possible so they can prepare antivenom. Keep your pet as calm and still as possible during transport (activity spreads venom faster). Carry your pet if possible. Remove collars if the bite is on the neck/head and swelling rapidly. DO NOT: Wait to see if symptoms develop. Attempt to capture, kill, or identify the snake. Apply ice, heat, tourniquets, or suction devices. Cut the wound or try to suck out venom. Even if you're unsure whether the snake was venomous, treat all snake bites as emergencies. Dogs are most commonly bitten on the face, muzzle, and front legs while investigating snakes. Approximately 150,000 dogs are bitten by venomous snakes in the U.S. each year. Dogs often do not learn to avoid snakes even after being bitten — repeat encounters are common.",
+                toxicityInfo: "Pit viper venom is a complex mixture of over 50 enzymes and toxins including myotoxins (muscle damage), cytotoxins (cell death), hemorrhagic toxins (bleeding), and in some species like the Mojave rattlesnake, potent neurotoxins. Hyaluronidase breaks down connective tissue, allowing venom to spread rapidly. Phospholipase A disrupts cell membranes and releases inflammatory mediators. The venom destroys blood vessel walls, causes blood to pool abnormally (in splanchnic vessels in dogs, pulmonary vessels in cats), and impairs the blood's ability to clot. Disseminated intravascular coagulopathy (DIC), hemolysis, acute kidney failure, and cardiovascular collapse can occur. DRY BITES: Some pit viper bites may deliver little or no venom ('dry bites'), but this cannot be determined at the time of the bite — all bites require immediate emergency care. SPECIES TOXICITY: Rattlesnakes are most dangerous (especially Mojave with neurotoxin), then water moccasins, then copperheads. Venom toxicity also varies by snake size and whether the snake recently fed.",
                 onsetTime: OnsetTime(
                     early: "Local signs (swelling, pain, bleeding at bite site) typically appear within minutes to 2 hours. Systemic signs can develop rapidly. Without treatment, severely envenomated animals may die within the first 2 hours.",
                     delayed: "Symptoms can be delayed up to 6-8 hours in some cases. If an animal appears normal 24 hours after a suspected bite, death from direct venom effects is unlikely — but tissue necrosis and infection can develop over the following days to weeks."
@@ -10490,7 +10493,7 @@ class DatabaseService {
                     SpeciesRisk(
                         species: .dog,
                         severity: .severe,
-                        notes: "Dogs are the most commonly affected domestic animals and have higher bite rates than any other pet. Small dogs are at significantly higher risk due to the larger venom-to-body-weight ratio. Bites to the tongue, chest, or abdomen carry higher risk than bites to limbs or face. Dogs bitten by rattlesnakes with neurotoxic venom (such as Mojave rattlesnakes) may develop respiratory paralysis. SEEK EMERGENCY VETERINARY CARE IMMEDIATELY — antivenom is most effective when given within the first 4-6 hours."
+                        notes: "Dogs are the most commonly affected domestic animals and have higher bite rates than any other pet. Dogs are most commonly bitten on the face, muzzle, and front legs while investigating snakes. Approximately 150,000 dogs are bitten by venomous snakes in the U.S. each year. Dogs often do not learn to avoid snakes even after being bitten — repeat encounters are common. Small dogs are at significantly higher risk due to the larger venom-to-body-weight ratio. Bites to the tongue, chest, or abdomen carry higher risk than bites to limbs or face. Dogs bitten by rattlesnakes with neurotoxic venom (such as Mojave rattlesnakes) may develop respiratory paralysis. SEEK EMERGENCY VETERINARY CARE IMMEDIATELY — early veterinary treatment dramatically improves outcomes."
                     ),
                     SpeciesRisk(
                         species: .cat,
@@ -10500,7 +10503,7 @@ class DatabaseService {
                     SpeciesRisk(
                         species: .bird,
                         severity: .severe,
-                        notes: "Birds are highly vulnerable to snake envenomation due to their small body size. Seek immediate avian veterinary care if exposure is suspected."
+                        notes: "Birds are highly vulnerable to snake envenomation due to their small body size. Limited veterinary case data available for birds. Seek immediate avian veterinary care if exposure is suspected."
                     ),
                     SpeciesRisk(
                         species: .smallMammal,
@@ -10521,14 +10524,12 @@ class DatabaseService {
                     "Keep your yard clear of debris, woodpiles, and tall grass that provide snake habitat",
                     "Rattlesnakes are found throughout the US; copperheads range from New England to Texas; water moccasins are found in the Southeast from Virginia to Texas",
                     "Arizona has the highest concentration of rattlesnake species (13 different species) in the US",
-                    "A rattlesnake vaccine (Crotalus Atrox Toxoid) is available for dogs — discuss with your veterinarian whether it is appropriate; NOTE: the vaccine does NOT eliminate the need for emergency veterinary care if a bite occurs",
-                    "Coral snakes (red-yellow-black banded) are found in the Southeast and Southwest — remember 'red touches yellow, kills a fellow' to distinguish from harmless look-alikes",
+                    "A rattlesnake vaccine exists for dogs (consult your veterinarian about whether it's appropriate for your pet's risk level). Vaccinated dogs still require emergency care if bitten.",
                     "If you encounter a snake, back away slowly — do not attempt to kill or capture it"
                 ],
                 sources: [
-                    "Veterinary Information Network (VIN) — Viperid Envenomation",
                     "Merck Veterinary Manual — Snakebite",
-                    "ASPCA Professional — Treating Snake Bites in Pets",
+                    "ASPCA Animal Poison Control Center — Treating Snake Bites in Pets",
                     "VCA Animal Hospitals — Snakebite Envenomization",
                     "Today's Veterinary Practice — Pit Viper Envenomation in a Dog (2022)",
                     "PetMD — Pit Viper Bite Poisoning in Dogs"
@@ -10548,7 +10549,10 @@ class DatabaseService {
                     "eastern coral snake",
                     "Texas coral snake",
                     "Arizona coral snake",
-                    "Sonoran coral snake"
+                    "Sonoran coral snake",
+                    "coral snake dog",
+                    "red yellow black snake",
+                    "banded snake bite"
                 ],
                 categories: [.outdoorHazards],
                 imageAsset: "coral_snake_thumb",
@@ -10556,8 +10560,8 @@ class DatabaseService {
 Coral snakes are elapids with potent NEUROTOXIC venom distinct from pit viper hemotoxic venom. Three species exist in the US: Eastern coral snake (Micrurus fulvius) in Southeast, Texas coral snake (M. tener) in Texas/Louisiana, and Arizona/Sonoran coral snake (Micruroides euryxanthus) in Southwest.
 
 **Critical Identification:**
-- Color pattern: Red-yellow-black bands ("red touches yellow, kills a fellow")
-- Small head, round pupils, small fixed fangs
+- Color pattern: Red-yellow-black bands. The rhyme 'red touches yellow, kills a fellow; red touches black, venom lack' can help identify North American coral snakes, but is not reliable for all subspecies or regions outside the continental U.S. When in doubt, avoid any brightly banded snake.
+- Small head, round pupils, small fixed fangs — coral snakes have small, fixed fangs and tend to chew rather than strike quickly. Bites often occur on paws or nose when pets investigate.
 - Non-aggressive but will bite if stepped on or handled
 - King snakes (harmless mimics): red touches black bands
 
@@ -10568,19 +10572,16 @@ Coral snake venom contains alpha-neurotoxins that block acetylcholine receptors 
 - Signs may be DELAYED 10-18 hours after bite
 - Once neurological signs appear, they progress rapidly
 - Respiratory paralysis can develop within 24-72 hours
-- Early treatment BEFORE symptom onset improves prognosis
+- Early treatment BEFORE symptom onset is critical — do not wait for symptoms to develop
 
-**Antivenom Situation:**
-- Pfizer discontinued production in 2010
-- North American Coral Snake Antivenin (equine-derived) has limited availability
-- No FDA-approved canine-specific product
-- Some facilities may have expired stock (still used in emergencies)
-- Mexican coral snake antivenom may be available in border states
+Seek emergency veterinary care immediately — specialized treatment is available and most effective before symptoms appear.
 
 **Geographic Caution:**
 Coral snakes are secretive and rarely encountered, but pets investigating leaf litter, brush piles, or digging may provoke defensive bites. Most bites occur spring through fall in warm regions.
+
+Symptoms may not appear for up to 13-18 hours after the bite — DO NOT wait for symptoms before seeking emergency care.
 """,
-                toxicityInfo: "Coral snake venom contains alpha-neurotoxins that block acetylcholine receptors at neuromuscular junctions, causing ascending paralysis. Signs may be DELAYED 10-18 hours after bite, progressing rapidly once neurological symptoms appear. Respiratory paralysis can develop within 24-72 hours. Unlike pit viper bites, there is typically MINIMAL local tissue reaction—DO NOT be falsely reassured by lack of swelling. No canine-specific antivenom is FDA-approved in the US; North American Coral Snake Antivenin has limited availability.",
+                toxicityInfo: "Coral snake venom contains alpha-neurotoxins that block acetylcholine receptors at neuromuscular junctions, causing ascending paralysis. Signs may be DELAYED 10-18 hours after bite, progressing rapidly once neurological symptoms appear. Respiratory paralysis can develop within 24-72 hours. Unlike pit viper bites, there is typically MINIMAL local tissue reaction—DO NOT be falsely reassured by lack of swelling.",
                 onsetTime: OnsetTime(
                     early: "0-4 hours (minimal local signs)",
                     delayed: "10-18 hours (neurological signs begin)"
@@ -10606,12 +10607,27 @@ Coral snakes are secretive and rarely encountered, but pets investigating leaf l
                     SpeciesRisk(
                         species: .dog,
                         severity: .severe,
-                        notes: "Dogs more commonly bitten than cats. Curious investigation of snakes leads to face/muzzle bites. Delayed onset means emergency care needed even without immediate symptoms. Prognosis guarded once paralysis develops."
+                        notes: "Dogs more commonly bitten than cats. Curious investigation of snakes leads to face/muzzle bites. Delayed onset means emergency care needed even without immediate symptoms."
                     ),
                     SpeciesRisk(
                         species: .cat,
                         severity: .severe,
                         notes: "Less common than dogs but equally serious. Cats may not show signs for many hours. Any suspected exposure requires immediate veterinary evaluation and observation."
+                    ),
+                    SpeciesRisk(
+                        species: .bird,
+                        severity: .severe,
+                        notes: "Coral snake neurotoxin causes rapid paralysis of respiratory muscles. Birds' small body size and high metabolic rate make them extremely vulnerable. Limited veterinary case data available, but neurotoxic mechanism would affect birds severely. Immediate emergency care critical."
+                    ),
+                    SpeciesRisk(
+                        species: .smallMammal,
+                        severity: .severe,
+                        notes: "Small mammals (rabbits, guinea pigs, ferrets, rodents) are highly susceptible to neurotoxic venom. Small body size means even minimal venom delivery can cause life-threatening paralysis. Respiratory failure can occur rapidly. Immediate emergency care critical."
+                    ),
+                    SpeciesRisk(
+                        species: .reptile,
+                        severity: .high,
+                        notes: "Coral snakes naturally prey on small reptiles (lizards, snakes), suggesting susceptibility to their venom. Limited data exists on pet reptile envenomation. Neurotoxic effects would likely cause paralysis. Veterinary evaluation recommended for any suspected exposure."
                     )
                 ],
                 preventionTips: [
@@ -10630,7 +10646,7 @@ Coral snakes are secretive and rarely encountered, but pets investigating leaf l
                     "Clinical Toxicology — North American Coral Snake Bites",
                     "Veterinary Clinics of North America — Reptile Envenomation Update"
                 ],
-                relatedEntries: ["00112233-4455-6677-8899-aabbccddef07", "00112233-4455-6677-8899-aabbccddef13"]
+                relatedEntries: ["00112233-4455-6677-8899-aabbccddef07"]
             ),
 
             // MARK: - Scorpion Stings
@@ -10643,7 +10659,11 @@ Coral snakes are secretive and rarely encountered, but pets investigating leaf l
                     "Centruroides sculpturatus",
                     "Centruroides exilicauda",
                     "scorpion envenomation",
-                    "scorpion venom"
+                    "scorpion venom",
+                    "scorpion sting dog",
+                    "bark scorpion pet",
+                    "scorpion in house",
+                    "dog stung scorpion"
                 ],
                 categories: [.outdoorHazards],
                 imageAsset: "scorpion_thumb",
@@ -10663,22 +10683,21 @@ Centruroides venom contains neurotoxins affecting sodium channels, causing:
 - Respiratory compromise in severe cases
 
 **Risk Stratification:**
-Small dogs have significantly higher risk of severe envenomation:
-- Dogs <15 lbs: 39% develop severe signs
-- Dogs >15 lbs: 13% develop severe signs
-- Cats: Limited data, likely similar size-dependent pattern
+Small dogs are at significantly higher risk of severe envenomation from bark scorpions. Cats have limited data but likely follow a similar size-dependent pattern.
 
 **Non-Centruroides Stings:**
 Most US scorpion stings cause only:
 - Local pain (often intense but brief)
 - Mild swelling
 - Self-limiting within hours
-- Supportive care sufficient
+
+**Indoor Encounters:**
+Bark scorpions are the only U.S. scorpion that can climb smooth vertical surfaces (walls, ceilings) — they may enter homes and encounter pets indoors.
 
 **When to Worry:**
 Geographic location matters most. Outside Arizona bark scorpion range, severe systemic effects from scorpion stings are rare in pets.
 """,
-                toxicityInfo: "Centruroides (Arizona bark scorpion) venom contains neurotoxins affecting sodium channels, causing excessive nerve firing, muscle fasciculations and tremors, autonomic dysfunction, and respiratory compromise in severe cases. Small dogs (<15 lbs) have significantly higher risk—39% develop severe signs vs 13% in larger dogs. Most non-Centruroides US scorpion stings cause only local pain and are self-limiting.",
+                toxicityInfo: "Centruroides (Arizona bark scorpion) venom contains neurotoxins affecting sodium channels, causing excessive nerve firing, muscle fasciculations and tremors, autonomic dysfunction, and respiratory compromise in severe cases. Small dogs are at significantly higher risk of severe envenomation. Most non-Centruroides US scorpion stings cause only local pain and are self-limiting.",
                 onsetTime: OnsetTime(
                     early: "Minutes to 1 hour (local pain immediate)",
                     delayed: "1-4 hours (systemic signs if they occur)"
@@ -10705,12 +10724,27 @@ Geographic location matters most. Outside Arizona bark scorpion range, severe sy
                     SpeciesRisk(
                         species: .dog,
                         severity: .moderate,
-                        notes: "Small dogs (<15 lbs) at significantly higher risk for severe envenomation—39% vs 13% in larger dogs. Most stings cause only local pain. Arizona bark scorpion range requires heightened concern. Most dogs recover with supportive care."
+                        notes: "Small dogs are at significantly higher risk for severe envenomation from bark scorpions. Most stings cause only local pain. Arizona bark scorpion range requires heightened concern."
                     ),
                     SpeciesRisk(
                         species: .cat,
                         severity: .moderate,
                         notes: "Limited published data. Presumed similar risk pattern to small dogs based on body size. Cats in bark scorpion range should be evaluated if systemic signs develop."
+                    ),
+                    SpeciesRisk(
+                        species: .bird,
+                        severity: .high,
+                        notes: "Small birds are at significant risk from bark scorpion stings due to their small body size and fast metabolism. Neurotoxic venom effects may be more pronounced. Limited veterinary case data available. Seek veterinary care immediately if stinging suspected."
+                    ),
+                    SpeciesRisk(
+                        species: .smallMammal,
+                        severity: .high,
+                        notes: "Small mammals may be at increased risk due to body size, similar to small dogs. Limited published veterinary data on exotic pet scorpion stings. Monitor closely and seek veterinary care for any neurologic signs (tremors, weakness, agitation)."
+                    ),
+                    SpeciesRisk(
+                        species: .reptile,
+                        severity: .low,
+                        notes: "Many reptile species are natural predators of scorpions and may have some tolerance. Limited data on pet reptile envenomation. Effects likely minimal in most cases, but monitor for any unusual behavior or swelling. Veterinary consultation recommended if concerns arise."
                     )
                 ],
                 preventionTips: [
@@ -11219,7 +11253,7 @@ Approximately 95% of affected dogs survive with prompt treatment. Fatalities occ
                     "Veterinary Partner (VIN)",
                     "PetMD"
                 ],
-                relatedEntries: ["00112233-4455-6677-8899-aabbccddef08"]
+                relatedEntries: nil
             ),
 
             // MARK: - Hops (Humulus lupulus)
