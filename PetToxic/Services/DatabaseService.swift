@@ -5329,7 +5329,7 @@ class DatabaseService {
                     "If a pet walks through spilled product, wash paws immediately with mild dish soap and water to prevent grooming exposure",
                     "Keep reed diffusers out of reach—cats may knock them over and walk through the spilled oil"
                 ],
-                sources: ["Veterinary Information Network (VIN)", "ASPCA Animal Poison Control Center", "Pet Poison Helpline", "Merck Veterinary Manual"],
+                sources: ["ASPCA Animal Poison Control Center", "Pet Poison Helpline", "Merck Veterinary Manual"],
                 relatedEntries: ["11223344-5566-7788-99aa-bbccddeeff00", "88990011-aabb-ccdd-eeff-223344556677", "00112233-4455-6677-8899-aabbccddef24"]
             ),
 
@@ -5736,11 +5736,9 @@ class DatabaseService {
                     "Store essential oils in cabinets pets cannot access — cats are attracted to some oils"
                 ],
                 sources: [
-                    "VIN (Veterinary Information Network): Essential Oil Toxicosis",
-                    "VIN (Veterinary Information Network): Pennyroyal Oil Toxicosis",
-                    "ASPCA Animal Poison Control Center: Essential Oils and Pets",
-                    "Pet Poison Helpline: Essential Oil Toxicity in Pets",
-                    "Khan SA, et al. 'Tea tree oil toxicosis in dogs and cats.' JAVMA. 2014"
+                    "ASPCA Animal Poison Control Center",
+                    "Pet Poison Helpline",
+                    "Journal of the American Veterinary Medical Association (JAVMA)"
                 ],
                 relatedEntries: [
                     "cc334455-6677-8899-aabb-ccddeeff2233",
@@ -5792,9 +5790,29 @@ class DatabaseService {
                 entrySeverity: .severe,
                 speciesRisks: [
                     SpeciesRisk(
+                        species: .dog,
+                        severity: .low,
+                        notes: "PTFE (Teflon) fume toxicity is primarily a bird-specific concern. Dogs are far less sensitive to PTFE fumes due to their less efficient respiratory system. However, prolonged exposure to any smoke or chemical fumes can cause respiratory irritation. If signs of respiratory distress occur after fume exposure, seek veterinary care."
+                    ),
+                    SpeciesRisk(
+                        species: .cat,
+                        severity: .low,
+                        notes: "PTFE (Teflon) fume toxicity is primarily a bird-specific concern. Cats are far less sensitive to PTFE fumes than birds. However, prolonged exposure to smoke or chemical fumes can cause respiratory irritation. If signs of respiratory distress occur after fume exposure, seek veterinary care."
+                    ),
+                    SpeciesRisk(
                         species: .bird,
                         severity: .severe,
                         notes: "Birds are extremely sensitive to inhaled toxins due to their highly efficient respiratory system. PTFE (Teflon) fumes from overheated cookware can cause death within minutes—often before any symptoms are observed. ANY strong odor, smoke, or fumes should be considered potentially life-threatening. Never use non-stick cookware, self-cleaning ovens, or aerosol products near birds. Ensure birds are housed in well-ventilated areas away from kitchens. If exposure occurs, move the bird to fresh air IMMEDIATELY and seek emergency veterinary care."
+                    ),
+                    SpeciesRisk(
+                        species: .smallMammal,
+                        severity: .low,
+                        notes: "PTFE (Teflon) fume toxicity is primarily a bird-specific concern. Small mammals (rabbits, guinea pigs, ferrets, hamsters) are far less sensitive to PTFE fumes than birds. However, their smaller size means prolonged exposure to any smoke or chemical fumes may cause respiratory irritation more readily than in larger mammals."
+                    ),
+                    SpeciesRisk(
+                        species: .reptile,
+                        severity: .low,
+                        notes: "PTFE (Teflon) fume toxicity is primarily a bird-specific concern. Reptiles have a much slower respiratory rate and less efficient gas exchange than birds, making them far less susceptible to acute PTFE toxicity. However, good ventilation is always recommended for reptile enclosures."
                     )
                 ],
                 preventionTips: [
@@ -5809,8 +5827,8 @@ class DatabaseService {
                     "Install carbon monoxide detectors in your home"
                 ],
                 sources: [
-                    "Veterinary Information Network (VIN)",
                     "ASPCA Animal Poison Control Center",
+                    "Pet Poison Helpline",
                     "Merck Veterinary Manual"
                 ],
                 relatedEntries: ["00112233-4455-6677-8899-aabbccddef24"]
