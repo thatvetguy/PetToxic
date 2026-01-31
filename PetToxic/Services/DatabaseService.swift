@@ -9644,7 +9644,6 @@ class DatabaseService {
                     "Merck Veterinary Manual: Pharmacotherapeutics in Urinary Incontinence in Dogs and Cats",
                     "PetMD: Diethylstilbestrol for Dogs; Hormone Replacement Product Poisoning in Dogs",
                     "Veterinary Partner (VIN): Diethylstilbestrol (DES)",
-                    "VIN News Service: 'Hormone replacement skin products affect users' pets, confound veterinarians'",
                     "Sjöström et al. 'A review of adverse events in animals and children after secondary exposure to transdermal hormone-containing medicinal products.' Veterinary Record Open. 2022",
                     "American College of Veterinary Pharmacists: Estrogen"
                 ],
