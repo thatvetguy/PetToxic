@@ -362,7 +362,7 @@ PetToxic/
 | Medications | ~24 | ✅ Complete |
 | Garage & Garden | ~21 | ✅ Complete |
 | Household Items | ~14 | 📋 In Progress |
-| Cleaning Products | ~9 | 📋 Not Started |
+| Cleaning Products | 9 | ✅ Complete |
 | Recreational Substances | ~6 | 📋 Not Started |
 | Outdoor Hazards / Animal Encounters | ~12 | 📋 Not Started |
 
@@ -385,4 +385,4 @@ Handoff files: `Handoff_SessionXX_to_SessionYY.md`
 
 ---
 
-*Last Updated: January 2026 (Session 75)*
+*Last Updated: January 2026 (Session 82)*
