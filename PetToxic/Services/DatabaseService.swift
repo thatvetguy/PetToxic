@@ -5114,8 +5114,8 @@ class DatabaseService {
                     "Use cord management systems to bundle and hide cables",
                     "Be especially vigilant with holiday lights and decorations"
                 ],
-                sources: ["Veterinary Information Network (VIN)", "MSPCA-Angell Emergency Service", "PetMD", "Preventive Vet", "Vets Now UK", "Critical Care DVM"],
-                relatedEntries: nil
+                sources: ["MSPCA-Angell Emergency Service", "PetMD", "Preventive Vet", "Vets Now UK", "Critical Care DVM"],
+                relatedEntries: ["00112233-4455-6677-8899-aabbccddef03"]
             ),
 
             // MARK: - Iron-Containing Oxygen Absorbers
@@ -10102,7 +10102,7 @@ class DatabaseService {
                     "Pet Poison Helpline",
                     "VCA Animal Hospitals"
                 ],
-                relatedEntries: ["00112233-4455-6677-8899-aabbccddef21", "00112233-4455-6677-8899-aabbccddef19"]
+                relatedEntries: ["00112233-4455-6677-8899-aabbccddef21", "00112233-4455-6677-8899-aabbccddef19", "e5f6a7b8-9c0d-1e2f-3a4b-5c6d7e8f9a0b"]
             ),
 
             // MARK: - Skunk Spray
@@ -10422,7 +10422,7 @@ class DatabaseService {
                     "VCA Animal Hospitals — First Aid for Insect Stings in Dogs",
                     "PetMD — How to Identify and Treat Ant Bites in Dogs"
                 ],
-                relatedEntries: ["00112233-4455-6677-8899-aabbccddef09", "00112233-4455-6677-8899-aabbccddef12"]
+                relatedEntries: ["00112233-4455-6677-8899-aabbccddef09", "00112233-4455-6677-8899-aabbccddef12", "00112233-4455-6677-8899-aabbccddef20"]
             ),
 
             // MARK: - Pit Viper Envenomation (Venomous Snake Bites)
@@ -11293,7 +11293,7 @@ With prompt tick removal and appropriate care, most affected dogs recover fully.
                     "Veterinary Partner (VIN)",
                     "PetMD"
                 ],
-                relatedEntries: nil
+                relatedEntries: ["00112233-4455-6677-8899-aabbccddef20"]
             ),
 
             // MARK: - Hops (Humulus lupulus)
@@ -12057,7 +12057,7 @@ Cats rarely eat corn cobs due to selective eating habits.
                     "June grass",
                     "downy brome"
                 ],
-                categories: [.informational],
+                categories: [.informational, .outdoorHazards],
                 imageAsset: "foxtails_thumb",
                 description: """
 Foxtails are barbed grass seed heads that pose a serious PHYSICAL hazard to dogs. Unlike other plant material, foxtails do NOT break down inside the body. Their barbed shape allows them to burrow DEEPER over time, never working back out. Can cause severe infections and damage.
@@ -12118,6 +12118,21 @@ Early removal is much easier than waiting. May require sedation, scoping, or sur
                         species: .cat,
                         severity: .low,
                         notes: "Cats can be affected but less commonly than dogs due to grooming habits and less frequent outdoor activity in foxtail areas."
+                    ),
+                    SpeciesRisk(
+                        species: .bird,
+                        severity: .low,
+                        notes: "Outdoor birds could theoretically encounter foxtails, but this is not a common clinical concern."
+                    ),
+                    SpeciesRisk(
+                        species: .smallMammal,
+                        severity: .low,
+                        notes: "Outdoor rabbits or guinea pigs in grassy areas could potentially encounter foxtails, though this is uncommon in clinical practice."
+                    ),
+                    SpeciesRisk(
+                        species: .reptile,
+                        severity: .low,
+                        notes: "Not a relevant concern for pet reptiles."
                     )
                 ],
                 preventionTips: [
@@ -12129,12 +12144,11 @@ Early removal is much easier than waiting. May require sedation, scoping, or sur
                     "Remove foxtail plants from your yard before they seed"
                 ],
                 sources: [
-                    "Veterinary Information Network (VIN)",
                     "UC Davis School of Veterinary Medicine",
                     "American Kennel Club",
                     "VCA Animal Hospitals"
                 ],
-                relatedEntries: nil
+                relatedEntries: ["00112233-4455-6677-8899-aabbccddef13", "00112233-4455-6677-8899-aabbccddef06"]
             ),
 
             // MARK: - Tampon & Hygiene Product Ingestion
