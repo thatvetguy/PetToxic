@@ -11835,7 +11835,13 @@ Poison sumac: 7-13 leaflets in pairs with one at tip; grows in swampy areas.
                     "collie drug sensitivity",
                     "white feet don't treat",
                     "P-glycoprotein deficiency",
-                    "P-gp deficiency"
+                    "P-gp deficiency",
+                    "australian shepherd drug sensitivity",
+                    "border collie drug sensitivity",
+                    "sheltie drug sensitivity",
+                    "shetland sheepdog drug sensitivity",
+                    "herding breed",
+                    "drug sensitivity"
                 ],
                 categories: [.informational],
                 imageAsset: "mdr1_thumb",
@@ -11908,6 +11914,21 @@ Washington State University Veterinary Clinical Pharmacology Laboratory offers t
                         species: .cat,
                         severity: .low,
                         notes: "MDR1 mutations have been identified in some cats but are far less common than in dogs."
+                    ),
+                    SpeciesRisk(
+                        species: .smallMammal,
+                        severity: .low,
+                        notes: "The MDR1 gene mutation causing multi-drug sensitivity has been documented primarily in dogs and, to a lesser extent, cats. While P-glycoprotein exists in all mammals, the specific genetic mutation is not a documented clinical concern in pet rabbits, guinea pigs, ferrets, or other small mammals. Standard veterinary dosing guidelines apply for these species."
+                    ),
+                    SpeciesRisk(
+                        species: .bird,
+                        severity: .low,
+                        notes: "MDR1 gene mutations are not a documented clinical concern in pet birds. Birds have unique drug metabolism pathways distinct from mammals. Consult an avian veterinarian for species-appropriate medication guidance."
+                    ),
+                    SpeciesRisk(
+                        species: .reptile,
+                        severity: .low,
+                        notes: "MDR1 gene mutations are not a documented clinical concern in reptiles. Reptiles have unique drug metabolism considerations. Consult a reptile veterinarian for species-appropriate medication guidance."
                     )
                 ],
                 preventionTips: [
@@ -11920,7 +11941,6 @@ Washington State University Veterinary Clinical Pharmacology Laboratory offers t
                 ],
                 sources: [
                     "Washington State University Veterinary Clinical Pharmacology Lab",
-                    "Veterinary Information Network (VIN)",
                     "American Kennel Club Canine Health Foundation",
                     "Merck Veterinary Manual"
                 ],
@@ -12060,10 +12080,10 @@ Cats rarely eat corn cobs due to selective eating habits.
                 categories: [.informational, .outdoorHazards],
                 imageAsset: "foxtails_thumb",
                 description: """
-Foxtails are barbed grass seed heads that pose a serious PHYSICAL hazard to dogs. Unlike other plant material, foxtails do NOT break down inside the body. Their barbed shape allows them to burrow DEEPER over time, never working back out. Can cause severe infections and damage.
+Foxtails are barbed grass seed heads that pose a serious PHYSICAL hazard to dogs. Unlike other plant material, foxtails do NOT break down inside the body. Foxtails have barbed structures that cause them to migrate in only one direction—deeper into tissue rather than back out the way they entered. Can cause severe infections and damage.
 
 **WHAT ARE FOXTAILS?**
-Foxtails are seed heads of certain grasses. When dry, they break into individual seeds called awns. Each awn has microscopic barbs pointing backward like tiny fishhooks. Once a foxtail enters an animal's body, it can only move FORWARD, never backward.
+Foxtails are seed heads of certain grasses. When dry, they break into individual seeds called awns. Each awn has microscopic barbs pointing backward like tiny fishhooks. Once a foxtail enters an animal's body, it migrates in only one direction—deeper into tissue. While a foxtail may occasionally work its way out through a different location in the skin, it does not reverse direction back out the way it entered.
 
 **WHERE FOXTAILS ARE FOUND:**
 Most prevalent in WESTERN US, especially California. Also found throughout North America. Range is expanding.
@@ -12082,11 +12102,11 @@ Foxtails may be unfamiliar. This is essential information for West Coast residen
 
 **MOST CONCERNING:** Inhaled or migrated foxtails have been found in lungs, abdominal cavity, spine, even internal organs like the spleen.
 
-**FOXTAILS DO NOT COME OUT ON THEIR OWN—ONLY DEEPER.**
+**FOXTAILS MIGRATE DEEPER, NOT BACK OUT THE WAY THEY ENTERED.** While they may occasionally exit through a different location in the skin, professional extraction is often required.
 
 Early removal is much easier than waiting. May require sedation, scoping, or surgery depending on location.
 """,
-                toxicityInfo: "NOT TOXIC—this is a serious PHYSICAL HAZARD. Foxtails have microscopic barbs pointing backward like tiny fishhooks—once they enter the body, they can only move FORWARD, never backward. They do NOT break down inside the body. Can penetrate ears, nose, eyes, paws, and skin, then migrate to internal organs including lungs, abdominal cavity, and spine causing severe damage and infection.",
+                toxicityInfo: "NOT TOXIC—this is a serious PHYSICAL HAZARD. Foxtails have microscopic barbs pointing backward like tiny fishhooks—once they enter the body, they migrate in only one direction—deeper into tissue rather than back out the way they entered. While they may occasionally work their way out through a different location in the skin, professional extraction is often required. They do NOT break down inside the body. Can penetrate ears, nose, eyes, paws, and skin, then migrate to internal organs including lungs, abdominal cavity, and spine causing severe damage and infection.",
                 onsetTime: OnsetTime(
                     early: "Signs may appear within hours of exposure",
                     delayed: "Internal migration can cause problems days to weeks later"
@@ -12112,7 +12132,7 @@ Early removal is much easier than waiting. May require sedation, scoping, or sur
                     SpeciesRisk(
                         species: .dog,
                         severity: .moderate,
-                        notes: "INFORMATIONAL ENTRY: Physical hazard, not a toxin. Dogs are commonly affected, especially active outdoor dogs. Can enter ears, nose, eyes, paws, skin. Seek veterinary care promptly—foxtails only burrow deeper, never out."
+                        notes: "INFORMATIONAL ENTRY: Physical hazard, not a toxin. Dogs are commonly affected, especially active outdoor dogs. Can enter ears, nose, eyes, paws, skin. Seek veterinary care promptly—foxtails migrate deeper into tissue and professional extraction is often required."
                     ),
                     SpeciesRisk(
                         species: .cat,
@@ -12171,7 +12191,11 @@ Early removal is much easier than waiting. May require sedation, scoping, or sur
                     "adult diaper",
                     "incontinence pad",
                     "feminine hygiene product",
-                    "menstrual product"
+                    "menstrual product",
+                    "feminine hygiene",
+                    "bathroom trash",
+                    "period products",
+                    "applicator"
                 ],
                 categories: [.informational],
                 imageAsset: "tampons_thumb",
@@ -12199,7 +12223,7 @@ If you see string visible from mouth or rectum, NEVER PULL ON IT—this can caus
 **THIS IS AN EMERGENCY:**
 Contact veterinarian IMMEDIATELY. Do NOT wait to see if it will pass.
 
-With recent ingestion (few hours), induced vomiting may retrieve the item. Once in intestines, surgery is often necessary.
+A veterinarian may induce vomiting if the ingestion was recent and the item hasn't passed into the intestines. Once in the intestines, surgery is often necessary.
 
 **SMALL DOGS AT HIGHER RISK:**
 Narrower intestines make obstruction more likely even with smaller items.
@@ -12238,6 +12262,21 @@ Narrower intestines make obstruction more likely even with smaller items.
                         species: .cat,
                         severity: .low,
                         notes: "Cats rarely ingest tampons or pads, though the string from tampons could pose a linear foreign body risk if ingested."
+                    ),
+                    SpeciesRisk(
+                        species: .smallMammal,
+                        severity: .low,
+                        notes: "Small mammals rarely encounter tampons or hygiene products, but ingestion could cause GI obstruction. Rabbits and ferrets are most at risk if they access bathroom trash. Seek veterinary care if ingestion is suspected."
+                    ),
+                    SpeciesRisk(
+                        species: .bird,
+                        severity: .low,
+                        notes: "Birds rarely ingest hygiene products. If a bird shreds or ingests absorbent material, it could cause crop impaction or GI obstruction. Contact an avian veterinarian if exposure occurs."
+                    ),
+                    SpeciesRisk(
+                        species: .reptile,
+                        severity: .low,
+                        notes: "Reptiles are unlikely to ingest hygiene products. If ingestion occurs, the absorbent material could cause GI obstruction. Consult a reptile veterinarian if exposure is suspected."
                     )
                 ],
                 preventionTips: [
