@@ -6276,7 +6276,7 @@ class DatabaseService {
                     "Never spray aerosol oven cleaners with pets in the room—especially birds, who are extremely sensitive to fumes",
                     "If your pet licks oven cleaner residue or the product itself, contact your veterinarian immediately—do NOT induce vomiting"
                 ],
-                sources: ["Veterinary Information Network (VIN)", "ASPCA Animal Poison Control Center", "Merck Veterinary Manual", "Pet Poison Helpline"],
+                sources: ["ASPCA Animal Poison Control Center", "Merck Veterinary Manual", "Pet Poison Helpline"],
                 relatedEntries: ["33445566-7788-99aa-bbcc-ddeeff001122"]
             ),
 
@@ -6305,7 +6305,7 @@ class DatabaseService {
                 categories: [.cleaningProducts],
                 imageAsset: "quaternary_ammonium_thumb",
                 description: "Quaternary ammonium compounds (often called 'quats' or QACs) are cationic detergents found in many common disinfectants, sanitizing wipes, and surface cleaners. Products containing benzalkonium chloride and similar compounds became even more widely used during and after the COVID-19 pandemic. While often considered less dangerous than bleach or caustic cleaners, QACs are actually cationic surfactants—the same class of chemicals found in fabric softeners and liquid potpourri—and can cause significant tissue injury, especially in cats. Cats are notably more sensitive to QACs than dogs, with oral ulcerations reported at concentrations as low as 2%.",
-                toxicityInfo: "Quaternary ammonium compounds are cationic surfactants that disrupt cell membranes. Unlike anionic detergents (found in most soaps), cationic detergents can cause corrosive injury similar to alkaline products. In a review of 245 cases of benzalkonium chloride exposure in cats, common signs included hypersalivation, oral ulceration, fever, vomiting, and lethargy. About 22% of affected cats developed respiratory signs. Cats are particularly at risk because they may walk across surfaces cleaned with QAC products and then groom the residue from their paws—and cats show irritation at concentrations that might not affect dogs. Systemic effects from significant exposures can include CNS depression, hypotension, muscle weakness, and in severe cases, seizures or coma. Most household exposures are mild, but concentrated products or prolonged contact can cause serious injury.",
+                toxicityInfo: "Quaternary ammonium compounds (QACs) are found in many common household disinfectants including Lysol, Clorox wipes, and most \"antibacterial\" cleaning sprays. Their use increased dramatically during the COVID-19 pandemic. Benzalkonium chloride, one of the most common QACs, is also found in some eye drops, nasal sprays, and skin antiseptics. Cats are notably more sensitive than dogs—even diluted solutions used to clean floors can cause oral ulcers if cats walk through residue and groom their paws. QACs are cationic surfactants that disrupt cell membranes. Unlike anionic detergents (found in most soaps), cationic detergents can cause corrosive injury similar to alkaline products. In a review of 245 cases of benzalkonium chloride exposure in cats, common signs included hypersalivation, oral ulceration, fever, vomiting, and lethargy. About 22% of affected cats developed respiratory signs. Cats are particularly at risk because they may walk across surfaces cleaned with QAC products and then groom the residue from their paws—and cats show irritation at concentrations that might not affect dogs. Systemic effects from significant exposures can include CNS depression, hypotension, muscle weakness, and in severe cases, seizures or coma. Most household exposures are mild, but concentrated products or prolonged contact can cause serious injury.",
                 onsetTime: OnsetTime(
                     early: "Drooling, oral irritation, and vomiting may appear within minutes to hours of exposure",
                     delayed: "Oral ulceration may develop or worsen over 6-12 hours; respiratory signs may develop with significant exposures"
@@ -6341,7 +6341,7 @@ class DatabaseService {
                     "If cleaning reptile or bird enclosures with QAC products, rinse thoroughly and allow to dry completely before returning the animal",
                     "Keep disinfecting wipes in closed containers—pets may chew on accessible wipes"
                 ],
-                sources: ["Veterinary Information Network (VIN)", "ASPCA Animal Poison Control Center", "Merck Veterinary Manual", "Veterinary Poisons Information Service (UK) - Benzalkonium chloride study", "Journal of Feline Medicine and Surgery (ABCD Guidelines)"],
+                sources: ["ASPCA Animal Poison Control Center", "Merck Veterinary Manual", "Veterinary Poisons Information Service (UK) - Benzalkonium chloride study", "Journal of Feline Medicine and Surgery (ABCD Guidelines)"],
                 relatedEntries: ["b8c9d0e1-2f3a-4b5c-6d7e-8f9a0b1c2d3e"]
             ),
 
@@ -6400,7 +6400,7 @@ class DatabaseService {
                     "If your pet ingests traditional laundry detergent, monitor for vomiting; contact your veterinarian if symptoms are severe or persistent",
                     "Remember: traditional liquid/powder = low concern; concentrated PODS = high concern"
                 ],
-                sources: ["Veterinary Information Network (VIN)", "ASPCA Animal Poison Control Center", "Merck Veterinary Manual", "Pet Poison Helpline"],
+                sources: ["ASPCA Animal Poison Control Center", "Merck Veterinary Manual", "Pet Poison Helpline"],
                 relatedEntries: ["55667788-99aa-bbcc-ddee-ff0011223344", "11223344-5566-7788-99aa-bbccddeeff00"]
             ),
 
