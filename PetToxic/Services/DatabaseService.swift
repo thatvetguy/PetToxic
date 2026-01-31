@@ -6054,7 +6054,7 @@ class DatabaseService {
                 categories: [.cleaningProducts],
                 imageAsset: "dishwasher_thumb",
                 description: "Automatic dishwasher detergent is fundamentally different from the mild dish soap used for hand-washing dishes. While hand dish soap contains gentle anionic surfactants, automatic dishwasher detergents are highly alkaline (pH often greater than 11) and can cause corrosive burns similar to drain cleaners. This is one of the most important distinctions pet owners need to understand: the 'dish soap' on your counter for hand-washing is low toxicity, but the detergent in your dishwasher (whether powder, gel, or pod) is a caustic product that can cause serious injury. Dishwasher pods are particularly concerning because their bright colors and compact size make them attractive to pets.",
-                toxicityInfo: "Automatic dishwasher detergents have a pH greater than 11, placing them in the same caustic/corrosive category as drain cleaners and oven cleaners. At this pH, the product can cause liquefactive necrosis—deep, penetrating burns to the mouth, esophagus, and stomach. Unlike acidic products that cause immediate pain (limiting how much is consumed), alkaline products may not cause pain on initial contact, allowing pets to swallow more before showing distress. The full extent of tissue damage may not be apparent for up to 12 hours. Dishwasher pods pose additional risks: they are attractively colored, fit easily in a pet's mouth, and when bitten, the pressurized contents can be forcefully expelled and aspirated into the lungs. Do NOT induce vomiting after dishwasher detergent ingestion—this re-exposes damaged tissue to the caustic material.",
+                toxicityInfo: "Automatic dishwasher detergent is NOT the same as regular dish soap. Products like Cascade, Finish, and dishwasher pods are highly alkaline (pH 10-13) and can cause severe caustic burns, while hand-washing dish soap (Dawn, Palmolive) typically causes only mild GI upset. This distinction is critical. Automatic dishwasher detergents have a pH greater than 11, placing them in the same caustic/corrosive category as drain cleaners and oven cleaners. At this pH, the product can cause liquefactive necrosis—deep, penetrating burns to the mouth, esophagus, and stomach. Unlike acidic products that cause immediate pain (limiting how much is consumed), alkaline products may not cause pain on initial contact, allowing pets to swallow more before showing distress. The full extent of tissue damage may not be apparent for up to 12 hours. Dishwasher pods pose additional risks: they are attractively colored, fit easily in a pet's mouth, and when bitten, the pressurized contents can be forcefully expelled and aspirated into the lungs. Do NOT induce vomiting after dishwasher detergent ingestion—this re-exposes damaged tissue to the caustic material.",
                 onsetTime: OnsetTime(
                     early: "Drooling and oral discomfort may appear within minutes; alkaline burns may initially cause little pain despite significant injury",
                     delayed: "Full extent of tissue damage may not be apparent for 12 hours; esophageal strictures can develop weeks later"
@@ -6088,7 +6088,7 @@ class DatabaseService {
                     "Understand the difference: hand dish soap (Dawn, Palmolive) = low toxicity; automatic dishwasher detergent = caustic",
                     "If ingestion occurs, do NOT induce vomiting; contact your veterinarian immediately"
                 ],
-                sources: ["Veterinary Information Network (VIN)", "ASPCA Animal Poison Control Center", "Merck Veterinary Manual", "Pet Poison Helpline"],
+                sources: ["ASPCA Animal Poison Control Center", "Merck Veterinary Manual", "Pet Poison Helpline"],
                 relatedEntries: ["11223344-5566-7788-99aa-bbccddeeff00", "33445566-7788-99aa-bbcc-ddeeff001122", "55667788-99aa-bbcc-ddee-ff0011223344"]
             ),
 
@@ -6115,7 +6115,7 @@ class DatabaseService {
                 categories: [.cleaningProducts],
                 imageAsset: "laundry_pods_thumb",
                 description: "Laundry detergent pods are single-use packets containing highly concentrated liquid detergent. While traditional liquid or powder laundry detergent typically causes only mild gastrointestinal upset if ingested, pods pose significantly greater risks. The concentrated formula, combined with the pressure inside the sealed pod, creates a dangerous situation when a pet bites into one: the contents can be forcefully expelled into the mouth and airway, leading to aspiration into the lungs. Dogs account for over 90% of pod poisoning cases, likely because they tend to bite down on objects with force. The bright colors and toy-like appearance of pods make them particularly attractive to curious pets.",
-                toxicityInfo: "Laundry pods contain the same types of anionic and nonionic surfactants found in traditional laundry detergent, but in a much more concentrated form. When a pet bites a pod, two factors combine to increase danger: first, the concentrated detergent causes more severe irritation than diluted product; second, the pressurized contents burst out forcefully and can be aspirated into the lungs or swallowed in large amounts before the pet can spit it out. According to Pet Poison Helpline data, dogs exposed to laundry pods are nearly twice as likely to develop vomiting and coughing compared to those exposed to traditional laundry detergent. Approximately 20% of symptomatic pets develop respiratory signs including coughing, wheezing, and difficulty breathing. Aspiration pneumonia is the most serious complication. Ingestion of multiple pods also creates a risk of foreign body obstruction from the plastic casings.",
+                toxicityInfo: "Laundry pods pose a unique danger due to their bright colors and candy-like appearance, making them attractive to curious pets. Laundry pods contain the same types of anionic and nonionic surfactants found in traditional laundry detergent, but in a much more concentrated form. When a pet bites into a pod, the highly concentrated detergent can squirt forcefully into the mouth and throat—this \"bite-and-squirt\" mechanism increases the risk of aspiration into the lungs. Even a single punctured pod can cause severe chemical burns to the mouth, esophagus, and airways. According to Pet Poison Helpline data, dogs exposed to laundry pods are nearly twice as likely to develop vomiting and coughing compared to those exposed to traditional laundry detergent. Approximately 20% of symptomatic pets develop respiratory signs including coughing, wheezing, and difficulty breathing. Aspiration pneumonia is the most serious complication. Ingestion of multiple pods also creates a risk of foreign body obstruction from the plastic casings.",
                 onsetTime: OnsetTime(
                     early: "Vomiting, drooling, and oral irritation typically begin within minutes of biting into a pod",
                     delayed: "Respiratory symptoms (coughing, wheezing, difficulty breathing) may develop over 12-24 hours as aspiration pneumonia progresses"
@@ -6151,7 +6151,7 @@ class DatabaseService {
                     "Consider using traditional liquid or powder detergent if you have curious pets who get into things",
                     "If your pet bites into a pod, contact your veterinarian even if symptoms seem mild—respiratory problems can develop hours later"
                 ],
-                sources: ["Veterinary Information Network (VIN)", "ASPCA Animal Poison Control Center", "Pet Poison Helpline", "Merck Veterinary Manual", "Journal of Veterinary Emergency and Critical Care (Handley & Hovda, 2021)"],
+                sources: ["ASPCA Animal Poison Control Center", "Pet Poison Helpline", "Merck Veterinary Manual", "Journal of Veterinary Emergency and Critical Care (2021)"],
                 relatedEntries: ["11223344-5566-7788-99aa-bbccddeeff00", "44556677-8899-aabb-ccdd-eeff00112233", "99001122-aabb-ccdd-eeff-334455667788"]
             ),
 
@@ -6216,7 +6216,7 @@ class DatabaseService {
                     "If your pet chews on a toilet tablet or drinks undiluted cleaner, contact your veterinarian immediately—do NOT induce vomiting",
                     "Consider using pet-safe toilet cleaning alternatives if keeping pets out of bathrooms is difficult"
                 ],
-                sources: ["Veterinary Information Network (VIN)", "ASPCA Animal Poison Control Center", "Merck Veterinary Manual", "Pet Poison Helpline", "MSD Veterinary Manual"],
+                sources: ["ASPCA Animal Poison Control Center", "Merck Veterinary Manual", "Pet Poison Helpline", "VCA Animal Hospitals"],
                 relatedEntries: ["22334455-6677-8899-aabb-ccddeeff0011", "33445566-7788-99aa-bbcc-ddeeff001122"]
             ),
 
