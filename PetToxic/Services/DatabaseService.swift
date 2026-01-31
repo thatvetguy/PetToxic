@@ -53,7 +53,7 @@ class DatabaseService {
                     "Remember that baking chocolate and dark chocolate are most dangerous"
                 ],
                 sources: ["ASPCA Animal Poison Control Center", "Pet Poison Helpline", "Merck Veterinary Manual", "VCA Animal Hospitals"],
-                relatedEntries: ["f2a3b4c5-6d7e-8f9a-0b1c-2d3e4f5a6b7c"]
+                relatedEntries: ["f2a3b4c5-6d7e-8f9a-0b1c-2d3e4f5a6b7c", "e293e8ba-eefc-4fe0-bf93-9e8842873a35"]
             ),
 
             // MARK: - Grapes & Raisins
@@ -139,7 +139,7 @@ class DatabaseService {
                     "Be aware that some medications and supplements contain xylitol as a sweetener"
                 ],
                 sources: ["ASPCA Animal Poison Control Center", "Pet Poison Helpline", "VCA Animal Hospitals", "FDA Consumer Updates"],
-                relatedEntries: nil
+                relatedEntries: ["e293e8ba-eefc-4fe0-bf93-9e8842873a35"]
             ),
 
             // MARK: - Onions
@@ -2279,11 +2279,11 @@ class DatabaseService {
             ToxicItem(
                 id: UUID(uuidString: "e293e8ba-eefc-4fe0-bf93-9e8842873a35")!,
                 name: "Cannabis / Marijuana",
-                alternateNames: ["Cannabis sativa", "Cannabis indica", "marijuana", "cannabis", "THC", "tetrahydrocannabinol", "delta-9 THC", "delta-8 THC", "pot", "weed", "grass", "ganja", "reefer", "dope", "bud", "chronic", "herb", "skunk", "Mary Jane", "hashish", "hash", "hash oil", "hemp", "CBD", "cannabidiol", "edibles", "marijuana edibles", "THC edibles", "THC gummies", "cannabis gummies", "marijuana brownies", "pot brownies", "cannabutter", "marijuana butter", "THC vape", "cannabis vape", "dronabinol", "nabilone", "devil weed", "Aunt Mary"],
+                alternateNames: ["Cannabis sativa", "Cannabis indica", "marijuana", "cannabis", "THC", "tetrahydrocannabinol", "delta-9 THC", "delta-8 THC", "pot", "weed", "grass", "ganja", "reefer", "dope", "bud", "chronic", "herb", "skunk", "Mary Jane", "hashish", "hash", "hash oil", "hemp", "CBD", "cannabidiol", "edibles", "marijuana edibles", "THC edibles", "THC gummies", "cannabis gummies", "marijuana brownies", "pot brownies", "cannabutter", "marijuana butter", "THC vape", "cannabis vape", "dronabinol", "nabilone", "devil weed", "Aunt Mary", "acting drunk", "dog acting drunk", "cat acting drunk", "wobbly dog", "dog stumbling"],
                 categories: [.plants, .recreationalSubstances],
                 imageAsset: "cannabis_thumb",
-                description: "Cannabis (marijuana) toxicity has become increasingly common in pets, particularly in regions where marijuana has been legalized. Dogs are affected far more often than cats, typically through accidental ingestion of marijuana edibles (brownies, gummies, cookies, candies), plant material, or concentrated products. The primary psychoactive compound is delta-9-tetrahydrocannabinol (THC). With legalization has come more potent products and more severe toxicity cases.",
-                toxicityInfo: "The cannabis plant (Cannabis sativa, Cannabis indica) contains over 480 distinct compounds, including nearly 70 cannabinoids. The primary psychoactive compound is delta-9-tetrahydrocannabinol (THC). THC concentration varies widely: 1-20% in plant material, 3-6% in hashish, and 30-50% in hashish oil. Edibles and concentrated products (vapes, distillates, tinctures) may contain much higher THC levels. Cannabutter (marijuana-infused butter) can have extremely high THC concentrations because THC is lipophilic (fat-soluble).\n\nTHC is absorbed rapidly after inhalation and more slowly after ingestion. A lethal dose has not been definitively established in dogs and cats — one study found no fatalities in dogs given oral THC doses of 3,000-9,000 mg/kg. However, clinical disease can occur at doses 1/1000th of the estimated lethal dose, and deaths have been reported, particularly with highly concentrated products or marijuana butter.\n\n**Common exposure routes:**\n• Ingestion of edibles (most common) — brownies, gummies, cookies, candies, infused beverages\n• Ingestion of plant material (dried leaves, flowers, stems)\n• Ingestion of concentrated products (vape cartridge liquid, hashish, hash oil)\n• Secondhand smoke exposure (usually causes mild effects)\n• Intentional smoke blown into pet's face\n• Ingestion of human feces containing THC (documented in case reports)\n\n**IMPORTANT — Compound toxicity with edibles:** Many marijuana edibles also contain chocolate, xylitol, raisins, macadamia nuts, or other ingredients toxic to pets. If your pet ingests a marijuana edible, consider ALL ingredients when assessing toxicity risk.\n\n**Delta-8 THC:** This THC isomer (approximately 50-75% as psychoactive as delta-9 THC) is increasingly appearing in legal marketplaces. Products may contain harmful by-products from the synthetic conversion process used to produce higher concentrations.",
+                description: "Cannabis (marijuana) toxicity has become increasingly common in pets, particularly in regions where marijuana has been legalized. Dogs are affected far more often than cats, typically through accidental ingestion of marijuana edibles (brownies, gummies, cookies, candies), plant material, or concentrated products. The primary psychoactive compound is delta-9-tetrahydrocannabinol (THC). With legalization has come more potent products and more severe toxicity cases. The classic presentation in dogs includes the triad of **urinary incontinence** (dribbling urine — owners often don't realize this is a sign of intoxication), **ataxia** (wobbly, uncoordinated movement), and **hyperesthesia** (exaggerated startle response to sounds or touch).",
+                toxicityInfo: "The cannabis plant (Cannabis sativa, Cannabis indica) contains over 480 distinct compounds, including nearly 70 cannabinoids. The primary psychoactive compound is delta-9-tetrahydrocannabinol (THC). THC concentration varies widely: 1-20% in plant material, 3-6% in hashish, and 30-50% in hashish oil. Edibles and concentrated products (vapes, distillates, tinctures) may contain much higher THC levels. Cannabutter (marijuana-infused butter) can have extremely high THC concentrations because THC is lipophilic (fat-soluble).\n\nTHC is absorbed rapidly after inhalation and more slowly after ingestion. A lethal dose has not been definitively established in dogs and cats — one study found no fatalities in dogs given oral THC doses of 3,000-9,000 mg/kg. However, clinical disease can occur at doses 1/1000th of the estimated lethal dose, and deaths have been reported, particularly with highly concentrated products or marijuana butter.\n\n**Common exposure routes:**\n• Ingestion of edibles (most common) — brownies, gummies, cookies, candies, infused beverages\n• Ingestion of plant material (dried leaves, flowers, stems)\n• Ingestion of concentrated products (vape cartridge liquid, hashish, hash oil)\n• Secondhand smoke exposure (usually causes mild effects)\n• Intentional smoke blown into pet's face\n• Ingestion of human feces containing THC (documented in case reports)\n\n**IMPORTANT — Compound toxicity with edibles:** Many marijuana edibles also contain chocolate, xylitol, raisins, macadamia nuts, or other ingredients toxic to pets. If your pet ingests a marijuana edible, consider ALL ingredients when assessing toxicity risk.\n\n**Delta-8 THC Products:** Delta-8 THC is a cannabinoid sold in many states where Delta-9 THC remains restricted. These products (gummies, vapes, tinctures) are often sold at gas stations and convenience stores with minimal regulation. Delta-8 products may contain harmful synthesis by-products and contaminants. Pets exposed to Delta-8 products should receive the same urgent care as those exposed to traditional marijuana products.",
                 onsetTime: OnsetTime(
                     early: "Clinical signs typically appear within 1-3 hours of ingestion; effects from inhalation may appear more quickly",
                     delayed: "Signs can last 12-72+ hours depending on dose; severe cases may take several days to fully recover"
@@ -2326,7 +2326,7 @@ class DatabaseService {
                     "With legalization, highly concentrated products are more available — even small amounts of vape liquid or concentrates can cause severe toxicity"
                 ],
                 sources: ["ASPCA Animal Poison Control Center", "Pet Poison Helpline", "Veterinary Partner", "Reptiles Magazine - Toxic Plants List"],
-                relatedEntries: nil
+                relatedEntries: ["d8c34930-fe78-414c-a182-49521dbfc266", "d7723ed0-6496-40b3-8b1c-84e129083cb9"]
             ),
 
             // MARK: - Bleeding Heart
@@ -2380,7 +2380,7 @@ class DatabaseService {
             ToxicItem(
                 id: UUID(uuidString: "fd98d3c0-368c-4b20-9192-c98dd3c17f14")!,
                 name: "Nicotine & Tobacco Products",
-                alternateNames: ["nicotine", "tobacco", "cigarette", "cigarettes", "cigarette butt", "cigarette butts", "cigar", "cigars", "e-cigarette", "e-cigarettes", "electronic cigarette", "electronic cigarettes", "vape", "vaping", "vape juice", "vape liquid", "e-juice", "e-liquid", "e juice", "e liquid", "nicotine liquid", "nicotine solution", "nicotine patch", "nicotine patches", "nicotine gum", "nicotine lozenge", "nicotine lozenges", "nicotine inhaler", "nicotine nasal spray", "nicotine replacement", "nicotine replacement therapy", "NRT", "chewing tobacco", "smokeless tobacco", "snuff", "snus", "dip", "dipping tobacco", "pipe tobacco", "Nicotiana", "tobacco plant", "nicotine poisoning", "nicotine toxicosis", "nicotine intoxication", "tobacco poisoning", "tobacco toxicosis", "e-juice poisoning", "e-liquid poisoning", "ashtray", "ash tray", "cigarette pack", "Juul", "vape pen", "vape pod", "Nicorette", "Nicoderm", "Habitrol", "Commit lozenge"],
+                alternateNames: ["nicotine", "tobacco", "cigarette", "cigarettes", "cigarette butt", "cigarette butts", "cigar", "cigars", "e-cigarette", "e-cigarettes", "electronic cigarette", "electronic cigarettes", "vape", "vaping", "vape juice", "vape liquid", "e-juice", "e-liquid", "e juice", "e liquid", "nicotine liquid", "nicotine solution", "nicotine patch", "nicotine patches", "nicotine gum", "nicotine lozenge", "nicotine lozenges", "nicotine inhaler", "nicotine nasal spray", "nicotine replacement", "nicotine replacement therapy", "NRT", "chewing tobacco", "smokeless tobacco", "snuff", "snus", "dip", "dipping tobacco", "pipe tobacco", "Nicotiana", "tobacco plant", "nicotine poisoning", "nicotine toxicosis", "nicotine intoxication", "tobacco poisoning", "tobacco toxicosis", "e-juice poisoning", "e-liquid poisoning", "ashtray", "ash tray", "cigarette pack", "Juul", "vape pen", "vape pod", "Nicorette", "Nicoderm", "Habitrol", "Commit lozenge", "nicotine pouch", "nicotine pouches", "Zyn", "Zyn pouch", "Zyn pouches", "On!", "On! pouch", "Rogue", "Rogue nicotine", "Lucy", "Lucy nicotine", "oral nicotine", "tobacco-free nicotine"],
                 categories: [.recreationalSubstances, .plants],
                 imageAsset: "tobacco_thumb",
                 description: "Nicotine is a highly toxic alkaloid produced by tobacco plants (Nicotiana species). Pets can be poisoned by ingesting tobacco products, nicotine replacement therapies, or liquid nicotine used in electronic cigarettes. Nicotine acts on the nervous system, initially causing stimulation followed by dangerous depression and paralysis at higher exposures. Death can occur rapidly in severe cases. E-cigarette liquids and nicotine patches pose the greatest danger due to their concentrated nicotine content and rapid absorption.",
@@ -2426,9 +2426,10 @@ class DatabaseService {
                     "Remember that used nicotine patches still contain significant amounts of nicotine — dispose of them in sealed containers",
                     "Be aware that some nicotine gums and lozenges contain xylitol, which is separately toxic to dogs",
                     "Clean up any spilled e-liquid immediately and keep pets away from the area; nicotine absorbs through skin",
-                    "If you use nicotine patches, ensure pets cannot access them on your body or after removal"
+                    "If you use nicotine patches, ensure pets cannot access them on your body or after removal",
+                    "Be vigilant during walks — dogs commonly eat discarded cigarette butts from sidewalks, gutters, and outdoor ashtrays at restaurants and bars"
                 ],
-                sources: ["ASPCA Animal Poison Control Center", "Pet Poison Helpline — Nicotine", "Merck Veterinary Manual — Tobacco and Nicotine Toxicosis", "Tilley and Smith, The 5-Minute Veterinary Consult: Canine and Feline"],
+                sources: ["ASPCA Animal Poison Control Center", "Pet Poison Helpline — Nicotine", "Merck Veterinary Manual — Tobacco and Nicotine Toxicosis", "VCA Animal Hospitals: Nicotine Poisoning in Dogs"],
                 relatedEntries: nil
             ),
 
@@ -7872,7 +7873,7 @@ class DatabaseService {
                     "Coppock RW et al: Methylphenidate toxicosis in dogs: 128 cases (2001-2008). JAVMA 2010",
                     "American College of Veterinary Pharmacists: Amphetamines Toxicity Data"
                 ],
-                relatedEntries: ["dd445566-7788-99aa-bbcc-ddeeff334455", "66dd4455-eeff-0011-2233-445566778899"]
+                relatedEntries: ["dd445566-7788-99aa-bbcc-ddeeff334455", "66dd4455-eeff-0011-2233-445566778899", "ff001122-3344-5566-7788-99aabbccdd01"]
             ),
 
             // MARK: - Heart & Blood Pressure Medications
