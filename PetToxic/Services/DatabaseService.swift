@@ -4498,12 +4498,13 @@ class DatabaseService {
                     "Lethargy (uncommon)",
                     "Tremors (rare, mainly with large ingestions in MDR-1 dogs)"
                 ],
-                entrySeverity: .low,
+                entrySeverity: .moderate,
                 speciesRisks: [
                     SpeciesRisk(species: .dog, severity: .low, notes: "Most common species to eat bait stations due to food attractants. Generally only causes mild GI upset. Main concern is foreign body risk from plastic housing. MDR-1 gene dogs may be more sensitive to abamectin-containing baits."),
                     SpeciesRisk(species: .cat, severity: .low, notes: "Less commonly affected (less attracted to baits). Same low toxicity concerns apply."),
-                    SpeciesRisk(species: .smallMammal, severity: .moderate, notes: "Small body size increases relative dose. Contact veterinarian for any known exposure."),
-                    SpeciesRisk(species: .bird, severity: .moderate, notes: "Limited data. Avoid exposure.")
+                    SpeciesRisk(species: .smallMammal, severity: .moderate, notes: "Rabbits and guinea pigs are highly sensitive to fipronil found in some bait stations. Small body size increases relative dose. Contact veterinarian for any known exposure."),
+                    SpeciesRisk(species: .bird, severity: .moderate, notes: "Small birds such as canaries and budgies may be more sensitive to insecticides in bait stations. Toxicity varies by species and product. Avoid exposure and contact an avian veterinarian if ingestion occurs."),
+                    SpeciesRisk(species: .reptile, severity: .moderate, notes: "Reptiles, particularly lizards, may be more sensitive to insecticides like fipronil found in some bait stations. Reptiles have difficulty clearing these toxins from their system. If a reptile ingests bait station contents, contact a reptile veterinarian promptly.")
                 ],
                 preventionTips: [
                     "Place bait stations in areas inaccessible to pets (behind appliances, inside cabinets)",
@@ -4512,7 +4513,7 @@ class DatabaseService {
                     "Check bait stations regularly and replace any that show signs of pet tampering",
                     "Store unused bait stations securely out of pet reach"
                 ],
-                sources: ["VIN (Veterinary Information Network): Insect Bait Station Toxicology", "ASPCA Animal Poison Control Center", "Pet Poison Helpline"],
+                sources: ["ASPCA Animal Poison Control Center", "Pet Poison Helpline", "Today's Veterinary Nurse — Top 10 Toxins That Are Rarely Serious (2022)"],
                 relatedEntries: ["c9d0e1f2-3a4b-5c6d-e7f8-9a0b1c2d3e4f"]
             ),
 
@@ -9882,7 +9883,6 @@ class DatabaseService {
                     "Consider switching to airsoft or alternative recreational shooting sports if you have curious dogs"
                 ],
                 sources: [
-                    "Veterinary Information Network (VIN) — Paintballs Clinical Brief",
                     "ASPCA Animal Poison Control Center",
                     "Donaldson CW. Paintball toxicosis in dogs. Vet Med. 2003;98:995-998",
                     "Pet Poison Helpline"
@@ -9925,7 +9925,7 @@ class DatabaseService {
                 categories: [.garageGarden],
                 imageAsset: "paints_thumb",
                 description: "Paints are liquid or paste products used for coating surfaces. Common types include latex (water-based) paints, oil-based (alkyd) paints, and spray paints. Most modern household paints have relatively low toxicity. Many products display an Art and Creative Materials Institute (ACMI) seal — if it shows 'AP' (Approved Product), the paint is certified non-toxic. Oil-based paints and spray paints contain petroleum distillates that pose aspiration risk. Very old paints (pre-1978 in the US) may contain lead. FOR PAINT ON FUR: Dried latex paint is generally not toxic. Do NOT use solvents (paint thinner, turpentine, mineral spirits) to remove it — these are more dangerous than the paint itself. Let dried latex paint wear off naturally or trim the affected fur. For wet paint, wash immediately with mild dish soap and warm water before it dries.",
-                toxicityInfo: "Most modern latex and water-based paints cause only mild gastrointestinal upset if ingested. Some latex paints contain small amounts of ethylene glycol (less than 10%) as a drying retardant, but this amount is generally not clinically significant. Oil-based paints and products containing petroleum distillates pose a greater concern — not from direct toxicity, but from aspiration risk if vomiting occurs. Aspiration of petroleum products into the lungs can cause chemical pneumonitis. Paint fumes can irritate the respiratory tract, especially in birds who are extremely sensitive. Very old paints may contain lead, which is a serious toxicity concern requiring veterinary evaluation. ACMI SEAL: Look for the Art and Creative Materials Institute 'AP' (Approved Product) seal on craft paints — this indicates the product is certified non-toxic.",
+                toxicityInfo: "Most modern latex and water-based paints cause only mild gastrointestinal upset if ingested. Some latex paints contain minimal amounts of ethylene glycol as a drying retardant compared to older formulations, but ingestion of modern latex paint is unlikely to cause ethylene glycol toxicity. Oil-based paints and products containing petroleum distillates pose a greater concern — not from direct toxicity, but from aspiration risk if vomiting occurs. Aspiration of petroleum products into the lungs can cause chemical pneumonitis. Paint fumes can irritate the respiratory tract, especially in birds who are extremely sensitive. Very old paints may contain lead, which is a serious toxicity concern requiring veterinary evaluation. ACMI SEAL: Look for the Art and Creative Materials Institute 'AP' (Approved Product) seal on craft paints — this indicates the product is certified non-toxic.",
                 onsetTime: OnsetTime(
                     early: "GI upset (drooling, vomiting, decreased appetite) may occur within a few hours of ingestion.",
                     delayed: "If aspiration occurs with oil-based paints, respiratory signs may develop within 24-48 hours; lead paint toxicity develops over days to weeks with repeated exposure."
@@ -9942,7 +9942,7 @@ class DatabaseService {
                     "Lethargy",
                     "Paint-stained vomit or stool"
                 ],
-                entrySeverity: .lowModerate,
+                entrySeverity: .low,
                 speciesRisks: [
                     SpeciesRisk(
                         species: .dog,
@@ -9981,7 +9981,6 @@ class DatabaseService {
                     "Look for the ACMI 'AP' (Approved Product) seal when purchasing craft paints for use around pets"
                 ],
                 sources: [
-                    "Veterinary Information Network (VIN) — Paints Clinical Brief",
                     "ASPCA Animal Poison Control Center",
                     "Pet Poison Helpline",
                     "Art and Creative Materials Institute (ACMI) — Product Safety Information"
