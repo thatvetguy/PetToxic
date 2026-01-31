@@ -361,12 +361,12 @@ PetToxic/
 | Foods | ~17 | ✅ Complete |
 | Medications | ~24 | ✅ Complete |
 | Garage & Garden | ~21 | ✅ Complete |
-| Household Items | ~14 | 📋 In Progress |
+| Household Items | ~15 | ✅ Complete |
 | Cleaning Products | 9 | ✅ Complete |
-| Recreational Substances | ~6 | 📋 Not Started |
-| Outdoor Hazards / Animal Encounters | ~12 | 📋 Not Started |
+| Recreational Substances | 6 | ✅ Complete |
+| Outdoor Hazards | 12 | ✅ Complete |
 
-*Update this section as categories are completed.*
+*All 8 main categories audited. Remaining: Informational entries (~15), common toxicities enhancement, new Albuterol entry.*
 
 ---
 
@@ -385,4 +385,4 @@ Handoff files: `Handoff_SessionXX_to_SessionYY.md`
 
 ---
 
-*Last Updated: January 2026 (Session 82)*
+*Last Updated: January 2026 (Session 85)*
