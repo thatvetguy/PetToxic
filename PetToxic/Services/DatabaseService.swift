@@ -10806,12 +10806,17 @@ Widow spiders prefer dark, warm, dry areas—basements, attics, garages, closets
 Black widow venom contains alpha-latrotoxin, which causes massive release of neurotransmitters (acetylcholine, norepinephrine, dopamine). This results in severe muscle cramping, pain, and rigidity. Eventually, neurotransmitter stores become depleted, leading to flaccid paralysis and potentially respiratory failure.
 
 **CRITICAL—CAT SUSCEPTIBILITY:**
-Cats are MARKEDLY more susceptible to widow spider venom than dogs. In one veterinary study, 20 of 22 cats died following black widow spider bites. Without prompt treatment including antivenom, widow spider bites can be FATAL in cats.
+Cats are MARKEDLY more susceptible to widow spider venom than dogs. Black widow spider bites are often fatal in cats without prompt treatment. Without prompt treatment including antivenom, widow spider bites can be FATAL in cats.
+
+**ANTIVENOM AVAILABILITY:**
+An antivenom exists for black widow spider bites but is rarely stocked at veterinary hospitals, even specialty hospitals. It may need to be obtained from a human hospital if available.
 
 **Dry Bites:**
-Approximately 15% of widow spider bites are "dry" with no venom injection, but any suspected bite should be treated as a medical emergency.
+Some widow spider bites are "dry" with no venom injection, but any suspected bite should be treated as a medical emergency.
+
+Bites often occur on the muzzle, paws, or belly where fur is thin and skin is more accessible.
 """,
-                toxicityInfo: "Black widow venom contains alpha-latrotoxin, which causes massive release of neurotransmitters (acetylcholine, norepinephrine, dopamine), resulting in severe muscle cramping, pain, and rigidity. Eventually, neurotransmitter stores become depleted, leading to flaccid paralysis and potentially respiratory failure. CATS ARE MARKEDLY SUSCEPTIBLE—in one study, 20 of 22 cats died following black widow bites. Dogs have relative resistance with good prognosis. Antivenom is available and provides rapid relief.",
+                toxicityInfo: "Black widow venom contains alpha-latrotoxin, which causes massive release of neurotransmitters (acetylcholine, norepinephrine, dopamine), resulting in severe muscle cramping, pain, and rigidity. Eventually, neurotransmitter stores become depleted, leading to flaccid paralysis and potentially respiratory failure. CATS ARE MARKEDLY SUSCEPTIBLE—black widow spider bites are often fatal in cats without prompt treatment. Dogs have relative resistance. An antivenom exists but is rarely stocked at veterinary hospitals, even specialty hospitals—it may need to be obtained from a human hospital if available.",
                 onsetTime: OnsetTime(
                     early: "30 minutes to 8 hours (painful bite, then muscle signs)",
                     delayed: "48-72 hours for acute signs to resolve; weakness may persist weeks"
@@ -10851,7 +10856,7 @@ Approximately 15% of widow spider bites are "dry" with no venom injection, but a
                     SpeciesRisk(
                         species: .cat,
                         severity: .severe,
-                        notes: "CATS ARE MARKEDLY SUSCEPTIBLE. In one study, 20 of 22 cats died from black widow bites. Signs include marked vocalization, drooling, muscle pain, abdominal rigidity, vomiting, ataxia. Without prompt treatment including antivenom, bites can be FATAL. SEEK EMERGENCY CARE IMMEDIATELY."
+                        notes: "CATS ARE MARKEDLY SUSCEPTIBLE. Black widow spider bites are often fatal in cats without prompt treatment. Signs include marked vocalization, drooling, muscle pain, abdominal rigidity, vomiting, ataxia. Without prompt treatment including antivenom, bites can be FATAL. SEEK EMERGENCY CARE IMMEDIATELY."
                     ),
                     SpeciesRisk(
                         species: .smallMammal,
@@ -10880,10 +10885,10 @@ Approximately 15% of widow spider bites are "dry" with no venom injection, but a
                     "Seal cracks and gaps around windows, doors, and pipes",
                     "Shake out blankets and bedding left on the floor",
                     "Keep woodpiles and debris away from home foundation",
-                    "Brown widow (spreading in southern states) has orange hourglass"
+                    "The brown widow spider (Latrodectus geometricus) is expanding its range throughout southern states and is increasingly common—it has an orange (not red) hourglass marking"
                 ],
                 sources: [
-                    "Veterinary Information Network (VIN) — Black Widow Spider Envenomation",
+
                     "Merck Veterinary Manual — Spider and Scorpion Bites in Animals (2024)",
                     "Pet Poison Helpline — Black Widow Spider",
                     "VCA Animal Hospitals — Spider Bites",
@@ -10977,12 +10982,12 @@ NOT found in California, Florida, Pacific Northwest, or Atlantic seaboard. Singl
                     SpeciesRisk(
                         species: .dog,
                         severity: .moderate,
-                        notes: "Brown recluse bites are RARE in dogs, even in endemic areas. Typically cause local wound complications rather than systemic illness. 'Bull's-eye' lesion may ulcerate and take weeks to heal. Prognosis is GOOD—most heal within 1-8 weeks. Severely necrotic wounds may need surgical debridement."
+                        notes: "Brown recluse bites are RARE in dogs, even in endemic areas. Typically cause local wound complications rather than systemic illness. 'Bull's-eye' lesion may ulcerate and take weeks to heal. Most bites heal within 1-8 weeks depending on the severity of necrosis, though severely necrotic wounds may require prolonged wound management."
                     ),
                     SpeciesRisk(
                         species: .cat,
                         severity: .moderate,
-                        notes: "Brown recluse bites are RARE in cats. Similar to dogs—primarily local skin lesions that may ulcerate and scar. Systemic illness and death are very rare. Prognosis is GOOD with appropriate wound care."
+                        notes: "Brown recluse bites are RARE in cats. Similar to dogs—primarily local skin lesions that may ulcerate and scar. Systemic illness and death are very rare. Most bites heal well with appropriate wound care."
                     ),
                     SpeciesRisk(
                         species: .smallMammal,
@@ -11003,17 +11008,17 @@ NOT found in California, Florida, Pacific Northwest, or Atlantic seaboard. Singl
                 preventionTips: [
                     "Learn to identify: brown with violin-shaped marking on back, six eyes in three pairs",
                     "GEOGRAPHIC RANGE: South-central and Midwest US only (TX, OK, AR, MO, KS, NE, IA, IL, IN, OH, KY, TN, MS, LA, AL, GA)",
-                    "NOT found in California, Florida, Pacific Northwest, or Atlantic seaboard",
+                    "Brown recluse spiders are NOT found in California, Florida, the Pacific Northwest, or Atlantic seaboard states—'brown recluse bites' reported in these areas are usually misdiagnosed",
                     "Prefer dark, undisturbed places—closets, attics, basements, stored boxes",
                     "Named for reclusive nature—NOT aggressive, bite only when trapped",
                     "Clean and vacuum dark areas regularly",
                     "Shake out pet bedding and stored blankets",
                     "Seal cracks where spiders can enter",
                     "Keep pet sleeping areas free of clutter",
-                    "In endemic areas with many sightings, consult pest control"
+                    "In endemic areas, hundreds of brown recluse spiders can live in a single infested building—consult pest control if you see multiple spiders"
                 ],
                 sources: [
-                    "Veterinary Information Network (VIN) — Brown Recluse Spider Envenomation",
+
                     "Merck Veterinary Manual — Spider and Scorpion Bites in Animals (2024)",
                     "Pet Poison Helpline — Brown Recluse Spider",
                     "VCA Animal Hospitals — Spider Bites",
@@ -11054,7 +11059,7 @@ NOT found in California, Florida, Pacific Northwest, or Atlantic seaboard. Singl
                 categories: [.outdoorHazards],
                 imageAsset: "asp_caterpillar_thumb",
                 description: """
-The asp or puss caterpillar (Megalopyge opercularis), also known as the southern flannel moth caterpillar, is considered the most dangerous caterpillar in the United States. Despite its soft, fluffy appearance that resembles a tuft of fur or cotton, this caterpillar conceals venomous spines beneath its hair.
+The asp or puss caterpillar (Megalopyge opercularis), also known as the southern flannel moth caterpillar, is considered the most venomous caterpillar in North America. Despite its soft, fluffy appearance that resembles a tuft of fur or cotton, this caterpillar conceals venomous spines beneath its hair.
 
 **DECEPTIVE APPEARANCE:**
 The teardrop-shaped caterpillar is covered in long, silky hair that looks inviting to touch. This makes it hazardous for curious pets who may investigate, paw at, or mouth these caterpillars. Venomous spines hidden beneath the soft exterior break off on contact and release venom.
@@ -11063,9 +11068,7 @@ The teardrop-shaped caterpillar is covered in long, silky hair that looks inviti
 Found throughout the southern and southeastern United States, from Texas (epicenter) to Florida, north to Virginia and Maryland. Commonly found on shade trees—oak, elm, pecan, hackberry, wild plum—and ornamental shrubs.
 
 **SEASONALITY:**
-Two generations per year. Most abundant:
-- Early summer (June-July)
-- Fall (September-November)
+There are two peak seasons for asp caterpillar encounters: early summer (June-July) and fall (September-November). The fall surge occurs when caterpillars are searching for sites to spin cocoons.
 
 **OTHER STINGING CATERPILLARS:**
 - Saddleback caterpillar: distinctive horns with spines
@@ -11083,7 +11086,9 @@ While the asp is most painful, all stinging caterpillars should be avoided.
 - Mouthing or eating them
 - Caterpillars falling from trees onto resting pets
 
-Pet fur provides some protection from skin exposure, but oral exposure from mouthing causes more significant symptoms.
+A pet's fur coat provides some protection from skin contact, but oral exposure from mouthing or eating caterpillars typically causes more severe symptoms including intense drooling, tongue and lip swelling, and difficulty swallowing.
+
+Texas is considered the epicenter of asp caterpillar encounters—schools in San Antonio (1923) and Galveston (1951) were temporarily closed due to caterpillar stings to children.
 """,
                 toxicityInfo: "Venomous spines hidden beneath the soft, fuzzy exterior break off on contact and release venom, causing intense localized pain. The venom contains proteins that cause inflammation and pain. Oral exposure from mouthing or eating caterpillars causes more severe symptoms than dermal contact, as fur provides some protection. While extremely painful, stings are typically self-limiting and rarely life-threatening.",
                 onsetTime: OnsetTime(
@@ -11120,6 +11125,21 @@ Pet fur provides some protection from skin exposure, but oral exposure from mout
                         species: .cat,
                         severity: .moderate,
                         notes: "Cats may encounter caterpillars while hunting or exploring. Similar pattern to dogs—oral exposure more severe than dermal. Seek veterinary care if symptoms persist or worsen."
+                    ),
+                    SpeciesRisk(
+                        species: .bird,
+                        severity: .moderate,
+                        notes: "Limited data exists on stinging caterpillar encounters in pet birds. Small body size may result in more significant reactions from venomous spine contact. Seek avian veterinary care for any suspected exposure."
+                    ),
+                    SpeciesRisk(
+                        species: .smallMammal,
+                        severity: .moderate,
+                        notes: "Similar envenomation risk as dogs and cats. Small body size may increase the relative severity of reactions. Seek veterinary care for suspected caterpillar stings."
+                    ),
+                    SpeciesRisk(
+                        species: .reptile,
+                        severity: .low,
+                        notes: "Very limited data. Scales may provide some protection from venomous spines, but soft tissue areas such as the mouth and eyes remain vulnerable. Consult an exotic animal veterinarian if exposure is suspected."
                     )
                 ],
                 preventionTips: [
@@ -11130,14 +11150,14 @@ Pet fur provides some protection from skin exposure, but oral exposure from mout
                     "Do NOT handle fuzzy caterpillars with bare hands",
                     "Use a stick or leaf to relocate caterpillars away from pet areas",
                     "Rule: If a caterpillar looks fuzzy, assume it may sting",
-                    "Check outdoor pet resting areas under trees"
+                    "Check outdoor pet resting areas under trees",
+                    "Caterpillars often fall from trees onto pets resting beneath them—avoid letting pets rest under infested trees during peak seasons"
                 ],
                 sources: [
                     "ASPCA Animal Poison Control Center",
                     "Texas A&M AgriLife Extension Service",
                     "Merck Manual Professional Edition",
                     "University of Florida IFAS Extension",
-                    "Veterinary Information Network (VIN)"
                 ],
                 relatedEntries: ["00112233-4455-6677-8899-aabbccddef06"]
             ),
