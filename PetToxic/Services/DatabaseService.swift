@@ -315,7 +315,7 @@ class DatabaseService {
                     "Be aware that cocktails made with milk or cream may be especially attractive to pets"
                 ],
                 sources: ["ASPCA Animal Poison Control Center", "Pet Poison Helpline", "Merck Veterinary Manual", "VCA Animal Hospitals", "Today's Veterinary Practice"],
-                relatedEntries: nil
+                relatedEntries: ["ec90eb4b-765b-45cb-9255-f449b656b7d3"]
             ),
 
             // MARK: - Raw Yeast Dough
@@ -361,7 +361,7 @@ class DatabaseService {
                     "Be extra vigilant during holiday baking when dough is frequently left to rise"
                 ],
                 sources: ["ASPCA Animal Poison Control Center", "Pet Poison Helpline", "Merck Veterinary Manual", "VCA Animal Hospitals"],
-                relatedEntries: nil
+                relatedEntries: ["63f63b3a-1172-4fb2-9702-45496c99df4d"]
             ),
 
             // MARK: - Caffeine
@@ -2561,7 +2561,9 @@ class DatabaseService {
                 ],
                 relatedEntries: [
                     "11889900-aabb-ccdd-eeff-112233445566",
-                    "dd445566-7788-99aa-bbcc-ddeeff334455"
+                    "dd445566-7788-99aa-bbcc-ddeeff334455",
+                    "ff001122-3344-5566-7788-99aabbccdd02",
+                    "ff001122-3344-5566-7788-99aabbccdd03"
                 ]
             ),
 
@@ -2822,6 +2824,7 @@ class DatabaseService {
                     "Be aware that ecstasy tablets are often colorful and may look like candy — pets may be attracted to them",
                     "If your pet has been exposed, seek veterinary care immediately — serotonin syndrome can develop rapidly and be life-threatening",
                     "Be honest with your veterinarian about what your pet was exposed to — veterinarians are NOT required to report drug exposures and are focused solely on your pet's health",
+                    "Ecstasy tablets are often brightly colored and pressed into shapes that resemble candy — keep them secured away from curious pets",
                     "Inform your veterinarian if the ecstasy may have contained other substances (it's often adulterated with caffeine or other drugs)",
                     "If you or someone you know is struggling with substance use, resources are available — SAMHSA National Helpline: 1-800-662-4357"
                 ],
@@ -2838,7 +2841,8 @@ class DatabaseService {
                 relatedEntries: [
                     "dd445566-7788-99aa-bbcc-ddeeff334455",
                     "ff001122-3344-5566-7788-99aabbccdd01",
-                    "11889900-aabb-ccdd-eeff-112233445566"
+                    "11889900-aabb-ccdd-eeff-112233445566",
+                    "ff001122-3344-5566-7788-99aabbccdd04"
                 ]
             ),
 
@@ -2885,6 +2889,17 @@ class DatabaseService {
                     "synthetic psilocybin",
                     "psilacetin",
 
+                    // Amanita muscaria (commonly in mislabeled products)
+                    "Amanita muscaria",
+                    "fly agaric",
+                    "muscimol",
+                    "ibotenic acid",
+                    "amanita edibles",
+                    "amanita gummies",
+                    "amanita chocolate",
+                    "legal mushroom edibles",
+                    "legal shroom gummies",
+
                     // Common search queries
                     "dog ate mushroom chocolate",
                     "dog ate shrooms",
@@ -2897,7 +2912,7 @@ class DatabaseService {
                 categories: [.recreationalSubstances],
                 imageAsset: "psilocybin_mush_thumb",
                 description: "Psilocybin mushrooms (\"magic mushrooms,\" \"shrooms\") and psychedelic edibles contain compounds that affect serotonin receptors, causing hallucinogenic effects. Pure psilocybin is converted to psilocin in the body and is structurally related to serotonin. While genuine psilocybin has a relatively wide safety margin, dogs exposed to it experience an unpleasant but typically survivable intoxication with supportive care. YOUR PET'S HEALTH IS THE PRIORITY. Veterinarians are focused on treating your pet, not on the legal status of the substance. Being honest about what your pet was exposed to helps your veterinarian provide the best possible care. Veterinary professionals are NOT required to report illegal drug exposures to law enforcement. CRITICAL WARNING — MISLABELED PRODUCTS: Many \"mushroom\" chocolates, gummies, and edibles sold at smoke shops and online DO NOT contain actual psilocybin. Testing has found they may contain: Muscimol and ibotenic acid (from Amanita mushrooms) — can cause delirious stupor and SEIZURES; 4-AcO-DMT (\"synthetic psilocybin\") — research chemical with limited safety data; Unknown research chemicals — potentially dangerous with no established safety profiles; Other adulterants — prescription drugs, kava, bath salts. In 2024, the FDA recalled Diamond Shruumz products after 145 illnesses, 59 hospitalizations, and 2 deaths across 29 states. Testing revealed highly inconsistent contents even within the same product line. This entry covers psilocybin-type mushrooms ONLY. It does NOT cover deadly Amanita species (death cap, destroying angel) that cause liver failure — those are a separate, life-threatening emergency.",
-                toxicityInfo: "Psilocybin is a prodrug that is rapidly dephosphorylated to psilocin, the pharmacologically active compound. Psilocin is structurally similar to serotonin and acts primarily as an agonist at serotonin (5-HT) receptors, particularly 5-HT2A receptors. MECHANISM: Psilocin's serotonergic effects cause altered perception, disorientation, and anxiety in pets. Unlike humans who may find the experience meaningful, dogs find it distressing and frightening. The experience is sometimes described as causing \"apprehension\" or \"bad trip\" behavior in animals. SAFETY MARGIN: Pure psilocybin has a relatively wide safety margin. In experimental studies, the LD50 in mice was 293 mg/kg — approximately 1000 times the threshold psychoactive dose. Fatalities from pure psilocybin are extremely rare. MISLABELED PRODUCTS — THE REAL DANGER: Many \"mushroom edibles\" do not contain actual psilocybin. Common adulterants include: Muscimol/Ibotenic Acid from legal Amanita muscaria mushrooms — these are NOT classical hallucinogens, act on GABA receptors, and cause delirious stupor, confusion, and potentially SEIZURES; 4-AcO-DMT which converts to psilocin but is unregulated and may contain toxic contaminants; Unknown research chemicals with no safety data. MAO INHIBITOR COMBINATIONS: Some products combine psilocybin or DMT with MAO inhibitors (harmaline from Syrian Rue) to potentiate effects. This can significantly intensify and prolong the intoxication and increase serotonin-related effects.",
+                toxicityInfo: "Psilocybin is a prodrug that is rapidly dephosphorylated to psilocin, the pharmacologically active compound. Psilocin is structurally similar to serotonin and acts primarily as an agonist at serotonin (5-HT) receptors, particularly 5-HT2A receptors. MECHANISM: Psilocin's serotonergic effects cause altered perception, disorientation, and anxiety in pets. Unlike humans who may find the experience meaningful, dogs find it distressing and frightening. The experience is sometimes described as causing \"apprehension\" or \"bad trip\" behavior in animals. SAFETY MARGIN: Pure psilocybin has a relatively wide safety margin. Fatalities from pure psilocybin are extremely rare. MISLABELED PRODUCTS — THE REAL DANGER: Many \"mushroom edibles\" do not contain actual psilocybin. Common adulterants include: Muscimol/Ibotenic Acid from legal Amanita muscaria mushrooms — these are NOT classical hallucinogens, act on GABA receptors, and cause delirious stupor, confusion, and potentially SEIZURES; 4-AcO-DMT which converts to psilocin but is unregulated and may contain toxic contaminants; Unknown research chemicals with no safety data. MAO INHIBITOR COMBINATIONS: Some products combine psilocybin or DMT with MAO inhibitors (harmaline from Syrian Rue) to potentiate effects. This can significantly intensify and prolong the intoxication and increase serotonin-related effects.",
                 onsetTime: OnsetTime(
                     early: "With genuine psilocybin: Clinical signs typically develop within 20-60 minutes after ingestion, though onset may be delayed up to 3 hours. Chocolates and edibles may have slightly faster onset than raw mushrooms. With mislabeled products: Onset can be unpredictable depending on contents. Muscimol from Amanita mushrooms may have onset within 30-90 minutes.",
                     delayed: "Effects of genuine psilocybin typically last 2-4 hours, though prolonged effects up to 15 hours have been reported. Drowsiness, dilated pupils, and appearing \"out of it\" may persist up to 24 hours. With MAO inhibitor combinations, duration can be significantly prolonged."
@@ -2970,14 +2985,13 @@ class DatabaseService {
                     "If you or someone you know is struggling with substance use, resources are available — SAMHSA National Helpline: 1-800-662-4357"
                 ],
                 sources: [
-                    "VIN (Veterinary Information Network): Psilocybin Mushroom Toxicosis Monograph",
                     "ASPCA Animal Poison Control Center: Hallucinogenic Mushroom Toxicosis in Animals",
                     "Veterinary and Animal Science (2023): Intoxication of Dogs and Cats with Recreational Drugs — Psilocybin Section",
                     "VCA Animal Hospitals: Mushroom Toxicity — Neurotoxic Mushrooms",
                     "Veterinary Partner (VIN): Mushroom Poisoning in Dogs and Cats",
                     "FDA (2024): Investigation of Illnesses — Diamond Shruumz Brand Products Recall",
                     "CDC (November 2024): Severe Illness Associated with Diamond Shruumz Products — 145 Illnesses, 59 Hospitalizations",
-                    "Pet Health Network / Dr. Justine Lee: Dogs and Mushrooms — Hallucinogenic Types",
+                    "Pet Health Network: Dogs and Mushrooms — Hallucinogenic Types",
                     "Longwood Veterinary Center: Mushroom Toxicity in Pets — Psilocybin Section",
                     "Denver Post (2024): FDA Testing Reveals 4-AcO-DMT and Adulterants in Mushroom Edibles"
                 ],
@@ -6759,7 +6773,7 @@ class DatabaseService {
                     "Inform pet sitters and house guests about the danger of acetaminophen to pets"
                 ],
                 sources: ["ASPCA Animal Poison Control Center: Acetaminophen Toxicity", "Merck Veterinary Manual: Acetaminophen Toxicosis", "Pet Poison Helpline: Tylenol Toxicity in Cats and Dogs", "Veterinary Partner / VCA Hospitals: Acetaminophen Toxicity"],
-                relatedEntries: ["aa112233-4455-6677-8899-aabbccddeef0", "cc334455-6677-8899-aabb-ccddeeff2233", "ff667788-99aa-bbcc-ddee-ff0011223355", "66dd4455-eeff-0011-2233-445566778899", "ddee1122-ff33-4455-6677-889900aabbcc"]
+                relatedEntries: ["aa112233-4455-6677-8899-aabbccddeef0", "cc334455-6677-8899-aabb-ccddeeff2233", "ff667788-99aa-bbcc-ddee-ff0011223355", "66dd4455-eeff-0011-2233-445566778899", "ddee1122-ff33-4455-6677-889900aabbcc", "00778899-aabb-ccdd-eeff-001122334455"]
             ),
 
             // MARK: - Aspirin & Salicylates
@@ -7081,7 +7095,7 @@ class DatabaseService {
                     "Merck Veterinary Manual: Serotonin Syndrome in Animals",
                     "Pet Poison Helpline: SSRI and SNRI Toxicity in Dogs and Cats"
                 ],
-                relatedEntries: ["ee556677-8899-aabb-ccdd-eeff00112244", "11889900-aabb-ccdd-eeff-112233445566", "44bb2233-ccdd-eeff-0011-223344556677"]
+                relatedEntries: ["ee556677-8899-aabb-ccdd-eeff00112244", "11889900-aabb-ccdd-eeff-112233445566", "44bb2233-ccdd-eeff-0011-223344556677", "ff001122-3344-5566-7788-99aabbccdd01", "ff001122-3344-5566-7788-99aabbccdd03", "ff001122-3344-5566-7788-99aabbccdd04", "00778899-aabb-ccdd-eeff-001122334455"]
             ),
 
             // MARK: - Benzodiazepines (Anti-Anxiety & Sleep Medications)
@@ -7873,7 +7887,7 @@ class DatabaseService {
                     "Coppock RW et al: Methylphenidate toxicosis in dogs: 128 cases (2001-2008). JAVMA 2010",
                     "American College of Veterinary Pharmacists: Amphetamines Toxicity Data"
                 ],
-                relatedEntries: ["dd445566-7788-99aa-bbcc-ddeeff334455", "66dd4455-eeff-0011-2233-445566778899", "ff001122-3344-5566-7788-99aabbccdd01"]
+                relatedEntries: ["dd445566-7788-99aa-bbcc-ddeeff334455", "66dd4455-eeff-0011-2233-445566778899", "ff001122-3344-5566-7788-99aabbccdd01", "ff001122-3344-5566-7788-99aabbccdd02", "ff001122-3344-5566-7788-99aabbccdd03"]
             ),
 
             // MARK: - Heart & Blood Pressure Medications
