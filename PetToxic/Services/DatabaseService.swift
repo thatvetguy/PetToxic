@@ -10117,12 +10117,14 @@ class DatabaseService {
                     "dog got skunked",
                     "cat got skunked",
                     "skunk sprayed dog",
-                    "skunk sprayed cat"
+                    "skunk sprayed cat",
+                    "descunk",
+                    "dog sprayed by skunk"
                 ],
                 categories: [.outdoorHazards],
                 imageAsset: "skunk_thumb",
-                description: "Skunk spray is a defensive secretion produced by skunks when threatened. The spray is an oily, yellow liquid containing thiols (sulfur-containing compounds) that produce an intensely unpleasant odor. Dogs are commonly sprayed when they encounter skunks, particularly at dawn, dusk, or night. While most skunk encounters result in nothing more than a terrible smell, the thiols in skunk spray can occasionally cause more serious effects. In rare cases, the thiols can cause oxidative damage to red blood cells, leading to Heinz body anemia. Thiols react with oxyhemoglobin, forming methemoglobin, thiyl radicals, and hydrogen peroxide. These highly reactive compounds can damage hemoglobin, producing Heinz bodies (clumps of damaged hemoglobin) and subsequent hemolysis (red blood cell destruction). This can lead to severe anemia. Thiols are readily absorbed orally (if the pet licks the spray) within hours; dermal absorption is minimal. Direct spray to the eyes can cause significant ocular irritation and temporary vision changes. DEODORIZING: Do NOT use tomato juice — it doesn't work. Use a commercial skunk odor remover or a mixture of hydrogen peroxide (1 quart 3%), baking soda (1/4 cup), and dish soap (1 teaspoon). Do not get this mixture in the eyes.",
-                toxicityInfo: "Most skunk spray exposures cause only local irritation and the characteristic foul odor — no treatment beyond deodorizing is needed. However, in rare cases, the thiols in skunk spray can cause oxidative damage to red blood cells, particularly if the pet is sprayed directly in the face and ingests the spray by licking. MECHANISM: Thiols react with oxyhemoglobin in a redox reaction, forming methemoglobin, thiyl radicals, and hydrogen peroxide. These reactive compounds damage hemoglobin sulfhydryl groups, producing Heinz bodies and subsequent hemolysis. A documented case in 2005 (Zaks et al., JAVMA) reported severe Heinz body anemia in a dog 3 days after being sprayed by a skunk. CATS may be more susceptible to oxidative RBC damage than dogs. OCULAR EXPOSURE: Direct spray to the eyes can cause significant irritation, corneal edema, and temporary vision changes.",
+                description: "Skunk spray is a defensive secretion produced by skunks when threatened. The spray is an oily, yellow liquid containing thiols (sulfur-containing compounds) that produce an intensely unpleasant odor. Skunks can spray accurately up to 10-15 feet and are most active at dawn and dusk. Spraying incidents peak in spring during mating season and in fall when young skunks disperse. Dogs are commonly sprayed when they encounter skunks, particularly at dawn, dusk, or night. While most skunk encounters result in nothing more than a terrible smell, the thiols in skunk spray can occasionally cause more serious effects. In rare cases, the thiols can cause oxidative damage to red blood cells, leading to Heinz body anemia (a condition where damaged hemoglobin clumps together and red blood cells are destroyed). Thiols react with oxyhemoglobin, forming methemoglobin, thiyl radicals, and hydrogen peroxide. These highly reactive compounds can damage hemoglobin, producing Heinz bodies and subsequent hemolysis (red blood cell destruction). This can lead to severe anemia. Thiols are readily absorbed orally (if the pet licks the spray) within hours; dermal absorption is minimal. Direct spray to the eyes can cause significant ocular irritation and temporary vision changes. DEODORIZING: Do NOT use tomato juice — it doesn't work. Use a commercial skunk odor remover or a mixture of hydrogen peroxide (1 quart 3%), baking soda (1/4 cup), and dish soap (1 teaspoon). Do not get this mixture in the eyes.",
+                toxicityInfo: "Most skunk spray exposures cause only local irritation and the characteristic foul odor — no treatment beyond deodorizing is needed. However, in rare cases, the thiols in skunk spray can cause oxidative damage to red blood cells, particularly if the pet is sprayed directly in the face and ingests the spray by licking. MECHANISM: Thiols react with oxyhemoglobin in a redox reaction, forming methemoglobin, thiyl radicals, and hydrogen peroxide. These reactive compounds damage hemoglobin sulfhydryl groups, producing Heinz bodies and subsequent hemolysis. A case report published in the Journal of the American Veterinary Medical Association documented severe Heinz body anemia in a dog 3 days after being sprayed by a skunk. CATS may be more susceptible to oxidative RBC damage than dogs. OCULAR EXPOSURE: Direct spray to the eyes can cause significant irritation, corneal edema, and temporary vision changes.",
                 onsetTime: OnsetTime(
                     early: "Local irritation, eye irritation, drooling, and nausea occur immediately upon exposure.",
                     delayed: "If Heinz body anemia develops, signs (lethargy, weakness, dark urine) may appear 1-5 days after exposure. In the documented case, severe anemia developed 3 days post-exposure."
@@ -10144,12 +10146,12 @@ class DatabaseService {
                     "Rapid breathing (compensating for anemia)",
                     "Collapse (in severe anemia)"
                 ],
-                entrySeverity: .lowModerate,
+                entrySeverity: .low,
                 speciesRisks: [
                     SpeciesRisk(
                         species: .dog,
                         severity: .moderate,
-                        notes: "Most exposures cause only odor and local irritation. Rare cases of Heinz body anemia have been documented (Zaks et al. 2005), particularly when dogs are sprayed directly in the face and ingest the spray by licking. Monitor for lethargy, weakness, or dark urine in the days following exposure. Seek veterinary care if these signs develop."
+                        notes: "Most exposures cause only odor and local irritation. Rare cases of Heinz body anemia have been documented in veterinary literature, particularly when dogs are sprayed directly in the face and ingest the spray by licking. Monitor for lethargy, weakness, or dark urine in the days following exposure. Seek veterinary care if these signs develop."
                     ),
                     SpeciesRisk(
                         species: .cat,
@@ -10159,7 +10161,7 @@ class DatabaseService {
                     SpeciesRisk(
                         species: .bird,
                         severity: .low,
-                        notes: "Skunk encounters with birds are uncommon. Local irritation would be the primary concern."
+                        notes: "Skunk encounters with birds are uncommon. Limited data available; local irritation to eyes and respiratory tract would be the primary concern."
                     ),
                     SpeciesRisk(
                         species: .smallMammal,
@@ -10169,7 +10171,7 @@ class DatabaseService {
                     SpeciesRisk(
                         species: .reptile,
                         severity: .low,
-                        notes: "Skunk encounters with reptiles are rare; effects unknown."
+                        notes: "Limited data available. Skunk encounters with reptiles are rare and effects are not well documented."
                     )
                 ],
                 preventionTips: [
@@ -10183,8 +10185,7 @@ class DatabaseService {
                     "Seek veterinary care if your pet was sprayed directly in the face, shows eye damage, or develops any signs of illness in the days following exposure"
                 ],
                 sources: [
-                    "Zaks KL, Tan EO, Thrall MA. Heinz body anemia in a dog that had been sprayed with skunk musk. J Am Vet Med Assoc. 2005;226(9):1516-1518",
-                    "Veterinary Information Network (VIN) — Skunk Spray Toxicosis",
+                    "Journal of the American Veterinary Medical Association — Heinz body anemia in a dog sprayed with skunk musk (2005)",
                     "ASPCA Animal Poison Control Center",
                     "Pet Poison Helpline"
                 ],
@@ -10217,12 +10218,13 @@ class DatabaseService {
                     "dog licked toad",
                     "dog mouthed toad",
                     "cat ate toad",
-                    "poisonous toad"
+                    "poisonous toad",
+                    "dog foaming at mouth"
                 ],
                 categories: [.outdoorHazards],
                 imageAsset: "bufo_toad_thumb",
-                description: "Bufo toad poisoning occurs when pets — usually dogs — mouth, lick, or eat certain toxic toad species. Two species are of primary concern in the United States: the Cane Toad (Bufo marinus/Rhinella marina), found in Florida, southern Texas, Louisiana, and Hawaii; and the Colorado River Toad (Bufo alvarius/Incilius alvarius), found in the Sonoran Desert regions of Arizona and California. These large toads (7-9 inches) secrete potent toxins from large parotid glands behind their eyes and smaller glands throughout their skin. The toxin is a thick, white, creamy liquid released when the toad is threatened. Bufo toads are most active during breeding season (March through September), particularly after rainfall and during dawn, dusk, and nighttime hours. The Cane Toad is MORE toxic than the Colorado River Toad. The toxin content of both parotid glands from a single Cane Toad is sufficient to kill a 10-15 kg (22-33 lb) dog. SMALL DOGS ARE AT HIGHEST RISK — in one study, 76% of Cane Toad poisoning cases were small breed dogs. IMMEDIATE ACTION: If your pet mouths a toad, immediately rinse the mouth with water using a hose or faucet, pointing the head DOWN to prevent swallowing. Wipe the gums and tongue with a wet cloth. Then seek emergency veterinary care immediately — do not wait for symptoms to appear.",
-                toxicityInfo: "Bufo toad toxin contains several dangerous compounds: BUFAGENINS and BUFOTOXINS are cardioactive glycosides similar to digitalis (digoxin) that cause cardiac arrhythmias — these are the primary cause of death. BUFOTENINES have hallucinogenic, blood pressure-raising, and muscle-contracting properties. The toxin also contains catecholamines and serotonin. EXPOSURE ROUTES: Toxin is absorbed through the mouth, nose, and eyes when dogs mouth or bite the toad. Toads that sit in outdoor water bowls can leave behind enough toxin in the water to poison pets that drink from the bowl. Dried toads, toad eggs, and tadpoles can also be toxic if ingested. CARDIAC EFFECTS: The cardioactive glycosides cause effects similar to digitalis toxicity — bradycardia, AV block, ventricular arrhythmias. Atropine may paradoxically worsen arrhythmias in these cases. ENTEROHEPATIC RECIRCULATION: Cardiac toxins may be reabsorbed from the intestines, which can delay or prolong cardiac effects for up to 4 hours after exposure.",
+                description: "Bufo toad poisoning occurs when pets — usually dogs — mouth, lick, or eat certain toxic toad species. Two species are of primary concern in the United States: the Cane Toad (Bufo marinus/Rhinella marina), found in Florida, southern Texas, Louisiana, and Hawaii; and the Colorado River Toad (Bufo alvarius/Incilius alvarius), found in the Sonoran Desert regions of Arizona and California. These large toads (7-9 inches) secrete potent toxins from large parotid glands behind their eyes and smaller glands throughout their skin. The toxin is a thick, white, creamy liquid released when the toad is threatened. Bufo toads are most active during breeding season (March through September), particularly after rainfall and during dawn, dusk, and nighttime hours. Cane toads are large (4-9 inches) with distinctive, prominent parotid glands visible behind the eyes. The Cane Toad is MORE toxic than the Colorado River Toad. Even brief oral contact with a single Cane Toad can deliver a lethal dose of toxin, especially to small dogs and cats. SMALL DOGS ARE AT HIGHEST RISK — in one study, 76% of Cane Toad poisoning cases were small breed dogs. IMMEDIATE ACTION: If your pet mouths a toad, immediately rinse the mouth with water using a hose or faucet, pointing the head DOWN to prevent swallowing. Wipe the gums and tongue with a wet cloth. Then seek emergency veterinary care immediately — do not wait for symptoms to appear.",
+                toxicityInfo: "Bufo toad toxin contains several dangerous compounds: BUFAGENINS and BUFOTOXINS are cardioactive glycosides similar to digitalis (digoxin) that cause cardiac arrhythmias — these are the primary cause of death. BUFOTENINES have hallucinogenic, blood pressure-raising, and muscle-contracting properties. The toxin also contains catecholamines and serotonin. EXPOSURE ROUTES: Toxin is absorbed through the mouth, nose, and eyes when dogs mouth or bite the toad. Toads that sit in outdoor water bowls can leave behind enough toxin in the water to poison pets that drink from the bowl. Dried toads, toad eggs, and tadpoles can also be toxic if ingested. CARDIAC EFFECTS: The cardioactive glycosides cause effects similar to digitalis toxicity — bradycardia (abnormally slow heart rate), AV block (disrupted electrical signaling in the heart), and ventricular arrhythmias (dangerous irregular heartbeats). ENTEROHEPATIC RECIRCULATION: Cardiac toxins may be reabsorbed from the intestines, which can delay or prolong cardiac effects for up to 4 hours after exposure. Symptoms can appear within minutes of exposure. Toads are most active at dawn and dusk, especially after rain when they emerge to hunt insects. Dogs often mouth toads repeatedly despite the unpleasant experience.",
                 onsetTime: OnsetTime(
                     early: "Local signs (profuse hypersalivation, pawing at mouth, head shaking) occur IMMEDIATELY. GI signs typically within 15 minutes. Neurological signs within 15-20 minutes.",
                     delayed: "Cardiac signs may occur within 15 minutes or be delayed up to 4 hours due to enterohepatic recirculation of the cardiac toxins. Death can occur rapidly in severe cases. This is a life-threatening emergency."
@@ -10290,10 +10292,9 @@ class DatabaseService {
                     "If your dog mouths a toad, IMMEDIATELY rinse the mouth with water (head pointing DOWN to prevent swallowing) and seek emergency veterinary care — do not wait for symptoms"
                 ],
                 sources: [
-                    "Veterinary Information Network (VIN) — Bufo Toad Intoxication",
                     "ASPCA Animal Poison Control Center",
                     "Pet Poison Helpline",
-                    "Reeves MP. A retrospective report of 90 dogs with suspected cane toad (Bufo marinus) toxicity. Aust Vet J. 2004;82(10):608-611",
+                    "Australian Veterinary Journal — Retrospective report of 90 dogs with suspected cane toad toxicity (2004)",
                     "Merck Veterinary Manual — Toad Poisoning"
                 ],
                 relatedEntries: ["00112233-4455-6677-8899-aabbccddef07"]
@@ -10332,12 +10333,16 @@ class DatabaseService {
                     "carpenter bee sting",
                     "dog ate bee",
                     "cat ate bee",
-                    "dog bit wasp"
+                    "dog bit wasp",
+                    "dog face swollen",
+                    "bee sting swelling",
+                    "fire ant bites",
+                    "ground nest"
                 ],
                 categories: [.outdoorHazards],
                 imageAsset: "bees_thumb",
                 description: "Hymenoptera envenomation refers to stings from insects in the order Hymenoptera, which includes bees (honey bees, Africanized 'killer' bees, carpenter bees), wasps, hornets, yellow jackets, fire ants, and velvet ants. These insects account for the majority of insect sting cases in veterinary patients. Dogs and cats are typically stung when they disturb a nest, step on an insect, or try to bite or play with one. Most stings occur on the paws, muzzle, or inside the mouth. While most single stings cause only localized pain and swelling, some pets develop life-threatening allergic reactions (anaphylaxis) even from a single sting, and mass envenomation from swarms or fire ant mounds can be fatal. IMMEDIATE ACTION (Bee Stings Only): FIRST — If your pet shows ANY signs of a serious reaction (difficulty breathing, facial swelling, collapse, vomiting, weakness, or pale gums), GO TO A VETERINARIAN IMMEDIATELY. Do not delay to search for a stinger. If your pet appears stable and you can easily see a stinger, remove it quickly by scraping sideways across the skin with a credit card, fingernail, or other flat edge. Do NOT squeeze the stinger with tweezers or fingers — this can inject more venom. Then monitor closely for any developing signs of allergic reaction. Note: Only BEES leave stingers behind. Wasps, hornets, yellow jackets, and fire ants do not.",
-                toxicityInfo: "Hymenoptera venom contains a complex mixture of allergenic proteins, enzymes, peptides, and vasoactive amines. Key components include phospholipase A2, hyaluronidase, and melittin (in bee venom), which work together to disrupt cell membranes and break down connective tissue. Fire ant venom is composed primarily of alkaloids. The venom promotes histamine and heparin release from mast cells, causing local inflammation. IMPORTANT DISTINCTIONS: (1) BEES have BARBED stingers that detach and remain in the victim — the venom sac can continue pumping venom for up to 60 seconds even after the bee dies; (2) Wasps, hornets, yellow jackets, fire ants, and velvet ants have SMOOTH stingers and can sting MULTIPLE TIMES; (3) Fire ants bite with their mandibles to anchor themselves, then sting in a circular pattern from their abdomen, delivering multiple stings per ant. ANAPHYLAXIS: Allergic reactions are NOT dose-dependent — some pets react severely to a single sting while others tolerate multiple stings. MASS ENVENOMATION: Dozens to hundreds of stings can be fatal even in non-allergic animals due to the sheer volume of venom. The estimated lethal dose is approximately 20 stings per kilogram of body weight.",
+                toxicityInfo: "Hymenoptera venom contains a complex mixture of allergenic proteins, enzymes, peptides, and vasoactive amines. Key components include phospholipase A2, hyaluronidase, and melittin (in bee venom), which work together to disrupt cell membranes and break down connective tissue. Fire ant venom is composed primarily of alkaloids. The venom promotes histamine and heparin release from mast cells, causing local inflammation. IMPORTANT DISTINCTIONS: (1) BEES have BARBED stingers that detach and remain in the victim — the venom sac can continue pumping venom for up to 60 seconds even after the bee dies; (2) Wasps, hornets, yellow jackets, fire ants, and velvet ants have SMOOTH stingers and can sting MULTIPLE TIMES; (3) Fire ants bite with their mandibles to anchor themselves, then sting in a circular pattern from their abdomen, delivering multiple stings per ant. ANAPHYLAXIS: Allergic reactions are NOT dose-dependent — some pets react severely to a single sting while others tolerate multiple stings. MASS ENVENOMATION: Mass envenomation from dozens to hundreds of stings can be life-threatening even in non-allergic animals due to the cumulative venom load. Honeybees can only sting once due to their barbed stinger, but wasps, hornets, and fire ants can sting multiple times. Yellow jackets and some wasps nest in the ground — dogs can accidentally disturb these nests while walking or digging. Fire ants attack in coordinated swarms when their mound is disturbed; each ant can sting multiple times in rapid succession. Swelling from stings typically peaks 24-48 hours after exposure. Stinging insect activity is highest in late summer and early fall when colonies reach their largest size. In southern states, Africanized honeybees are more aggressive than European honeybees, tend to pursue perceived threats further, and deliver more stings.",
                 onsetTime: OnsetTime(
                     early: "Local reactions (pain, swelling, redness) occur within seconds to minutes. Anaphylactic reactions typically develop within 10-60 minutes but may be delayed up to several hours.",
                     delayed: "Delayed-type hypersensitivity reactions (rare in cats, uncommon in dogs) can occur 3-14 days after the sting, potentially causing serum sickness with joint pain, fever, and kidney involvement. Fire ant sting sites may develop pustules or become infected over 24-72 hours."
@@ -10405,7 +10410,6 @@ class DatabaseService {
                     "For bee stings ONLY: If you see a stinger, scrape it off with a credit card or fingernail — do NOT squeeze it with tweezers"
                 ],
                 sources: [
-                    "Veterinary Information Network (VIN) — Hymenoptera Envenomation",
                     "Merck Veterinary Manual — Wasp, Bee, and Ant Stings to Animals",
                     "ASPCA Animal Poison Control Center",
                     "Pet Poison Helpline — Fire Ant Venom",
