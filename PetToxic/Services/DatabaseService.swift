@@ -53,7 +53,7 @@ class DatabaseService {
                     "Remember that baking chocolate and dark chocolate are most dangerous"
                 ],
                 sources: ["ASPCA Animal Poison Control Center", "Pet Poison Helpline", "Merck Veterinary Manual", "VCA Animal Hospitals"],
-                relatedEntries: ["f2a3b4c5-6d7e-8f9a-0b1c-2d3e4f5a6b7c", "e293e8ba-eefc-4fe0-bf93-9e8842873a35"]
+                relatedEntries: ["f2a3b4c5-6d7e-8f9a-0b1c-2d3e4f5a6b7c", "e293e8ba-eefc-4fe0-bf93-9e8842873a35", "88990011-2233-4455-6677-889900aabb01"]
             ),
 
             // MARK: - Grapes & Raisins
@@ -7888,7 +7888,7 @@ class DatabaseService {
                     "Coppock RW et al: Methylphenidate toxicosis in dogs: 128 cases (2001-2008). JAVMA 2010",
                     "American College of Veterinary Pharmacists: Amphetamines Toxicity Data"
                 ],
-                relatedEntries: ["dd445566-7788-99aa-bbcc-ddeeff334455", "66dd4455-eeff-0011-2233-445566778899", "ff001122-3344-5566-7788-99aabbccdd01", "ff001122-3344-5566-7788-99aabbccdd02", "ff001122-3344-5566-7788-99aabbccdd03"]
+                relatedEntries: ["dd445566-7788-99aa-bbcc-ddeeff334455", "66dd4455-eeff-0011-2233-445566778899", "ff001122-3344-5566-7788-99aabbccdd01", "ff001122-3344-5566-7788-99aabbccdd02", "ff001122-3344-5566-7788-99aabbccdd03", "88990011-2233-4455-6677-889900aabb01"]
             ),
 
             // MARK: - Heart & Blood Pressure Medications
@@ -8146,7 +8146,7 @@ class DatabaseService {
                     "Wedgewood Pharmacy: Digoxin for Dogs and Cats",
                     "dvm360: Top Human Medications Pets Ingest (Lee JA)"
                 ],
-                relatedEntries: ["11223344-5566-7788-99aa-bbccddeeff00", "22334455-6677-8899-aabb-ccddeeff0011", "33445566-7788-99aa-bbcc-ddeeff001122", "88990011-2233-4455-6677-8899aabbccdd"]
+                relatedEntries: ["11223344-5566-7788-99aa-bbccddeeff00", "22334455-6677-8899-aabb-ccddeeff0011", "33445566-7788-99aa-bbcc-ddeeff001122", "88990011-2233-4455-6677-8899aabbccdd", "88990011-2233-4455-6677-889900aabb01"]
             ),
 
             // MARK: - Diabetes Medications (Insulin & Oral Hypoglycemics)
@@ -12551,6 +12551,200 @@ If your pet has swallowed a metallic object, your veterinarian may recommend X-r
                     "a1b2c3d4-5e6f-7a8b-9c0d-1e2f3a4b5c6d",
                     "b2c3d4e5-6f7a-8b9c-0d1e-2f3a4b5c6d7e",
                     "f6a7b8c9-0d1e-2f3a-4b5c-6d7e8f9a0b1c"
+                ]
+            ),
+
+            // MARK: - Asthma Inhalers (Albuterol, Beta-Agonists)
+            ToxicItem(
+                id: UUID(uuidString: "88990011-2233-4455-6677-889900aabb01")!,
+                name: "Asthma Inhalers",
+                alternateNames: [
+                    // General terms
+                    "asthma inhaler",
+                    "inhaler",
+                    "asthma medication",
+                    "rescue inhaler",
+                    "bronchodilator",
+                    "bronchodilator inhaler",
+                    "metered dose inhaler",
+                    "MDI",
+                    "puffer",
+
+                    // ALBUTEROL / SALBUTAMOL
+                    "albuterol",
+                    "albuterol inhaler",
+                    "salbutamol",
+                    "Ventolin",
+                    "Ventolin HFA",
+                    "ProAir",
+                    "ProAir HFA",
+                    "Proventil",
+                    "Proventil HFA",
+                    "Accuneb",
+                    "VoSpire",
+                    "VoSpire ER",
+
+                    // OTHER BETA-AGONISTS
+                    "beta agonist",
+                    "beta-agonist",
+                    "beta-2 agonist",
+                    "terbutaline",
+                    "metaproterenol",
+                    "Alupent",
+                    "pirbuterol",
+                    "levalbuterol",
+                    "Xopenex",
+
+                    // COMBINATION INHALERS
+                    "Combivent",
+                    "ipratropium albuterol",
+                    "DuoNeb",
+
+                    // STEROID INHALERS (less toxic but included)
+                    "fluticasone",
+                    "Flovent",
+                    "Flovent HFA",
+                    "steroid inhaler",
+                    "inhaled steroid",
+                    "inhaled corticosteroid",
+                    "beclomethasone",
+                    "QVAR",
+                    "budesonide",
+                    "Pulmicort",
+
+                    // Common search queries
+                    "dog chewed inhaler",
+                    "dog bit inhaler",
+                    "dog punctured inhaler",
+                    "cat chewed inhaler",
+                    "pet ate inhaler",
+                    "dog ate Ventolin",
+                    "dog ate albuterol",
+                    "dog chewed Flovent"
+                ],
+                categories: [.medications],
+                imageAsset: "asthma_inhalers",
+                description: """
+Asthma inhalers are pressurized devices that deliver medication directly to the lungs. They are commonly found in households and are used in both human and veterinary medicine. When pets — especially dogs — chew into and puncture an inhaler canister, they can be exposed to a massive overdose of medication all at once.
+
+⚠️ **BETA-AGONIST INHALERS (Most Dangerous):**
+Albuterol (Ventolin®, ProAir®, Proventil®) and similar bronchodilators cause severe cardiovascular toxicity when a pet is exposed to an entire canister's contents. A typical inhaler contains about 200 doses — a dog that punctures one receives a potentially life-threatening overdose. These medications stimulate the heart and cause dangerous drops in potassium levels.
+
+⚠️ **STEROID INHALERS:**
+Fluticasone (Flovent®), budesonide (Pulmicort®), and similar inhaled corticosteroids have a different mechanism and are not associated with the same acute cardiovascular toxicity as beta-agonists. However, if your pet has chewed into any type of inhaler, contact your veterinarian or poison control immediately — the type of inhaler and amount of exposure matters.
+
+⚠️ **COLD THERMAL INJURY:**
+When a pressurized canister is punctured, the rapid release of propellant can cause frostbite-like injury to the mouth and throat. This can lead to swelling that may compromise the airway — an additional danger beyond the medication itself.
+
+⚠️ **Albuterol is used therapeutically** in veterinary medicine to treat feline asthma and canine bronchitis. Toxicity occurs from accidental overdose, not from properly prescribed use.
+""",
+                toxicityInfo: """
+**MECHANISM — BETA-AGONIST INHALERS:**
+Albuterol and similar drugs are selective beta-2 adrenergic receptor agonists at therapeutic doses — they relax airway smooth muscle to ease breathing. However, in overdose situations, they lose this selectivity and also stimulate beta-1 receptors in the heart.
+
+**Cardiovascular Effects:**
+Beta-1 stimulation causes rapid heart rate (tachycardia), increased force of heart contractions, and potentially dangerous heart rhythm abnormalities (arrhythmias). A secondary surge of the body's own adrenaline compounds these effects.
+
+**Hypokalemia (Low Potassium):**
+Beta-2 stimulation causes potassium to shift from the bloodstream into cells, sometimes dropping to dangerously low levels. Severe hypokalemia contributes to muscle weakness, cardiac arrhythmias, and can be life-threatening. In ASPCA's tracked cases, potassium levels dropped as low as 1.76 mEq/L (normal range: 3.8-5.1 mEq/L).
+
+**Other Effects:**
+Tremors from overstimulation of skeletal muscle beta-2 receptors. Agitation, restlessness, and anxiety from sympathetic nervous system activation. Vomiting is common. Seizures are possible but uncommon.
+
+**MECHANISM — STEROID INHALERS:**
+Inhaled corticosteroids like fluticasone work by reducing inflammation in the airways. They do not have the same cardiovascular stimulant effects as beta-agonists. A one-time exposure from a punctured steroid inhaler is not expected to cause the same acute crisis as a beta-agonist inhaler, but any inhaler exposure warrants veterinary consultation.
+
+**Duration:**
+Albuterol has a plasma half-life of approximately 4 hours. Clinical signs typically persist for 12-24 hours but may last up to 48 hours in severe cases or if the pet has underlying heart disease.
+""",
+                onsetTime: OnsetTime(
+                    early: "With inhaled exposure from a punctured canister, signs can appear within minutes. With ingestion of tablets or liquid, signs typically appear within 30 minutes.",
+                    delayed: "Signs usually resolve within 12-24 hours with treatment. If arrhythmias develop or the pet has underlying heart disease, effects may persist longer. Watch for rebound high potassium (hyperkalemia) as the toxicity resolves — this can occur if potassium was supplemented during treatment."
+                ),
+                symptoms: [
+                    // Cardiovascular
+                    "Rapid heart rate (tachycardia) — often 200+ bpm",
+                    "Heart rhythm abnormalities (arrhythmias)",
+                    "High blood pressure (hypertension) — may be followed by low blood pressure",
+                    "Pale or bright red gums",
+
+                    // Neuromuscular
+                    "Restlessness or agitation",
+                    "Anxiety or apprehension",
+                    "Tremors or shaking",
+                    "Muscle weakness (from low potassium)",
+                    "Seizures (uncommon)",
+
+                    // Respiratory
+                    "Panting",
+                    "Rapid breathing (tachypnea)",
+
+                    // Gastrointestinal
+                    "Vomiting",
+                    "Excessive thirst (polydipsia)",
+
+                    // Other
+                    "Dilated pupils",
+                    "Elevated body temperature",
+                    "Collapse (severe cases)",
+
+                    // From cold thermal injury
+                    "Swelling of mouth, tongue, or throat",
+                    "Drooling",
+                    "Difficulty breathing (if airway swelling occurs)"
+                ],
+                entrySeverity: .severe,
+                speciesRisks: [
+                    SpeciesRisk(
+                        species: .dog,
+                        severity: .high,
+                        notes: "Dogs are most commonly affected because they chew on and puncture inhaler canisters. ASPCA tracked over 400 cases of beta-agonist inhaler toxicosis in dogs. A 60-pound dog puncturing a full Ventolin canister can receive approximately 10 times the therapeutic dose. Greyhounds may be more susceptible to rhabdomyolysis (muscle breakdown). With prompt veterinary treatment, most dogs recover, but the cardiovascular effects require aggressive management."
+                    ),
+                    SpeciesRisk(
+                        species: .cat,
+                        severity: .high,
+                        notes: "Cats are less likely to chew into inhalers, so exposures are less common. Albuterol is actually used therapeutically in cats with feline asthma (via specialized delivery devices like AeroKat®). However, overdose from a punctured canister would cause the same cardiovascular toxicity seen in dogs. An interesting note: the S-enantiomer in racemic albuterol can actually cause airway inflammation in cats with repeated therapeutic use."
+                    ),
+                    SpeciesRisk(
+                        species: .smallMammal,
+                        severity: .severe,
+                        notes: "Small body size makes even small exposures potentially life-threatening. Rabbits, ferrets, guinea pigs, and other small mammals would experience severe cardiovascular effects and electrolyte disturbances. No specific antidote data exists for these species. Contact an exotic animal veterinarian or poison control immediately for any exposure."
+                    ),
+                    SpeciesRisk(
+                        species: .bird,
+                        severity: .severe,
+                        notes: "Birds are extremely sensitive to cardiovascular effects due to their high metabolic rate and unique cardiac physiology. Even small exposures could be rapidly fatal. No specific treatment data exists for avian beta-agonist toxicosis. Contact an avian veterinarian immediately."
+                    ),
+                    SpeciesRisk(
+                        species: .reptile,
+                        severity: .high,
+                        notes: "Limited data on beta-agonist toxicity in reptiles. Cardiovascular effects would be expected, though reptilian metabolism differs significantly from mammals. Contact an exotic animal veterinarian for guidance on any exposure."
+                    )
+                ],
+                preventionTips: [
+                    "Store all inhalers in closed medicine cabinets or drawers — never leave them on nightstands, counters, or in purses/bags on the floor",
+                    "Be aware that the plastic casing and rubber mouthpiece may attract dogs who like to chew",
+                    "If you use an inhaler regularly, establish a specific storage spot out of pet reach",
+                    "Dispose of empty or expired inhalers in a secure trash container — even 'empty' canisters may contain residual medication",
+                    "If you have a cat prescribed albuterol for feline asthma, store the inhaler and AeroKat device away from dogs",
+                    "Inform household members and guests to keep their inhalers secured",
+                    "Consider keeping inhalers in a small lockbox if you have a persistent chewer",
+                    "If you find a chewed inhaler, check if the canister was punctured — intact canisters mean less risk"
+                ],
+                sources: [
+                    "Pet Poison Helpline: Albuterol Toxicity",
+                    "ASPCA Animal Poison Control Center: How to Treat Albuterol Ingestion",
+                    "dvm360: Toxicology Brief — Beta-2 Agonist Inhaler Toxicoses in Dogs (414 cases)",
+                    "VCA Animal Hospitals: Albuterol Sulfate",
+                    "American College of Veterinary Pharmacists: Albuterol",
+                    "Merck Veterinary Manual: Inhalation Treatment of Airway Disease in Animals",
+                    "American Kennel Club: Albuterol for Dogs",
+                    "McCown JL et al: Suspected albuterol toxicosis in a dog. JAVMA 2008"
+                ],
+                relatedEntries: [
+                    "22990011-aabb-ccdd-eeff-223344556677",
+                    "11889900-aabb-ccdd-eeff-112233445566",
+                    "d8c34930-fe78-414c-a182-49521dbfc266"
                 ]
             )
         ]
