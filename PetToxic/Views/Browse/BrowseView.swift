@@ -102,8 +102,19 @@ struct CategoryListView: View {
             return speciesFiltered.sorted { $0.name.localizedCaseInsensitiveCompare($1.name) == .orderedAscending }
         }
 
-        // Sort by severity (highest first)
-        return speciesFiltered.sorted { maxSeverity(for: $0) > maxSeverity(for: $1) }
+        // Determine species-specific sort when a single species is selected
+        let sortSpecies: Species? = {
+            if case .specific(let species) = selectedSpeciesFilter { return species }
+            return nil
+        }()
+
+        // Sort by severity (highest first), with alphabetical tiebreaker
+        return speciesFiltered.sorted {
+            let s0 = severitySortValue(for: $0, species: sortSpecies)
+            let s1 = severitySortValue(for: $1, species: sortSpecies)
+            if s0 != s1 { return s0 > s1 }
+            return $0.name.localizedCaseInsensitiveCompare($1.name) == .orderedAscending
+        }
     }
 
     var body: some View {
@@ -232,19 +243,30 @@ struct CategoryListView: View {
 
     // MARK: - Helper Methods
 
-    private func maxSeverity(for item: ToxicItem) -> Int {
-        // Use entrySeverity if available, otherwise fall back to computed max from speciesRisks
-        if let entrySeverity = item.entrySeverity {
-            switch entrySeverity {
-            case .severe: return 5
-            case .high: return 4
-            case .moderate: return 3
-            case .lowModerate: return 2
-            case .low: return 1
-            }
+    /// Returns a numeric sort value for an item's severity.
+    /// When a specific species is selected, uses that species' severity from speciesRisks.
+    /// Otherwise falls back to entrySeverity.
+    private func severitySortValue(for item: ToxicItem, species: Species?) -> Int {
+        if let species = species,
+           let speciesRisk = item.speciesRisks.first(where: { $0.species == species }) {
+            return severityToInt(speciesRisk.severity)
         }
-        // Fallback for items without entrySeverity (Informational entries sort last)
+
+        if let entrySeverity = item.entrySeverity {
+            return severityToInt(entrySeverity)
+        }
+
         return 0
+    }
+
+    private func severityToInt(_ severity: Severity) -> Int {
+        switch severity {
+        case .severe: return 5
+        case .high: return 4
+        case .moderate: return 3
+        case .lowModerate: return 2
+        case .low: return 1
+        }
     }
 
     private func cycleGridSize() {
