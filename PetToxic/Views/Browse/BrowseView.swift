@@ -14,20 +14,27 @@ struct BrowseView: View {
             ZStack {
                 AppBackground()
 
-                ScrollView {
-                    LazyVGrid(columns: columns, spacing: 16) {
-                        ForEach(Category.allCases) { category in
-                            NavigationLink(value: category) {
-                                CategoryGridItem(
-                                    category: category,
-                                    itemCount: viewModel.itemCount(for: category)
-                                )
+                VStack(spacing: 0) {
+                    ScrollView {
+                        LazyVGrid(columns: columns, spacing: 16) {
+                            ForEach(Category.allCases) { category in
+                                NavigationLink(value: category) {
+                                    CategoryGridItem(
+                                        category: category,
+                                        itemCount: viewModel.itemCount(for: category)
+                                    )
+                                }
+                                .buttonStyle(.plain)
                             }
-                            .buttonStyle(.plain)
                         }
+                        .padding()
+                        .padding(.bottom, 16)
                     }
-                    .padding()
-                    .padding(.bottom, 80) // Extra space for tab bar
+
+                    Spacer(minLength: 0)
+
+                    AdBannerPlaceholder()
+                        .padding(.bottom, 80)
                 }
             }
             .navigationTitle("Pick your poison...")

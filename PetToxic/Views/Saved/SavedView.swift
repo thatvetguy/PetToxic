@@ -22,6 +22,11 @@ struct SavedView: View {
                     } else {
                         HistoryListView(viewModel: viewModel)
                     }
+
+                    Spacer(minLength: 0)
+
+                    AdBannerPlaceholder()
+                        .padding(.bottom, 80)
                 }
             }
             .navigationTitle("Saved")
