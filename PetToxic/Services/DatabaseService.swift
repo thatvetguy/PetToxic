@@ -12623,7 +12623,7 @@ If your pet has swallowed a metallic object, your veterinarian may recommend X-r
                     "dog chewed Flovent"
                 ],
                 categories: [.medications],
-                imageAsset: "asthma_inhalers",
+                imageAsset: "asthma_thumb",
                 description: """
 Asthma inhalers are pressurized devices that deliver medication directly to the lungs. They are commonly found in households and are used in both human and veterinary medicine. When pets — especially dogs — chew into and puncture an inhaler canister, they can be exposed to a massive overdose of medication all at once.
 
