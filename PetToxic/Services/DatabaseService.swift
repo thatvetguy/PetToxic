@@ -85,11 +85,11 @@ class DatabaseService {
             ToxicItem(
                 id: UUID(uuidString: "d1bde5cd-6881-4765-ac4c-b9f43b40da70")!,
                 name: "Grapes & Raisins",
-                alternateNames: ["grapes", "raisins", "currants", "sultanas", "Zante currants", "dried grapes", "Corinthian raisins", "Vitis vinifera"],
+                alternateNames: ["grapes", "raisins", "currants", "sultanas", "Zante currants", "dried grapes", "Corinthian raisins", "Vitis vinifera", "grape poisoning", "raisin toxicity", "trail mix", "raisin bran", "grape juice", "muscadine"],
                 categories: [.foods],
                 imageAsset: "grapes_thumb",
-                description: "Grapes and their dried forms (raisins, sultanas, Zante currants) can cause acute kidney injury in dogs. All grape types may be toxic, including organic, seeded, seedless, and homegrown varieties. Grape juice, jelly, wine, leaves, and grape seed oil have not been reported to cause toxicosis, though their safety is not confirmed.",
-                toxicityInfo: "The suspected toxic agent is tartaric acid, which varies in concentration depending on fruit ripeness — this explains why toxicity is unpredictable. Approximately 50-88% of dogs that ingest grapes or raisins never develop clinical signs, while others become severely ill from small amounts. Toxicity does not appear to be entirely dose-dependent, and individual sensitivity varies greatly. Because it is impossible to predict which dogs will be affected, any ingestion should be treated as potentially dangerous.",
+                description: "Grapes and their dried forms (raisins, sultanas, Zante currants) can cause acute kidney injury in dogs. Grape toxicity was first identified as a pattern in the late 1990s when the ASPCA Animal Poison Control Center noticed clusters of kidney failure cases linked to grape and raisin ingestion in their database. Despite decades of research, the exact toxic mechanism was not understood until recently. All grape varieties may be toxic, including organic, seeded, seedless, red, green, and homegrown. Processed grape products such as grape juice, jelly, wine, and grape seed extract have not been definitively reported to cause the same kidney injury, though their safety is not confirmed—all grape products should be kept away from dogs.",
+                toxicityInfo: "The leading theory, supported by ASPCA research published in 2021, identifies tartaric acid as the likely toxic agent. Here's why this matters: tartaric acid concentration varies enormously depending on grape variety, ripeness, and growing conditions. This explains the long-standing mystery of why grape toxicity is so unpredictable—some dogs eat grapes repeatedly without problems, while others develop kidney failure from just a few. In fact, roughly half of dogs that ingest grapes or raisins never develop clinical signs—but there is no way to predict which dogs will be affected. Tartaric acid appears to damage the cells of the kidney tubules (the tiny tubes that filter waste from the blood), leading to acute kidney injury. Raisins are particularly dangerous because drying concentrates the tartaric acid, so a small handful of raisins contains more of the toxic compound than the same weight of fresh grapes. The connection was strengthened when researchers found that cream of tartar (potassium bitartrate, a common baking ingredient derived from grapes) causes similar kidney damage in dogs. Because it is impossible to predict which dogs will be affected, any grape or raisin ingestion should be treated as a potential emergency.",
                 onsetTime: OnsetTime(
                     early: "Vomiting is the most common early sign and typically occurs within 24 hours. Other early signs include diarrhea, loss of appetite, lethargy, abdominal pain, and excessive salivation.",
                     delayed: "Acute kidney injury can develop 1-5 days after ingestion. Later signs may include increased thirst and urination, weakness, tremors, and decreased urine production as kidney failure progresses."
@@ -110,18 +110,21 @@ class DatabaseService {
                 speciesRisks: [
                     SpeciesRisk(species: .dog, severity: .severe, notes: "Unpredictable toxicity — any amount should be considered dangerous. Hospitalization is typically recommended."),
                     SpeciesRisk(species: .cat, severity: .low, notes: "Rare anecdotal reports exist, but in one study of 13 cats with known ingestion, none developed kidney injury."),
-                    SpeciesRisk(species: .bird, severity: .low, notes: "Grapes are commonly fed as treats to pet birds without reported toxicity issues. The tartaric acid sensitivity that causes kidney failure in dogs does not appear to affect birds. Fresh grapes in moderation are generally considered safe for most bird species."),
-                    SpeciesRisk(species: .smallMammal, severity: .low, notes: "Guinea pigs and rabbits can eat grapes as occasional treats (1-3 grapes per week maximum) without documented kidney toxicity. The high sugar content is the main concern—excessive consumption can cause digestive upset and obesity. The tartaric acid toxicity seen in dogs has not been documented in small mammals. Avoid raisins due to concentrated sugar."),
+                    SpeciesRisk(species: .bird, severity: .low, notes: "The tartaric acid kidney toxicity seen in dogs does not appear to affect birds. Grapes are commonly offered as treats to pet birds without reported toxicity. The primary concern is sugar content with excessive feeding. Consult an avian veterinarian for species-specific dietary guidance."),
+                    SpeciesRisk(species: .smallMammal, severity: .low, notes: "The tartaric acid kidney toxicity seen in dogs has not been documented in small mammals. Guinea pigs and rabbits may encounter grapes without the same kidney injury risk, but the high sugar content can cause digestive upset and obesity. Raisins should be avoided due to concentrated sugar content. Consult an exotics veterinarian for species-specific dietary guidance."),
                     SpeciesRisk(species: .reptile, severity: .low, notes: "No documented toxicity in reptiles. Some herbivorous reptiles like tortoises may eat grapes as occasional fruit treats. The tartaric acid sensitivity appears specific to dogs. As with any fruit, offer only occasionally due to sugar content.")
                 ],
                 preventionTips: [
-                    "Store grapes, raisins, and currants out of pet reach",
-                    "Check ingredient lists on baked goods, trail mix, and cereals for raisins",
-                    "Be cautious with grape juice and wine—both contain the same toxic compounds",
-                    "Dispose of fallen grapes promptly if you have grapevines"
+                    "Store grapes, raisins, currants, and sultanas out of pet reach—even a few raisins can potentially cause kidney failure in dogs",
+                    "Check ingredient lists on trail mix, granola, baked goods, and cereals—raisins are a common hidden ingredient",
+                    "Dispose of fallen grapes promptly if you have grapevines in your yard",
+                    "Be aware that raisins are more concentrated than fresh grapes—a small amount of raisins contains more of the suspected toxic compound than the same weight of fresh grapes",
+                    "Use caution with all grape products including juice and wine—while these have not been definitively reported to cause the same kidney injury, their safety for dogs is not confirmed",
+                    "Remember that cream of tartar (potassium bitartrate), a common baking ingredient, is derived from grapes and may pose a similar risk to dogs",
+                    "Educate children and guests that grapes and raisins are never safe to share with dogs, regardless of past tolerance"
                 ],
                 sources: ["ASPCA Animal Poison Control Center", "Pet Poison Helpline", "Merck Veterinary Manual", "Cornell University College of Veterinary Medicine", "VCA Animal Hospitals"],
-                relatedEntries: nil
+                relatedEntries: ["63f63b3a-1172-4fb2-9702-45496c99df4d"]  // Alcohol - wine contains both grape toxins and ethanol
             ),
 
             // MARK: - Xylitol
@@ -340,7 +343,7 @@ class DatabaseService {
                     "Be aware that cocktails made with milk or cream may be especially attractive to pets"
                 ],
                 sources: ["ASPCA Animal Poison Control Center", "Pet Poison Helpline", "Merck Veterinary Manual", "VCA Animal Hospitals", "Today's Veterinary Practice"],
-                relatedEntries: ["ec90eb4b-765b-45cb-9255-f449b656b7d3"]
+                relatedEntries: ["ec90eb4b-765b-45cb-9255-f449b656b7d3", "d1bde5cd-6881-4765-ac4c-b9f43b40da70"]  // Raw Yeast Dough, Grapes & Raisins
             ),
 
             // MARK: - Raw Yeast Dough
