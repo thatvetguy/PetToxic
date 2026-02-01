@@ -17,11 +17,29 @@ class DatabaseService {
             ToxicItem(
                 id: UUID(uuidString: "d8c34930-fe78-414c-a182-49521dbfc266")!,
                 name: "Chocolate",
-                alternateNames: ["cocoa", "cacao", "dark chocolate", "milk chocolate", "baking chocolate", "white chocolate", "cocoa powder", "chocolate chips", "cocoa bean mulch"],
+                alternateNames: [
+                    "cocoa",
+                    "cacao",
+                    "dark chocolate",
+                    "milk chocolate",
+                    "baking chocolate",
+                    "white chocolate",
+                    "cocoa powder",
+                    "chocolate chips",
+                    "brownie",
+                    "brownies",
+                    "fudge",
+                    "hot cocoa",
+                    "hot chocolate",
+                    "chocolate cake",
+                    "chocolate bar",
+                    "choclate",
+                    "coco"
+                ],
                 categories: [.foods, .holidayHazards],
                 imageAsset: "chocolate_thumb",
-                description: "Chocolate is made from roasted cacao beans and is commonly found in candy, baked goods, beverages, and desserts. Cocoa bean hull mulch used in gardens also poses a risk.",
-                toxicityInfo: "Chocolate contains theobromine and caffeine, both methylxanthines that dogs and cats cannot metabolize efficiently. Toxicity risk varies significantly by chocolate type — darker and more bitter chocolates are far more dangerous. In order of risk: cocoa powder and cacao beans are most dangerous, followed by unsweetened baking chocolate, semisweet chocolate, milk chocolate, and white chocolate (minimal risk). The high fat and sugar content in some chocolate products can also trigger pancreatitis.",
+                description: "Chocolate is made from roasted cacao beans (Theobroma cacao—Greek for 'food of the gods') and is found in candy, baked goods, beverages, and desserts. It's one of the most common pet toxicities reported to poison control centers, with exposure spikes during holidays like Valentine's Day, Easter, Halloween, and Christmas. Dogs are particularly attracted to chocolate and can smell it even when wrapped or hidden.",
+                toxicityInfo: "Chocolate contains theobromine and caffeine, both methylxanthines that affect the heart, nervous system, and muscles. Here's why chocolate is dangerous to pets: humans break down theobromine quickly (half-life of 6-10 hours), but dogs metabolize it very slowly (half-life of 17.5 hours). This means theobromine builds up in their system to toxic levels. Cats metabolize it even more slowly. These compounds overstimulate the heart (causing rapid or irregular heartbeat), excite the nervous system (causing restlessness, tremors, and seizures), and relax smooth muscle (contributing to vomiting and diarrhea). Toxicity risk varies significantly by chocolate type—darker and more bitter chocolates contain more theobromine and are far more dangerous. In order of risk: cocoa powder and cacao beans are most dangerous, followed by unsweetened baking chocolate, semisweet/dark chocolate, milk chocolate, and white chocolate (minimal theobromine but high fat content can still trigger pancreatitis).",
                 onsetTime: OnsetTime(
                     early: "Caffeine effects begin within 30-60 minutes. Theobromine effects may take 2+ hours to appear. Initial signs include vomiting, restlessness, bloating, and increased thirst.",
                     delayed: "Theobromine is metabolized slowly (17.5-hour half-life in dogs). Effects can persist for several days. Signs may progress to cardiac arrhythmias, seizures, and other serious complications."
@@ -47,13 +65,20 @@ class DatabaseService {
                     SpeciesRisk(species: .reptile, severity: .low, notes: "Limited data available. Reptiles are unlikely to consume chocolate voluntarily due to dietary preferences, but the methylxanthines in chocolate could potentially affect them if ingested. Avoid exposure as a precaution.")
                 ],
                 preventionTips: [
-                    "Store all chocolate products in closed cabinets out of pet reach",
-                    "Be especially vigilant during holidays when chocolate is abundant",
-                    "Educate children not to share chocolate with pets",
-                    "Remember that baking chocolate and dark chocolate are most dangerous"
+                    "Store all chocolate products in closed cabinets or high shelves out of pet reach",
+                    "Be especially vigilant during holidays—Valentine's Day, Easter, Halloween, and Christmas see the most chocolate exposures",
+                    "Educate children and guests not to share chocolate with pets or leave it within reach",
+                    "Remember that baking chocolate and dark chocolate are most dangerous—even small amounts can be serious",
+                    "Watch for counter-surfing dogs who may grab chocolate left on tables or counters",
+                    "Ask guests to keep purses and bags closed and off the floor—these often contain chocolate",
+                    "Place advent calendars and holiday candy dishes well above pet height",
+                    "White chocolate has minimal theobromine but its high fat content can still cause pancreatitis"
                 ],
                 sources: ["ASPCA Animal Poison Control Center", "Pet Poison Helpline", "Merck Veterinary Manual", "VCA Animal Hospitals"],
-                relatedEntries: ["f2a3b4c5-6d7e-8f9a-0b1c-2d3e4f5a6b7c", "e293e8ba-eefc-4fe0-bf93-9e8842873a35", "88990011-2233-4455-6677-889900aabb01"]
+                relatedEntries: [
+                    "f2a3b4c5-6d7e-8f9a-0b1c-2d3e4f5a6b7c",  // Cocoa Mulch - same methylxanthine toxicity
+                    "ae80bf97-0ffd-4ed8-b9d9-727e747d583b"   // Caffeine - same methylxanthine toxicity
+                ]
             ),
 
             // MARK: - Grapes & Raisins
@@ -408,7 +433,9 @@ class DatabaseService {
                     "Be aware that some medications and herbal supplements contain caffeine"
                 ],
                 sources: ["ASPCA Animal Poison Control Center", "Pet Poison Helpline", "Merck Veterinary Manual", "VCA Animal Hospitals"],
-                relatedEntries: nil
+                relatedEntries: [
+                    "d8c34930-fe78-414c-a182-49521dbfc266"   // Chocolate - same methylxanthine toxicity
+                ]
             ),
 
             // MARK: - Avocado
@@ -2326,7 +2353,7 @@ class DatabaseService {
                     "With legalization, highly concentrated products are more available — even small amounts of vape liquid or concentrates can cause severe toxicity"
                 ],
                 sources: ["ASPCA Animal Poison Control Center", "Pet Poison Helpline", "Veterinary Partner", "Reptiles Magazine - Toxic Plants List"],
-                relatedEntries: ["d8c34930-fe78-414c-a182-49521dbfc266", "d7723ed0-6496-40b3-8b1c-84e129083cb9"]
+                relatedEntries: ["d7723ed0-6496-40b3-8b1c-84e129083cb9"]
             ),
 
             // MARK: - Bleeding Heart
@@ -12743,8 +12770,7 @@ Albuterol has a plasma half-life of approximately 4 hours. Clinical signs typica
                 ],
                 relatedEntries: [
                     "22990011-aabb-ccdd-eeff-223344556677",
-                    "11889900-aabb-ccdd-eeff-112233445566",
-                    "d8c34930-fe78-414c-a182-49521dbfc266"
+                    "11889900-aabb-ccdd-eeff-112233445566"
                 ]
             )
         ]
