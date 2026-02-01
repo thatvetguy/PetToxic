@@ -622,7 +622,7 @@ class DatabaseService {
                     "Store cooking grease and drippings securely before disposal"
                 ],
                 sources: ["Pet Poison Helpline", "ASPCA Animal Poison Control Center", "Merck Veterinary Manual", "American Veterinary Medical Association (JAVMA)"],
-                relatedEntries: ["59cf7dc4-5d83-4811-97f1-ce1d0162cd28"]
+                relatedEntries: ["59cf7dc4-5d83-4811-97f1-ce1d0162cd28", "91000011-2233-4455-6677-889900aabb01"]
             ),
 
             // MARK: - Cooked Bones
@@ -6667,7 +6667,7 @@ class DatabaseService {
                     "Inform pet sitters and house guests about medication safety"
                 ],
                 sources: ["ASPCA Animal Poison Control Center: NSAID Statistics and Clinical Data", "Merck Veterinary Manual: NSAID Toxicosis in Animals", "Pet Poison Helpline: Ibuprofen and Naproxen Toxicity", "Veterinary Partner / VCA Hospitals: Ibuprofen Toxicity in Dogs and Cats"],
-                relatedEntries: ["bb223344-5566-7788-99aa-bbccddeeff11", "cc334455-6677-8899-aabb-ccddeeff2233"]
+                relatedEntries: ["bb223344-5566-7788-99aa-bbccddeeff11", "cc334455-6677-8899-aabb-ccddeeff2233", "91000011-2233-4455-6677-889900aabb01"]
             ),
 
             // MARK: - Acetaminophen (Tylenol / Paracetamol)
@@ -9074,7 +9074,7 @@ class DatabaseService {
                     "Pet Poison Helpline: Warning: Alpha Lipoic Acid (ALA)",
                     "American College of Veterinary Pharmacists: Pet Poison Control"
                 ],
-                relatedEntries: ["33aa1122-bbcc-ddee-ff00-112233445566"]
+                relatedEntries: ["33aa1122-bbcc-ddee-ff00-112233445566", "91000011-2233-4455-6677-889900aabb01"]
             ),
 
             // MARK: - Phenylpropanolamine (PPA)
@@ -12778,6 +12778,150 @@ Albuterol has a plasma half-life of approximately 4 hours. Clinical signs typica
                 relatedEntries: [
                     "22990011-aabb-ccdd-eeff-223344556677",
                     "11889900-aabb-ccdd-eeff-112233445566"
+                ]
+            ),
+
+            // MARK: - Joint Supplements (Glucosamine & Chondroitin Overdose)
+            ToxicItem(
+                id: UUID(uuidString: "91000011-2233-4455-6677-889900aabb01")!,
+                name: "Joint Supplements (Glucosamine & Chondroitin)",
+                alternateNames: [
+                    // Active ingredients
+                    "glucosamine",
+                    "chondroitin",
+                    "chondroitin sulfate",
+                    "MSM",
+                    "methylsulfonylmethane",
+                    "glucosamine hydrochloride",
+                    "glucosamine sulfate",
+                    "glucosamine chondroitin",
+                    "sodium chondroitin sulfate",
+
+                    // Brand names — veterinary
+                    "Cosequin",
+                    "Dasuquin",
+                    "Dasuquin Advanced",
+                    "GlycoFlex",
+                    "Synovi G4",
+                    "NutriVet",
+                    "Phycox",
+                    "Seraquin",
+                    "Adequan",
+                    "VetriScience",
+
+                    // Brand names — human (higher concentration)
+                    "Move Free",
+                    "Schiff Glucosamine",
+                    "Osteo Bi-Flex",
+                    "Cosamin DS",
+                    "Nature Made Glucosamine",
+
+                    // Product descriptions
+                    "joint supplement",
+                    "joint chews",
+                    "joint health chews",
+                    "hip and joint chews",
+                    "hip and joint supplement",
+                    "joint support supplement",
+                    "arthritis supplement",
+                    "joint care chews",
+                    "soft chews for joints",
+                    "dog joint chews",
+                    "cat joint supplement",
+                    "nutraceutical",
+
+                    // Common search queries
+                    "dog ate joint supplements",
+                    "dog ate glucosamine",
+                    "dog ate Cosequin",
+                    "dog ate Dasuquin",
+                    "dog ate whole bottle of joint chews",
+                    "pet ate joint supplements",
+                    "dog got into joint chews",
+                    "glucosamine overdose",
+                    "chondroitin overdose",
+                    "dog ate human glucosamine",
+
+                    // Misspellings
+                    "glucosimine",
+                    "glucosamine chondroiten",
+                    "chondroiten",
+                    "gluosamine",
+                    "condroitin"
+                ],
+                categories: [.medications],
+                imageAsset: "joint_supplements",
+                description: "Joint supplements containing glucosamine, chondroitin sulfate, and MSM (methylsulfonylmethane) are among the most commonly used pet and human nutraceuticals. Products like Cosequin® and Dasuquin® are routinely prescribed by veterinarians for arthritis management in dogs and cats.\n\n**⚠️ WHY OVERDOSE HAPPENS:** Most veterinary joint supplements are formulated as flavored soft chews — essentially making them taste like treats. Dogs that find an unattended bottle may consume dozens or even hundreds of chews in one sitting. Packages often contain 60–240 chews, representing months of supply.\n\n**Not Regulated Like Drugs:** Unlike prescription medications, joint supplements are classified as nutraceuticals and are **not subject to the same FDA testing, quality control, or safety requirements** as pharmaceuticals. Many pet owners assume \"supplement\" means \"harmless\" — but the lack of regulatory oversight means ingredient concentrations, purity, and additional additives can vary significantly between products and even between batches.\n\n**The Hidden Danger:** While glucosamine and chondroitin themselves have historically been considered to have wide safety margins, joint supplements contain many **additional ingredients** — including manganese, sodium chondroitin sulfate, creatine, and sometimes xylitol, vitamin D, zinc, or alpha lipoic acid — that can cause serious harm in large quantities. The ASPCA Animal Poison Control Center documented liver injury in 21 dogs following joint supplement overdose in a single two-year period (2008–2009).\n\n**⚠️ HUMAN SUPPLEMENTS ARE MORE CONCENTRATED:** A single human glucosamine capsule typically contains 1,500 mg — several times the amount in a canine chew. If a small dog gets into a bottle of human joint supplements, the exposure per body weight is dramatically higher.\n\nJoint supplement overdose was included on the Pet Poison Helpline's Top 10 Dog Toxins list.\n\nThis information is for educational purposes only and does not constitute veterinary medical advice. If your pet has been exposed to a potentially toxic substance, contact a licensed veterinarian or animal poison control center immediately.",
+                toxicityInfo: "The exact mechanism of toxicity from joint supplement overdose remains under investigation, and no single ingredient has been definitively identified as the cause of organ damage. Several factors likely contribute:\n\n**Sodium Overload:** Chondroitin sulfate is typically formulated as **sodium chondroitin sulfate**. Consuming large quantities delivers a massive sodium load, causing **hypernatremia** (dangerously elevated blood sodium levels). In one published case, a small dog that consumed an entire container of joint chews developed sodium levels comparable to saltwater ingestion — something most owners would never associate with a \"joint supplement.\" Hypernatremia can cause dehydration, neurological dysfunction including seizures, and brain swelling if corrected too rapidly.\n\n**Liver Damage:** Multiple case reports document severe liver failure (hepatotoxicity) following massive overdose. Postmortem findings have included severe cell death affecting the liver, kidneys, pancreas, and heart. The exact ingredient responsible is debated — manganese toxicity, glucosamine itself, or ingredient interactions may all play a role.\n\n**Manganese Toxicity:** Many joint supplements contain manganese as a trace mineral. In massive overdose, manganese accumulates in the liver and kidneys at many times normal concentrations and may contribute to organ failure.\n\n**Blood Sugar Disruption:** Glucosamine may interfere with insulin function, potentially causing **hyperglycemia** (elevated blood sugar) in overdose situations. This is a particular concern for diabetic pets.\n\n**Pancreatitis Risk:** Many modern joint supplements — especially \"advanced\" formulations — contain added omega-3 fatty acids (fish oil, EPA, DHA). In massive overdose, this high fat content may contribute to pancreatitis risk on top of the other toxic effects.\n\n**The \"Fine Last Time\" Trap:** A dog that ate 5 extra chews and showed no symptoms may give owners a false sense of security. But eating 5 chews versus eating 60 is a completely different clinical picture. Liver damage and organ dysfunction can take 12–48 hours to become apparent — a dog may seem perfectly normal initially after a massive ingestion, only to deteriorate significantly later. **Never assume a large ingestion is safe because of a previous small one.**\n\n**Important:** Most cases of a dog eating a few extra chews will result in only mild GI upset. However, consumption of a large portion or entire container — the most common scenario reported to poison control — can result in **multi-organ dysfunction** affecting the liver, kidneys, pancreas, and heart.",
+                onsetTime: OnsetTime(
+                    early: "GI signs (vomiting, diarrhea) typically develop within 30 minutes to a few hours after ingestion.",
+                    delayed: "Liver enzyme elevations, electrolyte derangements (hypernatremia), and signs of organ dysfunction may develop within 12–48 hours. Liver failure and multi-organ dysfunction have been documented within days of ingestion in severe cases. Because effects can be delayed, a dog that appears fine immediately after ingestion may still be at serious risk."
+                ),
+                symptoms: [
+                    "Vomiting (often the first sign)",
+                    "Diarrhea (may become bloody)",
+                    "Loss of appetite",
+                    "Lethargy and weakness",
+                    "Excessive thirst and urination",
+                    "Abdominal pain or bloating",
+                    "Disorientation or unsteadiness (ataxia)",
+                    "Seizures (from severe hypernatremia)",
+                    "Jaundice / yellowing of gums, eyes, or skin (liver involvement)",
+                    "Bruising or abnormal bleeding (coagulopathy from liver failure)"
+                ],
+                entrySeverity: .high,
+                speciesRisks: [
+                    SpeciesRisk(
+                        species: .dog,
+                        severity: .high,
+                        notes: "Dogs are overwhelmingly the most commonly affected species — they are attracted to the flavored soft chews and will consume entire containers if given access. The ASPCA documented 21 cases of liver injury from joint supplement overdose in dogs in just two years. Published case reports describe multi-organ dysfunction including liver failure, kidney injury, blood clotting abnormalities, hypernatremia, and seizures. While many ingestions cause only GI upset, massive overdoses have resulted in fatalities. Human glucosamine supplements are significantly more concentrated than veterinary products — a small dog getting into a human bottle faces an amplified risk. Contact a veterinarian or poison control immediately for any significant ingestion."
+                    ),
+                    SpeciesRisk(
+                        species: .cat,
+                        severity: .moderate,
+                        notes: "Cats are much less commonly affected because they are less likely to consume large quantities of flavored chews. Glucosamine and chondroitin are used therapeutically in cats for joint health and feline lower urinary tract disease at recommended doses. However, the safety of massive overdoses in cats has not been studied. IMPORTANT: Some \"advanced\" joint supplements contain alpha lipoic acid (thioctic acid), which is extremely toxic to cats — even small amounts can cause life-threatening effects. Always check the ingredient label. Cats who consume a large quantity of any joint supplement should be evaluated by a veterinarian immediately."
+                    ),
+                    SpeciesRisk(
+                        species: .smallMammal,
+                        severity: .moderate,
+                        notes: "No published data on joint supplement toxicity in small mammals. Their small body size means even modest amounts could deliver very high per-body-weight doses of sodium, manganese, and other ingredients. Additionally, some joint supplements may contain xylitol or other sweeteners that pose independent risks to certain species. Contact an exotic animal veterinarian or poison control if ingestion is suspected."
+                    ),
+                    SpeciesRisk(
+                        species: .bird,
+                        severity: .low,
+                        notes: "Joint supplement ingestion by birds is unlikely due to product formulation (large chews). No published toxicity data exists for avian species. If a bird consumes any supplement product, contact an avian veterinarian for guidance, as the additional ingredients — particularly zinc or manganese — could be concerning for small-bodied birds."
+                    ),
+                    SpeciesRisk(
+                        species: .reptile,
+                        severity: .low,
+                        notes: "Joint supplement ingestion by reptiles is extremely unlikely. No published toxicity data exists. Contact an exotic animal veterinarian if ingestion is suspected."
+                    )
+                ],
+                preventionTips: [
+                    "Store all joint supplement containers in secure, pet-proof cabinets — not on counters, nightstands, or coffee tables",
+                    "Treat joint supplements like medications, not treats — a bottle of flavored chews can cause organ failure if consumed in its entirety",
+                    "Close lids tightly and immediately after each use — dogs can easily chew through plastic containers",
+                    "Be aware that packages often contain 60–240 chews, representing a potentially dangerous quantity if consumed at once",
+                    "⚠️ HUMAN SUPPLEMENTS: Store human glucosamine products separately and securely — they are significantly more concentrated than veterinary formulations and pose greater risk per-chew to small and medium dogs",
+                    "Do not leave supplement bottles in bags, purses, or backpacks accessible to pets",
+                    "If you drop a chew on the floor, pick it up immediately — dogs will remember and search the area for more",
+                    "⚠️ CHECK INGREDIENT LABELS: Some joint supplements contain **xylitol** (birch sugar) as a sweetener, **vitamin D**, **alpha lipoic acid**, or **zinc** — these pose additional serious toxicity risks beyond glucosamine and chondroitin alone",
+                    "Do not assume a large ingestion is safe because your pet tolerated a small extra dose before — the effects of massive overdose (liver failure, organ damage) can take 12–48 hours to appear",
+                    "If your pet consumes any significant quantity of joint supplements, contact a veterinarian or poison control immediately — do not wait for symptoms to develop"
+                ],
+                sources: [
+                    "ASPCA Animal Poison Control Center: Joint Supplement Overdose Case Data (21 dogs with hepatic injury, 2008–2009)",
+                    "Pet Poison Helpline: Top 10 Dog Toxins — Glucosamine Joint Supplements",
+                    "Canadian Veterinary Journal: Multiorgan Dysfunction Syndrome Secondary to Joint Supplement Overdosage in a Dog (2015)",
+                    "Journal of Veterinary Diagnostic Investigation: Acute Enteral Manganese Intoxication with Hepatic Failure from Joint Supplement Overdose (2014)",
+                    "Frontiers in Veterinary Science: Treatment of Joint Supplement Toxicity Resulting in Acidemia, Hyperglycemia, and Multiple Organ Dysfunction (2023)",
+                    "Journal of Veterinary Emergency and Critical Care: Successful Treatment of Multiple Organ Dysfunction and Severe Hypernatremia Secondary to Joint Supplement Toxicity (2021)",
+                    "VCA Animal Hospitals: Glucosamine Chondroitin Combination"
+                ],
+                relatedEntries: [
+                    "aa112233-4455-6677-8899-aabbccddeef0",
+                    "88ff6677-99aa-bbcc-ddee-ff0011223344",
+                    "2e094121-64ea-499c-bfb4-6db98f139b55"
                 ]
             )
         ]
