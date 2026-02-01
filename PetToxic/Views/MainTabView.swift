@@ -29,7 +29,7 @@ struct MainTabView: View {
                     adjacentTabPreview(geometry: geometry)
                 }
             }
-            .gesture(dragGesture(geometry: geometry))
+            .simultaneousGesture(dragGesture(geometry: geometry))
         }
         .safeAreaInset(edge: .bottom) {
             customTabBar
@@ -77,6 +77,14 @@ struct MainTabView: View {
     private func dragGesture(geometry: GeometryProxy) -> some Gesture {
         DragGesture(minimumDistance: 20)
             .onChanged { value in
+                let horizontal = abs(value.translation.width)
+                let vertical = abs(value.translation.height)
+
+                // Only engage horizontal swipe if clearly horizontal
+                guard horizontal > vertical * 1.5 else {
+                    return
+                }
+
                 isDragging = true
                 let translation = value.translation.width
 
@@ -107,6 +115,12 @@ struct MainTabView: View {
                 }
             }
             .onEnded { value in
+                // If we never engaged (vertical drag), just reset
+                guard isDragging else {
+                    dragOffset = 0
+                    return
+                }
+
                 isDragging = false
                 let threshold = geometry.size.width * 0.20
                 let translation = value.translation.width
