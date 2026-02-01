@@ -187,6 +187,11 @@ struct ArticleDetailView: View {
                 PoisonControlButton(contact: .aspca)
                 PoisonControlButton(contact: .petPoisonHelpline)
             }
+
+            Text("Pet Toxic is not affiliated with these organizations.")
+                .font(.caption)
+                .foregroundStyle(.secondary)
+                .padding(.top, 4)
         }
         .padding(.vertical)
     }

@@ -94,6 +94,37 @@ struct SettingsView: View {
                         }
                     }
 
+                    // MARK: - About
+                    Section {
+                        DisclosureGroup("About Pet Toxic") {
+                            VStack(alignment: .leading, spacing: 12) {
+                                Text("Pet Toxic was developed by a licensed veterinarian").bold() + Text(" to help pet owners quickly identify potential hazards in their pet's environment.")
+
+                                Text("All toxicity information in this app is free for every user — no paywalls, no locked articles. Paid upgrades remove ads and unlock bonus features like My Pets.")
+
+                                Text("A portion of proceeds supports the development of additional pet safety resources and benefits animal shelters and rescues in Southern California.")
+
+                                Group {
+                                    Text("We hope you find Pet Toxic useful — please share it with your fellow pet lovers! If you have suggestions for additions or corrections, we'd love to hear from you at ") +
+                                    Text("support@pettoxic.com").bold()
+                                }
+
+                                Link("Email support@pettoxic.com", destination: URL(string: "mailto:support@pettoxic.com")!)
+                                    .font(.footnote)
+                                    .foregroundStyle(Color("AccentColor"))
+
+                                Text("Pet Toxic is an independent app and is not affiliated with, endorsed by, or partnered with the ASPCA Animal Poison Control Center or Pet Poison Helpline.")
+                                    .font(.footnote)
+                                    .opacity(0.7)
+                            }
+                            .font(.subheadline)
+                            .foregroundStyle(.white.opacity(0.85))
+                            .padding(.vertical, 8)
+                        }
+                        .foregroundStyle(.white)
+                        .listRowBackground(Color.white.opacity(0.08))
+                    }
+
                     // MARK: - Version
                     Section {
                         HStack {

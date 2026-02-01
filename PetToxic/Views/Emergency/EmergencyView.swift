@@ -29,6 +29,13 @@ struct EmergencyView: View {
                             PoisonControlButton(contact: .petPoisonHelpline, style: .large)
                         }
 
+                        Text("Pet Toxic is not affiliated with these organizations.")
+                            .font(.footnote)
+                            .foregroundStyle(.secondary)
+                            .multilineTextAlignment(.center)
+                            .frame(maxWidth: .infinity)
+                            .padding(.top, -8)
+
                         // Fee notice
                         HStack {
                             Image(systemName: "info.circle")
