@@ -3,6 +3,7 @@ import SwiftUI
 struct SearchView: View {
     @StateObject private var viewModel = SearchViewModel()
     @State private var navigationPath = NavigationPath()
+    @FocusState private var isSearchFocused: Bool
 
     var body: some View {
         NavigationStack(path: $navigationPath) {
@@ -15,6 +16,7 @@ struct SearchView: View {
 
                     // Custom search bar
                     searchBar
+                        .animation(.easeInOut(duration: 0.2), value: isSearchFocused)
 
                     // Main content area
                     ScrollView {
@@ -40,6 +42,7 @@ struct SearchView: View {
                         }
                         .padding(.top, 8)
                     }
+                    .scrollDismissesKeyboard(.interactively)
 
                     Spacer(minLength: 0)
 
@@ -72,7 +75,9 @@ struct SearchView: View {
                 .autocorrectionDisabled()
                 .textInputAutocapitalization(.never)
                 .submitLabel(.search)
+                .focused($isSearchFocused)
                 .onSubmit {
+                    isSearchFocused = false
                     viewModel.saveToRecentSearches(viewModel.searchText)
                 }
 
@@ -83,6 +88,16 @@ struct SearchView: View {
                     Image(systemName: "xmark.circle.fill")
                         .foregroundColor(.white.opacity(0.5))
                 }
+            }
+
+            if isSearchFocused {
+                Button("Cancel") {
+                    isSearchFocused = false
+                    viewModel.searchText = ""
+                }
+                .foregroundColor(Color(red: 0.29, green: 0.61, blue: 0.61))
+                .font(.subheadline)
+                .transition(.move(edge: .trailing).combined(with: .opacity))
             }
         }
         .padding(.horizontal, 12)
