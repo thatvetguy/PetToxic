@@ -131,11 +131,11 @@ class DatabaseService {
             ToxicItem(
                 id: UUID(uuidString: "d7723ed0-6496-40b3-8b1c-84e129083cb9")!,
                 name: "Xylitol",
-                alternateNames: ["birch sugar", "wood sugar", "birch bark extract", "sugar alcohol", "E967"],
+                alternateNames: ["birch sugar", "wood sugar", "birch bark extract", "sugar alcohol", "E967", "sugar-free gum", "sugar-free candy", "sugar-free peanut butter", "sugar-free mints", "xylitol gum", "xylitol poisoning", "zylatol", "xilitol"],
                 categories: [.foods],
                 imageAsset: "xylitol_thumb",
-                description: "Xylitol is a sugar alcohol sweetener used in over 1,900 products, including sugar-free gum, candy, baked goods, peanut butter, protein bars, toothpaste, mouthwash, vitamins, supplements, medications, and some cosmetics. Xylitol content varies widely between products — even different flavors of the same brand can have vastly different amounts.",
-                toxicityInfo: "Dogs have an exaggerated insulin response to xylitol (3-7 times greater than to regular sugar), causing rapid and potentially life-threatening hypoglycemia. Large ingestions can also cause acute liver failure through a mechanism that is not fully understood. Cats do not appear to have this response — studies show cats do not develop significant hypoglycemia or liver changes after xylitol ingestion. Other sugar alcohols (sorbitol, mannitol, maltitol, erythritol) do not cause similar effects in dogs.",
+                description: "Xylitol is a sugar alcohol sweetener found in thousands of products, including sugar-free gum, candy, mints, baked goods, peanut butter, protein bars, toothpaste, mouthwash, nasal sprays, vitamins, supplements, medications, and some cosmetics. It is increasingly marketed under the name 'birch sugar,' making it harder to spot on labels. Xylitol is one of the most dangerous common household toxins for dogs—even a small amount from a single piece of sugar-free gum can cause a life-threatening emergency. Xylitol content varies widely between products, and even different flavors of the same brand can contain vastly different amounts.",
+                toxicityInfo: "Xylitol toxicity in dogs occurs in two distinct phases, and understanding both is critical:\n\n**Phase 1 — Hypoglycemia (low blood sugar):** When a dog ingests xylitol, the pancreas mistakes it for real sugar and releases a massive surge of insulin—3 to 7 times more than it would release for the same amount of regular sugar. This flood of insulin rapidly pulls sugar out of the bloodstream, causing dangerously low blood sugar (hypoglycemia) that can lead to weakness, seizures, and collapse. This is why dogs are uniquely vulnerable: their bodies overreact to xylitol in a way that human and cat bodies do not.\n\n**Phase 2 — Liver failure:** With larger ingestions, a second and more dangerous phase can develop 12–72 hours later. Xylitol can cause acute liver failure through a mechanism that is not fully understood. Critically, liver failure can occur even in dogs that did not show initial hypoglycemia—so a dog that seems fine at first may still be in danger. Signs include jaundice (yellowing of the gums or skin), vomiting, and abnormal bleeding.\n\nNot all sugar alcohols are dangerous—sorbitol, mannitol, maltitol, and erythritol do not cause these effects in dogs. Cats do not appear to have the exaggerated insulin response and have not been shown to develop hypoglycemia or liver injury from xylitol in studies.",
                 onsetTime: OnsetTime(
                     early: "Hypoglycemia typically develops within 30-60 minutes of ingestion. Signs may be delayed several hours if xylitol was in gum that was swallowed without chewing.",
                     delayed: "Signs of liver injury (jaundice, vomiting, abdominal pain) may appear 12-72 hours after exposure, sometimes without prior hypoglycemia. Liver enzymes may peak 20-40 hours after ingestion."
@@ -161,13 +161,17 @@ class DatabaseService {
                     SpeciesRisk(species: .reptile, severity: .low, notes: "No documented cases of xylitol toxicity in reptiles. Reptiles have very different glucose metabolism than mammals and are unlikely to experience the insulin surge that causes hypoglycemia in dogs. However, data is extremely limited. Avoid exposure as a precaution.")
                 ],
                 preventionTips: [
-                    "Check ingredient labels for xylitol (also listed as birch sugar or E967)",
-                    "Store sugar-free gum, candy, and mints securely—even one piece can be dangerous",
-                    "Keep sugar-free peanut butter away from pets; always check labels before sharing",
-                    "Be aware that some medications and supplements contain xylitol as a sweetener"
+                    "Check ingredient labels carefully—xylitol may also be listed as 'birch sugar' or 'E967,' which are harder to recognize",
+                    "Store sugar-free gum, candy, and mints securely—even a single piece of gum can be dangerous to a dog",
+                    "Keep purses, bags, and backpacks off the floor and zipped closed—these are one of the most common ways dogs access gum",
+                    "Always check peanut butter labels before sharing with your dog—several popular brands contain xylitol",
+                    "Be aware that some medications, nasal sprays, ear drops, and supplements contain xylitol as a sweetener or inactive ingredient",
+                    "Not all sugar alcohols are dangerous—sorbitol, erythritol, and maltitol do not cause the same effects, but always verify the specific ingredient",
+                    "If your dog ingests xylitol and is conscious, rubbing a small amount of Karo syrup (corn syrup) or honey on the gums may help maintain blood sugar while you seek emergency veterinary care",
+                    "A dog that seems fine after eating xylitol may still be at risk—liver failure can develop 1-3 days later, so always seek veterinary evaluation even if no symptoms appear"
                 ],
                 sources: ["ASPCA Animal Poison Control Center", "Pet Poison Helpline", "VCA Animal Hospitals", "FDA Consumer Updates"],
-                relatedEntries: ["e293e8ba-eefc-4fe0-bf93-9e8842873a35"]
+                relatedEntries: ["33aa1122-bbcc-ddee-ff00-112233445566"]  // Diabetes Medications - shared hypoglycemia mechanism
             ),
 
             // MARK: - Onions
@@ -2356,7 +2360,7 @@ class DatabaseService {
                     "With legalization, highly concentrated products are more available — even small amounts of vape liquid or concentrates can cause severe toxicity"
                 ],
                 sources: ["ASPCA Animal Poison Control Center", "Pet Poison Helpline", "Veterinary Partner", "Reptiles Magazine - Toxic Plants List"],
-                relatedEntries: ["d7723ed0-6496-40b3-8b1c-84e129083cb9"]
+                relatedEntries: nil
             ),
 
             // MARK: - Bleeding Heart
@@ -8362,7 +8366,7 @@ class DatabaseService {
                     "ScienceDirect: Glipizide Veterinary Toxicity Data",
                     "Merck Veterinary Manual: Diabetes Mellitus in Dogs and Cats"
                 ],
-                relatedEntries: ["88ff6677-99aa-bbcc-ddee-ff0011223344"]
+                relatedEntries: ["88ff6677-99aa-bbcc-ddee-ff0011223344", "d7723ed0-6496-40b3-8b1c-84e129083cb9"]  // Insulin/Oral Hypoglycemics umbrella, Xylitol - shared hypoglycemia mechanism
             ),
 
             // MARK: - Muscle Relaxants
