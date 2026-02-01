@@ -14,6 +14,10 @@ struct DisclaimerView: View {
             Text("This information is for educational purposes only and does not constitute veterinary medical advice. If your pet has been exposed to a potentially toxic substance, contact a licensed veterinarian or animal poison control center immediately.")
                 .font(.subheadline)
                 .foregroundStyle(.primary)
+
+            Text("Images are AI-generated for illustration only and should not be used to identify real-world plants, substances, or products. Any resemblance to specific commercial brands is coincidental and unintentional.")
+                .font(.subheadline)
+                .foregroundStyle(.primary)
         }
         .padding()
         .frame(maxWidth: .infinity, alignment: .leading)

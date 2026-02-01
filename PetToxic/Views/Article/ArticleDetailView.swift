@@ -7,62 +7,67 @@ struct ArticleDetailView: View {
     @State private var isBookmarked = false
 
     var body: some View {
-        ScrollView {
-            VStack(alignment: .leading, spacing: 16) {
-                // Header with image and title
-                headerSection
+        ZStack {
+            AppBackground()
 
-                // Disclaimer - Always visible first
-                DisclaimerView()
+            ScrollView {
+                VStack(alignment: .leading, spacing: 16) {
+                    // Header with image and title
+                    headerSection
 
-                // Species risks
-                if !item.speciesRisks.isEmpty {
-                    SeveritySection(speciesRisks: item.speciesRisks)
+                    // Disclaimer - Always visible first
+                    DisclaimerView()
+
+                    // Species risks
+                    if !item.speciesRisks.isEmpty {
+                        SeveritySection(speciesRisks: item.speciesRisks)
+                    }
+
+                    // Description
+                    section(title: "What is it?") {
+                        MarkdownText(content: item.description)
+                            .font(.body)
+                            .lineSpacing(4)
+                    }
+
+                    // Toxicity info
+                    section(title: "Why is it toxic?") {
+                        MarkdownText(content: item.toxicityInfo)
+                            .font(.body)
+                            .lineSpacing(4)
+                    }
+
+                    // Symptoms
+                    section(title: "Symptoms to watch for") {
+                        SymptomsListView(symptoms: item.symptoms)
+                    }
+
+                    // Onset time (if available)
+                    if let onsetTime = item.onsetTime {
+                        onsetTimeSection(onsetTime)
+                    }
+
+                    // Prevention tips (if available)
+                    if let preventionTips = item.preventionTips, !preventionTips.isEmpty {
+                        preventionTipsSection(preventionTips)
+                    }
+
+                    // Emergency contacts
+                    emergencySection
+
+                    // Related entries
+                    relatedEntriesSection
+
+                    // Sources
+                    sourcesSection
                 }
-
-                // Description
-                section(title: "What is it?") {
-                    MarkdownText(content: item.description)
-                        .font(.body)
-                        .lineSpacing(4)
-                }
-
-                // Toxicity info
-                section(title: "Why is it toxic?") {
-                    MarkdownText(content: item.toxicityInfo)
-                        .font(.body)
-                        .lineSpacing(4)
-                }
-
-                // Symptoms
-                section(title: "Symptoms to watch for") {
-                    SymptomsListView(symptoms: item.symptoms)
-                }
-
-                // Onset time (if available)
-                if let onsetTime = item.onsetTime {
-                    onsetTimeSection(onsetTime)
-                }
-
-                // Prevention tips (if available)
-                if let preventionTips = item.preventionTips, !preventionTips.isEmpty {
-                    preventionTipsSection(preventionTips)
-                }
-
-                // Emergency contacts
-                emergencySection
-
-                // Related entries
-                relatedEntriesSection
-
-                // Sources
-                sourcesSection
+                .padding()
+                .padding(.bottom, 80) // Space for tab bar
             }
-            .padding()
-            .padding(.bottom, 80) // Space for tab bar
         }
         .navigationTitle(item.name)
         .navigationBarTitleDisplayMode(.inline)
+        .toolbarBackground(.hidden, for: .navigationBar)
         .toolbar {
             ToolbarItem(placement: .topBarTrailing) {
                 HStack(spacing: 16) {
