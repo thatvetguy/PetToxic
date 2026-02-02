@@ -13036,6 +13036,97 @@ Albuterol has a plasma half-life of approximately 4 hours. Clinical signs typica
                 ],
                 sources: ["ASPCA Animal Poison Control Center", "Pet Poison Helpline", "North Carolina State University Extension — Poisonous Plants Database", "Merck Veterinary Manual"],
                 relatedEntries: nil
+            ),
+
+            // MARK: - Tradescantia (Wandering Jew)
+            ToxicItem(
+                id: UUID(uuidString: "be55d11f-23dc-4c16-a5a5-545740026b2b")!,
+                name: "Tradescantia (Wandering Jew)",
+                alternateNames: ["Tradescantia", "Tradescantia zebrina", "Tradescantia fluminensis", "Tradescantia pallida", "Tradescantia nanouk", "wandering jew", "wandering jew plant", "wandering dude", "inch plant", "spiderwort", "dayflower", "purple heart", "purple queen", "silver inch plant", "small-leaf spiderwort", "Commelinaceae", "tradescantia nanouk", "Nanouk", "Moses in the cradle"],
+                categories: [.plants],
+                imageAsset: "tradescantia_thumb",
+                description: "Tradescantia is a large genus of trailing houseplants and ground cover plants commonly known as Wandering Jew (or Wandering Dude), Inch Plant, and Spiderwort. Popular varieties include Tradescantia zebrina (with distinctive purple-striped leaves), Tradescantia pallida (Purple Heart), and Tradescantia nanouk (Fantasy Venice). These plants are extremely popular houseplants due to their colorful foliage and easy care. They are also used as outdoor ground cover in warmer climates, where they can become invasive. All Tradescantia species should be considered toxic to pets.",
+                toxicityInfo: "Tradescantia species contain calcium oxalate crystals and other irritant compounds in their sap. Unlike many other toxic plants, the primary concern with Tradescantia is allergic contact dermatitis — a skin reaction that occurs when pets come into contact with the plant's sap.\n\nIn dogs, this is the most clinically significant effect. Dogs that walk through Tradescantia ground cover or lie on it can develop allergic dermatitis, particularly in areas with less fur — the underbelly, groin, armpits, inner thighs, and sometimes the ears and face. Signs include red, irritated skin, small bumps or pustules, hair loss, and intense itching. Dogs may scratch, lick, or bite at affected areas, sometimes causing secondary skin infections. Repeated exposure tends to worsen symptoms with each contact.\n\nIn cats, dermatitis can also occur, particularly around the face and mouth if the cat chews on the plant. Mild gastrointestinal upset (vomiting, diarrhea) may occur if ingested, but this is less common than the skin reaction.\n\nIf sap gets into the eyes, it can cause irritation and tearing. The plant's sap can also cause skin irritation in humans — wear gloves when handling or pruning.",
+                onsetTime: OnsetTime(
+                    early: "Skin irritation and redness may develop within hours of contact",
+                    delayed: "Allergic dermatitis may worsen over 24-48 hours; repeated exposures cause increasingly severe reactions"
+                ),
+                symptoms: [
+                    "Red, irritated skin (especially underbelly, groin, armpits)",
+                    "Small bumps or pustules on skin",
+                    "Hair loss at contact areas",
+                    "Intense itching and scratching",
+                    "Licking or biting at affected skin",
+                    "Skin rash (dermatitis)",
+                    "Secondary skin infection from scratching",
+                    "Mild drooling (if plant chewed)",
+                    "Vomiting (if significant amount ingested)",
+                    "Diarrhea (if significant amount ingested)",
+                    "Eye irritation and tearing (if sap contacts eyes)"
+                ],
+                entrySeverity: .low,
+                speciesRisks: [
+                    SpeciesRisk(species: .dog, severity: .low, notes: "Primary concern is allergic contact dermatitis, especially in dogs that walk through or lie on the plant. Skin irritation affects areas with less fur (underbelly, groin, armpits). Repeated exposure worsens symptoms. Secondary skin infections can develop from scratching."),
+                    SpeciesRisk(species: .cat, severity: .low, notes: "Can cause dermatitis if sap contacts skin and mild GI upset if ingested. Cats that chew trailing vines may develop oral irritation. Less commonly affected than dogs because cats have more fur coverage."),
+                    SpeciesRisk(species: .smallMammal, severity: .low, notes: "Limited data available. The irritant sap could cause skin irritation or mild GI upset if ingested. Keep small mammals away from the plant as a precaution."),
+                    SpeciesRisk(species: .bird, severity: .low, notes: "Limited data available. Birds should be kept away from Tradescantia as a precaution, as the irritant compounds could affect their sensitive skin and respiratory systems."),
+                    SpeciesRisk(species: .reptile, severity: .low, notes: "Very limited data. Reptiles are unlikely to ingest this plant, but the irritant sap could potentially cause skin or mucous membrane irritation.")
+                ],
+                preventionTips: [
+                    "If you grow Tradescantia as outdoor ground cover, prevent dogs from walking through or lying in it — this is the most common cause of dermatitis",
+                    "Hang Tradescantia houseplants high or use ceiling-mounted planters to keep trailing vines out of reach of cats and dogs",
+                    "Trim trailing vines regularly so they don't dangle within reach of curious pets",
+                    "Wear gloves when pruning Tradescantia — the sap can irritate human skin too",
+                    "If your pet develops recurring unexplained skin irritation on the belly or groin, consider whether they may be contacting Tradescantia in the yard",
+                    "Repeated contact causes worsening reactions — remove the plant from pet areas if dermatitis develops"
+                ],
+                sources: ["ASPCA Animal Poison Control Center", "Pet Poison Helpline", "WagWalking Veterinary Resources", "Paws Dog Daycare Toxic Plant Database"],
+                relatedEntries: nil
+            ),
+
+            // MARK: - Burning Bush (Euonymus)
+            ToxicItem(
+                id: UUID(uuidString: "9576b9d8-18ca-4a1c-8a33-969ae21b9ceb")!,
+                name: "Burning Bush (Euonymus)",
+                alternateNames: ["Euonymus", "Euonymus alatus", "Euonymus atropurpurea", "Euonymus europaeus", "burning bush", "winged burning bush", "winged euonymus", "wahoo", "spindle tree", "spindle bush", "European spindle", "strawberry bush", "wintercreeper", "Euonymus fortunei", "hearts-a-bustin", "eastern wahoo", "winged spindle"],
+                categories: [.plants],
+                imageAsset: "burning_bush_thumb",
+                description: "Burning Bush (Euonymus alatus) is an extremely common ornamental landscape shrub found throughout North America, widely planted for its spectacular bright red fall foliage. Other species in the Euonymus genus — including Wahoo (E. atropurpurea), European Spindle (E. europaeus), Strawberry Bush (E. americanus), and Wintercreeper (E. fortunei) — share the same toxic compounds. All parts of all Euonymus species are considered toxic, with the berries containing the highest concentration of toxins.",
+                toxicityInfo: "Euonymus species contain a combination of alkaloids and cardenolides (cardiac glycosides), making them potentially more dangerous than plants that cause only GI irritation. All parts of the plant are toxic, with the highest concentration in the berries (fruits). The plant is described as \"dangerously purgative\" — meaning it has very strong laxative and vomiting-inducing effects.\n\nIn most cases involving dogs and cats, signs are limited to gastrointestinal upset: vomiting, diarrhea, drooling, abdominal pain, and weakness. The bitter taste of the plant limits how much most pets will eat. However, because Euonymus contains cardiac glycosides, large ingestions can potentially affect the heart, causing abnormal heart rhythms (arrhythmias). This cardiac risk is the reason this plant warrants extra caution beyond typical GI irritant plants.\n\nCardiac effects are more pronounced in herbivores (horses, cattle, sheep) and have caused fatalities in livestock. In dogs and cats, serious cardiac effects are uncommon but possible — particularly in small dogs, puppies, or pets with pre-existing heart conditions. The presence of cardiac glycosides means any significant ingestion should be evaluated by a veterinarian.\n\nBurning Bush is on the FDA's list of unsafe herbs and is not recommended for any medicinal use.",
+                onsetTime: OnsetTime(
+                    early: "GI signs (vomiting, diarrhea) typically develop within a few hours of ingestion",
+                    delayed: "Cardiac effects, if they occur, may take several hours to develop; weakness and lethargy may persist for 24-48 hours"
+                ),
+                symptoms: [
+                    "Vomiting",
+                    "Diarrhea (may be profuse)",
+                    "Abdominal pain and discomfort",
+                    "Drooling (hypersalivation)",
+                    "Weakness and lethargy",
+                    "Loss of appetite",
+                    "Dehydration (from vomiting/diarrhea)",
+                    "Abnormal heart rhythm (with large ingestions)",
+                    "Seizures (rare, large ingestions)",
+                    "Collapse (rare, large ingestions)"
+                ],
+                entrySeverity: .moderate,
+                speciesRisks: [
+                    SpeciesRisk(species: .dog, severity: .moderate, notes: "Most cases cause GI upset only (vomiting, diarrhea, abdominal pain). The bitter taste usually limits consumption. However, the plant contains cardiac glycosides, so large ingestions — especially by small dogs or puppies — could affect the heart. Any ingestion beyond a taste should be reported to a veterinarian."),
+                    SpeciesRisk(species: .cat, severity: .moderate, notes: "Similar concerns as dogs. GI upset is the most common presentation. Cats are less likely to eat significant amounts, but the cardiac glycoside content means even moderate ingestions warrant veterinary evaluation."),
+                    SpeciesRisk(species: .smallMammal, severity: .high, notes: "Small body size increases the risk of significant toxicity from smaller amounts of plant material. Rabbits and other herbivorous small mammals may be more susceptible to the cardiac glycoside effects. Keep all small mammals away from Euonymus."),
+                    SpeciesRisk(species: .bird, severity: .high, notes: "Birds are highly sensitive to cardiac glycosides. Their small body size means even minor ingestion could cause serious effects. The berries may be attractive to some bird species. Any suspected ingestion warrants immediate veterinary care."),
+                    SpeciesRisk(species: .reptile, severity: .moderate, notes: "Very limited data on Euonymus toxicity in reptiles. The presence of both alkaloids and cardiac glycosides warrants caution. Keep reptiles away from the plant.")
+                ],
+                preventionTips: [
+                    "Burning Bush is one of the most commonly planted landscape shrubs in North America — check your yard and neighborhood for it",
+                    "The berries are the most toxic part — be especially vigilant in fall when berries are present",
+                    "Fallen leaves can retain toxins — rake and remove leaves that fall in areas where pets play",
+                    "Burning Bush has a bitter taste that usually deters significant consumption, but puppies and curious dogs may still eat enough to become ill",
+                    "All Euonymus species (including Wintercreeper ground cover) contain the same toxic compounds",
+                    "If your dog has eaten any part of a Euonymus plant, contact your veterinarian — the cardiac glycoside content means this plant warrants more caution than typical GI irritants"
+                ],
+                sources: ["ASPCA Animal Poison Control Center", "Pet Poison Helpline", "WagWalking Veterinary Resources", "UC Davis School of Veterinary Medicine Toxic Plant Garden"],
+                relatedEntries: nil
             )
         ]
     }
