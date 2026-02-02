@@ -57,12 +57,14 @@
 		ED2E81442F25FEEC008594E1 /* PetFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED2E81422F25FEEC008594E1 /* PetFormView.swift */; };
 		ED2E81452F25FEEC008594E1 /* PetListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED2E81432F25FEEC008594E1 /* PetListView.swift */; };
 		ED2E81472F25FF00008594E1 /* ProSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED2E81482F25FF00008594E1 /* ProSettings.swift */; };
+		EDC056AA2F30783A00AF2D0A /* HighlightableMarkdownText.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC056A92F30783A00AF2D0A /* HighlightableMarkdownText.swift */; };
 		EF977BE44A1CA4C9CE80A128 /* SavedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5C6C094D6B35157F81D7872 /* SavedView.swift */; };
 		EFB4BACA347E9C89515BEDED /* EmergencyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B85A0BAA5B698970D8F9ADA /* EmergencyView.swift */; };
 		EMRGPET001DDDD1111111111 /* EmergencyPetInfoCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = EMRGPET002DDDD2222222222 /* EmergencyPetInfoCard.swift */; };
 		F03D63A2599562E0A66DEB2E /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5D4123DE87463A4CF858927 /* Constants.swift */; };
 		F1372C807BFFDC33BCD4A18F /* SpeciesRisk.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F4998CA510A72304A62AC03 /* SpeciesRisk.swift */; };
 		F31D053BA08F486404401C7A /* DisclaimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA5A3886892E1B5E6CAF9D5F /* DisclaimerView.swift */; };
+		DSCPOP001AAAA1111111111 /* DisclaimerPopupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DSCPOP002AAAA2222222222 /* DisclaimerPopupView.swift */; };
 		FA855506E3D8A1DB2CC6BA80 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4AF21A98F3346F34930A106 /* LoadingView.swift */; };
 		HOMESEC001CCCC1111111111 /* MyPetsHomeSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = HOMESEC002CCCC2222222222 /* MyPetsHomeSection.swift */; };
 		MKDWN001FFFF1111111111111 /* MarkdownText.swift in Sources */ = {isa = PBXBuildFile; fileRef = MKDWN002FFFF2222222222222 /* MarkdownText.swift */; };
@@ -130,6 +132,7 @@
 		C55E1542D6E35B1F63CDED27 /* Color+Hex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Hex.swift"; sourceTree = "<group>"; };
 		C5C6C094D6B35157F81D7872 /* SavedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedView.swift; sourceTree = "<group>"; };
 		CA5A3886892E1B5E6CAF9D5F /* DisclaimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisclaimerView.swift; sourceTree = "<group>"; };
+		DSCPOP002AAAA2222222222 /* DisclaimerPopupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisclaimerPopupView.swift; sourceTree = "<group>"; };
 		CASEFIELD002CCCC22222222 /* AddCaseNumberField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCaseNumberField.swift; sourceTree = "<group>"; };
 		CASEROW002BBBB2222222222 /* CaseNumberRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaseNumberRow.swift; sourceTree = "<group>"; };
 		D4E5F6789012345678901234 /* AppearanceSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppearanceSettings.swift; sourceTree = "<group>"; };
@@ -144,6 +147,7 @@
 		ED2E81422F25FEEC008594E1 /* PetFormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetFormView.swift; sourceTree = "<group>"; };
 		ED2E81432F25FEEC008594E1 /* PetListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetListView.swift; sourceTree = "<group>"; };
 		ED2E81482F25FF00008594E1 /* ProSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProSettings.swift; sourceTree = "<group>"; };
+		EDC056A92F30783A00AF2D0A /* HighlightableMarkdownText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HighlightableMarkdownText.swift; sourceTree = "<group>"; };
 		EDE88C278EF8FA0A290DE262 /* PetToxicTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetToxicTests.swift; sourceTree = "<group>"; };
 		EMRGPET002DDDD2222222222 /* EmergencyPetInfoCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmergencyPetInfoCard.swift; sourceTree = "<group>"; };
 		F04351C3DD8FA41399338545 /* BrowseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrowseViewModel.swift; sourceTree = "<group>"; };
@@ -209,11 +213,13 @@
 		5A9CF302EBC890FA4F624CA1 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				EDC056A92F30783A00AF2D0A /* HighlightableMarkdownText.swift */,
 				368C8AAFA2F93E4E6C4ACDD8 /* AdBannerPlaceholder.swift */,
 				CASEFIELD002CCCC22222222 /* AddCaseNumberField.swift */,
 				F95CC1681EAFCAC224A491ED /* AppBackground.swift */,
 				CASEROW002BBBB2222222222 /* CaseNumberRow.swift */,
 				CA5A3886892E1B5E6CAF9D5F /* DisclaimerView.swift */,
+				DSCPOP002AAAA2222222222 /* DisclaimerPopupView.swift */,
 				EMRGPET002DDDD2222222222 /* EmergencyPetInfoCard.swift */,
 				24B2882F5F5387A02F14DC1B /* EmptyStateView.swift */,
 				FF6C448365FCE3CCE08553DE /* HomeHeader.swift */,
@@ -522,6 +528,7 @@
 				F03D63A2599562E0A66DEB2E /* Constants.swift in Sources */,
 				D44528F6CE6C54C2BD5B0EE0 /* DatabaseService.swift in Sources */,
 				F31D053BA08F486404401C7A /* DisclaimerView.swift in Sources */,
+				DSCPOP001AAAA1111111111 /* DisclaimerPopupView.swift in Sources */,
 				EFB4BACA347E9C89515BEDED /* EmergencyView.swift in Sources */,
 				EMRGPET001DDDD1111111111 /* EmergencyPetInfoCard.swift in Sources */,
 				0A35A2B438F7FE2009ABCC3C /* EmptyStateView.swift in Sources */,
@@ -547,6 +554,7 @@
 				F1372C807BFFDC33BCD4A18F /* SpeciesRisk.swift in Sources */,
 				ED2E81442F25FEEC008594E1 /* PetFormView.swift in Sources */,
 				ED2E81452F25FEEC008594E1 /* PetListView.swift in Sources */,
+				EDC056AA2F30783A00AF2D0A /* HighlightableMarkdownText.swift in Sources */,
 				PHOTO001BBBB1111111111111 /* PetPhotoService.swift in Sources */,
 				PHOTO003BBBB3333333333333 /* PetAvatarView.swift in Sources */,
 				PHOTO005BBBB5555555555555 /* PetPhotoPickerView.swift in Sources */,

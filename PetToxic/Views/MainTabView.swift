@@ -5,6 +5,8 @@ struct MainTabView: View {
     @State private var dragOffset: CGFloat = 0
     @State private var isDragging = false
     @State private var isInQuickEmergency = false
+    @AppStorage("disclaimerAcknowledgedVersion") private var acknowledgedVersion: String = ""
+    @State private var showDisclaimerPopup = false
 
     private let tabCount = 5
 
@@ -33,6 +35,16 @@ struct MainTabView: View {
         }
         .safeAreaInset(edge: .bottom) {
             customTabBar
+        }
+        .onAppear {
+            let currentVersion = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String ?? "0.0"
+            if acknowledgedVersion != currentVersion {
+                showDisclaimerPopup = true
+            }
+        }
+        .sheet(isPresented: $showDisclaimerPopup) {
+            DisclaimerPopupView(isPresented: $showDisclaimerPopup)
+                .presentationDragIndicator(.hidden)
         }
     }
 
