@@ -2127,7 +2127,7 @@ class DatabaseService {
             ToxicItem(
                 id: UUID(uuidString: "d8d69209-6177-411e-bd92-c541af9fe79d")!,
                 name: "Tomato & Potato Plants",
-                alternateNames: ["tomato plant", "tomato leaves", "tomato stems", "green tomatoes", "unripe tomatoes", "cherry tomato plant", "Solanum lycopersicum", "potato plant", "potato leaves", "potato stems", "green potatoes", "raw potatoes", "potato skins", "Solanum tuberosum", "nightshade family", "Solanaceae", "solanine", "tomatine", "glycoalkaloids"],
+                alternateNames: ["tomato plant", "tomato leaves", "tomato stems", "green tomatoes", "unripe tomatoes", "cherry tomato plant", "Solanum", "Solanum lycopersicum", "potato plant", "potato leaves", "potato stems", "green potatoes", "raw potatoes", "potato skins", "Solanum tuberosum", "nightshade family", "Solanaceae", "solanine", "tomatine", "glycoalkaloids"],
                 categories: [.plants, .foods],
                 imageAsset: "green_tomato_thumb",
                 description: "Tomato and potato plants belong to the Solanaceae (nightshade) family and share the same toxic compounds. These common garden vegetables are safe when ripe and properly prepared, but the green parts of the plants — leaves, stems, unripe fruit, and green-skinned potatoes — contain toxic glycoalkaloids that can harm pets.",
@@ -3284,7 +3284,7 @@ class DatabaseService {
             ToxicItem(
                 id: UUID(uuidString: "03a94b12-a160-4244-a3b0-a8050554a062")!,
                 name: "Bittersweet",
-                alternateNames: ["American bittersweet", "Celastrus scandens", "climbing bittersweet", "false bittersweet", "waxwork", "shrubby bittersweet", "Oriental bittersweet", "Celastrus orbiculatus", "Asian bittersweet", "round-leaved bittersweet", "staff vine", "staff tree", "bittersweet vine", "bittersweet berries", "decorative bittersweet", "bittersweet wreath", "Euonymus alkaloids", "bittersweet nightshade", "Solanum dulcamara", "woody nightshade", "climbing nightshade", "European bittersweet"],
+                alternateNames: ["American bittersweet", "Celastrus", "Celastrus scandens", "climbing bittersweet", "false bittersweet", "waxwork", "shrubby bittersweet", "Oriental bittersweet", "Celastrus orbiculatus", "Asian bittersweet", "round-leaved bittersweet", "staff vine", "staff tree", "bittersweet vine", "bittersweet berries", "decorative bittersweet", "bittersweet wreath", "Euonymus alkaloids", "bittersweet nightshade", "Solanum dulcamara", "woody nightshade", "climbing nightshade", "European bittersweet"],
                 categories: [.plants, .holidayHazards],
                 imageAsset: "bittersweet_thumb",
                 description: "The name 'bittersweet' refers to two different groups of plants: the **Celastrus** species (American bittersweet, Oriental bittersweet) — woody vines prized for their showy orange-red berries used in fall/winter wreaths and holiday decorations, and **bittersweet nightshade** (Solanum dulcamara) — a weedy vine in the nightshade family with purple flowers and red berries. Both are toxic to pets, but through different mechanisms. This entry covers both since the common name overlap causes confusion. American bittersweet (Celastrus scandens) is native to North America; Oriental bittersweet (Celastrus orbiculatus) is an invasive species from Asia. Both produce the orange-red berry clusters used in decorative arrangements.",
@@ -11604,6 +11604,7 @@ Major US outbreaks: 2005, 2011, 2020, 2021—numerous pet deaths. FDA maintains 
                 name: "Hemlock (Poison Hemlock & Water Hemlock)",
                 alternateNames: [
                     "poison hemlock",
+                    "Conium",
                     "Conium maculatum",
                     "poison parsley",
                     "spotted hemlock",
