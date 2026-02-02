@@ -261,10 +261,18 @@ struct ArticleDetailView: View {
         var items: [Any] = []
         if let imageAssetName = item.imageAsset,
            let thumbnailImage = UIImage(named: imageAssetName) {
-            items.append(thumbnailImage)
+            let resized = resizeImage(thumbnailImage, to: CGSize(width: 600, height: 600))
+            items.append(resized)
         }
         items.append(generateShareText(for: item))
         return items
+    }
+
+    private func resizeImage(_ image: UIImage, to size: CGSize) -> UIImage {
+        let renderer = UIGraphicsImageRenderer(size: size)
+        return renderer.image { _ in
+            image.draw(in: CGRect(origin: .zero, size: size))
+        }
     }
 
     private func generateShareText(for item: ToxicItem) -> String {
