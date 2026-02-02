@@ -98,7 +98,7 @@ struct SettingsView: View {
                     Section {
                         DisclosureGroup("About Pet Toxic") {
                             VStack(alignment: .leading, spacing: 12) {
-                                Text("Pet Toxic was developed by a licensed veterinarian").bold() + Text(" to help pet owners quickly identify potential hazards in their pet's environment.")
+                                Text("Pet Toxic was developed by a veterinarian").bold() + Text(" to help pet owners quickly identify potential hazards in their pet's environment.")
 
                                 Text("All toxicity information in this app is free for every user — no paywalls, no locked articles. Paid upgrades remove ads and unlock bonus features like My Pets.")
 
