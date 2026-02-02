@@ -460,6 +460,11 @@ struct PetFormView: View {
             }
         }
         .scrollDismissesKeyboard(.interactively)
+        .simultaneousGesture(
+            TapGesture().onEnded {
+                hideKeyboard()
+            }
+        )
         .toolbar {
             ToolbarItemGroup(placement: .keyboard) {
                 Spacer()
