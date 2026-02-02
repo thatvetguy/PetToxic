@@ -39,7 +39,7 @@ class DatabaseService {
                 categories: [.foods, .holidayHazards],
                 imageAsset: "chocolate_thumb",
                 description: "Chocolate is made from roasted cacao beans (Theobroma cacao—Greek for 'food of the gods') and is found in candy, baked goods, beverages, and desserts. It's one of the most common pet toxicities reported to poison control centers, with exposure spikes during holidays like Valentine's Day, Easter, Halloween, and Christmas. Dogs are particularly attracted to chocolate and can smell it even when wrapped or hidden.",
-                toxicityInfo: "Chocolate contains theobromine and caffeine, both methylxanthines that affect the heart, nervous system, and muscles. Here's why chocolate is dangerous to pets: humans break down theobromine quickly (half-life of 6-10 hours), but dogs metabolize it very slowly (half-life of 17.5 hours). This means theobromine builds up in their system to toxic levels. Cats metabolize it even more slowly. These compounds overstimulate the heart (causing rapid or irregular heartbeat), excite the nervous system (causing restlessness, tremors, and seizures), and relax smooth muscle (contributing to vomiting and diarrhea). Toxicity risk varies significantly by chocolate type—darker and more bitter chocolates contain more theobromine and are far more dangerous. In order of risk: cocoa powder and cacao beans are most dangerous, followed by unsweetened baking chocolate, semisweet/dark chocolate, milk chocolate, and white chocolate (minimal theobromine but high fat content can still trigger pancreatitis).",
+                toxicityInfo: "Chocolate contains theobromine and caffeine, both methylxanthines that affect the heart, nervous system, and muscles. Here's why chocolate is dangerous to pets: humans break down theobromine quickly (half-life of 6-10 hours), but dogs metabolize it very slowly (half-life of 17.5 hours). This means theobromine builds up in their system to toxic levels. Cats metabolize it even more slowly. These compounds overstimulate the heart (causing rapid or irregular heartbeat), excite the nervous system (causing restlessness, tremors, and seizures), and relax smooth muscle (contributing to vomiting and diarrhea). Toxicity risk varies significantly by chocolate type—darker and more bitter chocolates contain more theobromine and are far more dangerous. In order of risk: cocoa powder and cacao beans are most dangerous, followed by unsweetened baking chocolate, semisweet/dark chocolate, milk chocolate, and white chocolate contains negligible theobromine and is not considered a chocolate toxicity risk — however, its high fat and sugar content can still trigger pancreatitis (see Fatty Foods & Grease).",
                 onsetTime: OnsetTime(
                     early: "Caffeine effects begin within 30-60 minutes. Theobromine effects may take 2+ hours to appear. Initial signs include vomiting, restlessness, bloating, and increased thirst.",
                     delayed: "Theobromine is metabolized slowly (17.5-hour half-life in dogs). Effects can persist for several days. Signs may progress to cardiac arrhythmias, seizures, and other serious complications."
@@ -72,12 +72,13 @@ class DatabaseService {
                     "Watch for counter-surfing dogs who may grab chocolate left on tables or counters",
                     "Ask guests to keep purses and bags closed and off the floor—these often contain chocolate",
                     "Place advent calendars and holiday candy dishes well above pet height",
-                    "White chocolate has minimal theobromine but its high fat content can still cause pancreatitis"
+                    "White chocolate is not a theobromine toxicity risk, but its high fat and sugar content can trigger pancreatitis — the concern is the fat, not the chocolate"
                 ],
                 sources: ["ASPCA Animal Poison Control Center", "Pet Poison Helpline", "Merck Veterinary Manual", "VCA Animal Hospitals"],
                 relatedEntries: [
                     "f2a3b4c5-6d7e-8f9a-0b1c-2d3e4f5a6b7c",  // Cocoa Mulch - same methylxanthine toxicity
-                    "ae80bf97-0ffd-4ed8-b9d9-727e747d583b"   // Caffeine - same methylxanthine toxicity
+                    "ae80bf97-0ffd-4ed8-b9d9-727e747d583b",  // Caffeine - same methylxanthine toxicity
+                    "2e094121-64ea-499c-bfb4-6db98f139b55"   // Fatty Foods & Grease - white chocolate pancreatitis risk
                 ]
             ),
 
@@ -622,7 +623,7 @@ class DatabaseService {
                     "Store cooking grease and drippings securely before disposal"
                 ],
                 sources: ["Pet Poison Helpline", "ASPCA Animal Poison Control Center", "Merck Veterinary Manual", "American Veterinary Medical Association (JAVMA)"],
-                relatedEntries: ["59cf7dc4-5d83-4811-97f1-ce1d0162cd28", "91000011-2233-4455-6677-889900aabb01"]
+                relatedEntries: ["59cf7dc4-5d83-4811-97f1-ce1d0162cd28", "91000011-2233-4455-6677-889900aabb01", "d8c34930-fe78-414c-a182-49521dbfc266"]  // Cooked Bones, Macadamia Nuts (or other), Chocolate - white chocolate pancreatitis
             ),
 
             // MARK: - Cooked Bones
