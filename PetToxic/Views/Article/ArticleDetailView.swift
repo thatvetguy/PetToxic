@@ -3,6 +3,7 @@ import SwiftUI
 struct ArticleDetailView: View {
     let item: ToxicItem
     var saveSearchTerm: Bool = false
+    var searchQuery: String? = nil
     @StateObject private var viewModel = ArticleViewModel()
     @State private var isBookmarked = false
     @State private var showShareSheet = false
@@ -21,19 +22,19 @@ struct ArticleDetailView: View {
 
                     // Species risks
                     if !item.speciesRisks.isEmpty {
-                        SeveritySection(speciesRisks: item.speciesRisks)
+                        SeveritySection(speciesRisks: item.speciesRisks, searchQuery: searchQuery)
                     }
 
                     // Description
                     section(title: "What is it?") {
-                        MarkdownText(content: item.description)
+                        HighlightableMarkdownText(content: item.description, searchTerm: searchQuery)
                             .font(.body)
                             .lineSpacing(4)
                     }
 
                     // Toxicity info
                     section(title: "Why is it toxic?") {
-                        MarkdownText(content: item.toxicityInfo)
+                        HighlightableMarkdownText(content: item.toxicityInfo, searchTerm: searchQuery)
                             .font(.body)
                             .lineSpacing(4)
                     }
@@ -137,7 +138,7 @@ struct ArticleDetailView: View {
                         Text("Early signs")
                             .font(.headline)
                             .foregroundStyle(Color("AccentColor"))
-                        MarkdownText(content: early)
+                        HighlightableMarkdownText(content: early, searchTerm: searchQuery)
                             .font(.body)
                     }
                 }
@@ -147,7 +148,7 @@ struct ArticleDetailView: View {
                         Text("Delayed signs")
                             .font(.headline)
                             .foregroundStyle(.orange)
-                        MarkdownText(content: delayed)
+                        HighlightableMarkdownText(content: delayed, searchTerm: searchQuery)
                             .font(.body)
                     }
                 }
@@ -171,7 +172,7 @@ struct ArticleDetailView: View {
                         Image(systemName: "checkmark.shield.fill")
                             .foregroundStyle(.green)
                             .frame(width: 20)
-                        MarkdownText(content: tip)
+                        HighlightableMarkdownText(content: tip, searchTerm: searchQuery)
                             .font(.body)
                     }
                 }

@@ -63,7 +63,7 @@ struct SearchView: View {
                 viewModel.reloadRecentSearches()
             }
             .navigationDestination(for: ToxicItem.self) { item in
-                ArticleDetailView(item: item, saveSearchTerm: true)
+                ArticleDetailView(item: item, saveSearchTerm: true, searchQuery: viewModel.searchText)
             }
         }
     }

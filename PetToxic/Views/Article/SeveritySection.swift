@@ -2,6 +2,7 @@ import SwiftUI
 
 struct SeveritySection: View {
     let speciesRisks: [SpeciesRisk]
+    var searchQuery: String? = nil
 
     var body: some View {
         VStack(alignment: .leading, spacing: 12) {
@@ -29,7 +30,7 @@ struct SeveritySection: View {
                     .clipShape(RoundedRectangle(cornerRadius: 8))
 
                     if let notes = risk.notes, !notes.isEmpty {
-                        MarkdownText(content: notes)
+                        HighlightableMarkdownText(content: notes, searchTerm: searchQuery)
                             .font(.callout)
                             .foregroundStyle(.primary)
                             .padding(.horizontal)
