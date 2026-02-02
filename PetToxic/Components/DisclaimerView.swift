@@ -15,6 +15,10 @@ struct DisclaimerView: View {
                 .font(.subheadline)
                 .foregroundStyle(.primary)
 
+            Text("This database covers common toxic substances but is not a comprehensive listing of all possible hazards. The absence of a substance from this app should not be interpreted as an indication of safety. When in doubt, contact a veterinarian or animal poison control center.")
+                .font(.subheadline)
+                .foregroundStyle(.primary)
+
             Text("Images are AI-generated for illustration only and should not be used to identify real-world plants, substances, or products. Any resemblance to specific commercial brands is coincidental and unintentional.")
                 .font(.subheadline)
                 .foregroundStyle(.primary)
