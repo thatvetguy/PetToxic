@@ -5,6 +5,7 @@ struct ArticleDetailView: View {
     var saveSearchTerm: Bool = false
     @StateObject private var viewModel = ArticleViewModel()
     @State private var isBookmarked = false
+    @State private var showShareSheet = false
 
     var body: some View {
         ZStack {
@@ -71,7 +72,9 @@ struct ArticleDetailView: View {
         .toolbar {
             ToolbarItem(placement: .topBarTrailing) {
                 HStack(spacing: 16) {
-                    ShareLink(item: shareText) {
+                    Button {
+                        showShareSheet = true
+                    } label: {
                         Image(systemName: "square.and.arrow.up")
                     }
 
@@ -90,6 +93,9 @@ struct ArticleDetailView: View {
             if saveSearchTerm {
                 SearchContext.shared.saveIfPending()
             }
+        }
+        .sheet(isPresented: $showShareSheet) {
+            ShareSheet(activityItems: shareItems)
         }
         .navigationDestination(for: ToxicItem.self) { relatedItem in
             ArticleDetailView(item: relatedItem)
@@ -251,8 +257,14 @@ struct ArticleDetailView: View {
         }
     }
 
-    private var shareText: String {
-        generateShareText(for: item)
+    private var shareItems: [Any] {
+        var items: [Any] = []
+        if let imageAssetName = item.imageAsset,
+           let thumbnailImage = UIImage(named: imageAssetName) {
+            items.append(thumbnailImage)
+        }
+        items.append(generateShareText(for: item))
+        return items
     }
 
     private func generateShareText(for item: ToxicItem) -> String {
@@ -342,6 +354,16 @@ struct ArticleDetailView: View {
         return text
     }
 
+}
+
+private struct ShareSheet: UIViewControllerRepresentable {
+    let activityItems: [Any]
+
+    func makeUIViewController(context: Context) -> UIActivityViewController {
+        UIActivityViewController(activityItems: activityItems, applicationActivities: nil)
+    }
+
+    func updateUIViewController(_ uiViewController: UIActivityViewController, context: Context) {}
 }
 
 #Preview {
