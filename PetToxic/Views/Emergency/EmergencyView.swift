@@ -55,6 +55,11 @@ struct EmergencyView: View {
                     .padding()
                     .padding(.bottom, 80) // Extra space for tab bar
                 }
+                .simultaneousGesture(
+                    TapGesture().onEnded {
+                        UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
+                    }
+                )
             }
             .navigationTitle("Emergency")
             .toolbarBackground(.hidden, for: .navigationBar)

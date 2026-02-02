@@ -10,6 +10,7 @@ struct EmergencyPetInfoCard: View {
     @State private var newCaseNumber = ""
     @State private var showDeleteAlert = false
     @State private var caseToDelete: PoisonControlCase?
+    @FocusState private var isCaseNumberFocused: Bool
 
     var body: some View {
         if proSettings.isPro && !pets.isEmpty {
@@ -202,6 +203,20 @@ struct EmergencyPetInfoCard: View {
                     .foregroundColor(.white)
                     .textInputAutocapitalization(.characters)
                     .autocorrectionDisabled()
+                    .focused($isCaseNumberFocused)
+                    .submitLabel(.done)
+                    .onSubmit {
+                        addCaseNumber(to: pet)
+                    }
+
+                if isCaseNumberFocused {
+                    Button("Cancel") {
+                        isCaseNumberFocused = false
+                        newCaseNumber = ""
+                    }
+                    .foregroundColor(Color("AccentColor"))
+                    .font(.subheadline)
+                }
 
                 Button(action: {
                     addCaseNumber(to: pet)
@@ -279,6 +294,7 @@ struct EmergencyPetInfoCard: View {
         pet.poisonControlCases.append(newCase)
         try? modelContext.save()
         newCaseNumber = ""
+        isCaseNumberFocused = false
     }
 
     private func deleteCaseNumber(_ caseItem: PoisonControlCase) {

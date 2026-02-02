@@ -9,10 +9,6 @@ struct SearchView: View {
         NavigationStack(path: $navigationPath) {
             ZStack {
                 AppBackground()
-                    .contentShape(Rectangle())
-                    .onTapGesture {
-                        isSearchFocused = false
-                    }
 
                 VStack(spacing: 0) {
                     // Custom header
@@ -47,6 +43,11 @@ struct SearchView: View {
                         .padding(.top, 8)
                     }
                     .scrollDismissesKeyboard(.interactively)
+                    .simultaneousGesture(
+                        TapGesture().onEnded {
+                            isSearchFocused = false
+                        }
+                    )
 
                     Spacer(minLength: 0)
 
