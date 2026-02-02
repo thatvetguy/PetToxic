@@ -13127,6 +13127,99 @@ Albuterol has a plasma half-life of approximately 4 hours. Clinical signs typica
                 ],
                 sources: ["ASPCA Animal Poison Control Center", "Pet Poison Helpline", "WagWalking Veterinary Resources", "UC Davis School of Veterinary Medicine Toxic Plant Garden"],
                 relatedEntries: nil
+            ),
+
+            // MARK: - Periwinkle (Vinca)
+            ToxicItem(
+                id: UUID(uuidString: "114b7d96-5dfe-4fe0-8fbf-fbbc19397409")!,
+                name: "Periwinkle (Vinca)",
+                alternateNames: ["Vinca", "Vinca rosea", "Vinca major", "Vinca minor", "Catharanthus roseus", "Catharanthus", "periwinkle", "Madagascar periwinkle", "greater periwinkle", "lesser periwinkle", "running myrtle", "myrtle", "creeping myrtle", "flower of death", "Vinca vine", "periwinkle ground cover", "rosy periwinkle", "old maid", "Apocynaceae"],
+                categories: [.plants],
+                imageAsset: "periwinkle_vinca_thumb",
+                description: "Periwinkle (Vinca) includes several species of flowering plants commonly used as ground cover in gardens and landscaping. The most important distinction for pet owners is between the highly toxic Madagascar Periwinkle (Catharanthus roseus, formerly Vinca rosea) and the less toxic Greater/Lesser Periwinkle (Vinca major and Vinca minor). Madagascar Periwinkle is the source of the chemotherapy drugs vincristine and vinblastine — the same compounds that make this plant dangerous to pets. All species produce attractive funnel-shaped flowers in purple, pink, or white and spread vigorously as ground cover.",
+                toxicityInfo: "Periwinkle plants contain over 130 different alkaloid compounds, collectively known as vinca alkaloids. The most clinically significant are vincristine and vinblastine, which are the same compounds used in cancer chemotherapy — they work by disrupting cell division. Other alkaloids present include yohimbine, vindoline, and vincamine, many of which lower blood pressure.\n\nCatharanthus roseus (Madagascar Periwinkle) is by far the most toxic species. All parts of the plant contain vinca alkaloids, and ingestion can cause vomiting, diarrhea, low blood pressure (hypotension), incoordination, tremors, seizures, and in severe cases progressive paralysis and death. A published veterinary case report documented a fatal poisoning in a 9-week-old puppy after suspected ingestion.\n\nVinca major and Vinca minor (Greater and Lesser Periwinkle) contain lower concentrations of these alkaloids and rarely cause more than mild GI upset.\n\nIn practice, serious poisoning is rare because the plant tastes extremely bitter and pets typically stop after a small taste. However, puppies, young animals, or bored pets may consume enough to become ill. If you are unsure which species of periwinkle your pet ingested, treat the situation as potentially serious and contact your veterinarian immediately.",
+                onsetTime: OnsetTime(
+                    early: "GI signs (vomiting, diarrhea) may appear within 1-2 hours of ingestion",
+                    delayed: "Neurological signs (tremors, incoordination, seizures) and cardiovascular effects (low blood pressure) may develop over several hours; effects can progress over 24-48 hours in severe cases"
+                ),
+                symptoms: [
+                    "Vomiting",
+                    "Diarrhea",
+                    "Drooling",
+                    "Loss of appetite",
+                    "Low blood pressure (hypotension)",
+                    "Weakness and lethargy",
+                    "Incoordination (ataxia)",
+                    "Tremors",
+                    "Seizures (severe cases)",
+                    "Depression",
+                    "Difficulty breathing (severe cases)",
+                    "Progressive paralysis (rare, severe cases)",
+                    "Coma (rare, severe cases)"
+                ],
+                entrySeverity: .moderate,
+                speciesRisks: [
+                    SpeciesRisk(species: .dog, severity: .moderate, notes: "Most dogs take only a small taste due to the extremely bitter flavor and experience mild GI upset at most. However, Catharanthus roseus contains potent vinca alkaloids (vincristine, vinblastine) that can cause serious neurological and cardiovascular effects with larger ingestions. Puppies are at highest risk. A fatal poisoning has been documented in a young puppy."),
+                    SpeciesRisk(species: .cat, severity: .moderate, notes: "Similar concerns as dogs. Cats are less likely to consume significant amounts due to the bitter taste. The vinca alkaloids can cause hypotension, tremors, and seizures if enough is ingested."),
+                    SpeciesRisk(species: .smallMammal, severity: .high, notes: "Small body size significantly increases the risk of serious toxicity. Rabbits and other small mammals that graze on periwinkle ground cover could be at particular risk. The vinca alkaloids are potent at relatively small amounts."),
+                    SpeciesRisk(species: .bird, severity: .high, notes: "Small body size makes birds highly susceptible to the effects of vinca alkaloids. Even small ingestions could cause serious effects including neurological symptoms. Keep birds away from all periwinkle species."),
+                    SpeciesRisk(species: .reptile, severity: .moderate, notes: "Very limited data. The presence of potent vinca alkaloids warrants caution. Keep reptiles away from periwinkle plants.")
+                ],
+                preventionTips: [
+                    "Learn to distinguish between Madagascar Periwinkle (Catharanthus roseus — upright growth, larger flowers, tropical annual) and common Periwinkle (Vinca major/minor — trailing ground cover, perennial). Madagascar Periwinkle is much more toxic.",
+                    "If you are unsure which species of periwinkle your pet ingested, describe the plant to your veterinarian or poison control — assume the worst until identified",
+                    "Periwinkle is extremely common as garden ground cover — check your yard and neighborhood",
+                    "The plant's very bitter taste usually deters significant consumption, but puppies and young animals may eat more than adults",
+                    "Keep rabbits and other small pets completely away from periwinkle ground cover"
+                ],
+                sources: ["ASPCA Animal Poison Control Center", "Pet Poison Helpline", "WagWalking Veterinary Resources", "Veterinary Record Case Reports (2025) — Suspected vinca alkaloid toxicosis in a puppy"],
+                relatedEntries: nil
+            ),
+
+            // MARK: - Boxwood
+            ToxicItem(
+                id: UUID(uuidString: "15a6601f-f71f-481d-8c90-4b6c2c499c10")!,
+                name: "Boxwood",
+                alternateNames: ["Buxus", "Buxus sempervirens", "Buxus microphylla", "Buxus sinica", "box tree", "box hedge", "boxwood hedge", "boxwood shrub", "common boxwood", "American boxwood", "English boxwood", "Japanese boxwood", "Korean boxwood", "dwarf boxwood", "littleleaf boxwood", "Buxaceae"],
+                categories: [.plants],
+                imageAsset: "boxwood_thumb",
+                description: "Boxwood (Buxus species) is one of the most widely planted ornamental shrubs in North America, commonly used as hedges, borders, topiaries, and foundation plantings. With approximately 70 species native to Europe, Asia, and Africa, boxwood is found in virtually every suburban neighborhood. All parts of the plant are toxic, with the leaves and seeds containing the highest concentration of steroidal alkaloids. While dogs and cats rarely consume enough to become seriously ill (the plant tastes extremely bitter), the alkaloids can affect the nervous system, GI tract, and cardiovascular system.",
+                toxicityInfo: "Boxwood contains steroidal alkaloids — primarily buxine (also called buxene), along with cyclobuxine and cycloprotobuxine. These alkaloids initially stimulate and then depress the central nervous system, and also affect the cardiovascular system and gastrointestinal tract. The plant also contains a butyraceous (butter-like) oil.\n\nIn dogs and cats, the most common presentation is gastrointestinal upset — vomiting, diarrhea, and abdominal pain. The extremely bitter taste of boxwood typically prevents pets from eating large amounts. In the majority of cases, symptoms are self-limiting and resolve with basic supportive care. However, significant ingestions — especially by puppies, elderly dogs, or pets with underlying health conditions — can potentially cause more serious effects including hyperexcitability, incoordination (ataxia), seizures, and cardiovascular depression.\n\nIn horses and livestock, boxwood is considerably more dangerous and has caused fatalities. Symptoms in horses include severe colic, profuse diarrhea, seizures, respiratory failure, and death. The lethal dose for horses is relatively small.\n\nToxin concentration varies by species (Buxus sempervirens is generally more toxic than B. microphylla) and by season (highest in spring during new growth and in autumn during seed formation). Freshly cut boxwood may release alkaloids more readily.",
+                onsetTime: OnsetTime(
+                    early: "GI signs (vomiting, diarrhea) typically develop within a few hours of ingestion",
+                    delayed: "Neurological symptoms (if they develop) may appear several hours after ingestion; in livestock, death can occur within hours to days"
+                ),
+                symptoms: [
+                    "Vomiting",
+                    "Diarrhea",
+                    "Abdominal pain and cramping",
+                    "Lethargy and weakness",
+                    "Loss of appetite",
+                    "Dehydration (from vomiting/diarrhea)",
+                    "Hyperexcitability (early stage)",
+                    "Incoordination (ataxia)",
+                    "Seizures (large ingestions)",
+                    "Respiratory depression (severe cases)",
+                    "Collapse (severe cases)"
+                ],
+                entrySeverity: .moderate,
+                speciesRisks: [
+                    SpeciesRisk(species: .dog, severity: .moderate, notes: "The bitter taste usually prevents significant ingestion. Most cases involve only vomiting and diarrhea. However, the steroidal alkaloids can cause neurological and cardiovascular effects with larger ingestions. Puppies and small dogs are at higher risk. Contact your veterinarian if your dog has eaten any part of a boxwood plant."),
+                    SpeciesRisk(species: .cat, severity: .moderate, notes: "Cats rarely eat boxwood, but the steroidal alkaloids pose the same risks as for dogs. Any ingestion should be reported to a veterinarian due to the potential for neurological effects."),
+                    SpeciesRisk(species: .smallMammal, severity: .high, notes: "Small body size significantly increases the risk from boxwood's steroidal alkaloids. Rabbits and guinea pigs that graze near boxwood hedges are at particular risk. The alkaloids can cause seizures and cardiovascular collapse in small animals."),
+                    SpeciesRisk(species: .bird, severity: .high, notes: "Birds are highly susceptible to the steroidal alkaloids in boxwood due to their small body size. Even small ingestions could cause serious neurological and cardiovascular effects."),
+                    SpeciesRisk(species: .reptile, severity: .moderate, notes: "Very limited data on boxwood toxicity in reptiles. The presence of steroidal alkaloids warrants caution. Keep reptiles away from boxwood plants and clippings.")
+                ],
+                preventionTips: [
+                    "Boxwood is one of the most common landscape shrubs — inspect your yard and neighborhood. It is widely used as hedges, borders, and foundation plantings.",
+                    "The bitter taste usually prevents dogs and cats from eating significant amounts, but do not rely on this — puppies and curious dogs may eat more",
+                    "Freshly trimmed boxwood clippings may be more attractive to dogs than the intact plant — clean up all clippings promptly after pruning",
+                    "Toxin concentration varies seasonally — it is highest in spring (new growth) and autumn (seed formation)",
+                    "Keep rabbits, guinea pigs, and other small pets completely away from boxwood — they are much more susceptible than dogs or cats",
+                    "If you have horses or livestock, boxwood is extremely dangerous — ensure no boxwood grows in or near pastures"
+                ],
+                sources: ["ASPCA Animal Poison Control Center", "Pet Poison Helpline", "National Capital Poison Center (poison.org)", "UC Davis School of Veterinary Medicine Toxic Plant Garden"],
+                relatedEntries: nil
             )
         ]
     }
