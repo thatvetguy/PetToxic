@@ -9,6 +9,10 @@ struct SearchView: View {
         NavigationStack(path: $navigationPath) {
             ZStack {
                 AppBackground()
+                    .contentShape(Rectangle())
+                    .onTapGesture {
+                        isSearchFocused = false
+                    }
 
                 VStack(spacing: 0) {
                     // Custom header
