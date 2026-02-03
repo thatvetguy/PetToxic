@@ -13220,6 +13220,194 @@ Albuterol has a plasma half-life of approximately 4 hours. Clinical signs typica
                 ],
                 sources: ["ASPCA Animal Poison Control Center", "Pet Poison Helpline", "National Capital Poison Center (poison.org)", "UC Davis School of Veterinary Medicine Toxic Plant Garden"],
                 relatedEntries: nil
+            ),
+            ToxicItem(
+                id: UUID(uuidString: "00112233-4455-6677-8899-aabbccddef26")!,
+                name: "Heat Stroke & Hot Surfaces",
+                alternateNames: [
+                    "heat stroke",
+                    "heatstroke",
+                    "heat exhaustion",
+                    "heat stress",
+                    "heat injury",
+                    "hyperthermia",
+                    "overheating",
+                    "overheated dog",
+                    "overheated cat",
+                    "hot car",
+                    "dog in hot car",
+                    "cat in hot car",
+                    "pet in hot car",
+                    "hot pavement",
+                    "hot asphalt",
+                    "hot concrete",
+                    "hot sand",
+                    "paw pad burns",
+                    "burned paw pads",
+                    "paw burns",
+                    "summer heat",
+                    "heat wave",
+                    "heat danger",
+                    "too hot",
+                    "brachycephalic heat"
+                ],
+                categories: [.informational, .outdoorHazards],
+                imageAsset: "heat_stroke_thumb",
+                description: """
+Heat-related illness encompasses heat stroke, paw pad burns from hot surfaces, and other injuries caused by high environmental temperatures. Dogs and cats cannot cool themselves as efficiently as humans—they rely primarily on panting (evaporative cooling) rather than sweating. Heat stroke is a life-threatening emergency that can progress from early warning signs to fatal organ damage within minutes. Even on days that feel mild to humans, pets can be at serious risk.
+""",
+                toxicityInfo: """
+**How Pets Cool Themselves**
+
+Unlike humans who cool primarily through sweating, dogs and cats rely on **panting** to cool down. When a dog pants, air moves rapidly across the moist surfaces of the tongue, mouth, and upper airways, allowing heat to escape through evaporation. Dogs also have a small number of sweat glands in their paw pads, but these contribute very little to overall cooling. Cats pant only when severely overheated—it is always a concerning sign in cats.
+
+This cooling system has significant limitations:
+• It becomes much less effective in **humid conditions** (evaporation slows when air is already moisture-saturated)
+• It requires significant respiratory effort, which itself generates heat
+• Pets with airway abnormalities cannot move air efficiently enough to cool themselves
+
+**High-Risk Groups**
+
+While any pet can develop heat stroke, certain animals are at dramatically increased risk:
+
+• **Brachycephalic (flat-faced) breeds** — Bulldogs, French Bulldogs, Pugs, Boston Terriers, Boxers, Shih Tzus, Cavalier King Charles Spaniels, Pekingese, and Lhasa Apsos. Their shortened airways make panting far less efficient. Brachycephalic cats (Persians, Himalayans, Exotic Shorthairs) face the same challenge.
+• **Obese pets** — Excess body fat acts as insulation, trapping heat
+• **Senior pets** — Reduced ability to thermoregulate
+• **Pets with heart or respiratory disease** — Compromised circulation or breathing capacity
+• **Dark-coated animals** — Absorb more heat from sunlight
+• **Working or exercising dogs** — Generate significant internal heat; may not self-limit activity
+
+**What Heat Does to the Body**
+
+When body temperature rises above safe levels, a cascade of damage begins:
+
+**Direct Cellular Injury:** Heat literally damages cells throughout the body. Proteins begin to denature (lose their shape and function), cell membranes become unstable, and cells die. The brain, liver, kidneys, and GI tract are particularly vulnerable.
+
+**Blood Clotting Problems (Coagulopathy/DIC):** Heat stroke triggers abnormal activation of the clotting system. Initially, tiny clots form throughout the blood vessels, using up clotting factors. This leads to a dangerous condition called disseminated intravascular coagulation (DIC), where the pet paradoxically cannot clot properly and may bleed uncontrollably from multiple sites.
+
+**Kidney Damage:** The kidneys are highly susceptible to heat injury. Reduced blood flow (as the body diverts blood to the skin for cooling), direct heat damage, and breakdown products from damaged muscles can all cause acute kidney injury.
+
+**Gut Barrier Breakdown:** The intestinal lining is extremely sensitive to reduced blood flow and heat. When damaged, bacteria and toxins that normally stay contained within the gut can leak into the bloodstream (endotoxemia), triggering body-wide inflammation and shock.
+
+**Multi-Organ Failure:** As damage accumulates, multiple organ systems begin to fail simultaneously. Even with aggressive treatment, pets with severe heat stroke may develop complications hours to days later.
+
+**The Parked Car Danger**
+
+Parked cars are death traps for pets—even on days that feel comfortable outside:
+• On a 70°F (21°C) day, car interior can reach **100°F (38°C) within 20 minutes**
+• On a 90°F (32°C) day, interior temperature can exceed **160°F (71°C)**
+• Cracking windows does NOT prevent dangerous temperature rise
+• "Just a quick errand" is a tragically common final decision
+
+**Never leave a pet unattended in a parked vehicle—not even for a few minutes.**
+
+**Hot Surface Burns (Paw Pads)**
+
+Asphalt, concrete, metal, and sand absorb and radiate heat from the sun. On a hot day:
+• Dark asphalt can reach **140°F (60°C) or higher**
+• This is hot enough to cause burns within seconds of contact
+
+**The 7-Second Rule:** Place the back of your hand on the pavement. If you cannot hold it there comfortably for 7 seconds, it is too hot for your pet's paws.
+
+Paw pad burns may not be immediately obvious—tissue damage occurs before pain becomes apparent. Signs include limping, reluctance to walk, licking at paws, and visible blisters or raw tissue. Walk during cooler hours (early morning or after sunset) and stick to grass or shaded areas when possible.
+
+**Exercise-Induced Heat Stroke**
+
+Dogs—especially high-drive working breeds, retrievers, and dogs who love fetch—will often continue exercising well past the point of safety. They do not reliably self-regulate during play or work. Owners must enforce rest breaks, provide water, and watch for early warning signs. Avoid strenuous exercise during hot or humid weather.
+
+**First Aid Until Veterinary Care Can Be Reached**
+
+Heat stroke is a life-threatening emergency requiring veterinary care. These first aid steps can help reduce body temperature from dangerous levels while you transport your pet—they do NOT replace the need for professional veterinary treatment.
+
+**Begin cooling AND begin transport simultaneously. Do not significantly delay getting to a veterinarian in order to perform cooling at home.**
+
+• **Move your pet to shade or an air-conditioned area immediately**
+• **Pour or spray cool (not ice cold) water over your pet's body**—focus on the belly, inner thighs, and paw pads
+• **Do NOT cover your pet with wet towels**—this traps heat against the body
+• **Place your pet in front of a fan or car air conditioning** if available
+• **Offer water to drink** if your pet is alert and interested—do not force water into their mouth
+• **Transport to the nearest veterinary hospital immediately**
+
+**Avoid over-cooling.** The goal of first aid is to bring body temperature down from life-threatening levels—not to reach normal body temperature. Active cooling should stop once your pet's breathing slows, they seem more comfortable, or they begin to shiver. Over-cooling can cause dangerous drops in body temperature (hypothermia) and additional stress on the body. Do not use ice or ice-cold water.
+
+**Critical: Delayed Complications**
+
+Even if your pet appears to recover after cooling, **veterinary evaluation is still essential.** The organ damage caused by heat stroke—to the kidneys, liver, GI tract, and clotting system—may not become apparent for hours or even days after the initial event. A pet that seems fine after first aid may still become critically ill. Only a veterinarian can assess for internal damage and provide supportive care to prevent delayed complications.
+""",
+                onsetTime: OnsetTime(
+                    early: "Progression can be extremely rapid — early signs (heavy panting, seeking shade) can progress to collapse and organ failure within 15-30 minutes in severe cases.",
+                    delayed: "Paw pad burns may not be apparent until hours after exposure. Organ damage from heat stroke (kidneys, liver, clotting system) may not become apparent for hours to days after the initial event."
+                ),
+                symptoms: [
+                    "Heavy, rapid, or excessive panting",
+                    "Thick, ropey drool or excessive salivation",
+                    "Bright red gums and tongue (early sign)",
+                    "Pale, gray, or blue gums (late/severe sign)",
+                    "Dry, tacky gums",
+                    "Glazed or unfocused eyes",
+                    "Elevated heart rate",
+                    "Weakness or lethargy",
+                    "Staggering, stumbling, or difficulty walking",
+                    "Disorientation or confusion",
+                    "Vomiting (may contain blood)",
+                    "Diarrhea (may be bloody)",
+                    "Collapse or inability to stand",
+                    "Seizures or muscle tremors",
+                    "Loss of consciousness",
+                    "Limping or reluctance to walk (paw burns)",
+                    "Licking or chewing at paws (paw burns)",
+                    "Visible blisters or raw tissue on paw pads (paw burns)"
+                ],
+                entrySeverity: nil,
+                speciesRisks: [
+                    SpeciesRisk(
+                        species: .dog,
+                        severity: .severe,
+                        notes: "Most commonly affected species. Brachycephalic breeds (Bulldogs, French Bulldogs, Pugs, Boston Terriers, Boxers, Shih Tzus) are at extremely high risk due to inefficient airways. Obese, senior, dark-coated, and working/exercising dogs also at increased risk. Dogs do not reliably stop activity when overheating."
+                    ),
+                    SpeciesRisk(
+                        species: .cat,
+                        severity: .high,
+                        notes: "Less commonly affected due to tendency to rest and seek shade when warm. Brachycephalic cats (Persians, Himalayans, Exotic Shorthairs) are at increased risk. Any panting in a cat is a concerning sign—cats only pant when severely stressed or overheated."
+                    ),
+                    SpeciesRisk(
+                        species: .smallMammal,
+                        severity: .severe,
+                        notes: "Rabbits are EXTREMELY heat-sensitive and can develop fatal heat stroke at temperatures above 80°F (27°C). Guinea pigs are also very vulnerable. Chinchillas are particularly susceptible due to their dense fur—they evolved in cool mountain environments. These species should be kept in climate-controlled areas during warm weather."
+                    ),
+                    SpeciesRisk(
+                        species: .bird,
+                        severity: .high,
+                        notes: "Can overheat quickly in direct sunlight or poorly ventilated enclosures. Signs include open-mouth breathing (panting), holding wings away from body, and lethargy. Birds should always have access to shade and should never be left in cars or direct sun."
+                    ),
+                    SpeciesRisk(
+                        species: .reptile,
+                        severity: .moderate,
+                        notes: "Ectotherms (cold-blooded) that require external heat sources but CAN overheat if unable to escape to cooler areas. Enclosures must always provide a temperature gradient so reptiles can thermoregulate by moving between warm and cool zones. Heat lamps without escape areas are dangerous."
+                    )
+                ],
+                preventionTips: [
+                    "Never leave pets in parked cars—not even for a few minutes, not even with windows cracked",
+                    "Provide constant access to fresh water and shade during warm weather",
+                    "Walk dogs during cooler hours (early morning or after sunset)",
+                    "Test pavement with the back of your hand—if you can't hold it for 7 seconds, it's too hot for paws",
+                    "Know your pet's risk factors (breed, age, weight, coat color, health conditions)",
+                    "Watch for early warning signs and stop activity immediately if you see them",
+                    "Limit exercise during hot or humid weather—humidity makes panting less effective",
+                    "Consider cooling mats or vests for high-risk pets during summer",
+                    "Keep rabbits, guinea pigs, and chinchillas in air-conditioned spaces when temperatures exceed 75-80°F",
+                    "Ensure bird and reptile enclosures are not in direct sunlight and have adequate ventilation",
+                    "Never assume your pet will stop playing or working when they get too hot—they often won't"
+                ],
+                sources: [
+                    "American Veterinary Medical Association (AVMA)",
+                    "VCA Animal Hospitals",
+                    "Cornell University College of Veterinary Medicine",
+                    "Veterinary Partner (VIN)",
+                    "American Kennel Club (AKC) Canine Health Foundation",
+                    "Today's Veterinary Practice"
+                ],
+                relatedEntries: nil
             )
         ]
     }
