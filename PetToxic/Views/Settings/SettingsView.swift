@@ -20,7 +20,7 @@ struct SettingsView: View {
                 AppBackground()
 
                 List {
-                    // MARK: - My Pets
+                    // MARK: - Pro Features
                     Section {
                         NavigationLink {
                             PetListView()
@@ -46,16 +46,7 @@ struct SettingsView: View {
                         }
                         .disabled(!proSettings.isPro)
                         .listRowBackground(Color.white.opacity(0.08))
-                    } header: {
-                        Text("My Pets")
-                            .foregroundStyle(.white.opacity(0.7))
-                    } footer: {
-                        Text("Manage your pet profiles for quick access during emergencies.")
-                            .foregroundStyle(.white.opacity(0.5))
-                    }
 
-                    // MARK: - Features
-                    Section {
                         NavigationLink {
                             GlossaryView()
                         } label: {
@@ -81,8 +72,11 @@ struct SettingsView: View {
                         .disabled(!proSettings.isPro)
                         .listRowBackground(Color.white.opacity(0.08))
                     } header: {
-                        Text("Features")
+                        Text("Pro Features")
                             .foregroundStyle(.white.opacity(0.7))
+                    } footer: {
+                        Text("Manage pet profiles and look up medical terms.")
+                            .foregroundStyle(.white.opacity(0.5))
                     }
 
                     // MARK: - Developer Options (hidden until unlocked)
