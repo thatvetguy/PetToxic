@@ -218,6 +218,10 @@ Entries describing **mechanical hazards** (not chemical toxicosis) or **umbrella
 - `categories` — Add cross-listings if appropriate
 - `entrySeverity` — Set to `nil` for informational entries
 
+### ToxicItem Initializer Field Order
+When adding new entries, fields MUST appear in this exact order:
+`id, name, alternateNames, categories, imageAsset, description, toxicityInfo, onsetTime, symptoms, entrySeverity, speciesRisks, preventionTips, sources, relatedEntries`
+
 ### Fields NOT to EDIT
 - `id` (UUID) — Breaking change; affects app functionality
 - `name` — Affects search and navigation
