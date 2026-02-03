@@ -1510,5 +1510,172 @@ class GlossaryService {
             relatedTerms: ["Dermal Exposure", "Ingestion"],
             searchKeywords: ["relay toxicosis", "indirect poisoning", "grooming", "eating poisoned rodent"]
         ),
+
+        // MARK: - Batch 8 (Session 101)
+
+        // 131. Hyperesthesia
+        GlossaryTerm(
+            id: UUID(uuidString: "A0000001-0001-0001-0001-0000000000A1")!,
+            term: "Hyperesthesia",
+            pronunciation: "hy-per-es-THEE-zee-ah",
+            definition: "Abnormally heightened sensitivity to touch or stimuli. The pet may react dramatically to gentle touch, have rippling skin, or seem painful when handled. Classic sign of permethrin toxicity in cats—they may twitch, vocalize, or bite when touched. Also seen with some other neurotoxins.",
+            category: .symptoms,
+            relatedTerms: ["Neurotoxicity", "Tremors", "Fasciculations"],
+            searchKeywords: ["sensitive to touch", "painful to touch", "skin rippling", "overreacting to touch"]
+        ),
+
+        // 132. Opisthotonus
+        GlossaryTerm(
+            id: UUID(uuidString: "A0000001-0001-0001-0001-0000000000A2")!,
+            term: "Opisthotonus",
+            pronunciation: "oh-pis-THOT-oh-nus",
+            definition: "Severe muscle spasm causing the head and neck to arch backward and the back to become rigidly extended. A dramatic, alarming posture indicating severe neurological involvement. Seen with strychnine poisoning, metaldehyde (slug bait), severe tetanus, and some other neurotoxins. Always a critical emergency.",
+            category: .symptoms,
+            relatedTerms: ["Seizures", "Tremors", "Neurotoxicity"],
+            searchKeywords: ["arched back", "head thrown back", "rigid posture", "body arching"]
+        ),
+
+        // 133. Regurgitation
+        GlossaryTerm(
+            id: UUID(uuidString: "A0000001-0001-0001-0001-0000000000A3")!,
+            term: "Regurgitation",
+            pronunciation: "ree-gur-jih-TAY-shun",
+            definition: "Passive expulsion of food or fluid from the esophagus or stomach without the abdominal effort of vomiting. The material comes up easily, often undigested and tubular-shaped. Different from vomiting (which involves retching and abdominal contractions). Can occur with esophageal problems or certain toxins.",
+            category: .symptoms,
+            relatedTerms: ["Vomiting", "GI Tract", "Aspiration"],
+            searchKeywords: ["passive vomiting", "food coming up", "effortless vomiting", "bringing up food"]
+        ),
+
+        // 134. Photosensitivity
+        GlossaryTerm(
+            id: UUID(uuidString: "A0000001-0001-0001-0001-0000000000A4")!,
+            term: "Photosensitivity",
+            pronunciation: "foh-toh-sen-sih-TIV-ih-tee",
+            definition: "Abnormal sensitivity to sunlight causing skin damage in areas exposed to light (often non-pigmented or hairless areas). Certain plants (St. John's Wort, buckwheat) contain compounds that accumulate in skin and react with UV light, causing burns and tissue damage. More common in livestock but can affect pets.",
+            category: .symptoms,
+            relatedTerms: ["Dermal Exposure"],
+            searchKeywords: ["sun sensitivity", "sunburn", "light sensitivity", "UV reaction"]
+        ),
+
+        // 135. Sudden Blindness
+        GlossaryTerm(
+            id: UUID(uuidString: "A0000001-0001-0001-0001-0000000000A5")!,
+            term: "Sudden Blindness",
+            pronunciation: nil,
+            definition: "Rapid loss of vision occurring within hours to days. Can result from severe hypertension (detached retinas), ivermectin toxicity in sensitive breeds, lead poisoning, or other toxins affecting the eyes or brain. Signs include bumping into objects, dilated unresponsive pupils, and hesitance to move. Requires immediate veterinary evaluation.",
+            category: .symptoms,
+            relatedTerms: ["Hypertension", "Mydriasis", "Neurotoxicity"],
+            searchKeywords: ["can't see", "blind", "vision loss", "bumping into things"]
+        ),
+
+        // 136. DIC
+        GlossaryTerm(
+            id: UUID(uuidString: "A0000001-0001-0001-0001-0000000000A6")!,
+            term: "DIC",
+            pronunciation: nil,
+            definition: "Disseminated Intravascular Coagulation—a life-threatening condition where the clotting system becomes overactivated throughout the body, using up clotting factors and platelets. Paradoxically causes both widespread clotting AND uncontrolled bleeding. Can be triggered by severe infections, toxins, heatstroke, or snake envenomation. Extremely serious with high mortality.",
+            category: .conditions,
+            relatedTerms: ["Coagulopathy", "Platelets", "Shock", "Petechiae"],
+            searchKeywords: ["disseminated intravascular coagulation", "clotting disorder", "bleeding and clotting"]
+        ),
+
+        // 137. Dialysis
+        GlossaryTerm(
+            id: UUID(uuidString: "A0000001-0001-0001-0001-0000000000A7")!,
+            term: "Dialysis",
+            pronunciation: "dy-AL-ih-sis",
+            definition: "A procedure that filters waste products and toxins from the blood when the kidneys cannot. Hemodialysis uses a machine; peritoneal dialysis uses the abdominal lining. Available only at specialty veterinary hospitals. Can be life-saving for acute kidney failure from antifreeze or lily toxicity, or to remove certain toxins directly from blood.",
+            category: .treatment,
+            relatedTerms: ["Acute Kidney Injury", "Nephrotoxicity", "Uremia"],
+            searchKeywords: ["hemodialysis", "kidney machine", "blood filtering", "renal replacement"]
+        ),
+
+        // 138. Intubation
+        GlossaryTerm(
+            id: UUID(uuidString: "A0000001-0001-0001-0001-0000000000A8")!,
+            term: "Intubation",
+            pronunciation: "in-too-BAY-shun",
+            definition: "Placing a breathing tube into the trachea (windpipe) to secure the airway and allow mechanical ventilation. Necessary for patients with severe respiratory depression, during anesthesia, or to protect the airway during gastric lavage. The tube ensures oxygen can reach the lungs even if the pet cannot breathe effectively on their own.",
+            category: .treatment,
+            relatedTerms: ["Respiratory Depression", "Oxygen Therapy", "Gastric Lavage"],
+            searchKeywords: ["breathing tube", "airway", "ventilator", "mechanical ventilation"]
+        ),
+
+        // 139. Pain Management
+        GlossaryTerm(
+            id: UUID(uuidString: "A0000001-0001-0001-0001-0000000000A9")!,
+            term: "Pain Management",
+            pronunciation: nil,
+            definition: "Using medications and techniques to control pain. Important in toxicology because some poisonings cause significant discomfort (caustic burns, GI irritation, tissue damage). Uncontrolled pain increases stress, slows healing, and worsens outcomes. Veterinarians use various analgesics depending on the type and severity of pain.",
+            category: .treatment,
+            relatedTerms: ["Supportive Care", "Symptomatic Treatment"],
+            searchKeywords: ["pain relief", "analgesic", "pain control", "pain medication"]
+        ),
+
+        // 140. Bioavailability
+        GlossaryTerm(
+            id: UUID(uuidString: "A0000001-0001-0001-0001-0000000000AA")!,
+            term: "Bioavailability",
+            pronunciation: "by-oh-ah-vay-lah-BIL-ih-tee",
+            definition: "The proportion of a substance that actually reaches the bloodstream and can cause effects. Not everything ingested is fully absorbed—some passes through unchanged, some is broken down before absorption. A toxin with high bioavailability is more dangerous because more of it reaches the body. Affected by formulation, stomach contents, and other factors.",
+            category: .mechanisms,
+            relatedTerms: ["Ingestion", "Metabolite", "GI Tract"],
+            searchKeywords: ["absorption", "how much absorbed", "reaches bloodstream"]
+        ),
+
+        // 141. Body Weight
+        GlossaryTerm(
+            id: UUID(uuidString: "A0000001-0001-0001-0001-0000000000AB")!,
+            term: "Body Weight",
+            pronunciation: nil,
+            definition: "In toxicology, body weight is critical because toxic doses are typically calculated per kilogram (or pound) of body weight. A dose that causes mild symptoms in a 50-lb dog could be fatal to a 10-lb dog. This is why small pets (toy breeds, kittens, pocket pets) are at higher risk—the same amount of toxin is a relatively larger dose.",
+            category: .general,
+            relatedTerms: ["Toxic Dose", "Dose-Dependent", "Margin of Safety"],
+            searchKeywords: ["size matters", "small dogs", "toy breeds", "weight-based dosing"]
+        ),
+
+        // 142. Time Since Exposure
+        GlossaryTerm(
+            id: UUID(uuidString: "A0000001-0001-0001-0001-0000000000AC")!,
+            term: "Time Since Exposure",
+            pronunciation: nil,
+            definition: "How long ago the pet was exposed to the toxin—crucial information for treatment decisions. Recent exposure (within 1-2 hours) may allow decontamination. Longer intervals mean the toxin is likely already absorbed, shifting focus to supportive care. Always note the time of exposure (or when the pet was last seen normal) when calling for help.",
+            category: .general,
+            relatedTerms: ["Decontamination Window", "Decontamination", "Emesis"],
+            searchKeywords: ["when did it happen", "how long ago", "time of ingestion"]
+        ),
+
+        // 143. Oxidative Stress
+        GlossaryTerm(
+            id: UUID(uuidString: "A0000001-0001-0001-0001-0000000000AD")!,
+            term: "Oxidative Stress",
+            pronunciation: nil,
+            definition: "Cellular damage caused by an imbalance between harmful reactive oxygen molecules (free radicals) and the body's ability to neutralize them. Many toxins cause harm through oxidative stress—damaging cell membranes, proteins, and DNA. Onions, garlic, zinc, and acetaminophen (in cats) all cause oxidative damage to red blood cells.",
+            category: .mechanisms,
+            relatedTerms: ["Oxidative Damage", "Heinz Body Anemia", "Hemolysis"],
+            searchKeywords: ["free radicals", "cell damage", "reactive oxygen"]
+        ),
+
+        // 144. Protein Binding
+        GlossaryTerm(
+            id: UUID(uuidString: "A0000001-0001-0001-0001-0000000000AE")!,
+            term: "Protein Binding",
+            pronunciation: nil,
+            definition: "When a substance attaches to proteins in the blood. Highly protein-bound toxins are harder to remove with dialysis or other treatments because only the 'free' (unbound) portion can be filtered. This affects how long a toxin stays in the body and how it distributes to tissues. NSAIDs and many other drugs are highly protein-bound.",
+            category: .mechanisms,
+            relatedTerms: ["Serum", "Dialysis", "Half-life"],
+            searchKeywords: ["bound to protein", "albumin binding", "drug binding"]
+        ),
+
+        // 145. Mitochondrial Toxicity
+        GlossaryTerm(
+            id: UUID(uuidString: "A0000001-0001-0001-0001-0000000000AF")!,
+            term: "Mitochondrial Toxicity",
+            pronunciation: "my-toh-KON-dree-al",
+            definition: "Damage to mitochondria—the 'power plants' inside cells that produce energy. When mitochondria are damaged, cells can't generate energy and may die. Certain toxins specifically target mitochondria, causing widespread organ damage. This mechanism is involved in some cases of liver failure, heart damage, and muscle breakdown from various toxins.",
+            category: .mechanisms,
+            relatedTerms: ["Hepatotoxicity", "Cardiotoxicity", "Rhabdomyolysis"],
+            searchKeywords: ["cell energy", "cellular damage", "mitochondria damage"]
+        ),
     ]
 }
