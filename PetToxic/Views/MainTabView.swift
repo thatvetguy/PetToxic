@@ -150,8 +150,8 @@ struct MainTabView: View {
                     return
                 }
 
-                isDragging = false
                 let threshold = geometry.size.width * 0.20
+                let screenWidth = geometry.size.width
                 let translation = value.translation.width
                 let velocity = value.predictedEndTranslation.width - value.translation.width
 
@@ -159,35 +159,65 @@ struct MainTabView: View {
                 let shouldSwipeLeft = translation < -threshold || velocity < -200
                 let shouldSwipeRight = translation > threshold || velocity > 200
 
-                withAnimation(.easeOut(duration: 0.2)) {
-                    if isInQuickEmergency {
-                        // In quick emergency mode
-                        if shouldSwipeLeft {
-                            // Swipe left - return to Home
-                            isInQuickEmergency = false
-                            selectedTab = 0
-                        }
-                        // Swipe right does nothing (already at edge)
-                    } else if selectedTab == 0 {
-                        // On Home
-                        if shouldSwipeRight {
-                            // Swipe right - enter quick Emergency
-                            isInQuickEmergency = true
-                        } else if shouldSwipeLeft {
-                            // Swipe left - go to Browse
-                            selectedTab = 1
-                        }
-                    } else {
-                        // Normal tab navigation
-                        if shouldSwipeRight && selectedTab > 0 {
-                            selectedTab -= 1
-                        } else if shouldSwipeLeft && selectedTab < tabCount - 1 {
-                            selectedTab += 1
-                        }
+                // Determine target tab
+                var canChangeTab = false
+                var newTab = selectedTab
+                var enterEmergency = false
+                var exitEmergency = false
+
+                if isInQuickEmergency {
+                    if shouldSwipeLeft {
+                        canChangeTab = true
+                        exitEmergency = true
+                        newTab = 0
+                    }
+                } else if selectedTab == 0 {
+                    if shouldSwipeRight {
+                        canChangeTab = true
+                        enterEmergency = true
+                    } else if shouldSwipeLeft && selectedTab < tabCount - 1 {
+                        canChangeTab = true
+                        newTab = 1
+                    }
+                } else {
+                    if shouldSwipeRight && selectedTab > 0 {
+                        canChangeTab = true
+                        newTab = selectedTab - 1
+                    } else if shouldSwipeLeft && selectedTab < tabCount - 1 {
+                        canChangeTab = true
+                        newTab = selectedTab + 1
+                    }
+                }
+
+                if canChangeTab {
+                    // PHASE 1: Animate current view sliding OFF screen
+                    // Keep isDragging true so adjacent preview stays visible
+                    let targetOffset = shouldSwipeLeft ? -screenWidth : screenWidth
+
+                    withAnimation(.easeOut(duration: 0.25)) {
+                        dragOffset = targetOffset
                     }
 
-                    // Reset offset
-                    dragOffset = 0
+                    // PHASE 2: After slide completes, swap content and reset
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.25) {
+                        if exitEmergency {
+                            isInQuickEmergency = false
+                        }
+                        if enterEmergency {
+                            isInQuickEmergency = true
+                        }
+                        selectedTab = newTab
+                        dragOffset = 0
+                        isDragging = false
+                    }
+                } else {
+                    // Snap back — no tab change
+                    withAnimation(.spring(response: 0.35, dampingFraction: 0.8)) {
+                        dragOffset = 0
+                    }
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
+                        isDragging = false
+                    }
                 }
             }
     }
