@@ -333,6 +333,10 @@ struct CategoryListView: View {
                 }
                 .padding(.horizontal, 16)
             }
+            .highPriorityGesture(
+                DragGesture(minimumDistance: 5)
+                    .onChanged { _ in }
+            )
             .padding(.vertical, 8)
 
             // Auto filter indicator

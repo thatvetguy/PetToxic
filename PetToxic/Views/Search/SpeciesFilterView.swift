@@ -31,6 +31,10 @@ struct SpeciesFilterView: View {
                 }
             }
         }
+        .highPriorityGesture(
+            DragGesture(minimumDistance: 5)
+                .onChanged { _ in }
+        )
     }
 }
 
