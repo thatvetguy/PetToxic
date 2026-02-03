@@ -669,5 +669,174 @@ class GlossaryService {
             relatedTerms: ["Emesis", "Inhalation", "Dyspnea"],
             searchKeywords: ["aspiration pneumonia", "breathed into lungs", "inhaled vomit"]
         ),
+
+        // ══════════════════════════════════════════════════════════════
+        // MARK: - Batch 3 (Session 101)
+        // ══════════════════════════════════════════════════════════════
+
+        // 56. Hemoglobin
+        GlossaryTerm(
+            id: UUID(uuidString: "A0000001-0001-0001-0001-000000000056")!,
+            term: "Hemoglobin",
+            pronunciation: "HEE-moh-gloh-bin",
+            definition: "The protein in red blood cells that carries oxygen throughout the body, giving blood its red color. Some toxins damage hemoglobin or prevent it from carrying oxygen properly (as in methemoglobinemia), leading to weakness, pale or blue gums, and breathing difficulty.",
+            category: .anatomy,
+            relatedTerms: ["Methemoglobinemia", "Anemia", "Cyanosis", "Heinz Body Anemia"],
+            searchKeywords: ["blood", "oxygen", "red blood cells"]
+        ),
+
+        // 57. Platelets
+        GlossaryTerm(
+            id: UUID(uuidString: "A0000001-0001-0001-0001-000000000057")!,
+            term: "Platelets",
+            pronunciation: "PLAYT-lets",
+            definition: "Tiny blood cells that help form clots to stop bleeding. Some toxins (like certain rodenticides) interfere with platelet function or clotting factors, causing uncontrolled bleeding. Low platelet counts can lead to bruising, bloody urine or stool, and prolonged bleeding from minor injuries.",
+            category: .anatomy,
+            relatedTerms: ["Coagulopathy", "Hematemesis", "Melena"],
+            searchKeywords: ["blood clotting", "thrombocytes", "bleeding"]
+        ),
+
+        // 58. Anorexia
+        GlossaryTerm(
+            id: UUID(uuidString: "A0000001-0001-0001-0001-000000000058")!,
+            term: "Anorexia",
+            pronunciation: "an-oh-REK-see-ah",
+            definition: "Loss of appetite or refusal to eat. In veterinary medicine, this simply means the pet isn't eating—it's one of the most common signs that something is wrong. Anorexia lasting more than 24 hours (or less in small pets) warrants veterinary attention.",
+            category: .symptoms,
+            relatedTerms: ["Lethargy", "Vomiting", "GI Tract"],
+            searchKeywords: ["not eating", "won't eat", "loss of appetite", "refusing food", "off food"]
+        ),
+
+        // 59. Polyuria
+        GlossaryTerm(
+            id: UUID(uuidString: "A0000001-0001-0001-0001-000000000059")!,
+            term: "Polyuria",
+            pronunciation: "pol-ee-YOO-ree-ah",
+            definition: "Producing abnormally large amounts of urine. Often seen alongside increased thirst (polydipsia). Can be caused by kidney damage, certain toxins, diabetes, or other conditions. You may notice more frequent urination, larger wet spots, or accidents in housetrained pets.",
+            category: .symptoms,
+            relatedTerms: ["Polydipsia", "Nephrotoxicity", "Acute Kidney Injury"],
+            searchKeywords: ["frequent urination", "peeing a lot", "excessive urination", "PU/PD"]
+        ),
+
+        // 60. Polydipsia
+        GlossaryTerm(
+            id: UUID(uuidString: "A0000001-0001-0001-0001-00000000005A")!,
+            term: "Polydipsia",
+            pronunciation: "pol-ee-DIP-see-ah",
+            definition: "Excessive thirst and drinking. Often occurs with increased urination (polyuria). Can indicate kidney problems, toxin exposure, diabetes, or other conditions. You may notice the water bowl emptying faster than usual or your pet seeking water constantly.",
+            category: .symptoms,
+            relatedTerms: ["Polyuria", "Nephrotoxicity", "Dehydration"],
+            searchKeywords: ["excessive thirst", "drinking a lot", "increased thirst", "PU/PD"]
+        ),
+
+        // 61. Edema
+        GlossaryTerm(
+            id: UUID(uuidString: "A0000001-0001-0001-0001-00000000005B")!,
+            term: "Edema",
+            pronunciation: "eh-DEE-mah",
+            definition: "Swelling caused by fluid buildup in body tissues. May appear as puffiness in the face, limbs, or belly. Pulmonary edema (fluid in the lungs) causes breathing difficulty and is life-threatening. Various toxins can cause edema through different mechanisms.",
+            category: .symptoms,
+            relatedTerms: ["Dyspnea", "Hypotension"],
+            searchKeywords: ["swelling", "fluid retention", "puffy", "swollen"]
+        ),
+
+        // 62. Shock
+        GlossaryTerm(
+            id: UUID(uuidString: "A0000001-0001-0001-0001-00000000005C")!,
+            term: "Shock",
+            pronunciation: nil,
+            definition: "A life-threatening condition where the body's organs don't receive enough blood flow and oxygen. Signs include pale or white gums, rapid heart rate, weak pulse, cold extremities, collapse, and altered consciousness. Shock requires immediate emergency veterinary care.",
+            category: .conditions,
+            relatedTerms: ["Hypotension", "Collapse", "Tachycardia", "Mucous Membranes"],
+            searchKeywords: ["circulatory shock", "going into shock"]
+        ),
+
+        // 63. Dehydration
+        GlossaryTerm(
+            id: UUID(uuidString: "A0000001-0001-0001-0001-00000000005D")!,
+            term: "Dehydration",
+            pronunciation: nil,
+            definition: "Dangerous loss of body fluids, often from vomiting, diarrhea, or not drinking. Signs include dry or tacky gums, skin that stays 'tented' when pinched, sunken eyes, lethargy, and decreased urination. Dehydration can quickly become serious, especially in small pets.",
+            category: .conditions,
+            relatedTerms: ["Vomiting", "Diarrhea", "IV Fluids", "Lethargy"],
+            searchKeywords: ["fluid loss", "dried out", "not drinking"]
+        ),
+
+        // 64. Renal
+        GlossaryTerm(
+            id: UUID(uuidString: "A0000001-0001-0001-0001-00000000005E")!,
+            term: "Renal",
+            pronunciation: "REE-nal",
+            definition: "Relating to the kidneys. 'Renal failure' means the kidneys are not working properly. 'Renal toxicity' means a substance is harmful to the kidneys. The kidneys filter waste from the blood, so damage affects the whole body.",
+            category: .anatomy,
+            relatedTerms: ["Nephrotoxicity", "Acute Kidney Injury", "Polyuria"],
+            searchKeywords: ["kidney", "kidneys"]
+        ),
+
+        // 65. Hepatic
+        GlossaryTerm(
+            id: UUID(uuidString: "A0000001-0001-0001-0001-00000000005F")!,
+            term: "Hepatic",
+            pronunciation: "heh-PAT-ik",
+            definition: "Relating to the liver. 'Hepatic failure' means the liver is not working properly. 'Hepatic toxicity' means a substance is harmful to the liver. The liver processes nutrients and filters toxins, so damage can cause widespread problems including jaundice.",
+            category: .anatomy,
+            relatedTerms: ["Hepatotoxicity", "Jaundice"],
+            searchKeywords: ["liver"]
+        ),
+
+        // 66. Metabolite
+        GlossaryTerm(
+            id: UUID(uuidString: "A0000001-0001-0001-0001-000000000060")!,
+            term: "Metabolite",
+            pronunciation: "meh-TAB-oh-lite",
+            definition: "A substance produced when the body breaks down (metabolizes) something. Some toxins are harmless until the body converts them into dangerous metabolites. For example, ethylene glycol (antifreeze) itself is not the main problem—its metabolites cause kidney failure.",
+            category: .mechanisms,
+            relatedTerms: ["Hepatic", "Antidote"],
+            searchKeywords: ["breakdown product", "metabolism"]
+        ),
+
+        // 67. Half-life
+        GlossaryTerm(
+            id: UUID(uuidString: "A0000001-0001-0001-0001-000000000061")!,
+            term: "Half-life",
+            pronunciation: nil,
+            definition: "The time it takes for half of a substance to be eliminated from the body. A toxin with a long half-life stays in the system longer, potentially causing prolonged symptoms. This affects how long monitoring and treatment may be needed.",
+            category: .mechanisms,
+            relatedTerms: ["Metabolite", "Chronic"],
+            searchKeywords: ["elimination", "duration", "how long"]
+        ),
+
+        // 68. Electrolytes
+        GlossaryTerm(
+            id: UUID(uuidString: "A0000001-0001-0001-0001-000000000062")!,
+            term: "Electrolytes",
+            pronunciation: "ee-LEK-troh-lites",
+            definition: "Minerals in the blood (like sodium, potassium, and calcium) that regulate vital body functions including heart rhythm, muscle contractions, and fluid balance. Vomiting, diarrhea, and certain toxins can cause dangerous electrolyte imbalances requiring IV fluid correction.",
+            category: .anatomy,
+            relatedTerms: ["IV Fluids", "Dehydration", "Arrhythmia"],
+            searchKeywords: ["sodium", "potassium", "calcium", "minerals"]
+        ),
+
+        // 69. Metabolic Acidosis
+        GlossaryTerm(
+            id: UUID(uuidString: "A0000001-0001-0001-0001-000000000063")!,
+            term: "Metabolic Acidosis",
+            pronunciation: "met-ah-BOL-ik as-ih-DOH-sis",
+            definition: "A dangerous condition where the blood becomes too acidic, disrupting normal body functions. Causes include certain toxins (especially antifreeze/ethylene glycol), kidney failure, and severe dehydration. Signs include rapid breathing, lethargy, and collapse.",
+            category: .conditions,
+            relatedTerms: ["Nephrotoxicity", "Tachypnea", "Collapse"],
+            searchKeywords: ["acidic blood", "acid-base"]
+        ),
+
+        // 70. Symptomatic Treatment
+        GlossaryTerm(
+            id: UUID(uuidString: "A0000001-0001-0001-0001-000000000064")!,
+            term: "Symptomatic Treatment",
+            pronunciation: nil,
+            definition: "Treatment focused on managing symptoms rather than addressing the underlying cause directly. When no specific antidote exists, veterinarians provide symptomatic treatment—such as anti-nausea medication for vomiting or oxygen for breathing difficulty—while the body eliminates the toxin.",
+            category: .treatment,
+            relatedTerms: ["Supportive Care", "Antidote"],
+            searchKeywords: ["treating symptoms", "symptom management"]
+        ),
     ]
 }
