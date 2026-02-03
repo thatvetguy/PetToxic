@@ -580,7 +580,7 @@ class DatabaseService {
                     "Never use salt to induce vomiting—this outdated practice can cause salt poisoning"
                 ],
                 sources: ["ASPCA Animal Poison Control Center", "Pet Poison Helpline", "Merck Veterinary Manual - Salt Toxicosis in Animals", "Journal of Exotic Pet Medicine (2020) - Sodium intoxication in a domestic rabbit"],
-                relatedEntries: ["00112233-4455-6677-8899-aabbccddef01"]
+                relatedEntries: ["00112233-4455-6677-8899-aabbccddef01", "00112233-4455-6677-8899-aabbccddef27"]  // Paintballs, Hypothermia & Frostbite
             ),
 
             // MARK: - Fatty Foods & Grease
@@ -3671,7 +3671,7 @@ class DatabaseService {
                     "Note: Fully dried antifreeze spills pose minimal risk, but wet spills are extremely dangerous"
                 ],
                 sources: ["ASPCA Animal Poison Control Center", "Pet Poison Helpline — Antifreeze Poisoning", "Merck Veterinary Manual — Ethylene Glycol Toxicosis"],
-                relatedEntries: nil
+                relatedEntries: ["00112233-4455-6677-8899-aabbccddef27"]  // Hypothermia & Frostbite
             ),
 
             // MARK: - Petroleum Products
@@ -13407,7 +13407,249 @@ Even if your pet appears to recover after cooling, **veterinary evaluation is st
                     "American Kennel Club (AKC) Canine Health Foundation",
                     "Today's Veterinary Practice"
                 ],
-                relatedEntries: nil
+                relatedEntries: ["00112233-4455-6677-8899-aabbccddef27"]  // Hypothermia & Frostbite
+            ),
+
+            // MARK: - Hypothermia & Frostbite
+            ToxicItem(
+                id: UUID(uuidString: "00112233-4455-6677-8899-aabbccddef27")!,
+                name: "Hypothermia & Frostbite",
+                alternateNames: [
+                    "hypothermia",
+                    "frostbite",
+                    "cold weather",
+                    "cold exposure",
+                    "freezing",
+                    "frozen",
+                    "frost bite",
+                    "cold injury",
+                    "winter hazards",
+                    "winter dangers",
+                    "cold stress",
+                    "low body temperature",
+                    "too cold",
+                    "ice melt",
+                    "rock salt",
+                    "road salt",
+                    "sidewalk salt",
+                    "de-icer",
+                    "deicer",
+                    "paw salt",
+                    "salt on paws",
+                    "thin ice",
+                    "fell through ice",
+                    "cold water",
+                    "frozen pond",
+                    "snow",
+                    "blizzard",
+                    "polar vortex",
+                    "wind chill",
+                    "frostbitten ears",
+                    "frostbitten paws",
+                    "shivering dog",
+                    "shivering cat",
+                    "left outside in cold",
+                    "outdoor cat winter"
+                ],
+                categories: [.informational, .outdoorHazards],
+                imageAsset: "hypothermia_thumb",
+                description: """
+Cold-related illness includes hypothermia (dangerously low body temperature) and frostbite (tissue damage from freezing). While many pets tolerate cold weather well, prolonged exposure—especially when wet, windy, or in extreme temperatures—can be life-threatening. Small breeds, thin-coated dogs, very young or old pets, and those with health conditions are at highest risk. Winter also brings chemical hazards like antifreeze and ice melt products that can injure paws or cause poisoning if ingested.
+""",
+                toxicityInfo: """
+**How Pets Lose Body Heat**
+
+Pets lose heat through four mechanisms:
+• **Radiation** — Heat radiates from the body into cold air
+• **Conduction** — Direct contact with cold surfaces (frozen ground, snow, ice) draws heat away
+• **Convection** — Wind strips the warm air layer next to the skin (wind chill effect)
+• **Evaporation** — Wet fur dramatically accelerates heat loss
+
+A pet with wet fur in cold, windy conditions loses heat far faster than a dry pet in still air at the same temperature. This is why falling through ice or getting caught in freezing rain is so dangerous.
+
+**Hypothermia: When Body Temperature Drops Too Low**
+
+Hypothermia occurs when the body loses heat faster than it can produce it. Normal body temperature for dogs and cats is approximately 101-102.5°F (38.3-39.2°C). As core temperature drops, a predictable progression occurs:
+
+**Mild Hypothermia:**
+• Shivering (the body's attempt to generate heat through muscle activity)
+• Cold ears, paws, and tail tip
+• Seeking warm places, curling up tightly
+• Mild lethargy
+
+**Moderate Hypothermia:**
+• Shivering may stop (a dangerous sign—the body is losing the ability to warm itself)
+• Muscle stiffness
+• Slow, shallow breathing
+• Weakness, difficulty walking
+• Drowsiness, decreased alertness
+
+**Severe Hypothermia:**
+• No shivering
+• Extreme stiffness
+• Very slow heart rate and breathing
+• Dilated pupils, fixed stare
+• Unresponsiveness, coma
+• Cardiac arrhythmias (irregular heartbeat)
+• Death
+
+**High-Risk Groups for Hypothermia:**
+• **Small and toy breeds** — Higher surface area to body mass ratio means faster heat loss
+• **Thin-coated or hairless breeds** — Greyhounds, Whippets, Chihuahuas, Chinese Cresteds
+• **Puppies and kittens** — Cannot regulate body temperature as effectively
+• **Senior pets** — Reduced metabolic rate and circulation
+• **Pets with health conditions** — Diabetes, heart disease, hormonal disorders
+• **Wet animals** — Dramatically increased heat loss
+• **Very thin or underweight pets** — Less body fat for insulation
+
+**Frostbite: Tissue Damage from Freezing**
+
+Frostbite occurs when tissue actually freezes. The body responds to cold by constricting blood vessels in the extremities to preserve core temperature—this protective mechanism unfortunately leaves the extremities vulnerable to freezing.
+
+**Commonly Affected Areas:**
+• Ear tips (especially in cats and erect-eared dogs)
+• Tail tip
+• Paw pads and toes
+• Scrotum (in intact males)
+• Nose
+
+**Progression of Frostbite:**
+• **Initial:** Skin becomes very pale, gray, or bluish; area feels cold and hard; pet may not show pain (tissue is numb)
+• **After rewarming:** Affected area becomes red, swollen, and extremely painful; blisters may form
+• **Severe cases:** Skin turns black as tissue dies; affected tissue may eventually slough off
+
+**Critical:** Do NOT rub frostbitten areas. Rubbing causes additional tissue damage. Do NOT use direct heat (heating pads, hair dryers, hot water) as this can cause burns to damaged tissue.
+
+**Ice Melt and Rock Salt**
+
+Winter de-icing products can harm pets in two ways:
+
+**Paw Irritation and Chemical Burns:**
+Ice melt products (sodium chloride, calcium chloride, magnesium chloride, potassium chloride) are irritating to paw pads. Prolonged contact causes dryness, cracking, and chemical burns. Pets may lick their paws, ingesting the chemicals.
+
+**Ingestion Toxicity:**
+If pets lick significant amounts of ice melt from their paws or directly from treated surfaces, they can develop GI upset, excessive thirst, and in severe cases, salt toxicosis (see related entry on Salt).
+
+**Prevention:** Wipe your pet's paws with a damp cloth after winter walks. Consider pet-safe ice melt products for your own property and protective booties for walks.
+
+**Antifreeze Puddles**
+
+Winter brings increased antifreeze hazards—from car radiator maintenance, burst pipes, and puddles in garages or driveways. Antifreeze (ethylene glycol) is extremely toxic and has a sweet taste that attracts pets. Even small amounts can be fatal. See the separate Antifreeze entry for detailed information.
+
+**Thin Ice and Cold Water Immersion**
+
+Pets that fall through thin ice face two immediate dangers:
+• **Drowning** — Struggling in freezing water, unable to climb out
+• **Rapid hypothermia** — Cold water extracts body heat 25 times faster than cold air
+
+Never allow pets on frozen ponds, lakes, or rivers unless you are absolutely certain the ice is thick enough. If a pet falls through ice, do not go onto the ice yourself—call emergency services.
+
+**Other Winter Hazards**
+
+• **Cats seeking warmth in car engines** — Always bang on the hood or honk before starting your car in cold weather
+• **Space heaters** — Burns and fire risk if pets get too close
+• **Carbon monoxide** — From generators or vehicles running in enclosed spaces
+
+**First Aid Until Veterinary Care Can Be Reached**
+
+Hypothermia and severe frostbite are emergencies requiring veterinary care. These first aid steps can help stabilize your pet during transport—they do NOT replace professional treatment.
+
+**For Hypothermia:**
+• **Move your pet to a warm, dry area immediately**
+• **Wrap in warm blankets or towels** — Blankets warmed in a dryer are ideal
+• **Place wrapped warm water bottles against the body** — Wrap bottles in cloth to prevent burns; place against chest/abdomen, not extremities
+• **Offer lukewarm (not hot) water to drink** if pet is alert
+• **Do NOT use direct heat sources** (heating pads, hair dryers, heat lamps) — these can cause burns and also cause blood vessels in the skin to dilate, which can actually drop core temperature further
+• **Transport to veterinary hospital immediately**
+
+**For Frostbite:**
+• **Do NOT rub the affected areas** — This causes additional tissue damage
+• **Do NOT apply direct heat** — Use lukewarm (not hot) water soaks only if directed by a veterinarian
+• **Keep the pet warm** to prevent further heat loss
+• **Transport to veterinary hospital** — Frostbitten tissue needs professional assessment; severity is often not apparent initially
+
+**Critical: Delayed Complications**
+
+As with heat-related illness, the damage from hypothermia and frostbite may not be fully apparent immediately. Frostbitten tissue can take days to declare whether it will survive or die. Hypothermia can cause cardiac arrhythmias and organ damage that may not manifest until hours later. Veterinary evaluation is essential even if your pet appears to recover.
+""",
+                onsetTime: OnsetTime(
+                    early: "Minutes to hours depending on conditions",
+                    delayed: "Frostbite damage may not be apparent until 24-72 hours after exposure. Wet fur, wind, and extreme cold accelerate heat loss dramatically. A pet submerged in icy water can become hypothermic within minutes."
+                ),
+                symptoms: [
+                    "Shivering (may stop in severe cases—a dangerous sign)",
+                    "Cold ears, paws, and tail",
+                    "Seeking warm places or curling up tightly",
+                    "Lethargy or weakness",
+                    "Muscle stiffness",
+                    "Slow, shallow breathing",
+                    "Slow heart rate",
+                    "Difficulty walking or stumbling",
+                    "Drowsiness or decreased alertness",
+                    "Unresponsiveness",
+                    "Pale, gray, or bluish skin (frostbite)",
+                    "Skin that feels hard or waxy (frostbite)",
+                    "Blisters on ears, tail, or paws (after rewarming)",
+                    "Blackened skin (severe frostbite—tissue death)",
+                    "Red, cracked, or irritated paw pads (ice melt exposure)",
+                    "Excessive licking of paws after walks"
+                ],
+                entrySeverity: nil,
+                speciesRisks: [
+                    SpeciesRisk(
+                        species: .dog,
+                        severity: .high,
+                        notes: "Risk varies greatly by breed. Small breeds, thin-coated breeds (Greyhounds, Whippets, Chihuahuas), puppies, seniors, and dogs with health conditions are at highest risk. Northern breeds (Huskies, Malamutes) tolerate cold well but are still at risk in extreme conditions or if wet. Always monitor time outdoors in freezing temperatures."
+                    ),
+                    SpeciesRisk(
+                        species: .cat,
+                        severity: .high,
+                        notes: "Outdoor and feral cats face significant winter risks. Cats often seek warmth in dangerous places—car engines, wheel wells, under hoods. Bang on the hood before starting your car in cold weather. Frostbite commonly affects ear tips in cats. Indoor cats should remain indoors during extreme cold."
+                    ),
+                    SpeciesRisk(
+                        species: .smallMammal,
+                        severity: .severe,
+                        notes: "Rabbits tolerate cold better than heat but still need protection from wind, wet conditions, and extreme cold. Guinea pigs are less cold-tolerant and should be kept indoors when temperatures drop. Ferrets are susceptible to cold. All small mammals housed outdoors need insulated, draft-free shelter with extra bedding in winter."
+                    ),
+                    SpeciesRisk(
+                        species: .bird,
+                        severity: .severe,
+                        notes: "Birds are very susceptible to cold drafts and temperature fluctuations. Keep cages away from windows, doors, and drafty areas in winter. Tropical species are especially vulnerable. Never house birds in unheated spaces during cold weather."
+                    ),
+                    SpeciesRisk(
+                        species: .reptile,
+                        severity: .severe,
+                        notes: "As ectotherms (cold-blooded animals), reptiles cannot generate their own body heat and are extremely vulnerable to cold. Temperatures below their species-specific range cause lethargy, immune suppression, and death. Power outages in winter are emergencies for reptile owners—have backup heating plans."
+                    )
+                ],
+                preventionTips: [
+                    "Know your pet's cold tolerance—small, thin-coated, very young, old, or ill pets need extra protection",
+                    "Limit outdoor time in freezing temperatures, especially if windy or wet",
+                    "Provide warm, dry shelter for any pets kept outdoors—raised off the ground, insulated, with bedding",
+                    "Use pet sweaters or coats for short-coated breeds during winter walks",
+                    "Wipe paws after walks to remove ice melt and road salt",
+                    "Consider protective booties for walks on treated sidewalks",
+                    "Use pet-safe ice melt products on your own property",
+                    "Keep antifreeze stored securely and clean up any spills immediately",
+                    "Bang on the hood or honk before starting your car—cats seek warmth in engines",
+                    "Never let pets onto frozen ponds, lakes, or rivers",
+                    "Bring outdoor cats inside during extreme cold or winter storms",
+                    "Ensure reptile enclosures have backup heating in case of power outages",
+                    "Never leave pets in unheated cars in winter—cars can become refrigerators"
+                ],
+                sources: [
+                    "American Veterinary Medical Association (AVMA)",
+                    "ASPCA Animal Poison Control Center",
+                    "VCA Animal Hospitals",
+                    "PetMD",
+                    "American Kennel Club (AKC)",
+                    "Cornell University College of Veterinary Medicine"
+                ],
+                relatedEntries: [
+                    "00112233-4455-6677-8899-aabbccddef26",  // Heat Stroke & Hot Surfaces
+                    "61b259ac-d3af-4451-a1a4-b050fb70d455",  // Antifreeze & Coolant
+                    "c9fb21d1-a66a-418e-a63f-1b754ec048f2"   // Salt
+                ]
             )
         ]
     }
