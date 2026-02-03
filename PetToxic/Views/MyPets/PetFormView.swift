@@ -115,6 +115,7 @@ struct PetFormView: View {
                         }
                     }
                 }
+                .pickerStyle(.navigationLink)
                 .onChange(of: pet.speciesEnum) { triggerAutoSave() }
 
                 // Breed with Autocomplete
@@ -162,6 +163,7 @@ struct PetFormView: View {
                         Text(sex.displayName).tag(sex)
                     }
                 }
+                .pickerStyle(.navigationLink)
                 .onChange(of: pet.sexEnum) { triggerAutoSave() }
             }
 
