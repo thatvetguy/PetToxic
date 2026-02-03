@@ -1176,5 +1176,172 @@ class GlossaryService {
             relatedTerms: ["Toxicosis"],
             searchKeywords: ["poison", "definition", "terminology", "difference"]
         ),
+
+        // MARK: - Batch 6 (Session 101)
+
+        // 101. Agitation
+        GlossaryTerm(
+            id: UUID(uuidString: "A0000001-0001-0001-0001-000000000083")!,
+            term: "Agitation",
+            pronunciation: nil,
+            definition: "A state of restlessness, anxiety, and excessive activity. The pet may pace, vocalize, be unable to settle, or seem distressed. Common with stimulant toxins (caffeine, amphetamines, chocolate), certain medications, and some plant toxins. Often progresses to more serious signs like tremors or seizures.",
+            category: .symptoms,
+            relatedTerms: ["Tremors", "Seizures", "Tachycardia"],
+            searchKeywords: ["restless", "anxious", "hyperactive", "pacing", "can't settle", "nervous"]
+        ),
+
+        // 102. Hypoxia
+        GlossaryTerm(
+            id: UUID(uuidString: "A0000001-0001-0001-0001-000000000084")!,
+            term: "Hypoxia",
+            pronunciation: "hy-POK-see-ah",
+            definition: "Insufficient oxygen reaching the body's tissues. Can result from breathing problems, heart issues, anemia, or toxins that interfere with oxygen transport (like carbon monoxide or methemoglobin-forming agents). Signs include blue gums (cyanosis), rapid breathing, weakness, and collapse. Hypoxia is life-threatening.",
+            category: .conditions,
+            relatedTerms: ["Cyanosis", "Methemoglobinemia", "Dyspnea", "Respiratory Depression"],
+            searchKeywords: ["low oxygen", "oxygen deprivation", "suffocation"]
+        ),
+
+        // 103. Anaphylaxis
+        GlossaryTerm(
+            id: UUID(uuidString: "A0000001-0001-0001-0001-000000000085")!,
+            term: "Anaphylaxis",
+            pronunciation: "an-ah-fih-LAK-sis",
+            definition: "A severe, potentially fatal allergic reaction that occurs rapidly after exposure. In pets, common triggers include insect stings, certain medications, and vaccines. Signs include facial swelling, hives, vomiting, diarrhea, difficulty breathing, collapse, and shock. Requires immediate emergency treatment with epinephrine.",
+            category: .conditions,
+            relatedTerms: ["Shock", "Edema", "Collapse", "Dyspnea"],
+            searchKeywords: ["allergic reaction", "severe allergy", "anaphylactic shock", "bee sting reaction"]
+        ),
+
+        // 104. Rhabdomyolysis
+        GlossaryTerm(
+            id: UUID(uuidString: "A0000001-0001-0001-0001-000000000086")!,
+            term: "Rhabdomyolysis",
+            pronunciation: "rab-doh-my-OL-ih-sis",
+            definition: "Breakdown of muscle tissue, releasing muscle cell contents into the bloodstream. The released proteins (especially myoglobin) can damage the kidneys. Causes include prolonged seizures, hyperthermia, certain toxins (hops in dogs), and severe exertion. Signs include muscle pain, weakness, dark brown urine, and kidney failure.",
+            category: .conditions,
+            relatedTerms: ["Acute Kidney Injury", "Hyperthermia", "Seizures"],
+            searchKeywords: ["muscle breakdown", "muscle damage", "myoglobin", "dark urine"]
+        ),
+
+        // 105. Serotonin Syndrome
+        GlossaryTerm(
+            id: UUID(uuidString: "A0000001-0001-0001-0001-000000000087")!,
+            term: "Serotonin Syndrome",
+            pronunciation: nil,
+            definition: "A potentially life-threatening condition caused by excessive serotonin activity in the nervous system. Usually results from drug interactions or overdoses of serotonergic medications (SSRIs, SNRIs, tramadol, trazodone). Signs include agitation, tremors, hyperthermia, rapid heart rate, dilated pupils, and in severe cases, seizures and death.",
+            category: .conditions,
+            relatedTerms: ["Agitation", "Tremors", "Hyperthermia", "Mydriasis", "Tachycardia"],
+            searchKeywords: ["SSRI toxicity", "antidepressant overdose", "serotonin toxicity"]
+        ),
+
+        // 106. Fasciculations
+        GlossaryTerm(
+            id: UUID(uuidString: "A0000001-0001-0001-0001-000000000088")!,
+            term: "Fasciculations",
+            pronunciation: "fah-sik-yoo-LAY-shunz",
+            definition: "Fine, rapid twitching of small muscle groups visible under the skin. Different from tremors (which involve larger muscle movements). Often seen with organophosphate/carbamate poisoning, some mushroom toxins, and other neurotoxins. May appear as rippling or quivering under the skin.",
+            category: .symptoms,
+            relatedTerms: ["Tremors", "Neurotoxicity", "Seizures"],
+            searchKeywords: ["muscle twitching", "twitches", "muscle rippling", "quivering"]
+        ),
+
+        // 107. Epistaxis
+        GlossaryTerm(
+            id: UUID(uuidString: "A0000001-0001-0001-0001-000000000089")!,
+            term: "Epistaxis",
+            pronunciation: "ep-ih-STAK-sis",
+            definition: "Nosebleed—bleeding from the nostrils. Can be caused by trauma, but in toxicology often indicates clotting problems (anticoagulant rodenticide poisoning), severe hypertension, or erosion of nasal blood vessels. May appear as dripping blood, sneezing blood, or bloody discharge.",
+            category: .symptoms,
+            relatedTerms: ["Coagulopathy", "Petechiae", "Hematuria"],
+            searchKeywords: ["nosebleed", "bloody nose", "nasal bleeding", "blood from nose"]
+        ),
+
+        // 108. Syncope
+        GlossaryTerm(
+            id: UUID(uuidString: "A0000001-0001-0001-0001-00000000008A")!,
+            term: "Syncope",
+            pronunciation: "SIN-koh-pee",
+            definition: "Fainting—a brief loss of consciousness due to temporarily reduced blood flow to the brain. The pet suddenly collapses but typically recovers within seconds to minutes. Causes include heart problems, severe arrhythmias, and certain toxins. Different from seizures (no paddling or muscle activity during syncope).",
+            category: .symptoms,
+            relatedTerms: ["Collapse", "Arrhythmia", "Bradycardia", "Hypotension"],
+            searchKeywords: ["fainting", "fainted", "passed out", "blacked out"]
+        ),
+
+        // 109. Hypocalcemia
+        GlossaryTerm(
+            id: UUID(uuidString: "A0000001-0001-0001-0001-00000000008B")!,
+            term: "Hypocalcemia",
+            pronunciation: "hy-poh-kal-SEE-mee-ah",
+            definition: "Dangerously low calcium levels in the blood. Calcium is essential for muscle and nerve function. Signs include muscle tremors, twitching, stiff gait, seizures, and cardiac abnormalities. Can be caused by ethylene glycol (antifreeze), oxalate-containing plants, and certain other toxins that bind calcium.",
+            category: .conditions,
+            relatedTerms: ["Tremors", "Seizures", "Electrolytes", "Arrhythmia"],
+            searchKeywords: ["low calcium", "calcium deficiency"]
+        ),
+
+        // 110. Hyperkalemia
+        GlossaryTerm(
+            id: UUID(uuidString: "A0000001-0001-0001-0001-00000000008C")!,
+            term: "Hyperkalemia",
+            pronunciation: "hy-per-kah-LEE-mee-ah",
+            definition: "Dangerously high potassium levels in the blood. Potassium is critical for heart and muscle function. Elevated levels can cause life-threatening heart arrhythmias, muscle weakness, and cardiac arrest. Often results from kidney failure (kidneys can't excrete potassium) or massive tissue damage.",
+            category: .conditions,
+            relatedTerms: ["Electrolytes", "Arrhythmia", "Acute Kidney Injury", "Cardiac Arrest"],
+            searchKeywords: ["high potassium", "potassium toxicity", "elevated potassium"]
+        ),
+
+        // 111. Encephalopathy
+        GlossaryTerm(
+            id: UUID(uuidString: "A0000001-0001-0001-0001-00000000008D")!,
+            term: "Encephalopathy",
+            pronunciation: "en-sef-ah-LOP-ah-thee",
+            definition: "A general term for brain dysfunction or damage. Signs include altered mental status, confusion, behavioral changes, seizures, and coma. 'Hepatic encephalopathy' occurs when liver failure allows toxins to affect the brain. 'Lead encephalopathy' refers to brain damage from lead poisoning.",
+            category: .conditions,
+            relatedTerms: ["CNS", "Seizures", "Hepatotoxicity", "Neurotoxicity"],
+            searchKeywords: ["brain damage", "brain dysfunction", "altered mental status", "confusion"]
+        ),
+
+        // 112. Uremia
+        GlossaryTerm(
+            id: UUID(uuidString: "A0000001-0001-0001-0001-00000000008E")!,
+            term: "Uremia",
+            pronunciation: "yoo-REE-mee-ah",
+            definition: "A condition where waste products (normally filtered by the kidneys) build up in the blood due to kidney failure. Signs include nausea, vomiting, loss of appetite, bad breath (ammonia smell), mouth ulcers, lethargy, and neurological changes. Indicates severe kidney dysfunction requiring aggressive treatment.",
+            category: .conditions,
+            relatedTerms: ["Acute Kidney Injury", "Nephrotoxicity", "Renal"],
+            searchKeywords: ["kidney failure toxins", "waste buildup", "uremic"]
+        ),
+
+        // 113. Icterus
+        GlossaryTerm(
+            id: UUID(uuidString: "A0000001-0001-0001-0001-00000000008F")!,
+            term: "Icterus",
+            pronunciation: "IK-ter-us",
+            definition: "The medical term for jaundice—yellowing of the skin, gums, and whites of the eyes caused by elevated bilirubin. You may see 'icteric' on vet records (meaning jaundiced). Same condition as jaundice, just the clinical terminology veterinarians use in documentation and communication.",
+            category: .conditions,
+            relatedTerms: ["Jaundice", "Hepatotoxicity", "Hepatic", "Hemolysis"],
+            searchKeywords: ["icteric", "yellow", "jaundice medical term", "bilirubin"]
+        ),
+
+        // 114. Pale Gums
+        GlossaryTerm(
+            id: UUID(uuidString: "A0000001-0001-0001-0001-000000000090")!,
+            term: "Pale Gums",
+            pronunciation: nil,
+            definition: "Gums that appear white, very light pink, or gray instead of healthy pink. Indicates reduced blood flow or oxygen delivery—commonly from blood loss, anemia, shock, or severe illness. To check, press on the gum briefly; healthy gums should return to pink within 1-2 seconds (capillary refill time).",
+            category: .symptoms,
+            relatedTerms: ["Anemia", "Shock", "Mucous Membranes", "Coagulopathy"],
+            searchKeywords: ["white gums", "gray gums", "pallor", "capillary refill", "CRT"]
+        ),
+
+        // 115. Aspiration Pneumonia
+        GlossaryTerm(
+            id: UUID(uuidString: "A0000001-0001-0001-0001-000000000091")!,
+            term: "Aspiration Pneumonia",
+            pronunciation: nil,
+            definition: "Lung infection caused by inhaling foreign material (vomit, food, liquids, or other substances) into the airways. A serious complication that can occur during vomiting, force-feeding, or with petroleum product ingestion. Signs include coughing, difficulty breathing, fever, and lethargy. This is why inducing vomiting at home can be dangerous.",
+            category: .conditions,
+            relatedTerms: ["Aspiration", "Dyspnea", "Pulmonary", "Emesis", "Contraindicated"],
+            searchKeywords: ["lung infection", "inhaled vomit", "breathing problems after vomiting"]
+        ),
     ]
 }
