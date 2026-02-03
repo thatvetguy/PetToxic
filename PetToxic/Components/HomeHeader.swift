@@ -18,7 +18,7 @@ struct HomeHeader: View {
             }
 
             // Tagline
-            Text("Because curiosity shouldn't hurt")
+            Text("For When Curiosity Bites Back")
                 .font(.poppinsSemiBold(size: 14))
                 .foregroundColor(Color(red: 0.7, green: 0.8, blue: 0.8)) // Soft teal-tinted gray
                 .italic()

@@ -125,6 +125,24 @@ struct SettingsView: View {
                         .listRowBackground(Color.white.opacity(0.08))
                     }
 
+                    // MARK: - Disclaimer
+                    Section {
+                        VStack(alignment: .leading, spacing: 12) {
+                            Text("This information is for educational purposes only and does not constitute veterinary medical advice. If your pet has been exposed to a potentially toxic substance, contact a licensed veterinarian or animal poison control center immediately.")
+
+                            Text("This database covers common toxic substances but is not a comprehensive listing of all possible hazards. The absence of a substance from this app should not be interpreted as an indication of safety. When in doubt, contact a veterinarian or animal poison control center.")
+
+                            Text("Images in this app are AI-generated for illustrative purposes only and may not accurately represent the actual appearance of substances, plants, or animals described.")
+                        }
+                        .font(.footnote)
+                        .foregroundStyle(.white.opacity(0.6))
+                        .padding(.vertical, 4)
+                        .listRowBackground(Color.white.opacity(0.08))
+                    } header: {
+                        Text("Disclaimer")
+                            .foregroundStyle(.white.opacity(0.7))
+                    }
+
                     // MARK: - Version
                     Section {
                         HStack {
