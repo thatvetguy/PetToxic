@@ -5,7 +5,7 @@ struct SymptomsListView: View {
 
     var body: some View {
         VStack(alignment: .leading, spacing: 8) {
-            ForEach(symptoms, id: \.self) { symptom in
+            ForEach(symptoms.filter { !$0.isEmpty }, id: \.self) { symptom in
                 HStack(alignment: .top, spacing: 8) {
                     Image(systemName: "circle.fill")
                         .font(.system(size: 6))

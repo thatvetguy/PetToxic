@@ -167,7 +167,7 @@ struct ArticleDetailView: View {
                 .fontWeight(.semibold)
 
             VStack(alignment: .leading, spacing: 8) {
-                ForEach(tips, id: \.self) { tip in
+                ForEach(tips.filter { !$0.isEmpty }, id: \.self) { tip in
                     HStack(alignment: .top, spacing: 12) {
                         Image(systemName: "checkmark.shield.fill")
                             .foregroundStyle(.green)
