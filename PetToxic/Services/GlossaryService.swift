@@ -838,5 +838,174 @@ class GlossaryService {
             relatedTerms: ["Supportive Care", "Antidote"],
             searchKeywords: ["treating symptoms", "symptom management"]
         ),
+
+        // ══════════════════════════════════════════════════════════════
+        // MARK: - Batch 4 (Session 101)
+        // ══════════════════════════════════════════════════════════════
+
+        // 71. Hematuria
+        GlossaryTerm(
+            id: UUID(uuidString: "A0000001-0001-0001-0001-000000000065")!,
+            term: "Hematuria",
+            pronunciation: "hee-mah-TOO-ree-ah",
+            definition: "Blood in the urine. May appear pink, red, or brown. Can be caused by kidney damage, bladder injury, clotting problems (as with anticoagulant rodenticides), or urinary tract infections. Any blood in urine warrants veterinary evaluation.",
+            category: .symptoms,
+            relatedTerms: ["Coagulopathy", "Nephrotoxicity", "Renal"],
+            searchKeywords: ["bloody urine", "blood in urine", "red urine", "pink urine"]
+        ),
+
+        // 72. Respiratory Depression
+        GlossaryTerm(
+            id: UUID(uuidString: "A0000001-0001-0001-0001-000000000066")!,
+            term: "Respiratory Depression",
+            pronunciation: nil,
+            definition: "Abnormally slow or shallow breathing that reduces oxygen intake. Can be caused by opioids, sedatives, and other CNS depressants. Severe respiratory depression is life-threatening. Signs include slow breathing rate, weak breaths, blue-tinged gums, and decreased responsiveness.",
+            category: .symptoms,
+            relatedTerms: ["CNS Depression", "Cyanosis", "Dyspnea", "Bradycardia"],
+            searchKeywords: ["slow breathing", "shallow breathing", "breathing problems", "hypoventilation"]
+        ),
+
+        // 73. Cardiac Arrest
+        GlossaryTerm(
+            id: UUID(uuidString: "A0000001-0001-0001-0001-000000000067")!,
+            term: "Cardiac Arrest",
+            pronunciation: nil,
+            definition: "When the heart stops beating effectively, causing collapse and loss of consciousness. Without immediate CPR and emergency care, death occurs within minutes. Some severe toxicoses can lead to cardiac arrest. This is the most critical emergency possible.",
+            category: .conditions,
+            relatedTerms: ["Collapse", "Arrhythmia", "Cardiotoxicity"],
+            searchKeywords: ["heart stopped", "heart attack", "no pulse", "CPR"]
+        ),
+
+        // 74. Pulmonary
+        GlossaryTerm(
+            id: UUID(uuidString: "A0000001-0001-0001-0001-000000000068")!,
+            term: "Pulmonary",
+            pronunciation: "PULL-moh-nair-ee",
+            definition: "Relating to the lungs. 'Pulmonary edema' means fluid in the lungs. 'Pulmonary toxicity' means a substance harms the lungs. The lungs are essential for oxygen exchange, so pulmonary problems quickly become serious.",
+            category: .anatomy,
+            relatedTerms: ["Dyspnea", "Tachypnea", "Inhalation", "Aspiration"],
+            searchKeywords: ["lung", "lungs", "respiratory"]
+        ),
+
+        // 75. Systemic
+        GlossaryTerm(
+            id: UUID(uuidString: "A0000001-0001-0001-0001-000000000069")!,
+            term: "Systemic",
+            pronunciation: "sis-TEM-ik",
+            definition: "Affecting the whole body, not just one area. A 'systemic toxin' is absorbed into the bloodstream and can damage multiple organs. Contrast with 'local' effects that stay at the site of contact (like skin irritation). Systemic effects are generally more serious.",
+            category: .general,
+            relatedTerms: ["Ingestion", "Dermal Exposure", "Inhalation"],
+            searchKeywords: ["whole body", "throughout body", "generalized"]
+        ),
+
+        // 76. Dose-Dependent
+        GlossaryTerm(
+            id: UUID(uuidString: "A0000001-0001-0001-0001-00000000006A")!,
+            term: "Dose-Dependent",
+            pronunciation: nil,
+            definition: "When the severity of effects increases with the amount of exposure. Most toxins are dose-dependent—a tiny amount may cause mild symptoms while a large amount causes severe illness. This is why the amount ingested matters when assessing poisoning risk.",
+            category: .general,
+            relatedTerms: ["Acute", "Toxicosis"],
+            searchKeywords: ["amount", "quantity", "how much"]
+        ),
+
+        // 77. Idiosyncratic Reaction
+        GlossaryTerm(
+            id: UUID(uuidString: "A0000001-0001-0001-0001-00000000006B")!,
+            term: "Idiosyncratic Reaction",
+            pronunciation: "id-ee-oh-sin-KRAT-ik",
+            definition: "An unpredictable, unusual reaction to a substance that doesn't follow typical dose-response patterns. Some pets may have severe reactions to substances that are normally well-tolerated, or react to very small amounts. Grapes in dogs are a classic example—some dogs are severely affected while others show no ill effects.",
+            category: .general,
+            relatedTerms: ["Dose-Dependent", "Toxicosis"],
+            searchKeywords: ["unpredictable", "unusual reaction", "sensitivity", "individual variation"]
+        ),
+
+        // 78. Latent Period
+        GlossaryTerm(
+            id: UUID(uuidString: "A0000001-0001-0001-0001-00000000006C")!,
+            term: "Latent Period",
+            pronunciation: nil,
+            definition: "The time between exposure to a toxin and the appearance of symptoms. Some toxins cause immediate effects; others have latent periods of hours or even days. For example, anticoagulant rodenticide symptoms may not appear for 2-5 days after ingestion, and lily toxicity in cats may take 24-72 hours to show kidney damage.",
+            category: .general,
+            relatedTerms: ["Acute", "Chronic", "Prognosis"],
+            searchKeywords: ["delay", "delayed symptoms", "time to symptoms", "incubation"]
+        ),
+
+        // 79. Chelation Therapy
+        GlossaryTerm(
+            id: UUID(uuidString: "A0000001-0001-0001-0001-00000000006D")!,
+            term: "Chelation Therapy",
+            pronunciation: "kee-LAY-shun",
+            definition: "A treatment using special medications that bind to heavy metals (like lead or zinc) in the body, allowing them to be excreted in urine. Used for heavy metal poisoning. The chelating agent essentially grabs onto metal atoms and escorts them out of the body.",
+            category: .treatment,
+            relatedTerms: ["Antidote", "Supportive Care"],
+            searchKeywords: ["heavy metal treatment", "lead poisoning treatment", "zinc poisoning treatment"]
+        ),
+
+        // 80. Vitamin K Therapy
+        GlossaryTerm(
+            id: UUID(uuidString: "A0000001-0001-0001-0001-00000000006E")!,
+            term: "Vitamin K Therapy",
+            pronunciation: nil,
+            definition: "Treatment with Vitamin K₁ (phytonadione) for anticoagulant rodenticide poisoning. These rodenticides work by blocking Vitamin K, which is needed for blood clotting. Treatment typically requires weeks of oral Vitamin K supplementation. Over-the-counter vitamins are NOT appropriate—prescription veterinary Vitamin K₁ is required.",
+            category: .treatment,
+            relatedTerms: ["Coagulopathy", "Antidote"],
+            searchKeywords: ["rodenticide treatment", "rat poison treatment", "blood clotting treatment"]
+        ),
+
+        // 81. Lipid Emulsion Therapy
+        GlossaryTerm(
+            id: UUID(uuidString: "A0000001-0001-0001-0001-00000000006F")!,
+            term: "Lipid Emulsion Therapy",
+            pronunciation: nil,
+            definition: "An IV treatment using fat solution to help remove certain fat-soluble toxins from the body. The fat particles absorb the toxin from tissues, reducing its effects. Used for some drug overdoses and toxicoses. Also called 'intralipid therapy' or 'ILE.'",
+            category: .treatment,
+            relatedTerms: ["IV Fluids", "Antidote", "Supportive Care"],
+            searchKeywords: ["intralipid", "ILE", "fat emulsion"]
+        ),
+
+        // 82. Antiemetic
+        GlossaryTerm(
+            id: UUID(uuidString: "A0000001-0001-0001-0001-000000000070")!,
+            term: "Antiemetic",
+            pronunciation: "an-tee-eh-MET-ik",
+            definition: "A medication that prevents or controls vomiting and nausea. Often given as part of supportive care for poisoning after decontamination is complete. Common veterinary antiemetics include maropitant (Cerenia) and ondansetron.",
+            category: .treatment,
+            relatedTerms: ["Vomiting", "Supportive Care", "Symptomatic Treatment"],
+            searchKeywords: ["anti-nausea", "stop vomiting", "nausea medication"]
+        ),
+
+        // 83. Gastroprotectant
+        GlossaryTerm(
+            id: UUID(uuidString: "A0000001-0001-0001-0001-000000000071")!,
+            term: "Gastroprotectant",
+            pronunciation: "gas-troh-proh-TEK-tant",
+            definition: "A medication that protects the stomach lining from irritation or ulcers. Often used when toxins have caused GI irritation or when other treatments (like activated charcoal) may be harsh on the stomach. Examples include famotidine, omeprazole, and sucralfate.",
+            category: .treatment,
+            relatedTerms: ["GI Tract", "Supportive Care", "Symptomatic Treatment"],
+            searchKeywords: ["stomach protector", "antacid", "ulcer prevention"]
+        ),
+
+        // 84. Clinical Signs
+        GlossaryTerm(
+            id: UUID(uuidString: "A0000001-0001-0001-0001-000000000072")!,
+            term: "Clinical Signs",
+            pronunciation: nil,
+            definition: "Observable physical changes that indicate illness—what can be seen, measured, or detected during examination. In veterinary medicine, 'clinical signs' is preferred over 'symptoms' because animals can't describe how they feel. Examples include vomiting, tremors, pale gums, and elevated heart rate.",
+            category: .general,
+            relatedTerms: ["Prognosis", "Acute"],
+            searchKeywords: ["symptoms", "signs of illness", "what to look for"]
+        ),
+
+        // 85. Asymptomatic
+        GlossaryTerm(
+            id: UUID(uuidString: "A0000001-0001-0001-0001-000000000073")!,
+            term: "Asymptomatic",
+            pronunciation: "ay-simp-toh-MAT-ik",
+            definition: "Showing no visible signs of illness despite exposure or underlying damage. A pet may be asymptomatic immediately after toxin exposure but develop signs later (during the latent period). Some toxins cause internal damage before any outward signs appear, which is why veterinary evaluation is important even if the pet 'seems fine.'",
+            category: .general,
+            relatedTerms: ["Clinical Signs", "Latent Period", "Prognosis"],
+            searchKeywords: ["no symptoms", "seems fine", "looks normal", "not showing signs"]
+        ),
     ]
 }
