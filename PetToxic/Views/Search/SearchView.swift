@@ -4,6 +4,9 @@ struct SearchView: View {
     @StateObject private var viewModel = SearchViewModel()
     @State private var navigationPath = NavigationPath()
     @FocusState private var isSearchFocused: Bool
+    @ObservedObject private var proSettings = ProSettings.shared
+
+    private var isProUser: Bool { proSettings.isPro }
 
     var body: some View {
         NavigationStack(path: $navigationPath) {
@@ -51,10 +54,16 @@ struct SearchView: View {
 
                     Spacer(minLength: 0)
 
-                    // Ad banner at bottom
+                    // Ad banner or glossary card at bottom
                     if viewModel.searchText.isEmpty {
-                        AdBannerPlaceholder()
-                            .padding(.bottom, 80) // Extra space for tab bar
+                        if isProUser {
+                            GlossaryCard()
+                                .padding(.horizontal)
+                                .padding(.bottom, 80)
+                        } else {
+                            AdBannerPlaceholder()
+                                .padding(.bottom, 80)
+                        }
                     }
                 }
             }

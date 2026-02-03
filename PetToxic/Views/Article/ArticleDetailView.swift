@@ -60,6 +60,9 @@ struct ArticleDetailView: View {
                     // Related entries
                     relatedEntriesSection
 
+                    // Medical Glossary link
+                    GlossaryEntryLink()
+
                     // Sources
                     sourcesSection
                 }

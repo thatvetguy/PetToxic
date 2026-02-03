@@ -54,6 +54,37 @@ struct SettingsView: View {
                             .foregroundStyle(.white.opacity(0.5))
                     }
 
+                    // MARK: - Features
+                    Section {
+                        NavigationLink {
+                            GlossaryView()
+                        } label: {
+                            HStack {
+                                Image(systemName: "character.book.closed.fill")
+                                    .foregroundStyle(.teal)
+                                    .frame(width: 24)
+                                Text("Medical Glossary")
+                                    .foregroundStyle(.white)
+                                Spacer()
+                                if !proSettings.isPro {
+                                    Text("PRO")
+                                        .font(.caption2)
+                                        .fontWeight(.bold)
+                                        .foregroundColor(.white)
+                                        .padding(.horizontal, 8)
+                                        .padding(.vertical, 4)
+                                        .background(Color("AccentColor").opacity(0.8))
+                                        .clipShape(Capsule())
+                                }
+                            }
+                        }
+                        .disabled(!proSettings.isPro)
+                        .listRowBackground(Color.white.opacity(0.08))
+                    } header: {
+                        Text("Features")
+                            .foregroundStyle(.white.opacity(0.7))
+                    }
+
                     // MARK: - Developer Options (hidden until unlocked)
                     if proSettings.developerOptionsUnlocked {
                         Section {

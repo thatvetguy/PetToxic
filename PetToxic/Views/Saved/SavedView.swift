@@ -3,6 +3,9 @@ import SwiftUI
 struct SavedView: View {
     @State private var selectedTab = 0
     @StateObject private var viewModel = SavedViewModel()
+    @ObservedObject private var proSettings = ProSettings.shared
+
+    private var isProUser: Bool { proSettings.isPro }
 
     var body: some View {
         NavigationStack {
@@ -25,8 +28,14 @@ struct SavedView: View {
 
                     Spacer(minLength: 0)
 
-                    AdBannerPlaceholder()
-                        .padding(.bottom, 80)
+                    if isProUser {
+                        GlossaryCard()
+                            .padding(.horizontal)
+                            .padding(.bottom, 80)
+                    } else {
+                        AdBannerPlaceholder()
+                            .padding(.bottom, 80)
+                    }
                 }
             }
             .navigationTitle("Saved")
