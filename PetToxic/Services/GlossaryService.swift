@@ -1007,5 +1007,174 @@ class GlossaryService {
             relatedTerms: ["Clinical Signs", "Latent Period", "Prognosis"],
             searchKeywords: ["no symptoms", "seems fine", "looks normal", "not showing signs"]
         ),
+
+        // ══════════════════════════════════════════════════════════════
+        // MARK: - Batch 5 (Session 101) — Reaching 100 terms!
+        // ══════════════════════════════════════════════════════════════
+
+        // 86. Ptyalism
+        GlossaryTerm(
+            id: UUID(uuidString: "A0000001-0001-0001-0001-000000000074")!,
+            term: "Ptyalism",
+            pronunciation: "TY-ah-lizm",
+            definition: "Excessive drooling or salivation. Often used interchangeably with hypersalivation. Can be caused by nausea, oral irritation (as with calcium oxalate plants), toxin exposure, or difficulty swallowing. You may notice wet fur around the mouth, chin, or chest, or puddles of drool.",
+            category: .symptoms,
+            relatedTerms: ["Hypersalivation", "GI Tract", "Vomiting"],
+            searchKeywords: ["drooling", "excessive saliva", "slobbering", "foaming"]
+        ),
+
+        // 87. Petechiae
+        GlossaryTerm(
+            id: UUID(uuidString: "A0000001-0001-0001-0001-000000000075")!,
+            term: "Petechiae",
+            pronunciation: "peh-TEE-kee-eye",
+            definition: "Tiny pinpoint red or purple spots on the skin, gums, or whites of the eyes caused by bleeding under the surface. A sign of clotting problems or platelet issues. Often seen with anticoagulant rodenticide poisoning. Look like small dots that don't fade when pressed.",
+            category: .symptoms,
+            relatedTerms: ["Coagulopathy", "Platelets", "Hematuria"],
+            searchKeywords: ["red spots", "purple spots", "bruising", "bleeding spots"]
+        ),
+
+        // 88. Ecchymosis
+        GlossaryTerm(
+            id: UUID(uuidString: "A0000001-0001-0001-0001-000000000076")!,
+            term: "Ecchymosis",
+            pronunciation: "ek-ih-MOH-sis",
+            definition: "Bruising—larger areas of bleeding under the skin that appear as purple, blue, or discolored patches. Like petechiae, indicates clotting problems. May appear on the belly, inner thighs, gums, or ear flaps. A serious sign requiring immediate veterinary care.",
+            category: .symptoms,
+            relatedTerms: ["Petechiae", "Coagulopathy", "Platelets"],
+            searchKeywords: ["bruising", "bruises", "discoloration", "purple patches"]
+        ),
+
+        // 89. Nystagmus
+        GlossaryTerm(
+            id: UUID(uuidString: "A0000001-0001-0001-0001-000000000077")!,
+            term: "Nystagmus",
+            pronunciation: "nis-TAG-mus",
+            definition: "Involuntary, rhythmic movement of the eyes—usually side-to-side, but can be up-and-down or rotational. Indicates neurological problems affecting balance or brain function. Often seen with vestibular toxicity or certain drug overdoses. The eyes appear to 'bounce' or 'flicker.'",
+            category: .symptoms,
+            relatedTerms: ["Ataxia", "CNS", "Neurotoxicity"],
+            searchKeywords: ["eye movement", "eyes shaking", "eyes bouncing", "flickering eyes"]
+        ),
+
+        // 90. Paresis
+        GlossaryTerm(
+            id: UUID(uuidString: "A0000001-0001-0001-0001-000000000078")!,
+            term: "Paresis",
+            pronunciation: "pah-REE-sis",
+            definition: "Partial paralysis or weakness—reduced ability to move a body part, but not complete loss of function. The pet may drag a limb, have a wobbly gait, or struggle to stand. Less severe than full paralysis but still indicates significant neurological involvement.",
+            category: .symptoms,
+            relatedTerms: ["Paralysis", "Ataxia", "Neurotoxicity"],
+            searchKeywords: ["weakness", "partial paralysis", "weak legs", "limb weakness"]
+        ),
+
+        // 91. Paralysis
+        GlossaryTerm(
+            id: UUID(uuidString: "A0000001-0001-0001-0001-000000000079")!,
+            term: "Paralysis",
+            pronunciation: "pah-RAL-ih-sis",
+            definition: "Complete loss of ability to move a body part. Can affect one limb, multiple limbs, or the entire body below a certain point. Some toxins (like tick paralysis or certain venoms) cause ascending paralysis that starts in the back legs and moves forward. Always an emergency.",
+            category: .symptoms,
+            relatedTerms: ["Paresis", "Neurotoxicity", "Respiratory Depression"],
+            searchKeywords: ["can't move", "unable to move", "limp", "no movement"]
+        ),
+
+        // 92. Ileus
+        GlossaryTerm(
+            id: UUID(uuidString: "A0000001-0001-0001-0001-00000000007A")!,
+            term: "Ileus",
+            pronunciation: "IL-ee-us",
+            definition: "When the intestines stop their normal movement (motility), causing contents to back up. Can result from toxin exposure, surgery, pain, or electrolyte imbalances. Signs include vomiting, bloating, lack of stool, and abdominal discomfort. Requires veterinary treatment to restart gut function.",
+            category: .conditions,
+            relatedTerms: ["GI Tract", "Vomiting", "Obstruction"],
+            searchKeywords: ["gut stasis", "intestinal slowdown", "no bowel movement"]
+        ),
+
+        // 93. Obstruction
+        GlossaryTerm(
+            id: UUID(uuidString: "A0000001-0001-0001-0001-00000000007B")!,
+            term: "Obstruction",
+            pronunciation: nil,
+            definition: "A physical blockage preventing normal passage through a body structure—most commonly the GI tract. Foreign objects, expanding substances (like Gorilla Glue), or swollen tissue can cause obstruction. Signs include repeated vomiting, inability to keep food/water down, painful abdomen, and no stool. Often requires surgical intervention.",
+            category: .conditions,
+            relatedTerms: ["GI Tract", "Ileus", "Vomiting"],
+            searchKeywords: ["blockage", "blocked", "foreign body", "intestinal blockage"]
+        ),
+
+        // 94. Perforation
+        GlossaryTerm(
+            id: UUID(uuidString: "A0000001-0001-0001-0001-00000000007C")!,
+            term: "Perforation",
+            pronunciation: "per-for-AY-shun",
+            definition: "A hole or rupture in an organ wall, most often the stomach or intestines. Can be caused by sharp foreign objects, severe ulcers, or caustic substances. Contents leak into the abdomen causing severe infection (peritonitis). This is a surgical emergency with life-threatening consequences.",
+            category: .conditions,
+            relatedTerms: ["GI Tract", "Obstruction"],
+            searchKeywords: ["hole", "rupture", "tear", "puncture"]
+        ),
+
+        // 95. Peritonitis
+        GlossaryTerm(
+            id: UUID(uuidString: "A0000001-0001-0001-0001-00000000007D")!,
+            term: "Peritonitis",
+            pronunciation: "per-ih-toh-NY-tis",
+            definition: "Inflammation and infection of the abdominal cavity lining, usually from leakage of GI contents through a perforation. Causes severe abdominal pain, fever, shock, and rapid deterioration. Without emergency surgery and intensive care, peritonitis is often fatal.",
+            category: .conditions,
+            relatedTerms: ["Perforation", "Shock", "GI Tract"],
+            searchKeywords: ["abdominal infection", "belly infection"]
+        ),
+
+        // 96. Monitoring
+        GlossaryTerm(
+            id: UUID(uuidString: "A0000001-0001-0001-0001-00000000007E")!,
+            term: "Monitoring",
+            pronunciation: nil,
+            definition: "Ongoing observation and testing to track a patient's condition over time. After toxin exposure, monitoring may include checking vital signs, blood work, kidney/liver values, and watching for delayed symptoms. Some toxins require monitoring for days to weeks even if the pet initially seems fine.",
+            category: .treatment,
+            relatedTerms: ["Supportive Care", "Prognosis", "Latent Period"],
+            searchKeywords: ["observation", "watching", "follow-up", "rechecking"]
+        ),
+
+        // 97. Baseline
+        GlossaryTerm(
+            id: UUID(uuidString: "A0000001-0001-0001-0001-00000000007F")!,
+            term: "Baseline",
+            pronunciation: nil,
+            definition: "Initial measurements taken for comparison with later tests. After toxin exposure, baseline blood work establishes starting kidney/liver values so changes can be detected. For example, a normal baseline kidney value followed by elevated values later confirms developing kidney damage.",
+            category: .treatment,
+            relatedTerms: ["Monitoring", "Nephrotoxicity", "Hepatotoxicity"],
+            searchKeywords: ["initial values", "starting point", "reference values"]
+        ),
+
+        // 98. Serum
+        GlossaryTerm(
+            id: UUID(uuidString: "A0000001-0001-0001-0001-000000000080")!,
+            term: "Serum",
+            pronunciation: "SEER-um",
+            definition: "The liquid portion of blood after cells and clotting factors are removed. Blood tests often measure substances in serum—such as 'serum creatinine' (kidney function) or 'serum liver enzymes.' When you see 'serum' before a test name, it refers to what's measured in this blood fluid.",
+            category: .anatomy,
+            relatedTerms: ["Baseline", "Monitoring"],
+            searchKeywords: ["blood test", "blood work", "blood sample"]
+        ),
+
+        // 99. Contraindicated
+        GlossaryTerm(
+            id: UUID(uuidString: "A0000001-0001-0001-0001-000000000081")!,
+            term: "Contraindicated",
+            pronunciation: "con-trah-IN-dih-kay-ted",
+            definition: "When a treatment or action should NOT be done because it could cause harm. For example, inducing vomiting is contraindicated for caustic substances (could burn twice) or petroleum products (aspiration risk). Always follow veterinary guidance rather than attempting home treatment.",
+            category: .general,
+            relatedTerms: ["Emesis", "Aspiration", "Decontamination"],
+            searchKeywords: ["should not", "do not", "not recommended", "dangerous to do"]
+        ),
+
+        // 100. Toxin vs Toxicant
+        GlossaryTerm(
+            id: UUID(uuidString: "A0000001-0001-0001-0001-000000000082")!,
+            term: "Toxin vs Toxicant",
+            pronunciation: nil,
+            definition: "Technically, a 'toxin' is a poison produced by a living organism (like snake venom or bacterial toxins), while a 'toxicant' is a man-made or non-biological poison (like antifreeze or medications). In everyday use, 'toxin' is often used for both. This app uses 'toxin' broadly for simplicity.",
+            category: .general,
+            relatedTerms: ["Toxicosis"],
+            searchKeywords: ["poison", "definition", "terminology", "difference"]
+        ),
     ]
 }
