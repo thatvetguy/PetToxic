@@ -179,6 +179,7 @@ struct CategoryListView: View {
     @Query private var pets: [Pet]
     @AppStorage("gridColumnCount") private var columnCount: Int = 2
     @AppStorage("entrySortBySeverity") private var sortBySeverity: Bool = true
+    @AppStorage("entryViewMode") private var isGridView: Bool = true
     @State private var selectedSpeciesFilter: SpeciesFilter = .auto
 
     private var columns: [GridItem] {
@@ -245,20 +246,36 @@ struct CategoryListView: View {
                         speciesFilterChips
                     }
 
-                    LazyVGrid(columns: columns, spacing: 8) {
-                        ForEach(filteredItems) { item in
-                            NavigationLink(value: item) {
-                                Image(item.imageAsset ?? "placeholder")
-                                    .resizable()
-                                    .aspectRatio(1, contentMode: .fit)
-                                    .clipShape(RoundedRectangle(cornerRadius: 12))
+                    if isGridView {
+                        LazyVGrid(columns: columns, spacing: 8) {
+                            ForEach(filteredItems) { item in
+                                NavigationLink(value: item) {
+                                    Image(item.imageAsset ?? "placeholder")
+                                        .resizable()
+                                        .aspectRatio(1, contentMode: .fit)
+                                        .clipShape(RoundedRectangle(cornerRadius: 12))
+                                }
+                                .buttonStyle(.plain)
                             }
-                            .buttonStyle(.plain)
                         }
+                        .padding(.horizontal, 16)
+                        .padding(.vertical, 8)
+                        .padding(.bottom, 80)
+                    } else {
+                        LazyVStack(spacing: 4) {
+                            ForEach(filteredItems) { item in
+                                NavigationLink(value: item) {
+                                    EntryListRow(
+                                        item: item,
+                                        selectedSpeciesFilter: selectedSpeciesFilter
+                                    )
+                                }
+                                .buttonStyle(.plain)
+                            }
+                        }
+                        .padding(.vertical, 8)
+                        .padding(.bottom, 80)
                     }
-                    .padding(.horizontal, 16)
-                    .padding(.vertical, 8)
-                    .padding(.bottom, 80) // Extra space for tab bar
                 }
             }
         }
@@ -279,11 +296,22 @@ struct CategoryListView: View {
                     }
                 }
 
-                // Size toggle (always visible)
+                // Size toggle (only in grid view)
+                if isGridView {
+                    Button {
+                        cycleGridSize()
+                    } label: {
+                        Image(systemName: gridIcon)
+                    }
+                }
+
+                // View mode toggle
                 Button {
-                    cycleGridSize()
+                    withAnimation(.easeInOut(duration: 0.2)) {
+                        isGridView.toggle()
+                    }
                 } label: {
-                    Image(systemName: gridIcon)
+                    Image(systemName: isGridView ? "list.bullet" : "square.grid.2x2")
                 }
             }
         }
@@ -402,6 +430,56 @@ struct CategoryListView: View {
         case 3: return "square.grid.3x3"
         default: return "square.grid.2x2"
         }
+    }
+}
+
+// MARK: - Entry List Row
+
+struct EntryListRow: View {
+    let item: ToxicItem
+    let selectedSpeciesFilter: SpeciesFilter
+
+    private var displaySeverity: Severity? {
+        if case .specific(let species) = selectedSpeciesFilter,
+           let risk = item.speciesRisks.first(where: { $0.species == species }) {
+            return risk.severity
+        }
+        return item.entrySeverity
+    }
+
+    var body: some View {
+        HStack(spacing: 12) {
+            if let imageAsset = item.imageAsset {
+                Image(imageAsset)
+                    .resizable()
+                    .aspectRatio(contentMode: .fill)
+                    .frame(width: 50, height: 50)
+                    .clipShape(RoundedRectangle(cornerRadius: 8))
+            }
+
+            VStack(alignment: .leading, spacing: 4) {
+                Text(item.name)
+                    .font(.headline)
+                    .foregroundColor(.white)
+
+                Text(item.description)
+                    .font(.subheadline)
+                    .foregroundColor(.white.opacity(0.7))
+                    .lineLimit(2)
+            }
+
+            Spacer()
+
+            if let severity = displaySeverity {
+                SeverityBadge(severity: severity, size: .small)
+            }
+
+            Image(systemName: "chevron.right")
+                .foregroundColor(.white.opacity(0.3))
+                .font(.caption)
+        }
+        .padding(.horizontal, 16)
+        .padding(.vertical, 12)
     }
 }
 
