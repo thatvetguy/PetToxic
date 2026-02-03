@@ -33,6 +33,7 @@ struct SeveritySection: View {
                         HighlightableMarkdownText(content: notes, searchTerm: searchQuery)
                             .font(.callout)
                             .foregroundStyle(.primary)
+                            .frame(maxWidth: .infinity, alignment: .leading)
                             .padding(.horizontal)
                     }
                 }
