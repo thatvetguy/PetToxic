@@ -3,6 +3,8 @@ import SwiftData
 
 struct BrowseView: View {
     @StateObject private var viewModel = BrowseViewModel()
+    @StateObject private var searchViewModel = SearchViewModel()
+    @FocusState private var isSearchFocused: Bool
 
     private let columns = [
         GridItem(.flexible(), spacing: 16),
@@ -15,26 +17,47 @@ struct BrowseView: View {
                 AppBackground()
 
                 VStack(spacing: 0) {
+                    // Search bar
+                    browseSearchBar
+                        .animation(.easeInOut(duration: 0.2), value: isSearchFocused)
+
                     ScrollView {
-                        LazyVGrid(columns: columns, spacing: 16) {
-                            ForEach(Category.allCases) { category in
-                                NavigationLink(value: category) {
-                                    CategoryGridItem(
-                                        category: category,
-                                        itemCount: viewModel.itemCount(for: category)
-                                    )
-                                }
-                                .buttonStyle(.plain)
+                        if !searchViewModel.searchText.isEmpty {
+                            // Search results
+                            if searchViewModel.isSearching {
+                                ProgressView("Searching...")
+                                    .frame(maxWidth: .infinity)
+                                    .padding(.top, 40)
+                            } else if searchViewModel.searchResults.isEmpty {
+                                browseEmptyResults
+                            } else {
+                                browseSearchResults
                             }
+                        } else {
+                            // Normal category grid
+                            LazyVGrid(columns: columns, spacing: 16) {
+                                ForEach(Category.allCases) { category in
+                                    NavigationLink(value: category) {
+                                        CategoryGridItem(
+                                            category: category,
+                                            itemCount: viewModel.itemCount(for: category)
+                                        )
+                                    }
+                                    .buttonStyle(.plain)
+                                }
+                            }
+                            .padding()
+                            .padding(.bottom, 16)
                         }
-                        .padding()
-                        .padding(.bottom, 16)
                     }
+                    .scrollDismissesKeyboard(.interactively)
 
                     Spacer(minLength: 0)
 
-                    AdBannerPlaceholder()
-                        .padding(.bottom, 80)
+                    if searchViewModel.searchText.isEmpty {
+                        AdBannerPlaceholder()
+                            .padding(.bottom, 80)
+                    }
                 }
             }
             .navigationTitle("Pick your poison...")
@@ -43,7 +66,101 @@ struct BrowseView: View {
             .navigationDestination(for: Category.self) { category in
                 CategoryListView(category: category)
             }
+            .navigationDestination(for: ToxicItem.self) { item in
+                ArticleDetailView(item: item, saveSearchTerm: true, searchQuery: searchViewModel.searchText)
+            }
         }
+    }
+
+    // MARK: - Browse Search Bar
+
+    private var browseSearchBar: some View {
+        HStack(spacing: 8) {
+            Image(systemName: "magnifyingglass")
+                .foregroundColor(.white.opacity(0.5))
+
+            TextField("Search foods, plants, medications...", text: $searchViewModel.searchText)
+                .foregroundColor(.white)
+                .autocorrectionDisabled()
+                .textInputAutocapitalization(.never)
+                .submitLabel(.search)
+                .focused($isSearchFocused)
+                .onSubmit {
+                    isSearchFocused = false
+                    searchViewModel.saveToRecentSearches(searchViewModel.searchText)
+                }
+
+            if !searchViewModel.searchText.isEmpty {
+                Button {
+                    searchViewModel.searchText = ""
+                } label: {
+                    Image(systemName: "xmark.circle.fill")
+                        .foregroundColor(.white.opacity(0.5))
+                }
+            }
+
+            if isSearchFocused {
+                Button("Cancel") {
+                    isSearchFocused = false
+                    searchViewModel.searchText = ""
+                }
+                .foregroundColor(Color(red: 0.29, green: 0.61, blue: 0.61))
+                .font(.subheadline)
+                .transition(.move(edge: .trailing).combined(with: .opacity))
+            }
+        }
+        .padding(.horizontal, 12)
+        .padding(.vertical, 10)
+        .background(Color.white.opacity(0.1))
+        .clipShape(RoundedRectangle(cornerRadius: 12))
+        .padding(.horizontal, 16)
+        .padding(.bottom, 8)
+    }
+
+    // MARK: - Browse Search Results
+
+    private var browseSearchResults: some View {
+        VStack(spacing: 0) {
+            ForEach(searchViewModel.searchResults) { result in
+                NavigationLink(value: result.item) {
+                    SearchResultRow(result: result)
+                        .padding(.horizontal)
+                        .padding(.vertical, 12)
+                }
+                .buttonStyle(.plain)
+
+                if result.id != searchViewModel.searchResults.last?.id {
+                    Divider()
+                        .background(Color.white.opacity(0.1))
+                        .padding(.leading, 16)
+                }
+            }
+        }
+        .background(Color.white.opacity(0.08))
+        .clipShape(RoundedRectangle(cornerRadius: 12))
+        .padding(.horizontal)
+        .onChange(of: searchViewModel.searchText) { _, newValue in
+            SearchContext.shared.pendingSearchTerm = newValue
+        }
+    }
+
+    private var browseEmptyResults: some View {
+        VStack(spacing: 12) {
+            Image(systemName: "magnifyingglass")
+                .font(.system(size: 40))
+                .foregroundColor(.white.opacity(0.4))
+
+            Text("No Results")
+                .font(.headline)
+                .foregroundColor(.white.opacity(0.8))
+
+            Text("No results found for \"\(searchViewModel.searchText)\". Try a different search term.")
+                .font(.subheadline)
+                .foregroundColor(.white.opacity(0.5))
+                .multilineTextAlignment(.center)
+                .padding(.horizontal, 32)
+        }
+        .padding(.top, 32)
     }
 }
 
