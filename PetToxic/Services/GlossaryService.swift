@@ -1844,5 +1844,172 @@ class GlossaryService {
             relatedTerms: ["Renal", "Nephrotoxicity", "Acute Kidney Injury"],
             searchKeywords: ["kidney unit", "kidney cells", "filtration unit"]
         ),
+
+        // MARK: - Batch 10 (Session 101)
+
+        // 161. Hemoptysis
+        GlossaryTerm(
+            id: UUID(uuidString: "A0000001-0001-0001-0001-0000000000BF")!,
+            term: "Hemoptysis",
+            pronunciation: "hee-MOP-tih-sis",
+            definition: "Coughing up blood—blood originating from the lungs or airways. Different from hematemesis (vomiting blood from the stomach). May appear as bright red blood, pink frothy sputum, or blood-tinged mucus. Can indicate severe anticoagulant rodenticide poisoning, lung damage, or other serious respiratory problems.",
+            category: .symptoms,
+            relatedTerms: ["Coagulopathy", "Pulmonary", "Hematemesis"],
+            searchKeywords: ["coughing blood", "bloody cough", "blood from lungs"]
+        ),
+
+        // 162. Borborygmi
+        GlossaryTerm(
+            id: UUID(uuidString: "A0000001-0001-0001-0001-0000000000C0")!,
+            term: "Borborygmi",
+            pronunciation: "bor-boh-RIG-mee",
+            definition: "Gurgling or rumbling sounds from the intestines caused by gas and fluid movement—'stomach growling.' Increased borborygmi can indicate GI upset, while absent gut sounds may indicate ileus (intestinal shutdown). Veterinarians listen with a stethoscope to assess GI function. Pronounced sounds are often audible without equipment.",
+            category: .symptoms,
+            relatedTerms: ["GI Tract", "Ileus", "Diarrhea"],
+            searchKeywords: ["stomach growling", "gut sounds", "intestinal sounds", "rumbling stomach"]
+        ),
+
+        // 163. Ptosis
+        GlossaryTerm(
+            id: UUID(uuidString: "A0000001-0001-0001-0001-0000000000C1")!,
+            term: "Ptosis",
+            pronunciation: "TOH-sis",
+            definition: "Drooping of the upper eyelid. Can indicate neurological problems, muscle weakness, or certain toxin effects. Bilateral (both eyes) ptosis may occur with botulism, tick paralysis, or some snake envenomations. May be subtle—the eye appears partially closed or sleepy-looking.",
+            category: .symptoms,
+            relatedTerms: ["Neurotoxicity", "Paralysis", "Paresis"],
+            searchKeywords: ["droopy eyelid", "eyelid drooping", "sleepy eye", "can't open eye fully"]
+        ),
+
+        // 164. ARDS
+        GlossaryTerm(
+            id: UUID(uuidString: "A0000001-0001-0001-0001-0000000000C2")!,
+            term: "ARDS",
+            pronunciation: nil,
+            definition: "Acute Respiratory Distress Syndrome—severe lung inflammation causing fluid buildup and difficulty getting oxygen into the blood. A life-threatening complication that can follow aspiration, smoke inhalation, sepsis, or severe systemic illness. Requires intensive care with oxygen support, often mechanical ventilation. High mortality rate.",
+            category: .conditions,
+            relatedTerms: ["Pulmonary", "Dyspnea", "Hypoxia", "Aspiration Pneumonia"],
+            searchKeywords: ["acute respiratory distress syndrome", "lung failure", "severe breathing problems"]
+        ),
+
+        // 165. Hepatic Encephalopathy
+        GlossaryTerm(
+            id: UUID(uuidString: "A0000001-0001-0001-0001-0000000000C3")!,
+            term: "Hepatic Encephalopathy",
+            pronunciation: "heh-PAT-ik en-sef-ah-LOP-ah-thee",
+            definition: "Brain dysfunction caused by liver failure. When the liver can't filter toxins (especially ammonia) from blood, these substances affect brain function. Signs include disorientation, behavior changes, circling, head pressing, seizures, and coma. Seen with severe hepatotoxicity, portosystemic shunts, or end-stage liver disease.",
+            category: .conditions,
+            relatedTerms: ["Encephalopathy", "Hepatotoxicity", "Hepatic", "Seizures"],
+            searchKeywords: ["liver brain syndrome", "ammonia toxicity", "liver failure confusion"]
+        ),
+
+        // 166. Cardiomyopathy
+        GlossaryTerm(
+            id: UUID(uuidString: "A0000001-0001-0001-0001-0000000000C4")!,
+            term: "Cardiomyopathy",
+            pronunciation: "kar-dee-oh-my-OP-ah-thee",
+            definition: "Disease of the heart muscle that impairs the heart's ability to pump blood effectively. Can be caused by some toxins (cobalt, certain drugs) or nutritional deficiencies. Types include dilated (enlarged, weak heart) and hypertrophic (thickened walls). Results in poor circulation, exercise intolerance, and potentially heart failure.",
+            category: .conditions,
+            relatedTerms: ["Cardiotoxicity", "Myocardium", "Arrhythmia"],
+            searchKeywords: ["heart disease", "weak heart", "heart muscle disease", "DCM", "HCM"]
+        ),
+
+        // 167. Whole Bowel Irrigation
+        GlossaryTerm(
+            id: UUID(uuidString: "A0000001-0001-0001-0001-0000000000C5")!,
+            term: "Whole Bowel Irrigation",
+            pronunciation: nil,
+            definition: "A decontamination technique using large volumes of a special electrolyte solution (polyethylene glycol) given by mouth or stomach tube to flush the entire GI tract. Used for sustained-release medications, iron, lead, or packets of drugs. Causes continuous watery diarrhea until the GI tract is cleared. Done only in veterinary hospitals.",
+            category: .treatment,
+            relatedTerms: ["Decontamination", "GI Tract", "Activated Charcoal"],
+            searchKeywords: ["bowel flush", "GI flush", "PEG lavage", "GoLYTELY"]
+        ),
+
+        // 168. Cathartic
+        GlossaryTerm(
+            id: UUID(uuidString: "A0000001-0001-0001-0001-0000000000C6")!,
+            term: "Cathartic",
+            pronunciation: "kah-THAR-tik",
+            definition: "A substance that accelerates bowel movements to help eliminate toxins from the GI tract faster. Sometimes given with activated charcoal (sorbitol is common). Used cautiously because they can cause dehydration and electrolyte imbalances. Not recommended for home use—veterinarians decide when cathartics are appropriate.",
+            category: .treatment,
+            relatedTerms: ["Decontamination", "Activated Charcoal", "Diarrhea"],
+            searchKeywords: ["laxative", "bowel stimulant", "sorbitol", "speeds elimination"]
+        ),
+
+        // 169. Anticonvulsant
+        GlossaryTerm(
+            id: UUID(uuidString: "A0000001-0001-0001-0001-0000000000C7")!,
+            term: "Anticonvulsant",
+            pronunciation: "an-tee-kon-VUL-sant",
+            definition: "Medication used to stop or prevent seizures. Common veterinary anticonvulsants include diazepam (Valium), phenobarbital, levetiracetam (Keppra), and propofol. Critical for managing seizures from toxins—uncontrolled seizures cause hyperthermia, brain damage, and can be fatal. Multiple drugs may be needed for severe cases.",
+            category: .treatment,
+            relatedTerms: ["Seizures", "Sedation", "Neurotoxicity"],
+            searchKeywords: ["seizure medication", "anti-seizure", "stops seizures", "diazepam", "phenobarbital"]
+        ),
+
+        // 170. Deferoxamine
+        GlossaryTerm(
+            id: UUID(uuidString: "A0000001-0001-0001-0001-0000000000C8")!,
+            term: "Deferoxamine",
+            pronunciation: "deh-fer-OX-ah-meen",
+            definition: "A chelating agent used specifically for iron poisoning. It binds to excess iron in the blood, forming a complex that can be excreted by the kidneys. Given by IV infusion at veterinary hospitals. Causes the urine to turn a characteristic reddish-brown color ('vin rosé') as iron is eliminated.",
+            category: .treatment,
+            relatedTerms: ["Chelation Therapy", "Antidote"],
+            searchKeywords: ["iron antidote", "iron poisoning treatment", "Desferal"]
+        ),
+
+        // 171. Pharmacokinetics
+        GlossaryTerm(
+            id: UUID(uuidString: "A0000001-0001-0001-0001-0000000000C9")!,
+            term: "Pharmacokinetics",
+            pronunciation: "far-mah-koh-kih-NET-iks",
+            definition: "The study of how the body handles a substance over time—absorption (getting in), distribution (spreading through tissues), metabolism (breaking down), and elimination (getting out). Understanding pharmacokinetics helps predict how long a toxin will remain in the body and how it will affect different organs.",
+            category: .general,
+            relatedTerms: ["Bioavailability", "Half-life", "Metabolite"],
+            searchKeywords: ["ADME", "drug movement", "how body processes drugs"]
+        ),
+
+        // 172. First-Pass Metabolism
+        GlossaryTerm(
+            id: UUID(uuidString: "A0000001-0001-0001-0001-0000000000CA")!,
+            term: "First-Pass Metabolism",
+            pronunciation: nil,
+            definition: "When a substance absorbed from the GI tract passes through the liver before reaching general circulation, and the liver metabolizes some of it. This can reduce the amount reaching the body (reducing effect) or convert a harmless substance into a toxic metabolite (increasing danger). Substances injected or inhaled bypass first-pass metabolism.",
+            category: .mechanisms,
+            relatedTerms: ["Hepatic", "Metabolite", "Bioavailability"],
+            searchKeywords: ["liver processing", "first pass effect", "presystemic metabolism"]
+        ),
+
+        // 173. Enterohepatic Recirculation
+        GlossaryTerm(
+            id: UUID(uuidString: "A0000001-0001-0001-0001-0000000000CB")!,
+            term: "Enterohepatic Recirculation",
+            pronunciation: "EN-ter-oh-heh-PAT-ik",
+            definition: "A cycle where substances excreted by the liver into bile are reabsorbed from the intestines back into the bloodstream. This prolongs the time a toxin stays in the body. Activated charcoal can interrupt this cycle by binding the substance in the gut before reabsorption. Important for some drugs and toxins.",
+            category: .mechanisms,
+            relatedTerms: ["Hepatic", "GI Tract", "Activated Charcoal", "Half-life"],
+            searchKeywords: ["recirculation", "bile cycle", "reabsorption"]
+        ),
+
+        // 174. Volume of Distribution
+        GlossaryTerm(
+            id: UUID(uuidString: "A0000001-0001-0001-0001-0000000000CC")!,
+            term: "Volume of Distribution",
+            pronunciation: nil,
+            definition: "A measure of how widely a substance spreads throughout the body. A high volume of distribution means the substance leaves the bloodstream and accumulates in tissues—making it harder to remove with dialysis. A low volume means it stays mostly in the blood—easier to filter out. Affects treatment decisions for serious poisonings.",
+            category: .general,
+            relatedTerms: ["Dialysis", "Protein Binding", "Pharmacokinetics"],
+            searchKeywords: ["Vd", "tissue distribution", "drug distribution"]
+        ),
+
+        // 175. LD50
+        GlossaryTerm(
+            id: UUID(uuidString: "A0000001-0001-0001-0001-0000000000CD")!,
+            term: "LD50",
+            pronunciation: nil,
+            definition: "Lethal Dose 50%—the dose that kills 50% of test animals in laboratory studies. Used in toxicology research to compare relative toxicity of substances. NOT useful for clinical decisions because it doesn't account for individual variation, species differences, or non-lethal harm. Pet Toxic does not use LD50 values because they can mislead pet owners about 'safe' amounts.",
+            category: .general,
+            relatedTerms: ["Toxic Dose", "Dose-Dependent"],
+            searchKeywords: ["lethal dose", "median lethal dose", "toxicity testing"]
+        ),
     ]
 }
