@@ -81,6 +81,7 @@ struct EmergencyView: View {
                 infoRow(icon: "list.bullet.clipboard", text: "Current symptoms observed")
             }
             .padding()
+            .frame(maxWidth: .infinity, alignment: .leading)
             .background(Color.white.opacity(0.08))
             .clipShape(RoundedRectangle(cornerRadius: 12))
         }
