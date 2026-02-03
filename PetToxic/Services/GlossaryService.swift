@@ -500,5 +500,174 @@ class GlossaryService {
             relatedTerms: ["Emesis", "Decontamination"],
             searchKeywords: ["stomach pumping", "stomach wash", "lavage"]
         ),
+
+        // ══════════════════════════════════════════════════════════════
+        // MARK: - Batch 2 (Session 101)
+        // ══════════════════════════════════════════════════════════════
+
+        // 41. CNS Depression
+        GlossaryTerm(
+            id: UUID(uuidString: "A0000001-0001-0001-0001-000000000041")!,
+            term: "CNS Depression",
+            pronunciation: nil,
+            definition: "A slowing of brain and nervous system activity. Signs include drowsiness, reduced alertness, slow or shallow breathing, weakness, and in severe cases, loss of consciousness. Many toxins cause CNS depression, including sedatives, alcohol, and certain plants.",
+            category: .symptoms,
+            relatedTerms: ["CNS", "Lethargy", "Ataxia"],
+            searchKeywords: ["sedation", "drowsy", "unresponsive", "sleepy", "depressed"]
+        ),
+
+        // 42. Hematemesis
+        GlossaryTerm(
+            id: UUID(uuidString: "A0000001-0001-0001-0001-000000000042")!,
+            term: "Hematemesis",
+            pronunciation: "hee-mah-TEM-eh-sis",
+            definition: "Vomiting blood. The blood may appear bright red (fresh bleeding) or look like dark coffee grounds (partially digested blood). This is a serious sign indicating bleeding in the stomach or upper digestive tract and requires immediate veterinary attention.",
+            category: .symptoms,
+            relatedTerms: ["Vomiting", "GI Tract", "Melena"],
+            searchKeywords: ["bloody vomit", "vomiting blood", "coffee ground vomit"]
+        ),
+
+        // 43. Melena
+        GlossaryTerm(
+            id: UUID(uuidString: "A0000001-0001-0001-0001-000000000043")!,
+            term: "Melena",
+            pronunciation: "meh-LEE-nah",
+            definition: "Dark, tarry, black stool caused by digested blood from bleeding in the upper digestive tract. The dark color comes from blood being broken down as it passes through the intestines. This is different from bright red blood in stool (hematochezia), which indicates lower intestinal bleeding.",
+            category: .symptoms,
+            relatedTerms: ["GI Tract", "Hematemesis", "Coagulopathy"],
+            searchKeywords: ["black stool", "tarry stool", "blood in stool", "dark feces"]
+        ),
+
+        // 44. Hypotension
+        GlossaryTerm(
+            id: UUID(uuidString: "A0000001-0001-0001-0001-000000000044")!,
+            term: "Hypotension",
+            pronunciation: "hy-poh-TEN-shun",
+            definition: "Abnormally low blood pressure. Signs may include weakness, pale gums, cold extremities, rapid heart rate (as the body tries to compensate), and collapse. Severe hypotension can lead to shock and organ damage if not treated promptly.",
+            category: .conditions,
+            relatedTerms: ["Collapse", "Tachycardia", "Bradycardia"],
+            searchKeywords: ["low blood pressure", "shock", "weak pulse"]
+        ),
+
+        // 45. Hypertension
+        GlossaryTerm(
+            id: UUID(uuidString: "A0000001-0001-0001-0001-000000000045")!,
+            term: "Hypertension",
+            pronunciation: "hy-per-TEN-shun",
+            definition: "Abnormally high blood pressure. While not always visible to pet owners, severe hypertension can cause sudden blindness, nosebleeds, disorientation, or seizures. Some toxins (like certain decongestants and stimulants) can cause dangerous spikes in blood pressure.",
+            category: .conditions,
+            relatedTerms: ["Tachycardia", "Seizures", "Mydriasis"],
+            searchKeywords: ["high blood pressure", "elevated blood pressure"]
+        ),
+
+        // 46. Collapse
+        GlossaryTerm(
+            id: UUID(uuidString: "A0000001-0001-0001-0001-000000000046")!,
+            term: "Collapse",
+            pronunciation: nil,
+            definition: "Sudden inability to stand or walk, often falling to the ground. May be caused by heart problems, severe weakness, low blood pressure, blood loss, or neurological issues. Collapse is always an emergency requiring immediate veterinary care.",
+            category: .symptoms,
+            relatedTerms: ["Hypotension", "Bradycardia", "Lethargy"],
+            searchKeywords: ["falling down", "can't stand", "fainting", "syncope"]
+        ),
+
+        // 47. Mucous Membranes
+        GlossaryTerm(
+            id: UUID(uuidString: "A0000001-0001-0001-0001-000000000047")!,
+            term: "Mucous Membranes",
+            pronunciation: nil,
+            definition: "The moist, pink tissues lining body openings. In pets, veterinarians commonly check the gums, inner lips, and inner eyelids. Healthy membranes are pink and moist. Color changes can indicate problems: pale (blood loss, shock), blue/purple (low oxygen), yellow (liver issues), or brick red (some toxins).",
+            category: .anatomy,
+            relatedTerms: ["Cyanosis", "Jaundice", "Anemia"],
+            searchKeywords: ["gums", "gum color", "pale gums", "blue gums", "yellow gums"]
+        ),
+
+        // 48. Toxicosis
+        GlossaryTerm(
+            id: UUID(uuidString: "A0000001-0001-0001-0001-000000000048")!,
+            term: "Toxicosis",
+            pronunciation: "tok-sih-KOH-sis",
+            definition: "The condition of being poisoned; illness caused by exposure to a toxic substance. Often used interchangeably with 'poisoning' or 'intoxication.' The severity depends on the toxin, amount, and how quickly treatment is provided.",
+            category: .general,
+            relatedTerms: ["Acute", "Chronic"],
+            searchKeywords: ["poisoning", "intoxication", "toxic exposure"]
+        ),
+
+        // 49. Acute
+        GlossaryTerm(
+            id: UUID(uuidString: "A0000001-0001-0001-0001-000000000049")!,
+            term: "Acute",
+            pronunciation: "ah-KYOOT",
+            definition: "Describing something that develops quickly and is typically short-term but often severe. Acute toxicosis means symptoms appear rapidly after exposure (within minutes to hours). Contrast with chronic, which develops slowly over time.",
+            category: .general,
+            relatedTerms: ["Chronic", "Toxicosis"],
+            searchKeywords: ["sudden", "rapid onset", "short-term"]
+        ),
+
+        // 50. Chronic
+        GlossaryTerm(
+            id: UUID(uuidString: "A0000001-0001-0001-0001-000000000050")!,
+            term: "Chronic",
+            pronunciation: "KRON-ik",
+            definition: "Describing something that develops slowly over a long period, often from repeated low-level exposures. Chronic toxicosis may take weeks, months, or years to show symptoms. Examples include lead poisoning from repeated small exposures or liver damage from ongoing medication use.",
+            category: .general,
+            relatedTerms: ["Acute", "Toxicosis"],
+            searchKeywords: ["long-term", "gradual", "ongoing", "repeated exposure"]
+        ),
+
+        // 51. Prognosis
+        GlossaryTerm(
+            id: UUID(uuidString: "A0000001-0001-0001-0001-000000000051")!,
+            term: "Prognosis",
+            pronunciation: "prog-NOH-sis",
+            definition: "The expected outcome or course of a condition. A 'good prognosis' means recovery is likely with proper treatment. A 'guarded prognosis' means the outcome is uncertain. Prognosis depends on many factors including the toxin, amount, time to treatment, and the pet's overall health.",
+            category: .general,
+            relatedTerms: ["Supportive Care", "Antidote"],
+            searchKeywords: ["outcome", "recovery", "survival", "chances"]
+        ),
+
+        // 52. Ingestion
+        GlossaryTerm(
+            id: UUID(uuidString: "A0000001-0001-0001-0001-000000000052")!,
+            term: "Ingestion",
+            pronunciation: nil,
+            definition: "Taking a substance into the body by swallowing (eating or drinking). This is the most common route of poisoning in pets. The substance then enters the digestive system where it may be absorbed into the bloodstream.",
+            category: .general,
+            relatedTerms: ["GI Tract", "Decontamination", "Emesis"],
+            searchKeywords: ["eating", "swallowing", "ate", "eaten", "swallowed", "oral"]
+        ),
+
+        // 53. Dermal Exposure
+        GlossaryTerm(
+            id: UUID(uuidString: "A0000001-0001-0001-0001-000000000053")!,
+            term: "Dermal Exposure",
+            pronunciation: nil,
+            definition: "Contact with a toxic substance through the skin. Some toxins can be absorbed through skin, causing local irritation or systemic (whole-body) effects. Pets may also ingest the substance when grooming contaminated fur. Bathing is often recommended to remove the substance.",
+            category: .general,
+            relatedTerms: ["Decontamination"],
+            searchKeywords: ["skin contact", "skin exposure", "topical", "fur contamination", "touched"]
+        ),
+
+        // 54. Inhalation
+        GlossaryTerm(
+            id: UUID(uuidString: "A0000001-0001-0001-0001-000000000054")!,
+            term: "Inhalation",
+            pronunciation: nil,
+            definition: "Breathing a substance into the lungs. Inhaled toxins can cause respiratory irritation, difficulty breathing, or systemic effects after being absorbed into the bloodstream through the lungs. Birds are especially sensitive to inhaled toxins. Moving the pet to fresh air is an important first step.",
+            category: .general,
+            relatedTerms: ["Dyspnea", "Tachypnea"],
+            searchKeywords: ["breathing in", "breathed", "fumes", "smoke", "vapors", "airborne"]
+        ),
+
+        // 55. Aspiration
+        GlossaryTerm(
+            id: UUID(uuidString: "A0000001-0001-0001-0001-000000000055")!,
+            term: "Aspiration",
+            pronunciation: "as-pih-RAY-shun",
+            definition: "Accidentally breathing a substance into the airways and lungs instead of swallowing it. This can happen during vomiting or with oily/petroleum substances. Aspiration pneumonia (lung infection from inhaled material) is a serious complication. This is one reason why inducing vomiting at home can be dangerous.",
+            category: .conditions,
+            relatedTerms: ["Emesis", "Inhalation", "Dyspnea"],
+            searchKeywords: ["aspiration pneumonia", "breathed into lungs", "inhaled vomit"]
+        ),
     ]
 }
