@@ -89,6 +89,13 @@ struct MainTabView: View {
     private func dragGesture(geometry: GeometryProxy) -> some Gesture {
         DragGesture(minimumDistance: 20)
             .onChanged { value in
+                // Exclude drags starting in the species filter bar area
+                // to allow horizontal ScrollView scrolling on filter chips
+                let startY = value.startLocation.y
+                if startY >= 120 && startY <= 260 {
+                    return
+                }
+
                 let horizontal = abs(value.translation.width)
                 let vertical = abs(value.translation.height)
 
@@ -127,6 +134,16 @@ struct MainTabView: View {
                 }
             }
             .onEnded { value in
+                // Exclude drags that started in the filter bar area
+                let startY = value.startLocation.y
+                if startY >= 120 && startY <= 260 {
+                    withAnimation(.spring(response: 0.3, dampingFraction: 0.8)) {
+                        dragOffset = 0
+                    }
+                    isDragging = false
+                    return
+                }
+
                 // If we never engaged (vertical drag), just reset
                 guard isDragging else {
                     dragOffset = 0
