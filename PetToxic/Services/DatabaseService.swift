@@ -13650,6 +13650,132 @@ As with heat-related illness, the damage from hypothermia and frostbite may not 
                     "61b259ac-d3af-4451-a1a4-b050fb70d455",  // Antifreeze & Coolant
                     "c9fb21d1-a66a-418e-a63f-1b754ec048f2"   // Salt
                 ]
+            ),
+
+            // MARK: - Porcupine Quills (Informational)
+            ToxicItem(
+                id: UUID(uuidString: "00112233-4455-6677-8899-aabbccddef28")!,
+                name: "Porcupine Quills",
+                alternateNames: [
+                    "porcupine",
+                    "porcupine quill",
+                    "porcupine encounter",
+                    "quill injury",
+                    "quilled",
+                    "quilled dog",
+                    "quills in dog",
+                    "quills in face",
+                    "quills in mouth",
+                    "porcupine attack",
+                    "quill removal",
+                    "barbed quills",
+                    "north american porcupine"
+                ],
+                categories: [.informational, .outdoorHazards],
+                imageAsset: "porcupines_thumb",
+                description: """
+Porcupine quill injuries occur when a dog (or rarely, other pet) encounters a North American porcupine and receives barbed quills embedded in their skin, face, or mouth. While porcupines are not aggressive, they defend themselves when threatened. Dogs are the most commonly affected pets due to their curious or predatory nature. Quill injuries require prompt veterinary care—attempting removal at home risks serious complications.
+""",
+                toxicityInfo: """
+**Myth vs. Reality**
+
+Contrary to popular belief, porcupines **cannot "shoot" their quills**. This is a common misconception. Quills are loosely attached to the porcupine's skin and detach easily on contact when a dog investigates or attacks. The porcupine may swing its heavily-quilled tail defensively, but the quills themselves are not projectile.
+
+**Porcupine quills are not venomous.** The quills contain no venom, poison, or toxin—the danger is entirely mechanical. Injuries result from the physical penetration of barbed quills and subsequent complications like migration, infection, and tissue damage.
+
+**Why Quills Are Dangerous**
+
+Each porcupine carries approximately 30,000 quills covering its body. The quills are hollow, 2-3 inches long, and have microscopic backward-facing barbs along the shaft. These barbs cause quills to migrate deeper into tissue over time—studies show they can travel at approximately 1 mm per hour. This is why quills never "work themselves out" and instead continue moving inward, potentially reaching joints, eyes, the chest cavity, or even vital organs like the heart or brain.
+
+The longer quills remain embedded, the more brittle and rigid they become, making complete removal increasingly difficult. **Time from injury to treatment is the most critical factor in preventing complications.**
+
+**Geographic Distribution**
+
+North American porcupines are found throughout:
+• **Canada:** From Nova Scotia to Alaska and the Yukon
+• **Northeastern United States:** New England states, extending south through the Appalachian Mountains to West Virginia and Maryland
+• **Western United States:** Rocky Mountains, Pacific Northwest, Great Basin region
+• **Northern Mexico:** Mountain regions
+
+Porcupines inhabit coniferous and mixed forests, shrublands, grasslands, and even tundra. They are commonly encountered in wooded, rural, or mountainous areas where dogs may roam off-leash.
+
+**Seasonal Risk**
+
+Encounters peak in **spring and fall** when porcupines are more active with foraging and mating behaviors. Porcupines are primarily nocturnal and most active at **dusk and dawn**. Dogs allowed to roam freely during evening hours in wooded or rural areas are at highest risk. Encounters are less common in winter when porcupines spend more time in dens.
+
+**What NOT to Do**
+
+• **Do NOT attempt to remove quills at home**—the process is extremely painful, risks breaking quills (leaving tips embedded), and can push quills deeper
+• **Do NOT cut the quills**—this does NOT "deflate" them (another myth); it causes them to splinter and makes removal harder
+• **Do NOT wait to seek care**—time from injury to treatment is the most important factor in preventing complications
+• **Do NOT let your dog rub the affected area**—this can drive quills deeper
+
+**Interesting Facts**
+
+• Porcupines are the second-largest rodent in North America (after beavers)
+• Porcupine quills have natural antibiotic properties—likely evolved because porcupines occasionally quill themselves
+• Porcupines are nearsighted and slow-moving, relying on their quills for defense rather than speed
+• The word "porcupine" comes from the Latin for "thorn pig"
+""",
+                onsetTime: OnsetTime(
+                    early: "Immediate pain and visible quills upon contact",
+                    delayed: "Quill migration, abscess formation, and complications can develop over days to weeks if quills are not removed"
+                ),
+                symptoms: [
+                    "Visible quills protruding from skin, face, or mouth",
+                    "Pawing at face or mouth",
+                    "Excessive drooling or difficulty swallowing",
+                    "Reluctance to eat or drink",
+                    "Swelling at quill sites",
+                    "Pain and vocalization",
+                    "Lameness (if quills in limbs)",
+                    "Rubbing face on ground or furniture",
+                    "Lethargy or hiding",
+                    "Signs of infection (swelling, discharge, fever) if quills remain embedded"
+                ],
+                entrySeverity: nil,
+                speciesRisks: [
+                    SpeciesRisk(
+                        species: .dog,
+                        severity: .moderate,
+                        notes: "Most commonly affected species. Dogs often approach porcupines out of curiosity or predatory instinct and frequently become \"repeat offenders.\" Siberian huskies, Rottweilers, and German shepherd mixes are overrepresented in veterinary studies. Requires veterinary removal under sedation or anesthesia."
+                    ),
+                    SpeciesRisk(
+                        species: .cat,
+                        severity: .low,
+                        notes: "Cats rarely encounter porcupines due to their more cautious nature and tend to learn from negative experiences. When affected, same veterinary removal is required."
+                    ),
+                    SpeciesRisk(
+                        species: .smallMammal,
+                        severity: .low,
+                        notes: "Extremely unlikely to encounter porcupines in typical pet settings. Would require veterinary care if somehow affected."
+                    ),
+                    SpeciesRisk(
+                        species: .bird,
+                        severity: .low,
+                        notes: "Not a realistic exposure scenario for pet birds."
+                    ),
+                    SpeciesRisk(
+                        species: .reptile,
+                        severity: .low,
+                        notes: "Not a realistic exposure scenario for pet reptiles."
+                    )
+                ],
+                preventionTips: [
+                    "Keep dogs on leash in wooded or rural areas, especially at dusk and dawn when porcupines are most active",
+                    "Avoid letting dogs roam freely at night in areas where porcupines are present",
+                    "Be aware of porcupine habitat—forested and mountainous regions throughout much of North America",
+                    "Supervise dogs closely when camping or hiking",
+                    "Train dogs to respond to recall commands",
+                    "Be aware that dogs who have been quilled once often repeat the behavior"
+                ],
+                sources: [
+                    "Cornell University College of Veterinary Medicine",
+                    "VCA Animal Hospitals",
+                    "Canadian Veterinary Journal - Porcupine quill injuries in dogs: A retrospective of 296 cases (1998–2002)",
+                    "Smithsonian's National Zoo"
+                ],
+                relatedEntries: nil
             )
         ]
     }
