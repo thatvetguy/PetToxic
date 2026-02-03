@@ -1343,5 +1343,172 @@ class GlossaryService {
             relatedTerms: ["Aspiration", "Dyspnea", "Pulmonary", "Emesis", "Contraindicated"],
             searchKeywords: ["lung infection", "inhaled vomit", "breathing problems after vomiting"]
         ),
+
+        // MARK: - Batch 7 (Session 101)
+
+        // 116. Oxygen Therapy
+        GlossaryTerm(
+            id: UUID(uuidString: "A0000001-0001-0001-0001-000000000092")!,
+            term: "Oxygen Therapy",
+            pronunciation: nil,
+            definition: "Providing supplemental oxygen to a patient who isn't getting enough on their own. May be delivered via face mask, nasal prongs, oxygen cage, or in severe cases, mechanical ventilation. Essential for treating hypoxia from respiratory problems, methemoglobinemia, carbon monoxide poisoning, or other conditions affecting oxygen delivery.",
+            category: .treatment,
+            relatedTerms: ["Hypoxia", "Cyanosis", "Dyspnea", "Supportive Care"],
+            searchKeywords: ["supplemental oxygen", "oxygen cage", "oxygen mask", "O2"]
+        ),
+
+        // 117. Blood Transfusion
+        GlossaryTerm(
+            id: UUID(uuidString: "A0000001-0001-0001-0001-000000000093")!,
+            term: "Blood Transfusion",
+            pronunciation: nil,
+            definition: "Transfer of whole blood or packed red blood cells from a donor to a patient. Used when severe blood loss or destruction of red blood cells (hemolysis) causes life-threatening anemia. May be needed in severe anticoagulant rodenticide poisoning, Heinz body anemia, or other conditions causing significant blood loss or red cell destruction.",
+            category: .treatment,
+            relatedTerms: ["Anemia", "Coagulopathy", "Hemolysis", "Supportive Care"],
+            searchKeywords: ["blood donation", "packed red blood cells", "pRBCs", "transfuse"]
+        ),
+
+        // 118. Plasma Transfusion
+        GlossaryTerm(
+            id: UUID(uuidString: "A0000001-0001-0001-0001-000000000094")!,
+            term: "Plasma Transfusion",
+            pronunciation: nil,
+            definition: "Transfer of plasma (the liquid portion of blood containing clotting factors and proteins) from a donor. Used to replace clotting factors in coagulopathy, particularly anticoagulant rodenticide poisoning when active bleeding is present. Fresh frozen plasma (FFP) is the most common form used.",
+            category: .treatment,
+            relatedTerms: ["Coagulopathy", "Vitamin K Therapy", "Serum", "Supportive Care"],
+            searchKeywords: ["fresh frozen plasma", "FFP", "clotting factors", "plasma donation"]
+        ),
+
+        // 119. Sedation
+        GlossaryTerm(
+            id: UUID(uuidString: "A0000001-0001-0001-0001-000000000095")!,
+            term: "Sedation",
+            pronunciation: nil,
+            definition: "Using medications to calm a patient, reduce anxiety, or control dangerous symptoms like severe agitation or tremors. Sedation ranges from mild calming to deep unconsciousness. In toxicology, often used to control tremors, prevent injury during seizures, and reduce metabolic demand (which lowers body temperature in hyperthermia).",
+            category: .treatment,
+            relatedTerms: ["Agitation", "Tremors", "Seizures", "Supportive Care"],
+            searchKeywords: ["calm", "sedate", "tranquilize", "sedatives"]
+        ),
+
+        // 120. Muscle Relaxants
+        GlossaryTerm(
+            id: UUID(uuidString: "A0000001-0001-0001-0001-000000000096")!,
+            term: "Muscle Relaxants",
+            pronunciation: nil,
+            definition: "Medications that reduce muscle tension, spasms, or rigidity. In toxicology, commonly used to control severe tremors (methocarbamol is frequently used). Different from sedatives—muscle relaxants specifically target muscle activity while sedatives affect the brain. Often used alongside sedation for tremorgenic toxins.",
+            category: .treatment,
+            relatedTerms: ["Tremors", "Fasciculations", "Sedation", "Supportive Care"],
+            searchKeywords: ["methocarbamol", "Robaxin", "muscle spasms", "tremor control"]
+        ),
+
+        // 121. Thermoregulation
+        GlossaryTerm(
+            id: UUID(uuidString: "A0000001-0001-0001-0001-000000000097")!,
+            term: "Thermoregulation",
+            pronunciation: "ther-moh-reg-yoo-LAY-shun",
+            definition: "Managing body temperature—either cooling an overheated patient or warming a cold one. Critical in toxicology because many toxins cause hyperthermia (tremors, seizures generate heat) or hypothermia (CNS depression reduces heat production). Methods include cooling fans, cool IV fluids, ice packs, or warming blankets.",
+            category: .treatment,
+            relatedTerms: ["Hyperthermia", "Hypothermia", "Supportive Care"],
+            searchKeywords: ["cooling", "warming", "temperature control", "temperature management"]
+        ),
+
+        // 122. Fluid Therapy
+        GlossaryTerm(
+            id: UUID(uuidString: "A0000001-0001-0001-0001-000000000098")!,
+            term: "Fluid Therapy",
+            pronunciation: nil,
+            definition: "Administration of fluids to treat dehydration, maintain blood pressure, support organ function, or help flush toxins from the body. Usually given intravenously (IV fluids), but can also be given subcutaneously (under the skin). One of the most common and important supportive care treatments in toxicology.",
+            category: .treatment,
+            relatedTerms: ["IV Fluids", "Dehydration", "Supportive Care", "Nephrotoxicity"],
+            searchKeywords: ["hydration", "IV drip", "subcutaneous fluids", "rehydration"]
+        ),
+
+        // 123. Enzyme Inhibition
+        GlossaryTerm(
+            id: UUID(uuidString: "A0000001-0001-0001-0001-000000000099")!,
+            term: "Enzyme Inhibition",
+            pronunciation: nil,
+            definition: "When a substance blocks or reduces the activity of an enzyme (a protein that speeds up chemical reactions in the body). This is how many toxins cause harm—for example, organophosphates inhibit acetylcholinesterase (an enzyme that breaks down a nerve signal chemical), causing nerve signals to continue uncontrolled.",
+            category: .mechanisms,
+            relatedTerms: ["Neurotoxicity", "Metabolite"],
+            searchKeywords: ["enzyme blocker", "inhibitor", "acetylcholinesterase", "AChE"]
+        ),
+
+        // 124. Receptor Agonist
+        GlossaryTerm(
+            id: UUID(uuidString: "A0000001-0001-0001-0001-00000000009A")!,
+            term: "Receptor Agonist",
+            pronunciation: "AG-oh-nist",
+            definition: "A substance that binds to a receptor and activates it, triggering a response. Many drugs and toxins work this way—they mimic the body's natural signaling molecules. For example, opioids are agonists at opioid receptors, causing pain relief but also respiratory depression when overstimulated.",
+            category: .mechanisms,
+            relatedTerms: ["Receptor Antagonist", "Neurotoxicity"],
+            searchKeywords: ["activator", "stimulates receptor", "mimics"]
+        ),
+
+        // 125. Receptor Antagonist
+        GlossaryTerm(
+            id: UUID(uuidString: "A0000001-0001-0001-0001-00000000009B")!,
+            term: "Receptor Antagonist",
+            pronunciation: "an-TAG-oh-nist",
+            definition: "A substance that binds to a receptor and blocks it, preventing activation. Many antidotes work this way—they compete with the toxin for the receptor. For example, naloxone is an opioid antagonist that reverses opioid overdose by blocking opioid receptors. Also called a 'blocker.'",
+            category: .mechanisms,
+            relatedTerms: ["Receptor Agonist", "Antidote"],
+            searchKeywords: ["blocker", "blocks receptor", "reversal agent", "competitive inhibitor"]
+        ),
+
+        // 126. Toxic Dose
+        GlossaryTerm(
+            id: UUID(uuidString: "A0000001-0001-0001-0001-00000000009C")!,
+            term: "Toxic Dose",
+            pronunciation: nil,
+            definition: "The amount of a substance needed to cause harmful effects. Varies based on the specific toxin, species, body size, and individual sensitivity. Veterinarians use published toxic dose ranges to assess risk, but because of individual variation, any exposure to a known toxin warrants professional evaluation.",
+            category: .general,
+            relatedTerms: ["Dose-Dependent", "Idiosyncratic Reaction", "Body Weight"],
+            searchKeywords: ["how much is toxic", "dangerous amount", "poisonous dose"]
+        ),
+
+        // 127. Margin of Safety
+        GlossaryTerm(
+            id: UUID(uuidString: "A0000001-0001-0001-0001-00000000009D")!,
+            term: "Margin of Safety",
+            pronunciation: nil,
+            definition: "The difference between a therapeutic dose and a toxic dose. Substances with a 'narrow margin of safety' become dangerous at doses only slightly above the effective dose—these are more likely to cause accidental poisoning. Substances with a 'wide margin' are safer because toxicity requires much higher doses.",
+            category: .general,
+            relatedTerms: ["Toxic Dose", "Dose-Dependent"],
+            searchKeywords: ["therapeutic index", "safety window", "narrow margin", "wide margin"]
+        ),
+
+        // 128. Species Sensitivity
+        GlossaryTerm(
+            id: UUID(uuidString: "A0000001-0001-0001-0001-00000000009E")!,
+            term: "Species Sensitivity",
+            pronunciation: nil,
+            definition: "Different animal species can have vastly different reactions to the same substance. Cats lack certain liver enzymes, making them extremely sensitive to drugs safe for dogs (like permethrin). Birds have highly efficient respiratory systems, making inhaled toxins more dangerous. This is why pet toxicity information must be species-specific.",
+            category: .general,
+            relatedTerms: ["Metabolite", "Hepatic"],
+            searchKeywords: ["cats vs dogs", "species differences", "why cats are different", "bird sensitivity"]
+        ),
+
+        // 129. Decontamination Window
+        GlossaryTerm(
+            id: UUID(uuidString: "A0000001-0001-0001-0001-00000000009F")!,
+            term: "Decontamination Window",
+            pronunciation: nil,
+            definition: "The limited time after ingestion when decontamination (inducing vomiting, giving activated charcoal) can be effective. Generally, emesis is most useful within 1-2 hours of ingestion before the toxin moves deeper into the GI tract or is absorbed. After this window, decontamination may be ineffective or even harmful.",
+            category: .general,
+            relatedTerms: ["Decontamination", "Emesis", "Activated Charcoal", "Time Since Exposure"],
+            searchKeywords: ["how long after eating", "when to induce vomiting", "time limit", "too late"]
+        ),
+
+        // 130. Secondary Exposure
+        GlossaryTerm(
+            id: UUID(uuidString: "A0000001-0001-0001-0001-0000000000A0")!,
+            term: "Secondary Exposure",
+            pronunciation: nil,
+            definition: "Poisoning that occurs indirectly, not from the original source. Examples include: a pet grooming toxin-contaminated fur and ingesting it, a cat eating a rodent that consumed rodenticide, or a pet licking antifreeze off another pet's paws. Secondary exposure is often overlooked but can be just as dangerous as direct exposure.",
+            category: .general,
+            relatedTerms: ["Dermal Exposure", "Ingestion"],
+            searchKeywords: ["relay toxicosis", "indirect poisoning", "grooming", "eating poisoned rodent"]
+        ),
     ]
 }
