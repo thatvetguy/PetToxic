@@ -2011,5 +2011,183 @@ class GlossaryService {
             relatedTerms: ["Toxic Dose", "Dose-Dependent"],
             searchKeywords: ["lethal dose", "median lethal dose", "toxicity testing"]
         ),
+
+        // MARK: - Batch 11 (Session 101) — FINAL BATCH
+
+        // 176. Strabismus
+        GlossaryTerm(
+            id: UUID(uuidString: "A0000001-0001-0001-0001-0000000000CE")!,
+            term: "Strabismus",
+            pronunciation: "strah-BIZ-mus",
+            definition: "Abnormal positioning of the eyes—they don't look in the same direction. One or both eyes may deviate inward, outward, up, or down. Can indicate neurological problems, vestibular disease, or certain toxin effects. May appear suddenly with some poisonings. Different from nystagmus (rhythmic eye movement).",
+            category: .symptoms,
+            relatedTerms: ["Nystagmus", "Neurotoxicity", "CNS"],
+            searchKeywords: ["crossed eyes", "eye deviation", "eyes pointing different directions", "lazy eye"]
+        ),
+
+        // 177. Thrombocytopenia
+        GlossaryTerm(
+            id: UUID(uuidString: "A0000001-0001-0001-0001-0000000000CF")!,
+            term: "Thrombocytopenia",
+            pronunciation: "throm-boh-sy-toh-PEE-nee-ah",
+            definition: "Abnormally low platelet count. Since platelets are essential for clotting, low levels cause bleeding problems—petechiae, bruising, prolonged bleeding from wounds, and internal hemorrhage. Can result from bone marrow suppression, immune destruction, or consumption (as in DIC). Different mechanism than anticoagulant rodenticide poisoning.",
+            category: .conditions,
+            relatedTerms: ["Platelets", "Coagulopathy", "Petechiae", "Bone Marrow"],
+            searchKeywords: ["low platelets", "platelet deficiency", "bleeding disorder"]
+        ),
+
+        // 178. Myocarditis
+        GlossaryTerm(
+            id: UUID(uuidString: "A0000001-0001-0001-0001-0000000000D0")!,
+            term: "Myocarditis",
+            pronunciation: "my-oh-kar-DY-tis",
+            definition: "Inflammation of the heart muscle (myocardium). Can be caused by infections, immune reactions, or certain toxins. Results in weakened heart contractions, arrhythmias, and potentially heart failure. Signs include weakness, exercise intolerance, rapid or irregular heartbeat, and breathing difficulty. Requires intensive supportive care.",
+            category: .conditions,
+            relatedTerms: ["Myocardium", "Cardiotoxicity", "Arrhythmia", "Cardiomyopathy"],
+            searchKeywords: ["heart inflammation", "inflamed heart", "heart muscle inflammation"]
+        ),
+
+        // 179. Cornea
+        GlossaryTerm(
+            id: UUID(uuidString: "A0000001-0001-0001-0001-0000000000D1")!,
+            term: "Cornea",
+            pronunciation: "KOR-nee-ah",
+            definition: "The clear, dome-shaped outer layer at the front of the eye. Caustic substances (acids, bases, some plant saps) can burn the cornea, causing pain, cloudiness, ulceration, and potentially permanent vision damage. Eye exposure to irritants requires immediate flushing with water or saline and veterinary evaluation.",
+            category: .anatomy,
+            relatedTerms: ["Dermal Exposure", "Sudden Blindness"],
+            searchKeywords: ["eye surface", "clear part of eye", "eye burn"]
+        ),
+
+        // 180. Retina
+        GlossaryTerm(
+            id: UUID(uuidString: "A0000001-0001-0001-0001-0000000000D2")!,
+            term: "Retina",
+            pronunciation: "RET-ih-nah",
+            definition: "The light-sensitive tissue lining the back of the eye that converts light into nerve signals for vision. Some toxins damage the retina directly, while others cause retinal detachment (usually from severe hypertension). Retinal damage can cause sudden blindness. The retina is examined with an ophthalmoscope.",
+            category: .anatomy,
+            relatedTerms: ["Sudden Blindness", "Hypertension"],
+            searchKeywords: ["back of eye", "vision tissue", "retinal detachment"]
+        ),
+
+        // 181. Pharmacodynamics
+        GlossaryTerm(
+            id: UUID(uuidString: "A0000001-0001-0001-0001-0000000000D3")!,
+            term: "Pharmacodynamics",
+            pronunciation: "far-mah-koh-dy-NAM-iks",
+            definition: "The study of what a substance does TO the body—its effects on organs, receptors, and biological processes. While pharmacokinetics is 'what the body does to the drug,' pharmacodynamics is 'what the drug does to the body.' Understanding both helps predict toxicity patterns and treatment approaches.",
+            category: .general,
+            relatedTerms: ["Pharmacokinetics", "Receptor Agonist", "Receptor Antagonist"],
+            searchKeywords: ["drug effects", "how drugs work", "mechanism of action"]
+        ),
+
+        // 182. Clearance
+        GlossaryTerm(
+            id: UUID(uuidString: "A0000001-0001-0001-0001-0000000000D4")!,
+            term: "Clearance",
+            pronunciation: nil,
+            definition: "The rate at which a substance is removed from the body, usually expressed as volume of blood cleared per unit time. Depends on liver metabolism, kidney excretion, and other elimination routes. Reduced clearance (from liver or kidney disease) means toxins stay in the body longer, potentially worsening effects.",
+            category: .general,
+            relatedTerms: ["Half-life", "Hepatic", "Renal", "Pharmacokinetics"],
+            searchKeywords: ["elimination rate", "removal rate", "how fast eliminated"]
+        ),
+
+        // 183. Steady State
+        GlossaryTerm(
+            id: UUID(uuidString: "A0000001-0001-0001-0001-0000000000D5")!,
+            term: "Steady State",
+            pronunciation: nil,
+            definition: "When the amount of substance entering the body equals the amount being eliminated—blood levels remain constant. Important for medications given repeatedly: it takes about 4-5 half-lives to reach steady state. In toxicology, helps predict when blood levels will peak with chronic exposure or repeated dosing.",
+            category: .general,
+            relatedTerms: ["Half-life", "Chronic", "Clearance"],
+            searchKeywords: ["equilibrium", "stable levels", "constant concentration"]
+        ),
+
+        // 184. Loading Dose
+        GlossaryTerm(
+            id: UUID(uuidString: "A0000001-0001-0001-0001-0000000000D6")!,
+            term: "Loading Dose",
+            pronunciation: nil,
+            definition: "A larger initial dose given to rapidly achieve effective blood levels, followed by smaller maintenance doses. Used when waiting for steady state would take too long. For example, Vitamin K therapy for rodenticide poisoning often starts with a loading dose to quickly restore clotting ability while maintenance doses continue protection.",
+            category: .treatment,
+            relatedTerms: ["Maintenance Dose", "Steady State", "Vitamin K Therapy"],
+            searchKeywords: ["initial dose", "first dose", "bolus dose"]
+        ),
+
+        // 185. Maintenance Dose
+        GlossaryTerm(
+            id: UUID(uuidString: "A0000001-0001-0001-0001-0000000000D7")!,
+            term: "Maintenance Dose",
+            pronunciation: nil,
+            definition: "The regular, ongoing dose given to maintain effective blood levels after a loading dose or once steady state is reached. Designed to replace the amount eliminated between doses. Vitamin K therapy for rodenticide poisoning requires maintenance dosing for weeks because the toxin persists in the body.",
+            category: .treatment,
+            relatedTerms: ["Loading Dose", "Steady State", "Half-life"],
+            searchKeywords: ["ongoing dose", "regular dose", "continuing treatment"]
+        ),
+
+        // 186. Trough Level
+        GlossaryTerm(
+            id: UUID(uuidString: "A0000001-0001-0001-0001-0000000000D8")!,
+            term: "Trough Level",
+            pronunciation: nil,
+            definition: "The lowest concentration of a substance in the blood, occurring just before the next dose is given. Monitoring trough levels ensures levels don't drop too low (losing effectiveness) or indicate accumulation. For some treatments, blood is drawn at the trough to assess whether dosing is appropriate.",
+            category: .general,
+            relatedTerms: ["Peak Level", "Monitoring", "Steady State"],
+            searchKeywords: ["lowest level", "minimum concentration", "pre-dose level"]
+        ),
+
+        // 187. Peak Level
+        GlossaryTerm(
+            id: UUID(uuidString: "A0000001-0001-0001-0001-0000000000D9")!,
+            term: "Peak Level",
+            pronunciation: nil,
+            definition: "The highest concentration of a substance in the blood, occurring shortly after a dose is absorbed. High peak levels can cause toxicity even if average levels are acceptable. Monitoring peak levels helps ensure they don't reach dangerous heights. The time to peak varies based on how the substance is given.",
+            category: .general,
+            relatedTerms: ["Trough Level", "Monitoring", "Bioavailability"],
+            searchKeywords: ["highest level", "maximum concentration", "Cmax"]
+        ),
+
+        // 188. NOAEL
+        GlossaryTerm(
+            id: UUID(uuidString: "A0000001-0001-0001-0001-0000000000DA")!,
+            term: "NOAEL",
+            pronunciation: "NO-el",
+            definition: "No Observed Adverse Effect Level—the highest dose in toxicity studies that causes no detectable harm. Used in research to establish safety margins for chemicals, medications, and food additives. Like LD50, this is a research term not useful for clinical decisions about individual pet exposures.",
+            category: .general,
+            relatedTerms: ["Toxic Dose", "LD50", "Margin of Safety"],
+            searchKeywords: ["no effect level", "safe dose research", "safety testing"]
+        ),
+
+        // 189. Threshold Dose
+        GlossaryTerm(
+            id: UUID(uuidString: "A0000001-0001-0001-0001-0000000000DB")!,
+            term: "Threshold Dose",
+            pronunciation: nil,
+            definition: "The minimum dose needed to produce a detectable effect. Below this threshold, no effect occurs; above it, effects appear and increase with dose. Most toxins have thresholds, but individual variation means there's no guaranteed 'safe' amount—one pet's threshold may be much lower than average.",
+            category: .general,
+            relatedTerms: ["Toxic Dose", "Dose-Dependent", "Idiosyncratic Reaction"],
+            searchKeywords: ["minimum toxic dose", "lowest effective dose", "effect threshold"]
+        ),
+
+        // 190. Ocular Decontamination
+        GlossaryTerm(
+            id: UUID(uuidString: "A0000001-0001-0001-0001-0000000000DC")!,
+            term: "Ocular Decontamination",
+            pronunciation: nil,
+            definition: "Flushing the eyes with large amounts of water or saline to remove toxic substances. Should be done immediately for any eye exposure to chemicals, irritants, or plant saps—before even calling the vet. Use room temperature water, hold eyelids open, and flush for 15-20 minutes. Then seek veterinary care.",
+            category: .treatment,
+            relatedTerms: ["Decontamination", "Cornea", "Dermal Exposure"],
+            searchKeywords: ["eye flush", "eye wash", "eye irrigation", "eye rinsing"]
+        ),
+
+        // 191. Dermal Decontamination
+        GlossaryTerm(
+            id: UUID(uuidString: "A0000001-0001-0001-0001-0000000000DD")!,
+            term: "Dermal Decontamination",
+            pronunciation: nil,
+            definition: "Removing toxic substances from the skin and fur, usually by bathing with mild dish soap (like Dawn) and lukewarm water. Important because pets groom themselves and can ingest toxins from their fur. Wear gloves to protect yourself. For oily substances, multiple washes may be needed. Dry the pet to prevent hypothermia.",
+            category: .treatment,
+            relatedTerms: ["Decontamination", "Dermal Exposure", "Secondary Exposure"],
+            searchKeywords: ["bathing", "washing off toxin", "skin decontamination", "fur wash"]
+        ),
     ]
 }
