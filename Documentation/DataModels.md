@@ -17,6 +17,7 @@ struct ToxicItem: Identifiable, Codable, Hashable {
     let toxicityInfo: String
     let onsetTime: OnsetTime?       // Timing of symptom onset
     let symptoms: [String]
+    let entrySeverity: Severity?    // Overall entry severity (nil for Informational)
     let speciesRisks: [SpeciesRisk] // Can be empty for informational entries
     let preventionTips: [String]?
     let sources: [String]
