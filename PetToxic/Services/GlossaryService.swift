@@ -1677,5 +1677,172 @@ class GlossaryService {
             relatedTerms: ["Hepatotoxicity", "Cardiotoxicity", "Rhabdomyolysis"],
             searchKeywords: ["cell energy", "cellular damage", "mitochondria damage"]
         ),
+
+        // MARK: - Batch 9 (Session 101)
+
+        // 146. Stranguria
+        GlossaryTerm(
+            id: UUID(uuidString: "A0000001-0001-0001-0001-0000000000B0")!,
+            term: "Stranguria",
+            pronunciation: "stran-GOO-ree-ah",
+            definition: "Painful, difficult urination with straining. The pet may posture repeatedly to urinate, produce only small amounts, vocalize, or lick the genital area. Can indicate urinary obstruction (emergency in male cats), bladder irritation from toxins, or urinary tract infection. If your pet is straining and not producing urine, seek emergency care immediately.",
+            category: .symptoms,
+            relatedTerms: ["Hematuria", "Renal", "Nephrotoxicity"],
+            searchKeywords: ["straining to urinate", "painful urination", "can't pee", "difficulty urinating"]
+        ),
+
+        // 147. Tenesmus
+        GlossaryTerm(
+            id: UUID(uuidString: "A0000001-0001-0001-0001-0000000000B1")!,
+            term: "Tenesmus",
+            pronunciation: "teh-NEZ-mus",
+            definition: "Straining to defecate, often with little or no result. The pet repeatedly assumes a posture to have a bowel movement but produces little or nothing, or only small amounts of mucus or blood. Can indicate GI irritation, obstruction, or colitis. Often confused with constipation or urinary straining.",
+            category: .symptoms,
+            relatedTerms: ["Diarrhea", "GI Tract", "Obstruction"],
+            searchKeywords: ["straining to poop", "can't defecate", "straining bowel movement"]
+        ),
+
+        // 148. Anisocoria
+        GlossaryTerm(
+            id: UUID(uuidString: "A0000001-0001-0001-0001-0000000000B2")!,
+            term: "Anisocoria",
+            pronunciation: "an-eye-soh-KOR-ee-ah",
+            definition: "Unequal pupil sizes—one pupil larger or smaller than the other. Can indicate neurological problems, eye injury, or certain toxin effects. Some toxins cause both pupils to dilate (mydriasis) or constrict (miosis), but asymmetry suggests a focal problem and warrants immediate veterinary evaluation.",
+            category: .symptoms,
+            relatedTerms: ["Mydriasis", "Miosis", "CNS", "Neurotoxicity"],
+            searchKeywords: ["unequal pupils", "different pupil sizes", "one pupil bigger"]
+        ),
+
+        // 149. Pruritus
+        GlossaryTerm(
+            id: UUID(uuidString: "A0000001-0001-0001-0001-0000000000B3")!,
+            term: "Pruritus",
+            pronunciation: "proo-RY-tus",
+            definition: "Itching—the sensation that causes the desire to scratch, lick, or rub. While often associated with allergies or parasites, some toxin exposures (especially skin contact with irritants or allergic reactions) can cause intense pruritus. The pet may scratch, chew at skin, rub against objects, or have red irritated skin.",
+            category: .symptoms,
+            relatedTerms: ["Dermal Exposure", "Anaphylaxis"],
+            searchKeywords: ["itching", "itchy", "scratching", "skin irritation"]
+        ),
+
+        // 150. Atropine
+        GlossaryTerm(
+            id: UUID(uuidString: "A0000001-0001-0001-0001-0000000000B4")!,
+            term: "Atropine",
+            pronunciation: "AT-roh-peen",
+            definition: "A medication used as an antidote for organophosphate and carbamate insecticide poisoning. It blocks the excessive nerve signaling caused by these toxins, reducing salivation, bronchial secretions, and slowing dangerous gut activity. Must be given by a veterinarian and often requires repeated dosing. Also used in some cardiac emergencies.",
+            category: .treatment,
+            relatedTerms: ["Antidote", "Receptor Antagonist", "Enzyme Inhibition"],
+            searchKeywords: ["organophosphate antidote", "carbamate antidote", "anticholinergic"]
+        ),
+
+        // 151. 2-PAM (Pralidoxime)
+        GlossaryTerm(
+            id: UUID(uuidString: "A0000001-0001-0001-0001-0000000000B5")!,
+            term: "2-PAM (Pralidoxime)",
+            pronunciation: "prah-LID-ox-eem",
+            definition: "A medication used alongside atropine for organophosphate poisoning. While atropine manages symptoms, 2-PAM actually reactivates the inhibited enzyme (acetylcholinesterase) if given early enough. Most effective within the first 24-48 hours. Not effective for carbamate poisoning. Given by injection at veterinary hospitals.",
+            category: .treatment,
+            relatedTerms: ["Atropine", "Antidote", "Enzyme Inhibition"],
+            searchKeywords: ["pralidoxime", "organophosphate treatment", "enzyme reactivator"]
+        ),
+
+        // 152. Fomepizole
+        GlossaryTerm(
+            id: UUID(uuidString: "A0000001-0001-0001-0001-0000000000B6")!,
+            term: "Fomepizole",
+            pronunciation: "foh-MEP-ih-zohl",
+            definition: "The preferred antidote for ethylene glycol (antifreeze) poisoning in dogs. It blocks the enzyme that converts ethylene glycol into its toxic metabolites. Most effective when given within 8-12 hours of ingestion, before kidney damage occurs. Very expensive but highly effective. Less effective in cats, who may need ethanol treatment instead.",
+            category: .treatment,
+            relatedTerms: ["Antidote", "Enzyme Inhibition", "Metabolite", "Acute Kidney Injury"],
+            searchKeywords: ["antifreeze antidote", "ethylene glycol treatment", "Antizol"]
+        ),
+
+        // 153. N-Acetylcysteine (NAC)
+        GlossaryTerm(
+            id: UUID(uuidString: "A0000001-0001-0001-0001-0000000000B7")!,
+            term: "N-Acetylcysteine (NAC)",
+            pronunciation: "en-ah-SEE-til-SIS-teen",
+            definition: "The antidote for acetaminophen (Tylenol) toxicity. It replenishes glutathione, a natural antioxidant that protects cells from acetaminophen's toxic metabolite. Most effective when given early, ideally within 8 hours of ingestion. Also used for some other oxidative toxicities. Given IV at veterinary hospitals.",
+            category: .treatment,
+            relatedTerms: ["Antidote", "Hepatotoxicity", "Oxidative Damage", "Methemoglobinemia"],
+            searchKeywords: ["acetaminophen antidote", "Tylenol antidote", "NAC", "Mucomyst"]
+        ),
+
+        // 154. Methylene Blue
+        GlossaryTerm(
+            id: UUID(uuidString: "A0000001-0001-0001-0001-0000000000B8")!,
+            term: "Methylene Blue",
+            pronunciation: nil,
+            definition: "A medication used to treat methemoglobinemia—it helps convert methemoglobin back to normal hemoglobin, restoring oxygen-carrying capacity. Given IV when methemoglobin levels are dangerously high. Causes blue-green discoloration of urine (normal effect). Used cautiously in cats, who are sensitive to oxidative damage.",
+            category: .treatment,
+            relatedTerms: ["Methemoglobinemia", "Antidote", "Cyanosis", "Hemoglobin"],
+            searchKeywords: ["methemoglobinemia treatment", "blue dye treatment"]
+        ),
+
+        // 155. Pancreas
+        GlossaryTerm(
+            id: UUID(uuidString: "A0000001-0001-0001-0001-0000000000B9")!,
+            term: "Pancreas",
+            pronunciation: "PAN-kree-as",
+            definition: "An organ that produces digestive enzymes and hormones (including insulin). When inflamed (pancreatitis), digestive enzymes can leak and damage surrounding tissue. High-fat foods and certain toxins can trigger pancreatitis. Located near the stomach and small intestine. Pancreatitis causes severe abdominal pain, vomiting, and can be life-threatening.",
+            category: .anatomy,
+            relatedTerms: ["Pancreatitis", "GI Tract"],
+            searchKeywords: ["digestive organ", "insulin"]
+        ),
+
+        // 156. Esophagus
+        GlossaryTerm(
+            id: UUID(uuidString: "A0000001-0001-0001-0001-0000000000BA")!,
+            term: "Esophagus",
+            pronunciation: "eh-SOF-ah-gus",
+            definition: "The muscular tube connecting the mouth to the stomach. Caustic substances (strong acids or bases like drain cleaners) can burn the esophagus on the way down AND potentially again if vomiting is induced—which is why inducing vomiting is contraindicated for caustic ingestions. Esophageal damage can cause strictures (narrowing) requiring long-term management.",
+            category: .anatomy,
+            relatedTerms: ["GI Tract", "Regurgitation", "Contraindicated"],
+            searchKeywords: ["throat", "food pipe", "swallowing tube"]
+        ),
+
+        // 157. Bone Marrow
+        GlossaryTerm(
+            id: UUID(uuidString: "A0000001-0001-0001-0001-0000000000BB")!,
+            term: "Bone Marrow",
+            pronunciation: nil,
+            definition: "Soft tissue inside bones where blood cells are produced—red blood cells, white blood cells, and platelets all originate here. Some toxins suppress bone marrow function, leading to anemia, increased infection risk, and bleeding problems. Bone marrow suppression may not be apparent for days after exposure as existing blood cells are depleted.",
+            category: .anatomy,
+            relatedTerms: ["Anemia", "Platelets", "Hemoglobin"],
+            searchKeywords: ["blood cell production", "blood factory"]
+        ),
+
+        // 158. Spleen
+        GlossaryTerm(
+            id: UUID(uuidString: "A0000001-0001-0001-0001-0000000000BC")!,
+            term: "Spleen",
+            pronunciation: nil,
+            definition: "An organ that filters blood, removes old or damaged red blood cells, and stores blood cells. In Heinz body anemia and other hemolytic conditions, the spleen works overtime removing damaged red blood cells. The spleen may enlarge (splenomegaly) in response to increased workload. Located in the left side of the abdomen.",
+            category: .anatomy,
+            relatedTerms: ["Hemolysis", "Heinz Body Anemia", "Anemia"],
+            searchKeywords: ["blood filter", "red blood cell removal"]
+        ),
+
+        // 159. Myocardium
+        GlossaryTerm(
+            id: UUID(uuidString: "A0000001-0001-0001-0001-0000000000BD")!,
+            term: "Myocardium",
+            pronunciation: "my-oh-KAR-dee-um",
+            definition: "The muscular wall of the heart—the tissue that contracts to pump blood. 'Myocardial damage' means injury to the heart muscle itself. Some toxins (certain plants like oleander, foxglove, and some medications) directly damage the myocardium or disrupt its electrical activity, causing life-threatening cardiac problems.",
+            category: .anatomy,
+            relatedTerms: ["Cardiotoxicity", "Arrhythmia", "Cardiac Arrest"],
+            searchKeywords: ["heart muscle", "heart wall", "cardiac muscle"]
+        ),
+
+        // 160. Nephron
+        GlossaryTerm(
+            id: UUID(uuidString: "A0000001-0001-0001-0001-0000000000BE")!,
+            term: "Nephron",
+            pronunciation: "NEF-ron",
+            definition: "The microscopic functional unit of the kidney—each kidney contains hundreds of thousands of nephrons that filter blood, remove waste, and regulate fluid balance. When nephrons are damaged by toxins (ethylene glycol, lilies, NSAIDs), kidney function declines. Unlike some organs, damaged nephrons generally cannot regenerate.",
+            category: .anatomy,
+            relatedTerms: ["Renal", "Nephrotoxicity", "Acute Kidney Injury"],
+            searchKeywords: ["kidney unit", "kidney cells", "filtration unit"]
+        ),
     ]
 }
