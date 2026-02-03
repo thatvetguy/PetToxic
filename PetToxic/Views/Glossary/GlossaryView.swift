@@ -70,6 +70,17 @@ struct GlossaryView: View {
             .toolbarBackground(.visible, for: .navigationBar)
             .toolbarBackground(Color(red: 0.0, green: 0.25, blue: 0.35), for: .navigationBar)
             .toolbarColorScheme(.dark, for: .navigationBar)
+            .toolbar {
+                ToolbarItem(placement: .topBarTrailing) {
+                    Button {
+                        dismiss()
+                    } label: {
+                        Image(systemName: "xmark.circle.fill")
+                            .font(.title3)
+                            .foregroundStyle(.white.opacity(0.7))
+                    }
+                }
+            }
         }
     }
 
