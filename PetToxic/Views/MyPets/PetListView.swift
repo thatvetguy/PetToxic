@@ -3,53 +3,126 @@ import SwiftData
 
 struct PetListView: View {
     @Environment(\.modelContext) private var modelContext
+    @Environment(\.dismiss) private var dismiss
     @Query(sort: [SortDescriptor(\Pet.sortOrder), SortDescriptor(\Pet.dateCreated)]) private var pets: [Pet]
 
+    var presentedAsSheet: Bool = false
     @State private var showingAddPet = false
 
+    private let tealColor = Color(red: 0.29, green: 0.61, blue: 0.61)
+
     var body: some View {
-        NavigationStack {
-            List {
-                if pets.isEmpty {
-                    ContentUnavailableView(
-                        "No Pets Yet",
-                        systemImage: "pawprint",
-                        description: Text("Add your first pet to get started")
-                    )
-                } else {
-                    ForEach(pets) { pet in
-                        NavigationLink {
-                            PetFormView(pet: pet, isNewPet: false)
+        List {
+            if pets.isEmpty {
+                Section {
+                    VStack(spacing: 20) {
+                        Image(systemName: "pawprint.fill")
+                            .font(.system(size: 60))
+                            .foregroundColor(.white.opacity(0.3))
+
+                        Text("No pets added yet")
+                            .font(.headline)
+                            .foregroundColor(.white.opacity(0.7))
+
+                        Button {
+                            showingAddPet = true
                         } label: {
-                            PetRowView(pet: pet)
+                            HStack {
+                                Image(systemName: "plus.circle.fill")
+                                    .font(.title2)
+                                Text("Add Your First Pet")
+                                    .fontWeight(.semibold)
+                            }
+                            .foregroundColor(.white)
+                            .padding()
+                            .frame(maxWidth: .infinity)
+                            .background(tealColor)
+                            .clipShape(RoundedRectangle(cornerRadius: 12))
                         }
+                        .buttonStyle(.plain)
                     }
-                    .onDelete(perform: deletePets)
-                    .onMove(perform: movePets)
+                    .frame(maxWidth: .infinity)
+                    .padding(.vertical, 40)
+                    .listRowBackground(Color.clear)
+                }
+            } else {
+                ForEach(pets) { pet in
+                    NavigationLink {
+                        PetFormView(pet: pet, isNewPet: false)
+                    } label: {
+                        PetRowView(pet: pet)
+                    }
+                }
+                .onDelete(perform: deletePets)
+                .onMove(perform: movePets)
+
+                // Add Pet button below pet cards
+                if pets.count < PetStore.maxPets {
+                    Section {
+                        Button {
+                            showingAddPet = true
+                        } label: {
+                            HStack {
+                                Image(systemName: "plus.circle.fill")
+                                    .font(.title2)
+                                Text("Add Pet")
+                                    .fontWeight(.semibold)
+                            }
+                            .foregroundColor(.white)
+                            .padding()
+                            .frame(maxWidth: .infinity)
+                            .background(tealColor.opacity(0.3))
+                            .clipShape(RoundedRectangle(cornerRadius: 12))
+                            .overlay(
+                                RoundedRectangle(cornerRadius: 12)
+                                    .stroke(tealColor.opacity(0.5), lineWidth: 1)
+                            )
+                        }
+                        .buttonStyle(.plain)
+                        .listRowBackground(Color.clear)
+                        .listRowInsets(EdgeInsets(top: 8, leading: 16, bottom: 8, trailing: 16))
+                    }
                 }
             }
-            .navigationTitle("My Pets")
-            .toolbar {
+        }
+        .scrollContentBackground(.hidden)
+        .background(
+            LinearGradient(
+                colors: [
+                    Color(red: 0.05, green: 0.15, blue: 0.15),
+                    Color(red: 0.02, green: 0.08, blue: 0.08)
+                ],
+                startPoint: .top,
+                endPoint: .bottom
+            )
+            .ignoresSafeArea()
+        )
+        .navigationTitle("My Pets")
+        .toolbar {
+            if !pets.isEmpty {
                 ToolbarItem(placement: .topBarLeading) {
                     EditButton()
                 }
+            }
 
+            if presentedAsSheet {
                 ToolbarItem(placement: .topBarTrailing) {
                     Button {
-                        showingAddPet = true
+                        dismiss()
                     } label: {
-                        Image(systemName: "plus")
+                        Image(systemName: "xmark.circle.fill")
+                            .font(.title2)
+                            .foregroundStyle(.white.opacity(0.7))
                     }
-                    .disabled(pets.count >= PetStore.maxPets)
                 }
             }
-            .sheet(isPresented: $showingAddPet) {
-                NavigationStack {
-                    PetFormView(
-                        pet: Pet(name: ""),
-                        isNewPet: true
-                    )
-                }
+        }
+        .sheet(isPresented: $showingAddPet) {
+            NavigationStack {
+                PetFormView(
+                    pet: Pet(name: ""),
+                    isNewPet: true
+                )
             }
         }
     }
@@ -115,6 +188,8 @@ struct PetRowView: View {
 }
 
 #Preview {
-    PetListView()
-        .modelContainer(for: Pet.self, inMemory: true)
+    NavigationStack {
+        PetListView(presentedAsSheet: true)
+    }
+    .modelContainer(for: Pet.self, inMemory: true)
 }

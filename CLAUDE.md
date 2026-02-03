@@ -13,6 +13,14 @@ Native iOS reference app for pet owners to quickly look up toxicity information.
 
 ---
 
+## Build & Diagnostics
+
+- **SourceKit false positives:** After file edits, SourceKit diagnostics may report errors like "Cannot find type in scope" or "Ambiguous use of init." These are false positives caused by SourceKit analyzing files in isolation without full project context. **Ignore these.** Always verify with an actual `xcodebuild` build.
+- **Build command:** `xcodebuild -scheme PetToxic -destination 'platform=iOS Simulator,name=iPhone 17 Pro' build`
+- **Available simulators (iOS 26.1):** iPhone 17, iPhone 17 Pro, iPhone 17 Pro Max, iPhone Air, iPhone 16e, iPad Air/Pro/mini variants
+
+---
+
 ## Core Principles
 
 ### 1. OFFLINE FIRST

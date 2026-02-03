@@ -76,7 +76,7 @@ struct MyPetsHomeSection: View {
         }
         .sheet(isPresented: $showingPetList) {
             NavigationStack {
-                PetListView()
+                PetListView(presentedAsSheet: true)
             }
         }
     }
