@@ -792,7 +792,7 @@ class GlossaryService {
             definition: "A substance produced when the body breaks down (metabolizes) something. Some toxins are harmless until the body converts them into dangerous metabolites. For example, ethylene glycol (antifreeze) itself is not the main problem—its metabolites cause kidney failure.",
             category: .mechanisms,
             relatedTerms: ["Hepatic", "Antidote"],
-            searchKeywords: ["breakdown product", "metabolism"]
+            searchKeywords: ["breakdown product"]
         ),
 
         // 67. Half-life
@@ -803,7 +803,7 @@ class GlossaryService {
             definition: "The time it takes for half of a substance to be eliminated from the body. A toxin with a long half-life stays in the system longer, potentially causing prolonged symptoms. This affects how long monitoring and treatment may be needed.",
             category: .mechanisms,
             relatedTerms: ["Metabolite", "Chronic"],
-            searchKeywords: ["elimination", "duration", "how long"]
+            searchKeywords: ["elimination"]
         ),
 
         // 68. Electrolytes
@@ -1420,7 +1420,7 @@ class GlossaryService {
             definition: "When a substance blocks or reduces the activity of an enzyme (a protein that speeds up chemical reactions in the body). This is how many toxins cause harm—for example, organophosphates inhibit acetylcholinesterase (an enzyme that breaks down a nerve signal chemical), causing nerve signals to continue uncontrolled.",
             category: .mechanisms,
             relatedTerms: ["Neurotoxicity", "Metabolite"],
-            searchKeywords: ["enzyme blocker", "inhibitor", "acetylcholinesterase", "AChE"]
+            searchKeywords: ["enzyme blocker", "acetylcholinesterase", "AChE"]
         ),
 
         // 124. Receptor Agonist
@@ -1431,7 +1431,7 @@ class GlossaryService {
             definition: "A substance that binds to a receptor and activates it, triggering a response. Many drugs and toxins work this way—they mimic the body's natural signaling molecules. For example, opioids are agonists at opioid receptors, causing pain relief but also respiratory depression when overstimulated.",
             category: .mechanisms,
             relatedTerms: ["Receptor Antagonist", "Neurotoxicity"],
-            searchKeywords: ["activator", "stimulates receptor", "mimics"]
+            searchKeywords: ["stimulates receptor"]
         ),
 
         // 125. Receptor Antagonist
@@ -1442,7 +1442,7 @@ class GlossaryService {
             definition: "A substance that binds to a receptor and blocks it, preventing activation. Many antidotes work this way—they compete with the toxin for the receptor. For example, naloxone is an opioid antagonist that reverses opioid overdose by blocking opioid receptors. Also called a 'blocker.'",
             category: .mechanisms,
             relatedTerms: ["Receptor Agonist", "Antidote"],
-            searchKeywords: ["blocker", "blocks receptor", "reversal agent", "competitive inhibitor"]
+            searchKeywords: ["blocks receptor", "reversal agent", "competitive inhibitor"]
         ),
 
         // 126. Toxic Dose
@@ -1598,7 +1598,7 @@ class GlossaryService {
             definition: "The proportion of a substance that actually reaches the bloodstream and can cause effects. Not everything ingested is fully absorbed—some passes through unchanged, some is broken down before absorption. A toxin with high bioavailability is more dangerous because more of it reaches the body. Affected by formulation, stomach contents, and other factors.",
             category: .mechanisms,
             relatedTerms: ["Ingestion", "Metabolite", "GI Tract"],
-            searchKeywords: ["absorption", "how much absorbed", "reaches bloodstream"]
+            searchKeywords: ["how much absorbed", "reaches bloodstream"]
         ),
 
         // 141. Body Weight
@@ -1631,7 +1631,7 @@ class GlossaryService {
             definition: "Cellular damage caused by an imbalance between harmful reactive oxygen molecules (free radicals) and the body's ability to neutralize them. Many toxins cause harm through oxidative stress—damaging cell membranes, proteins, and DNA. Onions, garlic, zinc, and acetaminophen (in cats) all cause oxidative damage to red blood cells.",
             category: .mechanisms,
             relatedTerms: ["Oxidative Damage", "Heinz Body Anemia", "Hemolysis"],
-            searchKeywords: ["free radicals", "cell damage", "reactive oxygen"]
+            searchKeywords: ["free radicals", "reactive oxygen"]
         ),
 
         // 144. Protein Binding
@@ -1653,7 +1653,7 @@ class GlossaryService {
             definition: "Damage to mitochondria—the 'power plants' inside cells that produce energy. When mitochondria are damaged, cells can't generate energy and may die. Certain toxins specifically target mitochondria, causing widespread organ damage. This mechanism is involved in some cases of liver failure, heart damage, and muscle breakdown from various toxins.",
             category: .mechanisms,
             relatedTerms: ["Hepatotoxicity", "Cardiotoxicity", "Rhabdomyolysis"],
-            searchKeywords: ["cell energy", "cellular damage", "mitochondria damage"]
+            searchKeywords: ["cell energy", "mitochondria damage"]
         ),
 
         // MARK: - Batch 9 (Session 101)
