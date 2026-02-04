@@ -82,6 +82,9 @@ struct BrowseView: View {
             .navigationDestination(for: ToxicItem.self) { item in
                 ArticleDetailView(item: item, saveSearchTerm: true, searchQuery: searchViewModel.searchText)
             }
+            .navigationDestination(for: CategoryEntry.self) { entry in
+                ArticleDetailView(item: entry.item, sourceCategory: entry.sourceCategory)
+            }
             // NOTE: No onChange(of: navigationPath.count) observer here.
             // Context is managed explicitly: popToGrid()/popNavigation() in
             // MainTabView call returnToGrid(), and view lifecycle callbacks
@@ -304,9 +307,6 @@ struct CategoryListView: View {
         .navigationBarBackButtonHidden(true)
         .toolbarBackground(.hidden, for: .navigationBar)
         .toolbarColorScheme(.dark, for: .navigationBar)
-        .navigationDestination(for: CategoryEntry.self) { entry in
-            ArticleDetailView(item: entry.item, sourceCategory: entry.sourceCategory)
-        }
         .toolbar {
             ToolbarItem(placement: .topBarLeading) {
                 Button {

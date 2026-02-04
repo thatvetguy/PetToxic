@@ -1,13 +1,33 @@
 import SwiftUI
 
 struct ArticleDetailView: View {
-    let item: ToxicItem
+    /// The item passed at initialization. May differ from the displayed item during swipe navigation.
+    private let initialItem: ToxicItem
     var saveSearchTerm: Bool = false
     var searchQuery: String? = nil
 
     /// The category the user navigated from. Nil if opened from search or related entry link.
     /// Used for contextual swipe navigation (next/previous entry within category).
     var sourceCategory: Category? = nil
+
+    init(item: ToxicItem, saveSearchTerm: Bool = false, searchQuery: String? = nil, sourceCategory: Category? = nil) {
+        self.initialItem = item
+        self.saveSearchTerm = saveSearchTerm
+        self.searchQuery = searchQuery
+        self.sourceCategory = sourceCategory
+    }
+
+    /// The currently displayed item. During swipe navigation within a category,
+    /// returns the item at the current context index. Otherwise returns initialItem.
+    private var item: ToxicItem {
+        if sourceCategory != nil,
+           navContext.hasContext,
+           let index = navContext.currentEntryIndex,
+           index >= 0, index < navContext.visibleEntries.count {
+            return navContext.visibleEntries[index]
+        }
+        return initialItem
+    }
 
     @StateObject private var viewModel = ArticleViewModel()
     @State private var isBookmarked = false

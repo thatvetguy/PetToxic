@@ -59,7 +59,10 @@ struct MainTabView: View {
 
     @ViewBuilder
     private func adjacentTabPreview(geometry: GeometryProxy) -> some View {
-        if isInQuickEmergency {
+        if selectedTab == 1 && browseNavigationPath.count > 0 {
+            // Contextual navigation (entry/category swiping) — no adjacent tab preview
+            EmptyView()
+        } else if isInQuickEmergency {
             // In quick emergency: only Home is to the right (swipe left to return)
             if dragOffset < 0 {
                 tabContent(for: 0) // Home
@@ -115,6 +118,12 @@ struct MainTabView: View {
 
                 isDragging = true
                 let translation = value.translation.width
+
+                // Don't slide content during contextual navigation (entry/category swipes).
+                // The swipe is detected by threshold/velocity in onEnded, not by dragOffset.
+                if selectedTab == 1 && browseNavigationPath.count > 0 {
+                    return
+                }
 
                 if isInQuickEmergency {
                     // In quick emergency mode
@@ -326,27 +335,14 @@ struct MainTabView: View {
     }
 
     private func navigateToPreviousEntry() {
-        guard let previousEntry = browseNavContext.previousEntry,
-              let category = browseNavContext.currentCategory else { return }
-        var newPath = NavigationPath()
-        newPath.append(category)
-        newPath.append(CategoryEntry(item: previousEntry, sourceCategory: category))
-        browseNavigationPath = newPath
-        if let currentIndex = browseNavContext.currentEntryIndex, currentIndex > 0 {
-            browseNavContext.navigateToEntryAtIndex(currentIndex - 1)
-        }
+        guard let currentIndex = browseNavContext.currentEntryIndex, currentIndex > 0 else { return }
+        browseNavContext.navigateToEntryAtIndex(currentIndex - 1)
     }
 
     private func navigateToNextEntry() {
-        guard let nextEntry = browseNavContext.nextEntry,
-              let category = browseNavContext.currentCategory else { return }
-        var newPath = NavigationPath()
-        newPath.append(category)
-        newPath.append(CategoryEntry(item: nextEntry, sourceCategory: category))
-        browseNavigationPath = newPath
-        if let currentIndex = browseNavContext.currentEntryIndex {
-            browseNavContext.navigateToEntryAtIndex(currentIndex + 1)
-        }
+        guard let currentIndex = browseNavContext.currentEntryIndex,
+              currentIndex < browseNavContext.visibleEntries.count - 1 else { return }
+        browseNavContext.navigateToEntryAtIndex(currentIndex + 1)
     }
 
     private func navigateToPreviousCategory() {
