@@ -321,8 +321,6 @@ struct MainTabView: View {
     private func navigateToPreviousEntry() {
         guard let previousEntry = browseNavContext.previousEntry,
               let category = browseNavContext.currentCategory else { return }
-        // Flag prevents returnToGrid from firing on transient path count=0
-        browseNavContext.isProgrammaticNavigation = true
         var newPath = NavigationPath()
         newPath.append(category)
         newPath.append(previousEntry)
@@ -330,16 +328,11 @@ struct MainTabView: View {
         if let currentIndex = browseNavContext.currentEntryIndex, currentIndex > 0 {
             browseNavContext.navigateToEntryAtIndex(currentIndex - 1)
         }
-        // Clear flag on next runloop, after all transient path states are processed
-        DispatchQueue.main.async {
-            browseNavContext.isProgrammaticNavigation = false
-        }
     }
 
     private func navigateToNextEntry() {
         guard let nextEntry = browseNavContext.nextEntry,
               let category = browseNavContext.currentCategory else { return }
-        browseNavContext.isProgrammaticNavigation = true
         var newPath = NavigationPath()
         newPath.append(category)
         newPath.append(nextEntry)
@@ -347,34 +340,20 @@ struct MainTabView: View {
         if let currentIndex = browseNavContext.currentEntryIndex {
             browseNavContext.navigateToEntryAtIndex(currentIndex + 1)
         }
-        // Clear flag on next runloop, after all transient path states are processed
-        DispatchQueue.main.async {
-            browseNavContext.isProgrammaticNavigation = false
-        }
     }
 
     private func navigateToPreviousCategory() {
         guard let previousCategory = browseNavContext.previousCategory else { return }
-        browseNavContext.isProgrammaticNavigation = true
         var newPath = NavigationPath()
         newPath.append(previousCategory)
         browseNavigationPath = newPath
-        // Clear flag on next runloop, after all transient path states are processed
-        DispatchQueue.main.async {
-            browseNavContext.isProgrammaticNavigation = false
-        }
     }
 
     private func navigateToNextCategory() {
         guard let nextCategory = browseNavContext.nextCategory else { return }
-        browseNavContext.isProgrammaticNavigation = true
         var newPath = NavigationPath()
         newPath.append(nextCategory)
         browseNavigationPath = newPath
-        // Clear flag on next runloop, after all transient path states are processed
-        DispatchQueue.main.async {
-            browseNavContext.isProgrammaticNavigation = false
-        }
     }
 
     @ViewBuilder

@@ -84,15 +84,14 @@ struct BrowseView: View {
             }
             .onChange(of: navigationPath.count) { oldCount, newCount in
                 if newCount == 0 {
-                    if navContext.isProgrammaticNavigation {
-                        // Transient count=0 during swipe path replacement — ignore
-                        navContext.isProgrammaticNavigation = false
-                    } else {
-                        navContext.returnToGrid()
+                    // NavigationStack may transiently report count=0 during
+                    // programmatic path replacement (swipe navigation). Verify
+                    // the path is genuinely empty after SwiftUI settles.
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.05) {
+                        if navigationPath.count == 0 {
+                            navContext.returnToGrid()
+                        }
                     }
-                } else if navContext.isProgrammaticNavigation {
-                    // Path settled to non-zero count, clear the flag
-                    navContext.isProgrammaticNavigation = false
                 }
             }
         }
@@ -343,9 +342,6 @@ struct CategoryListView: View {
             }
         }
         .onAppear {
-            // Do NOT clear isProgrammaticNavigation here — the BrowseView
-            // onChange(of: navigationPath.count) observer may not have processed
-            // a transient count=0 yet. Clearing here causes a race condition.
             navContext.enterCategoryList(category: category, entries: filteredItems)
         }
         .onChange(of: category) { _, _ in
