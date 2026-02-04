@@ -2193,7 +2193,7 @@ class GlossaryService {
 
     // MARK: - Term Detection (Phase 2)
 
-    /// Finds all glossary terms present in the given text
+    /// Finds all glossary terms present in the given text (whole word matches only)
     /// - Parameter text: The text to scan for glossary terms
     /// - Returns: Array of GlossaryTerm objects found, sorted alphabetically by term name
     func findTerms(in text: String) -> [GlossaryTerm] {
@@ -2202,12 +2202,14 @@ class GlossaryService {
         let lowercasedText = text.lowercased()
 
         return terms.filter { term in
-            if lowercasedText.contains(term.term.lowercased()) {
+            // Check main term name with word boundaries
+            if containsWholeWord(lowercasedText, word: term.term.lowercased()) {
                 return true
             }
+            // Check search keywords with word boundaries
             if let keywords = term.searchKeywords {
                 for keyword in keywords {
-                    if lowercasedText.contains(keyword.lowercased()) {
+                    if containsWholeWord(lowercasedText, word: keyword.lowercased()) {
                         return true
                     }
                 }
@@ -2215,6 +2217,28 @@ class GlossaryService {
             return false
         }
         .sorted { $0.term.localizedCaseInsensitiveCompare($1.term) == .orderedAscending }
+    }
+
+    /// Checks if text contains a word as a whole word (not as part of another word)
+    /// - Parameters:
+    ///   - text: The text to search in (should be lowercased)
+    ///   - word: The word to search for (should be lowercased)
+    /// - Returns: True if the word appears as a complete word in the text
+    private func containsWholeWord(_ text: String, word: String) -> Bool {
+        var searchStart = text.startIndex
+        while let range = text.range(of: word, range: searchStart..<text.endIndex) {
+            let isStartBoundary = range.lowerBound == text.startIndex ||
+                !text[text.index(before: range.lowerBound)].isLetter
+            let isEndBoundary = range.upperBound == text.endIndex ||
+                !text[range.upperBound].isLetter
+
+            if isStartBoundary && isEndBoundary {
+                return true
+            }
+
+            searchStart = range.upperBound
+        }
+        return false
     }
 
     /// Finds glossary terms across multiple strings (useful for symptoms arrays)
