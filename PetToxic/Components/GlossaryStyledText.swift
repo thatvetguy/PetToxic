@@ -49,17 +49,29 @@ struct GlossaryStyledText: View {
         return attributed
     }
 
-    /// Applies teal foreground color to all occurrences of a term
+    /// Applies teal foreground color to the FIRST whole-word occurrence of a term
     private func applyTealColor(to attributed: inout AttributedString, for term: String) {
         let plainText = String(attributed.characters).lowercased()
         let searchTerm = term.lowercased()
 
+        // Search for whole word matches only, highlight first occurrence
         var searchStart = plainText.startIndex
         while let range = plainText.range(of: searchTerm, range: searchStart..<plainText.endIndex) {
-            // Convert String range to AttributedString range
-            if let attrRange = Range(range, in: attributed) {
-                attributed[attrRange].foregroundColor = .teal
+            // Check word boundaries
+            let isStartBoundary = range.lowerBound == plainText.startIndex ||
+                !plainText[plainText.index(before: range.lowerBound)].isLetter
+            let isEndBoundary = range.upperBound == plainText.endIndex ||
+                !plainText[range.upperBound].isLetter
+
+            if isStartBoundary && isEndBoundary {
+                // Found a whole word match — highlight it and stop
+                if let attrRange = Range(range, in: attributed) {
+                    attributed[attrRange].foregroundColor = .teal
+                }
+                return  // Only highlight first occurrence
             }
+
+            // Not a whole word match, keep searching
             searchStart = range.upperBound
         }
     }
