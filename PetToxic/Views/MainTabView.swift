@@ -1,5 +1,11 @@
 import SwiftUI
 
+/// Direction of a completed swipe gesture
+private enum SwipeDirection {
+    case back    // left-to-right finger movement (→) - goes to previous
+    case forward // right-to-left finger movement (←) - goes to next
+}
+
 struct MainTabView: View {
     @State private var selectedTab = 0
     @State private var dragOffset: CGFloat = 0
@@ -9,6 +15,7 @@ struct MainTabView: View {
     @State private var browseNavigationPath = NavigationPath()
     @AppStorage("disclaimerAcknowledgedVersion") private var acknowledgedVersion: String = ""
     @State private var showDisclaimerPopup = false
+    @Environment(BrowseNavigationContext.self) private var browseNavContext
 
     private let tabCount = 5
 
@@ -161,7 +168,36 @@ struct MainTabView: View {
                 let shouldSwipeLeft = translation < -threshold || velocity < -200
                 let shouldSwipeRight = translation > threshold || velocity > 200
 
-                // Determine target tab
+                // Determine swipe direction (if valid)
+                let direction: SwipeDirection?
+                if shouldSwipeRight {
+                    direction = .back
+                } else if shouldSwipeLeft {
+                    direction = .forward
+                } else {
+                    direction = nil
+                }
+
+                // Check for contextual navigation on Browse tab
+                if let direction = direction,
+                   selectedTab == 1 && !browseNavContext.isAtGridLevel {
+                    // Handle contextual swipe (entry/category navigation)
+                    if browseNavContext.isAtEntryLevel {
+                        handleEntryLevelSwipe(direction: direction)
+                    } else if browseNavContext.isAtCategoryLevel {
+                        handleCategoryLevelSwipe(direction: direction)
+                    }
+                    // Reset drag state
+                    withAnimation(.spring(response: 0.3, dampingFraction: 0.8)) {
+                        dragOffset = 0
+                    }
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
+                        isDragging = false
+                    }
+                    return
+                }
+
+                // Default: Determine target tab
                 var canChangeTab = false
                 var newTab = selectedTab
                 var enterEmergency = false
@@ -222,6 +258,98 @@ struct MainTabView: View {
                     }
                 }
             }
+    }
+
+    // MARK: - Contextual Swipe Navigation
+
+    /// Handles swipe when viewing an entry detail
+    private func handleEntryLevelSwipe(direction: SwipeDirection) {
+        guard browseNavContext.hasContext else {
+            // No context (from search or related link) - pop back on swipe back
+            if direction == .back {
+                popNavigation()
+            }
+            return
+        }
+
+        switch direction {
+        case .back:
+            if browseNavContext.canSwipeToPreviousEntry {
+                navigateToPreviousEntry()
+            } else {
+                popNavigation()
+            }
+        case .forward:
+            if browseNavContext.canSwipeToNextEntry {
+                navigateToNextEntry()
+            } else {
+                popNavigation()
+            }
+        }
+    }
+
+    /// Handles swipe when viewing a category list
+    private func handleCategoryLevelSwipe(direction: SwipeDirection) {
+        switch direction {
+        case .back:
+            if browseNavContext.canSwipeToPreviousCategory {
+                navigateToPreviousCategory()
+            } else {
+                popToGrid()
+            }
+        case .forward:
+            if browseNavContext.canSwipeToNextCategory {
+                navigateToNextCategory()
+            } else {
+                popToGrid()
+            }
+        }
+    }
+
+    // MARK: - Navigation Helpers
+
+    private func popNavigation() {
+        if !browseNavigationPath.isEmpty {
+            browseNavigationPath.removeLast()
+        }
+    }
+
+    private func popToGrid() {
+        browseNavigationPath = NavigationPath()
+    }
+
+    private func navigateToPreviousEntry() {
+        guard let previousEntry = browseNavContext.previousEntry else { return }
+        if !browseNavigationPath.isEmpty {
+            browseNavigationPath.removeLast()
+        }
+        browseNavigationPath.append(previousEntry)
+        if let currentIndex = browseNavContext.currentEntryIndex, currentIndex > 0 {
+            browseNavContext.navigateToEntryAtIndex(currentIndex - 1)
+        }
+    }
+
+    private func navigateToNextEntry() {
+        guard let nextEntry = browseNavContext.nextEntry else { return }
+        if !browseNavigationPath.isEmpty {
+            browseNavigationPath.removeLast()
+        }
+        browseNavigationPath.append(nextEntry)
+        if let currentIndex = browseNavContext.currentEntryIndex {
+            browseNavContext.navigateToEntryAtIndex(currentIndex + 1)
+        }
+    }
+
+    private func navigateToPreviousCategory() {
+        guard let previousCategory = browseNavContext.previousCategory else { return }
+        browseNavigationPath = NavigationPath()
+        browseNavigationPath.append(previousCategory)
+    }
+
+    private func navigateToNextCategory() {
+        guard let nextCategory = browseNavContext.nextCategory else { return }
+        browseNavigationPath = NavigationPath()
+        browseNavigationPath.append(nextCategory)
     }
 
     @ViewBuilder
