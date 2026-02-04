@@ -682,7 +682,7 @@ class GlossaryService {
             definition: "The protein in red blood cells that carries oxygen throughout the body, giving blood its red color. Some toxins damage hemoglobin or prevent it from carrying oxygen properly (as in methemoglobinemia), leading to weakness, pale or blue gums, and breathing difficulty.",
             category: .anatomy,
             relatedTerms: ["Methemoglobinemia", "Anemia", "Cyanosis", "Heinz Body Anemia"],
-            searchKeywords: ["oxygen", "red blood cells"]
+            searchKeywords: ["red blood cells"]
         ),
 
         // 57. Platelets
@@ -693,7 +693,7 @@ class GlossaryService {
             definition: "Tiny blood cells that help form clots to stop bleeding. Some toxins (like certain rodenticides) interfere with platelet function or clotting factors, causing uncontrolled bleeding. Low platelet counts can lead to bruising, bloody urine or stool, and prolonged bleeding from minor injuries.",
             category: .anatomy,
             relatedTerms: ["Coagulopathy", "Hematemesis", "Melena"],
-            searchKeywords: ["blood clotting", "thrombocytes", "bleeding"]
+            searchKeywords: ["blood clotting", "thrombocytes"]
         ),
 
         // 58. Anorexia
@@ -1787,7 +1787,7 @@ class GlossaryService {
             definition: "The muscular tube connecting the mouth to the stomach. Caustic substances (strong acids or bases like drain cleaners) can burn the esophagus on the way down AND potentially again if vomiting is induced—which is why inducing vomiting is contraindicated for caustic ingestions. Esophageal damage can cause strictures (narrowing) requiring long-term management.",
             category: .anatomy,
             relatedTerms: ["GI Tract", "Regurgitation", "Contraindicated"],
-            searchKeywords: ["throat", "food pipe", "swallowing tube"]
+            searchKeywords: ["food pipe", "swallowing tube"]
         ),
 
         // 157. Bone Marrow
@@ -2181,40 +2181,7 @@ class GlossaryService {
 
         // MARK: - Session 103: Body Systems + Regurgitation
 
-        // 192. Nervous System
-        GlossaryTerm(
-            id: UUID(uuidString: "A0000001-0001-0001-0001-0000000000DF")!,
-            term: "Nervous System",
-            pronunciation: nil,
-            definition: "The body's communication network, consisting of the central nervous system (brain and spinal cord) and peripheral nervous system (nerves throughout the body). It controls movement, sensation, reflexes, and organ function. Many toxins target the nervous system, causing symptoms like tremors, seizures, ataxia, paralysis, or altered consciousness.",
-            category: .anatomy,
-            relatedTerms: ["CNS", "Seizures", "Tremors", "Ataxia", "CNS Depression"],
-            searchKeywords: ["nervous system", "neurological", "neuro"]
-        ),
-
-        // 193. Cardiovascular System
-        GlossaryTerm(
-            id: UUID(uuidString: "A0000001-0001-0001-0001-0000000000E0")!,
-            term: "Cardiovascular System",
-            pronunciation: "kar-dee-oh-VAS-kyoo-lar",
-            definition: "The heart and blood vessels (arteries, veins, capillaries) that circulate blood throughout the body. This system delivers oxygen and nutrients to tissues and removes waste. Toxins affecting the cardiovascular system can cause abnormal heart rhythms, changes in blood pressure, poor circulation, or heart failure.",
-            category: .anatomy,
-            relatedTerms: ["Tachycardia", "Bradycardia", "Arrhythmia", "Hypotension", "Hypertension"],
-            searchKeywords: ["cardiovascular system", "circulatory system", "heart and blood vessels", "cardiac system"]
-        ),
-
-        // 194. Respiratory System
-        GlossaryTerm(
-            id: UUID(uuidString: "A0000001-0001-0001-0001-0000000000E1")!,
-            term: "Respiratory System",
-            pronunciation: nil,
-            definition: "The organs involved in breathing: the nose, throat, trachea (windpipe), and lungs. This system brings oxygen into the body and removes carbon dioxide. Toxins can affect breathing through irritation, swelling, fluid accumulation in lungs (pulmonary edema), or by interfering with oxygen transport in blood.",
-            category: .anatomy,
-            relatedTerms: ["Dyspnea", "Tachypnea", "Aspiration", "Hypoxia", "Cyanosis"],
-            searchKeywords: ["respiratory system", "breathing", "lungs", "airways", "pulmonary"]
-        ),
-
-        // 195. Regurgitation
+        // 192. Regurgitation
         GlossaryTerm(
             id: UUID(uuidString: "A0000001-0001-0001-0001-0000000000E2")!,
             term: "Regurgitation",
