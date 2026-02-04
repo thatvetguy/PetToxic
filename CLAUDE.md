@@ -18,6 +18,11 @@ Native iOS reference app for pet owners to quickly look up toxicity information.
 - **SourceKit false positives:** After file edits, SourceKit diagnostics may report errors like "Cannot find type in scope" or "Ambiguous use of init." These are false positives caused by SourceKit analyzing files in isolation without full project context. **Ignore these.** Always verify with an actual `xcodebuild` build.
 - **Build command:** `xcodebuild -scheme PetToxic -destination 'platform=iOS Simulator,name=iPhone 17 Pro' build`
 - **Available simulators (iOS 26.1):** iPhone 17, iPhone 17 Pro, iPhone 17 Pro Max, iPhone Air, iPhone 16e, iPad Air/Pro/mini variants
+- **macOS awk:** macOS ships with BSD `awk`, which does NOT support `match()` with capture groups (3rd argument). Use `gsub()` to extract values instead, or use `gawk` if installed. Never use `match($0, /pattern/, arr)` in scripts — it will fail silently or error on macOS.
+- **Self-healing documentation:** When you encounter a platform-specific error, tool incompatibility, or unexpected gotcha during a session, **add a note to this CLAUDE.md file** under the appropriate section so future sessions don't repeat the same mistake. Treat this file as a living knowledge base.
+- **Source root path:** The project working directory is `/Users/cristianofontes/Desktop/PetToxic/`, but Swift source files live under the `PetToxic/` subdirectory. When running scripts from the project root, always prefix source paths with `PetToxic/` (e.g., `PetToxic/Services/GlossaryService.swift`, not `Services/GlossaryService.swift`). Session instructions may omit this prefix — verify paths before running.
+- **Script output validation:** After running extraction or audit scripts, always compare the actual output count against the expected count (e.g., `grep -c` the source, then count entries in the output file). Silent partial failures — where a script produces results but misses entries — are common with multi-line awk/sed patterns. Flag any mismatch immediately.
+- **Working directory assumptions:** Session instruction documents may assume a different working directory than the actual one. Always confirm the real working directory with `pwd` or check the environment context before running any script verbatim from session instructions.
 
 ---
 
