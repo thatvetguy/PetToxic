@@ -12,7 +12,7 @@ struct SymptomsListView: View {
                         .foregroundStyle(.secondary)
                         .padding(.top, 6)
 
-                    Text(symptom)
+                    GlossaryStyledText(content: symptom, searchTerm: nil)
                         .font(.body)
                 }
             }
