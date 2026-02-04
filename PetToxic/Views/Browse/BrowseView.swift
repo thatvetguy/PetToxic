@@ -2,10 +2,14 @@ import SwiftUI
 import SwiftData
 
 struct BrowseView: View {
+    /// Navigation path binding - controlled by MainTabView for contextual swipe navigation
+    @Binding var navigationPath: NavigationPath
+
     @StateObject private var viewModel = BrowseViewModel()
     @StateObject private var searchViewModel = SearchViewModel()
     @FocusState private var isSearchFocused: Bool
     @ObservedObject private var proSettings = ProSettings.shared
+    @Environment(BrowseNavigationContext.self) private var navContext
 
     private var isProUser: Bool { proSettings.isPro }
 
@@ -15,7 +19,7 @@ struct BrowseView: View {
     ]
 
     var body: some View {
-        NavigationStack {
+        NavigationStack(path: $navigationPath) {
             ZStack {
                 AppBackground()
 
@@ -77,6 +81,11 @@ struct BrowseView: View {
             }
             .navigationDestination(for: ToxicItem.self) { item in
                 ArticleDetailView(item: item, saveSearchTerm: true, searchQuery: searchViewModel.searchText)
+            }
+            .onChange(of: navigationPath.count) { oldCount, newCount in
+                if newCount == 0 {
+                    navContext.returnToGrid()
+                }
             }
         }
     }
@@ -190,6 +199,7 @@ struct CategoryListView: View {
     @AppStorage("entrySortBySeverity") private var sortBySeverity: Bool = true
     @AppStorage("entryViewMode") private var isGridView: Bool = true
     @State private var selectedSpeciesFilter: SpeciesFilter = .auto
+    @Environment(BrowseNavigationContext.self) private var navContext
 
     private var columns: [GridItem] {
         Array(repeating: GridItem(.flexible(), spacing: 8), count: columnCount)
@@ -323,6 +333,15 @@ struct CategoryListView: View {
                     Image(systemName: isGridView ? "list.bullet" : "square.grid.2x2")
                 }
             }
+        }
+        .onAppear {
+            navContext.enterCategoryList(category: category, entries: filteredItems)
+        }
+        .onChange(of: sortBySeverity) { _, _ in
+            navContext.updateVisibleEntries(filteredItems)
+        }
+        .onChange(of: selectedSpeciesFilter) { _, _ in
+            navContext.updateVisibleEntries(filteredItems)
         }
     }
 
@@ -493,5 +512,6 @@ struct EntryListRow: View {
 }
 
 #Preview {
-    BrowseView()
+    BrowseView(navigationPath: .constant(NavigationPath()))
+        .environment(BrowseNavigationContext())
 }

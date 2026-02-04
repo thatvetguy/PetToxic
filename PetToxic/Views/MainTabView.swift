@@ -5,6 +5,8 @@ struct MainTabView: View {
     @State private var dragOffset: CGFloat = 0
     @State private var isDragging = false
     @State private var isInQuickEmergency = false
+    /// Navigation path for Browse tab - enables programmatic navigation for contextual swipes
+    @State private var browseNavigationPath = NavigationPath()
     @AppStorage("disclaimerAcknowledgedVersion") private var acknowledgedVersion: String = ""
     @State private var showDisclaimerPopup = false
 
@@ -228,7 +230,7 @@ struct MainTabView: View {
         case 0:
             SearchView()
         case 1:
-            BrowseView()
+            BrowseView(navigationPath: $browseNavigationPath)
         case 2:
             SavedView()
         case 3:
