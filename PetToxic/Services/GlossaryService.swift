@@ -623,7 +623,7 @@ class GlossaryService {
             definition: "The expected outcome or course of a condition. A 'good prognosis' means recovery is likely with proper treatment. A 'guarded prognosis' means the outcome is uncertain. Prognosis depends on many factors including the toxin, amount, time to treatment, and the pet's overall health.",
             category: .general,
             relatedTerms: ["Supportive Care", "Antidote"],
-            searchKeywords: ["outcome", "recovery", "survival", "chances"]
+            searchKeywords: nil
         ),
 
         // 52. Ingestion
@@ -1508,7 +1508,7 @@ class GlossaryService {
             definition: "Poisoning that occurs indirectly, not from the original source. Examples include: a pet grooming toxin-contaminated fur and ingesting it, a cat eating a rodent that consumed rodenticide, or a pet licking antifreeze off another pet's paws. Secondary exposure is often overlooked but can be just as dangerous as direct exposure.",
             category: .general,
             relatedTerms: ["Dermal Exposure", "Ingestion"],
-            searchKeywords: ["relay toxicosis", "indirect poisoning", "grooming", "eating poisoned rodent"]
+            searchKeywords: ["relay toxicosis", "indirect poisoning", "eating poisoned rodent"]
         ),
 
         // MARK: - Batch 8 (Session 101)
@@ -1620,7 +1620,7 @@ class GlossaryService {
             definition: "In toxicology, body weight is critical because toxic doses are typically calculated per kilogram (or pound) of body weight. A dose that causes mild symptoms in a 50-lb dog could be fatal to a 10-lb dog. This is why small pets (toy breeds, kittens, pocket pets) are at higher risk—the same amount of toxin is a relatively larger dose.",
             category: .general,
             relatedTerms: ["Toxic Dose", "Dose-Dependent", "Margin of Safety"],
-            searchKeywords: ["size matters", "small dogs", "toy breeds", "weight-based dosing"]
+            searchKeywords: ["small dogs", "toy breeds", "weight-based dosing"]
         ),
 
         // 142. Time Since Exposure
