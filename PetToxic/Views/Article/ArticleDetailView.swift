@@ -27,21 +27,33 @@ struct ArticleDetailView: View {
 
                     // Description
                     section(title: "What is it?") {
-                        HighlightableMarkdownText(content: item.description, searchTerm: searchQuery)
+                        GlossaryStyledText(content: item.description, searchTerm: searchQuery)
                             .font(.body)
                             .lineSpacing(4)
+                        GlossaryDropdownView(
+                            terms: GlossaryService.shared.findTerms(in: item.description)
+                        )
+                        .padding(.top, 8)
                     }
 
                     // Toxicity info
                     section(title: "Why is it toxic?") {
-                        HighlightableMarkdownText(content: item.toxicityInfo, searchTerm: searchQuery)
+                        GlossaryStyledText(content: item.toxicityInfo, searchTerm: searchQuery)
                             .font(.body)
                             .lineSpacing(4)
+                        GlossaryDropdownView(
+                            terms: GlossaryService.shared.findTerms(in: item.toxicityInfo)
+                        )
+                        .padding(.top, 8)
                     }
 
                     // Symptoms
                     section(title: "Symptoms to watch for") {
                         SymptomsListView(symptoms: item.symptoms)
+                        GlossaryDropdownView(
+                            terms: GlossaryService.shared.findTerms(in: item.symptoms)
+                        )
+                        .padding(.top, 8)
                     }
 
                     // Onset time (if available)
