@@ -64,6 +64,7 @@
 		EMRGPET001DDDD1111111111 /* EmergencyPetInfoCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = EMRGPET002DDDD2222222222 /* EmergencyPetInfoCard.swift */; };
 		F03D63A2599562E0A66DEB2E /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5D4123DE87463A4CF858927 /* Constants.swift */; };
 		F1372C807BFFDC33BCD4A18F /* SpeciesRisk.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F4998CA510A72304A62AC03 /* SpeciesRisk.swift */; };
+		NAVCXT002AAAA2222222222 /* NavigationContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = NAVCXT001AAAA1111111111 /* NavigationContext.swift */; };
 		F31D053BA08F486404401C7A /* DisclaimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA5A3886892E1B5E6CAF9D5F /* DisclaimerView.swift */; };
 		FA855506E3D8A1DB2CC6BA80 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4AF21A98F3346F34930A106 /* LoadingView.swift */; };
 		GLOSS001AAAA1111111111 /* GlossaryTerm.swift in Sources */ = {isa = PBXBuildFile; fileRef = GLOSS002AAAA2222222222 /* GlossaryTerm.swift */; };
@@ -72,8 +73,8 @@
 		GLOSS007AAAA7777777777 /* GlossaryTermDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = GLOSS008AAAA8888888888 /* GlossaryTermDetailView.swift */; };
 		GLOSSCARD01AAA111111111 /* GlossaryCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = GLOSSCARD02AAA222222222 /* GlossaryCard.swift */; };
 		GLOSSDROP01AAA111111111 /* GlossaryDropdownView.swift in Sources */ = {isa = PBXBuildFile; fileRef = GLOSSDROP02AAA222222222 /* GlossaryDropdownView.swift */; };
-		GLOSSSTYL01AAA111111111 /* GlossaryStyledText.swift in Sources */ = {isa = PBXBuildFile; fileRef = GLOSSSTYL02AAA222222222 /* GlossaryStyledText.swift */; };
 		GLOSSLINK01BBB111111111 /* GlossaryEntryLink.swift in Sources */ = {isa = PBXBuildFile; fileRef = GLOSSLINK02BBB222222222 /* GlossaryEntryLink.swift */; };
+		GLOSSSTYL01AAA111111111 /* GlossaryStyledText.swift in Sources */ = {isa = PBXBuildFile; fileRef = GLOSSSTYL02AAA222222222 /* GlossaryStyledText.swift */; };
 		HOMESEC001CCCC1111111111 /* MyPetsHomeSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = HOMESEC002CCCC2222222222 /* MyPetsHomeSection.swift */; };
 		MKDWN001FFFF1111111111111 /* MarkdownText.swift in Sources */ = {isa = PBXBuildFile; fileRef = MKDWN002FFFF2222222222222 /* MarkdownText.swift */; };
 		PHOTO001BBBB1111111111111 /* PetPhotoService.swift in Sources */ = {isa = PBXBuildFile; fileRef = PHOTO002BBBB2222222222222 /* PetPhotoService.swift */; };
@@ -121,6 +122,7 @@
 		4CEADD8856CCEA9B7022E31F /* Enums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enums.swift; sourceTree = "<group>"; };
 		4D9C35BFC5F34211851F5060 /* BrowseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrowseView.swift; sourceTree = "<group>"; };
 		4F4998CA510A72304A62AC03 /* SpeciesRisk.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeciesRisk.swift; sourceTree = "<group>"; };
+		NAVCXT001AAAA1111111111 /* NavigationContext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationContext.swift; sourceTree = "<group>"; };
 		558D0A98607D43A5C5878676 /* ArticleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleViewModel.swift; sourceTree = "<group>"; };
 		58C075EC2898DE2A6C54CB66 /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
 		6CBB1717EB5134FC9FB2784A /* SavedViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedViewModel.swift; sourceTree = "<group>"; };
@@ -170,8 +172,8 @@
 		GLOSS008AAAA8888888888 /* GlossaryTermDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlossaryTermDetailView.swift; sourceTree = "<group>"; };
 		GLOSSCARD02AAA222222222 /* GlossaryCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlossaryCard.swift; sourceTree = "<group>"; };
 		GLOSSDROP02AAA222222222 /* GlossaryDropdownView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlossaryDropdownView.swift; sourceTree = "<group>"; };
-		GLOSSSTYL02AAA222222222 /* GlossaryStyledText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlossaryStyledText.swift; sourceTree = "<group>"; };
 		GLOSSLINK02BBB222222222 /* GlossaryEntryLink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlossaryEntryLink.swift; sourceTree = "<group>"; };
+		GLOSSSTYL02AAA222222222 /* GlossaryStyledText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlossaryStyledText.swift; sourceTree = "<group>"; };
 		HOMESEC002CCCC2222222222 /* MyPetsHomeSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPetsHomeSection.swift; sourceTree = "<group>"; };
 		MKDWN002FFFF2222222222222 /* MarkdownText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarkdownText.swift; sourceTree = "<group>"; };
 		PHOTO002BBBB2222222222222 /* PetPhotoService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetPhotoService.swift; sourceTree = "<group>"; };
@@ -277,6 +279,7 @@
 				4CEADD8856CCEA9B7022E31F /* Enums.swift */,
 				7E7D85BEF0AE7656DF48FD15 /* SearchResult.swift */,
 				4F4998CA510A72304A62AC03 /* SpeciesRisk.swift */,
+				NAVCXT001AAAA1111111111 /* NavigationContext.swift */,
 				EA6BC59CB914FF0A323C3DCC /* ToxicItem.swift */,
 				GLOSS002AAAA2222222222 /* GlossaryTerm.swift */,
 			);
@@ -587,6 +590,7 @@
 				C36B4977AA78A0B98A512B6A /* SeveritySection.swift in Sources */,
 				0ED8DF5F0BC3B56D614CF741 /* SpeciesFilterView.swift in Sources */,
 				F1372C807BFFDC33BCD4A18F /* SpeciesRisk.swift in Sources */,
+				NAVCXT002AAAA2222222222 /* NavigationContext.swift in Sources */,
 				ED2E81442F25FEEC008594E1 /* PetFormView.swift in Sources */,
 				ED2E81452F25FEEC008594E1 /* PetListView.swift in Sources */,
 				EDC056AA2F30783A00AF2D0A /* HighlightableMarkdownText.swift in Sources */,
@@ -693,7 +697,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 202602031;
+				CURRENT_PROJECT_VERSION = 202602032;
 				DEVELOPMENT_TEAM = 6KA5CB5S3A;
 				GENERATE_INFOPLIST_FILE = NO;
 				INFOPLIST_FILE = PetToxic/Resources/Info.plist;
@@ -879,7 +883,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 202602031;
+				CURRENT_PROJECT_VERSION = 202602032;
 				DEVELOPMENT_TEAM = 6KA5CB5S3A;
 				GENERATE_INFOPLIST_FILE = NO;
 				INFOPLIST_FILE = PetToxic/Resources/Info.plist;
