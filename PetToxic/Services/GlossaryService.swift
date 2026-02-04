@@ -221,7 +221,7 @@ class GlossaryService {
             pronunciation: "EM-eh-sis",
             definition: "The medical term for vomiting, often referring to intentionally induced vomiting to remove a swallowed toxin. Emesis must only be induced by a veterinarian — it is contraindicated (dangerous) for caustic substances, petroleum products, or when the pet is already showing neurological symptoms.",
             category: .treatment,
-            relatedTerms: ["Decontamination"],
+            relatedTerms: ["Decontamination", "Regurgitation"],
             searchKeywords: ["vomiting", "induce vomiting", "throwing up"]
         ),
 
@@ -325,7 +325,7 @@ class GlossaryService {
             pronunciation: nil,
             definition: "Forceful expulsion of stomach contents through the mouth. Unlike regurgitation (passive), vomiting involves active abdominal contractions. It's the body's way of expelling toxins but can also lead to dehydration and electrolyte imbalances. Bloody vomit or persistent vomiting requires urgent care.",
             category: .symptoms,
-            relatedTerms: ["Emesis", "Hematemesis"],
+            relatedTerms: ["Emesis", "Hematemesis", "Regurgitation"],
             searchKeywords: ["throwing up", "vomit", "puking", "sick"]
         ),
 
@@ -1187,7 +1187,7 @@ class GlossaryService {
             definition: "A state of restlessness, anxiety, and excessive activity. The pet may pace, vocalize, be unable to settle, or seem distressed. Common with stimulant toxins (caffeine, amphetamines, chocolate), certain medications, and some plant toxins. Often progresses to more serious signs like tremors or seizures.",
             category: .symptoms,
             relatedTerms: ["Tremors", "Seizures", "Tachycardia"],
-            searchKeywords: ["restless", "anxious", "hyperactive", "pacing", "can't settle", "nervous"]
+            searchKeywords: ["restless", "restlessness", "anxious", "hyperactive", "pacing", "can't settle"]
         ),
 
         // 102. Hypoxia
@@ -2188,6 +2188,52 @@ class GlossaryService {
             category: .treatment,
             relatedTerms: ["Decontamination", "Dermal Exposure", "Secondary Exposure"],
             searchKeywords: ["bathing", "washing off toxin", "skin decontamination", "fur wash"]
+        ),
+
+        // MARK: - Session 103: Body Systems + Regurgitation
+
+        // 192. Nervous System
+        GlossaryTerm(
+            id: UUID(uuidString: "A0000001-0001-0001-0001-0000000000DF")!,
+            term: "Nervous System",
+            pronunciation: nil,
+            definition: "The body's communication network, consisting of the central nervous system (brain and spinal cord) and peripheral nervous system (nerves throughout the body). It controls movement, sensation, reflexes, and organ function. Many toxins target the nervous system, causing symptoms like tremors, seizures, ataxia, paralysis, or altered consciousness.",
+            category: .anatomy,
+            relatedTerms: ["CNS", "Seizures", "Tremors", "Ataxia", "CNS Depression"],
+            searchKeywords: ["nervous system", "neurological", "neuro"]
+        ),
+
+        // 193. Cardiovascular System
+        GlossaryTerm(
+            id: UUID(uuidString: "A0000001-0001-0001-0001-0000000000E0")!,
+            term: "Cardiovascular System",
+            pronunciation: "kar-dee-oh-VAS-kyoo-lar",
+            definition: "The heart and blood vessels (arteries, veins, capillaries) that circulate blood throughout the body. This system delivers oxygen and nutrients to tissues and removes waste. Toxins affecting the cardiovascular system can cause abnormal heart rhythms, changes in blood pressure, poor circulation, or heart failure.",
+            category: .anatomy,
+            relatedTerms: ["Tachycardia", "Bradycardia", "Arrhythmia", "Hypotension", "Hypertension"],
+            searchKeywords: ["cardiovascular system", "circulatory system", "heart and blood vessels", "cardiac system"]
+        ),
+
+        // 194. Respiratory System
+        GlossaryTerm(
+            id: UUID(uuidString: "A0000001-0001-0001-0001-0000000000E1")!,
+            term: "Respiratory System",
+            pronunciation: nil,
+            definition: "The organs involved in breathing: the nose, throat, trachea (windpipe), and lungs. This system brings oxygen into the body and removes carbon dioxide. Toxins can affect breathing through irritation, swelling, fluid accumulation in lungs (pulmonary edema), or by interfering with oxygen transport in blood.",
+            category: .anatomy,
+            relatedTerms: ["Dyspnea", "Tachypnea", "Aspiration", "Hypoxia", "Cyanosis"],
+            searchKeywords: ["respiratory system", "breathing", "lungs", "airways", "pulmonary"]
+        ),
+
+        // 195. Regurgitation
+        GlossaryTerm(
+            id: UUID(uuidString: "A0000001-0001-0001-0001-0000000000E2")!,
+            term: "Regurgitation",
+            pronunciation: "ree-GUR-jih-TAY-shun",
+            definition: "The passive, effortless expulsion of undigested food or liquid from the esophagus or throat — NOT the stomach. Unlike vomiting, there is no retching, heaving, or abdominal effort. Food comes back up looking much like it did going down. Regurgitation suggests an esophageal problem rather than stomach irritation. Telling your vet whether your pet vomited or regurgitated helps with diagnosis.",
+            category: .symptoms,
+            relatedTerms: ["Vomiting", "Emesis", "Aspiration"],
+            searchKeywords: ["regurgitate", "regurgitating", "bringing up food", "passive vomiting"]
         ),
     ]
 
