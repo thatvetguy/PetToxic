@@ -115,7 +115,9 @@ struct ArticleDetailView: View {
             if saveSearchTerm {
                 SearchContext.shared.saveIfPending()
             }
-            navContext.isProgrammaticNavigation = false
+            // Do NOT clear isProgrammaticNavigation here — the BrowseView
+            // onChange(of: navigationPath.count) observer may not have processed
+            // a transient count=0 yet. Clearing here causes a race condition.
             if sourceCategory != nil {
                 navContext.enterEntryDetail(entry: item)
             } else {
@@ -127,7 +129,6 @@ struct ArticleDetailView: View {
             // SwiftUI may reuse this view without firing .onAppear.
             isBookmarked = viewModel.isBookmarked(item)
             viewModel.recordView(of: item)
-            navContext.isProgrammaticNavigation = false
             if sourceCategory != nil {
                 navContext.enterEntryDetail(entry: item)
             } else {

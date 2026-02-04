@@ -330,6 +330,10 @@ struct MainTabView: View {
         if let currentIndex = browseNavContext.currentEntryIndex, currentIndex > 0 {
             browseNavContext.navigateToEntryAtIndex(currentIndex - 1)
         }
+        // Clear flag on next runloop, after all transient path states are processed
+        DispatchQueue.main.async {
+            browseNavContext.isProgrammaticNavigation = false
+        }
     }
 
     private func navigateToNextEntry() {
@@ -343,6 +347,10 @@ struct MainTabView: View {
         if let currentIndex = browseNavContext.currentEntryIndex {
             browseNavContext.navigateToEntryAtIndex(currentIndex + 1)
         }
+        // Clear flag on next runloop, after all transient path states are processed
+        DispatchQueue.main.async {
+            browseNavContext.isProgrammaticNavigation = false
+        }
     }
 
     private func navigateToPreviousCategory() {
@@ -351,6 +359,10 @@ struct MainTabView: View {
         var newPath = NavigationPath()
         newPath.append(previousCategory)
         browseNavigationPath = newPath
+        // Clear flag on next runloop, after all transient path states are processed
+        DispatchQueue.main.async {
+            browseNavContext.isProgrammaticNavigation = false
+        }
     }
 
     private func navigateToNextCategory() {
@@ -359,6 +371,10 @@ struct MainTabView: View {
         var newPath = NavigationPath()
         newPath.append(nextCategory)
         browseNavigationPath = newPath
+        // Clear flag on next runloop, after all transient path states are processed
+        DispatchQueue.main.async {
+            browseNavContext.isProgrammaticNavigation = false
+        }
     }
 
     @ViewBuilder

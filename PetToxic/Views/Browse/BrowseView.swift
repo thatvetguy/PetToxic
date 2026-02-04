@@ -343,14 +343,15 @@ struct CategoryListView: View {
             }
         }
         .onAppear {
-            navContext.isProgrammaticNavigation = false
+            // Do NOT clear isProgrammaticNavigation here — the BrowseView
+            // onChange(of: navigationPath.count) observer may not have processed
+            // a transient count=0 yet. Clearing here causes a race condition.
             navContext.enterCategoryList(category: category, entries: filteredItems)
         }
         .onChange(of: category) { _, _ in
             // When swipe navigation replaces the path at the same depth,
             // SwiftUI may reuse this view without firing .onAppear.
             // This ensures context updates for the new category.
-            navContext.isProgrammaticNavigation = false
             navContext.enterCategoryList(category: category, entries: filteredItems)
         }
         .onChange(of: sortBySeverity) { _, _ in
