@@ -478,7 +478,7 @@ class GlossaryService {
             definition: "A substance that counteracts or neutralizes a specific poison. Only a few toxins have true antidotes — for example, vitamin K for anticoagulant rodenticides, or fomepizole for antifreeze. Most poisonings are treated with supportive care rather than specific antidotes.",
             category: .treatment,
             relatedTerms: ["Supportive Care"],
-            searchKeywords: ["counteract poison", "cure"]
+            searchKeywords: ["counteract poison"]
         ),
 
         GlossaryTerm(
@@ -488,7 +488,7 @@ class GlossaryService {
             definition: "Fluids given directly into a vein (intravenous) to maintain hydration, support blood pressure, and help flush toxins from the body through the kidneys. A cornerstone of supportive care for most poisonings. The type and rate of fluids are tailored to each patient's needs.",
             category: .treatment,
             relatedTerms: ["Supportive Care"],
-            searchKeywords: ["intravenous fluids", "fluid therapy", "hydration", "drip"]
+            searchKeywords: ["intravenous fluids", "fluid therapy"]
         ),
 
         GlossaryTerm(
@@ -1130,7 +1130,7 @@ class GlossaryService {
             definition: "Ongoing observation and testing to track a patient's condition over time. After toxin exposure, monitoring may include checking vital signs, blood work, kidney/liver values, and watching for delayed symptoms. Some toxins require monitoring for days to weeks even if the pet initially seems fine.",
             category: .treatment,
             relatedTerms: ["Supportive Care", "Prognosis", "Latent Period"],
-            searchKeywords: ["observation", "watching", "follow-up", "rechecking"]
+            searchKeywords: ["observation", "follow-up", "rechecking"]
         ),
 
         // 97. Baseline
@@ -1376,7 +1376,7 @@ class GlossaryService {
             definition: "Using medications to calm a patient, reduce anxiety, or control dangerous symptoms like severe agitation or tremors. Sedation ranges from mild calming to deep unconsciousness. In toxicology, often used to control tremors, prevent injury during seizures, and reduce metabolic demand (which lowers body temperature in hyperthermia).",
             category: .treatment,
             relatedTerms: ["Tremors", "Seizures", "Supportive Care"],
-            searchKeywords: ["calm", "sedate", "tranquilize", "sedatives"]
+            searchKeywords: ["sedate", "tranquilize", "sedatives"]
         ),
 
         // 120. Muscle Relaxants
@@ -1398,7 +1398,7 @@ class GlossaryService {
             definition: "Managing body temperature—either cooling an overheated patient or warming a cold one. Critical in toxicology because many toxins cause hyperthermia (tremors, seizures generate heat) or hypothermia (CNS depression reduces heat production). Methods include cooling fans, cool IV fluids, ice packs, or warming blankets.",
             category: .treatment,
             relatedTerms: ["Hyperthermia", "Hypothermia", "Supportive Care"],
-            searchKeywords: ["cooling", "warming", "temperature control", "temperature management"]
+            searchKeywords: ["temperature control", "temperature management"]
         ),
 
         // 122. Fluid Therapy
@@ -2099,7 +2099,7 @@ class GlossaryService {
             definition: "The regular, ongoing dose given to maintain effective blood levels after a loading dose or once steady state is reached. Designed to replace the amount eliminated between doses. Vitamin K therapy for rodenticide poisoning requires maintenance dosing for weeks because the toxin persists in the body.",
             category: .treatment,
             relatedTerms: ["Loading Dose", "Steady State", "Half-life"],
-            searchKeywords: ["ongoing dose", "regular dose", "continuing treatment"]
+            searchKeywords: ["ongoing dose", "regular dose"]
         ),
 
         // 186. Trough Level
@@ -2165,7 +2165,7 @@ class GlossaryService {
             definition: "Removing toxic substances from the skin and fur, usually by bathing with mild dish soap (like Dawn) and lukewarm water. Important because pets groom themselves and can ingest toxins from their fur. Wear gloves to protect yourself. For oily substances, multiple washes may be needed. Dry the pet to prevent hypothermia.",
             category: .treatment,
             relatedTerms: ["Decontamination", "Dermal Exposure", "Secondary Exposure"],
-            searchKeywords: ["bathing", "washing off toxin", "skin decontamination", "fur wash"]
+            searchKeywords: ["washing off toxin", "skin decontamination", "fur wash"]
         ),
 
         // MARK: - Session 103: Body Systems + Regurgitation
