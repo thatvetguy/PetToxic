@@ -15,6 +15,7 @@ enum GlossaryCategory: String, CaseIterable, Codable {
     case mechanisms = "Toxic Mechanisms"
     case anatomy = "Anatomy & Physiology"
     case treatment = "Treatment Terms"
+    case medications = "Medications"
     case general = "General"
 
     var icon: String {
@@ -24,6 +25,7 @@ enum GlossaryCategory: String, CaseIterable, Codable {
         case .mechanisms: return "bolt.trianglebadge.exclamationmark"
         case .anatomy: return "figure.stand"
         case .treatment: return "cross.case"
+        case .medications: return "pills.fill"
         case .general: return "book"
         }
     }

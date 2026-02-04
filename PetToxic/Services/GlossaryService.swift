@@ -2272,6 +2272,164 @@ class GlossaryService {
             relatedTerms: ["Ascites", "Edema", "Dyspnea"],
             searchKeywords: ["fluid accumulation", "pleural effusion", "pericardial effusion", "fluid around lungs", "fluid around heart"]
         ),
+
+        // ══════════════════════════════════════════════════════════════
+        // MARK: - Session 107: Medications (Batch 2)
+        // ══════════════════════════════════════════════════════════════
+
+        GlossaryTerm(
+            id: UUID(uuidString: "A0000001-0001-0001-0001-0000000000EB")!,
+            term: "NSAID",
+            pronunciation: "EN-sed",
+            definition: "Non-Steroidal Anti-Inflammatory Drug — a class of medications that reduce pain, inflammation, and fever. Examples include ibuprofen (Advil, Motrin), naproxen (Aleve), and veterinary NSAIDs such as carprofen (Rimadyl) and meloxicam (Metacam).",
+            category: .medications,
+            relatedTerms: ["Gastroprotectant", "Nephrotoxicity", "GI Tract"],
+            searchKeywords: ["NSAIDs", "non-steroidal", "anti-inflammatory", "ibuprofen", "naproxen", "carprofen", "meloxicam", "Rimadyl", "Metacam", "Advil", "Motrin", "Aleve"]
+        ),
+
+        GlossaryTerm(
+            id: UUID(uuidString: "A0000001-0001-0001-0001-0000000000EC")!,
+            term: "Opioid",
+            pronunciation: "OH-pee-oyd",
+            definition: "A class of medications derived from or related to compounds found in the opium poppy, used primarily for pain relief. Examples include morphine, hydrocodone (Vicodin), oxycodone (OxyContin), fentanyl, and tramadol. Also called narcotics or opiates.",
+            category: .medications,
+            relatedTerms: ["CNS Depression", "Respiratory Depression", "Miosis"],
+            searchKeywords: ["opioids", "opiate", "opiates", "narcotic", "narcotics", "morphine", "hydrocodone", "oxycodone", "fentanyl", "tramadol", "Vicodin", "OxyContin"]
+        ),
+
+        GlossaryTerm(
+            id: UUID(uuidString: "A0000001-0001-0001-0001-0000000000ED")!,
+            term: "Steroid",
+            pronunciation: "STAIR-oyd",
+            definition: "A class of compounds that includes both hormones naturally produced by the body (endogenous) and synthetic medications (exogenous). Corticosteroids such as prednisone and dexamethasone are commonly used to reduce inflammation. Anabolic steroids are a different class used to promote tissue growth.",
+            category: .medications,
+            relatedTerms: ["Immunosuppression", "Polydipsia", "Polyuria"],
+            searchKeywords: ["steroids", "corticosteroid", "corticosteroids", "glucocorticoid", "glucocorticoids", "prednisone", "dexamethasone", "prednisolone", "cortisone"]
+        ),
+
+        GlossaryTerm(
+            id: UUID(uuidString: "A0000001-0001-0001-0001-0000000000EE")!,
+            term: "Antibiotic",
+            pronunciation: "an-tee-by-OT-ik",
+            definition: "A medication that kills or inhibits the growth of bacteria. Examples include amoxicillin, cephalexin, metronidazole, and enrofloxacin (Baytril). Antibiotics are ineffective against viruses.",
+            category: .medications,
+            relatedTerms: ["GI Tract", "Diarrhea"],
+            searchKeywords: ["antibiotics", "antimicrobial", "antimicrobials", "amoxicillin", "cephalexin", "metronidazole", "enrofloxacin", "Baytril", "Clavamox"]
+        ),
+
+        GlossaryTerm(
+            id: UUID(uuidString: "A0000001-0001-0001-0001-0000000000EF")!,
+            term: "Antacid",
+            pronunciation: "ANT-ass-id",
+            definition: "A class of medications that reduce stomach acid. Includes proton pump inhibitors (PPIs) such as omeprazole (Prilosec), H2 receptor blockers such as famotidine (Pepcid), and calcium-based antacids such as calcium carbonate (Tums).",
+            category: .medications,
+            relatedTerms: ["Gastroprotectant", "GI Tract"],
+            searchKeywords: ["antacids", "proton pump inhibitor", "PPI", "PPIs", "H2 blocker", "H2 blockers", "omeprazole", "famotidine", "calcium carbonate", "Prilosec", "Pepcid", "Tums", "Zantac"]
+        ),
+
+        GlossaryTerm(
+            id: UUID(uuidString: "A0000001-0001-0001-0001-0000000000F0")!,
+            term: "Cholestyramine",
+            pronunciation: "koh-less-TEER-ah-meen",
+            definition: "A bile acid sequestrant medication that binds substances in the gastrointestinal tract, preventing their absorption. Commonly used in veterinary toxicology to help reduce absorption of certain toxins.",
+            category: .medications,
+            relatedTerms: ["Decontamination", "Activated Charcoal", "GI Tract"],
+            searchKeywords: ["bile acid sequestrant", "Questran"]
+        ),
+
+        GlossaryTerm(
+            id: UUID(uuidString: "A0000001-0001-0001-0001-0000000000F1")!,
+            term: "Propofol",
+            pronunciation: "PROH-poh-fol",
+            definition: "A short-acting injectable anesthetic used for induction and maintenance of general anesthesia. Known for its rapid onset and quick recovery. Commonly used in veterinary medicine for procedures requiring brief sedation.",
+            category: .medications,
+            relatedTerms: ["Sedation", "CNS Depression"],
+            searchKeywords: ["Diprivan", "injectable anesthetic", "induction agent"]
+        ),
+
+        GlossaryTerm(
+            id: UUID(uuidString: "A0000001-0001-0001-0001-0000000000F2")!,
+            term: "Benzodiazepine",
+            pronunciation: "ben-zoh-dy-AZ-eh-peen",
+            definition: "A class of medications with sedative, anti-anxiety, muscle relaxant, and anticonvulsant properties. Examples include diazepam (Valium), midazolam (Versed), and alprazolam (Xanax).",
+            category: .medications,
+            relatedTerms: ["Sedation", "Anticonvulsant", "CNS Depression", "Muscle Relaxants"],
+            searchKeywords: ["benzodiazepines", "benzos", "benzo", "diazepam", "midazolam", "alprazolam", "Valium", "Versed", "Xanax", "lorazepam", "Ativan"]
+        ),
+
+        GlossaryTerm(
+            id: UUID(uuidString: "A0000001-0001-0001-0001-0000000000F3")!,
+            term: "Acepromazine",
+            pronunciation: "ay-see-PROH-mah-zeen",
+            definition: "A phenothiazine tranquilizer commonly used in veterinary medicine for sedation and to reduce anxiety. Often abbreviated as 'ace.' Does not provide pain relief.",
+            category: .medications,
+            relatedTerms: ["Sedation", "Hypotension"],
+            searchKeywords: ["ace", "PromAce", "phenothiazine", "tranquilizer"]
+        ),
+
+        GlossaryTerm(
+            id: UUID(uuidString: "A0000001-0001-0001-0001-0000000000F4")!,
+            term: "Inhalant Anesthetic",
+            pronunciation: nil,
+            definition: "Gases or volatile liquids administered by inhalation to produce general anesthesia. In veterinary medicine, isoflurane and sevoflurane are most commonly used. Allows precise control of anesthetic depth.",
+            category: .medications,
+            relatedTerms: ["Sedation", "CNS Depression", "Respiratory Depression"],
+            searchKeywords: ["inhalant anesthetics", "gas anesthesia", "gas anesthetic", "isoflurane", "sevoflurane", "volatile anesthetic", "volatile anesthetics"]
+        ),
+
+        GlossaryTerm(
+            id: UUID(uuidString: "A0000001-0001-0001-0001-0000000000F5")!,
+            term: "Lidocaine",
+            pronunciation: "LY-doh-kayn",
+            definition: "A local anesthetic and antiarrhythmic medication. Used topically or by injection to numb tissues, and intravenously to treat certain cardiac arrhythmias, particularly ventricular arrhythmias.",
+            category: .medications,
+            relatedTerms: ["Arrhythmia", "Local Anesthetic"],
+            searchKeywords: ["Xylocaine", "local anesthetic", "antiarrhythmic", "numbing agent"]
+        ),
+
+        // ══════════════════════════════════════════════════════════════
+        // MARK: - Session 107: Symptoms (Batch 4)
+        // ══════════════════════════════════════════════════════════════
+
+        GlossaryTerm(
+            id: UUID(uuidString: "A0000001-0001-0001-0001-0000000000F6")!,
+            term: "Urticaria",
+            pronunciation: "ur-tih-KAIR-ee-ah",
+            definition: "Raised, itchy welts on the skin caused by an allergic reaction. Also called hives or wheals. May appear suddenly and can vary in size.",
+            category: .symptoms,
+            relatedTerms: ["Anaphylaxis", "Allergic Reaction", "Edema"],
+            searchKeywords: ["hives", "wheals", "welts", "skin welts", "allergic hives"]
+        ),
+
+        GlossaryTerm(
+            id: UUID(uuidString: "A0000001-0001-0001-0001-0000000000F7")!,
+            term: "Conjunctivitis",
+            pronunciation: "kon-junk-tih-VY-tis",
+            definition: "Inflammation of the conjunctiva, the thin membrane covering the white of the eye and inner eyelids. Causes redness, discharge, and discomfort. Also called pink eye.",
+            category: .symptoms,
+            relatedTerms: ["Ocular", "Inflammation"],
+            searchKeywords: ["pink eye", "eye inflammation", "red eye", "eye redness", "eye discharge"]
+        ),
+
+        GlossaryTerm(
+            id: UUID(uuidString: "A0000001-0001-0001-0001-0000000000F8")!,
+            term: "Erythema",
+            pronunciation: "air-ih-THEE-mah",
+            definition: "Redness of the skin or mucous membranes caused by increased blood flow to superficial capillaries. A common sign of inflammation or irritation.",
+            category: .symptoms,
+            relatedTerms: ["Inflammation", "Dermatitis"],
+            searchKeywords: ["redness", "skin redness", "flushing", "reddening", "red skin"]
+        ),
+
+        GlossaryTerm(
+            id: UUID(uuidString: "A0000001-0001-0001-0001-0000000000F9")!,
+            term: "Dermatitis",
+            pronunciation: "dur-mah-TY-tis",
+            definition: "Inflammation of the skin, which may cause redness, swelling, itching, and sometimes blistering or oozing. Can result from allergic reactions, irritants, or other causes.",
+            category: .symptoms,
+            relatedTerms: ["Erythema", "Inflammation", "Pruritus"],
+            searchKeywords: ["skin inflammation", "skin irritation", "inflamed skin", "contact dermatitis"]
+        ),
     ]
 
     // MARK: - Term Detection (Phase 2)
