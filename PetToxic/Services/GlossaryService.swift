@@ -120,7 +120,7 @@ class GlossaryService {
             definition: "Involuntary, rhythmic shaking movements of the body or limbs. Unlike seizures, the pet typically remains conscious during tremors. Can indicate neurotoxicity from substances like mycotoxins (moldy food), certain medications, or organophosphate pesticides.",
             category: .symptoms,
             relatedTerms: ["Seizures", "Ataxia"],
-            searchKeywords: ["shaking", "shivering", "twitching", "muscle tremors"]
+            searchKeywords: ["twitching", "muscle tremors"]
         ),
 
         // ══════════════════════════════════════════════════════════════
@@ -246,7 +246,7 @@ class GlossaryService {
             definition: "A bluish or grayish discoloration of the gums, tongue, or skin caused by insufficient oxygen in the blood. In pets, check the gums — healthy gums are pink, while cyanotic gums appear blue, gray, or muddy. This is a medical emergency indicating severe respiratory or circulatory compromise.",
             category: .symptoms,
             relatedTerms: ["Methemoglobinemia", "Dyspnea"],
-            searchKeywords: ["blue gums", "gray gums", "purple gums", "oxygen", "blue tongue"]
+            searchKeywords: ["blue gums", "gray gums", "purple gums", "blue tongue"]
         ),
 
         GlossaryTerm(
@@ -276,7 +276,7 @@ class GlossaryService {
             definition: "Abnormal drowsiness, sluggishness, or lack of energy. A lethargic pet may be slow to respond, reluctant to move, or sleep more than usual. While subtle, lethargy is often one of the first signs that something is wrong and should prompt veterinary evaluation if it persists.",
             category: .symptoms,
             relatedTerms: ["CNS Depression"],
-            searchKeywords: ["tired", "sleepy", "weak", "no energy", "sluggish", "not moving"]
+            searchKeywords: ["no energy", "sluggish", "not moving"]
         ),
 
         GlossaryTerm(
@@ -513,7 +513,7 @@ class GlossaryService {
             definition: "A slowing of brain and nervous system activity. Signs include drowsiness, reduced alertness, slow or shallow breathing, weakness, and in severe cases, loss of consciousness. Many toxins cause CNS depression, including sedatives, alcohol, and certain plants.",
             category: .symptoms,
             relatedTerms: ["CNS", "Lethargy", "Ataxia"],
-            searchKeywords: ["sedation", "drowsy", "unresponsive", "sleepy", "depressed"]
+            searchKeywords: ["sedation", "drowsy", "unresponsive", "depressed"]
         ),
 
         // 42. Hematemesis
@@ -737,7 +737,7 @@ class GlossaryService {
             definition: "Swelling caused by fluid buildup in body tissues. May appear as puffiness in the face, limbs, or belly. Pulmonary edema (fluid in the lungs) causes breathing difficulty and is life-threatening. Various toxins can cause edema through different mechanisms.",
             category: .symptoms,
             relatedTerms: ["Dyspnea", "Hypotension", "Ascites", "Effusion"],
-            searchKeywords: ["swelling", "fluid retention", "puffy", "swollen"]
+            searchKeywords: ["fluid retention"]
         ),
 
         // 62. Shock
@@ -1053,7 +1053,7 @@ class GlossaryService {
             definition: "Involuntary, rhythmic movement of the eyes—usually side-to-side, but can be up-and-down or rotational. Indicates neurological problems affecting balance or brain function. Often seen with vestibular toxicity or certain drug overdoses. The eyes appear to 'bounce' or 'flicker.'",
             category: .symptoms,
             relatedTerms: ["Ataxia", "CNS", "Neurotoxicity"],
-            searchKeywords: ["eye movement", "eyes shaking", "eyes bouncing", "flickering eyes"]
+            searchKeywords: ["eyes shaking", "eyes bouncing", "flickering eyes"]
         ),
 
         // 90. Paresis
@@ -1179,17 +1179,6 @@ class GlossaryService {
 
         // MARK: - Batch 6 (Session 101)
 
-        // 101. Agitation
-        GlossaryTerm(
-            id: UUID(uuidString: "A0000001-0001-0001-0001-000000000083")!,
-            term: "Agitation",
-            pronunciation: nil,
-            definition: "A state of restlessness, anxiety, and excessive activity. The pet may pace, vocalize, be unable to settle, or seem distressed. Common with stimulant toxins (caffeine, amphetamines, chocolate), certain medications, and some plant toxins. Often progresses to more serious signs like tremors or seizures.",
-            category: .symptoms,
-            relatedTerms: ["Tremors", "Seizures", "Tachycardia"],
-            searchKeywords: ["restless", "restlessness", "anxious", "hyperactive", "pacing", "can't settle"]
-        ),
-
         // 102. Hypoxia
         GlossaryTerm(
             id: UUID(uuidString: "A0000001-0001-0001-0001-000000000084")!,
@@ -1230,7 +1219,7 @@ class GlossaryService {
             pronunciation: nil,
             definition: "A potentially life-threatening condition caused by excessive serotonin activity in the nervous system. Usually results from drug interactions or overdoses of serotonergic medications (SSRIs, SNRIs, tramadol, trazodone). Signs include agitation, tremors, hyperthermia, rapid heart rate, dilated pupils, and in severe cases, seizures and death.",
             category: .conditions,
-            relatedTerms: ["Agitation", "Tremors", "Hyperthermia", "Mydriasis", "Tachycardia"],
+            relatedTerms: ["Tremors", "Hyperthermia", "Mydriasis", "Tachycardia"],
             searchKeywords: ["SSRI toxicity", "antidepressant overdose", "serotonin toxicity"]
         ),
 
@@ -1386,7 +1375,7 @@ class GlossaryService {
             pronunciation: nil,
             definition: "Using medications to calm a patient, reduce anxiety, or control dangerous symptoms like severe agitation or tremors. Sedation ranges from mild calming to deep unconsciousness. In toxicology, often used to control tremors, prevent injury during seizures, and reduce metabolic demand (which lowers body temperature in hyperthermia).",
             category: .treatment,
-            relatedTerms: ["Agitation", "Tremors", "Seizures", "Supportive Care"],
+            relatedTerms: ["Tremors", "Seizures", "Supportive Care"],
             searchKeywords: ["calm", "sedate", "tranquilize", "sedatives"]
         ),
 
