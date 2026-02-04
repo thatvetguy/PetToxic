@@ -121,6 +121,17 @@ struct ArticleDetailView: View {
                 navContext.enterEntryDetailWithoutContext()
             }
         }
+        .onChange(of: item.id) { _, _ in
+            // When swipe navigation replaces the entry at the same depth,
+            // SwiftUI may reuse this view without firing .onAppear.
+            isBookmarked = viewModel.isBookmarked(item)
+            viewModel.recordView(of: item)
+            if sourceCategory != nil {
+                navContext.enterEntryDetail(entry: item)
+            } else {
+                navContext.enterEntryDetailWithoutContext()
+            }
+        }
         .sheet(isPresented: $showShareSheet) {
             ShareSheet(activityItems: shareItems)
         }

@@ -337,6 +337,12 @@ struct CategoryListView: View {
         .onAppear {
             navContext.enterCategoryList(category: category, entries: filteredItems)
         }
+        .onChange(of: category) { _, _ in
+            // When swipe navigation replaces the path at the same depth,
+            // SwiftUI may reuse this view without firing .onAppear.
+            // This ensures context updates for the new category.
+            navContext.enterCategoryList(category: category, entries: filteredItems)
+        }
         .onChange(of: sortBySeverity) { _, _ in
             navContext.updateVisibleEntries(filteredItems)
         }

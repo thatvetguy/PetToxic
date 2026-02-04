@@ -319,22 +319,26 @@ struct MainTabView: View {
     }
 
     private func navigateToPreviousEntry() {
-        guard let previousEntry = browseNavContext.previousEntry else { return }
-        if !browseNavigationPath.isEmpty {
-            browseNavigationPath.removeLast()
-        }
-        browseNavigationPath.append(previousEntry)
+        guard let previousEntry = browseNavContext.previousEntry,
+              let category = browseNavContext.currentCategory else { return }
+        // Single-assignment replacement avoids transient empty path
+        // that could trigger returnToGrid via onChange
+        var newPath = NavigationPath()
+        newPath.append(category)
+        newPath.append(previousEntry)
+        browseNavigationPath = newPath
         if let currentIndex = browseNavContext.currentEntryIndex, currentIndex > 0 {
             browseNavContext.navigateToEntryAtIndex(currentIndex - 1)
         }
     }
 
     private func navigateToNextEntry() {
-        guard let nextEntry = browseNavContext.nextEntry else { return }
-        if !browseNavigationPath.isEmpty {
-            browseNavigationPath.removeLast()
-        }
-        browseNavigationPath.append(nextEntry)
+        guard let nextEntry = browseNavContext.nextEntry,
+              let category = browseNavContext.currentCategory else { return }
+        var newPath = NavigationPath()
+        newPath.append(category)
+        newPath.append(nextEntry)
+        browseNavigationPath = newPath
         if let currentIndex = browseNavContext.currentEntryIndex {
             browseNavContext.navigateToEntryAtIndex(currentIndex + 1)
         }
@@ -342,14 +346,17 @@ struct MainTabView: View {
 
     private func navigateToPreviousCategory() {
         guard let previousCategory = browseNavContext.previousCategory else { return }
-        browseNavigationPath = NavigationPath()
-        browseNavigationPath.append(previousCategory)
+        // Single-assignment: replace entire path to avoid transient count=0
+        var newPath = NavigationPath()
+        newPath.append(previousCategory)
+        browseNavigationPath = newPath
     }
 
     private func navigateToNextCategory() {
         guard let nextCategory = browseNavContext.nextCategory else { return }
-        browseNavigationPath = NavigationPath()
-        browseNavigationPath.append(nextCategory)
+        var newPath = NavigationPath()
+        newPath.append(nextCategory)
+        browseNavigationPath = newPath
     }
 
     @ViewBuilder
