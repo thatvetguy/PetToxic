@@ -162,20 +162,34 @@ struct MainTabView: View {
                     return
                 }
 
-                // If we never engaged (vertical drag), just reset
-                guard isDragging else {
-                    dragOffset = 0
-                    return
-                }
-
-                let threshold = geometry.size.width * 0.20
                 let screenWidth = geometry.size.width
                 let translation = value.translation.width
                 let velocity = value.predictedEndTranslation.width - value.translation.width
+                let isContextualSwipe = selectedTab == 1 && browseNavigationPath.count > 0
+
+                // For contextual swipes, the ScrollView's gesture can prevent
+                // isDragging from being set in onChanged. Check the final
+                // translation directly instead — it's more reliable.
+                if !isDragging {
+                    if isContextualSwipe {
+                        let horizontal = abs(translation)
+                        let vertical = abs(value.translation.height)
+                        guard horizontal > vertical else {
+                            return
+                        }
+                    } else {
+                        dragOffset = 0
+                        return
+                    }
+                }
+                let threshold = isContextualSwipe
+                    ? screenWidth * 0.10   // ~40pt — light flick
+                    : screenWidth * 0.20   // ~80pt — visual slide
+                let velocityThreshold: CGFloat = isContextualSwipe ? 100 : 200
 
                 // Consider velocity for quick flicks
-                let shouldSwipeLeft = translation < -threshold || velocity < -200
-                let shouldSwipeRight = translation > threshold || velocity > 200
+                let shouldSwipeLeft = translation < -threshold || velocity < -velocityThreshold
+                let shouldSwipeRight = translation > threshold || velocity > velocityThreshold
 
                 // Determine swipe direction (if valid)
                 let direction: SwipeDirection?
