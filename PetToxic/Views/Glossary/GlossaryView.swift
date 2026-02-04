@@ -183,10 +183,15 @@ private struct TermRowView: View {
                     .font(.headline)
                     .foregroundColor(.white)
 
-                Text(term.definition)
+                Text(term.definition.trimmingCharacters(in: .whitespacesAndNewlines))
                     .font(.subheadline)
                     .foregroundColor(.white.opacity(0.7))
+                    .multilineTextAlignment(.leading)
+                    .lineSpacing(2)
+                    .truncationMode(.tail)
                     .lineLimit(2)
+                    .frame(maxWidth: .infinity, alignment: .leading)
+                    .fixedSize(horizontal: false, vertical: true)
             }
 
             Spacer()
