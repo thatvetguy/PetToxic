@@ -13,6 +13,7 @@ struct ArticleDetailView: View {
     @State private var isBookmarked = false
     @State private var showShareSheet = false
     @Environment(BrowseNavigationContext.self) private var navContext
+    @Environment(\.dismiss) private var dismiss
 
     var body: some View {
         ZStack {
@@ -90,8 +91,16 @@ struct ArticleDetailView: View {
         }
         .navigationTitle(item.name)
         .navigationBarTitleDisplayMode(.inline)
+        .navigationBarBackButtonHidden(true)
         .toolbarBackground(.hidden, for: .navigationBar)
         .toolbar {
+            ToolbarItem(placement: .topBarLeading) {
+                Button {
+                    dismiss()
+                } label: {
+                    Image(systemName: "chevron.left")
+                }
+            }
             ToolbarItem(placement: .topBarTrailing) {
                 HStack(spacing: 16) {
                     Button {
