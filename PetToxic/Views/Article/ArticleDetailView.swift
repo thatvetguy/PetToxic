@@ -4,9 +4,15 @@ struct ArticleDetailView: View {
     let item: ToxicItem
     var saveSearchTerm: Bool = false
     var searchQuery: String? = nil
+
+    /// The category the user navigated from. Nil if opened from search or related entry link.
+    /// Used for contextual swipe navigation (next/previous entry within category).
+    var sourceCategory: Category? = nil
+
     @StateObject private var viewModel = ArticleViewModel()
     @State private var isBookmarked = false
     @State private var showShareSheet = false
+    @Environment(BrowseNavigationContext.self) private var navContext
 
     var body: some View {
         ZStack {
@@ -108,6 +114,11 @@ struct ArticleDetailView: View {
             viewModel.recordView(of: item)
             if saveSearchTerm {
                 SearchContext.shared.saveIfPending()
+            }
+            if sourceCategory != nil {
+                navContext.enterEntryDetail(entry: item)
+            } else {
+                navContext.enterEntryDetailWithoutContext()
             }
         }
         .sheet(isPresented: $showShareSheet) {
@@ -394,4 +405,5 @@ private struct ShareSheet: UIViewControllerRepresentable {
     NavigationStack {
         ArticleDetailView(item: .sample)
     }
+    .environment(BrowseNavigationContext())
 }

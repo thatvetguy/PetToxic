@@ -302,7 +302,7 @@ struct CategoryListView: View {
         .toolbarBackground(.hidden, for: .navigationBar)
         .toolbarColorScheme(.dark, for: .navigationBar)
         .navigationDestination(for: ToxicItem.self) { item in
-            ArticleDetailView(item: item)
+            ArticleDetailView(item: item, sourceCategory: category)
         }
         .toolbar {
             ToolbarItemGroup(placement: .topBarTrailing) {
