@@ -420,7 +420,7 @@ class GlossaryService {
             definition: "Dangerously low body temperature. Can occur with certain toxins that cause sedation or cardiovascular depression, or from environmental cold exposure. Signs include shivering (early), lethargy, weakness, and cold ears/paws. Severe hypothermia causes muscle stiffness and unresponsiveness.",
             category: .conditions,
             relatedTerms: ["Hyperthermia"],
-            searchKeywords: ["low temperature", "cold", "freezing"]
+            searchKeywords: ["low temperature"]
         ),
 
         // ══════════════════════════════════════════════════════════════
@@ -546,7 +546,7 @@ class GlossaryService {
             definition: "Abnormally low blood pressure. Signs may include weakness, pale gums, cold extremities, rapid heart rate (as the body tries to compensate), and collapse. Severe hypotension can lead to shock and organ damage if not treated promptly.",
             category: .conditions,
             relatedTerms: ["Collapse", "Tachycardia", "Bradycardia"],
-            searchKeywords: ["low blood pressure", "shock", "weak pulse"]
+            searchKeywords: ["low blood pressure", "weak pulse"]
         ),
 
         // 45. Hypertension
@@ -759,7 +759,7 @@ class GlossaryService {
             definition: "Dangerous loss of body fluids, often from vomiting, diarrhea, or not drinking. Signs include dry or tacky gums, skin that stays 'tented' when pinched, sunken eyes, lethargy, and decreased urination. Dehydration can quickly become serious, especially in small pets.",
             category: .conditions,
             relatedTerms: ["Vomiting", "Diarrhea", "IV Fluids", "Lethargy"],
-            searchKeywords: ["fluid loss", "dried out", "not drinking"]
+            searchKeywords: ["fluid loss", "not drinking"]
         ),
 
         // 64. Renal
@@ -1097,7 +1097,7 @@ class GlossaryService {
             definition: "A physical blockage preventing normal passage through a body structure—most commonly the GI tract. Foreign objects, expanding substances (like Gorilla Glue), or swollen tissue can cause obstruction. Signs include repeated vomiting, inability to keep food/water down, painful abdomen, and no stool. Often requires surgical intervention.",
             category: .conditions,
             relatedTerms: ["GI Tract", "Ileus", "Vomiting"],
-            searchKeywords: ["blockage", "blocked", "foreign body", "intestinal blockage"]
+            searchKeywords: ["foreign body", "intestinal blockage"]
         ),
 
         // 94. Perforation
@@ -1108,7 +1108,7 @@ class GlossaryService {
             definition: "A hole or rupture in an organ wall, most often the stomach or intestines. Can be caused by sharp foreign objects, severe ulcers, or caustic substances. Contents leak into the abdomen causing severe infection (peritonitis). This is a surgical emergency with life-threatening consequences.",
             category: .conditions,
             relatedTerms: ["GI Tract", "Obstruction"],
-            searchKeywords: ["hole", "rupture", "tear", "puncture"]
+            searchKeywords: ["GI perforation", "intestinal perforation", "stomach perforation", "perforated bowel"]
         ),
 
         // 95. Peritonitis
