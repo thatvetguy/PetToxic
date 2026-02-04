@@ -25,6 +25,13 @@ Native iOS reference app for pet owners to quickly look up toxicity information.
 - **Working directory assumptions:** Session instruction documents may assume a different working directory than the actual one. Always confirm the real working directory with `pwd` or check the environment context before running any script verbatim from session instructions.
 - **Glossary extraction — multi-line fields:** Fields in `GlossaryService.swift` (`definition`, `searchKeywords`, `relatedTerms`) can span multiple lines. Single-line awk/sed patterns will silently miss entries with wrapped fields. **Always** use a block-based approach: accumulate lines between `GlossaryTerm(` and the closing `),`, then parse the full block. Prefer `perl -ne` with a line-by-line accumulator over awk for glossary extraction. Never assume all fields fit on one line.
 
+### SwiftUI Navigation & Gesture Gotchas
+
+- **Never replace NavigationPath for lateral navigation.** Assigning a new `NavigationPath` to swap one entry for another (same depth) is unreliable — SwiftUI may process it as pop-then-push, causing bounce-backs, transient intermediate states, or routing swipes to the wrong navigation level. Instead, keep the path stable and switch displayed content in-place via an `@Observable` context (see `BrowseNavigationContext`). The `NavigationPath` should only change for structural navigation (push/pop levels).
+- **`.navigationDestination` must be on the NavigationStack root.** Registering destinations on child views (e.g., inside `CategoryListView`) means they're only available when that child is rendered. Programmatic path changes resolve destinations from the root. All `.navigationDestination` modifiers live on `BrowseView`.
+- **ScrollView competes with `.simultaneousGesture(DragGesture)`.** Even with `.simultaneousGesture`, a vertical `ScrollView` can prevent `onChanged` from reliably setting state (the horizontality guard fails due to gesture interference). For swipes over ScrollView content, check the **final** `value.translation` in `onEnded` rather than relying on intermediate `onChanged` state. See the `isDragging` bypass for contextual swipes in `MainTabView`.
+- **Contextual swipes need different thresholds.** Swipes with visual drag feedback (tab switching) use 20% screen-width / velocity 200. Swipes without visual feedback (entry/category flicks) need lighter thresholds (10% / velocity 100) to feel responsive. Both use the same `DragGesture`; thresholds are selected based on `browseNavigationPath.count`.
+
 ---
 
 ## Core Principles
