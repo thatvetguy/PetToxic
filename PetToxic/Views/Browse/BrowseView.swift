@@ -78,16 +78,18 @@ struct BrowseView: View {
             .toolbarColorScheme(.dark, for: .navigationBar)
             .navigationDestination(for: Category.self) { category in
                 CategoryListView(category: category)
+                    .disableInteractivePop()
             }
             .navigationDestination(for: ToxicItem.self) { item in
                 ArticleDetailView(item: item, saveSearchTerm: true, searchQuery: searchViewModel.searchText)
+                    .disableInteractivePop()
             }
             .onChange(of: navigationPath.count) { oldCount, newCount in
                 if newCount == 0 {
                     // NavigationStack may transiently report count=0 during
                     // programmatic path replacement (swipe navigation). Verify
                     // the path is genuinely empty after SwiftUI settles.
-                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.05) {
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.15) {
                         if navigationPath.count == 0 {
                             navContext.returnToGrid()
                         }
@@ -310,6 +312,7 @@ struct CategoryListView: View {
         .toolbarColorScheme(.dark, for: .navigationBar)
         .navigationDestination(for: ToxicItem.self) { item in
             ArticleDetailView(item: item, sourceCategory: category)
+                .disableInteractivePop()
         }
         .toolbar {
             ToolbarItemGroup(placement: .topBarTrailing) {
@@ -521,6 +524,40 @@ struct EntryListRow: View {
         }
         .padding(.horizontal, 16)
         .padding(.vertical, 12)
+    }
+}
+
+// MARK: - Disable Interactive Pop Gesture
+
+/// Disables the NavigationStack's built-in interactive pop (edge swipe) gesture
+/// on the hosting UINavigationController. Prevents the system back-swipe from
+/// conflicting with custom contextual swipe navigation.
+private struct InteractivePopGestureController: UIViewControllerRepresentable {
+    func makeUIViewController(context: Context) -> UIViewController {
+        InteractivePopGestureVC()
+    }
+
+    func updateUIViewController(_ uiViewController: UIViewController, context: Context) {}
+}
+
+private class InteractivePopGestureVC: UIViewController {
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        navigationController?.interactivePopGestureRecognizer?.isEnabled = false
+    }
+
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        navigationController?.interactivePopGestureRecognizer?.isEnabled = true
+    }
+}
+
+extension View {
+    func disableInteractivePop() -> some View {
+        background(
+            InteractivePopGestureController()
+                .frame(width: 0, height: 0)
+        )
     }
 }
 
