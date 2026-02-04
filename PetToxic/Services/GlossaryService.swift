@@ -335,7 +335,7 @@ class GlossaryService {
             pronunciation: "dy-ah-REE-ah",
             definition: "Loose, watery, or frequent bowel movements. Common with GI toxins and irritants. Can lead to dehydration, especially in small pets. Bloody diarrhea (bright red or dark/tarry) is more serious and indicates GI bleeding that requires prompt veterinary attention.",
             category: .symptoms,
-            relatedTerms: nil,
+            relatedTerms: ["Melena", "Hematochezia", "Dehydration"],
             searchKeywords: ["loose stool", "watery stool", "runny poop", "bloody stool"]
         ),
 
@@ -534,7 +534,7 @@ class GlossaryService {
             pronunciation: "meh-LEE-nah",
             definition: "Dark, tarry, black stool caused by digested blood from bleeding in the upper digestive tract. The dark color comes from blood being broken down as it passes through the intestines. This is different from bright red blood in stool (hematochezia), which indicates lower intestinal bleeding.",
             category: .symptoms,
-            relatedTerms: ["GI Tract", "Hematemesis", "Coagulopathy"],
+            relatedTerms: ["GI Tract", "Hematemesis", "Coagulopathy", "Hematochezia"],
             searchKeywords: ["black stool", "tarry stool", "blood in stool", "dark feces"]
         ),
 
@@ -634,7 +634,7 @@ class GlossaryService {
             definition: "Taking a substance into the body by swallowing (eating or drinking). This is the most common route of poisoning in pets. The substance then enters the digestive system where it may be absorbed into the bloodstream.",
             category: .general,
             relatedTerms: ["GI Tract", "Decontamination", "Emesis"],
-            searchKeywords: []
+            searchKeywords: ["swallowed", "ate", "eaten", "chewed", "consumed"]
         ),
 
         // 53. Dermal Exposure
@@ -906,7 +906,7 @@ class GlossaryService {
             definition: "When the severity of effects increases with the amount of exposure. Most toxins are dose-dependent—a tiny amount may cause mild symptoms while a large amount causes severe illness. This is why the amount ingested matters when assessing poisoning risk.",
             category: .general,
             relatedTerms: ["Acute", "Toxicosis"],
-            searchKeywords: []
+            searchKeywords: ["amount matters", "how much", "quantity"]
         ),
 
         // 77. Idiosyncratic Reaction
@@ -1163,7 +1163,7 @@ class GlossaryService {
             definition: "When a treatment or action should NOT be done because it could cause harm. For example, inducing vomiting is contraindicated for caustic substances (could burn twice) or petroleum products (aspiration risk). Always follow veterinary guidance rather than attempting home treatment.",
             category: .general,
             relatedTerms: ["Emesis", "Aspiration", "Decontamination"],
-            searchKeywords: []
+            searchKeywords: ["should not", "do not", "never do", "harmful treatment"]
         ),
 
         // 100. Toxin vs Toxicant
@@ -2223,6 +2223,17 @@ class GlossaryService {
             category: .symptoms,
             relatedTerms: ["Vomiting", "Emesis", "Aspiration"],
             searchKeywords: ["regurgitate", "regurgitating", "bringing up food", "passive vomiting"]
+        ),
+
+        // 195. Hematochezia
+        GlossaryTerm(
+            id: UUID(uuidString: "A0000001-0001-0001-0001-0000000000E3")!,
+            term: "Hematochezia",
+            pronunciation: "hee-mat-oh-KEE-zee-ah",
+            definition: "Fresh, bright red blood in the stool, indicating bleeding from the lower gastrointestinal tract (colon or rectum). Unlike melena (dark, tarry stool from upper GI bleeding), hematochezia appears red because the blood has not been digested. Can result from colitis, parasites, foreign bodies, or toxins that damage the intestinal lining.",
+            category: .symptoms,
+            relatedTerms: ["Melena", "Diarrhea", "GI Tract"],
+            searchKeywords: ["bloody stool", "blood in stool", "red stool", "fresh blood stool", "bright red blood"]
         ),
     ]
 
