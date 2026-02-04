@@ -7,6 +7,14 @@
 
 import SwiftUI
 
+/// A ToxicItem opened from a category list, carrying its source category.
+/// Used as a distinct NavigationPath element so SwiftUI doesn't confuse it
+/// with plain ToxicItem entries opened from search results.
+struct CategoryEntry: Hashable {
+    let item: ToxicItem
+    let sourceCategory: Category
+}
+
 /// Tracks navigation state within the Browse tab to enable context-aware swipe gestures.
 /// When the user is viewing a category list or entry detail, swipe gestures navigate
 /// within that context rather than switching tabs.

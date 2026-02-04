@@ -270,7 +270,7 @@ struct CategoryListView: View {
                     if isGridView {
                         LazyVGrid(columns: columns, spacing: 8) {
                             ForEach(filteredItems) { item in
-                                NavigationLink(value: item) {
+                                NavigationLink(value: CategoryEntry(item: item, sourceCategory: category)) {
                                     Image(item.imageAsset ?? "placeholder")
                                         .resizable()
                                         .aspectRatio(1, contentMode: .fit)
@@ -285,7 +285,7 @@ struct CategoryListView: View {
                     } else {
                         LazyVStack(spacing: 4) {
                             ForEach(filteredItems) { item in
-                                NavigationLink(value: item) {
+                                NavigationLink(value: CategoryEntry(item: item, sourceCategory: category)) {
                                     EntryListRow(
                                         item: item,
                                         selectedSpeciesFilter: selectedSpeciesFilter
@@ -304,8 +304,8 @@ struct CategoryListView: View {
         .navigationBarBackButtonHidden(true)
         .toolbarBackground(.hidden, for: .navigationBar)
         .toolbarColorScheme(.dark, for: .navigationBar)
-        .navigationDestination(for: ToxicItem.self) { item in
-            ArticleDetailView(item: item, sourceCategory: category)
+        .navigationDestination(for: CategoryEntry.self) { entry in
+            ArticleDetailView(item: entry.item, sourceCategory: entry.sourceCategory)
         }
         .toolbar {
             ToolbarItem(placement: .topBarLeading) {

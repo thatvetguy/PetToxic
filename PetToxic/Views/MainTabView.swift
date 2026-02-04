@@ -330,7 +330,7 @@ struct MainTabView: View {
               let category = browseNavContext.currentCategory else { return }
         var newPath = NavigationPath()
         newPath.append(category)
-        newPath.append(previousEntry)
+        newPath.append(CategoryEntry(item: previousEntry, sourceCategory: category))
         browseNavigationPath = newPath
         if let currentIndex = browseNavContext.currentEntryIndex, currentIndex > 0 {
             browseNavContext.navigateToEntryAtIndex(currentIndex - 1)
@@ -342,7 +342,7 @@ struct MainTabView: View {
               let category = browseNavContext.currentCategory else { return }
         var newPath = NavigationPath()
         newPath.append(category)
-        newPath.append(nextEntry)
+        newPath.append(CategoryEntry(item: nextEntry, sourceCategory: category))
         browseNavigationPath = newPath
         if let currentIndex = browseNavContext.currentEntryIndex {
             browseNavContext.navigateToEntryAtIndex(currentIndex + 1)
