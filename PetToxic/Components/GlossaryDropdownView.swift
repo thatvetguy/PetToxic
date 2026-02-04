@@ -12,6 +12,12 @@ struct GlossaryDropdownView: View {
 
     @State private var isExpanded = false
     @State private var expandedDefinitions: Set<UUID> = []  // Track which definitions are fully shown
+    @State private var showAllTerms = false
+
+    // MARK: - Constants
+
+    private let maxVisibleTerms = 4
+    private let collapsedHeight: CGFloat = 350  // ~3.5 definitions
 
     private var isPro: Bool {
         ProSettings.shared.isPro
@@ -42,6 +48,10 @@ struct GlossaryDropdownView: View {
     private var headerView: some View {
         Button {
             if isPro {
+                if isExpanded {
+                    // Collapsing - reset showAllTerms
+                    showAllTerms = false
+                }
                 isExpanded.toggle()
             }
             // Free users: button does nothing
@@ -81,11 +91,39 @@ struct GlossaryDropdownView: View {
     // MARK: - Expanded Content
 
     private var expandedContent: some View {
-        VStack(alignment: .leading, spacing: 12) {
+        VStack(alignment: .leading, spacing: 0) {
             Divider()
                 .background(Color.white.opacity(0.2))
                 .padding(.horizontal, 12)
 
+            // Terms list - scrollable with fixed height or fully expanded
+            if terms.count > maxVisibleTerms && !showAllTerms {
+                // Fixed height with scroll
+                ScrollView {
+                    termsListContent
+                }
+                .frame(maxHeight: collapsedHeight)
+
+                // "Show all" button
+                showAllButton
+            } else {
+                // Show all terms (either few terms or user tapped "Show all")
+                termsListContent
+
+                // "Show less" button if we expanded from "Show all"
+                if terms.count > maxVisibleTerms && showAllTerms {
+                    showLessButton
+                }
+            }
+
+            Spacer().frame(height: 8)
+        }
+    }
+
+    // MARK: - Terms List Content
+
+    private var termsListContent: some View {
+        VStack(alignment: .leading, spacing: 12) {
             ForEach(Array(terms.enumerated()), id: \.element.id) { index, term in
                 VStack(alignment: .leading, spacing: 4) {
                     // Term name + pronunciation
@@ -140,8 +178,53 @@ struct GlossaryDropdownView: View {
                         .padding(.vertical, 4)
                 }
             }
+        }
+        .padding(.top, 12)
+    }
 
-            Spacer().frame(height: 8)
+    // MARK: - Show All / Show Less Buttons
+
+    private var showAllButton: some View {
+        Button {
+            withAnimation(.easeInOut(duration: 0.25)) {
+                showAllTerms = true
+            }
+        } label: {
+            HStack {
+                Spacer()
+                Text("Show all \(terms.count) terms")
+                    .font(.caption)
+                    .fontWeight(.medium)
+                    .foregroundColor(.teal)
+                Image(systemName: "chevron.down")
+                    .font(.caption2)
+                    .foregroundColor(.teal)
+                Spacer()
+            }
+            .padding(.vertical, 10)
+            .background(Color.white.opacity(0.05))
+        }
+    }
+
+    private var showLessButton: some View {
+        Button {
+            withAnimation(.easeInOut(duration: 0.25)) {
+                showAllTerms = false
+            }
+        } label: {
+            HStack {
+                Spacer()
+                Text("Show fewer terms")
+                    .font(.caption)
+                    .fontWeight(.medium)
+                    .foregroundColor(.teal)
+                Image(systemName: "chevron.up")
+                    .font(.caption2)
+                    .foregroundColor(.teal)
+                Spacer()
+            }
+            .padding(.vertical, 10)
+            .background(Color.white.opacity(0.05))
         }
     }
 
