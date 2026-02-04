@@ -72,6 +72,7 @@
 		GLOSS007AAAA7777777777 /* GlossaryTermDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = GLOSS008AAAA8888888888 /* GlossaryTermDetailView.swift */; };
 		GLOSSCARD01AAA111111111 /* GlossaryCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = GLOSSCARD02AAA222222222 /* GlossaryCard.swift */; };
 		GLOSSDROP01AAA111111111 /* GlossaryDropdownView.swift in Sources */ = {isa = PBXBuildFile; fileRef = GLOSSDROP02AAA222222222 /* GlossaryDropdownView.swift */; };
+		GLOSSSTYL01AAA111111111 /* GlossaryStyledText.swift in Sources */ = {isa = PBXBuildFile; fileRef = GLOSSSTYL02AAA222222222 /* GlossaryStyledText.swift */; };
 		GLOSSLINK01BBB111111111 /* GlossaryEntryLink.swift in Sources */ = {isa = PBXBuildFile; fileRef = GLOSSLINK02BBB222222222 /* GlossaryEntryLink.swift */; };
 		HOMESEC001CCCC1111111111 /* MyPetsHomeSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = HOMESEC002CCCC2222222222 /* MyPetsHomeSection.swift */; };
 		MKDWN001FFFF1111111111111 /* MarkdownText.swift in Sources */ = {isa = PBXBuildFile; fileRef = MKDWN002FFFF2222222222222 /* MarkdownText.swift */; };
@@ -169,6 +170,7 @@
 		GLOSS008AAAA8888888888 /* GlossaryTermDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlossaryTermDetailView.swift; sourceTree = "<group>"; };
 		GLOSSCARD02AAA222222222 /* GlossaryCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlossaryCard.swift; sourceTree = "<group>"; };
 		GLOSSDROP02AAA222222222 /* GlossaryDropdownView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlossaryDropdownView.swift; sourceTree = "<group>"; };
+		GLOSSSTYL02AAA222222222 /* GlossaryStyledText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlossaryStyledText.swift; sourceTree = "<group>"; };
 		GLOSSLINK02BBB222222222 /* GlossaryEntryLink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlossaryEntryLink.swift; sourceTree = "<group>"; };
 		HOMESEC002CCCC2222222222 /* MyPetsHomeSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPetsHomeSection.swift; sourceTree = "<group>"; };
 		MKDWN002FFFF2222222222222 /* MarkdownText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarkdownText.swift; sourceTree = "<group>"; };
@@ -249,6 +251,7 @@
 				SHCARD002AAAA2222222222 /* ShareCardView.swift */,
 				GLOSSCARD02AAA222222222 /* GlossaryCard.swift */,
 				GLOSSDROP02AAA222222222 /* GlossaryDropdownView.swift */,
+				GLOSSSTYL02AAA222222222 /* GlossaryStyledText.swift */,
 				GLOSSLINK02BBB222222222 /* GlossaryEntryLink.swift */,
 			);
 			path = Components;
@@ -610,6 +613,7 @@
 				SHCARD001AAAA1111111111 /* ShareCardView.swift in Sources */,
 				GLOSSCARD01AAA111111111 /* GlossaryCard.swift in Sources */,
 				GLOSSDROP01AAA111111111 /* GlossaryDropdownView.swift in Sources */,
+				GLOSSSTYL01AAA111111111 /* GlossaryStyledText.swift in Sources */,
 				GLOSSLINK01BBB111111111 /* GlossaryEntryLink.swift in Sources */,
 				GLOSS001AAAA1111111111 /* GlossaryTerm.swift in Sources */,
 				GLOSS003AAAA3333333333 /* GlossaryService.swift in Sources */,
