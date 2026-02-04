@@ -179,12 +179,14 @@ struct MainTabView: View {
                 }
 
                 // Check for contextual navigation on Browse tab
+                // Use the actual navigation path count as source of truth,
+                // not browseNavContext.depth which can become stale.
                 if let direction = direction,
-                   selectedTab == 1 && !browseNavContext.isAtGridLevel {
+                   selectedTab == 1 && browseNavigationPath.count > 0 {
                     // Handle contextual swipe (entry/category navigation)
-                    if browseNavContext.isAtEntryLevel {
+                    if browseNavigationPath.count >= 2 {
                         handleEntryLevelSwipe(direction: direction)
-                    } else if browseNavContext.isAtCategoryLevel {
+                    } else {
                         handleCategoryLevelSwipe(direction: direction)
                     }
                     // Reset drag state
@@ -311,11 +313,16 @@ struct MainTabView: View {
     private func popNavigation() {
         if !browseNavigationPath.isEmpty {
             browseNavigationPath.removeLast()
+            // If we just popped to root, update context
+            if browseNavigationPath.isEmpty {
+                browseNavContext.returnToGrid()
+            }
         }
     }
 
     private func popToGrid() {
         browseNavigationPath = NavigationPath()
+        browseNavContext.returnToGrid()
     }
 
     private func navigateToPreviousEntry() {

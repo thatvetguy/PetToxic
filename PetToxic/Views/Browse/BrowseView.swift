@@ -84,18 +84,12 @@ struct BrowseView: View {
                 ArticleDetailView(item: item, saveSearchTerm: true, searchQuery: searchViewModel.searchText)
                     .disableInteractivePop()
             }
-            .onChange(of: navigationPath.count) { oldCount, newCount in
-                if newCount == 0 {
-                    // NavigationStack may transiently report count=0 during
-                    // programmatic path replacement (swipe navigation). Verify
-                    // the path is genuinely empty after SwiftUI settles.
-                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.15) {
-                        if navigationPath.count == 0 {
-                            navContext.returnToGrid()
-                        }
-                    }
-                }
-            }
+            // NOTE: No onChange(of: navigationPath.count) observer here.
+            // Context is managed explicitly: popToGrid()/popNavigation() in
+            // MainTabView call returnToGrid(), and view lifecycle callbacks
+            // (onAppear/onChange) in CategoryListView/ArticleDetailView set
+            // the context when views appear. Swipe decisions use the actual
+            // browseNavigationPath.count, not context depth.
         }
     }
 
