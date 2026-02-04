@@ -153,7 +153,7 @@ class GlossaryService {
             pronunciation: "hep-ah-toh-tok-SIS-ih-tee",
             definition: "Liver damage or poisoning caused by toxic substances. The liver processes many toxins, making it vulnerable to injury. Signs may include jaundice (yellow gums/eyes), vomiting, lethargy, and loss of appetite. Common causes include sago palm, acetaminophen, certain mushrooms, and blue-green algae.",
             category: .conditions,
-            relatedTerms: ["Nephrotoxicity", "Jaundice"],
+            relatedTerms: ["Nephrotoxicity", "Jaundice", "Ascites"],
             searchKeywords: ["liver damage", "liver failure", "liver toxicity", "hepatic"]
         ),
 
@@ -173,7 +173,7 @@ class GlossaryService {
             pronunciation: "koh-ag-yoo-LOP-ah-thee",
             definition: "A disorder affecting the blood's ability to clot properly, leading to excessive bleeding. In toxicology, most commonly caused by anticoagulant rodenticides (rat poison), which deplete vitamin K. Signs may not appear for 2-5 days and include bruising, bloody urine or stool, pale gums, and difficulty breathing.",
             category: .conditions,
-            relatedTerms: nil,
+            relatedTerms: ["Hemostasis"],
             searchKeywords: ["bleeding disorder", "clotting", "anticoagulant", "rat poison", "vitamin K"]
         ),
 
@@ -255,7 +255,7 @@ class GlossaryService {
             pronunciation: "DISP-nee-ah",
             definition: "Difficult or labored breathing. Affected pets may breathe with their mouth open, extend their neck, use abdominal muscles to breathe, or make wheezing/gasping sounds. Dyspnea indicates the pet is not getting enough oxygen and requires immediate veterinary attention.",
             category: .symptoms,
-            relatedTerms: ["Cyanosis", "Tachypnea"],
+            relatedTerms: ["Cyanosis", "Tachypnea", "Effusion"],
             searchKeywords: ["trouble breathing", "difficulty breathing", "labored breathing", "can't breathe", "gasping"]
         ),
 
@@ -389,7 +389,7 @@ class GlossaryService {
             pronunciation: nil,
             definition: "Sudden loss of kidney function, often abbreviated as AKI. The kidneys filter waste from the blood — when they fail, toxins build up rapidly. Signs include decreased urination, vomiting, lethargy, and loss of appetite. Common causes include grapes/raisins (dogs), lilies (cats), antifreeze, and NSAIDs.",
             category: .conditions,
-            relatedTerms: ["Nephrotoxicity"],
+            relatedTerms: ["Nephrotoxicity", "Azotemia", "Oliguria", "Anuria"],
             searchKeywords: ["AKI", "kidney failure", "renal failure", "acute renal failure"]
         ),
 
@@ -714,7 +714,7 @@ class GlossaryService {
             pronunciation: "pol-ee-YOO-ree-ah",
             definition: "Producing abnormally large amounts of urine. Often seen alongside increased thirst (polydipsia). Can be caused by kidney damage, certain toxins, diabetes, or other conditions. You may notice more frequent urination, larger wet spots, or accidents in housetrained pets.",
             category: .symptoms,
-            relatedTerms: ["Polydipsia", "Nephrotoxicity", "Acute Kidney Injury"],
+            relatedTerms: ["Polydipsia", "Nephrotoxicity", "Acute Kidney Injury", "Oliguria"],
             searchKeywords: ["frequent urination", "peeing a lot", "excessive urination", "PU/PD"]
         ),
 
@@ -736,7 +736,7 @@ class GlossaryService {
             pronunciation: "eh-DEE-mah",
             definition: "Swelling caused by fluid buildup in body tissues. May appear as puffiness in the face, limbs, or belly. Pulmonary edema (fluid in the lungs) causes breathing difficulty and is life-threatening. Various toxins can cause edema through different mechanisms.",
             category: .symptoms,
-            relatedTerms: ["Dyspnea", "Hypotension"],
+            relatedTerms: ["Dyspnea", "Hypotension", "Ascites", "Effusion"],
             searchKeywords: ["swelling", "fluid retention", "puffy", "swollen"]
         ),
 
@@ -1307,7 +1307,7 @@ class GlossaryService {
             pronunciation: "yoo-REE-mee-ah",
             definition: "A condition where waste products (normally filtered by the kidneys) build up in the blood due to kidney failure. Signs include nausea, vomiting, loss of appetite, bad breath (ammonia smell), mouth ulcers, lethargy, and neurological changes. Indicates severe kidney dysfunction requiring aggressive treatment.",
             category: .conditions,
-            relatedTerms: ["Acute Kidney Injury", "Nephrotoxicity", "Renal"],
+            relatedTerms: ["Acute Kidney Injury", "Nephrotoxicity", "Renal", "Azotemia"],
             searchKeywords: ["kidney failure toxins", "waste buildup", "uremic"]
         ),
 
@@ -1564,7 +1564,7 @@ class GlossaryService {
             pronunciation: nil,
             definition: "Disseminated Intravascular Coagulation—a life-threatening condition where the clotting system becomes overactivated throughout the body, using up clotting factors and platelets. Paradoxically causes both widespread clotting AND uncontrolled bleeding. Can be triggered by severe infections, toxins, heatstroke, or snake envenomation. Extremely serious with high mortality.",
             category: .conditions,
-            relatedTerms: ["Coagulopathy", "Platelets", "Shock", "Petechiae"],
+            relatedTerms: ["Coagulopathy", "Platelets", "Shock", "Petechiae", "Hemostasis"],
             searchKeywords: ["disseminated intravascular coagulation", "clotting disorder", "bleeding and clotting"]
         ),
 
@@ -2234,6 +2234,87 @@ class GlossaryService {
             category: .symptoms,
             relatedTerms: ["Melena", "Diarrhea", "GI Tract"],
             searchKeywords: ["bloody stool", "blood in stool", "red stool", "fresh blood stool", "bright red blood"]
+        ),
+
+        // ══════════════════════════════════════════════════════════════
+        // MARK: - Session 104 Additions
+        // ══════════════════════════════════════════════════════════════
+
+        // 196. Azotemia
+        GlossaryTerm(
+            id: UUID(uuidString: "A0000001-0001-0001-0001-0000000000E4")!,
+            term: "Azotemia",
+            pronunciation: "az-oh-TEE-mee-ah",
+            definition: "Elevated levels of nitrogen-containing waste products (BUN and creatinine) in the blood, indicating the kidneys are not filtering properly. Azotemia is an early sign of kidney dysfunction and may progress to uremia if untreated. Common in toxicities affecting the kidneys, such as lily ingestion in cats, grape/raisin toxicity, or ethylene glycol poisoning.",
+            category: .conditions,
+            relatedTerms: ["Uremia", "Acute Kidney Injury", "Nephrotoxicity"],
+            searchKeywords: ["elevated BUN", "high creatinine", "kidney values", "renal values", "kidney blood test"]
+        ),
+
+        // 197. Oliguria
+        GlossaryTerm(
+            id: UUID(uuidString: "A0000001-0001-0001-0001-0000000000E5")!,
+            term: "Oliguria",
+            pronunciation: "ol-ih-GYUR-ee-ah",
+            definition: "Abnormally decreased urine production. A warning sign that the kidneys are struggling to function, often seen in acute kidney injury from toxins. Oliguria may progress to anuria (no urine production) if kidney damage worsens. Monitoring urine output is critical in hospitalized toxicosis patients.",
+            category: .symptoms,
+            relatedTerms: ["Anuria", "Acute Kidney Injury", "Polyuria"],
+            searchKeywords: ["decreased urination", "less urine", "reduced urine output", "not peeing much", "low urine"]
+        ),
+
+        // 198. Anuria
+        GlossaryTerm(
+            id: UUID(uuidString: "A0000001-0001-0001-0001-0000000000E6")!,
+            term: "Anuria",
+            pronunciation: "an-YUR-ee-ah",
+            definition: "Complete absence of urine production — a medical emergency indicating severe kidney failure. The kidneys have essentially stopped working. In toxicosis cases, anuria suggests severe, potentially irreversible kidney damage and requires immediate intensive care, possibly including dialysis.",
+            category: .symptoms,
+            relatedTerms: ["Oliguria", "Acute Kidney Injury", "Uremia"],
+            searchKeywords: ["no urination", "not urinating", "no urine", "stopped urinating", "can't pee"]
+        ),
+
+        // 199. Hemostasis
+        GlossaryTerm(
+            id: UUID(uuidString: "A0000001-0001-0001-0001-0000000000E7")!,
+            term: "Hemostasis",
+            pronunciation: "hee-moh-STAY-sis",
+            definition: "The body's process of stopping bleeding through blood clot formation. Involves platelets, clotting factors, and blood vessel constriction working together. Many toxins disrupt hemostasis — anticoagulant rodenticides deplete clotting factors, while some snake venoms cause both excessive clotting and bleeding.",
+            category: .general,
+            relatedTerms: ["Coagulopathy", "Platelets", "DIC"],
+            searchKeywords: ["blood clotting", "clot formation", "stop bleeding", "clotting process"]
+        ),
+
+        // 200. Cachexia
+        GlossaryTerm(
+            id: UUID(uuidString: "A0000001-0001-0001-0001-0000000000E8")!,
+            term: "Cachexia",
+            pronunciation: "kah-KEK-see-ah",
+            definition: "Severe weight loss and muscle wasting that cannot be reversed by simply eating more. Often seen with chronic illness, organ failure, or prolonged toxin exposure. Unlike simple weight loss from not eating, cachexia involves metabolic changes that break down muscle tissue. A sign of serious underlying disease.",
+            category: .conditions,
+            relatedTerms: ["Anorexia", "Lethargy"],
+            searchKeywords: ["severe weight loss", "muscle wasting", "emaciation", "wasting away", "skin and bones"]
+        ),
+
+        // 201. Ascites
+        GlossaryTerm(
+            id: UUID(uuidString: "A0000001-0001-0001-0001-0000000000E9")!,
+            term: "Ascites",
+            pronunciation: "ah-SY-teez",
+            definition: "Abnormal accumulation of fluid in the abdominal cavity, causing a distended or swollen belly. Can result from liver failure, heart failure, or low blood protein. In toxicology, ascites may indicate severe liver damage (hepatotoxicity) or protein loss. The abdomen may feel fluid-filled when touched.",
+            category: .conditions,
+            relatedTerms: ["Edema", "Hepatotoxicity", "Effusion"],
+            searchKeywords: ["abdominal fluid", "fluid in belly", "distended abdomen", "swollen belly", "pot belly"]
+        ),
+
+        // 202. Effusion
+        GlossaryTerm(
+            id: UUID(uuidString: "A0000001-0001-0001-0001-0000000000EA")!,
+            term: "Effusion",
+            pronunciation: "eh-FYOO-zhun",
+            definition: "Abnormal accumulation of fluid in a body cavity. Pleural effusion (fluid around the lungs) causes breathing difficulty; pericardial effusion (fluid around the heart) can be life-threatening. May result from heart failure, infection, or toxins that increase vascular permeability or cause organ damage.",
+            category: .conditions,
+            relatedTerms: ["Ascites", "Edema", "Dyspnea"],
+            searchKeywords: ["fluid accumulation", "pleural effusion", "pericardial effusion", "fluid around lungs", "fluid around heart"]
         ),
     ]
 
