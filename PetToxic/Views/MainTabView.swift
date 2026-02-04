@@ -321,8 +321,8 @@ struct MainTabView: View {
     private func navigateToPreviousEntry() {
         guard let previousEntry = browseNavContext.previousEntry,
               let category = browseNavContext.currentCategory else { return }
-        // Single-assignment replacement avoids transient empty path
-        // that could trigger returnToGrid via onChange
+        // Flag prevents returnToGrid from firing on transient path count=0
+        browseNavContext.isProgrammaticNavigation = true
         var newPath = NavigationPath()
         newPath.append(category)
         newPath.append(previousEntry)
@@ -335,6 +335,7 @@ struct MainTabView: View {
     private func navigateToNextEntry() {
         guard let nextEntry = browseNavContext.nextEntry,
               let category = browseNavContext.currentCategory else { return }
+        browseNavContext.isProgrammaticNavigation = true
         var newPath = NavigationPath()
         newPath.append(category)
         newPath.append(nextEntry)
@@ -346,7 +347,7 @@ struct MainTabView: View {
 
     private func navigateToPreviousCategory() {
         guard let previousCategory = browseNavContext.previousCategory else { return }
-        // Single-assignment: replace entire path to avoid transient count=0
+        browseNavContext.isProgrammaticNavigation = true
         var newPath = NavigationPath()
         newPath.append(previousCategory)
         browseNavigationPath = newPath
@@ -354,6 +355,7 @@ struct MainTabView: View {
 
     private func navigateToNextCategory() {
         guard let nextCategory = browseNavContext.nextCategory else { return }
+        browseNavContext.isProgrammaticNavigation = true
         var newPath = NavigationPath()
         newPath.append(nextCategory)
         browseNavigationPath = newPath

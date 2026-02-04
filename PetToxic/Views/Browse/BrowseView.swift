@@ -84,7 +84,15 @@ struct BrowseView: View {
             }
             .onChange(of: navigationPath.count) { oldCount, newCount in
                 if newCount == 0 {
-                    navContext.returnToGrid()
+                    if navContext.isProgrammaticNavigation {
+                        // Transient count=0 during swipe path replacement — ignore
+                        navContext.isProgrammaticNavigation = false
+                    } else {
+                        navContext.returnToGrid()
+                    }
+                } else if navContext.isProgrammaticNavigation {
+                    // Path settled to non-zero count, clear the flag
+                    navContext.isProgrammaticNavigation = false
                 }
             }
         }
@@ -335,12 +343,14 @@ struct CategoryListView: View {
             }
         }
         .onAppear {
+            navContext.isProgrammaticNavigation = false
             navContext.enterCategoryList(category: category, entries: filteredItems)
         }
         .onChange(of: category) { _, _ in
             // When swipe navigation replaces the path at the same depth,
             // SwiftUI may reuse this view without firing .onAppear.
             // This ensures context updates for the new category.
+            navContext.isProgrammaticNavigation = false
             navContext.enterCategoryList(category: category, entries: filteredItems)
         }
         .onChange(of: sortBySeverity) { _, _ in

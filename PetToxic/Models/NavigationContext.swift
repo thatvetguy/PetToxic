@@ -15,6 +15,10 @@ class BrowseNavigationContext {
 
     // MARK: - Navigation State
 
+    /// Set to true during programmatic path replacements (swipe navigation)
+    /// to prevent `returnToGrid()` from firing on transient path count = 0.
+    var isProgrammaticNavigation: Bool = false
+
     /// Navigation depth: 0 = grid, 1 = category list, 2 = entry detail
     var depth: Int = 0
 

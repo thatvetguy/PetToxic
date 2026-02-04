@@ -115,6 +115,7 @@ struct ArticleDetailView: View {
             if saveSearchTerm {
                 SearchContext.shared.saveIfPending()
             }
+            navContext.isProgrammaticNavigation = false
             if sourceCategory != nil {
                 navContext.enterEntryDetail(entry: item)
             } else {
@@ -126,6 +127,7 @@ struct ArticleDetailView: View {
             // SwiftUI may reuse this view without firing .onAppear.
             isBookmarked = viewModel.isBookmarked(item)
             viewModel.recordView(of: item)
+            navContext.isProgrammaticNavigation = false
             if sourceCategory != nil {
                 navContext.enterEntryDetail(entry: item)
             } else {
