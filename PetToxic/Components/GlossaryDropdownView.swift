@@ -61,10 +61,12 @@ struct GlossaryDropdownView: View {
                     .font(.caption)
                     .foregroundColor(isPro ? .teal : .gray)
 
-                Text("View \(terms.count) Glossary Term\(terms.count == 1 ? "" : "s")")
+                (Text("View \(terms.count) ")
+                    .foregroundColor(isPro ? .white : .gray) +
+                Text("Glossary Term\(terms.count == 1 ? "" : "s")")
+                    .foregroundColor(isPro ? .teal : .gray))
                     .font(.subheadline)
                     .fontWeight(.medium)
-                    .foregroundColor(isPro ? .white : .gray)
 
                 Spacer()
 

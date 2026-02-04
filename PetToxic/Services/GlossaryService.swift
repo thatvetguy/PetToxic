@@ -198,7 +198,7 @@ class GlossaryService {
             definition: "Gastrointestinal tract — the digestive system including the stomach and intestines. Most ingested toxins first affect the GI tract, causing vomiting, diarrhea, drooling, or abdominal pain. \"GI upset\" refers to these digestive symptoms.",
             category: .anatomy,
             relatedTerms: nil,
-            searchKeywords: ["gastrointestinal", "stomach", "intestines", "digestive", "gut"]
+            searchKeywords: ["gastrointestinal", "intestines", "digestive"]
         ),
 
         // ══════════════════════════════════════════════════════════════
@@ -212,7 +212,7 @@ class GlossaryService {
             definition: "The process of removing a toxic substance from the body before it can be fully absorbed. Methods include inducing vomiting (emesis), administering activated charcoal, bathing to remove skin contaminants, or flushing eyes. Decontamination is most effective when performed soon after exposure and should only be done under veterinary guidance.",
             category: .treatment,
             relatedTerms: ["Emesis", "Activated Charcoal"],
-            searchKeywords: ["removing poison", "treatment", "first aid"]
+            searchKeywords: ["removing poison", "first aid"]
         ),
 
         GlossaryTerm(
@@ -326,7 +326,7 @@ class GlossaryService {
             definition: "Forceful expulsion of stomach contents through the mouth. Unlike regurgitation (passive), vomiting involves active abdominal contractions. It's the body's way of expelling toxins but can also lead to dehydration and electrolyte imbalances. Bloody vomit or persistent vomiting requires urgent care.",
             category: .symptoms,
             relatedTerms: ["Emesis", "Hematemesis", "Regurgitation"],
-            searchKeywords: ["throwing up", "vomit", "puking", "sick"]
+            searchKeywords: ["throwing up", "vomit", "puking"]
         ),
 
         GlossaryTerm(
@@ -478,7 +478,7 @@ class GlossaryService {
             definition: "A substance that counteracts or neutralizes a specific poison. Only a few toxins have true antidotes — for example, vitamin K for anticoagulant rodenticides, or fomepizole for antifreeze. Most poisonings are treated with supportive care rather than specific antidotes.",
             category: .treatment,
             relatedTerms: ["Supportive Care"],
-            searchKeywords: ["antidote", "counteract poison", "cure", "treatment"]
+            searchKeywords: ["counteract poison", "cure"]
         ),
 
         GlossaryTerm(
@@ -634,7 +634,7 @@ class GlossaryService {
             definition: "Taking a substance into the body by swallowing (eating or drinking). This is the most common route of poisoning in pets. The substance then enters the digestive system where it may be absorbed into the bloodstream.",
             category: .general,
             relatedTerms: ["GI Tract", "Decontamination", "Emesis"],
-            searchKeywords: ["eating", "swallowing", "ate", "eaten", "swallowed", "oral"]
+            searchKeywords: []
         ),
 
         // 53. Dermal Exposure
@@ -682,7 +682,7 @@ class GlossaryService {
             definition: "The protein in red blood cells that carries oxygen throughout the body, giving blood its red color. Some toxins damage hemoglobin or prevent it from carrying oxygen properly (as in methemoglobinemia), leading to weakness, pale or blue gums, and breathing difficulty.",
             category: .anatomy,
             relatedTerms: ["Methemoglobinemia", "Anemia", "Cyanosis", "Heinz Body Anemia"],
-            searchKeywords: ["blood", "oxygen", "red blood cells"]
+            searchKeywords: ["oxygen", "red blood cells"]
         ),
 
         // 57. Platelets
@@ -906,7 +906,7 @@ class GlossaryService {
             definition: "When the severity of effects increases with the amount of exposure. Most toxins are dose-dependent—a tiny amount may cause mild symptoms while a large amount causes severe illness. This is why the amount ingested matters when assessing poisoning risk.",
             category: .general,
             relatedTerms: ["Acute", "Toxicosis"],
-            searchKeywords: ["amount", "quantity", "how much"]
+            searchKeywords: []
         ),
 
         // 77. Idiosyncratic Reaction
@@ -928,7 +928,7 @@ class GlossaryService {
             definition: "The time between exposure to a toxin and the appearance of symptoms. Some toxins cause immediate effects; others have latent periods of hours or even days. For example, anticoagulant rodenticide symptoms may not appear for 2-5 days after ingestion, and lily toxicity in cats may take 24-72 hours to show kidney damage.",
             category: .general,
             relatedTerms: ["Acute", "Chronic", "Prognosis"],
-            searchKeywords: ["delay", "delayed symptoms", "time to symptoms", "incubation"]
+            searchKeywords: ["delayed symptoms", "time to symptoms", "incubation"]
         ),
 
         // 79. Chelation Therapy
@@ -1163,7 +1163,7 @@ class GlossaryService {
             definition: "When a treatment or action should NOT be done because it could cause harm. For example, inducing vomiting is contraindicated for caustic substances (could burn twice) or petroleum products (aspiration risk). Always follow veterinary guidance rather than attempting home treatment.",
             category: .general,
             relatedTerms: ["Emesis", "Aspiration", "Decontamination"],
-            searchKeywords: ["should not", "do not", "not recommended", "dangerous to do"]
+            searchKeywords: []
         ),
 
         // 100. Toxin vs Toxicant
@@ -1174,7 +1174,7 @@ class GlossaryService {
             definition: "Technically, a 'toxin' is a poison produced by a living organism (like snake venom or bacterial toxins), while a 'toxicant' is a man-made or non-biological poison (like antifreeze or medications). In everyday use, 'toxin' is often used for both. This app uses 'toxin' broadly for simplicity.",
             category: .general,
             relatedTerms: ["Toxicosis"],
-            searchKeywords: ["poison", "definition", "terminology", "difference"]
+            searchKeywords: ["definition", "terminology", "difference"]
         ),
 
         // MARK: - Batch 6 (Session 101)
@@ -1533,17 +1533,6 @@ class GlossaryService {
             category: .symptoms,
             relatedTerms: ["Seizures", "Tremors", "Neurotoxicity"],
             searchKeywords: ["arched back", "head thrown back", "rigid posture", "body arching"]
-        ),
-
-        // 133. Regurgitation
-        GlossaryTerm(
-            id: UUID(uuidString: "A0000001-0001-0001-0001-0000000000A3")!,
-            term: "Regurgitation",
-            pronunciation: "ree-gur-jih-TAY-shun",
-            definition: "Passive expulsion of food or fluid from the esophagus or stomach without the abdominal effort of vomiting. The material comes up easily, often undigested and tubular-shaped. Different from vomiting (which involves retching and abdominal contractions). Can occur with esophageal problems or certain toxins.",
-            category: .symptoms,
-            relatedTerms: ["Vomiting", "GI Tract", "Aspiration"],
-            searchKeywords: ["passive vomiting", "food coming up", "effortless vomiting", "bringing up food"]
         ),
 
         // 134. Photosensitivity

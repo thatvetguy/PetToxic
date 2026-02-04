@@ -872,10 +872,10 @@ class DatabaseService {
                 ],
                 entrySeverity: .severe,
                 speciesRisks: [
-                    SpeciesRisk(species: .cat, severity: .severe, notes: "EXTREMELY TOXIC — even tiny exposures (a few pollen grains, one leaf bite, vase water) can cause fatal kidney failure; all cats are susceptible regardless of age or health status"),
                     SpeciesRisk(species: .dog, severity: .low, notes: "True lily toxicity (kidney failure) has not been documented in dogs; severity is 'low' rather than 'none' because ingestion of plant material may still cause mild GI upset such as vomiting or diarrhea"),
-                    SpeciesRisk(species: .bird, severity: .low, notes: "Limited data; birds may experience GI upset from ingestion but the cat-specific nephrotoxicity (kidney failure) has not been documented in birds"),
+                    SpeciesRisk(species: .cat, severity: .severe, notes: "EXTREMELY TOXIC — even tiny exposures (a few pollen grains, one leaf bite, vase water) can cause fatal kidney failure; all cats are susceptible regardless of age or health status"),
                     SpeciesRisk(species: .smallMammal, severity: .low, notes: "Rabbits and other small mammals do not appear to develop the severe kidney failure seen in cats; GI upset may occur; limited studies available"),
+                    SpeciesRisk(species: .bird, severity: .low, notes: "Limited data; birds may experience GI upset from ingestion but the cat-specific nephrotoxicity (kidney failure) has not been documented in birds"),
                     SpeciesRisk(species: .reptile, severity: .low, notes: "No documented cases of lily-induced nephrotoxicity in reptiles; the cat-specific sensitivity does not appear to extend to reptiles")
                 ],
                 preventionTips: [
