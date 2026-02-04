@@ -150,6 +150,28 @@ struct SettingsView: View {
                         .listRowBackground(Color.white.opacity(0.08))
                     }
 
+                    // MARK: - Share This App
+                    Section {
+                        ShareLink(
+                            item: AppShare.url,
+                            subject: Text(AppShare.subject),
+                            message: Text(AppShare.message)
+                        ) {
+                            HStack {
+                                Image(systemName: "square.and.arrow.up")
+                                    .foregroundStyle(.teal)
+                                    .frame(width: 24)
+                                Text("Share This App")
+                                    .foregroundStyle(.white)
+                                Spacer()
+                                Image(systemName: "chevron.right")
+                                    .font(.system(size: 14, weight: .semibold))
+                                    .foregroundStyle(.gray.opacity(0.5))
+                            }
+                        }
+                        .listRowBackground(Color.white.opacity(0.08))
+                    }
+
                     // MARK: - Disclaimer
                     Section {
                         VStack(alignment: .leading, spacing: 12) {

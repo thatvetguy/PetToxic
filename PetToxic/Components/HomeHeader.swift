@@ -3,6 +3,25 @@ import SwiftUI
 struct HomeHeader: View {
     var body: some View {
         VStack(spacing: 4) {
+            // Share button row
+            HStack {
+                Spacer()
+
+                ShareLink(
+                    item: AppShare.url,
+                    subject: Text(AppShare.subject),
+                    message: Text(AppShare.message)
+                ) {
+                    Image(systemName: "square.and.arrow.up")
+                        .font(.system(size: 18, weight: .medium))
+                        .foregroundColor(.white.opacity(0.8))
+                        .padding(10)
+                        .background(Circle().fill(Color.white.opacity(0.1)))
+                }
+            }
+            .padding(.horizontal)
+            .padding(.top, 8)
+
             // Logo + App Name row
             HStack(spacing: 12) {
                 // Logo image (from asset catalog)
@@ -23,7 +42,6 @@ struct HomeHeader: View {
                 .foregroundColor(Color(red: 0.7, green: 0.8, blue: 0.8)) // Soft teal-tinted gray
                 .italic()
         }
-        .padding(.top, 8)
         .padding(.bottom, 16)
     }
 }
