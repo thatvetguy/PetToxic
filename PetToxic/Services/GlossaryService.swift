@@ -2190,4 +2190,38 @@ class GlossaryService {
             searchKeywords: ["bathing", "washing off toxin", "skin decontamination", "fur wash"]
         ),
     ]
+
+    // MARK: - Term Detection (Phase 2)
+
+    /// Finds all glossary terms present in the given text
+    /// - Parameter text: The text to scan for glossary terms
+    /// - Returns: Array of GlossaryTerm objects found, sorted alphabetically by term name
+    func findTerms(in text: String) -> [GlossaryTerm] {
+        guard !text.isEmpty else { return [] }
+
+        let lowercasedText = text.lowercased()
+
+        return terms.filter { term in
+            if lowercasedText.contains(term.term.lowercased()) {
+                return true
+            }
+            if let keywords = term.searchKeywords {
+                for keyword in keywords {
+                    if lowercasedText.contains(keyword.lowercased()) {
+                        return true
+                    }
+                }
+            }
+            return false
+        }
+        .sorted { $0.term.localizedCaseInsensitiveCompare($1.term) == .orderedAscending }
+    }
+
+    /// Finds glossary terms across multiple strings (useful for symptoms arrays)
+    /// - Parameter texts: Array of strings to scan
+    /// - Returns: Array of unique GlossaryTerm objects found, sorted alphabetically
+    func findTerms(in texts: [String]) -> [GlossaryTerm] {
+        let combinedText = texts.joined(separator: " ")
+        return findTerms(in: combinedText)
+    }
 }
