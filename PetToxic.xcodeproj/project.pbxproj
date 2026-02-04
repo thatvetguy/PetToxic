@@ -66,6 +66,13 @@
 		F1372C807BFFDC33BCD4A18F /* SpeciesRisk.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F4998CA510A72304A62AC03 /* SpeciesRisk.swift */; };
 		F31D053BA08F486404401C7A /* DisclaimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA5A3886892E1B5E6CAF9D5F /* DisclaimerView.swift */; };
 		FA855506E3D8A1DB2CC6BA80 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4AF21A98F3346F34930A106 /* LoadingView.swift */; };
+		GLOSS001AAAA1111111111 /* GlossaryTerm.swift in Sources */ = {isa = PBXBuildFile; fileRef = GLOSS002AAAA2222222222 /* GlossaryTerm.swift */; };
+		GLOSS003AAAA3333333333 /* GlossaryService.swift in Sources */ = {isa = PBXBuildFile; fileRef = GLOSS004AAAA4444444444 /* GlossaryService.swift */; };
+		GLOSS005AAAA5555555555 /* GlossaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = GLOSS006AAAA6666666666 /* GlossaryView.swift */; };
+		GLOSS007AAAA7777777777 /* GlossaryTermDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = GLOSS008AAAA8888888888 /* GlossaryTermDetailView.swift */; };
+		GLOSSCARD01AAA111111111 /* GlossaryCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = GLOSSCARD02AAA222222222 /* GlossaryCard.swift */; };
+		GLOSSDROP01AAA111111111 /* GlossaryDropdownView.swift in Sources */ = {isa = PBXBuildFile; fileRef = GLOSSDROP02AAA222222222 /* GlossaryDropdownView.swift */; };
+		GLOSSLINK01BBB111111111 /* GlossaryEntryLink.swift in Sources */ = {isa = PBXBuildFile; fileRef = GLOSSLINK02BBB222222222 /* GlossaryEntryLink.swift */; };
 		HOMESEC001CCCC1111111111 /* MyPetsHomeSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = HOMESEC002CCCC2222222222 /* MyPetsHomeSection.swift */; };
 		MKDWN001FFFF1111111111111 /* MarkdownText.swift in Sources */ = {isa = PBXBuildFile; fileRef = MKDWN002FFFF2222222222222 /* MarkdownText.swift */; };
 		PHOTO001BBBB1111111111111 /* PetPhotoService.swift in Sources */ = {isa = PBXBuildFile; fileRef = PHOTO002BBBB2222222222222 /* PetPhotoService.swift */; };
@@ -73,12 +80,6 @@
 		PHOTO005BBBB5555555555555 /* PetPhotoPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = PHOTO006BBBB6666666666666 /* PetPhotoPickerView.swift */; };
 		POISONCASE001AAAA111111 /* PoisonControlCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = POISONCASE002AAAA222222 /* PoisonControlCase.swift */; };
 		SHCARD001AAAA1111111111 /* ShareCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = SHCARD002AAAA2222222222 /* ShareCardView.swift */; };
-		GLOSSCARD01AAA111111111 /* GlossaryCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = GLOSSCARD02AAA222222222 /* GlossaryCard.swift */; };
-		GLOSSLINK01BBB111111111 /* GlossaryEntryLink.swift in Sources */ = {isa = PBXBuildFile; fileRef = GLOSSLINK02BBB222222222 /* GlossaryEntryLink.swift */; };
-		GLOSS001AAAA1111111111 /* GlossaryTerm.swift in Sources */ = {isa = PBXBuildFile; fileRef = GLOSS002AAAA2222222222 /* GlossaryTerm.swift */; };
-		GLOSS003AAAA3333333333 /* GlossaryService.swift in Sources */ = {isa = PBXBuildFile; fileRef = GLOSS004AAAA4444444444 /* GlossaryService.swift */; };
-		GLOSS005AAAA5555555555 /* GlossaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = GLOSS006AAAA6666666666 /* GlossaryView.swift */; };
-		GLOSS007AAAA7777777777 /* GlossaryTermDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = GLOSS008AAAA8888888888 /* GlossaryTermDetailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -162,6 +163,13 @@
 		F6789012345678901234ABCD /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		F95CC1681EAFCAC224A491ED /* AppBackground.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AppBackground.swift; sourceTree = "<group>"; };
 		FF6C448365FCE3CCE08553DE /* HomeHeader.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = HomeHeader.swift; sourceTree = "<group>"; };
+		GLOSS002AAAA2222222222 /* GlossaryTerm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlossaryTerm.swift; sourceTree = "<group>"; };
+		GLOSS004AAAA4444444444 /* GlossaryService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlossaryService.swift; sourceTree = "<group>"; };
+		GLOSS006AAAA6666666666 /* GlossaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlossaryView.swift; sourceTree = "<group>"; };
+		GLOSS008AAAA8888888888 /* GlossaryTermDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlossaryTermDetailView.swift; sourceTree = "<group>"; };
+		GLOSSCARD02AAA222222222 /* GlossaryCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlossaryCard.swift; sourceTree = "<group>"; };
+		GLOSSDROP02AAA222222222 /* GlossaryDropdownView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlossaryDropdownView.swift; sourceTree = "<group>"; };
+		GLOSSLINK02BBB222222222 /* GlossaryEntryLink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlossaryEntryLink.swift; sourceTree = "<group>"; };
 		HOMESEC002CCCC2222222222 /* MyPetsHomeSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPetsHomeSection.swift; sourceTree = "<group>"; };
 		MKDWN002FFFF2222222222222 /* MarkdownText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarkdownText.swift; sourceTree = "<group>"; };
 		PHOTO002BBBB2222222222222 /* PetPhotoService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetPhotoService.swift; sourceTree = "<group>"; };
@@ -169,12 +177,6 @@
 		PHOTO006BBBB6666666666666 /* PetPhotoPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetPhotoPickerView.swift; sourceTree = "<group>"; };
 		POISONCASE002AAAA222222 /* PoisonControlCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoisonControlCase.swift; sourceTree = "<group>"; };
 		SHCARD002AAAA2222222222 /* ShareCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareCardView.swift; sourceTree = "<group>"; };
-		GLOSSCARD02AAA222222222 /* GlossaryCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlossaryCard.swift; sourceTree = "<group>"; };
-		GLOSSLINK02BBB222222222 /* GlossaryEntryLink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlossaryEntryLink.swift; sourceTree = "<group>"; };
-		GLOSS002AAAA2222222222 /* GlossaryTerm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlossaryTerm.swift; sourceTree = "<group>"; };
-		GLOSS004AAAA4444444444 /* GlossaryService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlossaryService.swift; sourceTree = "<group>"; };
-		GLOSS006AAAA6666666666 /* GlossaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlossaryView.swift; sourceTree = "<group>"; };
-		GLOSS008AAAA8888888888 /* GlossaryTermDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlossaryTermDetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXGroup section */
@@ -246,6 +248,7 @@
 				9D0A536DAB60D4A56FC6C6B9 /* SeverityBadge.swift */,
 				SHCARD002AAAA2222222222 /* ShareCardView.swift */,
 				GLOSSCARD02AAA222222222 /* GlossaryCard.swift */,
+				GLOSSDROP02AAA222222222 /* GlossaryDropdownView.swift */,
 				GLOSSLINK02BBB222222222 /* GlossaryEntryLink.swift */,
 			);
 			path = Components;
@@ -346,15 +349,6 @@
 			path = ViewModels;
 			sourceTree = "<group>";
 		};
-			GLOSS009AAAA9999999999 /* Glossary */ = {
-			isa = PBXGroup;
-			children = (
-				GLOSS006AAAA6666666666 /* GlossaryView.swift */,
-				GLOSS008AAAA8888888888 /* GlossaryTermDetailView.swift */,
-			);
-			path = Glossary;
-			sourceTree = "<group>";
-		};
 		DBA2C9489FCBF717DF3F4F30 /* Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -426,6 +420,15 @@
 				48FD14B94E272939D2281BD1 /* PetToxicUITests.xctest */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		GLOSS009AAAA9999999999 /* Glossary */ = {
+			isa = PBXGroup;
+			children = (
+				GLOSS006AAAA6666666666 /* GlossaryView.swift */,
+				GLOSS008AAAA8888888888 /* GlossaryTermDetailView.swift */,
+			);
+			path = Glossary;
 			sourceTree = "<group>";
 		};
 		HOMESEC003CCCC3333333333 /* Components */ = {
@@ -606,6 +609,7 @@
 				CASEFIELD001CCCC11111111 /* AddCaseNumberField.swift in Sources */,
 				SHCARD001AAAA1111111111 /* ShareCardView.swift in Sources */,
 				GLOSSCARD01AAA111111111 /* GlossaryCard.swift in Sources */,
+				GLOSSDROP01AAA111111111 /* GlossaryDropdownView.swift in Sources */,
 				GLOSSLINK01BBB111111111 /* GlossaryEntryLink.swift in Sources */,
 				GLOSS001AAAA1111111111 /* GlossaryTerm.swift in Sources */,
 				GLOSS003AAAA3333333333 /* GlossaryService.swift in Sources */,
@@ -685,7 +689,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 202602023;
+				CURRENT_PROJECT_VERSION = 202602031;
 				DEVELOPMENT_TEAM = 6KA5CB5S3A;
 				GENERATE_INFOPLIST_FILE = NO;
 				INFOPLIST_FILE = PetToxic/Resources/Info.plist;
@@ -871,7 +875,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 202602023;
+				CURRENT_PROJECT_VERSION = 202602031;
 				DEVELOPMENT_TEAM = 6KA5CB5S3A;
 				GENERATE_INFOPLIST_FILE = NO;
 				INFOPLIST_FILE = PetToxic/Resources/Info.plist;
