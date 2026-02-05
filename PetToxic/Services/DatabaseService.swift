@@ -10341,7 +10341,7 @@ class DatabaseService {
                     "Australian Veterinary Journal — Retrospective report of 90 dogs with suspected cane toad toxicity (2004)",
                     "Merck Veterinary Manual — Toad Poisoning"
                 ],
-                relatedEntries: ["00112233-4455-6677-8899-aabbccddef07"]
+                relatedEntries: ["00112233-4455-6677-8899-aabbccddef07", "00112233-4455-6677-8899-aabbccddef29"]
             ),
 
             // MARK: - Bee, Wasp, and Ant Stings (Hymenoptera)
@@ -13776,6 +13776,142 @@ Encounters peak in **spring and fall** when porcupines are more active with fora
                     "Smithsonian's National Zoo"
                 ],
                 relatedEntries: nil
+            ),
+
+            // MARK: - Blue-Tailed Skink Ingestion
+            ToxicItem(
+                id: UUID(uuidString: "00112233-4455-6677-8899-aabbccddef29")!,
+                name: "Blue-Tailed Skink Ingestion",
+                alternateNames: [
+                    "blue tailed skink",
+                    "blue tail skink",
+                    "blue-tailed lizard",
+                    "blue tail lizard",
+                    "five-lined skink",
+                    "five lined skink",
+                    "southeastern five-lined skink",
+                    "western skink",
+                    "Plestiodon fasciatus",
+                    "Plestiodon inexpectatus",
+                    "Plestiodon skiltonianus",
+                    "Eumeces fasciatus",
+                    "skink",
+                    "skink poisoning",
+                    "lizard poisoning",
+                    "dog ate skink",
+                    "cat ate skink",
+                    "dog ate lizard",
+                    "cat ate lizard",
+                    "pet ate lizard",
+                    "pet ate skink",
+                    "blue tailed scorpion",
+                    "lizard with blue tail",
+                    "striped lizard"
+                ],
+                categories: [.outdoorHazards],
+                imageAsset: "skink_thumb",
+                description: """
+                Blue-tailed skink ingestion occurs when pets — most commonly dogs and cats — catch and eat wild skinks, a type of small lizard commonly found throughout the eastern and southeastern United States. The "blue-tailed skink" typically refers to the juvenile form of the American five-lined skink (Plestiodon fasciatus) and related species (P. inexpectatus, P. skiltonianus), which have a distinctive bright blue tail that fades as they mature. These lizards are abundant in yards, gardens, woodpiles, and rocky areas, and their quick movements make them irresistible to pets with a prey drive.
+
+                Despite widespread belief that these lizards are toxic, there is no confirmed scientific evidence that blue-tailed skinks produce a specific toxin harmful to pets. However, ingestion can still cause problems — most commonly gastrointestinal upset, and in cats, a potentially serious parasitic infection called platynosomiasis ("lizard poisoning") caused by the liver fluke Platynosomum, for which skinks can serve as an intermediate host. Anecdotal reports of neurological signs in cats after skink ingestion have persisted for decades, but no modern study has confirmed a specific neurotoxic mechanism.
+                """,
+                toxicityInfo: """
+                **Is the Blue-Tailed Skink Actually Toxic?**
+
+                This is one of the most debated questions in veterinary toxicology regarding common wildlife encounters. The short answer: no specific toxin has been identified, but the clinical concerns are real.
+
+                There is no peer-reviewed scientific evidence identifying a venom, poison, or toxin produced by five-lined skinks. The bright blue tail of juveniles is a defensive adaptation — when grabbed, the tail detaches and continues to wriggle, distracting the predator while the skink escapes (a process called autotomy). Some people mistakenly believe the blue color is a warning of toxicity (aposematic coloration), but researchers believe it functions primarily as a predator diversion strategy rather than a toxicity signal.
+
+                **Gastrointestinal Effects (Most Common)**
+
+                The most frequently reported outcome when a dog or cat eats a skink is mild gastrointestinal upset: vomiting, diarrhea, drooling, and temporary loss of appetite. These signs are typically self-limiting and resolve within 24 hours. The GI irritation may result from the lizard's cloacal gland secretions (a foul-smelling substance produced when the skink is stressed), bacterial load, or simply from ingesting an unusual prey item.
+
+                **Liver Flukes — Platynosomum (Cats Primarily)**
+
+                The most significant documented risk of skink ingestion is the liver fluke *Platynosomum* (also known as *P. fastosum* or *P. concinnum*). Skinks, geckos, and other small lizards serve as intermediate hosts for this parasite. When a cat eats an infected lizard, the fluke larvae migrate to the cat's liver, bile ducts, and gallbladder, where they mature into adult flukes. This condition — called platynosomiasis or "lizard poisoning" — is the origin of the term "lizard poisoning" in veterinary medicine. Importantly, the disease is caused by the *parasite carried by the lizard*, not by the lizard itself.
+
+                Platynosomiasis is most prevalent in tropical and subtropical regions, particularly Florida, Hawaii, the Gulf Coast states, and the Caribbean. Prevalence in outdoor cats in endemic areas ranges from 15% to as high as 85%. Many infected cats show no clinical signs, but heavy or chronic infections can cause serious hepatobiliary disease (liver and bile duct damage), including jaundice (yellowing of skin and eyes), weight loss, vomiting, diarrhea, lethargy, and in severe cases, liver failure and death.
+
+                This parasite primarily affects cats and other felids. Dogs are generally not susceptible to *Platynosomum* infection.
+
+                **Neurological Signs — Unconfirmed but Reported**
+
+                Anecdotal reports of cats developing neurological signs — including incoordination (ataxia), head tilt, dizziness, nystagmus (involuntary eye movement), and disorientation — after eating blue-tailed skinks have persisted in the southeastern United States for generations. A veterinary neurology review from the University of California, Davis cites a 1953 report (Adair) linking blue-tailed lizard tail ingestion to acute peripheral vestibular disease in cats. However, this is a single, very old source, and no modern controlled study has confirmed the mechanism or identified a responsible substance.
+
+                The same vestibular signs can be caused by many other common conditions in cats, including inner ear infections, idiopathic vestibular disease (which resolves on its own), or even the liver fluke infection described above. Without definitive evidence, the question of whether skinks cause direct neurological toxicity in cats remains unanswered.
+
+                **Salmonella Risk**
+
+                Like virtually all reptiles, skinks can carry Salmonella bacteria in their digestive tract. Pets that ingest skinks may develop salmonellosis, though this is uncommon in healthy adult animals with normal immune function. Young, elderly, or immunocompromised pets may be at greater risk.
+
+                **Dogs vs. Cats**
+
+                Dogs appear to be significantly less affected than cats. Most dogs that eat a skink experience nothing more than transient vomiting or drooling, if any symptoms at all. Dogs are not susceptible to *Platynosomum* liver flukes, and there are no documented reports of neurological signs in dogs after skink ingestion. Cats, however, face both the liver fluke risk and the (unconfirmed) neurological risk, making skink ingestion a more concerning event in feline patients.
+                """,
+                onsetTime: OnsetTime(
+                    early: "GI signs (vomiting, drooling, diarrhea) typically appear within 30 minutes to a few hours of ingestion. Neurological signs, if they occur, have been reported within hours in cats.",
+                    delayed: "Liver fluke infection (platynosomiasis) develops over weeks to months as the parasites migrate to and mature in the bile ducts. Clinical signs of liver disease may not appear for months after the initial exposure, and many cats remain asymptomatic."
+                ),
+                symptoms: [
+                    "Vomiting",
+                    "Drooling or hypersalivation",
+                    "Diarrhea",
+                    "Temporary loss of appetite",
+                    "Gagging or retching",
+                    "Restlessness or discomfort",
+                    "In cats: Incoordination or unsteady gait (ataxia) — reported but unconfirmed as directly caused by skink toxicity",
+                    "In cats: Head tilt or circling — associated with vestibular disturbance",
+                    "In cats: Involuntary eye movement (nystagmus)",
+                    "In cats with liver fluke infection: Jaundice (yellowing of gums, skin, or whites of eyes)",
+                    "In cats with liver fluke infection: Weight loss and lethargy",
+                    "In cats with liver fluke infection: Poor coat condition"
+                ],
+                entrySeverity: .low,
+                speciesRisks: [
+                    SpeciesRisk(
+                        species: .dog,
+                        severity: .low,
+                        notes: "Dogs commonly catch and eat skinks but are typically only mildly affected. Transient vomiting, drooling, or diarrhea may occur. Dogs are not susceptible to Platynosomum liver flukes, and neurological signs have not been reported in dogs after skink ingestion. Monitor for GI upset; contact a veterinarian if symptoms persist beyond 24 hours or if lethargy develops."
+                    ),
+                    SpeciesRisk(
+                        species: .cat,
+                        severity: .moderate,
+                        notes: "Cats face greater risk than dogs from skink ingestion. The primary documented concern is Platynosomum liver fluke infection — skinks serve as intermediate hosts for this parasite, which can cause serious liver and bile duct disease in cats, particularly in Florida, Hawaii, and Gulf Coast states. Anecdotal reports also describe neurological signs (incoordination, head tilt, disorientation) in cats after eating blue-tailed skinks, though no specific toxin has been confirmed. Any cat that eats a skink should be evaluated by a veterinarian — liver fluke screening may be recommended for cats in endemic areas."
+                    ),
+                    SpeciesRisk(
+                        species: .smallMammal,
+                        severity: .low,
+                        notes: "Small mammals are unlikely to catch or consume skinks. If ingestion occurred, gastrointestinal upset would be the primary concern. Limited veterinary data is available for this scenario. Contact a veterinarian if any signs of illness develop."
+                    ),
+                    SpeciesRisk(
+                        species: .bird,
+                        severity: .low,
+                        notes: "Pet birds are unlikely to encounter or consume wild skinks. Larger parrots or birds with access to outdoor enclosures could theoretically encounter one. Gastrointestinal upset or crop irritation would be the primary concern. Limited data available. Contact an avian veterinarian if ingestion is suspected."
+                    ),
+                    SpeciesRisk(
+                        species: .reptile,
+                        severity: .low,
+                        notes: "Some pet reptiles (e.g., large lizards or snakes) may eat skinks as part of their natural predatory behavior. Salmonella cross-contamination is a theoretical concern. Wild-caught skinks should not be offered as feeder animals due to the risk of parasite transmission. Contact an exotic animal veterinarian if illness develops after skink ingestion."
+                    )
+                ],
+                preventionTips: [
+                    "Supervise pets during outdoor time, especially in yards with woodpiles, rock walls, or garden beds where skinks are common",
+                    "Keep cats indoors — this eliminates the risk of both skink ingestion and liver fluke infection",
+                    "Train dogs with a reliable 'leave it' command to discourage chasing and eating wildlife",
+                    "Clear leaf litter, woodpiles, and debris near the home to reduce skink habitat close to pet areas",
+                    "Skinks are most active during warm months (spring through fall) and are commonly seen basking on sunny rocks, steps, or brick walls during the day",
+                    "If your cat has a history of catching lizards, discuss preventive deworming and periodic liver fluke screening with your veterinarian — especially in Florida, Hawaii, and Gulf Coast states",
+                    "If your pet catches a skink, remove any remaining pieces from the mouth if it is safe to do so and monitor for signs of illness"
+                ],
+                sources: [
+                    "Companion Animal Parasite Council (CAPC) — Platynosomum fastosum",
+                    "VCA Animal Hospitals — Liver Fluke in Cats (Platynosomiasis)",
+                    "MSD (Merck) Veterinary Manual — Hepatobiliary Fluke Infection in Small Animals",
+                    "PetMD — Liver Flukes in Cats: Symptoms, Causes, and Treatment",
+                    "Vernau KM, LeCouteur RA. Feline Vestibular Disorders Part II: Diagnostic Approach and Differential Diagnosis. Journal of Feline Medicine and Surgery. 1999;1(4):189-201",
+                    "Hill's Pet Nutrition — My Pet Ate a Lizard: What Should I Do?"
+                ],
+                relatedEntries: ["00112233-4455-6677-8899-aabbccddef05"]
             )
         ]
     }
