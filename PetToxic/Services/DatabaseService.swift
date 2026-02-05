@@ -9462,7 +9462,7 @@ class DatabaseService {
                     "Respiratory depression",
                     "Hyperthermia (with prolonged tremors/seizures)"
                 ],
-                entrySeverity: .severe,
+                entrySeverity: .high,
                 speciesRisks: [
                     SpeciesRisk(
                         species: .dog,
