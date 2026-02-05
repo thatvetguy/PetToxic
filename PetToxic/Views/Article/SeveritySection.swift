@@ -11,7 +11,7 @@ struct SeveritySection: View {
                 .fontWeight(.semibold)
 
             VStack(spacing: 8) {
-                ForEach(speciesRisks) { risk in
+                ForEach(speciesRisks.sorted { $0.species < $1.species }) { risk in
                     HStack {
                         Image(systemName: risk.species.icon)
                             .frame(width: 24)

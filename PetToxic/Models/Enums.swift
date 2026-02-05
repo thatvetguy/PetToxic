@@ -2,7 +2,7 @@ import SwiftUI
 
 // MARK: - Species
 
-enum Species: String, Codable, CaseIterable, Identifiable {
+enum Species: String, Codable, CaseIterable, Identifiable, Comparable {
     case dog
     case cat
     case smallMammal
@@ -10,6 +10,20 @@ enum Species: String, Codable, CaseIterable, Identifiable {
     case reptile
 
     var id: String { rawValue }
+
+    private var sortOrder: Int {
+        switch self {
+        case .dog: return 0
+        case .cat: return 1
+        case .smallMammal: return 2
+        case .bird: return 3
+        case .reptile: return 4
+        }
+    }
+
+    static func < (lhs: Species, rhs: Species) -> Bool {
+        lhs.sortOrder < rhs.sortOrder
+    }
 
     var displayName: String {
         switch self {

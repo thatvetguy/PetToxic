@@ -352,7 +352,7 @@ struct ArticleDetailView: View {
         // Species Severities
         if !item.speciesRisks.isEmpty {
             text += "TOXICITY BY SPECIES:\n"
-            for risk in item.speciesRisks {
+            for risk in item.speciesRisks.sorted(by: { $0.species < $1.species }) {
                 let severityEmoji: String
                 switch risk.severity {
                 case .low: severityEmoji = "🟢"
