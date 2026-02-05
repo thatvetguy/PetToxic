@@ -10267,8 +10267,24 @@ class DatabaseService {
                 ],
                 categories: [.outdoorHazards],
                 imageAsset: "bufo_toad_thumb",
-                description: "Bufo toad poisoning occurs when pets — usually dogs — mouth, lick, or eat certain toxic toad species. Two species are of primary concern in the United States: the Cane Toad (Bufo marinus/Rhinella marina), found in Florida, southern Texas, Louisiana, and Hawaii; and the Colorado River Toad (Bufo alvarius/Incilius alvarius), found in the Sonoran Desert regions of Arizona and California.\n\nThese large toads (7-9 inches) secrete potent toxins from large parotid glands behind their eyes and smaller glands throughout their skin. The toxin is a thick, white, creamy liquid released when the toad is threatened. Bufo toads are most active during breeding season (March through September), particularly after rainfall and during dawn, dusk, and nighttime hours. Cane toads are large (4-9 inches) with distinctive, prominent parotid glands visible behind the eyes. The Cane Toad is MORE toxic than the Colorado River Toad. Even brief oral contact with a single Cane Toad can deliver a lethal dose of toxin, especially to small dogs and cats.\n\nSMALL DOGS ARE AT HIGHEST RISK — in one study, 76% of Cane Toad poisoning cases were small breed dogs.\n\nIMMEDIATE ACTION: If your pet mouths a toad, immediately rinse the mouth with water using a hose or faucet, pointing the head DOWN to prevent swallowing. Wipe the gums and tongue with a wet cloth. Then seek emergency veterinary care immediately — do not wait for symptoms to appear.",
-                toxicityInfo: "Bufo toad toxin contains several dangerous compounds: BUFAGENINS and BUFOTOXINS are cardioactive glycosides similar to digitalis (digoxin) that cause cardiac arrhythmias — these are the primary cause of death. BUFOTENINES have hallucinogenic, blood pressure-raising, and muscle-contracting properties. The toxin also contains catecholamines and serotonin.\n\nEXPOSURE ROUTES: Toxin is absorbed through the mouth, nose, and eyes when dogs mouth or bite the toad. Toads that sit in outdoor water bowls can leave behind enough toxin in the water to poison pets that drink from the bowl. Dried toads, toad eggs, and tadpoles can also be toxic if ingested.\n\nCARDIAC EFFECTS: The cardioactive glycosides cause effects similar to digitalis toxicity — bradycardia (abnormally slow heart rate), AV block (disrupted electrical signaling in the heart), and ventricular arrhythmias (dangerous irregular heartbeats).\n\nENTEROHEPATIC RECIRCULATION: Cardiac toxins may be reabsorbed from the intestines, which can delay or prolong cardiac effects for up to 4 hours after exposure. Symptoms can appear within minutes of exposure. Toads are most active at dawn and dusk, especially after rain when they emerge to hunt insects. Dogs often mouth toads repeatedly despite the unpleasant experience.",
+                description: """
+Bufo toad poisoning occurs when pets — usually dogs — mouth, lick, or eat certain toxic toad species. Two species are of primary concern in the United States: the Cane Toad (Bufo marinus/Rhinella marina), found in Florida, southern Texas, Louisiana, and Hawaii; and the Colorado River Toad (Bufo alvarius/Incilius alvarius), found in the Sonoran Desert regions of Arizona and California.
+
+These large toads (7-9 inches) secrete potent toxins from large parotid glands behind their eyes and smaller glands throughout their skin. The toxin is a thick, white, creamy liquid released when the toad is threatened. Bufo toads are most active during breeding season (March through September), particularly after rainfall and during dawn, dusk, and nighttime hours. Cane toads are large (4-9 inches) with distinctive, prominent parotid glands visible behind the eyes. The Cane Toad is MORE toxic than the Colorado River Toad. Even brief oral contact with a single Cane Toad can deliver a lethal dose of toxin, especially to small dogs and cats.
+
+SMALL DOGS ARE AT HIGHEST RISK — in one study, 76% of Cane Toad poisoning cases were small breed dogs.
+
+**IMMEDIATE ACTION:** If your pet mouths a toad, immediately rinse the mouth with water using a hose or faucet, pointing the head DOWN to prevent swallowing. Wipe the gums and tongue with a wet cloth. Then seek emergency veterinary care immediately — do not wait for symptoms to appear.
+""",
+                toxicityInfo: """
+Bufo toad toxin contains several dangerous compounds: BUFAGENINS and BUFOTOXINS are cardioactive glycosides similar to digitalis (digoxin) that cause cardiac arrhythmias — these are the primary cause of death. BUFOTENINES have hallucinogenic, blood pressure-raising, and muscle-contracting properties. The toxin also contains catecholamines and serotonin.
+
+**EXPOSURE ROUTES:** Toxin is absorbed through the mouth, nose, and eyes when dogs mouth or bite the toad. Toads that sit in outdoor water bowls can leave behind enough toxin in the water to poison pets that drink from the bowl. Dried toads, toad eggs, and tadpoles can also be toxic if ingested.
+
+**CARDIAC EFFECTS:** The cardioactive glycosides cause effects similar to digitalis toxicity — bradycardia (abnormally slow heart rate), AV block (disrupted electrical signaling in the heart), and ventricular arrhythmias (dangerous irregular heartbeats).
+
+**ENTEROHEPATIC RECIRCULATION:** Cardiac toxins may be reabsorbed from the intestines, which can delay or prolong cardiac effects for up to 4 hours after exposure. Symptoms can appear within minutes of exposure. Toads are most active at dawn and dusk, especially after rain when they emerge to hunt insects. Dogs often mouth toads repeatedly despite the unpleasant experience.
+""",
                 onsetTime: OnsetTime(
                     early: "Local signs (profuse hypersalivation, pawing at mouth, head shaking) occur IMMEDIATELY. GI signs typically within 15 minutes. Neurological signs within 15-20 minutes.",
                     delayed: "Cardiac signs may occur within 15 minutes or be delayed up to 4 hours due to enterohepatic recirculation of the cardiac toxins. Death can occur rapidly in severe cases. This is a life-threatening emergency."
@@ -10860,7 +10876,11 @@ Some widow spider bites are "dry" with no venom injection, but any suspected bit
 
 Bites often occur on the muzzle, paws, or belly where fur is thin and skin is more accessible.
 """,
-                toxicityInfo: "Black widow venom contains alpha-latrotoxin, which causes massive release of neurotransmitters (acetylcholine, norepinephrine, dopamine), resulting in severe muscle cramping, pain, and rigidity. Eventually, neurotransmitter stores become depleted, leading to flaccid paralysis and potentially respiratory failure. CATS ARE MARKEDLY SUSCEPTIBLE—black widow spider bites are often fatal in cats without prompt treatment. Dogs have relative resistance. An antivenom exists but is rarely stocked at veterinary hospitals, even specialty hospitals—it may need to be obtained from a human hospital if available.",
+                toxicityInfo: """
+Black widow venom contains alpha-latrotoxin, which causes massive release of neurotransmitters (acetylcholine, norepinephrine, dopamine), resulting in severe muscle cramping, pain, and rigidity. Eventually, neurotransmitter stores become depleted, leading to flaccid paralysis and potentially respiratory failure.
+
+CATS ARE MARKEDLY SUSCEPTIBLE—black widow spider bites are often fatal in cats without prompt treatment. Dogs have relative resistance. An antivenom exists but is rarely stocked at veterinary hospitals, even specialty hospitals—it may need to be obtained from a human hospital if available.
+""",
                 onsetTime: OnsetTime(
                     early: "30 minutes to 8 hours (painful bite, then muscle signs)",
                     delayed: "48-72 hours for acute signs to resolve; weakness may persist weeks"

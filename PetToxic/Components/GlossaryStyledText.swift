@@ -7,26 +7,40 @@
 
 import SwiftUI
 
-/// Text component that highlights glossary terms in teal and supports search highlighting
+/// Text component that highlights glossary terms in teal and supports search highlighting.
+/// Splits content on paragraph breaks (\n\n) so SwiftUI renders visible spacing between paragraphs.
 struct GlossaryStyledText: View {
     let content: String
     let searchTerm: String?  // For search highlighting (existing feature)
 
     private let glossaryTerms: [GlossaryTerm]
+    private let paragraphs: [String]
 
     init(content: String, searchTerm: String? = nil) {
         self.content = content
         self.searchTerm = searchTerm
         self.glossaryTerms = GlossaryService.shared.findTerms(in: content)
+        self.paragraphs = content
+            .components(separatedBy: "\n\n")
+            .map { $0.trimmingCharacters(in: .whitespacesAndNewlines) }
+            .filter { !$0.isEmpty }
     }
 
     var body: some View {
-        Text(attributedContent)
+        if paragraphs.count <= 1 {
+            Text(attributedContent(for: content))
+        } else {
+            VStack(alignment: .leading, spacing: 12) {
+                ForEach(Array(paragraphs.enumerated()), id: \.offset) { _, paragraph in
+                    Text(attributedContent(for: paragraph))
+                }
+            }
+        }
     }
 
-    private var attributedContent: AttributedString {
+    private func attributedContent(for text: String) -> AttributedString {
         // Start with markdown parsing
-        var attributed = (try? AttributedString(markdown: content)) ?? AttributedString(content)
+        var attributed = (try? AttributedString(markdown: text)) ?? AttributedString(text)
 
         // Apply glossary teal color (do this first, before search highlight)
         for term in glossaryTerms {
@@ -176,5 +190,29 @@ struct GlossaryStyledText: View {
             .foregroundColor(.white.opacity(0.9))
         }
         .padding()
+    }
+}
+
+#Preview("Multi-Paragraph Spacing") {
+    ZStack {
+        Color(red: 0.0, green: 0.22, blue: 0.32)
+            .ignoresSafeArea()
+
+        ScrollView {
+            VStack(alignment: .leading, spacing: 20) {
+                Text("Paragraphs should have visible spacing:")
+                    .font(.caption)
+                    .foregroundColor(.white.opacity(0.6))
+
+                GlossaryStyledText(
+                    content: "First paragraph about chocolate toxicity and methylxanthines.\n\nSecond paragraph with more details about tachycardia and seizures.\n\n**IMPORTANT:** Third paragraph with bold header and critical information.",
+                    searchTerm: nil
+                )
+                .font(.body)
+                .lineSpacing(4)
+                .foregroundColor(.white.opacity(0.9))
+            }
+            .padding()
+        }
     }
 }
