@@ -1877,8 +1877,8 @@ class DatabaseService {
                 ],
                 entrySeverity: .severe,
                 speciesRisks: [
-                    SpeciesRisk(species: .dog, severity: .low, notes: "Most ingestions cause only vomiting and GI upset; dogs typically do not eat enough to cause cardiac effects"),
-                    SpeciesRisk(species: .cat, severity: .low, notes: "Same as dogs — GI upset is the primary concern; cardiac effects are rare"),
+                    SpeciesRisk(species: .dog, severity: .moderate, notes: "Most ingestions cause only vomiting and GI upset; dogs typically do not eat enough to cause cardiac effects"),
+                    SpeciesRisk(species: .cat, severity: .moderate, notes: "Same as dogs — GI upset is the primary concern; cardiac effects are rare"),
                     SpeciesRisk(species: .bird, severity: .high, notes: "Birds are more susceptible to cardiac glycosides due to small body size; can cause depression, ataxia, tremors, seizures, and cardiac effects"),
                     SpeciesRisk(species: .smallMammal, severity: .high, notes: "Bufadienolides (cardiac glycosides) documented to affect rabbit and guinea pig cardiac tissue in research studies; mechanism of Na+/K+-ATPase inhibition is universal to all mammals"),
                     SpeciesRisk(species: .reptile, severity: .high, notes: "Cardiac glycosides affect all vertebrates through Na+/K+-ATPase inhibition; limited direct reptile data but the mechanism is not species-specific")
