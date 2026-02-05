@@ -4898,11 +4898,11 @@ class DatabaseService {
                 ],
                 entrySeverity: .high,
                 speciesRisks: [
-                    SpeciesRisk(species: .dog, severity: .severe, notes: "Dogs commonly ingest button batteries; esophageal lodgment causes rapid, severe burns; immediate veterinary care essential"),
-                    SpeciesRisk(species: .cat, severity: .severe, notes: "Less common than dogs but equally dangerous if ingested; cats' smaller esophagus increases lodgment risk"),
-                    SpeciesRisk(species: .smallMammal, severity: .severe, notes: "Extremely dangerous due to small body size; battery is more likely to lodge; rabbits and ferrets at risk"),
-                    SpeciesRisk(species: .bird, severity: .severe, notes: "Critical emergency; small GI tract makes lodgment likely; tissue damage occurs rapidly"),
-                    SpeciesRisk(species: .reptile, severity: .severe, notes: "Limited data but presumed highly dangerous; seek immediate veterinary care")
+                    SpeciesRisk(species: .dog, severity: .high, notes: "Dogs commonly ingest button batteries; esophageal lodgment causes rapid, severe burns; immediate veterinary care essential"),
+                    SpeciesRisk(species: .cat, severity: .high, notes: "Less common than dogs but equally dangerous if ingested; cats' smaller esophagus increases lodgment risk"),
+                    SpeciesRisk(species: .smallMammal, severity: .high, notes: "Extremely dangerous due to small body size; battery is more likely to lodge; rabbits and ferrets at risk"),
+                    SpeciesRisk(species: .bird, severity: .high, notes: "Critical emergency; small GI tract makes lodgment likely; tissue damage occurs rapidly"),
+                    SpeciesRisk(species: .reptile, severity: .high, notes: "Limited data but presumed highly dangerous; seek immediate veterinary care")
                 ],
                 preventionTips: [
                     "Store devices containing button batteries out of pet reach",
