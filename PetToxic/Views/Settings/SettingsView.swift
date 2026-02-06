@@ -97,6 +97,21 @@ struct SettingsView: View {
                             .tint(Color("AccentColor"))
                             .listRowBackground(Color.white.opacity(0.08))
 
+                            Toggle(isOn: Binding(
+                                get: { proSettings.debugSupporterEnabled },
+                                set: { proSettings.debugSupporterEnabled = $0 }
+                            )) {
+                                HStack {
+                                    Image(systemName: "heart.fill")
+                                        .foregroundStyle(.pink)
+                                        .frame(width: 24)
+                                    Text("Supporter Mode")
+                                        .foregroundStyle(.white)
+                                }
+                            }
+                            .tint(Color("AccentColor"))
+                            .listRowBackground(Color.white.opacity(0.08))
+
                             Button(role: .destructive) {
                                 proSettings.developerOptionsUnlocked = false
                                 versionTapCount = 0
@@ -114,7 +129,7 @@ struct SettingsView: View {
                             Text("Developer Options")
                                 .foregroundStyle(.white.opacity(0.7))
                         } footer: {
-                            Text("Toggle PRO mode for testing.")
+                            Text("Toggle PRO and Supporter modes for testing.")
                                 .foregroundStyle(.white.opacity(0.5))
                         }
                     }

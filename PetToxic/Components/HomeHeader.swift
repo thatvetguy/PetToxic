@@ -1,10 +1,24 @@
 import SwiftUI
 
 struct HomeHeader: View {
+    @ObservedObject private var proSettings = ProSettings.shared
+    @State private var showingSupporterThanks = false
+
     var body: some View {
         VStack(spacing: 4) {
-            // Share button row
+            // Badge and Share button row
             HStack {
+                // Supporter badge — top left
+                if proSettings.isSupporter {
+                    Image("supporter_badge")
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: 28, height: 28)
+                        .onTapGesture {
+                            showingSupporterThanks = true
+                        }
+                }
+
                 Spacer()
 
                 ShareLink(
@@ -43,6 +57,11 @@ struct HomeHeader: View {
                 .italic()
         }
         .padding(.bottom, 16)
+        .alert("Thank You!", isPresented: $showingSupporterThanks) {
+            Button("OK", role: .cancel) { }
+        } message: {
+            Text("Your support helps fund continued development and supports local animal shelters and rescues.")
+        }
     }
 }
 
