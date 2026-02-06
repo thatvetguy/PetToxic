@@ -130,6 +130,7 @@ struct GlossaryView: View {
             .padding(.horizontal)
             .padding(.bottom, 20)
         }
+        .scrollDismissesKeyboard(.interactively)
     }
 
     // MARK: - Section Header
