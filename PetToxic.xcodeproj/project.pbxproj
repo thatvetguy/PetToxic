@@ -85,6 +85,14 @@
 		ADMOB001AAAA1111111111 /* GoogleMobileAds in Frameworks */ = {isa = PBXBuildFile; productRef = ADMOB003AAAA3333333333 /* GoogleMobileAds */; };
 		BANRAD001AAAA1111111111 /* BannerAdView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BANRAD002AAAA2222222222 /* BannerAdView.swift */; };
 		ADMCFG001AAAA1111111111 /* AdMobConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADMCFG002AAAA2222222222 /* AdMobConfig.swift */; };
+		LABPNL001AAAA1111111111 /* LabPanelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = LABPNL002AAAA2222222222 /* LabPanelType.swift */; };
+		LABCAT001AAAA1111111111 /* LabCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = LABCAT002AAAA2222222222 /* LabCategory.swift */; };
+		LABPRM001AAAA1111111111 /* LabParameter.swift in Sources */ = {isa = PBXBuildFile; fileRef = LABPRM002AAAA2222222222 /* LabParameter.swift */; };
+		LABSVC001AAAA1111111111 /* LabWorkGuideService.swift in Sources */ = {isa = PBXBuildFile; fileRef = LABSVC002AAAA2222222222 /* LabWorkGuideService.swift */; };
+		LABVEW001AAAA1111111111 /* LabWorkGuideView.swift in Sources */ = {isa = PBXBuildFile; fileRef = LABVEW002AAAA2222222222 /* LabWorkGuideView.swift */; };
+		LABDET001AAAA1111111111 /* LabParameterDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = LABDET002AAAA2222222222 /* LabParameterDetailView.swift */; };
+		LABCRD001AAAA1111111111 /* LabWorkGuideCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = LABCRD002AAAA2222222222 /* LabWorkGuideCard.swift */; };
+		LABSRC001AAAA1111111111 /* LabWorkGuideSourcesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = LABSRC002AAAA2222222222 /* LabWorkGuideSourcesView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -186,6 +194,14 @@
 		PHOTO006BBBB6666666666666 /* PetPhotoPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetPhotoPickerView.swift; sourceTree = "<group>"; };
 		POISONCASE002AAAA222222 /* PoisonControlCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoisonControlCase.swift; sourceTree = "<group>"; };
 		SHCARD002AAAA2222222222 /* ShareCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareCardView.swift; sourceTree = "<group>"; };
+		LABPNL002AAAA2222222222 /* LabPanelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabPanelType.swift; sourceTree = "<group>"; };
+		LABCAT002AAAA2222222222 /* LabCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabCategory.swift; sourceTree = "<group>"; };
+		LABPRM002AAAA2222222222 /* LabParameter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabParameter.swift; sourceTree = "<group>"; };
+		LABSVC002AAAA2222222222 /* LabWorkGuideService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabWorkGuideService.swift; sourceTree = "<group>"; };
+		LABVEW002AAAA2222222222 /* LabWorkGuideView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabWorkGuideView.swift; sourceTree = "<group>"; };
+		LABDET002AAAA2222222222 /* LabParameterDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabParameterDetailView.swift; sourceTree = "<group>"; };
+		LABCRD002AAAA2222222222 /* LabWorkGuideCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabWorkGuideCard.swift; sourceTree = "<group>"; };
+		LABSRC002AAAA2222222222 /* LabWorkGuideSourcesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabWorkGuideSourcesView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXGroup section */
@@ -288,6 +304,9 @@
 				NAVCXT001AAAA1111111111 /* NavigationContext.swift */,
 				EA6BC59CB914FF0A323C3DCC /* ToxicItem.swift */,
 				GLOSS002AAAA2222222222 /* GlossaryTerm.swift */,
+				LABPNL002AAAA2222222222 /* LabPanelType.swift */,
+				LABCAT002AAAA2222222222 /* LabCategory.swift */,
+				LABPRM002AAAA2222222222 /* LabParameter.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -370,6 +389,7 @@
 				HOMESEC003CCCC3333333333 /* Components */,
 				13D3A560E1B2E0E19F2EFA43 /* Emergency */,
 				GLOSS009AAAA9999999999 /* Glossary */,
+				LABGRP009AAAA9999999999 /* LabWorkGuide */,
 				ED2E81462F25FEEC008594E1 /* MyPets */,
 				5FE2C516FEEFABE91F5E3445 /* Saved */,
 				89DF736139B2CB886DC317BF /* Search */,
@@ -392,6 +412,7 @@
 				ED2E81482F25FF00008594E1 /* ProSettings.swift */,
 				754F9D537CBB611A07FF9E8E /* SearchService.swift */,
 				GLOSS004AAAA4444444444 /* GlossaryService.swift */,
+				LABSVC002AAAA2222222222 /* LabWorkGuideService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -442,6 +463,17 @@
 				GLOSS008AAAA8888888888 /* GlossaryTermDetailView.swift */,
 			);
 			path = Glossary;
+			sourceTree = "<group>";
+		};
+		LABGRP009AAAA9999999999 /* LabWorkGuide */ = {
+			isa = PBXGroup;
+			children = (
+				LABVEW002AAAA2222222222 /* LabWorkGuideView.swift */,
+				LABDET002AAAA2222222222 /* LabParameterDetailView.swift */,
+				LABCRD002AAAA2222222222 /* LabWorkGuideCard.swift */,
+				LABSRC002AAAA2222222222 /* LabWorkGuideSourcesView.swift */,
+			);
+			path = LabWorkGuide;
 			sourceTree = "<group>";
 		};
 		HOMESEC003CCCC3333333333 /* Components */ = {
@@ -650,6 +682,14 @@
 				GLOSS007AAAA7777777777 /* GlossaryTermDetailView.swift in Sources */,
 				BANRAD001AAAA1111111111 /* BannerAdView.swift in Sources */,
 				ADMCFG001AAAA1111111111 /* AdMobConfig.swift in Sources */,
+				LABPNL001AAAA1111111111 /* LabPanelType.swift in Sources */,
+				LABCAT001AAAA1111111111 /* LabCategory.swift in Sources */,
+				LABPRM001AAAA1111111111 /* LabParameter.swift in Sources */,
+				LABSVC001AAAA1111111111 /* LabWorkGuideService.swift in Sources */,
+				LABVEW001AAAA1111111111 /* LabWorkGuideView.swift in Sources */,
+				LABDET001AAAA1111111111 /* LabParameterDetailView.swift in Sources */,
+				LABCRD001AAAA1111111111 /* LabWorkGuideCard.swift in Sources */,
+				LABSRC001AAAA1111111111 /* LabWorkGuideSourcesView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -37,13 +37,25 @@ struct SearchView: View {
                                 searchResultsContent
                             }
 
-                            // My Pets section (always visible when not actively searching)
+                            // Pro features section (always visible when not actively searching)
                             if viewModel.searchText.isEmpty {
+                                // My Pets section
                                 MyPetsHomeSection()
+                                    .padding(.top, 8)
+
+                                // Lab Work Guide card
+                                LabWorkGuideCard()
+                                    .padding(.horizontal)
+                                    .padding(.top, 8)
+
+                                // Medical Glossary card
+                                GlossaryCard()
+                                    .padding(.horizontal)
                                     .padding(.top, 8)
                             }
                         }
                         .padding(.top, 8)
+                        .padding(.bottom, isProUser ? 80 : 20)
                     }
                     .scrollDismissesKeyboard(.interactively)
                     .simultaneousGesture(
@@ -54,16 +66,10 @@ struct SearchView: View {
 
                     Spacer(minLength: 0)
 
-                    // Ad banner or glossary card at bottom
-                    if viewModel.searchText.isEmpty {
-                        if isProUser {
-                            GlossaryCard()
-                                .padding(.horizontal)
-                                .padding(.bottom, 80)
-                        } else {
-                            AdBannerPlaceholder()
-                                .padding(.bottom, 80)
-                        }
+                    // Ad banner at bottom (only for free users)
+                    if viewModel.searchText.isEmpty && !isProUser {
+                        AdBannerPlaceholder()
+                            .padding(.bottom, 80)
                     }
                 }
             }

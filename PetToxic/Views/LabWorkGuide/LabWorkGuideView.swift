@@ -13,6 +13,7 @@ struct LabWorkGuideView: View {
     @State private var viewMode: ViewMode = .category
     @State private var expandedCategories: Set<LabCategory> = []
     @State private var isDisclaimerExpanded = false
+    @State private var showSources = false
 
     private let service = LabWorkGuideService.shared
 
@@ -98,6 +99,9 @@ struct LabWorkGuideView: View {
                             .foregroundStyle(.white.opacity(0.7))
                     }
                 }
+            }
+            .sheet(isPresented: $showSources) {
+                LabWorkGuideSourcesView()
             }
         }
     }
@@ -219,7 +223,11 @@ struct LabWorkGuideView: View {
                 }
             }
             .padding(.horizontal)
-            .padding(.bottom, 20)
+
+            sourcesButton
+                .padding(.top, 16)
+                .padding(.bottom, 24)
+                .padding(.horizontal)
         }
     }
 
@@ -306,7 +314,11 @@ struct LabWorkGuideView: View {
                 }
             }
             .padding(.horizontal)
-            .padding(.bottom, 20)
+
+            sourcesButton
+                .padding(.top, 16)
+                .padding(.bottom, 24)
+                .padding(.horizontal)
         }
     }
 
@@ -346,6 +358,37 @@ struct LabWorkGuideView: View {
 
             Spacer()
         }
+    }
+
+    // MARK: - Sources Button
+
+    private var sourcesButton: some View {
+        Button {
+            showSources = true
+        } label: {
+            HStack {
+                Image(systemName: "book.closed.fill")
+                    .font(.subheadline)
+                    .foregroundColor(.teal)
+
+                Text("Sources")
+                    .font(.subheadline)
+                    .foregroundColor(.teal)
+
+                Image(systemName: "chevron.right")
+                    .font(.caption2)
+                    .foregroundColor(.teal.opacity(0.6))
+            }
+            .padding(.vertical, 12)
+            .padding(.horizontal, 16)
+            .background(Color.white.opacity(0.08))
+            .cornerRadius(10)
+            .overlay(
+                RoundedRectangle(cornerRadius: 10)
+                    .stroke(Color.teal.opacity(0.2), lineWidth: 1)
+            )
+        }
+        .frame(maxWidth: .infinity)
     }
 }
 

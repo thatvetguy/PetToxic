@@ -71,11 +71,36 @@ struct SettingsView: View {
                         }
                         .disabled(!proSettings.isPro)
                         .listRowBackground(Color.white.opacity(0.08))
+
+                        NavigationLink {
+                            LabWorkGuideView()
+                        } label: {
+                            HStack {
+                                Image(systemName: "cross.vial.fill")
+                                    .foregroundStyle(.teal)
+                                    .frame(width: 24)
+                                Text("Lab Work Guide")
+                                    .foregroundStyle(.white)
+                                Spacer()
+                                if !proSettings.isPro {
+                                    Text("PRO")
+                                        .font(.caption2)
+                                        .fontWeight(.bold)
+                                        .foregroundColor(.white)
+                                        .padding(.horizontal, 8)
+                                        .padding(.vertical, 4)
+                                        .background(Color("AccentColor").opacity(0.8))
+                                        .clipShape(Capsule())
+                                }
+                            }
+                        }
+                        .disabled(!proSettings.isPro)
+                        .listRowBackground(Color.white.opacity(0.08))
                     } header: {
                         Text("Pro Features")
                             .foregroundStyle(.white.opacity(0.7))
                     } footer: {
-                        Text("Manage pet profiles and look up medical terms.")
+                        Text("Manage pet profiles, look up medical terms, and understand lab results.")
                             .foregroundStyle(.white.opacity(0.5))
                     }
 

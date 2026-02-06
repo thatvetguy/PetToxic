@@ -1,15 +1,15 @@
 //
-//  GlossaryCard.swift
+//  LabWorkGuideCard.swift
 //  PetToxic
 //
-//  Created by Claude Code on 2/2/26.
+//  Created by Claude Code on 2/5/26.
 //
 
 import SwiftUI
 
-struct GlossaryCard: View {
+struct LabWorkGuideCard: View {
     @ObservedObject private var proSettings = ProSettings.shared
-    @State private var showingGlossary = false
+    @State private var showLabWorkGuide = false
     @State private var showProUpsell = false
 
     private var isProUnlocked: Bool { proSettings.isPro }
@@ -18,22 +18,22 @@ struct GlossaryCard: View {
     var body: some View {
         Button {
             if isProUnlocked {
-                showingGlossary = true
+                showLabWorkGuide = true
             } else {
                 showProUpsell = true
             }
         } label: {
             HStack(spacing: 12) {
-                Image(systemName: "character.book.closed.fill")
+                Image(systemName: "cross.vial.fill")
                     .font(.title2)
                     .foregroundColor(isProUnlocked ? .teal : .white.opacity(0.3))
 
                 VStack(alignment: .leading, spacing: 2) {
-                    Text("Medical Glossary")
+                    Text("Lab Work Guide")
                         .font(.headline)
                         .foregroundColor(isProUnlocked ? .white : .white.opacity(0.6))
 
-                    Text("Look up veterinary & toxicology terms")
+                    Text("Understand your pet's blood work")
                         .font(.caption)
                         .foregroundColor(isProUnlocked ? .white.opacity(0.7) : .white.opacity(0.4))
                 }
@@ -73,13 +73,13 @@ struct GlossaryCard: View {
             .opacity(isProUnlocked ? 1.0 : 0.6)
         }
         .buttonStyle(.plain)
-        .sheet(isPresented: $showingGlossary) {
-            GlossaryView()
+        .sheet(isPresented: $showLabWorkGuide) {
+            LabWorkGuideView()
         }
         .alert("Pro Feature", isPresented: $showProUpsell) {
             Button("OK", role: .cancel) { }
         } message: {
-            Text("Look up veterinary and toxicology terms. Upgrade to Pro to access the Medical Glossary.")
+            Text("Understand your pet's blood work results. Upgrade to Pro to access the Lab Work Guide.")
         }
     }
 }
@@ -89,7 +89,7 @@ struct GlossaryCard: View {
         AppBackground()
 
         VStack(spacing: 16) {
-            GlossaryCard()
+            LabWorkGuideCard()
                 .padding()
         }
     }
