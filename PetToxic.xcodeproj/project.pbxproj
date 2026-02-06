@@ -32,8 +32,11 @@
 		A4BF9C6FC72BB3FEA842FB5A /* Font+Poppins.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CCB51A6977A5572FDF23398 /* Font+Poppins.swift */; };
 		AAEF5C9F73EAA218C18A2A85 /* Color+Hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = C55E1542D6E35B1F63CDED27 /* Color+Hex.swift */; };
 		ADBAB1D16F4857D0AF2E2664 /* AppBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = F95CC1681EAFCAC224A491ED /* AppBackground.swift */; };
+		ADMCFG001AAAA1111111111 /* AdMobConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADMCFG002AAAA2222222222 /* AdMobConfig.swift */; };
+		ADMOB001AAAA1111111111 /* GoogleMobileAds in Frameworks */ = {isa = PBXBuildFile; productRef = ADMOB003AAAA3333333333 /* GoogleMobileAds */; };
 		B4943E52DD3BFB9C5C556F3E /* CategoryGridItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2A1F327069C6F80D711B112 /* CategoryGridItem.swift */; };
 		B60194578843DB25F5A029B8 /* AdBannerPlaceholder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 368C8AAFA2F93E4E6C4ACDD8 /* AdBannerPlaceholder.swift */; };
+		BANRAD001AAAA1111111111 /* BannerAdView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BANRAD002AAAA2222222222 /* BannerAdView.swift */; };
 		BD101F4DBB5A92DCFD01C09D /* ToxicItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA6BC59CB914FF0A323C3DCC /* ToxicItem.swift */; };
 		BD7DB52CAC570F013059A80F /* SearchResultRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD01A1755E279E4482FD79C5 /* SearchResultRow.swift */; };
 		BEEF53A1E3402DA7D0C365E5 /* SeverityBadge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D0A536DAB60D4A56FC6C6B9 /* SeverityBadge.swift */; };
@@ -75,6 +78,14 @@
 		GLOSSLINK01BBB111111111 /* GlossaryEntryLink.swift in Sources */ = {isa = PBXBuildFile; fileRef = GLOSSLINK02BBB222222222 /* GlossaryEntryLink.swift */; };
 		GLOSSSTYL01AAA111111111 /* GlossaryStyledText.swift in Sources */ = {isa = PBXBuildFile; fileRef = GLOSSSTYL02AAA222222222 /* GlossaryStyledText.swift */; };
 		HOMESEC001CCCC1111111111 /* MyPetsHomeSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = HOMESEC002CCCC2222222222 /* MyPetsHomeSection.swift */; };
+		LABCAT001AAAA1111111111 /* LabCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = LABCAT002AAAA2222222222 /* LabCategory.swift */; };
+		LABCRD001AAAA1111111111 /* LabWorkGuideCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = LABCRD002AAAA2222222222 /* LabWorkGuideCard.swift */; };
+		LABDET001AAAA1111111111 /* LabParameterDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = LABDET002AAAA2222222222 /* LabParameterDetailView.swift */; };
+		LABPNL001AAAA1111111111 /* LabPanelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = LABPNL002AAAA2222222222 /* LabPanelType.swift */; };
+		LABPRM001AAAA1111111111 /* LabParameter.swift in Sources */ = {isa = PBXBuildFile; fileRef = LABPRM002AAAA2222222222 /* LabParameter.swift */; };
+		LABSRC001AAAA1111111111 /* LabWorkGuideSourcesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = LABSRC002AAAA2222222222 /* LabWorkGuideSourcesView.swift */; };
+		LABSVC001AAAA1111111111 /* LabWorkGuideService.swift in Sources */ = {isa = PBXBuildFile; fileRef = LABSVC002AAAA2222222222 /* LabWorkGuideService.swift */; };
+		LABVEW001AAAA1111111111 /* LabWorkGuideView.swift in Sources */ = {isa = PBXBuildFile; fileRef = LABVEW002AAAA2222222222 /* LabWorkGuideView.swift */; };
 		MKDWN001FFFF1111111111111 /* MarkdownText.swift in Sources */ = {isa = PBXBuildFile; fileRef = MKDWN002FFFF2222222222222 /* MarkdownText.swift */; };
 		NAVCXT002AAAA2222222222 /* NavigationContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = NAVCXT001AAAA1111111111 /* NavigationContext.swift */; };
 		PHOTO001BBBB1111111111111 /* PetPhotoService.swift in Sources */ = {isa = PBXBuildFile; fileRef = PHOTO002BBBB2222222222222 /* PetPhotoService.swift */; };
@@ -82,17 +93,6 @@
 		PHOTO005BBBB5555555555555 /* PetPhotoPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = PHOTO006BBBB6666666666666 /* PetPhotoPickerView.swift */; };
 		POISONCASE001AAAA111111 /* PoisonControlCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = POISONCASE002AAAA222222 /* PoisonControlCase.swift */; };
 		SHCARD001AAAA1111111111 /* ShareCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = SHCARD002AAAA2222222222 /* ShareCardView.swift */; };
-		ADMOB001AAAA1111111111 /* GoogleMobileAds in Frameworks */ = {isa = PBXBuildFile; productRef = ADMOB003AAAA3333333333 /* GoogleMobileAds */; };
-		BANRAD001AAAA1111111111 /* BannerAdView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BANRAD002AAAA2222222222 /* BannerAdView.swift */; };
-		ADMCFG001AAAA1111111111 /* AdMobConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADMCFG002AAAA2222222222 /* AdMobConfig.swift */; };
-		LABPNL001AAAA1111111111 /* LabPanelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = LABPNL002AAAA2222222222 /* LabPanelType.swift */; };
-		LABCAT001AAAA1111111111 /* LabCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = LABCAT002AAAA2222222222 /* LabCategory.swift */; };
-		LABPRM001AAAA1111111111 /* LabParameter.swift in Sources */ = {isa = PBXBuildFile; fileRef = LABPRM002AAAA2222222222 /* LabParameter.swift */; };
-		LABSVC001AAAA1111111111 /* LabWorkGuideService.swift in Sources */ = {isa = PBXBuildFile; fileRef = LABSVC002AAAA2222222222 /* LabWorkGuideService.swift */; };
-		LABVEW001AAAA1111111111 /* LabWorkGuideView.swift in Sources */ = {isa = PBXBuildFile; fileRef = LABVEW002AAAA2222222222 /* LabWorkGuideView.swift */; };
-		LABDET001AAAA1111111111 /* LabParameterDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = LABDET002AAAA2222222222 /* LabParameterDetailView.swift */; };
-		LABCRD001AAAA1111111111 /* LabWorkGuideCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = LABCRD002AAAA2222222222 /* LabWorkGuideCard.swift */; };
-		LABSRC001AAAA1111111111 /* LabWorkGuideSourcesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = LABSRC002AAAA2222222222 /* LabWorkGuideSourcesView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -123,8 +123,6 @@
 		2E15382E138BA940EDEC2577 /* MyPetsPlaceholder.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MyPetsPlaceholder.swift; sourceTree = "<group>"; };
 		322031EFC0545ED5E7D81414 /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
 		368C8AAFA2F93E4E6C4ACDD8 /* AdBannerPlaceholder.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AdBannerPlaceholder.swift; sourceTree = "<group>"; };
-		BANRAD002AAAA2222222222 /* BannerAdView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerAdView.swift; sourceTree = "<group>"; };
-		ADMCFG002AAAA2222222222 /* AdMobConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdMobConfig.swift; sourceTree = "<group>"; };
 		3F222F1B00290D1DB61D22D2 /* ArticleDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleDetailView.swift; sourceTree = "<group>"; };
 		4287B0389C9E01E7BF8C74A2 /* PetToxicApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetToxicApp.swift; sourceTree = "<group>"; };
 		43492A46C658B52393AA5BA7 /* PetToxic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PetToxic.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -143,9 +141,11 @@
 		81DA312D440067CFD3E192A8 /* SpeciesFilterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeciesFilterView.swift; sourceTree = "<group>"; };
 		9D0A536DAB60D4A56FC6C6B9 /* SeverityBadge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeverityBadge.swift; sourceTree = "<group>"; };
 		AD01A1755E279E4482FD79C5 /* SearchResultRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultRow.swift; sourceTree = "<group>"; };
+		ADMCFG002AAAA2222222222 /* AdMobConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdMobConfig.swift; sourceTree = "<group>"; };
 		AF7B0E075A2786B63F29BED4 /* SymptomsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SymptomsListView.swift; sourceTree = "<group>"; };
 		B2C3D4E5F67890123456789A /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B53D68258BA348FBDC14FFB4 /* RelatedEntryButton.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = RelatedEntryButton.swift; sourceTree = "<group>"; };
+		BANRAD002AAAA2222222222 /* BannerAdView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerAdView.swift; sourceTree = "<group>"; };
 		BREED002AAAA2222222222222 /* BreedService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedService.swift; sourceTree = "<group>"; };
 		BREED004AAAA4444444444444 /* breeds.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = breeds.json; sourceTree = "<group>"; };
 		BRWFLT002EEEE2222222222 /* BrowseFilterService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrowseFilterService.swift; sourceTree = "<group>"; };
@@ -187,6 +187,14 @@
 		GLOSSLINK02BBB222222222 /* GlossaryEntryLink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlossaryEntryLink.swift; sourceTree = "<group>"; };
 		GLOSSSTYL02AAA222222222 /* GlossaryStyledText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlossaryStyledText.swift; sourceTree = "<group>"; };
 		HOMESEC002CCCC2222222222 /* MyPetsHomeSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPetsHomeSection.swift; sourceTree = "<group>"; };
+		LABCAT002AAAA2222222222 /* LabCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabCategory.swift; sourceTree = "<group>"; };
+		LABCRD002AAAA2222222222 /* LabWorkGuideCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabWorkGuideCard.swift; sourceTree = "<group>"; };
+		LABDET002AAAA2222222222 /* LabParameterDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabParameterDetailView.swift; sourceTree = "<group>"; };
+		LABPNL002AAAA2222222222 /* LabPanelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabPanelType.swift; sourceTree = "<group>"; };
+		LABPRM002AAAA2222222222 /* LabParameter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabParameter.swift; sourceTree = "<group>"; };
+		LABSRC002AAAA2222222222 /* LabWorkGuideSourcesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabWorkGuideSourcesView.swift; sourceTree = "<group>"; };
+		LABSVC002AAAA2222222222 /* LabWorkGuideService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabWorkGuideService.swift; sourceTree = "<group>"; };
+		LABVEW002AAAA2222222222 /* LabWorkGuideView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabWorkGuideView.swift; sourceTree = "<group>"; };
 		MKDWN002FFFF2222222222222 /* MarkdownText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarkdownText.swift; sourceTree = "<group>"; };
 		NAVCXT001AAAA1111111111 /* NavigationContext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationContext.swift; sourceTree = "<group>"; };
 		PHOTO002BBBB2222222222222 /* PetPhotoService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetPhotoService.swift; sourceTree = "<group>"; };
@@ -194,15 +202,18 @@
 		PHOTO006BBBB6666666666666 /* PetPhotoPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetPhotoPickerView.swift; sourceTree = "<group>"; };
 		POISONCASE002AAAA222222 /* PoisonControlCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoisonControlCase.swift; sourceTree = "<group>"; };
 		SHCARD002AAAA2222222222 /* ShareCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareCardView.swift; sourceTree = "<group>"; };
-		LABPNL002AAAA2222222222 /* LabPanelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabPanelType.swift; sourceTree = "<group>"; };
-		LABCAT002AAAA2222222222 /* LabCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabCategory.swift; sourceTree = "<group>"; };
-		LABPRM002AAAA2222222222 /* LabParameter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabParameter.swift; sourceTree = "<group>"; };
-		LABSVC002AAAA2222222222 /* LabWorkGuideService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabWorkGuideService.swift; sourceTree = "<group>"; };
-		LABVEW002AAAA2222222222 /* LabWorkGuideView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabWorkGuideView.swift; sourceTree = "<group>"; };
-		LABDET002AAAA2222222222 /* LabParameterDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabParameterDetailView.swift; sourceTree = "<group>"; };
-		LABCRD002AAAA2222222222 /* LabWorkGuideCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabWorkGuideCard.swift; sourceTree = "<group>"; };
-		LABSRC002AAAA2222222222 /* LabWorkGuideSourcesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabWorkGuideSourcesView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		ADMOB002AAAA2222222222 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ADMOB001AAAA1111111111 /* GoogleMobileAds in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
 		125F1AE6F07965CBD1787E27 /* Resources */ = {
@@ -465,6 +476,14 @@
 			path = Glossary;
 			sourceTree = "<group>";
 		};
+		HOMESEC003CCCC3333333333 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				HOMESEC002CCCC2222222222 /* MyPetsHomeSection.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
 		LABGRP009AAAA9999999999 /* LabWorkGuide */ = {
 			isa = PBXGroup;
 			children = (
@@ -474,14 +493,6 @@
 				LABSRC002AAAA2222222222 /* LabWorkGuideSourcesView.swift */,
 			);
 			path = LabWorkGuide;
-			sourceTree = "<group>";
-		};
-		HOMESEC003CCCC3333333333 /* Components */ = {
-			isa = PBXGroup;
-			children = (
-				HOMESEC002CCCC2222222222 /* MyPetsHomeSection.swift */,
-			);
-			path = Components;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -593,17 +604,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXFrameworksBuildPhase section */
-		ADMOB002AAAA2222222222 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				ADMOB001AAAA1111111111 /* GoogleMobileAds in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		4549DB3331E9E05F64AB39A8 /* Sources */ = {
@@ -764,7 +764,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 20260205;
+				CURRENT_PROJECT_VERSION = 202602051;
 				DEVELOPMENT_TEAM = 6KA5CB5S3A;
 				GENERATE_INFOPLIST_FILE = NO;
 				INFOPLIST_FILE = PetToxic/Resources/Info.plist;
@@ -950,7 +950,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 20260205;
+				CURRENT_PROJECT_VERSION = 202602051;
 				DEVELOPMENT_TEAM = 6KA5CB5S3A;
 				GENERATE_INFOPLIST_FILE = NO;
 				INFOPLIST_FILE = PetToxic/Resources/Info.plist;
