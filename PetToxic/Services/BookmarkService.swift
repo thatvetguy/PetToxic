@@ -1,5 +1,6 @@
 import Foundation
 
+@MainActor
 class BookmarkService: ObservableObject {
     static let shared = BookmarkService()
 

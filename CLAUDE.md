@@ -6,7 +6,7 @@ Native iOS reference app for pet owners to quickly look up toxicity information.
 ## Technical Stack
 - **Language:** Swift 5.9+
 - **UI:** SwiftUI
-- **iOS Target:** 16.0+
+- **iOS Target:** 17.6+
 - **Architecture:** MVVM
 - **Database:** SQLite with FTS5 for search
 - **Dependencies:** Minimize; prefer native frameworks
@@ -34,7 +34,7 @@ Native iOS reference app for pet owners to quickly look up toxicity information.
 
 ### SF Symbol Compatibility
 
-- **App targets iOS 16.0+.** Before using any SF Symbol, verify it exists in iOS 16. Newer symbols will cause runtime crashes on older devices.
+- **App targets iOS 17.6+.** Before using any SF Symbol, verify it exists in iOS 17. Newer symbols will cause runtime crashes on older devices.
 - **Known iOS 17+ only symbols:** `liver.fill`, `stomach.fill`, `testtube.2`
 - **Safe alternatives:** `cross.vial.fill`, `staroflife.fill`, `drop.triangle.fill`, `plus.forwardslash.minus`
 - **Verification:** Check existing codebase usage with `grep "systemName"` to find patterns that are known to work.
