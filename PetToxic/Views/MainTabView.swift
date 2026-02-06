@@ -1,4 +1,5 @@
 import SwiftUI
+import AppTrackingTransparency
 
 /// Direction of a completed swipe gesture
 private enum SwipeDirection {
@@ -10,6 +11,8 @@ struct MainTabView: View {
     @State private var selectedTab = 0
     @State private var dragOffset: CGFloat = 0
     @State private var isDragging = false
+    /// Flag to block NavigationLink taps during/after swipe - prevents accidental category opening
+    @State private var isSwipeBlocking = false
     @State private var isInQuickEmergency = false
     /// Navigation path for Browse tab - enables programmatic navigation for contextual swipes
     @State private var browseNavigationPath = NavigationPath()
@@ -49,6 +52,13 @@ struct MainTabView: View {
             let currentVersion = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String ?? "0.0"
             if acknowledgedVersion != currentVersion {
                 showDisclaimerPopup = true
+            }
+
+            // Request App Tracking Transparency authorization after a brief delay
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
+                ATTrackingManager.requestTrackingAuthorization { _ in
+                    // No action needed — ads still serve regardless of choice
+                }
             }
         }
         .sheet(isPresented: $showDisclaimerPopup) {
@@ -116,6 +126,8 @@ struct MainTabView: View {
                     return
                 }
 
+                // Block NavigationLink taps immediately when swipe is detected
+                isSwipeBlocking = true
                 isDragging = true
                 let translation = value.translation.width
 
@@ -158,7 +170,11 @@ struct MainTabView: View {
                     withAnimation(.spring(response: 0.3, dampingFraction: 0.8)) {
                         dragOffset = 0
                     }
-                    isDragging = false
+                    // Delay resetting to ensure touch-up doesn't trigger NavigationLink
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
+                        isDragging = false
+                        isSwipeBlocking = false
+                    }
                     return
                 }
 
@@ -218,6 +234,7 @@ struct MainTabView: View {
                     }
                     DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
                         isDragging = false
+                        isSwipeBlocking = false
                     }
                     return
                 }
@@ -272,6 +289,7 @@ struct MainTabView: View {
                         selectedTab = newTab
                         dragOffset = 0
                         isDragging = false
+                        isSwipeBlocking = false
                     }
                 } else {
                     // Snap back — no tab change
@@ -280,6 +298,7 @@ struct MainTabView: View {
                     }
                     DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
                         isDragging = false
+                        isSwipeBlocking = false
                     }
                 }
             }
@@ -379,7 +398,7 @@ struct MainTabView: View {
         case 0:
             SearchView()
         case 1:
-            BrowseView(navigationPath: $browseNavigationPath)
+            BrowseView(navigationPath: $browseNavigationPath, isSwipeBlocking: isSwipeBlocking)
         case 2:
             SavedView()
         case 3:

@@ -4,6 +4,8 @@ import SwiftData
 struct BrowseView: View {
     /// Navigation path binding - controlled by MainTabView for contextual swipe navigation
     @Binding var navigationPath: NavigationPath
+    /// When true, blocks NavigationLink taps to prevent accidental category opening during swipes
+    let isSwipeBlocking: Bool
 
     @StateObject private var viewModel = BrowseViewModel()
     @StateObject private var searchViewModel = SearchViewModel()
@@ -51,6 +53,7 @@ struct BrowseView: View {
                                         )
                                     }
                                     .buttonStyle(.plain)
+                                    .disabled(isSwipeBlocking)
                                 }
                             }
                             .padding()
@@ -531,6 +534,6 @@ struct EntryListRow: View {
 }
 
 #Preview {
-    BrowseView(navigationPath: .constant(NavigationPath()))
+    BrowseView(navigationPath: .constant(NavigationPath()), isSwipeBlocking: false)
         .environment(BrowseNavigationContext())
 }
