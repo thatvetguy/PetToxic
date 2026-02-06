@@ -13,6 +13,8 @@ struct MainTabView: View {
     @State private var isDragging = false
     /// Flag to block NavigationLink taps during/after swipe - prevents accidental category opening
     @State private var isSwipeBlocking = false
+    /// Blocks gesture recognition during tab-change animation to prevent stale-timer race conditions
+    @State private var isAnimatingTransition = false
     @State private var isInQuickEmergency = false
     /// Navigation path for Browse tab - enables programmatic navigation for contextual swipes
     @State private var browseNavigationPath = NavigationPath()
@@ -111,6 +113,7 @@ struct MainTabView: View {
     private func dragGesture(geometry: GeometryProxy) -> some Gesture {
         DragGesture(minimumDistance: 20)
             .onChanged { value in
+                guard !isAnimatingTransition else { return }
                 // Exclude drags starting in the species filter bar area
                 // to allow horizontal ScrollView scrolling on filter chips
                 let startY = value.startLocation.y
@@ -164,9 +167,12 @@ struct MainTabView: View {
                 }
             }
             .onEnded { value in
+                guard !isAnimatingTransition else { return }
+
                 // Exclude drags that started in the filter bar area
                 let startY = value.startLocation.y
                 if startY >= 120 && startY <= 260 {
+                    isAnimatingTransition = true
                     withAnimation(.spring(response: 0.3, dampingFraction: 0.8)) {
                         dragOffset = 0
                     }
@@ -174,6 +180,7 @@ struct MainTabView: View {
                     DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
                         isDragging = false
                         isSwipeBlocking = false
+                        isAnimatingTransition = false
                     }
                     return
                 }
@@ -229,12 +236,14 @@ struct MainTabView: View {
                         handleCategoryLevelSwipe(direction: direction)
                     }
                     // Reset drag state
+                    isAnimatingTransition = true
                     withAnimation(.spring(response: 0.3, dampingFraction: 0.8)) {
                         dragOffset = 0
                     }
                     DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
                         isDragging = false
                         isSwipeBlocking = false
+                        isAnimatingTransition = false
                     }
                     return
                 }
@@ -274,6 +283,7 @@ struct MainTabView: View {
                     // Keep isDragging true so adjacent preview stays visible
                     let targetOffset = shouldSwipeLeft ? -screenWidth : screenWidth
 
+                    isAnimatingTransition = true
                     withAnimation(.easeOut(duration: 0.25)) {
                         dragOffset = targetOffset
                     }
@@ -290,15 +300,18 @@ struct MainTabView: View {
                         dragOffset = 0
                         isDragging = false
                         isSwipeBlocking = false
+                        isAnimatingTransition = false
                     }
                 } else {
                     // Snap back — no tab change
+                    isAnimatingTransition = true
                     withAnimation(.spring(response: 0.35, dampingFraction: 0.8)) {
                         dragOffset = 0
                     }
                     DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
                         isDragging = false
                         isSwipeBlocking = false
+                        isAnimatingTransition = false
                     }
                 }
             }
