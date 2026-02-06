@@ -229,6 +229,7 @@ struct LabWorkGuideView: View {
                 .padding(.bottom, 24)
                 .padding(.horizontal)
         }
+        .scrollDismissesKeyboard(.interactively)
     }
 
     // MARK: - Category Header
@@ -320,6 +321,7 @@ struct LabWorkGuideView: View {
                 .padding(.bottom, 24)
                 .padding(.horizontal)
         }
+        .scrollDismissesKeyboard(.interactively)
     }
 
     // MARK: - Search Results List
@@ -336,6 +338,7 @@ struct LabWorkGuideView: View {
             .padding(.horizontal)
             .padding(.bottom, 20)
         }
+        .scrollDismissesKeyboard(.interactively)
     }
 
     // MARK: - Empty State
