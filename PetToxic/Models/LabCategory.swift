@@ -49,9 +49,9 @@ enum LabCategory: String, Codable, CaseIterable, Identifiable {
         case .muscle: return "Muscle"
         case .clottingTimes: return "Clotting Times"
         case .pancreaticEnzymes: return "Pancreatic Enzymes"
-        case .physical: return "Physical"
-        case .chemicalDipstick: return "Chemical / Dipstick"
-        case .sediment: return "Sediment"
+        case .physical: return "Urine Appearance"
+        case .chemicalDipstick: return "Urine Dipstick"
+        case .sediment: return "Urine Sediment"
         }
     }
 
