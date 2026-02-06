@@ -32,6 +32,13 @@ Native iOS reference app for pet owners to quickly look up toxicity information.
 - **ScrollView competes with `.simultaneousGesture(DragGesture)`.** Even with `.simultaneousGesture`, a vertical `ScrollView` can prevent `onChanged` from reliably setting state (the horizontality guard fails due to gesture interference). For swipes over ScrollView content, check the **final** `value.translation` in `onEnded` rather than relying on intermediate `onChanged` state. See the `isDragging` bypass for contextual swipes in `MainTabView`.
 - **Contextual swipes need different thresholds.** Swipes with visual drag feedback (tab switching) use 20% screen-width / velocity 200. Swipes without visual feedback (entry/category flicks) need lighter thresholds (10% / velocity 100) to feel responsive. Both use the same `DragGesture`; thresholds are selected based on `browseNavigationPath.count`.
 
+### SF Symbol Compatibility
+
+- **App targets iOS 16.0+.** Before using any SF Symbol, verify it exists in iOS 16. Newer symbols will cause runtime crashes on older devices.
+- **Known iOS 17+ only symbols:** `liver.fill`, `stomach.fill`, `testtube.2`
+- **Safe alternatives:** `cross.vial.fill`, `staroflife.fill`, `drop.triangle.fill`, `plus.forwardslash.minus`
+- **Verification:** Check existing codebase usage with `grep "systemName"` to find patterns that are known to work.
+
 ---
 
 ## Core Principles
@@ -410,4 +417,4 @@ Handoff files: `Handoff_SessionXX_to_SessionYY.md`
 
 ---
 
-*Last Updated: January 2026 (Session 85)*
+*Last Updated: February 2026 (Session 115)*
