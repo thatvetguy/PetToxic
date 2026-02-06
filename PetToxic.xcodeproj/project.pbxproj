@@ -42,6 +42,7 @@
 		BEEF53A1E3402DA7D0C365E5 /* SeverityBadge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D0A536DAB60D4A56FC6C6B9 /* SeverityBadge.swift */; };
 		BREED001AAAA1111111111111 /* BreedService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BREED002AAAA2222222222222 /* BreedService.swift */; };
 		BREED003AAAA3333333333333 /* breeds.json in Resources */ = {isa = PBXBuildFile; fileRef = BREED004AAAA4444444444444 /* breeds.json */; };
+		PRIV002AAAA2222222222222 /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = PRIV001AAAA1111111111111 /* PrivacyInfo.xcprivacy */; };
 		BRWFLT001EEEE1111111111 /* BrowseFilterService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BRWFLT002EEEE2222222222 /* BrowseFilterService.swift */; };
 		C36B4977AA78A0B98A512B6A /* SeveritySection.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC88BF3EB74D97FF8EF70C32 /* SeveritySection.swift */; };
 		C3D4E5F67890123456789ABC /* AppearanceSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4E5F6789012345678901234 /* AppearanceSettings.swift */; };
@@ -117,6 +118,7 @@
 		1CC831E76E0F0F17894ADA65 /* PetToxicUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetToxicUITests.swift; sourceTree = "<group>"; };
 		1CCB51A6977A5572FDF23398 /* Font+Poppins.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "Font+Poppins.swift"; sourceTree = "<group>"; };
 		1E1A648E35297523A4222EE2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		PRIV001AAAA1111111111111 /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
 		207482A283C5391FDFEFAFC1 /* PoisonControlButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoisonControlButton.swift; sourceTree = "<group>"; };
 		237521FB4875580645396715 /* BookmarkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarkService.swift; sourceTree = "<group>"; };
 		24B2882F5F5387A02F14DC1B /* EmptyStateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyStateView.swift; sourceTree = "<group>"; };
@@ -223,6 +225,7 @@
 				BREED004AAAA4444444444444 /* breeds.json */,
 				1E1A648E35297523A4222EE2 /* Info.plist */,
 				B2C3D4E5F67890123456789A /* LaunchScreen.storyboard */,
+				PRIV001AAAA1111111111111 /* PrivacyInfo.xcprivacy */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -600,6 +603,7 @@
 				047D61DFD0831C22C171B07C /* Assets.xcassets in Resources */,
 				BREED003AAAA3333333333333 /* breeds.json in Resources */,
 				A1B2C3D4E5F6789012345678 /* LaunchScreen.storyboard in Resources */,
+				PRIV002AAAA2222222222222 /* PrivacyInfo.xcprivacy in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -764,7 +768,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 202602051;
+				CURRENT_PROJECT_VERSION = 20260206;
 				DEVELOPMENT_TEAM = 6KA5CB5S3A;
 				GENERATE_INFOPLIST_FILE = NO;
 				INFOPLIST_FILE = PetToxic/Resources/Info.plist;
@@ -950,7 +954,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 202602051;
+				CURRENT_PROJECT_VERSION = 20260206;
 				DEVELOPMENT_TEAM = 6KA5CB5S3A;
 				GENERATE_INFOPLIST_FILE = NO;
 				INFOPLIST_FILE = PetToxic/Resources/Info.plist;
