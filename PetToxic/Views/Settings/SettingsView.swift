@@ -226,9 +226,11 @@ struct SettingsView: View {
                                     Text("support@pettoxic.com").bold()
                                 }
 
-                                Link("Email support@pettoxic.com", destination: URL(string: "mailto:support@pettoxic.com")!)
-                                    .font(.footnote)
-                                    .foregroundStyle(Color("AccentColor"))
+                                if let mailURL = URL(string: "mailto:support@pettoxic.com") {
+                                    Link("Email support@pettoxic.com", destination: mailURL)
+                                        .font(.footnote)
+                                        .foregroundStyle(Color("AccentColor"))
+                                }
 
                                 Text("Pet Toxic is an independent app and is not affiliated with, endorsed by, or partnered with the ASPCA Animal Poison Control Center or Pet Poison Helpline.")
                                     .font(.footnote)

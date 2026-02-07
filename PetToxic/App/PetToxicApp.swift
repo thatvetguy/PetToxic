@@ -8,7 +8,9 @@ struct PetToxicApp: App {
     @State private var browseNavigationContext = BrowseNavigationContext()
 
     init() {
+        #if DEBUG
         print("APP LAUNCHED")
+        #endif
         // Initialize Google Mobile Ads SDK
         MobileAds.shared.start()
         // Initialize StoreKit service (loads products & checks entitlements)

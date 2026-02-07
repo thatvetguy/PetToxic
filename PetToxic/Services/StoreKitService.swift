@@ -24,7 +24,9 @@ class StoreKitService: ObservableObject {
     private var updateListenerTask: Task<Void, Never>?
 
     private init() {
+        #if DEBUG
         print("StoreKit: Service initializing")
+        #endif
         updateListenerTask = listenForTransactions()
         Task {
             await loadProducts()
@@ -41,10 +43,13 @@ class StoreKitService: ObservableObject {
     @MainActor
     func loadProducts() async {
         let requestedIDs = [Self.proProductID, Self.supporterProductID]
+        #if DEBUG
         print("StoreKit: Loading products for IDs: \(requestedIDs)")
+        #endif
         do {
             let storeProducts = try await Product.products(for: requestedIDs)
             products = storeProducts.sorted { $0.price < $1.price }
+            #if DEBUG
             print("StoreKit: Loaded \(storeProducts.count) product(s)")
             for product in products {
                 print("StoreKit:   - \(product.id): \(product.displayName) (\(product.displayPrice))")
@@ -52,8 +57,11 @@ class StoreKitService: ObservableObject {
             if storeProducts.isEmpty {
                 print("StoreKit: WARNING — 0 products returned. Verify the .storekit config file is selected in Edit Scheme → Run → Options → StoreKit Configuration.")
             }
+            #endif
         } catch {
+            #if DEBUG
             print("StoreKit: Failed to load products: \(error)")
+            #endif
         }
     }
 

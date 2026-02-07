@@ -58,16 +58,6 @@ struct BookmarksListView: View {
             }
         }
     }
-
-    private func severityOrder(_ severity: Severity) -> Int {
-        switch severity {
-        case .low: return 0
-        case .lowModerate: return 1
-        case .moderate: return 2
-        case .high: return 3
-        case .severe: return 4
-        }
-    }
 }
 
 #Preview {

@@ -23,14 +23,18 @@ class BreedService {
     private func loadBreeds() {
         guard let url = Bundle.main.url(forResource: "breeds", withExtension: "json"),
               let data = try? Data(contentsOf: url) else {
+            #if DEBUG
             print("Failed to load breeds.json")
+            #endif
             return
         }
 
         do {
             breeds = try JSONDecoder().decode([String: [Breed]].self, from: data)
         } catch {
+            #if DEBUG
             print("Failed to decode breeds.json: \(error)")
+            #endif
         }
     }
 

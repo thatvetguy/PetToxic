@@ -32,7 +32,9 @@ class PetPhotoService {
 
         // Compress to JPEG, targeting under 500KB
         guard let data = compressImage(resizedImage, maxSizeKB: 500) else {
+            #if DEBUG
             print("Failed to compress image")
+            #endif
             return nil
         }
 
@@ -40,7 +42,9 @@ class PetPhotoService {
             try data.write(to: fileURL)
             return filename
         } catch {
+            #if DEBUG
             print("Failed to save photo: \(error)")
+            #endif
             return nil
         }
     }

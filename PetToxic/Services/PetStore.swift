@@ -21,7 +21,9 @@ class PetStore {
         do {
             return try modelContext.fetch(descriptor)
         } catch {
+            #if DEBUG
             print("Failed to fetch pets: \(error)")
+            #endif
             return []
         }
     }
@@ -66,7 +68,9 @@ class PetStore {
         do {
             try modelContext.save()
         } catch {
+            #if DEBUG
             print("Failed to save: \(error)")
+            #endif
         }
     }
 }
