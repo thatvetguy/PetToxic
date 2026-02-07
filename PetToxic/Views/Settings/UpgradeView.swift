@@ -5,7 +5,7 @@ struct UpgradeView: View {
     @Environment(\.dismiss) private var dismiss
     @ObservedObject private var storeKit = StoreKitService.shared
     @ObservedObject private var proSettings = ProSettings.shared
-    @State private var purchaseSucceeded = false
+    @State private var purchasedProductID: String?
 
     var body: some View {
         NavigationStack {
@@ -35,10 +35,20 @@ struct UpgradeView: View {
                         .foregroundColor(.white)
                 }
             }
-            .alert("Welcome to Pro!", isPresented: $purchaseSucceeded) {
+            .alert(
+                purchasedProductID == StoreKitService.supporterProductID
+                    ? "Welcome, Pet Hero! 🐾"
+                    : "Welcome to Pro!",
+                isPresented: Binding(
+                    get: { purchasedProductID != nil },
+                    set: { if !$0 { purchasedProductID = nil } }
+                )
+            ) {
                 Button("OK") { dismiss() }
             } message: {
-                Text("All Pro features are now unlocked. Thank you for your support!")
+                Text(purchasedProductID == StoreKitService.supporterProductID
+                     ? "Thank you for supporting pet safety! Your Pet Hero badge is now on your home screen."
+                     : "All Pro features are now unlocked. Thank you for your support!")
             }
         }
     }
@@ -155,7 +165,7 @@ struct UpgradeView: View {
                 Task {
                     let success = await storeKit.purchase(product)
                     if success {
-                        purchaseSucceeded = true
+                        purchasedProductID = productID
                     }
                 }
             } else {
@@ -216,8 +226,10 @@ struct UpgradeView: View {
             Button {
                 Task {
                     await storeKit.restorePurchases()
-                    if proSettings.isPro {
-                        purchaseSucceeded = true
+                    if proSettings.isSupporter {
+                        purchasedProductID = StoreKitService.supporterProductID
+                    } else if proSettings.isPro {
+                        purchasedProductID = StoreKitService.proProductID
                     }
                 }
             } label: {
