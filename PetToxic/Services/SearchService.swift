@@ -3,7 +3,7 @@ import Foundation
 class SearchService {
     private let databaseService = DatabaseService.shared
 
-    func search(query: String, species: [Species]?) async throws -> [SearchResult] {
+    func search(query: String, species: [Species]?) async -> [SearchResult] {
         // Simulate async search
         let items = databaseService.search(query: query, species: species)
 

@@ -73,15 +73,11 @@ class SearchViewModel: ObservableObject {
 
         isSearching = true
 
-        do {
-            let results = try await searchService.search(
-                query: query,
-                species: selectedSpecies.isEmpty ? nil : Array(selectedSpecies)
-            )
-            searchResults = results
-        } catch {
-            searchResults = []
-        }
+        let results = await searchService.search(
+            query: query,
+            species: selectedSpecies.isEmpty ? nil : Array(selectedSpecies)
+        )
+        searchResults = results
 
         isSearching = false
     }
