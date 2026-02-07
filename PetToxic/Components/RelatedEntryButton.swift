@@ -24,6 +24,7 @@ struct RelatedEntryButton: View {
             .clipShape(RoundedRectangle(cornerRadius: 10))
         }
         .buttonStyle(.plain)
+        .accessibilityLabel("Related entry: \(item.name)")
     }
 }
 
