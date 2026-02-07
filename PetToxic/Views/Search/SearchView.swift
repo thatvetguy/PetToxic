@@ -66,8 +66,8 @@ struct SearchView: View {
 
                     Spacer(minLength: 0)
 
-                    // Ad banner at bottom (only for free users)
-                    if viewModel.searchText.isEmpty && !isProUser {
+                    // Ad banner at bottom (only for free users, hidden when keyboard is up)
+                    if viewModel.searchText.isEmpty && !isProUser && !isSearchFocused {
                         AdBannerPlaceholder()
                             .padding(.bottom, AppLayout.tabBarBottomPadding)
                     }

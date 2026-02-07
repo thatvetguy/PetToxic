@@ -64,7 +64,7 @@ struct BrowseView: View {
 
                     Spacer(minLength: 0)
 
-                    if searchViewModel.searchText.isEmpty {
+                    if searchViewModel.searchText.isEmpty && !isSearchFocused {
                         if isProUser {
                             GlossaryCard()
                                 .padding(.horizontal)
