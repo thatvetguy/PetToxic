@@ -14,6 +14,7 @@ struct LabWorkGuideView: View {
     @State private var expandedCategories: Set<LabCategory> = []
     @State private var isDisclaimerExpanded = false
     @State private var showSources = false
+    @FocusState private var isSearchFocused: Bool
 
     private let service = LabWorkGuideService.shared
 
@@ -99,6 +100,12 @@ struct LabWorkGuideView: View {
                             .foregroundStyle(.white.opacity(0.7))
                     }
                 }
+                ToolbarItemGroup(placement: .keyboard) {
+                    Spacer()
+                    Button("Done") {
+                        isSearchFocused = false
+                    }
+                }
             }
             .sheet(isPresented: $showSources) {
                 LabWorkGuideSourcesView()
@@ -174,6 +181,7 @@ struct LabWorkGuideView: View {
                 .foregroundColor(.white.opacity(0.6))
 
             TextField("Search parameters...", text: $searchText)
+                .focused($isSearchFocused)
                 .foregroundColor(.white)
                 .autocorrectionDisabled()
                 .textInputAutocapitalization(.never)
@@ -230,6 +238,11 @@ struct LabWorkGuideView: View {
                 .padding(.horizontal)
         }
         .scrollDismissesKeyboard(.interactively)
+        .simultaneousGesture(
+            TapGesture().onEnded {
+                isSearchFocused = false
+            }
+        )
     }
 
     // MARK: - Category Header
@@ -322,6 +335,11 @@ struct LabWorkGuideView: View {
                 .padding(.horizontal)
         }
         .scrollDismissesKeyboard(.interactively)
+        .simultaneousGesture(
+            TapGesture().onEnded {
+                isSearchFocused = false
+            }
+        )
     }
 
     // MARK: - Search Results List
@@ -339,6 +357,11 @@ struct LabWorkGuideView: View {
             .padding(.bottom, 20)
         }
         .scrollDismissesKeyboard(.interactively)
+        .simultaneousGesture(
+            TapGesture().onEnded {
+                isSearchFocused = false
+            }
+        )
     }
 
     // MARK: - Empty State
@@ -360,6 +383,11 @@ struct LabWorkGuideView: View {
                 .foregroundColor(.white.opacity(0.5))
 
             Spacer()
+        }
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
+        .contentShape(Rectangle())
+        .onTapGesture {
+            isSearchFocused = false
         }
     }
 

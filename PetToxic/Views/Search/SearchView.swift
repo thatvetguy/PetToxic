@@ -74,6 +74,14 @@ struct SearchView: View {
                 }
             }
             .toolbarBackground(.hidden, for: .navigationBar)
+            .toolbar {
+                ToolbarItemGroup(placement: .keyboard) {
+                    Spacer()
+                    Button("Done") {
+                        isSearchFocused = false
+                    }
+                }
+            }
             .onAppear {
                 viewModel.reloadRecentSearches()
             }

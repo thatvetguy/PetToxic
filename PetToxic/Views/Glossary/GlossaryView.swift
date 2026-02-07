@@ -10,6 +10,7 @@ import SwiftUI
 struct GlossaryView: View {
     @Environment(\.dismiss) private var dismiss
     @State private var searchText = ""
+    @FocusState private var isSearchFocused: Bool
 
     private let glossaryService = GlossaryService.shared
 
@@ -80,6 +81,12 @@ struct GlossaryView: View {
                             .foregroundStyle(.white.opacity(0.7))
                     }
                 }
+                ToolbarItemGroup(placement: .keyboard) {
+                    Spacer()
+                    Button("Done") {
+                        isSearchFocused = false
+                    }
+                }
             }
         }
     }
@@ -92,6 +99,7 @@ struct GlossaryView: View {
                 .foregroundColor(.white.opacity(0.6))
 
             TextField("Search terms...", text: $searchText)
+                .focused($isSearchFocused)
                 .foregroundColor(.white)
                 .autocorrectionDisabled()
                 .textInputAutocapitalization(.never)
@@ -131,6 +139,11 @@ struct GlossaryView: View {
             .padding(.bottom, 20)
         }
         .scrollDismissesKeyboard(.interactively)
+        .simultaneousGesture(
+            TapGesture().onEnded {
+                isSearchFocused = false
+            }
+        )
     }
 
     // MARK: - Section Header
@@ -168,6 +181,11 @@ struct GlossaryView: View {
                 .foregroundColor(.white.opacity(0.5))
 
             Spacer()
+        }
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
+        .contentShape(Rectangle())
+        .onTapGesture {
+            isSearchFocused = false
         }
     }
 }
