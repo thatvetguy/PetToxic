@@ -48,6 +48,26 @@ struct SettingsView: View {
                             .listRowBackground(Color.white.opacity(0.08))
                         }
 
+                        // Upgrade to Pet Hero (visible for Pro users who aren't Pet Heroes)
+                        if proSettings.isPro && !proSettings.isSupporter {
+                            Button {
+                                showUpgradeSheet = true
+                            } label: {
+                                HStack {
+                                    Image(systemName: "heart.fill")
+                                        .foregroundStyle(.pink)
+                                        .frame(width: 24)
+                                    Text("Upgrade to Pet Hero")
+                                        .foregroundStyle(.white)
+                                    Spacer()
+                                    Image(systemName: "chevron.right")
+                                        .font(.footnote.weight(.semibold))
+                                        .foregroundStyle(.gray.opacity(0.5))
+                                }
+                            }
+                            .listRowBackground(Color.white.opacity(0.08))
+                        }
+
                         // My Pets
                         if proSettings.isPro {
                             NavigationLink {

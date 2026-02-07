@@ -15,7 +15,9 @@ struct UpgradeView: View {
                 ScrollView {
                     VStack(spacing: 24) {
                         headerSection
-                        proCard
+                        if !proSettings.isPro {
+                            proCard
+                        }
                         petHeroCard
                         restoreSection
                     }
@@ -45,15 +47,17 @@ struct UpgradeView: View {
 
     private var headerSection: some View {
         VStack(spacing: 8) {
-            Image(systemName: "crown.fill")
+            Image(systemName: proSettings.isPro ? "heart.fill" : "crown.fill")
                 .font(.system(size: 40))
-                .foregroundColor(.yellow)
+                .foregroundColor(proSettings.isPro ? .pink : .yellow)
 
-            Text("Unlock Pro Features")
+            Text(proSettings.isPro ? "Become a Pet Hero" : "Unlock Pro Features")
                 .font(.title2.bold())
                 .foregroundColor(.white)
 
-            Text("All toxicity information stays free for everyone.")
+            Text(proSettings.isPro
+                 ? "Support pet safety and unlock an exclusive badge."
+                 : "All toxicity information stays free for everyone.")
                 .font(.subheadline)
                 .foregroundColor(.white.opacity(0.7))
                 .multilineTextAlignment(.center)
