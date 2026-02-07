@@ -275,7 +275,7 @@ struct SettingsView: View {
             .background(Color("AccentColor"))
             .clipShape(Capsule())
             .shadow(radius: 4)
-            .padding(.bottom, 100) // Extra space for tab bar
+            .padding(.bottom, AppLayout.tabBarBottomPadding)
     }
 
     private func handleVersionTap() {

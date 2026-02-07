@@ -55,7 +55,7 @@ struct SearchView: View {
                             }
                         }
                         .padding(.top, 8)
-                        .padding(.bottom, isProUser ? 80 : 20)
+                        .padding(.bottom, isProUser ? AppLayout.tabBarBottomPadding : 20)
                     }
                     .scrollDismissesKeyboard(.interactively)
                     .simultaneousGesture(
@@ -69,7 +69,7 @@ struct SearchView: View {
                     // Ad banner at bottom (only for free users)
                     if viewModel.searchText.isEmpty && !isProUser {
                         AdBannerPlaceholder()
-                            .padding(.bottom, 80)
+                            .padding(.bottom, AppLayout.tabBarBottomPadding)
                     }
                 }
             }
@@ -203,15 +203,17 @@ struct SearchView: View {
 
     private var emptyResultsView: some View {
         VStack(spacing: 12) {
-            Image(systemName: "magnifyingglass")
+            Image(systemName: viewModel.searchError ? "exclamationmark.triangle" : "magnifyingglass")
                 .font(.largeTitle)
                 .foregroundColor(.white.opacity(0.4))
 
-            Text("No Results")
+            Text(viewModel.searchError ? "Something Went Wrong" : "No Results Found")
                 .font(.headline)
                 .foregroundColor(.white.opacity(0.8))
 
-            Text("No results found for \"\(viewModel.searchText)\". Try a different search term.")
+            Text(viewModel.searchError
+                 ? "Search could not be completed. Try again."
+                 : "No results found for \"\(viewModel.searchText)\". Try a different search term.")
                 .font(.subheadline)
                 .foregroundColor(.white.opacity(0.5))
                 .multilineTextAlignment(.center)

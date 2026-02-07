@@ -106,7 +106,7 @@ struct ArticleDetailView: View {
                     sourcesSection
                 }
                 .padding()
-                .padding(.bottom, 80) // Space for tab bar
+                .padding(.bottom, AppLayout.tabBarBottomPadding)
             }
         }
         .navigationTitle(item.name)

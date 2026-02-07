@@ -31,10 +31,10 @@ struct SavedView: View {
                     if isProUser {
                         GlossaryCard()
                             .padding(.horizontal)
-                            .padding(.bottom, 80)
+                            .padding(.bottom, AppLayout.tabBarBottomPadding)
                     } else {
                         AdBannerPlaceholder()
-                            .padding(.bottom, 80)
+                            .padding(.bottom, AppLayout.tabBarBottomPadding)
                     }
                 }
             }

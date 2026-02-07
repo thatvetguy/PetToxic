@@ -68,10 +68,10 @@ struct BrowseView: View {
                         if isProUser {
                             GlossaryCard()
                                 .padding(.horizontal)
-                                .padding(.bottom, 80)
+                                .padding(.bottom, AppLayout.tabBarBottomPadding)
                         } else {
                             AdBannerPlaceholder()
-                                .padding(.bottom, 80)
+                                .padding(.bottom, AppLayout.tabBarBottomPadding)
                         }
                     }
                 }
@@ -171,15 +171,17 @@ struct BrowseView: View {
 
     private var browseEmptyResults: some View {
         VStack(spacing: 12) {
-            Image(systemName: "magnifyingglass")
+            Image(systemName: searchViewModel.searchError ? "exclamationmark.triangle" : "magnifyingglass")
                 .font(.largeTitle)
                 .foregroundColor(.white.opacity(0.4))
 
-            Text("No Results")
+            Text(searchViewModel.searchError ? "Something Went Wrong" : "No Results Found")
                 .font(.headline)
                 .foregroundColor(.white.opacity(0.8))
 
-            Text("No results found for \"\(searchViewModel.searchText)\". Try a different search term.")
+            Text(searchViewModel.searchError
+                 ? "Search could not be completed. Try again."
+                 : "No results found for \"\(searchViewModel.searchText)\". Try a different search term.")
                 .font(.subheadline)
                 .foregroundColor(.white.opacity(0.5))
                 .multilineTextAlignment(.center)
@@ -205,7 +207,6 @@ struct CategoryListView: View {
     @AppStorage("gridColumnCount") private var columnCount: Int = 2
     @AppStorage("entrySortBySeverity") private var sortBySeverity: Bool = true
     @AppStorage("entryViewMode") private var isGridView: Bool = true
-    @State private var selectedSpeciesFilter: SpeciesFilter = .auto
     @Environment(BrowseNavigationContext.self) private var navContext
     @Environment(\.dismiss) private var dismiss
 
@@ -227,7 +228,7 @@ struct CategoryListView: View {
         // Apply species filter
         let speciesFiltered: [ToxicItem]
 
-        switch selectedSpeciesFilter {
+        switch navContext.selectedSpeciesFilter {
         case .auto:
             speciesFiltered = items.filter {
                 BrowseFilterService.entryMatchesFilter(entry: $0, speciesFilter: autoFilterSpecies)
@@ -249,7 +250,7 @@ struct CategoryListView: View {
 
         // Determine species-specific sort when a single species is selected
         let sortSpecies: Species? = {
-            if case .specific(let species) = selectedSpeciesFilter { return species }
+            if case .specific(let species) = navContext.selectedSpeciesFilter { return species }
             return nil
         }()
 
@@ -287,21 +288,21 @@ struct CategoryListView: View {
                         }
                         .padding(.horizontal, 16)
                         .padding(.vertical, 8)
-                        .padding(.bottom, 80)
+                        .padding(.bottom, AppLayout.tabBarBottomPadding)
                     } else {
                         LazyVStack(spacing: 4) {
                             ForEach(filteredItems) { item in
                                 NavigationLink(value: CategoryEntry(item: item, sourceCategory: category)) {
                                     EntryListRow(
                                         item: item,
-                                        selectedSpeciesFilter: selectedSpeciesFilter
+                                        selectedSpeciesFilter: navContext.selectedSpeciesFilter
                                     )
                                 }
                                 .buttonStyle(.plain)
                             }
                         }
                         .padding(.vertical, 8)
-                        .padding(.bottom, 80)
+                        .padding(.bottom, AppLayout.tabBarBottomPadding)
                     }
                 }
             }
@@ -362,7 +363,7 @@ struct CategoryListView: View {
         .onChange(of: sortBySeverity) { _, _ in
             navContext.updateVisibleEntries(filteredItems)
         }
-        .onChange(of: selectedSpeciesFilter) { _, _ in
+        .onChange(of: navContext.selectedSpeciesFilter) { _, _ in
             navContext.updateVisibleEntries(filteredItems)
         }
     }
@@ -386,7 +387,7 @@ struct CategoryListView: View {
             .padding(.vertical, 8)
 
             // Auto filter indicator
-            if selectedSpeciesFilter == .auto, let species = autoFilterSpecies, !species.isEmpty {
+            if navContext.selectedSpeciesFilter == .auto, let species = autoFilterSpecies, !species.isEmpty {
                 HStack(spacing: 4) {
                     Image(systemName: "pawprint.fill")
                         .font(.caption2)
@@ -397,7 +398,7 @@ struct CategoryListView: View {
                 .foregroundColor(.teal)
                 .padding(.horizontal, 16)
                 .padding(.bottom, 4)
-            } else if selectedSpeciesFilter == .auto && autoFilterSpecies == nil {
+            } else if navContext.selectedSpeciesFilter == .auto && autoFilterSpecies == nil {
                 HStack(spacing: 4) {
                     Image(systemName: "info.circle")
                         .font(.caption2)
@@ -416,7 +417,7 @@ struct CategoryListView: View {
     private func filterChip(title: String, filter: SpeciesFilter, icon: String?) -> some View {
         Button {
             withAnimation(.easeInOut(duration: 0.2)) {
-                selectedSpeciesFilter = filter
+                navContext.selectedSpeciesFilter = filter
             }
         } label: {
             HStack(spacing: 4) {
@@ -426,12 +427,12 @@ struct CategoryListView: View {
                 }
                 Text(title)
                     .font(.caption)
-                    .fontWeight(selectedSpeciesFilter == filter ? .semibold : .regular)
+                    .fontWeight(navContext.selectedSpeciesFilter == filter ? .semibold : .regular)
             }
             .padding(.horizontal, 12)
             .padding(.vertical, 12)
-            .background(selectedSpeciesFilter == filter ? Color.teal : Color.white.opacity(0.1))
-            .foregroundColor(selectedSpeciesFilter == filter ? .white : .gray)
+            .background(navContext.selectedSpeciesFilter == filter ? Color.teal : Color.white.opacity(0.1))
+            .foregroundColor(navContext.selectedSpeciesFilter == filter ? .white : .gray)
             .cornerRadius(16)
         }
     }

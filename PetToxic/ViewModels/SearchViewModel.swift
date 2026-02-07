@@ -33,6 +33,7 @@ class SearchViewModel: ObservableObject {
     @Published var selectedSpecies: Set<Species> = []
     @Published var searchResults: [SearchResult] = []
     @Published var isSearching = false
+    @Published var searchError = false
     @Published var recentSearches: [String] = []
 
     private let searchService = SearchService()
@@ -68,10 +69,12 @@ class SearchViewModel: ObservableObject {
     private func performSearch(query: String) async {
         guard !query.isEmpty else {
             searchResults = []
+            searchError = false
             return
         }
 
         isSearching = true
+        searchError = false
 
         let results = await searchService.search(
             query: query,

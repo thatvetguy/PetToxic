@@ -37,6 +37,10 @@ enum AppSpacing {
     static let xl: CGFloat = 32
 }
 
+enum AppLayout {
+    static let tabBarBottomPadding: CGFloat = 80
+}
+
 enum AppCornerRadius {
     static let small: CGFloat = 8
     static let medium: CGFloat = 12

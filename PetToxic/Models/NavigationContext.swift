@@ -40,6 +40,10 @@ class BrowseNavigationContext {
     /// Entries opened from search or related links have no context.
     var hasContext: Bool = false
 
+    /// Species filter selection — persisted across entry detail navigation within the same category.
+    /// Resets when entering a different category or returning to the grid.
+    var selectedSpeciesFilter: SpeciesFilter = .auto
+
     // MARK: - Computed Properties: Navigation Level
 
     var isAtGridLevel: Bool { depth == 0 }
@@ -109,6 +113,10 @@ class BrowseNavigationContext {
 
     /// Called when user navigates to a category list from the Browse grid.
     func enterCategoryList(category: Category, entries: [ToxicItem]) {
+        // Only reset filter when entering a different category
+        if self.currentCategory != category {
+            self.selectedSpeciesFilter = .auto
+        }
         self.depth = 1
         self.currentCategory = category
         self.visibleEntries = entries
@@ -158,6 +166,7 @@ class BrowseNavigationContext {
         self.currentEntryIndex = nil
         self.visibleEntries = []
         self.hasContext = false
+        self.selectedSpeciesFilter = .auto
     }
 
     /// Navigates to a specific entry by index (used for swipe navigation).
