@@ -24,7 +24,7 @@ struct EmptyStateView: View {
             Spacer()
 
             Image(systemName: systemImage)
-                .font(.system(size: 48))
+                .font(.largeTitle)
                 .foregroundStyle(.secondary)
 
             Text(title)

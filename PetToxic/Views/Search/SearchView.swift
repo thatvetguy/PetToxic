@@ -134,7 +134,7 @@ struct SearchView: View {
                 // Empty state
                 VStack(spacing: 12) {
                     Image(systemName: "magnifyingglass")
-                        .font(.system(size: 40))
+                        .font(.largeTitle)
                         .foregroundColor(.white.opacity(0.4))
 
                     Text("No Recent Searches")
@@ -204,7 +204,7 @@ struct SearchView: View {
     private var emptyResultsView: some View {
         VStack(spacing: 12) {
             Image(systemName: "magnifyingglass")
-                .font(.system(size: 40))
+                .font(.largeTitle)
                 .foregroundColor(.white.opacity(0.4))
 
             Text("No Results")

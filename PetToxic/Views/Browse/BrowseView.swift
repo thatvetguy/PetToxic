@@ -172,7 +172,7 @@ struct BrowseView: View {
     private var browseEmptyResults: some View {
         VStack(spacing: 12) {
             Image(systemName: "magnifyingglass")
-                .font(.system(size: 40))
+                .font(.largeTitle)
                 .foregroundColor(.white.opacity(0.4))
 
             Text("No Results")

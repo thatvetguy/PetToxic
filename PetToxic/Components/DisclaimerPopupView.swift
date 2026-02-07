@@ -20,7 +20,7 @@ struct DisclaimerPopupView: View {
                 Spacer()
 
                 Image(systemName: "exclamationmark.triangle.fill")
-                    .font(.system(size: 40))
+                    .font(.largeTitle)
                     .foregroundStyle(.orange)
 
                 Text("Important Information")

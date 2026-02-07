@@ -156,7 +156,7 @@ struct GlossaryView: View {
             Spacer()
 
             Image(systemName: "text.magnifyingglass")
-                .font(.system(size: 48))
+                .font(.largeTitle)
                 .foregroundColor(.white.opacity(0.4))
 
             Text("No terms found")

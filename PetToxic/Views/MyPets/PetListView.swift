@@ -17,7 +17,7 @@ struct PetListView: View {
                 Section {
                     VStack(spacing: 20) {
                         Image(systemName: "pawprint.fill")
-                            .font(.system(size: 60))
+                            .font(.largeTitle)
                             .foregroundColor(.white.opacity(0.3))
 
                         Text("No pets added yet")

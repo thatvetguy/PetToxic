@@ -179,7 +179,7 @@ struct ArticleDetailView: View {
                     .frame(maxWidth: .infinity)
             } else {
                 Image(systemName: item.categories.first?.icon ?? "questionmark.circle")
-                    .font(.system(size: 60))
+                    .font(.largeTitle)
                     .foregroundStyle(Color("AccentColor"))
                     .frame(maxWidth: .infinity)
                     .padding(.vertical)

@@ -38,7 +38,7 @@ struct MyPetsPlaceholder: View {
                         .frame(width: 60, height: 60)
 
                     Image(systemName: "dog.fill")
-                        .font(.system(size: 28))
+                        .font(.title)
                         .foregroundColor(.white.opacity(0.3))
                 }
 

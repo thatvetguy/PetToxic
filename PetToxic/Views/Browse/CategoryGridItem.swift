@@ -7,7 +7,7 @@ struct CategoryGridItem: View {
     var body: some View {
         VStack(spacing: 12) {
             Image(systemName: category.icon)
-                .font(.system(size: 36))
+                .font(.largeTitle)
                 .frame(width: 44, height: 44)
                 .foregroundStyle(Color("AccentColor"))
 

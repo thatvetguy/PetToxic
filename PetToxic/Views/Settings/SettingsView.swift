@@ -205,7 +205,7 @@ struct SettingsView: View {
                                     .foregroundStyle(.white)
                                 Spacer()
                                 Image(systemName: "chevron.right")
-                                    .font(.system(size: 14, weight: .semibold))
+                                    .font(.footnote.weight(.semibold))
                                     .foregroundStyle(.gray.opacity(0.5))
                             }
                         }

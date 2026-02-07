@@ -27,7 +27,7 @@ struct HomeHeader: View {
                     message: Text(AppShare.message)
                 ) {
                     Image(systemName: "square.and.arrow.up")
-                        .font(.system(size: 18, weight: .medium))
+                        .font(.callout.weight(.medium))
                         .foregroundColor(.white.opacity(0.8))
                         .padding(10)
                         .background(Circle().fill(Color.white.opacity(0.1)))

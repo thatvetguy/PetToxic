@@ -450,7 +450,7 @@ struct MainTabView: View {
         }) {
             VStack(spacing: 4) {
                 Image(systemName: icon)
-                    .font(.system(size: 22))
+                    .font(.title3)
                 Text(title)
                     .font(.caption2)
             }

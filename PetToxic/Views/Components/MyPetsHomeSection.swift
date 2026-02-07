@@ -95,7 +95,7 @@ private struct ProUpsellCard: View {
                     .frame(width: 60, height: 60)
 
                 Image(systemName: "dog.fill")
-                    .font(.system(size: 28))
+                    .font(.title)
                     .foregroundColor(.white.opacity(0.3))
             }
 
@@ -143,7 +143,7 @@ private struct EmptyPetsCard: View {
                         .frame(width: 60, height: 60)
 
                     Image(systemName: "plus")
-                        .font(.system(size: 24, weight: .medium))
+                        .font(.title2.weight(.medium))
                         .foregroundColor(AppColors.teal)
                 }
 
@@ -267,7 +267,7 @@ private struct AddPetButton: View {
                         .frame(width: 56, height: 56)
 
                     Image(systemName: "plus")
-                        .font(.system(size: 20, weight: .medium))
+                        .font(.title3.weight(.medium))
                         .foregroundColor(AppColors.teal.opacity(0.8))
                 }
 
