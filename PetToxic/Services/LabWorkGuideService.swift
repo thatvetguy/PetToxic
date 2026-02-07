@@ -425,7 +425,7 @@ class LabWorkGuideService {
             lowMeaning: "Low bilirubin is not clinically significant and is considered normal.",
             speciesNotes: nil,
             relatedGlossaryTerms: nil,
-            searchKeywords: ["jaundice", "icterus", "yellow", "liver", "bile", "hemolysis"]
+            searchKeywords: ["jaundice", "icterus", "liver", "bile", "hemolysis"]
         ),
 
         // ══════════════════════════════════════════════════════════════

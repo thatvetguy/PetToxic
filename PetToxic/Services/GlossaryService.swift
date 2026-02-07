@@ -1308,7 +1308,7 @@ class GlossaryService {
             definition: "The medical term for jaundice—yellowing of the skin, gums, and whites of the eyes caused by elevated bilirubin. You may see 'icteric' on vet records (meaning jaundiced). Same condition as jaundice, just the clinical terminology veterinarians use in documentation and communication.",
             category: .conditions,
             relatedTerms: ["Jaundice", "Hepatotoxicity", "Hepatic", "Hemolysis"],
-            searchKeywords: ["icteric", "yellow", "jaundice medical term", "bilirubin"]
+            searchKeywords: ["icteric", "jaundice medical term", "bilirubin"]
         ),
 
         // 114. Pale Gums
