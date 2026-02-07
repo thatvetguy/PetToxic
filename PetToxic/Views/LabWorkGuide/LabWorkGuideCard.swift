@@ -11,6 +11,7 @@ struct LabWorkGuideCard: View {
     @ObservedObject private var proSettings = ProSettings.shared
     @State private var showLabWorkGuide = false
     @State private var showProUpsell = false
+    @State private var showUpgradeSheet = false
 
     private var isProUnlocked: Bool { proSettings.isPro }
 
@@ -77,9 +78,13 @@ struct LabWorkGuideCard: View {
             LabWorkGuideView()
         }
         .alert("Pro Feature", isPresented: $showProUpsell) {
-            Button("OK", role: .cancel) { }
+            Button("Maybe Later", role: .cancel) { }
+            Button("Upgrade to Pro") { showUpgradeSheet = true }
         } message: {
             Text("Understand your pet's blood work results. Upgrade to Pro to access the Lab Work Guide.")
+        }
+        .sheet(isPresented: $showUpgradeSheet) {
+            UpgradeView()
         }
     }
 }

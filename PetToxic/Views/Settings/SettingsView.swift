@@ -2,9 +2,15 @@ import SwiftUI
 
 struct SettingsView: View {
     @ObservedObject private var proSettings = ProSettings.shared
+    @ObservedObject private var storeKit = StoreKitService.shared
 
     @State private var versionTapCount = 0
     @State private var showUnlockToast = false
+    @State private var showProUpsell = false
+    @State private var showUpgradeSheet = false
+    @State private var showRestoreAlert = false
+    @State private var isRestoring = false
+    @State private var proUpsellMessage = ""
 
     private var appVersion: String {
         Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String ?? "1.0.0"
@@ -22,86 +28,112 @@ struct SettingsView: View {
                 List {
                     // MARK: - Pro Features
                     Section {
-                        NavigationLink {
-                            PetListView()
-                        } label: {
-                            HStack {
-                                Image(systemName: "pawprint.fill")
-                                    .foregroundStyle(Color("AccentColor"))
-                                    .frame(width: 24)
-                                Text("My Pets")
-                                    .foregroundStyle(.white)
-                                Spacer()
-                                if !proSettings.isPro {
-                                    Text("PRO")
-                                        .font(.caption2)
-                                        .fontWeight(.bold)
-                                        .foregroundColor(.white)
-                                        .padding(.horizontal, 8)
-                                        .padding(.vertical, 4)
-                                        .background(Color("AccentColor").opacity(0.8))
-                                        .clipShape(Capsule())
+                        // Upgrade row (visible for free users)
+                        if !proSettings.isPro {
+                            Button {
+                                showUpgradeSheet = true
+                            } label: {
+                                HStack {
+                                    Image(systemName: "crown.fill")
+                                        .foregroundStyle(.yellow)
+                                        .frame(width: 24)
+                                    Text("Upgrade to Pro")
+                                        .foregroundStyle(.white)
+                                    Spacer()
+                                    Image(systemName: "chevron.right")
+                                        .font(.footnote.weight(.semibold))
+                                        .foregroundStyle(.gray.opacity(0.5))
                                 }
                             }
+                            .listRowBackground(Color.white.opacity(0.08))
                         }
-                        .disabled(!proSettings.isPro)
-                        .listRowBackground(Color.white.opacity(0.08))
 
-                        NavigationLink {
-                            GlossaryView()
-                        } label: {
-                            HStack {
-                                Image(systemName: "character.book.closed.fill")
-                                    .foregroundStyle(.teal)
-                                    .frame(width: 24)
-                                Text("Medical Glossary")
-                                    .foregroundStyle(.white)
-                                Spacer()
-                                if !proSettings.isPro {
-                                    Text("PRO")
-                                        .font(.caption2)
-                                        .fontWeight(.bold)
-                                        .foregroundColor(.white)
-                                        .padding(.horizontal, 8)
-                                        .padding(.vertical, 4)
-                                        .background(Color("AccentColor").opacity(0.8))
-                                        .clipShape(Capsule())
-                                }
+                        // My Pets
+                        if proSettings.isPro {
+                            NavigationLink {
+                                PetListView()
+                            } label: {
+                                proFeatureLabel(icon: "pawprint.fill", iconColor: Color("AccentColor"), text: "My Pets")
                             }
+                            .listRowBackground(Color.white.opacity(0.08))
+                        } else {
+                            Button {
+                                proUpsellMessage = "Add your pets for quick access to their info during emergencies. Upgrade to Pro to unlock My Pets."
+                                showProUpsell = true
+                            } label: {
+                                proFeatureLabel(icon: "pawprint.fill", iconColor: Color("AccentColor"), text: "My Pets", showBadge: true)
+                            }
+                            .listRowBackground(Color.white.opacity(0.08))
                         }
-                        .disabled(!proSettings.isPro)
-                        .listRowBackground(Color.white.opacity(0.08))
 
-                        NavigationLink {
-                            LabWorkGuideView()
-                        } label: {
-                            HStack {
-                                Image(systemName: "cross.vial.fill")
-                                    .foregroundStyle(.teal)
-                                    .frame(width: 24)
-                                Text("Lab Work Guide")
-                                    .foregroundStyle(.white)
-                                Spacer()
-                                if !proSettings.isPro {
-                                    Text("PRO")
-                                        .font(.caption2)
-                                        .fontWeight(.bold)
-                                        .foregroundColor(.white)
-                                        .padding(.horizontal, 8)
-                                        .padding(.vertical, 4)
-                                        .background(Color("AccentColor").opacity(0.8))
-                                        .clipShape(Capsule())
-                                }
+                        // Medical Glossary
+                        if proSettings.isPro {
+                            NavigationLink {
+                                GlossaryView()
+                            } label: {
+                                proFeatureLabel(icon: "character.book.closed.fill", iconColor: .teal, text: "Medical Glossary")
                             }
+                            .listRowBackground(Color.white.opacity(0.08))
+                        } else {
+                            Button {
+                                proUpsellMessage = "Look up veterinary and toxicology terms. Upgrade to Pro to access the Medical Glossary."
+                                showProUpsell = true
+                            } label: {
+                                proFeatureLabel(icon: "character.book.closed.fill", iconColor: .teal, text: "Medical Glossary", showBadge: true)
+                            }
+                            .listRowBackground(Color.white.opacity(0.08))
                         }
-                        .disabled(!proSettings.isPro)
-                        .listRowBackground(Color.white.opacity(0.08))
+
+                        // Lab Work Guide
+                        if proSettings.isPro {
+                            NavigationLink {
+                                LabWorkGuideView()
+                            } label: {
+                                proFeatureLabel(icon: "cross.vial.fill", iconColor: .teal, text: "Lab Work Guide")
+                            }
+                            .listRowBackground(Color.white.opacity(0.08))
+                        } else {
+                            Button {
+                                proUpsellMessage = "Understand your pet's blood work results. Upgrade to Pro to access the Lab Work Guide."
+                                showProUpsell = true
+                            } label: {
+                                proFeatureLabel(icon: "cross.vial.fill", iconColor: .teal, text: "Lab Work Guide", showBadge: true)
+                            }
+                            .listRowBackground(Color.white.opacity(0.08))
+                        }
                     } header: {
                         Text("Pro Features")
                             .foregroundStyle(.white.opacity(0.7))
                     } footer: {
                         Text("Manage pet profiles, look up medical terms, and understand lab results.")
                             .foregroundStyle(.white.opacity(0.5))
+                    }
+
+                    // MARK: - Purchases
+                    Section {
+                        Button {
+                            isRestoring = true
+                            Task {
+                                await storeKit.restorePurchases()
+                                isRestoring = false
+                                showRestoreAlert = true
+                            }
+                        } label: {
+                            HStack {
+                                Image(systemName: "arrow.clockwise")
+                                    .foregroundStyle(.teal)
+                                    .frame(width: 24)
+                                Text("Restore Purchases")
+                                    .foregroundStyle(.white)
+                                Spacer()
+                                if isRestoring {
+                                    ProgressView()
+                                        .tint(.white)
+                                }
+                            }
+                        }
+                        .disabled(isRestoring)
+                        .listRowBackground(Color.white.opacity(0.08))
                     }
 
                     // MARK: - Developer Options (hidden until unlocked)
@@ -130,7 +162,7 @@ struct SettingsView: View {
                                     Image(systemName: "heart.fill")
                                         .foregroundStyle(.pink)
                                         .frame(width: 24)
-                                    Text("Supporter Mode")
+                                    Text("Pet Hero Mode")
                                         .foregroundStyle(.white)
                                 }
                             }
@@ -154,7 +186,7 @@ struct SettingsView: View {
                             Text("Developer Options")
                                 .foregroundStyle(.white.opacity(0.7))
                         } footer: {
-                            Text("Toggle PRO and Supporter modes for testing.")
+                            Text("Toggle PRO and Pet Hero modes for testing.")
                                 .foregroundStyle(.white.opacity(0.5))
                         }
                     }
@@ -261,6 +293,43 @@ struct SettingsView: View {
                     toastView
                         .transition(.move(edge: .bottom).combined(with: .opacity))
                 }
+            }
+            .alert("Pro Feature", isPresented: $showProUpsell) {
+                Button("Maybe Later", role: .cancel) { }
+                Button("Upgrade to Pro") { showUpgradeSheet = true }
+            } message: {
+                Text(proUpsellMessage)
+            }
+            .alert("Restore Purchases", isPresented: $showRestoreAlert) {
+                Button("OK", role: .cancel) { }
+            } message: {
+                Text(storeKit.restoreMessage ?? "Done.")
+            }
+            .sheet(isPresented: $showUpgradeSheet) {
+                UpgradeView()
+            }
+        }
+    }
+
+    // MARK: - Helpers
+
+    private func proFeatureLabel(icon: String, iconColor: Color, text: String, showBadge: Bool = false) -> some View {
+        HStack {
+            Image(systemName: icon)
+                .foregroundStyle(iconColor)
+                .frame(width: 24)
+            Text(text)
+                .foregroundStyle(.white)
+            Spacer()
+            if showBadge {
+                Text("PRO")
+                    .font(.caption2)
+                    .fontWeight(.bold)
+                    .foregroundColor(.white)
+                    .padding(.horizontal, 8)
+                    .padding(.vertical, 4)
+                    .background(Color("AccentColor").opacity(0.8))
+                    .clipShape(Capsule())
             }
         }
     }

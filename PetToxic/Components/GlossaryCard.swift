@@ -11,6 +11,7 @@ struct GlossaryCard: View {
     @ObservedObject private var proSettings = ProSettings.shared
     @State private var showingGlossary = false
     @State private var showProUpsell = false
+    @State private var showUpgradeSheet = false
 
     private var isProUnlocked: Bool { proSettings.isPro }
 
@@ -77,9 +78,13 @@ struct GlossaryCard: View {
             GlossaryView()
         }
         .alert("Pro Feature", isPresented: $showProUpsell) {
-            Button("OK", role: .cancel) { }
+            Button("Maybe Later", role: .cancel) { }
+            Button("Upgrade to Pro") { showUpgradeSheet = true }
         } message: {
             Text("Look up veterinary and toxicology terms. Upgrade to Pro to access the Medical Glossary.")
+        }
+        .sheet(isPresented: $showUpgradeSheet) {
+            UpgradeView()
         }
     }
 }

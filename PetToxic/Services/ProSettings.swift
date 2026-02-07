@@ -11,6 +11,10 @@ class ProSettings: ObservableObject {
     /// Debug override for Supporter status (accessible via Developer Options)
     @AppStorage("debug_supporter_enabled") private var _debugSupporterEnabled: Bool = false
 
+    /// StoreKit purchase state (cached in UserDefaults, re-verified on launch)
+    @AppStorage("purchased_pro") private var _purchasedPro: Bool = false
+    @AppStorage("purchased_supporter") private var _purchasedSupporter: Bool = false
+
     /// Whether developer options have been unlocked via easter egg
     @AppStorage("developer_options_unlocked") var developerOptionsUnlocked: Bool = false
 
@@ -32,23 +36,26 @@ class ProSettings: ObservableObject {
         }
     }
 
-    /// Whether the user has PRO access
+    /// Whether the user has PRO access (debug override OR real purchase)
     var isPro: Bool {
-        // TODO: Check actual subscription status via StoreKit
-        // For now, use debug override (accessible via Developer Options)
-        return _debugProEnabled
+        return _debugProEnabled || _purchasedPro || _purchasedSupporter
     }
 
-    /// Whether the user is a Supporter-tier subscriber
+    /// Whether the user is a Pet Hero subscriber (debug override OR real purchase)
     var isSupporter: Bool {
-        // TODO: Check actual subscription status via StoreKit
-        // For now, use debug override (accessible via Developer Options)
-        return _debugSupporterEnabled
+        return _debugSupporterEnabled || _purchasedSupporter
     }
 
-    /// Whether PRO override is available (enabled when Developer Options are unlocked)
-    var canOverridePro: Bool {
-        return true
+    /// Called by StoreKitService when purchase state changes
+    func setPurchasedPro(_ value: Bool) {
+        _purchasedPro = value
+        objectWillChange.send()
+    }
+
+    /// Called by StoreKitService when purchase state changes
+    func setPurchasedSupporter(_ value: Bool) {
+        _purchasedSupporter = value
+        objectWillChange.send()
     }
 
     private init() {}

@@ -8,8 +8,11 @@ struct PetToxicApp: App {
     @State private var browseNavigationContext = BrowseNavigationContext()
 
     init() {
+        print("APP LAUNCHED")
         // Initialize Google Mobile Ads SDK
         MobileAds.shared.start()
+        // Initialize StoreKit service (loads products & checks entitlements)
+        _ = StoreKitService.shared
     }
 
     var body: some Scene {

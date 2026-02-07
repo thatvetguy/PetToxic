@@ -2,20 +2,20 @@ import SwiftUI
 
 struct HomeHeader: View {
     @ObservedObject private var proSettings = ProSettings.shared
-    @State private var showingSupporterThanks = false
+    @State private var showingPetHeroThanks = false
 
     var body: some View {
         VStack(spacing: 4) {
             // Badge and Share button row
             HStack {
-                // Supporter badge — top left
+                // Pet Hero badge — top left
                 if proSettings.isSupporter {
                     Image("supporter_badge")
                         .resizable()
                         .scaledToFit()
                         .frame(width: 36, height: 36)
                         .onTapGesture {
-                            showingSupporterThanks = true
+                            showingPetHeroThanks = true
                         }
                 }
 
@@ -57,7 +57,7 @@ struct HomeHeader: View {
                 .italic()
         }
         .padding(.bottom, 16)
-        .alert("Thank You!", isPresented: $showingSupporterThanks) {
+        .alert("Thank You, Pet Hero!", isPresented: $showingPetHeroThanks) {
             Button("OK", role: .cancel) { }
         } message: {
             Text("Your support helps fund continued development and supports local animal shelters and rescues.")

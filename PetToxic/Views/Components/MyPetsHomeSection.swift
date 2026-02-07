@@ -11,6 +11,8 @@ struct MyPetsHomeSection: View {
     @State private var selectedPet: Pet?
     @State private var showingAddPet = false
     @State private var showingPetList = false
+    @State private var showProUpsell = false
+    @State private var showUpgradeSheet = false
 
     private var isPro: Bool { proSettings.isPro }
 
@@ -48,7 +50,7 @@ struct MyPetsHomeSection: View {
 
             // Content based on state
             if !isPro {
-                ProUpsellCard()
+                ProUpsellCard(onTap: { showProUpsell = true })
             } else if pets.isEmpty {
                 EmptyPetsCard(showingAddPet: $showingAddPet)
             } else {
@@ -79,50 +81,62 @@ struct MyPetsHomeSection: View {
                 PetListView(presentedAsSheet: true)
             }
         }
+        .alert("Pro Feature", isPresented: $showProUpsell) {
+            Button("Maybe Later", role: .cancel) { }
+            Button("Upgrade to Pro") { showUpgradeSheet = true }
+        } message: {
+            Text("Add your pets for quick access to their info during emergencies. Upgrade to Pro to unlock My Pets.")
+        }
+        .sheet(isPresented: $showUpgradeSheet) {
+            UpgradeView()
+        }
     }
 }
 
 // MARK: - Pro Upsell Card
 
 private struct ProUpsellCard: View {
-
+    var onTap: () -> Void
 
     var body: some View {
-        HStack(spacing: 16) {
-            ZStack {
-                Circle()
-                    .fill(Color.white.opacity(0.1))
-                    .frame(width: 60, height: 60)
+        Button(action: onTap) {
+            HStack(spacing: 16) {
+                ZStack {
+                    Circle()
+                        .fill(Color.white.opacity(0.1))
+                        .frame(width: 60, height: 60)
 
-                Image(systemName: "dog.fill")
-                    .font(.title)
+                    Image(systemName: "dog.fill")
+                        .font(.title)
+                        .foregroundColor(.white.opacity(0.3))
+                }
+
+                VStack(alignment: .leading, spacing: 4) {
+                    Text("Upgrade to PRO")
+                        .font(.subheadline)
+                        .fontWeight(.medium)
+                        .foregroundColor(.white.opacity(0.6))
+
+                    Text("Add your pets for quick access during emergencies")
+                        .font(.caption)
+                        .foregroundColor(.white.opacity(0.4))
+                }
+
+                Spacer()
+
+                Image(systemName: "lock.fill")
                     .foregroundColor(.white.opacity(0.3))
             }
-
-            VStack(alignment: .leading, spacing: 4) {
-                Text("Upgrade to PRO")
-                    .font(.subheadline)
-                    .fontWeight(.medium)
-                    .foregroundColor(.white.opacity(0.6))
-
-                Text("Add your pets for quick access during emergencies")
-                    .font(.caption)
-                    .foregroundColor(.white.opacity(0.4))
-            }
-
-            Spacer()
-
-            Image(systemName: "lock.fill")
-                .foregroundColor(.white.opacity(0.3))
+            .padding()
+            .background(Color.white.opacity(0.08))
+            .clipShape(RoundedRectangle(cornerRadius: 12))
+            .overlay(
+                RoundedRectangle(cornerRadius: 12)
+                    .stroke(Color.white.opacity(0.1), lineWidth: 1)
+            )
+            .opacity(0.6)
         }
-        .padding()
-        .background(Color.white.opacity(0.08))
-        .clipShape(RoundedRectangle(cornerRadius: 12))
-        .overlay(
-            RoundedRectangle(cornerRadius: 12)
-                .stroke(Color.white.opacity(0.1), lineWidth: 1)
-        )
-        .opacity(0.6)
+        .buttonStyle(.plain)
     }
 }
 

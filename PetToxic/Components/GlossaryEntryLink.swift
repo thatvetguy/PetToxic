@@ -12,6 +12,7 @@ struct GlossaryEntryLink: View {
 
     @State private var showingGlossary = false
     @State private var showingUpgradePrompt = false
+    @State private var showUpgradeSheet = false
 
     var body: some View {
         Button {
@@ -47,11 +48,12 @@ struct GlossaryEntryLink: View {
         }
         .alert("Pro Feature", isPresented: $showingUpgradePrompt) {
             Button("Maybe Later", role: .cancel) { }
-            Button("Learn More") {
-                // TODO: Navigate to subscription/upgrade screen
-            }
+            Button("Upgrade to Pro") { showUpgradeSheet = true }
         } message: {
             Text("The Medical Glossary is a Pro feature that helps you understand veterinary terminology. Upgrade to Pro to unlock it.")
+        }
+        .sheet(isPresented: $showUpgradeSheet) {
+            UpgradeView()
         }
     }
 }

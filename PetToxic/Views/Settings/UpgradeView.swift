@@ -1,0 +1,230 @@
+import SwiftUI
+import StoreKit
+
+struct UpgradeView: View {
+    @Environment(\.dismiss) private var dismiss
+    @ObservedObject private var storeKit = StoreKitService.shared
+    @ObservedObject private var proSettings = ProSettings.shared
+    @State private var purchaseSucceeded = false
+
+    var body: some View {
+        NavigationStack {
+            ZStack {
+                AppBackground()
+
+                ScrollView {
+                    VStack(spacing: 24) {
+                        headerSection
+                        proCard
+                        petHeroCard
+                        restoreSection
+                    }
+                    .padding()
+                    .padding(.bottom, 40)
+                }
+            }
+            .navigationTitle("Upgrade")
+            .navigationBarTitleDisplayMode(.inline)
+            .toolbarBackground(.hidden, for: .navigationBar)
+            .toolbarColorScheme(.dark, for: .navigationBar)
+            .toolbar {
+                ToolbarItem(placement: .cancellationAction) {
+                    Button("Close") { dismiss() }
+                        .foregroundColor(.white)
+                }
+            }
+            .alert("Welcome to Pro!", isPresented: $purchaseSucceeded) {
+                Button("OK") { dismiss() }
+            } message: {
+                Text("All Pro features are now unlocked. Thank you for your support!")
+            }
+        }
+    }
+
+    // MARK: - Header
+
+    private var headerSection: some View {
+        VStack(spacing: 8) {
+            Image(systemName: "crown.fill")
+                .font(.system(size: 40))
+                .foregroundColor(.yellow)
+
+            Text("Unlock Pro Features")
+                .font(.title2.bold())
+                .foregroundColor(.white)
+
+            Text("All toxicity information stays free for everyone.")
+                .font(.subheadline)
+                .foregroundColor(.white.opacity(0.7))
+                .multilineTextAlignment(.center)
+        }
+        .padding(.top, 8)
+    }
+
+    // MARK: - Pro Card
+
+    private var proCard: some View {
+        VStack(alignment: .leading, spacing: 16) {
+            HStack {
+                Image(systemName: "star.fill")
+                    .foregroundColor(.yellow)
+                Text("Pro Upgrade")
+                    .font(.headline)
+                    .foregroundColor(.white)
+                Spacer()
+            }
+
+            VStack(alignment: .leading, spacing: 8) {
+                featureRow(icon: "xmark.circle.fill", text: "Remove ads")
+                featureRow(icon: "pawprint.fill", text: "My Pets")
+                featureRow(icon: "character.book.closed.fill", text: "Medical Glossary")
+                featureRow(icon: "cross.vial.fill", text: "Lab Work Guide")
+            }
+
+            buyButton(
+                productID: StoreKitService.proProductID,
+                label: "Pro",
+                fallbackPrice: "$9.99"
+            )
+        }
+        .padding(20)
+        .background(
+            RoundedRectangle(cornerRadius: 16)
+                .fill(Color.white.opacity(0.08))
+                .overlay(
+                    RoundedRectangle(cornerRadius: 16)
+                        .stroke(AppColors.teal.opacity(0.3), lineWidth: 1)
+                )
+        )
+    }
+
+    // MARK: - Pet Hero Card
+
+    private var petHeroCard: some View {
+        VStack(alignment: .leading, spacing: 16) {
+            HStack {
+                Image(systemName: "heart.fill")
+                    .foregroundColor(.pink)
+                Text("Pet Hero")
+                    .font(.headline)
+                    .foregroundColor(.white)
+                Spacer()
+                Text("POPULAR")
+                    .font(.caption2)
+                    .fontWeight(.bold)
+                    .foregroundColor(.white)
+                    .padding(.horizontal, 8)
+                    .padding(.vertical, 4)
+                    .background(Color.pink.opacity(0.8))
+                    .clipShape(Capsule())
+            }
+
+            Text("Everything in Pro \u{2014} plus you\u{2019}re directly funding the development of new pet safety and health tools for owners everywhere. A portion of your purchase supports local animal shelters and rescues. Includes an exclusive Pet Hero badge on your home screen.")
+                .font(.subheadline)
+                .foregroundColor(.white.opacity(0.85))
+
+            buyButton(
+                productID: StoreKitService.supporterProductID,
+                label: "Pet Hero",
+                fallbackPrice: "$14.99"
+            )
+        }
+        .padding(20)
+        .background(
+            RoundedRectangle(cornerRadius: 16)
+                .fill(Color.white.opacity(0.08))
+                .overlay(
+                    RoundedRectangle(cornerRadius: 16)
+                        .stroke(Color.pink.opacity(0.3), lineWidth: 1)
+                )
+        )
+    }
+
+    // MARK: - Buy Button
+
+    private func buyButton(productID: String, label: String, fallbackPrice: String) -> some View {
+        let product = storeKit.products.first { $0.id == productID }
+        let displayPrice = product?.displayPrice ?? fallbackPrice
+
+        return Button {
+            if let product {
+                Task {
+                    let success = await storeKit.purchase(product)
+                    if success {
+                        purchaseSucceeded = true
+                    }
+                }
+            } else {
+                storeKit.purchaseError = "Unable to connect to the App Store. Please try again."
+                Task { await storeKit.loadProducts() }
+            }
+        } label: {
+            HStack {
+                if storeKit.isPurchasing {
+                    ProgressView()
+                        .tint(.white)
+                } else {
+                    Text("Buy \(label) \u{2014} \(displayPrice)")
+                        .fontWeight(.semibold)
+                }
+            }
+            .frame(maxWidth: .infinity)
+            .padding(.vertical, 14)
+            .background(AppColors.teal)
+            .foregroundColor(.white)
+            .clipShape(RoundedRectangle(cornerRadius: 12))
+            .contentShape(Rectangle())
+        }
+        .buttonStyle(.plain)
+        .disabled(storeKit.isPurchasing)
+    }
+
+    // MARK: - Feature Row
+
+    private func featureRow(icon: String, text: String) -> some View {
+        HStack(spacing: 10) {
+            Image(systemName: icon)
+                .font(.subheadline)
+                .foregroundColor(AppColors.teal)
+                .frame(width: 20)
+            Text(text)
+                .font(.subheadline)
+                .foregroundColor(.white.opacity(0.9))
+        }
+    }
+
+    // MARK: - Restore
+
+    private var restoreSection: some View {
+        VStack(spacing: 12) {
+            if let error = storeKit.purchaseError {
+                Text(error)
+                    .font(.caption)
+                    .foregroundColor(.red)
+            }
+
+            if let message = storeKit.restoreMessage {
+                Text(message)
+                    .font(.caption)
+                    .foregroundColor(AppColors.teal)
+            }
+
+            Button {
+                Task {
+                    await storeKit.restorePurchases()
+                    if proSettings.isPro {
+                        purchaseSucceeded = true
+                    }
+                }
+            } label: {
+                Text("Restore Purchases")
+                    .font(.subheadline)
+                    .foregroundColor(.white.opacity(0.6))
+            }
+        }
+    }
+}
+
+#Preview {
+    UpgradeView()
+}
