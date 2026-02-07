@@ -29,6 +29,7 @@ enum PoisonControlButtonStyle {
 struct PoisonControlButton: View {
     let contact: EmergencyContact
     var style: PoisonControlButtonStyle = .compact
+    @Environment(\.openURL) private var openURL
 
     var body: some View {
         Button {
@@ -99,9 +100,7 @@ struct PoisonControlButton: View {
 
     private func callNumber(_ number: String) {
         guard let url = URL(string: "tel://\(number)") else { return }
-        if UIApplication.shared.canOpenURL(url) {
-            UIApplication.shared.open(url)
-        }
+        openURL(url)
     }
 }
 
