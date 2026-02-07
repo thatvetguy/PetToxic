@@ -9,6 +9,7 @@ enum AppShare {
 }
 
 enum AppColors {
+    static let teal = Color(red: 0.29, green: 0.61, blue: 0.61)
     static let primary = Color("AccentColor")
     static let background = Color(hex: "F8F9FA")
     static let surface = Color.white

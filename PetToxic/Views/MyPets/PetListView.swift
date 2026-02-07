@@ -9,7 +9,7 @@ struct PetListView: View {
     var presentedAsSheet: Bool = false
     @State private var showingAddPet = false
 
-    private let tealColor = Color(red: 0.29, green: 0.61, blue: 0.61)
+
 
     var body: some View {
         List {
@@ -36,7 +36,7 @@ struct PetListView: View {
                             .foregroundColor(.white)
                             .padding()
                             .frame(maxWidth: .infinity)
-                            .background(tealColor)
+                            .background(AppColors.teal)
                             .clipShape(RoundedRectangle(cornerRadius: 12))
                         }
                         .buttonStyle(.plain)
@@ -71,11 +71,11 @@ struct PetListView: View {
                             .foregroundColor(.white)
                             .padding()
                             .frame(maxWidth: .infinity)
-                            .background(tealColor.opacity(0.3))
+                            .background(AppColors.teal.opacity(0.3))
                             .clipShape(RoundedRectangle(cornerRadius: 12))
                             .overlay(
                                 RoundedRectangle(cornerRadius: 12)
-                                    .stroke(tealColor.opacity(0.5), lineWidth: 1)
+                                    .stroke(AppColors.teal.opacity(0.5), lineWidth: 1)
                             )
                         }
                         .buttonStyle(.plain)

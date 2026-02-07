@@ -129,7 +129,7 @@ struct BrowseView: View {
                     isSearchFocused = false
                     searchViewModel.searchText = ""
                 }
-                .foregroundColor(Color(red: 0.29, green: 0.61, blue: 0.61))
+                .foregroundColor(AppColors.teal)
                 .font(.subheadline)
                 .transition(.move(edge: .trailing).combined(with: .opacity))
             }

@@ -10,7 +10,7 @@ struct MyPetsPlaceholder: View {
             // Section header
             HStack {
                 Image(systemName: "pawprint.fill")
-                    .foregroundColor(Color(red: 0.29, green: 0.61, blue: 0.61)) // #4A9B9B
+                    .foregroundColor(AppColors.teal) // #4A9B9B
                 Text("My Pets")
                     .font(.headline)
                     .foregroundColor(.white)
@@ -24,7 +24,7 @@ struct MyPetsPlaceholder: View {
                         .foregroundColor(.white)
                         .padding(.horizontal, 8)
                         .padding(.vertical, 4)
-                        .background(Color(red: 0.29, green: 0.61, blue: 0.61).opacity(0.8))
+                        .background(AppColors.teal.opacity(0.8))
                         .clipShape(Capsule())
                 }
             }

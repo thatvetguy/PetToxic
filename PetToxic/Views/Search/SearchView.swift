@@ -115,7 +115,7 @@ struct SearchView: View {
                     isSearchFocused = false
                     viewModel.searchText = ""
                 }
-                .foregroundColor(Color(red: 0.29, green: 0.61, blue: 0.61))
+                .foregroundColor(AppColors.teal)
                 .font(.subheadline)
                 .transition(.move(edge: .trailing).combined(with: .opacity))
             }
@@ -160,7 +160,7 @@ struct SearchView: View {
                             viewModel.clearAllRecentSearches()
                         }
                         .font(.subheadline)
-                        .foregroundColor(Color(red: 0.29, green: 0.61, blue: 0.61))
+                        .foregroundColor(AppColors.teal)
                     }
                     .padding(.horizontal)
 

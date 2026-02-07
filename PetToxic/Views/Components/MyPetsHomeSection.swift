@@ -13,14 +13,14 @@ struct MyPetsHomeSection: View {
     @State private var showingPetList = false
 
     private var isPro: Bool { proSettings.isPro }
-    private let tealColor = Color(red: 0.29, green: 0.61, blue: 0.61)
+
 
     var body: some View {
         VStack(spacing: 12) {
             // Section header
             HStack {
                 Image(systemName: "pawprint.fill")
-                    .foregroundColor(tealColor)
+                    .foregroundColor(AppColors.teal)
                 Text("My Pets")
                     .font(.headline)
                     .foregroundColor(.white)
@@ -33,7 +33,7 @@ struct MyPetsHomeSection: View {
                         .foregroundColor(.white)
                         .padding(.horizontal, 8)
                         .padding(.vertical, 4)
-                        .background(tealColor.opacity(0.8))
+                        .background(AppColors.teal.opacity(0.8))
                         .clipShape(Capsule())
                 } else if !pets.isEmpty {
                     Button {
@@ -41,7 +41,7 @@ struct MyPetsHomeSection: View {
                     } label: {
                         Text("See All")
                             .font(.caption)
-                            .foregroundColor(tealColor)
+                            .foregroundColor(AppColors.teal)
                     }
                 }
             }
@@ -85,7 +85,7 @@ struct MyPetsHomeSection: View {
 // MARK: - Pro Upsell Card
 
 private struct ProUpsellCard: View {
-    private let tealColor = Color(red: 0.29, green: 0.61, blue: 0.61)
+
 
     var body: some View {
         HStack(spacing: 16) {
@@ -130,7 +130,7 @@ private struct ProUpsellCard: View {
 
 private struct EmptyPetsCard: View {
     @Binding var showingAddPet: Bool
-    private let tealColor = Color(red: 0.29, green: 0.61, blue: 0.61)
+
 
     var body: some View {
         Button {
@@ -139,12 +139,12 @@ private struct EmptyPetsCard: View {
             HStack(spacing: 16) {
                 ZStack {
                     Circle()
-                        .fill(tealColor.opacity(0.2))
+                        .fill(AppColors.teal.opacity(0.2))
                         .frame(width: 60, height: 60)
 
                     Image(systemName: "plus")
                         .font(.system(size: 24, weight: .medium))
-                        .foregroundColor(tealColor)
+                        .foregroundColor(AppColors.teal)
                 }
 
                 VStack(alignment: .leading, spacing: 4) {
@@ -168,7 +168,7 @@ private struct EmptyPetsCard: View {
             .clipShape(RoundedRectangle(cornerRadius: 12))
             .overlay(
                 RoundedRectangle(cornerRadius: 12)
-                    .stroke(tealColor.opacity(0.3), lineWidth: 1)
+                    .stroke(AppColors.teal.opacity(0.3), lineWidth: 1)
             )
         }
         .buttonStyle(.plain)
@@ -182,7 +182,7 @@ private struct PetCarousel: View {
     @Binding var selectedPet: Pet?
     @Binding var showingAddPet: Bool
 
-    private let tealColor = Color(red: 0.29, green: 0.61, blue: 0.61)
+
 
     var body: some View {
         ScrollView(.horizontal, showsIndicators: false) {
@@ -219,7 +219,7 @@ private struct PetAvatarButton: View {
     let isSelected: Bool
     let onTap: () -> Void
 
-    private let tealColor = Color(red: 0.29, green: 0.61, blue: 0.61)
+
 
     var body: some View {
         Button(action: onTap) {
@@ -228,15 +228,15 @@ private struct PetAvatarButton: View {
                     PetAvatarView(photoFilename: pet.photoFilename, size: 56)
                         .overlay(
                             Circle()
-                                .stroke(isSelected ? tealColor : Color.clear, lineWidth: 3)
+                                .stroke(isSelected ? AppColors.teal : Color.clear, lineWidth: 3)
                         )
-                        .shadow(color: isSelected ? tealColor.opacity(0.4) : .clear, radius: 8)
+                        .shadow(color: isSelected ? AppColors.teal.opacity(0.4) : .clear, radius: 8)
                 }
 
                 Text(pet.name)
                     .font(.caption2)
                     .fontWeight(isSelected ? .semibold : .regular)
-                    .foregroundColor(isSelected ? tealColor : .white.opacity(0.8))
+                    .foregroundColor(isSelected ? AppColors.teal : .white.opacity(0.8))
                     .lineLimit(1)
                     .frame(width: 60)
             }
@@ -249,7 +249,7 @@ private struct PetAvatarButton: View {
 
 private struct AddPetButton: View {
     @Binding var showingAddPet: Bool
-    private let tealColor = Color(red: 0.29, green: 0.61, blue: 0.61)
+
 
     var body: some View {
         Button {
@@ -263,12 +263,12 @@ private struct AddPetButton: View {
 
                     Circle()
                         .strokeBorder(style: StrokeStyle(lineWidth: 2, dash: [6, 4]))
-                        .foregroundColor(tealColor.opacity(0.5))
+                        .foregroundColor(AppColors.teal.opacity(0.5))
                         .frame(width: 56, height: 56)
 
                     Image(systemName: "plus")
                         .font(.system(size: 20, weight: .medium))
-                        .foregroundColor(tealColor.opacity(0.8))
+                        .foregroundColor(AppColors.teal.opacity(0.8))
                 }
 
                 Text("Add")
@@ -287,7 +287,7 @@ private struct PetExpandedCard: View {
     let pet: Pet
     @Binding var showingPetList: Bool
 
-    private let tealColor = Color(red: 0.29, green: 0.61, blue: 0.61)
+
 
     var body: some View {
         VStack(spacing: 12) {
@@ -302,7 +302,7 @@ private struct PetExpandedCard: View {
                     } icon: {
                         Image(systemName: speciesIcon)
                             .font(.caption)
-                            .foregroundColor(tealColor)
+                            .foregroundColor(AppColors.teal)
                     }
 
                     if let breed = pet.breed {
@@ -343,7 +343,7 @@ private struct PetExpandedCard: View {
                 HStack {
                     Image(systemName: "cross.case.fill")
                         .font(.caption)
-                        .foregroundColor(tealColor.opacity(0.8))
+                        .foregroundColor(AppColors.teal.opacity(0.8))
 
                     Text(vetName)
                         .font(.caption)
@@ -379,10 +379,10 @@ private struct PetExpandedCard: View {
                     Image(systemName: "chevron.right")
                         .font(.caption2)
                 }
-                .foregroundColor(tealColor)
+                .foregroundColor(AppColors.teal)
                 .frame(maxWidth: .infinity)
                 .padding(.vertical, 10)
-                .background(tealColor.opacity(0.15))
+                .background(AppColors.teal.opacity(0.15))
                 .clipShape(RoundedRectangle(cornerRadius: 8))
             }
             .buttonStyle(.plain)
@@ -392,7 +392,7 @@ private struct PetExpandedCard: View {
         .clipShape(RoundedRectangle(cornerRadius: 12))
         .overlay(
             RoundedRectangle(cornerRadius: 12)
-                .stroke(tealColor.opacity(0.3), lineWidth: 1)
+                .stroke(AppColors.teal.opacity(0.3), lineWidth: 1)
         )
     }
 

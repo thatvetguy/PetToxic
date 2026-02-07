@@ -13,7 +13,7 @@ struct GlossaryCard: View {
     @State private var showProUpsell = false
 
     private var isProUnlocked: Bool { proSettings.isPro }
-    private let tealColor = Color(red: 0.29, green: 0.61, blue: 0.61)
+
 
     var body: some View {
         Button {
@@ -52,7 +52,7 @@ struct GlossaryCard: View {
                             .foregroundColor(.white)
                             .padding(.horizontal, 8)
                             .padding(.vertical, 4)
-                            .background(tealColor.opacity(0.8))
+                            .background(AppColors.teal.opacity(0.8))
                             .clipShape(Capsule())
 
                         Image(systemName: "lock.fill")
