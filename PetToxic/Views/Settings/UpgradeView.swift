@@ -6,6 +6,7 @@ struct UpgradeView: View {
     @ObservedObject private var storeKit = StoreKitService.shared
     @ObservedObject private var proSettings = ProSettings.shared
     @State private var purchasedProductID: String?
+    @State private var wasProBeforePurchase = false
 
     var body: some View {
         NavigationStack {
@@ -36,9 +37,7 @@ struct UpgradeView: View {
                 }
             }
             .alert(
-                purchasedProductID == StoreKitService.supporterProductID
-                    ? "Welcome, Pet Hero! 🐾"
-                    : "Welcome to Pro!",
+                alertTitle,
                 isPresented: Binding(
                     get: { purchasedProductID != nil },
                     set: { if !$0 { purchasedProductID = nil } }
@@ -46,9 +45,7 @@ struct UpgradeView: View {
             ) {
                 Button("OK") { dismiss() }
             } message: {
-                Text(purchasedProductID == StoreKitService.supporterProductID
-                     ? "Thank you for supporting pet safety! Your Pet Hero badge is now on your home screen."
-                     : "All Pro features are now unlocked. Thank you for your support!")
+                Text(alertMessage)
             }
         }
     }
@@ -73,6 +70,26 @@ struct UpgradeView: View {
                 .multilineTextAlignment(.center)
         }
         .padding(.top, 8)
+    }
+
+    // MARK: - Alert Content
+
+    private var alertTitle: String {
+        if purchasedProductID == StoreKitService.supporterProductID {
+            return "Welcome, Pet Hero! 🐾"
+        }
+        return "Welcome to Pro!"
+    }
+
+    private var alertMessage: String {
+        if purchasedProductID == StoreKitService.supporterProductID {
+            if wasProBeforePurchase {
+                return "Thank you for supporting pet safety! Your Pet Hero badge is now on your home screen."
+            } else {
+                return "All Pro features are now unlocked, and your Pet Hero badge is on your home screen. Thank you for your support!"
+            }
+        }
+        return "All Pro features are now unlocked. Thank you for your support!"
     }
 
     // MARK: - Pro Card
@@ -163,8 +180,10 @@ struct UpgradeView: View {
         return Button {
             if let product {
                 Task {
+                    let wasPro = proSettings.isPro
                     let success = await storeKit.purchase(product)
                     if success {
+                        wasProBeforePurchase = wasPro
                         purchasedProductID = productID
                     }
                 }
@@ -225,10 +244,13 @@ struct UpgradeView: View {
 
             Button {
                 Task {
+                    let wasPro = proSettings.isPro
                     await storeKit.restorePurchases()
                     if proSettings.isSupporter {
+                        wasProBeforePurchase = wasPro
                         purchasedProductID = StoreKitService.supporterProductID
                     } else if proSettings.isPro {
+                        wasProBeforePurchase = wasPro
                         purchasedProductID = StoreKitService.proProductID
                     }
                 }
