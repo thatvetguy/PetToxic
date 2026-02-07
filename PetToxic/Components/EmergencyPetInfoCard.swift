@@ -13,7 +13,55 @@ struct EmergencyPetInfoCard: View {
     @FocusState private var isCaseNumberFocused: Bool
 
     var body: some View {
-        if proSettings.isPro && !pets.isEmpty {
+        if !proSettings.isPro {
+            // Locked placeholder for free users
+            HStack(spacing: 16) {
+                ZStack {
+                    Circle()
+                        .fill(Color.white.opacity(0.1))
+                        .frame(width: 60, height: 60)
+
+                    Image(systemName: "dog.fill")
+                        .font(.title)
+                        .foregroundColor(.white.opacity(0.3))
+                }
+
+                VStack(alignment: .leading, spacing: 4) {
+                    HStack(spacing: 6) {
+                        Text("My Pets")
+                            .font(.subheadline)
+                            .fontWeight(.medium)
+                            .foregroundColor(.white.opacity(0.6))
+
+                        Text("PRO")
+                            .font(.caption2)
+                            .fontWeight(.bold)
+                            .foregroundColor(.white)
+                            .padding(.horizontal, 8)
+                            .padding(.vertical, 4)
+                            .background(AppColors.teal.opacity(0.8))
+                            .clipShape(Capsule())
+                    }
+
+                    Text("Your pet profiles appear here during emergencies")
+                        .font(.caption)
+                        .foregroundColor(.white.opacity(0.4))
+                }
+
+                Spacer()
+
+                Image(systemName: "lock.fill")
+                    .foregroundColor(.white.opacity(0.3))
+            }
+            .padding()
+            .background(Color.white.opacity(0.08))
+            .clipShape(RoundedRectangle(cornerRadius: 12))
+            .overlay(
+                RoundedRectangle(cornerRadius: 12)
+                    .stroke(Color.white.opacity(0.1), lineWidth: 1)
+            )
+            .opacity(0.6)
+        } else if proSettings.isPro && !pets.isEmpty {
             VStack(spacing: 0) {
                 // Collapsed header - always visible
                 Button(action: {
