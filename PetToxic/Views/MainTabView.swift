@@ -455,7 +455,7 @@ struct MainTabView: View {
                     .font(.caption2)
             }
             // Highlight: Home stays selected when in quick emergency
-            .foregroundColor(tabIsSelected(index) ? Color("AccentColor") : .gray)
+            .foregroundColor(tabIsSelected(index) ? Color("AccentColor") : .white.opacity(0.6))
             .frame(maxWidth: .infinity)
         }
     }

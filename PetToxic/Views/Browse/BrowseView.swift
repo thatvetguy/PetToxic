@@ -429,7 +429,7 @@ struct CategoryListView: View {
                     .fontWeight(selectedSpeciesFilter == filter ? .semibold : .regular)
             }
             .padding(.horizontal, 12)
-            .padding(.vertical, 6)
+            .padding(.vertical, 12)
             .background(selectedSpeciesFilter == filter ? Color.teal : Color.white.opacity(0.1))
             .foregroundColor(selectedSpeciesFilter == filter ? .white : .gray)
             .cornerRadius(16)
