@@ -44,6 +44,37 @@ struct MainTabView: View {
                 if isDragging {
                     adjacentTabPreview(geometry: geometry)
                 }
+
+                // Quick Emergency exit button
+                if isInQuickEmergency && !isDragging {
+                    VStack {
+                        HStack {
+                            Spacer()
+                            Button {
+                                withAnimation(.easeOut(duration: 0.25)) {
+                                    isInQuickEmergency = false
+                                }
+                            } label: {
+                                HStack(spacing: 4) {
+                                    Text("Home")
+                                        .font(.subheadline)
+                                        .fontWeight(.medium)
+                                    Image(systemName: "chevron.right")
+                                        .font(.caption)
+                                        .fontWeight(.semibold)
+                                }
+                                .foregroundColor(.white.opacity(0.9))
+                                .padding(.horizontal, 12)
+                                .padding(.vertical, 8)
+                                .background(AppColors.teal.opacity(0.6))
+                                .clipShape(Capsule())
+                            }
+                            .padding(.trailing, 16)
+                            .padding(.top, 8)
+                        }
+                        Spacer()
+                    }
+                }
             }
             .simultaneousGesture(dragGesture(geometry: geometry))
         }
