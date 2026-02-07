@@ -139,7 +139,6 @@
 		558D0A98607D43A5C5878676 /* ArticleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleViewModel.swift; sourceTree = "<group>"; };
 		58C075EC2898DE2A6C54CB66 /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
 		6CBB1717EB5134FC9FB2784A /* SavedViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedViewModel.swift; sourceTree = "<group>"; };
-		71E36AD8012527F9877A09C0 /* PetToxicStore.storekit */ = {isa = PBXFileReference; lastKnownFileType = text; path = PetToxicStore.storekit; sourceTree = "<group>"; };
 		754F9D537CBB611A07FF9E8E /* SearchService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchService.swift; sourceTree = "<group>"; };
 		7E7D85BEF0AE7656DF48FD15 /* SearchResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResult.swift; sourceTree = "<group>"; };
 		81DA312D440067CFD3E192A8 /* SpeciesFilterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeciesFilterView.swift; sourceTree = "<group>"; };
@@ -232,7 +231,6 @@
 				1E1A648E35297523A4222EE2 /* Info.plist */,
 				B2C3D4E5F67890123456789A /* LaunchScreen.storyboard */,
 				PRIV001AAAA1111111111111 /* PrivacyInfo.xcprivacy */,
-				71E36AD8012527F9877A09C0 /* PetToxicStore.storekit */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
