@@ -4,7 +4,7 @@ import Foundation
 enum AdMobConfig {
     /// Set to `false` for App Store release builds to use real ad unit IDs.
     /// Set to `true` during development/testing to use Google's test ads.
-    static let useTestAds = true
+    static let useTestAds = false
 
     /// Banner ad unit ID — returns test or production ID based on `useTestAds` flag
     static var bannerAdUnitID: String {

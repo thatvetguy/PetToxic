@@ -6,7 +6,7 @@ class ProSettings: ObservableObject {
     static let shared = ProSettings()
 
     /// Debug override for PRO status (accessible via Developer Options)
-    @AppStorage("debug_pro_enabled") private var _debugProEnabled: Bool = true
+    @AppStorage("debug_pro_enabled") private var _debugProEnabled: Bool = false
 
     /// Debug override for Supporter status (accessible via Developer Options)
     @AppStorage("debug_supporter_enabled") private var _debugSupporterEnabled: Bool = false
