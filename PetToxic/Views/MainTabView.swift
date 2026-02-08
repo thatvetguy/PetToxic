@@ -1,5 +1,6 @@
 import SwiftUI
 import AppTrackingTransparency
+import Combine
 
 /// Direction of a completed swipe gesture
 private enum SwipeDirection {
@@ -20,6 +21,7 @@ struct MainTabView: View {
     @State private var browseNavigationPath = NavigationPath()
     @AppStorage("disclaimerAcknowledgedVersion") private var acknowledgedVersion: String = ""
     @State private var showDisclaimerPopup = false
+    @State private var isKeyboardVisible = false
     @Environment(BrowseNavigationContext.self) private var browseNavContext
 
     private let tabCount = 5
@@ -80,6 +82,8 @@ struct MainTabView: View {
         }
         .safeAreaInset(edge: .bottom) {
             customTabBar
+                .opacity(isKeyboardVisible ? 0 : 1)
+                .allowsHitTesting(!isKeyboardVisible)
         }
         .onAppear {
             let currentVersion = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String ?? "0.0"
@@ -92,6 +96,16 @@ struct MainTabView: View {
                 ATTrackingManager.requestTrackingAuthorization { _ in
                     // No action needed — ads still serve regardless of choice
                 }
+            }
+        }
+        .onReceive(NotificationCenter.default.publisher(for: UIResponder.keyboardWillShowNotification)) { _ in
+            withAnimation(.easeOut(duration: 0.25)) {
+                isKeyboardVisible = true
+            }
+        }
+        .onReceive(NotificationCenter.default.publisher(for: UIResponder.keyboardWillHideNotification)) { _ in
+            withAnimation(.easeOut(duration: 0.25)) {
+                isKeyboardVisible = false
             }
         }
         .sheet(isPresented: $showDisclaimerPopup) {

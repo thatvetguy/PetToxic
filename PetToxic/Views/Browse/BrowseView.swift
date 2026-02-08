@@ -79,14 +79,6 @@ struct BrowseView: View {
             .navigationTitle("Pick your poison...")
             .toolbarBackground(.hidden, for: .navigationBar)
             .toolbarColorScheme(.dark, for: .navigationBar)
-            .toolbar {
-                ToolbarItemGroup(placement: .keyboard) {
-                    Spacer()
-                    Button("Done") {
-                        isSearchFocused = false
-                    }
-                }
-            }
             .navigationDestination(for: Category.self) { category in
                 CategoryListView(category: category)
             }
