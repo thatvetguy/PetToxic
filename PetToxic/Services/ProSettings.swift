@@ -5,15 +5,12 @@ import SwiftUI
 class ProSettings: ObservableObject {
     static let shared = ProSettings()
 
+    #if DEBUG
     /// Debug override for PRO status (accessible via Developer Options)
     @AppStorage("debug_pro_enabled") private var _debugProEnabled: Bool = false
 
     /// Debug override for Supporter status (accessible via Developer Options)
     @AppStorage("debug_supporter_enabled") private var _debugSupporterEnabled: Bool = false
-
-    /// StoreKit purchase state (cached in UserDefaults, re-verified on launch)
-    @AppStorage("purchased_pro") private var _purchasedPro: Bool = false
-    @AppStorage("purchased_supporter") private var _purchasedSupporter: Bool = false
 
     /// Whether developer options have been unlocked via easter egg
     @AppStorage("developer_options_unlocked") var developerOptionsUnlocked: Bool = false
@@ -35,15 +32,28 @@ class ProSettings: ObservableObject {
             objectWillChange.send()
         }
     }
+    #endif
+
+    /// StoreKit purchase state (cached in UserDefaults, re-verified on launch)
+    @AppStorage("purchased_pro") private var _purchasedPro: Bool = false
+    @AppStorage("purchased_supporter") private var _purchasedSupporter: Bool = false
 
     /// Whether the user has PRO access (debug override OR real purchase)
     var isPro: Bool {
+        #if DEBUG
         return _debugProEnabled || _purchasedPro || _purchasedSupporter
+        #else
+        return _purchasedPro || _purchasedSupporter
+        #endif
     }
 
     /// Whether the user is a Pet Hero subscriber (debug override OR real purchase)
     var isSupporter: Bool {
+        #if DEBUG
         return _debugSupporterEnabled || _purchasedSupporter
+        #else
+        return _purchasedSupporter
+        #endif
     }
 
     /// Called by StoreKitService when purchase state changes

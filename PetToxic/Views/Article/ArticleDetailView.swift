@@ -185,6 +185,43 @@ struct ArticleDetailView: View {
                     .padding(.vertical)
             }
 
+            // Navigation arrows (only when browsing within a category)
+            if sourceCategory != nil && navContext.hasContext &&
+               (navContext.canSwipeToPreviousEntry || navContext.canSwipeToNextEntry) {
+                HStack {
+                    if navContext.canSwipeToPreviousEntry {
+                        Button {
+                            if let index = navContext.currentEntryIndex, index > 0 {
+                                navContext.navigateToEntryAtIndex(index - 1)
+                            }
+                        } label: {
+                            Image(systemName: "chevron.left")
+                                .font(.title3)
+                                .foregroundStyle(.white.opacity(0.5))
+                                .frame(width: 44, height: 44)
+                        }
+                        .buttonStyle(.plain)
+                    }
+
+                    Spacer()
+
+                    if navContext.canSwipeToNextEntry {
+                        Button {
+                            if let index = navContext.currentEntryIndex,
+                               index < navContext.visibleEntries.count - 1 {
+                                navContext.navigateToEntryAtIndex(index + 1)
+                            }
+                        } label: {
+                            Image(systemName: "chevron.right")
+                                .font(.title3)
+                                .foregroundStyle(.white.opacity(0.5))
+                                .frame(width: 44, height: 44)
+                        }
+                        .buttonStyle(.plain)
+                    }
+                }
+            }
+
             // Categories
             Text(item.categories.map(\.displayName).joined(separator: " • "))
                 .font(.subheadline)

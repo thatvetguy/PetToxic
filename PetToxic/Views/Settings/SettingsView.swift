@@ -4,8 +4,10 @@ struct SettingsView: View {
     @ObservedObject private var proSettings = ProSettings.shared
     @ObservedObject private var storeKit = StoreKitService.shared
 
+    #if DEBUG
     @State private var versionTapCount = 0
     @State private var showUnlockToast = false
+    #endif
     @State private var showProUpsell = false
     @State private var showUpgradeSheet = false
     @State private var showRestoreAlert = false
@@ -156,6 +158,7 @@ struct SettingsView: View {
                         .listRowBackground(Color.white.opacity(0.08))
                     }
 
+                    #if DEBUG
                     // MARK: - Developer Options (hidden until unlocked)
                     if proSettings.developerOptionsUnlocked {
                         Section {
@@ -210,6 +213,7 @@ struct SettingsView: View {
                                 .foregroundStyle(.white.opacity(0.5))
                         }
                     }
+                    #endif
 
                     // MARK: - About
                     Section {
@@ -291,9 +295,11 @@ struct SettingsView: View {
                             Text("Version \(appVersion) (build \(buildNumber))")
                                 .font(.footnote)
                                 .foregroundStyle(.white.opacity(0.5))
+                                #if DEBUG
                                 .onTapGesture {
                                     handleVersionTap()
                                 }
+                                #endif
                             Spacer()
                         }
                         .listRowBackground(Color.clear)
@@ -310,12 +316,14 @@ struct SettingsView: View {
             .navigationTitle("Settings")
             .toolbarBackground(.hidden, for: .navigationBar)
             .toolbarColorScheme(.dark, for: .navigationBar)
+            #if DEBUG
             .overlay(alignment: .bottom) {
                 if showUnlockToast {
                     toastView
                         .transition(.move(edge: .bottom).combined(with: .opacity))
                 }
             }
+            #endif
             .alert("Pro Feature", isPresented: $showProUpsell) {
                 Button("Maybe Later", role: .cancel) { }
                 Button("Upgrade to Pro") { showUpgradeSheet = true }
@@ -356,6 +364,7 @@ struct SettingsView: View {
         }
     }
 
+    #if DEBUG
     private var toastView: some View {
         Text("Developer Options Unlocked")
             .font(.subheadline)
@@ -387,6 +396,7 @@ struct SettingsView: View {
             }
         }
     }
+    #endif
 }
 
 #Preview {
