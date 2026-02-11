@@ -1,5 +1,4 @@
 import SwiftUI
-import AppTrackingTransparency
 import Combine
 
 /// Direction of a completed swipe gesture
@@ -91,12 +90,6 @@ struct MainTabView: View {
                 showDisclaimerPopup = true
             }
 
-            // Request App Tracking Transparency authorization after a brief delay
-            DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
-                ATTrackingManager.requestTrackingAuthorization { _ in
-                    // No action needed — ads still serve regardless of choice
-                }
-            }
         }
         .onReceive(NotificationCenter.default.publisher(for: UIResponder.keyboardWillShowNotification)) { _ in
             withAnimation(.easeOut(duration: 0.25)) {

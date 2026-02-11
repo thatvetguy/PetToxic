@@ -221,7 +221,7 @@ struct SettingsView: View {
                             VStack(alignment: .leading, spacing: 12) {
                                 Text("Pet Toxic was developed by a veterinarian").bold() + Text(" to help pet owners quickly identify potential hazards in their pet's environment.")
 
-                                Text("All toxicity information in this app is free for every user — no paywalls, no locked articles. Paid upgrades remove ads and unlock bonus features like the Medical Glossary and My Pets.")
+                                Text("All toxicity information in this app is free for every user — no paywalls, no locked articles. Paid upgrades unlock bonus features like My Pets, the Medical Glossary, and the Lab Work Guide.")
 
                                 Text("A portion of the proceeds helps fund improvements for this app, supports the development of additional pet safety resources and benefits animal shelters and rescues in Southern California.")
 

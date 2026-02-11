@@ -10,10 +10,7 @@ struct BrowseView: View {
     @StateObject private var viewModel = BrowseViewModel()
     @StateObject private var searchViewModel = SearchViewModel()
     @FocusState private var isSearchFocused: Bool
-    @ObservedObject private var proSettings = ProSettings.shared
     @Environment(BrowseNavigationContext.self) private var navContext
-
-    private var isProUser: Bool { proSettings.isPro }
 
     private let columns = [
         GridItem(.flexible(), spacing: 16),
@@ -65,14 +62,9 @@ struct BrowseView: View {
                     Spacer(minLength: 0)
 
                     if searchViewModel.searchText.isEmpty && !isSearchFocused {
-                        if isProUser {
-                            GlossaryCard()
-                                .padding(.horizontal)
-                                .padding(.bottom, AppLayout.tabBarBottomPadding)
-                        } else {
-                            AdBannerPlaceholder()
-                                .padding(.bottom, AppLayout.tabBarBottomPadding)
-                        }
+                        GlossaryCard()
+                            .padding(.horizontal)
+                            .padding(.bottom, AppLayout.tabBarBottomPadding)
                     }
                 }
             }

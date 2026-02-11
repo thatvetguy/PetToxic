@@ -4,10 +4,6 @@ struct SearchView: View {
     @StateObject private var viewModel = SearchViewModel()
     @State private var navigationPath = NavigationPath()
     @FocusState private var isSearchFocused: Bool
-    @ObservedObject private var proSettings = ProSettings.shared
-
-    private var isProUser: Bool { proSettings.isPro }
-
     var body: some View {
         NavigationStack(path: $navigationPath) {
             ZStack {
@@ -55,7 +51,7 @@ struct SearchView: View {
                             }
                         }
                         .padding(.top, 8)
-                        .padding(.bottom, isProUser ? AppLayout.tabBarBottomPadding : 20)
+                        .padding(.bottom, AppLayout.tabBarBottomPadding)
                     }
                     .scrollDismissesKeyboard(.interactively)
                     .simultaneousGesture(
@@ -65,12 +61,6 @@ struct SearchView: View {
                     )
 
                     Spacer(minLength: 0)
-
-                    // Ad banner at bottom (only for free users, hidden when keyboard is up)
-                    if viewModel.searchText.isEmpty && !isProUser && !isSearchFocused {
-                        AdBannerPlaceholder()
-                            .padding(.bottom, AppLayout.tabBarBottomPadding)
-                    }
                 }
             }
             .toolbarBackground(.hidden, for: .navigationBar)

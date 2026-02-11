@@ -1,6 +1,5 @@
 import SwiftUI
 import SwiftData
-import GoogleMobileAds
 
 @main
 struct PetToxicApp: App {
@@ -11,8 +10,6 @@ struct PetToxicApp: App {
         #if DEBUG
         print("APP LAUNCHED")
         #endif
-        // Initialize Google Mobile Ads SDK
-        MobileAds.shared.start()
         // Initialize StoreKit service (loads products & checks entitlements)
         _ = StoreKitService.shared
     }

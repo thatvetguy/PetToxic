@@ -106,7 +106,6 @@ struct UpgradeView: View {
             }
 
             VStack(alignment: .leading, spacing: 8) {
-                featureRow(icon: "xmark.circle.fill", text: "Remove ads")
                 featureRow(icon: "pawprint.fill", text: "My Pets")
                 featureRow(icon: "character.book.closed.fill", text: "Medical Glossary")
                 featureRow(icon: "cross.vial.fill", text: "Lab Work Guide")
