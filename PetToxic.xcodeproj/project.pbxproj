@@ -760,11 +760,12 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 20260211;
+				CURRENT_PROJECT_VERSION = 202602112;
 				DEVELOPMENT_TEAM = 6KA5CB5S3A;
 				GENERATE_INFOPLIST_FILE = NO;
 				INFOPLIST_FILE = PetToxic/Resources/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "Pet Toxic";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.reference";
 				IPHONEOS_DEPLOYMENT_TARGET = 17.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -946,11 +947,12 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 20260211;
+				CURRENT_PROJECT_VERSION = 202602112;
 				DEVELOPMENT_TEAM = 6KA5CB5S3A;
 				GENERATE_INFOPLIST_FILE = NO;
 				INFOPLIST_FILE = PetToxic/Resources/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "Pet Toxic";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.reference";
 				IPHONEOS_DEPLOYMENT_TARGET = 17.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1004,7 +1006,6 @@
 			defaultConfigurationName = Debug;
 		};
 /* End XCConfigurationList section */
-
 	};
 	rootObject = C5A78DFFA6EB2D7EEFD5C4B4 /* Project object */;
 }
