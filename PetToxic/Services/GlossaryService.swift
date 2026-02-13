@@ -1163,7 +1163,7 @@ class GlossaryService {
             definition: "When a treatment or action should NOT be done because it could cause harm. For example, inducing vomiting is contraindicated for caustic substances (could burn twice) or petroleum products (aspiration risk). Always follow veterinary guidance rather than attempting home treatment.",
             category: .general,
             relatedTerms: ["Emesis", "Aspiration", "Decontamination"],
-            searchKeywords: ["should not", "do not", "never do", "harmful treatment"]
+            searchKeywords: ["should not", "never do", "harmful treatment"]
         ),
 
         // 100. Toxin vs Toxicant
