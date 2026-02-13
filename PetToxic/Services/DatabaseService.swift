@@ -1419,7 +1419,7 @@ class DatabaseService {
                     "If you suspect any exposure, seek emergency veterinary care immediately — there is no antidote and early intervention is critical"
                 ],
                 sources: ["ASPCA Animal Poison Control Center", "Pet Poison Helpline", "PubMed (case studies)", "Cornell University Poisonous Plants Database"],
-                relatedEntries: nil
+                relatedEntries: ["d4bcce07-7ef3-4a5c-8afb-300d583a4559"]  // Black Locust - shared toxalbumin mechanism
             ),
 
             // MARK: - Wild Mushrooms
@@ -1980,14 +1980,14 @@ class DatabaseService {
                     "Consider fencing off wisteria or choosing non-toxic climbing vines if you have curious pets"
                 ],
                 sources: ["ASPCA Animal Poison Control Center", "Pet Poison Helpline", "Tye-Dyed Iguana Reptile Care"],
-                relatedEntries: nil
+                relatedEntries: ["d4bcce07-7ef3-4a5c-8afb-300d583a4559"]  // Black Locust - shared toxalbumin mechanism
             ),
 
             // MARK: - Milkweed
             ToxicItem(
                 id: UUID(uuidString: "053d21cd-da83-448d-914d-a230343b35d7")!,
                 name: "Milkweed",
-                alternateNames: ["Asclepias", "Asclepias syriaca", "Asclepias speciosa", "Asclepias tuberosa", "Asclepias incarnata", "Asclepias verticillata", "common milkweed", "showy milkweed", "butterfly weed", "swamp milkweed", "narrow-leaved milkweed", "whorled milkweed", "tropical milkweed", "blood flower", "milkweed sap", "monarch butterfly plant", "pleurisy root"],
+                alternateNames: ["Asclepias", "Asclepias syriaca", "Asclepias speciosa", "Asclepias tuberosa", "Asclepias incarnata", "Asclepias verticillata", "common milkweed", "showy milkweed", "butterfly weed", "swamp milkweed", "narrow-leaved milkweed", "whorled milkweed", "tropical milkweed", "blood flower", "milkweed sap", "monarch butterfly plant", "pleurisy root", "Gomphocarpus", "Gomphocarpus physocarpa", "Gomphocarpus fruticosus", "balloon plant", "balloon cotton bush", "balloon cotton-bush", "swan plant", "hairy balls plant", "bishop's balls", "balloon milkweed", "narrow-leaved cotton bush", "cotton bush milkweed", "nailhead"],
                 categories: [.plants],
                 imageAsset: "milkweed_thumb",
                 description: "Milkweed (Asclepias species) is a native North American plant famous for being the sole food source for monarch butterfly caterpillars. It has become increasingly popular in gardens as part of pollinator conservation efforts. The plant gets its name from the thick, milky white sap that oozes from broken stems and leaves. There are over 100 species of milkweed, with varying levels of toxicity — narrow-leaved species tend to be more toxic than broad-leaved species.",
@@ -13240,6 +13240,56 @@ Albuterol has a plasma half-life of approximately 4 hours. Clinical signs typica
                 ],
                 sources: ["ASPCA Animal Poison Control Center", "Pet Poison Helpline", "National Capital Poison Center (poison.org)", "UC Davis School of Veterinary Medicine Toxic Plant Garden"],
                 relatedEntries: nil
+            ),
+
+            // MARK: - Black Locust
+            ToxicItem(
+                id: UUID(uuidString: "d4bcce07-7ef3-4a5c-8afb-300d583a4559")!,
+                name: "Black Locust",
+                alternateNames: ["Robinia", "Robinia pseudoacacia", "robinia tree", "false acacia", "locust tree", "locust", "black locust tree", "common robinia", "fragrant white locust", "robinia wood", "locust seed pods", "locust pods", "locust bark"],
+                categories: [.plants],
+                imageAsset: "robinia_thumb",
+                description: "Black locust (Robinia pseudoacacia) is a fast-growing deciduous tree native to the eastern United States, now widely planted across North America and beyond as an ornamental and for erosion control. It is recognized by its deeply furrowed bark, paired thorns at the base of leaf stalks, drooping clusters of fragrant white flowers, and flat brown seed pods containing kidney-shaped seeds. Black locust is a member of the pea (legume) family (Fabaceae). Despite its attractive appearance, all parts of the tree are toxic to pets and livestock — the bark, seeds, and leaves are most dangerous, while the flowers appear to be less toxic or nontoxic. The tree is extremely common along roadsides, in parks, in yards, and in wooded areas. Dogs may be exposed by chewing on fallen branches, bark, seed pods, or leaves. Important: Honey locust (Gleditsia triacanthos), a different tree that can look similar, is not considered toxic.",
+                toxicityInfo: "Black locust contains toxalbumins — toxic proteins that inhibit protein synthesis and cause cell death. The primary toxins are robin and phasin, which are similar in mechanism to ricin found in castor beans, though generally less potent. The tree also contains the glycoside robitin and the alkaloid robinine. These toxins are concentrated in the bark, seeds, and leaves. The flowers appear to be substantially less toxic or nontoxic.\n\nToxalbumins work by disabling ribosomes (the cellular machinery that builds proteins), leading to cell damage and potentially organ failure. The gastrointestinal tract is typically affected first, followed by effects on the liver, kidneys, and nervous system. Severity depends on the amount ingested and the extent of chewing — more thorough chewing releases more toxin.\n\nMost clinical reports of severe poisoning involve horses, which are particularly susceptible. Dogs and cats are also at risk, especially from chewing bark or consuming seeds. Symptoms can appear within 1-2 hours of ingestion. With prompt veterinary treatment, the prognosis is generally favorable, but delayed treatment can lead to dangerous dehydration, organ damage, or in severe cases, death.\n\nNote: The thorns on younger branches can also cause physical injury, and thorn puncture wounds have been associated with localized tissue reactions in some reports.",
+                onsetTime: OnsetTime(
+                    early: "GI signs (vomiting, diarrhea, abdominal pain) typically appear within 1-2 hours of ingestion",
+                    delayed: "Organ effects (liver, kidney) and neurological signs can develop over hours to days in severe cases; dehydration from prolonged vomiting and diarrhea can become dangerous if untreated"
+                ),
+                symptoms: [
+                    "Vomiting",
+                    "Diarrhea (may be bloody)",
+                    "Abdominal pain",
+                    "Loss of appetite (anorexia)",
+                    "Lethargy or depression",
+                    "Weakness",
+                    "Dilated pupils",
+                    "Cold extremities",
+                    "Difficulty breathing",
+                    "Abnormal heart rate or rhythm",
+                    "Tremors or muscle twitching",
+                    "Incoordination",
+                    "Seizures (severe cases)",
+                    "Collapse (severe cases)"
+                ],
+                entrySeverity: .high,
+                speciesRisks: [
+                    SpeciesRisk(species: .dog, severity: .high, notes: "Dogs may chew on fallen branches, bark, or seed pods; seeds and bark contain the highest concentration of toxins; severity depends on amount ingested and degree of chewing"),
+                    SpeciesRisk(species: .cat, severity: .high, notes: "Cats are less commonly affected due to more selective eating habits but are susceptible to the same toxalbumins; any ingestion should be treated as potentially serious"),
+                    SpeciesRisk(species: .bird, severity: .high, notes: "Cornell University lists poultry as a commonly affected species; pet birds' small body size increases risk from even small exposures to seeds or bark"),
+                    SpeciesRisk(species: .smallMammal, severity: .high, notes: "Toxalbumins affect all mammals through ribosomal inhibition of protein synthesis; mechanism is universal and not species-specific; rabbits and other small mammals are at risk if they chew on bark or consume plant material"),
+                    SpeciesRisk(species: .reptile, severity: .high, notes: "Toxalbumins inhibit protein synthesis in all vertebrate cells; while no reptile-specific case reports exist, the universal mechanism of toxicity applies; avoid housing reptiles near black locust")
+                ],
+                preventionTips: [
+                    "Learn to identify black locust trees — look for deeply furrowed bark, paired thorns on younger branches, and flat brown seed pods",
+                    "Do not allow pets to chew on black locust branches, bark, or seed pods — this is the most common route of exposure for dogs",
+                    "Pick up and dispose of fallen seed pods and branches in areas where your pets play",
+                    "Be aware that black locust is extremely common along roadsides, in parks, and in yards throughout the eastern United States and beyond",
+                    "Honey locust (Gleditsia triacanthos) looks similar but is not considered toxic — if unsure which tree you have, consult a local arborist or extension service",
+                    "The thorns on younger branches can cause physical injuries in addition to toxicity concerns",
+                    "If you suspect your pet has chewed on or eaten any part of a black locust tree, contact your veterinarian immediately — early treatment significantly improves outcomes"
+                ],
+                sources: ["ASPCA Animal Poison Control Center", "Pet Poison Helpline", "Cornell University — Plants Poisonous to Livestock", "National Capital Poison Center (Poison Control)"],
+                relatedEntries: ["0bf15704-86a3-40a9-94e1-4ba4ffbdea1b", "b2e1e5d4-0d12-410b-83dc-da106bbc2199"]  // Castor Beans, Wisteria - shared toxalbumin mechanism
             ),
             ToxicItem(
                 id: UUID(uuidString: "00112233-4455-6677-8899-aabbccddef26")!,
