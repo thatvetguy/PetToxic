@@ -196,7 +196,7 @@ struct AddEditVaccinationView: View {
 
     // Form state
     @State private var isCustomVaccine = false
-    @State private var selectedPreset: VaccinePreset?
+    @State private var selectedVaccineName = ""
     @State private var customVaccineName = ""
     @State private var selectedInterval: BoosterInterval = .oneYear
     @State private var dateAdministered = Date()
@@ -213,15 +213,24 @@ struct AddEditVaccinationView: View {
         return VaccinePresetData.groupedPresets(for: species)
     }
 
+    private var allPresets: [VaccinePreset] {
+        guard let species = broadSpecies else { return [] }
+        return VaccinePresetData.presets(for: species)
+    }
+
     private var hasPresets: Bool {
-        !speciesPresetGroups.isEmpty
+        !allPresets.isEmpty
+    }
+
+    private var selectedPreset: VaccinePreset? {
+        allPresets.first { $0.name == selectedVaccineName }
     }
 
     private var vaccineName: String {
         if isCustomVaccine {
             return customVaccineName.trimmingCharacters(in: .whitespaces)
         }
-        return selectedPreset?.name ?? ""
+        return selectedVaccineName
     }
 
     private var canSave: Bool {
@@ -245,61 +254,51 @@ struct AddEditVaccinationView: View {
         Form {
             // MARK: Vaccine Selection
             Section("Vaccine") {
+                if isCustomVaccine || !hasPresets {
+                    TextField("Vaccine name", text: $customVaccineName)
+                } else {
+                    Picker("Vaccine", selection: $selectedVaccineName) {
+                        Text("Select a vaccine").tag("")
+                        ForEach(speciesPresetGroups, id: \.category.rawValue) { group in
+                            Section(group.category.rawValue) {
+                                ForEach(group.presets) { preset in
+                                    VStack(alignment: .leading, spacing: 2) {
+                                        Text(preset.name)
+                                        if let subtitle = preset.subtitle {
+                                            Text(subtitle)
+                                                .font(.caption)
+                                                .foregroundColor(.secondary)
+                                        }
+                                    }
+                                    .tag(preset.name)
+                                }
+                            }
+                        }
+                    }
+                    .pickerStyle(.navigationLink)
+                    .onChange(of: selectedVaccineName) {
+                        if let preset = selectedPreset {
+                            selectedInterval = preset.defaultInterval
+                            userEditedNextDueDate = false
+                            recalculateNextDueDate()
+                        }
+                    }
+                }
+
                 if hasPresets {
                     Toggle("Custom vaccine", isOn: $isCustomVaccine)
                         .tint(.teal)
                         .onChange(of: isCustomVaccine) {
                             if isCustomVaccine {
-                                selectedPreset = nil
+                                selectedVaccineName = ""
                             }
+                            userEditedNextDueDate = false
                             recalculateNextDueDate()
                         }
                 }
-
-                if isCustomVaccine || !hasPresets {
-                    TextField("Vaccine name", text: $customVaccineName)
-                } else {
-                    ForEach(speciesPresetGroups, id: \.category.rawValue) { group in
-                        let header = group.category.rawValue
-                        VStack(alignment: .leading, spacing: 0) {
-                            Text(header)
-                                .font(.caption)
-                                .foregroundColor(.secondary)
-                                .padding(.top, 8)
-
-                            ForEach(group.presets) { preset in
-                                Button {
-                                    selectPreset(preset)
-                                } label: {
-                                    HStack {
-                                        VStack(alignment: .leading, spacing: 2) {
-                                            Text(preset.name)
-                                                .foregroundColor(.primary)
-
-                                            if let subtitle = preset.subtitle {
-                                                Text(subtitle)
-                                                    .font(.caption)
-                                                    .foregroundColor(.secondary)
-                                            }
-                                        }
-
-                                        Spacer()
-
-                                        if selectedPreset?.name == preset.name {
-                                            Image(systemName: "checkmark")
-                                                .foregroundColor(.teal)
-                                                .fontWeight(.semibold)
-                                        }
-                                    }
-                                    .padding(.vertical, 4)
-                                }
-                            }
-                        }
-                    }
-                }
             }
 
-            // MARK: Interval Selection
+            // MARK: Interval Selection (inline, right below vaccine)
             if let preset = selectedPreset, preset.hasMultipleIntervals, !isCustomVaccine {
                 Section("Booster Interval") {
                     Picker("Interval", selection: $selectedInterval) {
@@ -309,6 +308,7 @@ struct AddEditVaccinationView: View {
                     }
                     .pickerStyle(.segmented)
                     .onChange(of: selectedInterval) {
+                        userEditedNextDueDate = false
                         recalculateNextDueDate()
                     }
                 }
@@ -331,7 +331,6 @@ struct AddEditVaccinationView: View {
                     displayedComponents: .date
                 )
                 .onChange(of: nextDueDate) {
-                    // Mark as user-edited only if this wasn't triggered by our recalculation
                     userEditedNextDueDate = true
                 }
 
@@ -371,22 +370,14 @@ struct AddEditVaccinationView: View {
 
     // MARK: - Actions
 
-    private func selectPreset(_ preset: VaccinePreset) {
-        selectedPreset = preset
-        selectedInterval = preset.defaultInterval
-        userEditedNextDueDate = false
-        recalculateNextDueDate()
-    }
-
     private func recalculateNextDueDate() {
         guard !userEditedNextDueDate else { return }
 
         let interval: Int
         if isCustomVaccine || !hasPresets {
-            interval = 365 // default 1 year for custom
-        } else if let preset = selectedPreset {
+            interval = 365
+        } else if selectedPreset != nil {
             interval = selectedInterval.days
-            _ = preset // silence warning
         } else {
             interval = 365
         }
@@ -395,39 +386,34 @@ struct AddEditVaccinationView: View {
             nextDueDate = newDate
         }
 
-        // Reset the flag since we just programmatically set it
         userEditedNextDueDate = false
     }
 
     private func setupForEditing() {
         guard let record = existingRecord else {
-            // New record: default to no presets for reptiles
             if !hasPresets {
                 isCustomVaccine = true
             }
             return
         }
 
-        // Populate from existing record
         dateAdministered = record.dateAdministered
         notes = record.notes ?? ""
 
         if let dueDate = record.nextDueDate {
             nextDueDate = dueDate
-            userEditedNextDueDate = true // Don't overwrite user's saved date
+            userEditedNextDueDate = true
         }
 
         // Try to match existing vaccine name to a preset
         if let species = broadSpecies {
             let presets = VaccinePresetData.presets(for: species)
             if let matchingPreset = presets.first(where: { $0.name == record.vaccineName }) {
-                selectedPreset = matchingPreset
+                selectedVaccineName = matchingPreset.name
                 isCustomVaccine = false
 
-                // Try to determine which interval was used
                 if let dueDate = record.nextDueDate {
                     let daysBetween = Calendar.current.dateComponents([.day], from: record.dateAdministered, to: dueDate).day ?? 365
-                    // Find closest matching interval
                     if let closestInterval = matchingPreset.intervals.min(by: {
                         abs($0.days - daysBetween) < abs($1.days - daysBetween)
                     }) {
@@ -435,12 +421,10 @@ struct AddEditVaccinationView: View {
                     }
                 }
             } else {
-                // Custom vaccine
                 isCustomVaccine = true
                 customVaccineName = record.vaccineName
             }
         } else {
-            // Reptile or unknown species — custom mode
             isCustomVaccine = true
             customVaccineName = record.vaccineName
         }
@@ -448,13 +432,11 @@ struct AddEditVaccinationView: View {
 
     private func saveRecord() {
         if let record = existingRecord {
-            // Update existing
             record.vaccineName = vaccineName
             record.dateAdministered = dateAdministered
             record.nextDueDate = nextDueDate
             record.notes = notes.isEmpty ? nil : notes
         } else {
-            // Create new — append to pet relationship, do NOT also insert into context
             let newRecord = VaccinationRecord(
                 vaccineName: vaccineName,
                 dateAdministered: dateAdministered,
