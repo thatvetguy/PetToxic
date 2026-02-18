@@ -82,10 +82,17 @@ struct MyPetsHomeSection: View {
             }
         }
         .alert("Pro Feature", isPresented: $showProUpsell) {
-            Button("Maybe Later", role: .cancel) { }
+            Button("Not Now", role: .cancel) { }
+            if TrialManager.shared.hasNeverTrialed {
+                Button("Try Free Trial") {
+                    TrialManager.shared.startTrial()
+                }
+            }
             Button("Upgrade to Pro") { showUpgradeSheet = true }
         } message: {
-            Text("Add your pets for quick access to their info during emergencies. Upgrade to Pro to unlock My Pets.")
+            Text("Add your pets for quick access to their info during emergencies. Upgrade to Pro to unlock My Pets."
+                + (TrialManager.shared.hasNeverTrialed
+                   ? "\n\nOr start a free 30-day trial." : ""))
         }
         .sheet(isPresented: $showUpgradeSheet) {
             UpgradeView()

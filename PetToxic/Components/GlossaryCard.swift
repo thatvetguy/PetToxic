@@ -78,10 +78,17 @@ struct GlossaryCard: View {
             GlossaryView()
         }
         .alert("Pro Feature", isPresented: $showProUpsell) {
-            Button("Maybe Later", role: .cancel) { }
+            Button("Not Now", role: .cancel) { }
+            if TrialManager.shared.hasNeverTrialed {
+                Button("Try Free Trial") {
+                    TrialManager.shared.startTrial()
+                }
+            }
             Button("Upgrade to Pro") { showUpgradeSheet = true }
         } message: {
-            Text("Look up veterinary and toxicology terms. Upgrade to Pro to access the Medical Glossary.")
+            Text("Look up veterinary and toxicology terms. Upgrade to Pro to access the Medical Glossary."
+                + (TrialManager.shared.hasNeverTrialed
+                   ? "\n\nOr start a free 30-day trial." : ""))
         }
         .sheet(isPresented: $showUpgradeSheet) {
             UpgradeView()

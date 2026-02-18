@@ -35,6 +35,9 @@ struct SearchView: View {
 
                             // Pro features section (always visible when not actively searching)
                             if viewModel.searchText.isEmpty {
+                                TrialBannerView()
+                                    .padding(.horizontal)
+
                                 // My Pets section
                                 MyPetsHomeSection()
                                     .padding(.top, 8)

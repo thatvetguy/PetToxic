@@ -5,8 +5,10 @@ struct UpgradeView: View {
     @Environment(\.dismiss) private var dismiss
     @ObservedObject private var storeKit = StoreKitService.shared
     @ObservedObject private var proSettings = ProSettings.shared
+    @ObservedObject private var trialManager = TrialManager.shared
     @State private var purchasedProductID: String?
     @State private var wasProBeforePurchase = false
+    @State private var showTrialActivatedAlert = false
 
     var body: some View {
         NavigationStack {
@@ -16,7 +18,11 @@ struct UpgradeView: View {
                 ScrollView {
                     VStack(spacing: 24) {
                         headerSection
-                        if !proSettings.isPro {
+                        trialContextMessage
+                        if trialManager.hasNeverTrialed && !proSettings.hasPurchasedPro {
+                            trialCard
+                        }
+                        if !proSettings.hasPurchasedPro {
                             proCard
                         }
                         petHeroCard
@@ -31,9 +37,13 @@ struct UpgradeView: View {
             .toolbarBackground(.hidden, for: .navigationBar)
             .toolbarColorScheme(.dark, for: .navigationBar)
             .toolbar {
-                ToolbarItem(placement: .cancellationAction) {
-                    Button("Close") { dismiss() }
-                        .foregroundColor(.white)
+                ToolbarItem(placement: .topBarTrailing) {
+                    Button { dismiss() } label: {
+                        Image(systemName: "xmark")
+                            .foregroundColor(.white.opacity(0.6))
+                            .padding(8)
+                            .background(Circle().fill(Color.white.opacity(0.1)))
+                    }
                 }
             }
             .alert(
@@ -47,6 +57,11 @@ struct UpgradeView: View {
             } message: {
                 Text(alertMessage)
             }
+            .alert("Pro Trial Activated!", isPresented: $showTrialActivatedAlert) {
+                Button("OK") { dismiss() }
+            } message: {
+                Text("You have 30 days to explore all Pro features.")
+            }
         }
     }
 
@@ -54,15 +69,15 @@ struct UpgradeView: View {
 
     private var headerSection: some View {
         VStack(spacing: 8) {
-            Image(systemName: proSettings.isPro ? "heart.fill" : "crown.fill")
+            Image(systemName: proSettings.hasPurchasedPro ? "heart.fill" : "crown.fill")
                 .font(.system(size: 40))
-                .foregroundColor(proSettings.isPro ? .pink : .yellow)
+                .foregroundColor(proSettings.hasPurchasedPro ? .pink : .yellow)
 
-            Text(proSettings.isPro ? "Become a Pet Hero" : "Unlock Pro Features")
+            Text(proSettings.hasPurchasedPro ? "Become a Pet Hero" : "Unlock Pro Features")
                 .font(.title2.bold())
                 .foregroundColor(.white)
 
-            Text(proSettings.isPro
+            Text(proSettings.hasPurchasedPro
                  ? "Support pet safety and unlock an exclusive badge."
                  : "All toxicity information stays free for everyone.")
                 .font(.subheadline)
@@ -70,6 +85,72 @@ struct UpgradeView: View {
                 .multilineTextAlignment(.center)
         }
         .padding(.top, 8)
+    }
+
+    // MARK: - Trial Context Message
+
+    @ViewBuilder
+    private var trialContextMessage: some View {
+        if trialManager.isTrialActive, let days = trialManager.daysRemaining {
+            Text("Your Pro trial ends in \(days) \(days == 1 ? "day" : "days"). Purchase to keep access.")
+                .font(.subheadline)
+                .foregroundColor(.orange)
+                .multilineTextAlignment(.center)
+        } else if trialManager.hasTrialExpired {
+            Text("Your free trial has ended. Upgrade to unlock your saved profiles and Pro features.")
+                .font(.subheadline)
+                .foregroundColor(.red.opacity(0.9))
+                .multilineTextAlignment(.center)
+        }
+    }
+
+    // MARK: - Trial Card
+
+    private var trialCard: some View {
+        VStack(alignment: .leading, spacing: 16) {
+            HStack {
+                Image(systemName: "gift.fill")
+                    .foregroundColor(AppColors.teal)
+                Text("Try Pro Free for 30 Days")
+                    .font(.headline)
+                    .foregroundColor(.white)
+                Spacer()
+            }
+
+            VStack(alignment: .leading, spacing: 8) {
+                featureRow(icon: "pawprint.fill", text: "My Pets")
+                featureRow(icon: "character.book.closed.fill", text: "Medical Glossary")
+                featureRow(icon: "cross.vial.fill", text: "Lab Work Guide")
+            }
+
+            Button {
+                trialManager.startTrial()
+                showTrialActivatedAlert = true
+            } label: {
+                Text("Start Free Trial")
+                    .fontWeight(.semibold)
+                    .frame(maxWidth: .infinity)
+                    .padding(.vertical, 14)
+                    .background(AppColors.teal)
+                    .foregroundColor(.white)
+                    .clipShape(RoundedRectangle(cornerRadius: 12))
+            }
+            .buttonStyle(.plain)
+
+            Text("\u{2014} or purchase to keep forever \u{2014}")
+                .font(.caption)
+                .foregroundColor(.white.opacity(0.4))
+                .frame(maxWidth: .infinity)
+        }
+        .padding(20)
+        .background(
+            RoundedRectangle(cornerRadius: 16)
+                .fill(Color.white.opacity(0.08))
+                .overlay(
+                    RoundedRectangle(cornerRadius: 16)
+                        .stroke(AppColors.teal.opacity(0.4), lineWidth: 1)
+                )
+        )
     }
 
     // MARK: - Alert Content

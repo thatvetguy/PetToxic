@@ -78,10 +78,17 @@ struct LabWorkGuideCard: View {
             LabWorkGuideView()
         }
         .alert("Pro Feature", isPresented: $showProUpsell) {
-            Button("Maybe Later", role: .cancel) { }
+            Button("Not Now", role: .cancel) { }
+            if TrialManager.shared.hasNeverTrialed {
+                Button("Try Free Trial") {
+                    TrialManager.shared.startTrial()
+                }
+            }
             Button("Upgrade to Pro") { showUpgradeSheet = true }
         } message: {
-            Text("Understand your pet's blood work results. Upgrade to Pro to access the Lab Work Guide.")
+            Text("Understand your pet's blood work results. Upgrade to Pro to access the Lab Work Guide."
+                + (TrialManager.shared.hasNeverTrialed
+                   ? "\n\nOr start a free 30-day trial." : ""))
         }
         .sheet(isPresented: $showUpgradeSheet) {
             UpgradeView()

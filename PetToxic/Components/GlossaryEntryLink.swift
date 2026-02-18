@@ -47,10 +47,17 @@ struct GlossaryEntryLink: View {
             GlossaryView()
         }
         .alert("Pro Feature", isPresented: $showingUpgradePrompt) {
-            Button("Maybe Later", role: .cancel) { }
+            Button("Not Now", role: .cancel) { }
+            if TrialManager.shared.hasNeverTrialed {
+                Button("Try Free Trial") {
+                    TrialManager.shared.startTrial()
+                }
+            }
             Button("Upgrade to Pro") { showUpgradeSheet = true }
         } message: {
-            Text("The Medical Glossary is a Pro feature that helps you understand veterinary terminology. Upgrade to Pro to unlock it.")
+            Text("The Medical Glossary is a Pro feature that helps you understand veterinary terminology. Upgrade to Pro to unlock it."
+                + (TrialManager.shared.hasNeverTrialed
+                   ? "\n\nOr start a free 30-day trial." : ""))
         }
         .sheet(isPresented: $showUpgradeSheet) {
             UpgradeView()

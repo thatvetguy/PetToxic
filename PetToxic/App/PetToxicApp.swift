@@ -12,6 +12,8 @@ struct PetToxicApp: App {
         #endif
         // Initialize StoreKit service (loads products & checks entitlements)
         _ = StoreKitService.shared
+        // Initialize trial manager
+        _ = TrialManager.shared
     }
 
     var body: some Scene {

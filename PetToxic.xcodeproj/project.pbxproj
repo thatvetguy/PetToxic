@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		TRIAL001BBBB1111111111 /* TrialManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = TRIAL001AAAA1111111111 /* TrialManager.swift */; };
+		TRIALBV01BBBB1111111111 /* TrialBannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = TRIALBV01AAAA1111111111 /* TrialBannerView.swift */; };
 		047D61DFD0831C22C171B07C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4892A0DA69F9D82CF1D8373B /* Assets.xcassets */; };
 		0A35A2B438F7FE2009ABCC3C /* EmptyStateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24B2882F5F5387A02F14DC1B /* EmptyStateView.swift */; };
 		0ED8DF5F0BC3B56D614CF741 /* SpeciesFilterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81DA312D440067CFD3E192A8 /* SpeciesFilterView.swift */; };
@@ -112,6 +114,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		TRIAL001AAAA1111111111 /* TrialManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrialManager.swift; sourceTree = "<group>"; };
+		TRIALBV01AAAA1111111111 /* TrialBannerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrialBannerView.swift; sourceTree = "<group>"; };
 		0B85A0BAA5B698970D8F9ADA /* EmergencyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmergencyView.swift; sourceTree = "<group>"; };
 		1CC831E76E0F0F17894ADA65 /* PetToxicUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetToxicUITests.swift; sourceTree = "<group>"; };
 		1CCB51A6977A5572FDF23398 /* Font+Poppins.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "Font+Poppins.swift"; sourceTree = "<group>"; };
@@ -286,6 +290,7 @@
 				GLOSSDROP02AAA222222222 /* GlossaryDropdownView.swift */,
 				GLOSSSTYL02AAA222222222 /* GlossaryStyledText.swift */,
 				GLOSSLINK02BBB222222222 /* GlossaryEntryLink.swift */,
+				TRIALBV01AAAA1111111111 /* TrialBannerView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -419,6 +424,7 @@
 				PHOTO002BBBB2222222222222 /* PetPhotoService.swift */,
 				ED2E81402F25FEC5008594E1 /* PetStore.swift */,
 				ED2E81482F25FF00008594E1 /* ProSettings.swift */,
+				TRIAL001AAAA1111111111 /* TrialManager.swift */,
 				754F9D537CBB611A07FF9E8E /* SearchService.swift */,
 				862C7987CDE89D884F670AF0 /* StoreKitService.swift */,
 				GLOSS004AAAA4444444444 /* GlossaryService.swift */,
@@ -669,6 +675,8 @@
 				CASEFIELD001CCCC11111111 /* AddCaseNumberField.swift in Sources */,
 				SHCARD001AAAA1111111111 /* ShareCardView.swift in Sources */,
 				GLOSSCARD01AAA111111111 /* GlossaryCard.swift in Sources */,
+				TRIAL001BBBB1111111111 /* TrialManager.swift in Sources */,
+				TRIALBV01BBBB1111111111 /* TrialBannerView.swift in Sources */,
 				GLOSSDROP01AAA111111111 /* GlossaryDropdownView.swift in Sources */,
 				GLOSSSTYL01AAA111111111 /* GlossaryStyledText.swift in Sources */,
 				GLOSSLINK01BBB111111111 /* GlossaryEntryLink.swift in Sources */,
@@ -760,7 +768,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 202602112;
+				CURRENT_PROJECT_VERSION = 20260213;
 				DEVELOPMENT_TEAM = 6KA5CB5S3A;
 				GENERATE_INFOPLIST_FILE = NO;
 				INFOPLIST_FILE = PetToxic/Resources/Info.plist;
@@ -947,7 +955,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 202602112;
+				CURRENT_PROJECT_VERSION = 20260213;
 				DEVELOPMENT_TEAM = 6KA5CB5S3A;
 				GENERATE_INFOPLIST_FILE = NO;
 				INFOPLIST_FILE = PetToxic/Resources/Info.plist;

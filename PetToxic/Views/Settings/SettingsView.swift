@@ -3,6 +3,7 @@ import SwiftUI
 struct SettingsView: View {
     @ObservedObject private var proSettings = ProSettings.shared
     @ObservedObject private var storeKit = StoreKitService.shared
+    @ObservedObject private var trialManager = TrialManager.shared
 
     #if DEBUG
     @State private var versionTapCount = 0
@@ -68,6 +69,11 @@ struct SettingsView: View {
                                 }
                             }
                             .listRowBackground(Color.white.opacity(0.08))
+                        }
+
+                        // Trial status row
+                        if !proSettings.hasPurchasedPro {
+                            trialStatusRow
                         }
 
                         // My Pets
@@ -190,6 +196,46 @@ struct SettingsView: View {
                                 }
                             }
                             .tint(Color("AccentColor"))
+                            .listRowBackground(Color.white.opacity(0.08))
+
+                            // Trial DEBUG controls
+                            Button {
+                                trialManager.resetTrial()
+                            } label: {
+                                HStack {
+                                    Image(systemName: "arrow.counterclockwise")
+                                        .foregroundStyle(.orange)
+                                        .frame(width: 24)
+                                    Text("Reset Trial")
+                                        .foregroundStyle(.orange)
+                                }
+                            }
+                            .listRowBackground(Color.white.opacity(0.08))
+
+                            Button {
+                                trialManager.setExpiringSoon()
+                            } label: {
+                                HStack {
+                                    Image(systemName: "clock.fill")
+                                        .foregroundStyle(.orange)
+                                        .frame(width: 24)
+                                    Text("Set Trial Expiring Soon")
+                                        .foregroundStyle(.orange)
+                                }
+                            }
+                            .listRowBackground(Color.white.opacity(0.08))
+
+                            Button {
+                                trialManager.setExpired()
+                            } label: {
+                                HStack {
+                                    Image(systemName: "xmark.circle.fill")
+                                        .foregroundStyle(.red)
+                                        .frame(width: 24)
+                                    Text("Set Trial Expired")
+                                        .foregroundStyle(.red)
+                                }
+                            }
                             .listRowBackground(Color.white.opacity(0.08))
 
                             Button(role: .destructive) {
@@ -325,10 +371,17 @@ struct SettingsView: View {
             }
             #endif
             .alert("Pro Feature", isPresented: $showProUpsell) {
-                Button("Maybe Later", role: .cancel) { }
+                Button("Not Now", role: .cancel) { }
+                if trialManager.hasNeverTrialed {
+                    Button("Try Free Trial") {
+                        trialManager.startTrial()
+                    }
+                }
                 Button("Upgrade to Pro") { showUpgradeSheet = true }
             } message: {
-                Text(proUpsellMessage)
+                Text(proUpsellMessage
+                    + (trialManager.hasNeverTrialed
+                       ? "\n\nOr start a free 30-day trial." : ""))
             }
             .alert("Restore Purchases", isPresented: $showRestoreAlert) {
                 Button("OK", role: .cancel) { }
@@ -338,6 +391,64 @@ struct SettingsView: View {
             .sheet(isPresented: $showUpgradeSheet) {
                 UpgradeView()
             }
+        }
+    }
+
+    // MARK: - Trial Status Row
+
+    @ViewBuilder
+    private var trialStatusRow: some View {
+        switch trialManager.trialState {
+        case .neverStarted:
+            Button {
+                showUpgradeSheet = true
+            } label: {
+                HStack {
+                    Image(systemName: "gift.fill")
+                        .foregroundStyle(AppColors.teal)
+                        .frame(width: 24)
+                    Text("Start 30-Day Free Trial")
+                        .foregroundStyle(.white)
+                    Spacer()
+                    Image(systemName: "chevron.right")
+                        .font(.footnote.weight(.semibold))
+                        .foregroundStyle(.gray.opacity(0.5))
+                }
+            }
+            .listRowBackground(Color.white.opacity(0.08))
+
+        case .active(let days):
+            Button {
+                showUpgradeSheet = true
+            } label: {
+                HStack {
+                    Image(systemName: "clock.fill")
+                        .foregroundStyle(days <= 7 ? .orange : AppColors.teal)
+                        .frame(width: 24)
+                    Text("Pro Trial")
+                        .foregroundStyle(.white)
+                    Spacer()
+                    Text(days == 1 ? "Last day!" : "\(days) days left")
+                        .font(.subheadline)
+                        .foregroundStyle(days <= 7 ? .orange : .white.opacity(0.5))
+                }
+            }
+            .listRowBackground(Color.white.opacity(0.08))
+
+        case .expired:
+            Button {
+                showUpgradeSheet = true
+            } label: {
+                HStack {
+                    Image(systemName: "xmark.circle.fill")
+                        .foregroundStyle(.red)
+                        .frame(width: 24)
+                    Text("Trial Expired")
+                        .foregroundStyle(.white)
+                    Spacer()
+                }
+            }
+            .listRowBackground(Color.white.opacity(0.08))
         }
     }
 

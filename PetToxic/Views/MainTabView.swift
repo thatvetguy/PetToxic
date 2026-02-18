@@ -21,6 +21,9 @@ struct MainTabView: View {
     @AppStorage("disclaimerAcknowledgedVersion") private var acknowledgedVersion: String = ""
     @State private var showDisclaimerPopup = false
     @State private var isKeyboardVisible = false
+    @State private var showTrialExpiredAlert = false
+    @State private var showUpgradeSheet = false
+    @ObservedObject private var trialManager = TrialManager.shared
     @Environment(BrowseNavigationContext.self) private var browseNavContext
 
     private let tabCount = 5
@@ -90,6 +93,9 @@ struct MainTabView: View {
                 showDisclaimerPopup = true
             }
 
+            if trialManager.shouldShowExpirationAlert {
+                showTrialExpiredAlert = true
+            }
         }
         .onReceive(NotificationCenter.default.publisher(for: UIResponder.keyboardWillShowNotification)) { _ in
             withAnimation(.easeOut(duration: 0.25)) {
@@ -104,6 +110,20 @@ struct MainTabView: View {
         .sheet(isPresented: $showDisclaimerPopup) {
             DisclaimerPopupView(isPresented: $showDisclaimerPopup)
                 .presentationDragIndicator(.hidden)
+        }
+        .alert("Your Pro Trial Has Ended", isPresented: $showTrialExpiredAlert) {
+            Button("Not Now", role: .cancel) {
+                trialManager.markExpirationAlertShown()
+            }
+            Button("Upgrade Now") {
+                trialManager.markExpirationAlertShown()
+                showUpgradeSheet = true
+            }
+        } message: {
+            Text("Your pet profiles and data are saved \u{2014} upgrade anytime to access them again.")
+        }
+        .sheet(isPresented: $showUpgradeSheet) {
+            UpgradeView()
         }
     }
 

@@ -1,5 +1,6 @@
 import Foundation
 import SwiftUI
+import Combine
 
 /// Manages PRO subscription status with debug override support
 class ProSettings: ObservableObject {
@@ -38,13 +39,27 @@ class ProSettings: ObservableObject {
     @AppStorage("purchased_pro") private var _purchasedPro: Bool = false
     @AppStorage("purchased_supporter") private var _purchasedSupporter: Bool = false
 
-    /// Whether the user has PRO access (debug override OR real purchase)
+    /// Whether the user has PRO access (debug override, real purchase, OR active trial)
     var isPro: Bool {
+        #if DEBUG
+        return _debugProEnabled || _purchasedPro || _purchasedSupporter || TrialManager.shared.isTrialActive
+        #else
+        return _purchasedPro || _purchasedSupporter || TrialManager.shared.isTrialActive
+        #endif
+    }
+
+    /// Whether the user has a permanent purchase (ignores trial)
+    var hasPurchasedPro: Bool {
         #if DEBUG
         return _debugProEnabled || _purchasedPro || _purchasedSupporter
         #else
         return _purchasedPro || _purchasedSupporter
         #endif
+    }
+
+    /// Whether the user's Pro access comes from an active trial (not a purchase)
+    var isProViaTrial: Bool {
+        !hasPurchasedPro && TrialManager.shared.isTrialActive
     }
 
     /// Whether the user is a Pet Hero subscriber (debug override OR real purchase)
@@ -68,5 +83,14 @@ class ProSettings: ObservableObject {
         objectWillChange.send()
     }
 
-    private init() {}
+    private var cancellables = Set<AnyCancellable>()
+
+    private init() {
+        // Forward TrialManager changes so views re-render when trial state changes
+        TrialManager.shared.objectWillChange
+            .sink { [weak self] _ in
+                self?.objectWillChange.send()
+            }
+            .store(in: &cancellables)
+    }
 }
