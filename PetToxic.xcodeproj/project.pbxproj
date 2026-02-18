@@ -92,6 +92,10 @@
 		PHOTO003BBBB3333333333333 /* PetAvatarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = PHOTO004BBBB4444444444444 /* PetAvatarView.swift */; };
 		PHOTO005BBBB5555555555555 /* PetPhotoPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = PHOTO006BBBB6666666666666 /* PetPhotoPickerView.swift */; };
 		POISONCASE001AAAA111111 /* PoisonControlCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = POISONCASE002AAAA222222 /* PoisonControlCase.swift */; };
+		VACCRECORD01AAAA111111 /* VaccinationRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = VACCRECORD02AAAA222222 /* VaccinationRecord.swift */; };
+		VACCPRESET01AAAA111111 /* VaccinePresets.swift in Sources */ = {isa = PBXBuildFile; fileRef = VACCPRESET02AAAA222222 /* VaccinePresets.swift */; };
+		VACCLOGVW01AAAA1111111 /* VaccinationLogView.swift in Sources */ = {isa = PBXBuildFile; fileRef = VACCLOGVW02AAAA2222222 /* VaccinationLogView.swift */; };
+		VACCSUMCD01AAAA1111111 /* VaccinationSummaryCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = VACCSUMCD02AAAA2222222 /* VaccinationSummaryCard.swift */; };
 		PRIV002AAAA2222222222222 /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = PRIV001AAAA1111111111111 /* PrivacyInfo.xcprivacy */; };
 		SHCARD001AAAA1111111111 /* ShareCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = SHCARD002AAAA2222222222 /* ShareCardView.swift */; };
 /* End PBXBuildFile section */
@@ -204,6 +208,10 @@
 		PHOTO004BBBB4444444444444 /* PetAvatarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetAvatarView.swift; sourceTree = "<group>"; };
 		PHOTO006BBBB6666666666666 /* PetPhotoPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetPhotoPickerView.swift; sourceTree = "<group>"; };
 		POISONCASE002AAAA222222 /* PoisonControlCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoisonControlCase.swift; sourceTree = "<group>"; };
+		VACCRECORD02AAAA222222 /* VaccinationRecord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VaccinationRecord.swift; sourceTree = "<group>"; };
+		VACCPRESET02AAAA222222 /* VaccinePresets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VaccinePresets.swift; sourceTree = "<group>"; };
+		VACCLOGVW02AAAA2222222 /* VaccinationLogView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VaccinationLogView.swift; sourceTree = "<group>"; };
+		VACCSUMCD02AAAA2222222 /* VaccinationSummaryCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VaccinationSummaryCard.swift; sourceTree = "<group>"; };
 		PRIV001AAAA1111111111111 /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
 		SHCARD002AAAA2222222222 /* ShareCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareCardView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -291,6 +299,7 @@
 				GLOSSSTYL02AAA222222222 /* GlossaryStyledText.swift */,
 				GLOSSLINK02BBB222222222 /* GlossaryEntryLink.swift */,
 				TRIALBV01AAAA1111111111 /* TrialBannerView.swift */,
+				VACCSUMCD02AAAA2222222 /* VaccinationSummaryCard.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -312,6 +321,7 @@
 				ED2E813B2F25FEB2008594E1 /* PetSex.swift */,
 				ED2E813C2F25FEB2008594E1 /* PetSpecies.swift */,
 				POISONCASE002AAAA222222 /* PoisonControlCase.swift */,
+				VACCRECORD02AAAA222222 /* VaccinationRecord.swift */,
 				4CEADD8856CCEA9B7022E31F /* Enums.swift */,
 				7E7D85BEF0AE7656DF48FD15 /* SearchResult.swift */,
 				4F4998CA510A72304A62AC03 /* SpeciesRisk.swift */,
@@ -429,6 +439,7 @@
 				862C7987CDE89D884F670AF0 /* StoreKitService.swift */,
 				GLOSS004AAAA4444444444 /* GlossaryService.swift */,
 				LABSVC002AAAA2222222222 /* LabWorkGuideService.swift */,
+				VACCPRESET02AAAA222222 /* VaccinePresets.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -448,6 +459,7 @@
 				ED2E81422F25FEEC008594E1 /* PetFormView.swift */,
 				ED2E81432F25FEEC008594E1 /* PetListView.swift */,
 				PHOTO006BBBB6666666666666 /* PetPhotoPickerView.swift */,
+				VACCLOGVW02AAAA2222222 /* VaccinationLogView.swift */,
 			);
 			path = MyPets;
 			sourceTree = "<group>";
@@ -694,6 +706,10 @@
 				LABSRC001AAAA1111111111 /* LabWorkGuideSourcesView.swift in Sources */,
 				F9A72513ED135639C093EC77 /* StoreKitService.swift in Sources */,
 				B9B9D763C003A2E7301EA014 /* UpgradeView.swift in Sources */,
+				VACCRECORD01AAAA111111 /* VaccinationRecord.swift in Sources */,
+				VACCPRESET01AAAA111111 /* VaccinePresets.swift in Sources */,
+				VACCLOGVW01AAAA1111111 /* VaccinationLogView.swift in Sources */,
+				VACCSUMCD01AAAA1111111 /* VaccinationSummaryCard.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

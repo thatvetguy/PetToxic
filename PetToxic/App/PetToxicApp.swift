@@ -22,6 +22,6 @@ struct PetToxicApp: App {
                 .environment(browseNavigationContext)
                 .preferredColorScheme(.dark)
         }
-        .modelContainer(for: [Pet.self, PoisonControlCase.self])
+        .modelContainer(for: [Pet.self, PoisonControlCase.self, VaccinationRecord.self])
     }
 }

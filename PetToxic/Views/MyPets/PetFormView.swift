@@ -360,6 +360,32 @@ struct PetFormView: View {
                 }
             }
 
+            // MARK: - Vaccination Records
+            if !isNewPet {
+                Section("Vaccination Records") {
+                    NavigationLink {
+                        VaccinationLogView(pet: pet)
+                    } label: {
+                        HStack {
+                            Image(systemName: "syringe.fill")
+                                .foregroundColor(.teal)
+                            Text("Vaccinations")
+                            Spacer()
+                            let count = pet.vaccinationRecords.count
+                            if count > 0 {
+                                Text("\(count)")
+                                    .font(.caption)
+                                    .foregroundColor(.secondary)
+                                    .padding(.horizontal, 8)
+                                    .padding(.vertical, 2)
+                                    .background(Color(.systemGray5))
+                                    .clipShape(Capsule())
+                            }
+                        }
+                    }
+                }
+            }
+
             // MARK: - Browse Filter
             Section {
                 Toggle(isOn: $pet.prioritizeInBrowse) {

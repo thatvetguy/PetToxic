@@ -388,6 +388,9 @@ private struct PetExpandedCard: View {
                 }
             }
 
+            // Vaccination summary
+            VaccinationSummaryCard(pet: pet)
+
             // View Full Profile button
             Button {
                 showingPetList = true

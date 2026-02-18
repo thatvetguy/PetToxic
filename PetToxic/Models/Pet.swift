@@ -25,6 +25,9 @@ final class Pet {
     @Relationship(deleteRule: .cascade, inverse: \PoisonControlCase.pet)
     var poisonControlCases: [PoisonControlCase] = []
 
+    @Relationship(deleteRule: .cascade, inverse: \VaccinationRecord.pet)
+    var vaccinationRecords: [VaccinationRecord] = []
+
     init(
         id: UUID = UUID(),
         name: String,
