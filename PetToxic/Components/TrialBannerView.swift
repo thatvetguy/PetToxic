@@ -51,7 +51,7 @@ struct TrialBannerView: View {
             bannerRow(
                 icon: "lock.fill",
                 iconColor: .red,
-                text: "Your Pro trial has ended \u{2014} Upgrade to keep access",
+                text: "Your Pro trial has ended \u{2014} Upgrade to restore access",
                 borderColor: .red.opacity(0.6)
             )
         }
