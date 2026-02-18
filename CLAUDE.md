@@ -308,7 +308,8 @@ PetToxic/
 │   │   ├── LoadingView.swift
 │   │   ├── PoisonControlButton.swift  # Emergency call buttons
 │   │   ├── RelatedEntryButton.swift
-│   │   └── SeverityBadge.swift        # Toxicity level indicator
+│   │   ├── SeverityBadge.swift        # Toxicity level indicator
+│   │   └── TrialBannerView.swift      # 30-day trial banner (4 states)
 │   ├── Models/
 │   │   ├── Enums.swift                # Species, Severity, Category, MatchType
 │   │   ├── SearchResult.swift
@@ -322,7 +323,8 @@ PetToxic/
 │   │   ├── AppearanceSettings.swift   # Dark/light mode (default: dark)
 │   │   ├── BookmarkService.swift      # Save favorites
 │   │   ├── DatabaseService.swift      # Toxin data (hardcoded, SQLite planned)
-│   │   └── SearchService.swift        # FTS5 search
+│   │   ├── SearchService.swift        # FTS5 search
+│   │   └── TrialManager.swift         # 30-day Pro trial (Keychain-backed)
 │   ├── Utilities/
 │   │   ├── Constants.swift
 │   │   └── Extensions/
@@ -383,6 +385,8 @@ PetToxic/
 | Change default appearance | `Services/AppearanceSettings.swift` |
 | Add new tab | `Views/MainTabView.swift` |
 | Emergency contacts | `Components/PoisonControlButton.swift` |
+| Trial/Pro gating logic | `Services/TrialManager.swift`, `Services/ProSettings.swift` |
+| Trial banner on home | `Components/TrialBannerView.swift` |
 
 ---
 
