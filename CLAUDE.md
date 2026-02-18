@@ -24,6 +24,7 @@ Native iOS reference app for pet owners to quickly look up toxicity information.
 - **Script output validation:** After running extraction or audit scripts, always compare the actual output count against the expected count (e.g., `grep -c` the source, then count entries in the output file). Silent partial failures — where a script produces results but misses entries — are common with multi-line awk/sed patterns. Flag any mismatch immediately.
 - **Working directory assumptions:** Session instruction documents may assume a different working directory than the actual one. Always confirm the real working directory with `pwd` or check the environment context before running any script verbatim from session instructions.
 - **Edit tool requires Read first:** The Edit tool will fail with "File must be read first" if a file hasn't been read in the current session. When doing batch edits across many files, **read all target files before starting any edits**. If editing N files in parallel, issue N Read calls first, then N Edit calls. Sibling Edit calls also fail if one in the batch errors, so read everything upfront to avoid cascading failures.
+- **SwiftData relationship inserts:** When adding a child record to a parent's relationship array (e.g., `pet.vaccinationRecords.append(newRecord)`), do NOT also call `modelContext.insert(newRecord)`. SwiftData handles the insert through the relationship — calling both causes a double-insert bug with duplicate records.
 - **Glossary extraction — multi-line fields:** Fields in `GlossaryService.swift` (`definition`, `searchKeywords`, `relatedTerms`) can span multiple lines. Single-line awk/sed patterns will silently miss entries with wrapped fields. **Always** use a block-based approach: accumulate lines between `GlossaryTerm(` and the closing `),`, then parse the full block. Prefer `perl -ne` with a line-by-line accumulator over awk for glossary extraction. Never assume all fields fit on one line.
 
 ### SwiftUI Navigation & Gesture Gotchas
@@ -309,12 +310,14 @@ PetToxic/
 │   │   ├── PoisonControlButton.swift  # Emergency call buttons
 │   │   ├── RelatedEntryButton.swift
 │   │   ├── SeverityBadge.swift        # Toxicity level indicator
-│   │   └── TrialBannerView.swift      # 30-day trial banner (4 states)
+│   │   ├── TrialBannerView.swift      # 30-day trial banner (4 states)
+│   │   └── VaccinationSummaryCard.swift # Vaccine status card (home screen)
 │   ├── Models/
 │   │   ├── Enums.swift                # Species, Severity, Category, MatchType
 │   │   ├── SearchResult.swift
 │   │   ├── SpeciesRisk.swift
-│   │   └── ToxicItem.swift            # Main toxin data model
+│   │   ├── ToxicItem.swift            # Main toxin data model
+│   │   └── VaccinationRecord.swift    # SwiftData model for vaccine records
 │   ├── Resources/
 │   │   ├── Assets.xcassets/           # App icons, colors, images
 │   │   ├── Info.plist
@@ -324,7 +327,8 @@ PetToxic/
 │   │   ├── BookmarkService.swift      # Save favorites
 │   │   ├── DatabaseService.swift      # Toxin data (hardcoded, SQLite planned)
 │   │   ├── SearchService.swift        # FTS5 search
-│   │   └── TrialManager.swift         # 30-day Pro trial (Keychain-backed)
+│   │   ├── TrialManager.swift         # 30-day Pro trial (Keychain-backed)
+│   │   └── VaccinePresets.swift       # Species-keyed vaccine presets & status enum
 │   ├── Utilities/
 │   │   ├── Constants.swift
 │   │   └── Extensions/
@@ -349,6 +353,11 @@ PetToxic/
 │       │   ├── BookmarksListView.swift
 │       │   ├── HistoryListView.swift
 │       │   └── SavedView.swift
+│       ├── MyPets/
+│       │   ├── PetFormView.swift      # Pet profile form
+│       │   ├── PetListView.swift
+│       │   ├── PetPhotoPickerView.swift
+│       │   └── VaccinationLogView.swift # Vaccine log + add/edit sheet
 │       ├── Search/
 │       │   ├── SearchResultRow.swift
 │       │   ├── SearchView.swift
@@ -387,6 +396,10 @@ PetToxic/
 | Emergency contacts | `Components/PoisonControlButton.swift` |
 | Trial/Pro gating logic | `Services/TrialManager.swift`, `Services/ProSettings.swift` |
 | Trial banner on home | `Components/TrialBannerView.swift` |
+| Vaccination records/log | `Views/MyPets/VaccinationLogView.swift` |
+| Vaccine presets/intervals | `Services/VaccinePresets.swift` |
+| Vaccination data model | `Models/VaccinationRecord.swift` |
+| Vaccination summary (home) | `Components/VaccinationSummaryCard.swift` |
 
 ---
 
@@ -422,4 +435,4 @@ Handoff files: `Handoff_SessionXX_to_SessionYY.md`
 
 ---
 
-*Last Updated: February 2026 (Session 115)*
+*Last Updated: February 2026 (Session 125)*
