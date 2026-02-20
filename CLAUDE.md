@@ -313,7 +313,8 @@ PetToxic/
 │   │   ├── TrialBannerView.swift      # 30-day trial banner (4 states)
 │   │   └── VaccinationSummaryCard.swift # Vaccine status card (home screen)
 │   ├── Models/
-│   │   ├── Enums.swift                # Species, Severity, Category, MatchType
+│   │   ├── Enums.swift                # Species, Severity, Category, SeverityGroupLevel, MatchType
+│   │   ├── NavigationContext.swift     # CategoryEntry, SeverityEntry, BrowseNavigationContext
 │   │   ├── SearchResult.swift
 │   │   ├── SpeciesRisk.swift
 │   │   ├── ToxicItem.swift            # Main toxin data model
@@ -386,6 +387,7 @@ PetToxic/
 | Add/edit toxin entry | `Services/DatabaseService.swift` |
 | Modify toxin data model | `Models/ToxicItem.swift`, `Models/SpeciesRisk.swift` |
 | Change severity levels/colors | `Models/Enums.swift` (Severity enum) |
+| Browse by severity groups | `Models/Enums.swift` (SeverityGroupLevel), `Views/Browse/BrowseView.swift` (SeverityListView) |
 | Add new category | `Models/Enums.swift` (Category enum) |
 | Modify article display | `Views/Article/ArticleDetailView.swift` |
 | Change share text format | `Views/Article/ArticleDetailView.swift` (generateShareText) |
@@ -400,6 +402,8 @@ PetToxic/
 | Vaccine presets/intervals | `Services/VaccinePresets.swift` |
 | Vaccination data model | `Models/VaccinationRecord.swift` |
 | Vaccination summary (home) | `Components/VaccinationSummaryCard.swift` |
+| Browse navigation context | `Models/NavigationContext.swift` |
+| Severity explainer entry | `Services/DatabaseService.swift` (UUID: `B3F1A2D4-E5C6-47F8-9A0B-1C2D3E4F5A6B`) |
 
 ---
 
@@ -435,4 +439,4 @@ Handoff files: `Handoff_SessionXX_to_SessionYY.md`
 
 ---
 
-*Last Updated: February 2026 (Session 125)*
+*Last Updated: February 2026 (Session 128)*
