@@ -1809,7 +1809,9 @@ class DatabaseService {
                 relatedEntries: [
                     "ee90d3c6-f9cc-40ab-ae91-c13bc481ab16",  // Ranunculus (Buttercup) - protoanemonin irritant, same family as Clematis
                     "505a8b0e-0325-4419-8678-f543ad301997",  // Anemone (Windflower) - protoanemonin irritant, same Ranunculaceae family
-                    "c8a18b83-133f-4be4-9aff-5cda3f6f6a18"  // Pencil Cactus - standalone entry for this Euphorbia species (eye injury risk)
+                    "c8a18b83-133f-4be4-9aff-5cda3f6f6a18",  // Pencil Cactus - standalone entry for this Euphorbia species (eye injury risk)
+                    "a7c3e1f0-5b2d-4e8a-9f6c-3d7b1a2e4f80",  // Peonies — similar GI irritant mechanism
+                    "b3d8f2a1-6c4e-4f9b-a1d7-5e2c8b3f9a04"  // Sweet Pea — GI irritant component plus neurological mechanism
                 ]
             ),
 
@@ -13547,6 +13549,82 @@ The milky latex of pencil cactus contains **diterpene esters** (particularly eup
                 ]
             ),
 
+            // MARK: - Peonies
+            ToxicItem(
+                id: UUID(uuidString: "a7c3e1f0-5b2d-4e8a-9f6c-3d7b1a2e4f80")!,
+                name: "Peonies",
+                alternateNames: [
+                    "peony",
+                    "Paeonia",
+                    "Paeonia officinalis",
+                    "Paeonia lactiflora",
+                    "Paeonia suffruticosa",
+                    "common peony",
+                    "Chinese peony",
+                    "garden peony",
+                    "tree peony",
+                    "herbaceous peony",
+                    "peony bush",
+                    "peony flower",
+                    "peony bouquet",
+                    "peony root",
+                    "paeonol",
+                    "paeony",
+                    "peonies bouquet",
+                    "cut peonies",
+                    "peony plant"
+                ],
+                categories: [.plants],
+                imageAsset: "peonies_thumb",
+                description: """
+                Peonies are popular flowering plants known for their large, fragrant blooms in shades of pink, white, red, and coral. They are among the most common flowers used in bouquets, floral arrangements, and wedding florals, and are also widely grown in home gardens. Pets most commonly encounter peonies when cut flowers are brought into the home — cats in particular may be attracted to the fragrant blooms and chew on petals or leaves. The entire plant is toxic, with the highest concentration of toxins found in the roots and bark. Even dried or wilted peony flowers retain some level of toxicity.
+                """,
+                toxicityInfo: """
+                Peonies contain paeonol, a phenolic compound found in all parts of the plant. Paeonol is most concentrated in the roots and woody bark but is also present in the stems, leaves, and flower petals. When ingested, paeonol acts as a gastrointestinal irritant, causing vomiting, diarrhea, and depression (lethargy).
+
+                Most cases of peony ingestion in pets result in mild, self-limiting gastrointestinal upset. However, if a large amount of plant material is consumed, prolonged vomiting and diarrhea can lead to dehydration, which may require veterinary intervention with fluid support. Pets with pre-existing health conditions may be more vulnerable to the effects of paeonol.
+
+                The most common exposure scenario for household pets is chewing on cut peony flowers from bouquets or floral arrangements. While the petals contain less paeonol than the roots, any ingestion should be taken seriously. Contact your veterinarian if your pet ingests any part of a peony plant.
+                """,
+                onsetTime: OnsetTime(
+                    early: "Signs of GI upset (vomiting, diarrhea) typically appear within a few hours of ingestion.",
+                    delayed: "Symptoms generally resolve within 12–24 hours in mild cases. Prolonged or repeated vomiting may lead to dehydration over 24–48 hours if untreated."
+                ),
+                symptoms: [
+                    "Vomiting",
+                    "Diarrhea",
+                    "Lethargy or depression",
+                    "Decreased appetite",
+                    "Drooling (hypersalivation)",
+                    "Abdominal discomfort"
+                ],
+                entrySeverity: .low,
+                speciesRisks: [
+                    SpeciesRisk(species: .dog, severity: .low, notes: "Dogs are more commonly affected than cats due to less selective eating habits. They may chew on peony plants in the garden, especially when heavy blooms droop within reach. Most cases result in mild, self-limiting GI upset. Dogs with pre-existing health conditions may experience more pronounced effects."),
+                    SpeciesRisk(species: .cat, severity: .low, notes: "Cats may be attracted to the fragrance of peony blooms and may chew on cut flowers in bouquets or arrangements. Paeonol is most concentrated in the woody bark, which cats are unlikely to consume — flower petals are the more realistic exposure route for cats. Symptoms typically appear within a few hours and generally resolve within 12–24 hours. Contact your veterinarian for any ingestion."),
+                    SpeciesRisk(species: .smallMammal, severity: .moderate, notes: "Rabbits, guinea pigs, and chinchillas are susceptible to paeonol toxicity. Because these animals cannot vomit, ingested plant material remains in their system and GI disturbance can escalate more quickly than in dogs or cats. Small body size increases the risk from even modest amounts of plant material. Any ingestion warrants veterinary evaluation."),
+                    SpeciesRisk(species: .bird, severity: .low, notes: "Peonies are listed as toxic to birds on multiple avian veterinary resources. However, no specific case reports of serious peony toxicity in pet birds were found. The expected effects are GI upset similar to that seen in mammals. Keep cut peonies out of reach of pet birds as a precaution."),
+                    SpeciesRisk(species: .reptile, severity: .moderate, notes: "Peonies are listed as toxic to tortoises and herbivorous reptiles on multiple reptile care databases, and deaths in tortoises have been reported following ingestion. Herbivorous reptiles such as tortoises and iguanas are most at risk if they have access to plant material. Do not plant peonies near tortoise enclosures or offer any part of the plant as food.")
+                ],
+                preventionTips: [
+                    "Keep cut peony bouquets and floral arrangements out of reach of pets — consider placing them in rooms pets cannot access",
+                    "Be aware that cats may be attracted to the fragrance of peony blooms and may attempt to chew on petals",
+                    "If growing peonies in your garden, note that heavy blooms tend to droop and may bring flowers within reach of curious dogs",
+                    "Even dried or wilted peony flowers retain some toxicity — dispose of spent blooms where pets cannot access them",
+                    "Do not plant peonies in or near tortoise or herbivorous reptile enclosures",
+                    "If your pet ingests any part of a peony plant, contact your veterinarian — do not wait for symptoms to appear"
+                ],
+                sources: [
+                    "ASPCA Animal Poison Control Center",
+                    "Pet Poison Helpline",
+                    "WagWalking Veterinary Resources — Peony Poisoning in Dogs",
+                    "The Tortoise Table — Paeonia spp. Plant Database"
+                ],
+                relatedEntries: [
+                    "045fe2d3-3c59-4f15-b72a-09371b675d77"  // GI Irritant Plants — similar GI irritant mechanism
+                ]
+            ),
+
             // MARK: - Anemone (Windflower)
             ToxicItem(
                 id: UUID(uuidString: "505a8b0e-0325-4419-8678-f543ad301997")!,
@@ -13623,6 +13701,88 @@ Skin contact with the fresh sap can also cause contact dermatitis (skin redness,
                 relatedEntries: [
                     "ee90d3c6-f9cc-40ab-ae91-c13bc481ab16",  // Ranunculus (Buttercup) - same family (Ranunculaceae), same toxin (protoanemonin)
                     "045fe2d3-3c59-4f15-b72a-09371b675d77"  // GI Irritant Plants - same irritant mechanism
+                ]
+            ),
+
+            // MARK: - Sweet Pea
+            ToxicItem(
+                id: UUID(uuidString: "b3d8f2a1-6c4e-4f9b-a1d7-5e2c8b3f9a04")!,
+                name: "Sweet Pea",
+                alternateNames: [
+                    "sweet peas",
+                    "Lathyrus odoratus",
+                    "Lathyrus latifolius",
+                    "Lathyrus",
+                    "everlasting pea",
+                    "perennial pea",
+                    "annual sweet pea",
+                    "ornamental sweet pea",
+                    "sweet pea vine",
+                    "sweet pea flower",
+                    "sweet pea seeds",
+                    "sweet pea bouquet",
+                    "cut sweet peas",
+                    "lathyrus pea",
+                    "lathyrism",
+                    "sweetpea",
+                    "sweet pea plant"
+                ],
+                categories: [.plants],
+                imageAsset: "sweet_pea_thumb",
+                description: """
+                Sweet peas are popular ornamental climbing plants known for their fragrant, colorful blooms in shades of pink, purple, red, white, and mauve. They are commonly used in bouquets, floral arrangements, and garden plantings. Pets may encounter sweet peas when cut flowers are brought into the home or when they have access to garden-grown plants.
+
+                All parts of the sweet pea plant are toxic, with the seeds being the most dangerous. The ornamental sweet pea (Lathyrus odoratus) found in bouquets and home gardens is generally considered less toxic than field or forage varieties (Lathyrus sativus, L. latifolius), which have been associated with more severe poisoning in livestock and humans. However, all Lathyrus species should be considered toxic until proven otherwise.
+
+                Sweet pea toxicity is primarily cumulative — serious neurological effects (lathyrism) are most often seen with repeated or chronic ingestion over days to weeks, particularly of seeds. A single exposure to flowers or stems from a bouquet is less likely to cause severe effects, but any ingestion warrants veterinary evaluation due to the neurological potential of the toxins involved.
+                """,
+                toxicityInfo: """
+                Sweet peas contain lathyrogens, a group of toxic amino acids and nitriles found in all parts of the plant, with the highest concentration in the seeds. The two primary toxic compounds are beta-aminopropionitrile (BAPN) and beta-N-oxalyl-amino-L-alanine (BOAA).
+
+                BAPN interferes with lysyl oxidase, an enzyme critical for collagen cross-linking. This can weaken connective tissues including blood vessels, cartilage, and bone. BOAA acts as an excitatory neurotoxin that overstimulates nerve receptors in a manner similar to glutamate toxicity (a process that can damage nerve cells), which can lead to neurological signs including tremors, weakness, and seizures.
+
+                In a typical household exposure — such as a pet chewing on cut sweet pea flowers or stems from a bouquet — the most likely outcome is gastrointestinal upset (vomiting, diarrhea, lethargy). The more serious neurological condition known as lathyrism is primarily associated with chronic or repeated ingestion of seeds over extended periods, and is more commonly reported in grazing livestock. However, because of the neurological potential of these toxins, any ingestion of sweet pea plant material should be reported to a veterinarian.
+                """,
+                onsetTime: OnsetTime(
+                    early: "Signs of GI upset (vomiting, diarrhea, lethargy) may appear within a few hours of ingestion.",
+                    delayed: "Neurological signs (tremors, weakness, incoordination, seizures) are more typically associated with chronic or repeated ingestion over days to weeks. In acute cases involving significant seed ingestion, neurological signs may develop within 24–48 hours."
+                ),
+                symptoms: [
+                    "Vomiting",
+                    "Diarrhea",
+                    "Lethargy or weakness",
+                    "Decreased appetite",
+                    "Tremors",
+                    "Pacing or restlessness",
+                    "Incoordination (difficulty walking normally)",
+                    "Head pressing",
+                    "Seizures (in severe cases)"
+                ],
+                entrySeverity: .moderate,
+                speciesRisks: [
+                    SpeciesRisk(species: .dog, severity: .low, notes: "Dogs may chew on sweet pea vines in the garden or on cut flowers brought indoors. A typical single exposure to flowers or stems causes mild, self-limiting GI upset (vomiting, diarrhea, lethargy). The serious neurological effects of lathyrism require chronic or repeated ingestion over days to weeks, which is unlikely in household dogs. Seeds pose a greater risk due to higher lathyrogen concentration — prevent access to seed pods. Contact your veterinarian for any ingestion, especially if seeds were consumed."),
+                    SpeciesRisk(species: .cat, severity: .low, notes: "Cats may be attracted to sweet pea flowers in bouquets and chew on petals or stems. As with dogs, a single exposure to flowers is most likely to cause mild GI upset. Cats are unlikely to consume the quantities of seeds needed for serious neurological effects. However, due to the neurological potential of lathyrogens, any ingestion should be reported to a veterinarian. Keep sweet pea bouquets out of areas accessible to cats."),
+                    SpeciesRisk(species: .smallMammal, severity: .moderate, notes: "Rabbits, guinea pigs, and chinchillas are susceptible to sweet pea toxicity. Research studies have shown that guinea pigs may be particularly sensitive to the toxic effects of Lathyrus species. Small mammals cannot vomit, so ingested plant material remains in their system and effects may be more pronounced. Small body size increases vulnerability even from modest amounts. Any ingestion warrants prompt veterinary evaluation."),
+                    SpeciesRisk(species: .bird, severity: .moderate, notes: "Sweet peas are listed as toxic to birds on multiple avian veterinary resources. Poultry (chickens, ducks, turkeys) consuming sweet pea seeds have been documented to develop neurological signs including abnormal neck posture, seizures, and arterial rupture. While specific data on pet bird species (parrots, budgies) is limited, the documented effects in poultry warrant caution. Do not allow pet birds access to any part of sweet pea plants, and keep cut flowers well out of reach."),
+                    SpeciesRisk(species: .reptile, severity: .low, notes: "Sweet peas are listed as toxic to reptiles on exotic animal veterinary resources. However, specific data on reptile toxicity from sweet pea ingestion is limited, and conclusions are based on the general toxic mechanism of lathyrogens rather than documented reptile cases. Herbivorous reptiles such as tortoises and iguanas are most at risk if they have access to sweet pea vines or seeds. Do not plant sweet peas near reptile enclosures.")
+                ],
+                preventionTips: [
+                    "Keep sweet pea bouquets and floral arrangements out of reach of all pets",
+                    "The seeds are the most toxic part of the plant — prevent access to seed pods in the garden",
+                    "The ornamental sweet pea (Lathyrus odoratus) is generally less toxic than field or forage varieties, but all Lathyrus species should be treated as toxic",
+                    "If growing sweet peas in your garden, fence off the area from pets, particularly dogs who may chew on vines",
+                    "Do not allow pet birds access to any part of sweet pea plants",
+                    "Do not plant sweet peas near tortoise or herbivorous reptile enclosures",
+                    "Contact your veterinarian for any ingestion — do not wait for symptoms to appear"
+                ],
+                sources: [
+                    "ASPCA Animal Poison Control Center — Lathyrus latifolius",
+                    "Pet Poison Helpline — Sweet Pea",
+                    "WagWalking Veterinary Resources — Sweet Pea Poisoning in Dogs",
+                    "Arizona Exotics Animal Hospital — Toxic Plants for Birds, Reptiles, and Small Mammals"
+                ],
+                relatedEntries: [
+                    "045fe2d3-3c59-4f15-b72a-09371b675d77"  // GI Irritant Plants — shares GI irritant component
                 ]
             ),
 
