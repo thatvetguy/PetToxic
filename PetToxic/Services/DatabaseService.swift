@@ -1802,7 +1802,11 @@ class DatabaseService {
                     "Spring crocus causes only mild GI upset, but if you're unsure whether a crocus is spring or autumn variety, treat any ingestion as an emergency"
                 ],
                 sources: ["ASPCA Animal Poison Control Center", "Pet Poison Helpline", "VCA Animal Hospitals", "Merck Veterinary Manual"],
-                relatedEntries: nil
+                relatedEntries: [
+                    "ee90d3c6-f9cc-40ab-ae91-c13bc481ab16",  // Ranunculus (Buttercup) - protoanemonin irritant, same family as Clematis
+                    "505a8b0e-0325-4419-8678-f543ad301997",  // Anemone (Windflower) - protoanemonin irritant, same Ranunculaceae family
+                    "c8a18b83-133f-4be4-9aff-5cda3f6f6a18"  // Pencil Cactus - standalone entry for this Euphorbia species (eye injury risk)
+                ]
             ),
 
             // MARK: - Brunfelsia (Yesterday, Today and Tomorrow)
@@ -13291,6 +13295,333 @@ Albuterol has a plasma half-life of approximately 4 hours. Clinical signs typica
                 sources: ["ASPCA Animal Poison Control Center", "Pet Poison Helpline", "Cornell University — Plants Poisonous to Livestock", "National Capital Poison Center (Poison Control)"],
                 relatedEntries: ["0bf15704-86a3-40a9-94e1-4ba4ffbdea1b", "b2e1e5d4-0d12-410b-83dc-da106bbc2199"]  // Castor Beans, Wisteria - shared toxalbumin mechanism
             ),
+
+            // MARK: - Ranunculus (Buttercup)
+            ToxicItem(
+                id: UUID(uuidString: "ee90d3c6-f9cc-40ab-ae91-c13bc481ab16")!,
+                name: "Ranunculus (Buttercup)",
+                alternateNames: [
+                    "Buttercup",
+                    "buttercups",
+                    "Persian buttercup",
+                    "Ranunculus asiaticus",
+                    "Ranunculus spp.",
+                    "Ranunculus acris",
+                    "Ranunculus repens",
+                    "butter cress",
+                    "figwort",
+                    "crowfoot",
+                    "tall buttercup",
+                    "creeping buttercup",
+                    "spearwort",
+                    "water crowfoot",
+                    "Persian ranunculus",
+                    "ranunculis",
+                    "ranunculas",
+                    "ranunkulus",
+                    "Ranunculaceae"
+                ],
+                categories: [.plants],
+                imageAsset: "ranunculus_thumb",
+                description: """
+Ranunculus is a large genus of over 600 flowering plants in the family Ranunculaceae, commonly known as buttercups. Wild species like tall buttercup (*Ranunculus acris*) and creeping buttercup (*Ranunculus repens*) grow throughout North America in meadows, fields, and along waterways. The ornamental Persian buttercup (*Ranunculus asiaticus*) is one of the most popular cut flowers in the floral industry, prized for its layered, rose-like blooms in a wide range of colors including pink, red, orange, yellow, and white.
+
+Pet exposure most commonly occurs when dogs encounter wild buttercups outdoors or when cats chew on cut flowers in floral arrangements. All parts of the plant are toxic when fresh, with the flowers containing the highest concentration of toxin. Importantly, the toxin breaks down when the plant is dried, so dried buttercup in hay is generally not a concern.
+""",
+                toxicityInfo: """
+Ranunculus plants contain a compound called ranunculin, which is stored harmlessly in intact plant tissue. When the plant is chewed or crushed, an enzymatic reaction converts ranunculin into **protoanemonin** — a bitter-tasting, oily substance that is a potent vesicant (blister-causing agent). Protoanemonin causes intense irritation and blistering on contact with mucous membranes, including the mouth, throat, and gastrointestinal tract.
+
+The bitter taste and immediate burning sensation in the mouth serve as a natural deterrent — most animals stop eating the plant quickly, which limits the amount of toxin consumed. This self-limiting behavior is why serious poisoning is uncommon in companion animals, though oral ulceration and GI upset can still occur from even brief chewing.
+
+Skin contact with the sap can also cause contact dermatitis (skin redness, irritation, and blistering), particularly on areas with thin fur or exposed skin. Protoanemonin breaks down into the inactive compound anemonin when the plant dries, which is why dried buttercup in hay does not pose a toxicity risk.
+""",
+                onsetTime: OnsetTime(
+                    early: "Minutes to hours — oral irritation begins immediately upon chewing; GI symptoms typically within 1–2 hours",
+                    delayed: "Oral ulcers may develop or worsen over 24–48 hours"
+                ),
+                symptoms: [
+                    "Excessive drooling (hypersalivation)",
+                    "Pawing at the mouth",
+                    "Oral blisters or ulcers",
+                    "Vomiting",
+                    "Diarrhea (may be bloody in severe cases)",
+                    "Loss of appetite (anorexia)",
+                    "Depression or lethargy",
+                    "Wobbly gait (ataxia) — with larger ingestions",
+                    "Skin redness or blistering from sap contact",
+                    "Abdominal pain"
+                ],
+                entrySeverity: .low,
+                speciesRisks: [
+                    SpeciesRisk(species: .dog, severity: .low, notes: "Dogs are the most commonly affected species, particularly those encountering wild buttercups outdoors. The bitter taste and immediate oral irritation typically prevent dogs from eating large amounts. Most cases involve mild oral irritation and transient GI upset that resolves without intervention. Puppies and small dogs may be more significantly affected."),
+                    SpeciesRisk(species: .cat, severity: .low, notes: "Cats may chew on cut ranunculus flowers in floral arrangements. The same self-limiting bitter taste applies. Symptoms are generally mild oral irritation and brief GI upset. Cats are fastidious eaters and unlikely to consume large quantities."),
+                    SpeciesRisk(species: .smallMammal, severity: .moderate, notes: "All Ranunculus species are toxic to rabbits, guinea pigs, and other small mammals. Protoanemonin causes oral inflammation and GI irritation. Because rabbits cannot vomit, ingested material remains in their system and may cause more prolonged GI distress. Small body size means less plant material is needed to cause effects. Monitor for lethargy, anorexia, and signs of abdominal pain."),
+                    SpeciesRisk(species: .bird, severity: .moderate, notes: "Buttercup is listed as toxic to pet birds. Small body size increases susceptibility — even small amounts of protoanemonin could cause significant oral and GI irritation. Birds may encounter cut flowers or garden plants. Monitor for lethargy, decreased appetite, and fluffed feathers."),
+                    SpeciesRisk(species: .reptile, severity: .low, notes: "Ranunculus is listed as toxic to tortoises and herbivorous reptiles on exotic animal care resources. Herbivorous reptiles that graze in gardens could potentially encounter wild buttercups. The irritant effects of protoanemonin would affect mucous membranes similarly to mammals, but voluntary ingestion is unlikely due to the bitter taste. Keep out of reptile enclosures as a precaution.")
+                ],
+                preventionTips: [
+                    "Keep cut ranunculus flowers in arrangements out of reach of pets, especially cats who may chew on floral bouquets",
+                    "Survey your yard and garden for wild buttercups — they are common in meadows, fields, and damp areas throughout North America",
+                    "Be especially vigilant in spring when buttercups are flowering and at their most toxic",
+                    "If you grow ornamental Persian buttercups, place them in areas your pets cannot access",
+                    "Wear gloves when handling fresh buttercup plants, as the sap can cause skin irritation in humans as well",
+                    "Dried buttercup in hay is not a toxicity concern — the toxin breaks down during the drying process"
+                ],
+                sources: [
+                    "ASPCA Animal Poison Control Center",
+                    "Pet Poison Helpline",
+                    "Merck Veterinary Manual",
+                    "Clinical Veterinary Toxicology (Plumlee)"
+                ],
+                relatedEntries: [
+                    "045fe2d3-3c59-4f15-b72a-09371b675d77",  // GI Irritant Plants - same irritant mechanism, Clematis in same family
+                    "505a8b0e-0325-4419-8678-f543ad301997"  // Anemone (Windflower) - same family (Ranunculaceae), same toxin (protoanemonin)
+                ]
+            ),
+
+            // MARK: - Ruscus (Butcher's Broom)
+            ToxicItem(
+                id: UUID(uuidString: "1afa55b7-d37f-469f-9f8b-6ec3c0ff7471")!,
+                name: "Ruscus (Butcher's Broom)",
+                alternateNames: [
+                    "Butcher's broom",
+                    "butchers broom",
+                    "Ruscus aculeatus",
+                    "Ruscus hypoglossum",
+                    "Ruscus hypophyllum",
+                    "Italian ruscus",
+                    "Israeli ruscus",
+                    "knee holly",
+                    "box holly",
+                    "pettigree",
+                    "sweet broom",
+                    "Jew's myrtle",
+                    "Asparagaceae",
+                    "ruscus greenery",
+                    "floral ruscus",
+                    "ruscus filler",
+                    "cladophyll"
+                ],
+                categories: [.plants],
+                imageAsset: "ruscus_thumb",
+                description: """
+Ruscus is a genus of low-growing evergreen shrubs in the asparagus family (Asparagaceae), native to the Mediterranean region, western Europe, and parts of Africa. The most common species is butcher's broom (*Ruscus aculeatus*), named for the historical use of its stiff branches to clean butcher's blocks. The plant has unusual flat, leaf-like stems called cladodes (not true leaves) that are stiff, dark green, and end in sharp, spine-like tips. Female plants produce bright red berries.
+
+Ruscus is one of the most widely used filler greens in the floral industry. Italian ruscus (*Ruscus hypoglossum*) and Israeli ruscus (*Ruscus hypophyllum*) are staples in bouquets, wedding arrangements, and everyday floral deliveries — their long vase life (up to a month) and year-round availability make them a florist favorite. **Most pet owners will not recognize ruscus by name, but will have encountered it as the dark green foliage in flower arrangements.** Pet exposure most commonly occurs when cats or dogs chew on ruscus stems from floral bouquets brought into the home. All parts of the plant are toxic, with the bright red berries posing the greatest risk.
+""",
+                toxicityInfo: """
+Ruscus contains **steroidal saponins**, primarily ruscogenin and neoruscogenin, concentrated in the roots and rhizomes but present throughout the plant including the berries. Saponins are compounds that disrupt cell membranes — when ingested, they irritate the lining of the mouth and gastrointestinal tract, causing vomiting, diarrhea, and abdominal pain.
+
+More concerning is the potential for **hemolysis** (destruction of red blood cells). Steroidal saponins can damage red blood cell membranes, causing them to rupture. While significant hemolysis typically requires ingestion of larger amounts, the bright red berries may attract curious pets and small children, increasing the risk of a more substantial exposure.
+
+The plant also contains flavonoids and minor alkaloids that may contribute to its toxic effects. All species of Ruscus — including Italian ruscus and Israeli ruscus commonly found in floral arrangements — are considered toxic.
+""",
+                onsetTime: OnsetTime(
+                    early: "Within 1–4 hours — GI symptoms (vomiting, diarrhea, abdominal discomfort)",
+                    delayed: "12–24+ hours — signs of hemolysis (lethargy, weakness, pale gums) may develop after significant berry ingestion"
+                ),
+                symptoms: [
+                    "Vomiting",
+                    "Diarrhea",
+                    "Abdominal pain or cramping",
+                    "Excessive drooling (hypersalivation)",
+                    "Loss of appetite (anorexia)",
+                    "Lethargy or depression",
+                    "Weakness",
+                    "Pale gums (possible sign of hemolysis with significant ingestion)",
+                    "Dark or discolored urine (possible sign of hemolysis with significant ingestion)"
+                ],
+                entrySeverity: .moderate,
+                speciesRisks: [
+                    SpeciesRisk(species: .dog, severity: .moderate, notes: "Dogs may chew on ruscus stems from floral arrangements or encounter garden plants outdoors. The stiff, spiny cladodes may deter some chewing, but the bright red berries can be attractive. Saponins cause GI upset and potential hemolysis with larger ingestions."),
+                    SpeciesRisk(species: .cat, severity: .moderate, notes: "Cats are particularly at risk because ruscus is extremely common in floral bouquets brought into the home. Cats that chew on floral greenery may ingest enough to cause significant GI upset. There are anecdotal reports of cats requiring hospitalization after chewing on ruscus from flower arrangements."),
+                    SpeciesRisk(species: .smallMammal, severity: .moderate, notes: "Saponins are toxic to rabbits, guinea pigs, and other small mammals. Small body size means less plant material is needed to cause effects. Because rabbits cannot vomit, ingested saponins may cause more prolonged GI distress. Keep floral arrangements containing ruscus away from small pet enclosures."),
+                    SpeciesRisk(species: .bird, severity: .high, notes: "Birds are more susceptible due to their small body size and fast metabolism. Even small amounts of saponin-containing plant material could cause significant GI upset and potentially hemolytic effects. Keep ruscus-containing arrangements well away from bird cages and aviaries."),
+                    SpeciesRisk(species: .reptile, severity: .low, notes: "Limited data available for reptiles specifically. Herbivorous reptiles (tortoises, iguanas) could potentially ingest ruscus if planted in or near enclosures. The stiff, spiny texture of butcher's broom makes it unappealing to most reptiles. Avoid planting near reptile habitats as a precaution.")
+                ],
+                preventionTips: [
+                    "Inspect floral arrangements and bouquets for ruscus — it is one of the most common filler greens used by florists and pet owners often don't realize it's there",
+                    "Ask your florist for pet-safe alternatives to ruscus, such as leather leaf fern, wax flower, or statice",
+                    "Place floral arrangements containing ruscus in rooms that are inaccessible to pets",
+                    "If you grow ruscus outdoors, keep pets away from plants with berries — the bright red berries may be especially attractive to curious animals",
+                    "Be extra cautious around holidays (Valentine's Day, Mother's Day) and events (weddings, funerals) when floral deliveries are most common"
+                ],
+                sources: [
+                    "Merck Veterinary Manual",
+                    "Cats Protection (UK)",
+                    "European Medicines Agency — Ruscus aculeatus Assessment Report",
+                    "PubMed — Ruscus Genus: Bioactive Steroidal Saponins (Masullo et al., 2016)"
+                ],
+                relatedEntries: nil
+            ),
+
+            // MARK: - Pencil Cactus (Euphorbia tirucalli)
+            ToxicItem(
+                id: UUID(uuidString: "c8a18b83-133f-4be4-9aff-5cda3f6f6a18")!,
+                name: "Pencil Cactus",
+                alternateNames: [
+                    "Euphorbia tirucalli",
+                    "firestick plant",
+                    "sticks on fire",
+                    "sticks of fire",
+                    "fire sticks",
+                    "milk bush",
+                    "pencil tree",
+                    "finger tree",
+                    "pencil euphorbia",
+                    "pencil succulent",
+                    "Malabar tree",
+                    "naked lady",
+                    "firestick cactus",
+                    "firestick succulent",
+                    "pencil plant",
+                    "Euphorbiaceae",
+                    "euphorbia sap",
+                    "pencil catus",
+                    "pensil cactus"
+                ],
+                categories: [.plants],
+                imageAsset: "pencil_cactus_thumb",
+                description: """
+The pencil cactus (*Euphorbia tirucalli*) is a succulent shrub or small tree in the spurge family (Euphorbiaceae) — despite its name, it is not a true cactus. Native to Africa and India, it has become extremely popular as a landscaping plant in warm climates (USDA zones 9–11) and as an indoor houseplant. It is especially common in California and the southern United States. The plant features thin, pencil-like cylindrical green branches with tiny, short-lived leaves. The popular cultivar "Sticks on Fire" has vibrant red, orange, and yellow stem tips that make it particularly eye-catching.
+
+When any part of the plant is broken, cut, or damaged, it releases a white, milky sap (latex) that is among the most irritating plant substances known. **The sap is the primary hazard — not ingestion of the plant itself.** Pets can be exposed by chewing on branches (releasing sap into the mouth), rubbing against broken stems (skin contact), or getting sap in their eyes from a damaged plant. The sap remains irritating even after it dries on surfaces, clothing, or fur, and pets may be secondarily exposed by grooming sap off their coat.
+""",
+                toxicityInfo: """
+The milky latex of pencil cactus contains **diterpene esters** (particularly euphorbol esters) and **triterpene saponins** — potent irritants that cause chemical-burn-like damage to any tissue they contact.
+
+**Oral/GI exposure:** When a pet chews on the plant, the released sap causes immediate burning and irritation of the mouth, tongue, and throat. If swallowed, it irritates the esophagus and stomach lining, causing drooling, vomiting, and diarrhea. The bitter taste and immediate oral pain typically prevent large ingestions.
+
+**Ocular (eye) exposure:** This is the most serious concern with pencil cactus. Sap that contacts the eyes — either directly from a broken branch or transferred from fur or paws during grooming — can cause severe inflammation including conjunctivitis (red, swollen eyes), keratitis (corneal inflammation), corneal epithelial defects, and anterior uveitis (inflammation inside the eye). Vision may worsen over the first 1–2 days even with treatment. Untreated ocular exposure can lead to corneal scarring and, in rare cases, permanent vision loss.
+
+**Dermal (skin) exposure:** Contact with the sap causes redness, irritation, and blistering, especially on thinly-furred areas. Dogs have developed skin burns after rolling in broken plant material. The sap can remain irritating on fur, clothing, and surfaces even after drying.
+
+**If sap contacts your pet's eyes, rinse the eyes with clean water or saline immediately and seek veterinary care urgently — eye damage can worsen rapidly in the first 24–48 hours.**
+""",
+                onsetTime: OnsetTime(
+                    early: "Immediate to minutes — oral burning and pain begin on contact; skin irritation develops within minutes to hours; eye symptoms begin immediately",
+                    delayed: "Eye damage may worsen over 1–2 days despite initial treatment; corneal healing typically takes 4–10 days; skin blistering may appear hours after contact"
+                ),
+                symptoms: [
+                    "Excessive drooling (hypersalivation)",
+                    "Pawing at the mouth or face",
+                    "Vomiting",
+                    "Diarrhea",
+                    "Red, swollen, or watery eyes (conjunctivitis)",
+                    "Squinting or holding eyes shut (blepharospasm)",
+                    "Cloudy or hazy eye appearance (corneal edema)",
+                    "Skin redness, irritation, or blistering at contact site",
+                    "Depression or lethargy",
+                    "Loss of appetite (anorexia)",
+                    "Skin burns on thinly-furred areas (belly, groin, armpits)"
+                ],
+                entrySeverity: .moderate,
+                speciesRisks: [
+                    SpeciesRisk(species: .dog, severity: .moderate, notes: "Dogs are the most commonly affected species — they may chew on outdoor landscaping plants or knock over indoor pots, releasing sap. There are documented cases of dogs developing severe skin burns after contact with broken branches and serious eye injury from sap exposure. Dogs may also transfer sap from fur to eyes during grooming."),
+                    SpeciesRisk(species: .cat, severity: .moderate, notes: "Cats may chew on pencil cactus kept as a houseplant. The bigger risk for cats is secondary exposure — sap transferred to fur and then ingested or rubbed into eyes during grooming. Cats may show more pronounced neurological symptoms than dogs due to their metabolic differences."),
+                    SpeciesRisk(species: .smallMammal, severity: .moderate, notes: "The caustic latex sap would cause oral and GI irritation in rabbits, guinea pigs, and other small mammals. Small body size increases risk. Because rabbits cannot vomit, ingested sap remains in their system. Keep pencil cactus plants well away from small pet enclosures."),
+                    SpeciesRisk(species: .bird, severity: .high, notes: "Birds are extremely susceptible due to their small body size and sensitive respiratory systems. The irritant compounds in the latex could cause severe oral and GI damage even in small amounts. Fumes from burning Euphorbia material are also toxic. Keep pencil cactus away from bird cages and aviaries."),
+                    SpeciesRisk(species: .reptile, severity: .low, notes: "Limited data available. The caustic sap could cause irritation to mucous membranes if contacted. Most reptiles are unlikely to chew on pencil cactus due to the milky sap and lack of palatability. Do not plant near reptile enclosures as a precaution.")
+                ],
+                preventionTips: [
+                    "Keep pencil cactus houseplants well out of reach of all pets — consider whether this plant is appropriate for a home with curious animals",
+                    "If you have pencil cactus in your landscaping (very common in California and the Southwest), supervise pets in areas where these plants grow",
+                    "Wear gloves and eye protection when pruning or repotting pencil cactus — the sap releases easily from any cut or broken surface",
+                    "If sap gets on your pet's fur, bathe them promptly to prevent secondary exposure through grooming",
+                    "Be aware that the sap can remain irritating even after it dries on surfaces, clothing, or fur",
+                    "Never burn pruned pencil cactus material — the fumes are toxic",
+                    "The colorful 'Sticks on Fire' cultivar is the same species and equally toxic despite its popularity as a decorative plant"
+                ],
+                sources: [
+                    "ASPCA Animal Poison Control Center",
+                    "Pet Poison Helpline",
+                    "StatPearls (NCBI) — Euphorbia tirucalli Toxicity",
+                    "PubMed Central — Keratouveitis caused by Euphorbia plant sap (Basak et al., 2009)"
+                ],
+                relatedEntries: [
+                    "045fe2d3-3c59-4f15-b72a-09371b675d77"  // GI Irritant Plants - Pencil Cactus listed in that entry's alternate names; now has standalone entry
+                ]
+            ),
+
+            // MARK: - Anemone (Windflower)
+            ToxicItem(
+                id: UUID(uuidString: "505a8b0e-0325-4419-8678-f543ad301997")!,
+                name: "Anemone (Windflower)",
+                alternateNames: [
+                    "Windflower",
+                    "wind flower",
+                    "Anemone spp.",
+                    "Anemone blanda",
+                    "Anemone coronaria",
+                    "Anemone hupehensis",
+                    "Anemone nemorosa",
+                    "Grecian windflower",
+                    "Balkan anemone",
+                    "Japanese anemone",
+                    "wood anemone",
+                    "poppy anemone",
+                    "Anemonoides",
+                    "anenome",
+                    "anemonie",
+                    "anemonee"
+                ],
+                categories: [.plants],
+                imageAsset: "anemone_thumb",
+                description: """
+Anemones are a genus of approximately 200 flowering plants in the buttercup family (Ranunculaceae), commonly known as windflowers. They are native across temperate regions of Europe, Asia, and North America. Popular garden and floral varieties include the Grecian windflower (*Anemone blanda*), the poppy anemone (*Anemone coronaria*), and the Japanese anemone (*Anemone hupehensis*). Anemones are widely used in floral arrangements and wedding bouquets, and are common in spring gardens and woodland plantings.
+
+Pet exposure typically occurs when cats or dogs chew on cut flowers brought indoors or encounter garden plants outdoors. All parts of the plant are toxic when fresh, as they contain the same irritant compound found in buttercups and other members of the Ranunculaceae family. Like buttercups, the toxin breaks down when the plant dries.
+""",
+                toxicityInfo: """
+Anemones contain the glycoside ranunculin, which converts to **protoanemonin** when the plant tissue is damaged by chewing or crushing — the same toxic mechanism found in buttercups, clematis, and other members of the buttercup family. Protoanemonin is a vesicant (blister-causing agent) that causes intense irritation to mucous membranes on contact, including the mouth, throat, and gastrointestinal tract.
+
+The bitter taste and immediate burning sensation act as a natural deterrent, causing most animals to stop eating the plant before a significant amount is consumed. This self-limiting behavior means serious poisoning is uncommon in companion animals, though oral irritation and GI upset can still occur from even brief contact.
+
+Skin contact with the fresh sap can also cause contact dermatitis (skin redness, irritation, and blistering), particularly on areas with less fur. As with all protoanemonin-containing plants, the toxin degrades when the plant dries, making dried plant material much less hazardous.
+""",
+                onsetTime: OnsetTime(
+                    early: "Minutes to hours — oral irritation begins immediately upon chewing; GI symptoms typically within 1–2 hours",
+                    delayed: "Oral ulcers or blisters may develop or worsen over 24–48 hours"
+                ),
+                symptoms: [
+                    "Excessive drooling (hypersalivation)",
+                    "Pawing at the mouth",
+                    "Oral blisters or ulcers",
+                    "Vomiting",
+                    "Diarrhea",
+                    "Loss of appetite (anorexia)",
+                    "Depression or lethargy",
+                    "Abdominal pain",
+                    "Skin redness or blistering from sap contact",
+                    "Wobbly gait (ataxia) — rare, only with large ingestions"
+                ],
+                entrySeverity: .low,
+                speciesRisks: [
+                    SpeciesRisk(species: .dog, severity: .low, notes: "Dogs may encounter anemones in the garden or chew on cut flowers. The bitter taste and immediate oral irritation typically prevent significant ingestion. Most cases involve mild oral irritation and transient GI upset. Puppies and small dogs may be more affected due to their smaller body size and tendency to chew on plants."),
+                    SpeciesRisk(species: .cat, severity: .low, notes: "Cats may chew on cut anemone flowers in floral arrangements. Effects are generally limited to mild oral irritation and brief GI upset. The bitter taste deters most cats from consuming large quantities."),
+                    SpeciesRisk(species: .smallMammal, severity: .moderate, notes: "Anemone is listed as toxic to rabbits, guinea pigs, and other small mammals. Protoanemonin causes oral inflammation and digestive tract irritation. Because rabbits cannot vomit, ingested toxin remains in their system and may cause more prolonged GI distress. Small body size increases risk. Keep anemones out of areas accessible to small pets."),
+                    SpeciesRisk(species: .bird, severity: .moderate, notes: "Small body size makes birds more susceptible to the irritant effects of protoanemonin. Even small amounts could cause significant oral and GI irritation. Keep cut anemone flowers and garden plants away from bird cages and aviaries."),
+                    SpeciesRisk(species: .reptile, severity: .low, notes: "Anemone is listed as toxic to tortoises on reptile care resources. Herbivorous reptiles that graze in gardens could potentially encounter anemones. The irritant effects of protoanemonin would affect mucous membranes, but voluntary ingestion is unlikely due to the bitter taste. Do not plant anemones in or near reptile enclosures.")
+                ],
+                preventionTips: [
+                    "Keep cut anemone flowers in arrangements out of reach of pets — they are extremely popular in bouquets and floral deliveries",
+                    "Be aware that anemones are common in spring gardens and woodland plantings",
+                    "If you grow anemones in your garden, fence off planting areas or choose locations your pets cannot access",
+                    "Wear gloves when handling fresh anemone plants, as the sap can cause skin irritation",
+                    "Dried anemone plant material is much less toxic than fresh — the toxin degrades as the plant dries"
+                ],
+                sources: [
+                    "ASPCA Animal Poison Control Center",
+                    "Pet Poison Helpline",
+                    "NC State Extension",
+                    "California Turtle & Tortoise Club (CTTC)"
+                ],
+                relatedEntries: [
+                    "ee90d3c6-f9cc-40ab-ae91-c13bc481ab16",  // Ranunculus (Buttercup) - same family (Ranunculaceae), same toxin (protoanemonin)
+                    "045fe2d3-3c59-4f15-b72a-09371b675d77"  // GI Irritant Plants - same irritant mechanism
+                ]
+            ),
+
             ToxicItem(
                 id: UUID(uuidString: "00112233-4455-6677-8899-aabbccddef26")!,
                 name: "Heat Stroke & Hot Surfaces",
