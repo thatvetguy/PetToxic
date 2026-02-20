@@ -10,17 +10,26 @@ struct ArticleDetailView: View {
     /// Used for contextual swipe navigation (next/previous entry within category).
     var sourceCategory: Category? = nil
 
-    init(item: ToxicItem, saveSearchTerm: Bool = false, searchQuery: String? = nil, sourceCategory: Category? = nil) {
+    /// The severity group the user navigated from. Nil unless opened from severity list.
+    var sourceSeverityGroup: SeverityGroupLevel? = nil
+
+    /// Whether this entry was opened with navigable context (category or severity list).
+    private var hasNavigableSource: Bool {
+        sourceCategory != nil || sourceSeverityGroup != nil
+    }
+
+    init(item: ToxicItem, saveSearchTerm: Bool = false, searchQuery: String? = nil, sourceCategory: Category? = nil, sourceSeverityGroup: SeverityGroupLevel? = nil) {
         self.initialItem = item
         self.saveSearchTerm = saveSearchTerm
         self.searchQuery = searchQuery
         self.sourceCategory = sourceCategory
+        self.sourceSeverityGroup = sourceSeverityGroup
     }
 
-    /// The currently displayed item. During swipe navigation within a category,
+    /// The currently displayed item. During swipe navigation within a category or severity group,
     /// returns the item at the current context index. Otherwise returns initialItem.
     private var item: ToxicItem {
-        if sourceCategory != nil,
+        if hasNavigableSource,
            navContext.hasContext,
            let index = navContext.currentEntryIndex,
            index >= 0, index < navContext.visibleEntries.count {
@@ -75,12 +84,14 @@ struct ArticleDetailView: View {
                     }
 
                     // Symptoms
-                    section(title: "Symptoms to watch for") {
-                        SymptomsListView(symptoms: item.symptoms)
-                        GlossaryDropdownView(
-                            terms: GlossaryService.shared.findTerms(in: item.symptoms)
-                        )
-                        .padding(.top, 8)
+                    if !item.symptoms.isEmpty {
+                        section(title: "Symptoms to watch for") {
+                            SymptomsListView(symptoms: item.symptoms)
+                            GlossaryDropdownView(
+                                terms: GlossaryService.shared.findTerms(in: item.symptoms)
+                            )
+                            .padding(.top, 8)
+                        }
                     }
 
                     // Onset time (if available)
@@ -93,8 +104,10 @@ struct ArticleDetailView: View {
                         preventionTipsSection(preventionTips)
                     }
 
-                    // Emergency contacts
-                    emergencySection
+                    // Emergency contacts (hidden for purely educational entries)
+                    if !item.speciesRisks.isEmpty || !item.symptoms.isEmpty {
+                        emergencySection
+                    }
 
                     // Related entries
                     relatedEntriesSection
@@ -103,7 +116,9 @@ struct ArticleDetailView: View {
                     GlossaryEntryLink()
 
                     // Sources
-                    sourcesSection
+                    if !item.sources.isEmpty {
+                        sourcesSection
+                    }
                 }
                 .padding()
                 .padding(.bottom, AppLayout.tabBarBottomPadding)
@@ -144,7 +159,7 @@ struct ArticleDetailView: View {
             if saveSearchTerm {
                 SearchContext.shared.saveIfPending()
             }
-            if sourceCategory != nil {
+            if hasNavigableSource {
                 navContext.enterEntryDetail(entry: item)
             } else {
                 navContext.enterEntryDetailWithoutContext()
@@ -155,7 +170,7 @@ struct ArticleDetailView: View {
             // SwiftUI may reuse this view without firing .onAppear.
             isBookmarked = viewModel.isBookmarked(item)
             viewModel.recordView(of: item)
-            if sourceCategory != nil {
+            if hasNavigableSource {
                 navContext.enterEntryDetail(entry: item)
             } else {
                 navContext.enterEntryDetailWithoutContext()
@@ -185,8 +200,8 @@ struct ArticleDetailView: View {
                     .padding(.vertical)
             }
 
-            // Navigation arrows (only when browsing within a category)
-            if sourceCategory != nil && navContext.hasContext &&
+            // Navigation arrows (when browsing within a category or severity group)
+            if hasNavigableSource && navContext.hasContext &&
                (navContext.canSwipeToPreviousEntry || navContext.canSwipeToNextEntry) {
                 HStack {
                     if navContext.canSwipeToPreviousEntry {

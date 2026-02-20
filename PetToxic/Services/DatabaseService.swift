@@ -3,6 +3,10 @@ import Foundation
 class DatabaseService {
     static let shared = DatabaseService()
 
+    /// UUID for the "Understanding Severity Ratings" explainer entry.
+    /// Used to exclude it from search results and pin it in browse lists.
+    static let severityExplainerId = UUID(uuidString: "B3F1A2D4-E5C6-47F8-9A0B-1C2D3E4F5A6B")!
+
     private var allItems: [ToxicItem] = []
 
     private init() {
@@ -14313,6 +14317,53 @@ Encounters peak in **spring and fall** when porcupines are more active with fora
                     "Hill's Pet Nutrition — My Pet Ate a Lizard: What Should I Do?"
                 ],
                 relatedEntries: ["00112233-4455-6677-8899-aabbccddef05"]
+            ),
+
+            // MARK: - Understanding Severity Ratings (Explainer)
+            ToxicItem(
+                id: DatabaseService.severityExplainerId,
+                name: "Understanding Severity Ratings",
+                alternateNames: [
+                    "severity levels",
+                    "rating system",
+                    "color codes",
+                    "toxicity scale",
+                    "danger levels",
+                    "risk levels",
+                    "severity guide",
+                    "severity explained",
+                    "what do the colors mean",
+                    "red orange yellow green"
+                ],
+                categories: [.informational],
+                imageAsset: "severity_thumb",
+                description: """
+                Pet Toxic uses a color-coded severity rating system to help you quickly understand how dangerous a substance is to your pet. Each entry is rated separately for every species because the same substance can be far more dangerous to one animal than another.
+
+                **Severe (Red)** — Life-threatening. Immediate emergency veterinary care is critical. Even small exposures can be fatal without treatment.
+
+                **High (Orange)** — Serious symptoms expected. Seek veterinary care promptly. Delayed treatment can lead to significant harm or complications.
+
+                **Moderate (Yellow)** — Significant symptoms are possible. Veterinary evaluation is recommended to assess your pet and determine if treatment is needed.
+
+                **Low (Green)** — Mild, usually self-limiting effects. Monitor your pet closely and contact your veterinarian if symptoms worsen or persist.
+
+                **Informational (Purple)** — Educational entries that describe categories of hazards, mechanical risks, or general safety topics rather than a specific toxic substance.
+                """,
+                toxicityInfo: """
+                Severity ratings reflect the typical danger level based on common real-world exposures — not worst-case or best-case scenarios. They are assigned per species because animals metabolize substances differently. For example, a substance rated Low for dogs might be Severe for cats.
+
+                **Important:** Severity ratings are general guidelines, not guarantees. The actual risk to your individual pet depends on many factors including the amount ingested, your pet's size, age, breed, and overall health. A "Low" rating does not mean a substance is safe — it means serious harm is less likely with typical exposures.
+
+                When in doubt, always contact your veterinarian or an animal poison control center. It is always better to call and find out the exposure was minor than to wait and risk your pet's health.
+                """,
+                onsetTime: nil,
+                symptoms: [],
+                entrySeverity: nil,
+                speciesRisks: [],
+                preventionTips: nil,
+                sources: [],
+                relatedEntries: nil
             )
         ]
     }
@@ -14338,8 +14389,10 @@ Encounters peak in **spring and fall** when porcupines are more active with fora
         let lowercasedQuery = query.lowercased()
 
         var results = allItems.filter { item in
-            item.name.lowercased().contains(lowercasedQuery) ||
-            item.alternateNames.contains { $0.lowercased().contains(lowercasedQuery) }
+            // Exclude the severity explainer from search results
+            guard item.id != DatabaseService.severityExplainerId else { return false }
+            return item.name.lowercased().contains(lowercasedQuery) ||
+                item.alternateNames.contains { $0.lowercased().contains(lowercasedQuery) }
         }
 
         if let species = species, !species.isEmpty {

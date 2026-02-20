@@ -15,6 +15,12 @@ struct CategoryEntry: Hashable {
     let sourceCategory: Category
 }
 
+/// A ToxicItem opened from a severity list, carrying its source severity group.
+struct SeverityEntry: Hashable {
+    let item: ToxicItem
+    let sourceSeverityGroup: SeverityGroupLevel
+}
+
 /// Tracks navigation state within the Browse tab to enable context-aware swipe gestures.
 /// When the user is viewing a category list or entry detail, swipe gestures navigate
 /// within that context rather than switching tabs.
@@ -26,8 +32,11 @@ class BrowseNavigationContext {
     /// Navigation depth: 0 = grid, 1 = category list, 2 = entry detail
     var depth: Int = 0
 
-    /// Current category being viewed (nil when at grid level)
+    /// Current category being viewed (nil when at grid level or in severity mode)
     var currentCategory: Category? = nil
+
+    /// Current severity group being viewed (nil when not in severity mode)
+    var currentSeverityGroup: SeverityGroupLevel? = nil
 
     /// Current entry index within visibleEntries (nil when not viewing entry)
     var currentEntryIndex: Int? = nil
@@ -49,6 +58,7 @@ class BrowseNavigationContext {
     var isAtGridLevel: Bool { depth == 0 }
     var isAtCategoryLevel: Bool { depth == 1 }
     var isAtEntryLevel: Bool { depth == 2 }
+    var isSeverityMode: Bool { currentSeverityGroup != nil }
 
     // MARK: - Computed Properties: Entry Navigation
 
@@ -109,6 +119,38 @@ class BrowseNavigationContext {
         return Category.allCases.firstIndex(of: category).map { Category.allCases.distance(from: Category.allCases.startIndex, to: $0) }
     }
 
+    // MARK: - Computed Properties: Severity Group Navigation
+
+    var canSwipeToPreviousSeverityGroup: Bool {
+        guard let group = currentSeverityGroup else { return false }
+        let groups = SeverityGroupLevel.allCases
+        guard let index = groups.firstIndex(of: group) else { return false }
+        return index > groups.startIndex
+    }
+
+    var canSwipeToNextSeverityGroup: Bool {
+        guard let group = currentSeverityGroup else { return false }
+        let groups = SeverityGroupLevel.allCases
+        guard let index = groups.firstIndex(of: group) else { return false }
+        return groups.index(after: index) < groups.endIndex
+    }
+
+    var previousSeverityGroup: SeverityGroupLevel? {
+        guard let group = currentSeverityGroup else { return nil }
+        let groups = SeverityGroupLevel.allCases
+        guard let index = groups.firstIndex(of: group), index > groups.startIndex else { return nil }
+        return groups[groups.index(before: index)]
+    }
+
+    var nextSeverityGroup: SeverityGroupLevel? {
+        guard let group = currentSeverityGroup else { return nil }
+        let groups = SeverityGroupLevel.allCases
+        guard let index = groups.firstIndex(of: group) else { return nil }
+        let next = groups.index(after: index)
+        guard next < groups.endIndex else { return nil }
+        return groups[next]
+    }
+
     // MARK: - State Update Methods
 
     /// Called when user navigates to a category list from the Browse grid.
@@ -119,6 +161,19 @@ class BrowseNavigationContext {
         }
         self.depth = 1
         self.currentCategory = category
+        self.visibleEntries = entries
+        self.currentEntryIndex = nil
+        self.hasContext = true
+    }
+
+    /// Called when user navigates to a severity list from the Browse grid.
+    func enterSeverityList(severityGroup: SeverityGroupLevel, entries: [ToxicItem]) {
+        if self.currentSeverityGroup != severityGroup {
+            self.selectedSpeciesFilter = .auto
+        }
+        self.depth = 1
+        self.currentSeverityGroup = severityGroup
+        self.currentCategory = nil
         self.visibleEntries = entries
         self.currentEntryIndex = nil
         self.hasContext = true
@@ -163,6 +218,7 @@ class BrowseNavigationContext {
     func returnToGrid() {
         self.depth = 0
         self.currentCategory = nil
+        self.currentSeverityGroup = nil
         self.currentEntryIndex = nil
         self.visibleEntries = []
         self.hasContext = false

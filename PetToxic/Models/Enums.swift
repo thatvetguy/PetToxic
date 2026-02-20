@@ -149,6 +149,61 @@ enum Category: String, Codable, CaseIterable, Identifiable {
     }
 }
 
+// MARK: - Severity Group Level (Browse by Severity)
+
+enum SeverityGroupLevel: String, CaseIterable, Hashable, Identifiable {
+    case severe
+    case high
+    case moderate
+    case low
+    case informational
+
+    var id: String { rawValue }
+
+    var displayName: String {
+        switch self {
+        case .severe: return "Severe"
+        case .high: return "High"
+        case .moderate: return "Moderate"
+        case .low: return "Low"
+        case .informational: return "Informational"
+        }
+    }
+
+    var color: Color {
+        switch self {
+        case .severe: return Color(red: 255/255, green: 68/255, blue: 68/255)
+        case .high: return Color(red: 255/255, green: 165/255, blue: 0/255)
+        case .moderate: return Color(red: 255/255, green: 215/255, blue: 0/255)
+        case .low: return Color(red: 144/255, green: 238/255, blue: 144/255)
+        case .informational: return Color(red: 160/255, green: 120/255, blue: 220/255)
+        }
+    }
+
+    var icon: String {
+        switch self {
+        case .severe: return "exclamationmark.octagon.fill"
+        case .high: return "exclamationmark.triangle.fill"
+        case .moderate: return "exclamationmark.circle.fill"
+        case .low: return "checkmark.circle.fill"
+        case .informational: return "info.circle.fill"
+        }
+    }
+
+    /// Whether an entry with the given entrySeverity belongs in this group.
+    /// `.moderate` includes both `.moderate` and `.lowModerate`.
+    /// `.informational` matches entries with nil entrySeverity.
+    func matches(entrySeverity: Severity?) -> Bool {
+        switch self {
+        case .severe: return entrySeverity == .severe
+        case .high: return entrySeverity == .high
+        case .moderate: return entrySeverity == .moderate || entrySeverity == .lowModerate
+        case .low: return entrySeverity == .low
+        case .informational: return entrySeverity == nil
+        }
+    }
+}
+
 // MARK: - Match Type
 
 enum MatchType: String, Codable {

@@ -403,8 +403,12 @@ struct MainTabView: View {
         }
     }
 
-    /// Handles swipe when viewing a category list
+    /// Handles swipe when viewing a category or severity list
     private func handleCategoryLevelSwipe(direction: SwipeDirection) {
+        if browseNavContext.isSeverityMode {
+            handleSeverityLevelSwipe(direction: direction)
+            return
+        }
         switch direction {
         case .back:
             if browseNavContext.canSwipeToPreviousCategory {
@@ -415,6 +419,24 @@ struct MainTabView: View {
         case .forward:
             if browseNavContext.canSwipeToNextCategory {
                 navigateToNextCategory()
+            } else {
+                popToGrid()
+            }
+        }
+    }
+
+    /// Handles swipe when viewing a severity list
+    private func handleSeverityLevelSwipe(direction: SwipeDirection) {
+        switch direction {
+        case .back:
+            if browseNavContext.canSwipeToPreviousSeverityGroup {
+                navigateToPreviousSeverityGroup()
+            } else {
+                popToGrid()
+            }
+        case .forward:
+            if browseNavContext.canSwipeToNextSeverityGroup {
+                navigateToNextSeverityGroup()
             } else {
                 popToGrid()
             }
@@ -460,6 +482,20 @@ struct MainTabView: View {
         guard let nextCategory = browseNavContext.nextCategory else { return }
         var newPath = NavigationPath()
         newPath.append(nextCategory)
+        browseNavigationPath = newPath
+    }
+
+    private func navigateToPreviousSeverityGroup() {
+        guard let previousGroup = browseNavContext.previousSeverityGroup else { return }
+        var newPath = NavigationPath()
+        newPath.append(previousGroup)
+        browseNavigationPath = newPath
+    }
+
+    private func navigateToNextSeverityGroup() {
+        guard let nextGroup = browseNavContext.nextSeverityGroup else { return }
+        var newPath = NavigationPath()
+        newPath.append(nextGroup)
         browseNavigationPath = newPath
     }
 
