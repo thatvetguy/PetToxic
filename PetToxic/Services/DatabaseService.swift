@@ -1912,7 +1912,8 @@ class DatabaseService {
                     "Pet Poison Helpline — Safe Plants (petpoisonhelpline.com)"
                 ],
                 relatedEntries: [
-                    "045fe2d3-3c59-4f15-b72a-09371b675d77"  // GI Irritant Plants - many toxic bouquet flowers covered there
+                    "045fe2d3-3c59-4f15-b72a-09371b675d77",  // GI Irritant Plants - many toxic bouquet flowers covered there
+                    "a7f3b2c1-8d4e-4f6a-b9e1-3c5d7a2f8b64"  // Eucalyptus — common hidden toxic filler in bouquets
                 ]
             ),
 
@@ -3490,6 +3491,129 @@ class DatabaseService {
                 ],
                 sources: ["ASPCA Animal Poison Control Center", "Pet Poison Helpline", "BBC Gardeners World Magazine — Dangerous Plants to Pets", "NC State Extension Gardener Plant Toolbox"],
                 relatedEntries: nil
+            ),
+
+            // MARK: - Eucalyptus
+            ToxicItem(
+                id: UUID(uuidString: "a7f3b2c1-8d4e-4f6a-b9e1-3c5d7a2f8b64")!,
+                name: "Eucalyptus",
+                alternateNames: [
+                    "eucalyptus plant",
+                    "eucalyptus leaves",
+                    "eucalyptus branch",
+                    "eucalyptus branches",
+                    "eucalyptus greenery",
+                    "eucalyptus stems",
+                    "eucalyptus bouquet",
+                    "eucalyptus wreath",
+                    "eucalyptus garland",
+                    "silver dollar eucalyptus",
+                    "seeded eucalyptus",
+                    "baby blue eucalyptus",
+                    "gunni eucalyptus",
+                    "gum tree",
+                    "gum leaves",
+                    "Eucalyptus cinerea",
+                    "Eucalyptus globulus",
+                    "Eucalyptus radiata",
+                    "eucalyptus spp",
+                    "eucalyptol",
+                    "cineole",
+                    "1,8-cineole",
+                    "dried eucalyptus",
+                    "shower eucalyptus",
+                    "eucalyptus shower bundle",
+                    "eucalyptus decor",
+                    "eucalyptus centerpiece",
+                    "eucalyptus decoration",
+                    "eucalyptis",
+                    "eucaliptus",
+                    "eucalypus",
+                    "eucolyptus"
+                ],
+                categories: [.plants],
+                imageAsset: "eucalyptus_thumb",
+                description: """
+                Eucalyptus is a large genus of over 700 species of flowering trees and shrubs in the family Myrtaceae, native to Australia. Eucalyptus has become extremely popular in home décor—especially as filler greenery in bouquets and floral arrangements—and is also widely used in wreaths, garlands, shower bundles, and centerpieces. Common decorative varieties include Silver Dollar Eucalyptus (Eucalyptus cinerea), Seeded Eucalyptus, Baby Blue Eucalyptus, and Gunni Eucalyptus. All parts of the eucalyptus plant contain essential oils, primarily eucalyptol (also known as 1,8-cineole), which gives the plant its distinctive aromatic scent. Even fresh or dried eucalyptus releases volatile oils passively into the surrounding air. Eucalyptus oil is also one of the most widely used essential oils and is found in many household products including cleaning solutions, cough drops, chest rubs, mouthwashes, and insect repellents. The ASPCA lists eucalyptus as toxic to dogs, cats, and horses.
+                """,
+                toxicityInfo: """
+                Eucalyptus contains eucalyptol (1,8-cineole), a monoterpenoid compound that acts as both a gastrointestinal irritant and a neurotoxin. Eucalyptol is found in the leaves, stems, bark, and essential oil of the plant. When ingested, eucalyptol irritates the lining of the mouth, esophagus, and stomach, causing drooling, vomiting, and diarrhea. Once absorbed, it can affect the central nervous system, causing depression, weakness, incoordination, and in severe cases, tremors and seizures. Eucalyptol is also rapidly absorbed through the skin and lungs, meaning pets can be affected by dermal contact or simply by inhaling the volatile oils released from the plant.
+
+                **Why cats are especially at risk:** Cats lack the liver enzyme glucuronyl transferase, which is needed to break down and eliminate many compounds found in essential oils, including eucalyptol. This means eucalyptol accumulates in a cat's body rather than being cleared efficiently, leading to prolonged and more severe toxic effects. Cats' natural grooming behavior creates an additional risk—if eucalyptol settles on their fur from a nearby plant or diffuser, they will ingest it while grooming. Even passive exposure from eucalyptus in a vase or a diffuser running in the same room can be problematic for cats.
+
+                **Bouquet and décor hazards:** Eucalyptus is one of the most common filler greens in modern bouquets and floral arrangements. Pets may chew on eucalyptus stems or leaves from a bouquet left on a table or counter. Decorative eucalyptus—whether fresh, dried, or preserved—continues to release volatile oils. Florist-sourced eucalyptus may also be treated with preservatives, dyes, or pesticides that pose additional risks beyond the plant's natural toxicity. Eucalyptus shower bundles (hung in the shower to release aromatic steam) should be kept far away from any pets in the household.
+
+                **A note about birds and eucalyptus:** Interestingly, wild parrots in Australia—including cockatoos, rosellas, and lorikeets—regularly eat eucalyptus leaves, bark, flowers, and nuts from native gum trees without ill effects. Some avian resources even consider fresh, untreated eucalyptus branches safe enrichment for parrots. However, the risk to pet birds in a household setting is different. Florist-sourced eucalyptus is often treated with preservatives, dyes, and pesticides that pose risks beyond the plant's natural compounds. More importantly, in enclosed indoor spaces, volatile oils released from eucalyptus—whether from fresh cuttings, dried arrangements, or diffusers—can concentrate to levels that overwhelm a bird's uniquely sensitive respiratory system. The concern for pet birds is not about a parrot chewing an untreated leaf outdoors, but about prolonged exposure to accumulated fumes in a living room or bedroom.
+
+                **Essential oil crossover:** Eucalyptus essential oil is a highly concentrated form of the same toxic compound found in the plant. Even a few drops of undiluted eucalyptus oil can cause serious poisoning. Essential oil diffusers disperse microscopic oil droplets into the air that can settle on pet fur and be inhaled or ingested during grooming. See the Essential Oils entry for comprehensive coverage of essential oil hazards across all species.
+                """,
+                onsetTime: OnsetTime(
+                    early: "Signs of eucalyptus exposure typically begin within 1 to 4 hours of ingestion. Initial signs include drooling, vomiting, and loss of appetite. Inhalation exposure may cause respiratory signs more quickly.",
+                    delayed: "Neurological signs such as weakness, incoordination, and depression may develop several hours after exposure. With concentrated essential oil exposure, more severe effects including tremors, seizures, and organ damage can develop within 12 to 24 hours."
+                ),
+                symptoms: [
+                    "Excessive drooling or salivation",
+                    "Vomiting",
+                    "Diarrhea",
+                    "Loss of appetite",
+                    "Lethargy or depression",
+                    "Weakness",
+                    "Unsteady gait or incoordination (ataxia)",
+                    "Muscle tremors",
+                    "Rapid or labored breathing",
+                    "Coughing or wheezing (especially from inhalation)",
+                    "Pawing at the mouth",
+                    "Seizures (severe cases, especially with concentrated oil exposure)"
+                ],
+                entrySeverity: .high,
+                speciesRisks: [
+                    SpeciesRisk(
+                        species: .dog,
+                        severity: .moderate,
+                        notes: "Dogs may chew on eucalyptus branches or leaves from bouquets and decorations. Ingestion typically causes gastrointestinal upset including drooling, vomiting, and diarrhea. Larger exposures or contact with concentrated eucalyptus oil can lead to neurological signs such as depression, incoordination, and tremors. If eucalyptus oil gets on a dog's skin or fur, bathe immediately with mild dish soap and warm water to prevent further absorption. Contact a veterinarian promptly."
+                    ),
+                    SpeciesRisk(
+                        species: .cat,
+                        severity: .high,
+                        notes: "Cats are especially vulnerable to eucalyptus toxicity because they lack the liver enzyme glucuronyl transferase needed to metabolize eucalyptol effectively. This causes the toxin to accumulate in their system, leading to prolonged and more severe effects. Cats' grooming behavior increases risk—eucalyptol from a nearby plant or diffuser can settle on fur and be ingested while grooming. Even passive inhalation from eucalyptus in a vase or an essential oil diffuser running in the same room can cause illness. Signs include drooling, vomiting, tremors, and respiratory distress. Remove eucalyptus from any room your cat can access and seek veterinary care immediately if exposure occurs."
+                    ),
+                    SpeciesRisk(
+                        species: .smallMammal,
+                        severity: .moderate,
+                        notes: "Eucalyptus is toxic to rabbits, guinea pigs, hamsters, and other small mammals. The essential oils, tannins, and phenolic compounds in eucalyptus can cause gastrointestinal irritation, respiratory distress, and potentially more serious effects due to their small body size. Rabbits and guinea pigs should never be offered eucalyptus wood, branches, or leaves as chew items. Keep all eucalyptus plants, dried arrangements, and essential oil products out of reach of small mammals. Contact an exotic animal veterinarian if exposure occurs."
+                    ),
+                    SpeciesRisk(
+                        species: .bird,
+                        severity: .high,
+                        notes: "Birds have a uniquely efficient respiratory system with air sacs that makes them extremely sensitive to airborne irritants and volatile compounds. Eucalyptus essential oil fumes—whether from diffusers, sprays, or heated products—can cause severe respiratory distress in pet birds. The volatile oils released by fresh or dried eucalyptus can also irritate their respiratory system. Never use eucalyptus oil diffusers in the same room as birds, and keep decorative eucalyptus well away from bird cages. If a bird shows any respiratory signs after eucalyptus exposure—labored breathing, tail bobbing, open-mouth breathing, wheezing—seek avian veterinary care immediately."
+                    ),
+                    SpeciesRisk(
+                        species: .reptile,
+                        severity: .moderate,
+                        notes: "Limited data is available on eucalyptus toxicity in reptiles specifically. The volatile oils could cause respiratory irritation, particularly in enclosed terrariums where fumes may concentrate. Eucalyptol can be expected to cause gastrointestinal irritation if ingested. Avoid using eucalyptus products, branches, or essential oils in or near reptile enclosures. Contact an exotic animal veterinarian if exposure occurs."
+                    )
+                ],
+                preventionTips: [
+                    "Keep eucalyptus bouquets, arrangements, and wreaths out of reach of all pets—or avoid bringing eucalyptus into the home entirely if you have cats or birds",
+                    "Do not run eucalyptus essential oil diffusers in rooms accessible to pets, especially cats and birds",
+                    "Be aware that eucalyptus is a very common filler green in modern floral arrangements—check bouquets carefully before displaying them in pet-accessible areas",
+                    "Dried and preserved eucalyptus still contains volatile oils and remains toxic—do not assume it is safe because it is no longer fresh",
+                    "Eucalyptus shower bundles release concentrated aromatic steam and should be used only in bathrooms that pets cannot access",
+                    "Check ingredient labels on household products, cleaning solutions, and natural pest repellents for eucalyptus oil",
+                    "If eucalyptus oil contacts your pet's skin or fur, bathe them immediately with mild dish soap and warm water, then contact your veterinarian",
+                    "Never use eucalyptus-based 'natural' flea or pest treatments on pets without veterinary guidance—products marketed as natural are not necessarily safe"
+                ],
+                sources: [
+                    "ASPCA Animal Poison Control Center",
+                    "Pet Poison Helpline",
+                    "Merck Veterinary Manual",
+                    "VCA Animal Hospitals"
+                ],
+                relatedEntries: [
+                    "eeff2233-4455-6677-8899-aabbccddeeff",  // Essential Oils — same toxic compound (eucalyptol), essential oil form
+                    "c4e9a2b1-7d5f-4c3a-b8e2-6f1d9a4c5b73",  // Non-Toxic Bouquet Flowers — eucalyptus called out as hidden toxic filler
+                    "00112233-4455-6677-8899-aabbccddef24"   // Inhalant Toxicity (Birds & Respiratory Hazards) — volatile compound inhalation risk
+                ]
             ),
 
             // MARK: - Chinaberry Tree
@@ -5910,7 +6034,8 @@ class DatabaseService {
                 relatedEntries: [
                     "cc334455-6677-8899-aabb-ccddeeff2233",
                     "e1f2a3b4-5c6d-7e8f-9a0b-1c2d3e4f5a6b",
-                    "00112233-4455-6677-8899-aabbccddef24"
+                    "00112233-4455-6677-8899-aabbccddef24",
+                    "a7f3b2c1-8d4e-4f6a-b9e1-3c5d7a2f8b64"  // Eucalyptus — same toxic compound (eucalyptol), plant form
                 ]
             ),
 
@@ -12605,7 +12730,8 @@ Many bird owners don't realize the kitchen poses multiple simultaneous risks. A 
                 relatedEntries: [
                     "00112233-4455-6677-8899-aabbccddef22",
                     "eeff2233-4455-6677-8899-aabbccddeeff",
-                    "b8c9d0e1-2f3a-4b5c-6d7e-8f9a0b1c2d3e"
+                    "b8c9d0e1-2f3a-4b5c-6d7e-8f9a0b1c2d3e",
+                    "a7f3b2c1-8d4e-4f6a-b9e1-3c5d7a2f8b64"  // Eucalyptus — volatile compound inhalation risk
                 ]
             ),
 
