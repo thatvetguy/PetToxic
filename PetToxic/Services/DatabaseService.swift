@@ -220,7 +220,7 @@ class DatabaseService {
                     "Remember that all forms are toxic: raw, cooked, powdered, and dehydrated"
                 ],
                 sources: ["ASPCA Animal Poison Control Center", "Pet Poison Helpline", "Merck Veterinary Manual", "American College of Veterinary Pharmacists"],
-                relatedEntries: nil
+                relatedEntries: ["b2e4c6a8-1d3f-5b7a-9e0c-4f6d8a2b7c5e"]  // Why Cats Are More Sensitive — cats more susceptible, Heinz body anemia
             ),
 
             // MARK: - Garlic
@@ -264,7 +264,7 @@ class DatabaseService {
                     "Check ingredient lists on prepared foods, sauces, and seasonings"
                 ],
                 sources: ["ASPCA Animal Poison Control Center", "Pet Poison Helpline", "Merck Veterinary Manual", "Colorado State University Guide to Poisonous Plants"],
-                relatedEntries: nil
+                relatedEntries: ["b2e4c6a8-1d3f-5b7a-9e0c-4f6d8a2b7c5e"]  // Why Cats Are More Sensitive — cats more susceptible than dogs
             ),
 
             // MARK: - Macadamia Nuts
@@ -3612,7 +3612,8 @@ class DatabaseService {
                 relatedEntries: [
                     "eeff2233-4455-6677-8899-aabbccddeeff",  // Essential Oils — same toxic compound (eucalyptol), essential oil form
                     "c4e9a2b1-7d5f-4c3a-b8e2-6f1d9a4c5b73",  // Non-Toxic Bouquet Flowers — eucalyptus called out as hidden toxic filler
-                    "00112233-4455-6677-8899-aabbccddef24"   // Inhalant Toxicity (Birds & Respiratory Hazards) — volatile compound inhalation risk
+                    "00112233-4455-6677-8899-aabbccddef24",   // Inhalant Toxicity (Birds & Respiratory Hazards) — volatile compound inhalation risk
+                    "b2e4c6a8-1d3f-5b7a-9e0c-4f6d8a2b7c5e"  // Why Cats Are More Sensitive — glucuronyl transferase deficiency
                 ]
             ),
 
@@ -4548,7 +4549,7 @@ class DatabaseService {
                     "When using household insect sprays, remove all pets and allow the area to dry completely before allowing pets back"
                 ],
                 sources: ["ASPCA Animal Poison Control Center: Permethrin Spot-On Toxicoses in Cats", "Merck Veterinary Manual: Plant-Derived Insecticide Toxicosis in Animals", "Pet Poison Helpline / VCA Hospitals: Pyrethrin/Pyrethroid Poisoning in Cats", "International Cat Care: Permethrin Poisoning", "American Association of Feline Practitioners (AAFP): Permethrin Poisoning Campaign", "Boland LA, Angles JM. Feline permethrin toxicity: Retrospective study of 42 cases. J Feline Med Surg. 2010", "Sutton NM, et al. Clinical effects and outcome of feline permethrin spot-on poisonings. J Feline Med Surg. 2007"],
-                relatedEntries: ["c9d0e1f2-3a4b-5c6d-e7f8-9a0b1c2d3e4f"]
+                relatedEntries: ["c9d0e1f2-3a4b-5c6d-e7f8-9a0b1c2d3e4f", "b2e4c6a8-1d3f-5b7a-9e0c-4f6d8a2b7c5e"]
             ),
 
             // MARK: - Organophosphates & Carbamates
@@ -5621,7 +5622,7 @@ class DatabaseService {
                     "Keep reed diffusers out of reach—cats may knock them over and walk through the spilled oil"
                 ],
                 sources: ["ASPCA Animal Poison Control Center", "Pet Poison Helpline", "Merck Veterinary Manual"],
-                relatedEntries: ["11223344-5566-7788-99aa-bbccddeeff00", "88990011-aabb-ccdd-eeff-223344556677", "00112233-4455-6677-8899-aabbccddef24"]
+                relatedEntries: ["11223344-5566-7788-99aa-bbccddeeff00", "88990011-aabb-ccdd-eeff-223344556677", "00112233-4455-6677-8899-aabbccddef24", "b2e4c6a8-1d3f-5b7a-9e0c-4f6d8a2b7c5e"]
             ),
 
             // MARK: - Ice Packs
@@ -6035,7 +6036,8 @@ class DatabaseService {
                     "cc334455-6677-8899-aabb-ccddeeff2233",
                     "e1f2a3b4-5c6d-7e8f-9a0b-1c2d3e4f5a6b",
                     "00112233-4455-6677-8899-aabbccddef24",
-                    "a7f3b2c1-8d4e-4f6a-b9e1-3c5d7a2f8b64"  // Eucalyptus — same toxic compound (eucalyptol), plant form
+                    "a7f3b2c1-8d4e-4f6a-b9e1-3c5d7a2f8b64",  // Eucalyptus — same toxic compound (eucalyptol), plant form
+                    "b2e4c6a8-1d3f-5b7a-9e0c-4f6d8a2b7c5e"  // Why Cats Are More Sensitive — glucuronidation/sulfation deficiency
                 ]
             ),
 
@@ -7050,7 +7052,7 @@ class DatabaseService {
                     "Inform pet sitters and house guests about the danger of acetaminophen to pets"
                 ],
                 sources: ["ASPCA Animal Poison Control Center: Acetaminophen Toxicity", "Merck Veterinary Manual: Acetaminophen Toxicosis", "Pet Poison Helpline: Tylenol Toxicity in Cats and Dogs", "Veterinary Partner / VCA Hospitals: Acetaminophen Toxicity"],
-                relatedEntries: ["aa112233-4455-6677-8899-aabbccddeef0", "cc334455-6677-8899-aabb-ccddeeff2233", "ff667788-99aa-bbcc-ddee-ff0011223355", "66dd4455-eeff-0011-2233-445566778899", "ddee1122-ff33-4455-6677-889900aabbcc", "00778899-aabb-ccdd-eeff-001122334455"]
+                relatedEntries: ["aa112233-4455-6677-8899-aabbccddeef0", "cc334455-6677-8899-aabb-ccddeeff2233", "ff667788-99aa-bbcc-ddee-ff0011223355", "66dd4455-eeff-0011-2233-445566778899", "ddee1122-ff33-4455-6677-889900aabbcc", "00778899-aabb-ccdd-eeff-001122334455", "b2e4c6a8-1d3f-5b7a-9e0c-4f6d8a2b7c5e"]
             ),
 
             // MARK: - Aspirin & Salicylates
@@ -9316,7 +9318,7 @@ class DatabaseService {
                     "Pet Poison Helpline: Warning: Alpha Lipoic Acid (ALA)",
                     "American College of Veterinary Pharmacists: Pet Poison Control"
                 ],
-                relatedEntries: ["33aa1122-bbcc-ddee-ff00-112233445566", "91000011-2233-4455-6677-889900aabb01"]
+                relatedEntries: ["33aa1122-bbcc-ddee-ff00-112233445566", "91000011-2233-4455-6677-889900aabb01", "b2e4c6a8-1d3f-5b7a-9e0c-4f6d8a2b7c5e"]
             ),
 
             // MARK: - Phenylpropanolamine (PPA)
@@ -12242,6 +12244,117 @@ Washington State University Veterinary Clinical Pharmacology Laboratory offers t
                 relatedEntries: ["bbcc9900-ddee-ff11-2233-445566778899", "00778899-aabb-ccdd-eeff-001122334455"]
             ),
 
+            // MARK: - Why Cats Are More Sensitive
+            ToxicItem(
+                id: UUID(uuidString: "b2e4c6a8-1d3f-5b7a-9e0c-4f6d8a2b7c5e")!,
+                name: "Why Cats Are More Sensitive",
+                alternateNames: [
+                    "why are cats more sensitive to toxins",
+                    "why are cats more sensitive to poison",
+                    "cat sensitivity",
+                    "cat toxin sensitivity",
+                    "cat metabolism",
+                    "cat liver",
+                    "cat liver enzymes",
+                    "feline sensitivity",
+                    "feline metabolism",
+                    "feline liver metabolism",
+                    "feline toxin sensitivity",
+                    "cats sensitive to essential oils",
+                    "cats sensitive to medications",
+                    "cats sensitive to chemicals",
+                    "cats more sensitive than dogs",
+                    "why can't cats have Tylenol",
+                    "why can't cats have essential oils",
+                    "why can't cats have flea medicine for dogs",
+                    "glucuronidation",
+                    "glucuronyl transferase",
+                    "obligate carnivore",
+                    "cat can't metabolize",
+                    "cats lack enzyme",
+                    "cat poisoning easier",
+                    "are cats more easily poisoned",
+                    "why do cats get poisoned easier",
+                    "cat grooming poisoning",
+                    "cat grooming toxin"
+                ],
+                categories: [.informational],
+                imageAsset: "cat_sensitivity_thumb",
+                description: """
+                If you've browsed through this app, you may have noticed a pattern: cats are often rated at a higher severity than dogs for the same substance. This isn't a coincidence. Cats have a unique set of biological traits that make them genuinely more vulnerable to many common toxins — from medications and essential oils to certain plants and household chemicals. Understanding why cats are different can help you make better decisions about what products you use in your home, what plants you keep, and how quickly you need to act if an exposure occurs. This article explains the science behind feline sensitivity in plain language, so you can be a more informed advocate for your cat's safety.
+                """,
+                toxicityInfo: """
+                **The missing enzyme:** The single biggest reason cats are more sensitive to so many substances comes down to their liver. Most mammals — including dogs and humans — have a liver enzyme called glucuronyl transferase (also known as UDP-glucuronosyltransferase or UGT). This enzyme is one of the body's main tools for breaking down and eliminating foreign chemicals, drugs, and natural plant compounds. It works by attaching a molecule called glucuronic acid to these substances, making them water-soluble so the kidneys can flush them out. Cats are significantly deficient in this enzyme. When a dog or human is exposed to a substance like acetaminophen (Tylenol), eucalyptus oil, or a pyrethroid flea treatment, their liver efficiently processes and eliminates it. When a cat is exposed to the same substance, the compound lingers in their body much longer, building up to toxic levels instead of being cleared.
+
+                **Why cats evolved this way:** Cats are obligate carnivores — they evolved eating almost exclusively meat. Plant-eating animals developed robust detoxification pathways (including glucuronidation) because they regularly encounter natural plant toxins in their diet. Cats simply never needed these pathways, so over thousands of years of evolution, they lost much of this enzyme activity. This is the same reason cats also cannot taste sweetness — they lost that gene too, because it wasn't needed on an all-meat diet. In the wild, this was never a problem. In a modern household filled with essential oil diffusers, houseplants, scented products, and medicine cabinets, it becomes a serious vulnerability.
+
+                **It's not just one enzyme:** While the glucuronyl transferase deficiency gets the most attention, cats also have reduced activity in other detoxification pathways, including certain sulfation and oxidation reactions. This means cats are not just slow at processing one type of chemical — they have a broadly limited ability to detoxify many classes of compounds. This is why the list of substances that are more dangerous to cats than dogs is so long and so varied, spanning medications, plants, essential oils, cleaning products, and insecticides.
+
+                **The grooming factor:** Cats are meticulous groomers, spending up to 50% of their waking hours cleaning their fur. This behavior, while normally healthy, becomes a significant risk factor for toxin exposure. If a substance lands on a cat's fur — whether from walking through a treated area, brushing against a plant, or microscopic droplets settling from an essential oil diffuser — the cat will almost certainly ingest it during grooming. This creates a double problem: the substance enters the body through ingestion, and the cat's deficient liver enzymes cannot clear it efficiently. Dogs groom too, but far less obsessively, and their livers are much better equipped to handle what they do ingest.
+
+                **What this means in practice:** A single regular-strength Tylenol tablet can be fatal to a cat. A dog flea product applied to a cat can cause life-threatening seizures. An essential oil diffuser running in the living room can make a cat seriously ill. These are not extreme or unusual scenarios — they are among the most common poisoning calls received by animal poison control centers every year. The common thread in all of them is the cat's unique metabolic vulnerability.
+
+                **The bottom line for cat owners:** Never assume that a product safe for humans or dogs is safe for cats. Always check before using any medication, topical product, essential oil, cleaning agent, or pest control product in a home with cats. When in doubt, contact your veterinarian or an animal poison control center before exposing your cat to any new substance. Many of the entries in this app highlight specific cat risks — look for the species-specific notes under each entry for details.
+                """,
+                onsetTime: nil,
+                symptoms: [],
+                entrySeverity: nil,
+                speciesRisks: [
+                    SpeciesRisk(
+                        species: .dog,
+                        severity: .low,
+                        notes: "Dogs have a fully functional glucuronidation pathway, meaning their livers can efficiently process and eliminate many compounds that are dangerous to cats. This is why dogs can tolerate certain medications (like some flea treatments) that would be toxic to a cat. However, 'more resistant than cats' does not mean immune — dogs are still vulnerable to many toxins, and some substances (like xylitol, chocolate, and grapes) are actually more dangerous to dogs than to cats. Dogs also groom less obsessively than cats, reducing their risk of ingesting substances that land on their fur."
+                    ),
+                    SpeciesRisk(
+                        species: .cat,
+                        severity: .high,
+                        notes: "Cats are the most metabolically vulnerable common household pet. Their deficiency in glucuronyl transferase — combined with reduced sulfation pathways, obligate carnivore evolution, small body size, and obsessive grooming behavior — creates a perfect storm for toxin accumulation. Substances that are mildly irritating to a dog can be life-threatening to a cat. This is why you will see cats rated at a higher severity than dogs in many entries throughout this app. Never use dog products on cats, never assume human medications are safe for cats, and always check whether household products and plants are cat-safe before bringing them into your home."
+                    ),
+                    SpeciesRisk(
+                        species: .smallMammal,
+                        severity: .moderate,
+                        notes: "Small mammals like rabbits, guinea pigs, and hamsters have their own metabolic considerations, but for different reasons than cats. Their primary vulnerability is their small body size — it takes far less of a toxic substance to reach dangerous concentrations in a 2-pound guinea pig than in a 60-pound dog. Rabbits in particular have a sensitive and specialized digestive system that can be disrupted by compounds that larger animals tolerate. Ferrets, being obligate carnivores like cats, may share some of the same metabolic limitations, making them potentially more sensitive to certain compounds. Always consult an exotic animal veterinarian for guidance."
+                    ),
+                    SpeciesRisk(
+                        species: .bird,
+                        severity: .moderate,
+                        notes: "Birds face toxin risks for entirely different reasons than cats. Their uniquely efficient respiratory system — which uses air sacs rather than simple lungs — means they absorb airborne substances far more rapidly and completely than any mammal. A fume that merely irritates a dog's nose can kill a bird in minutes. Birds also have very high metabolic rates and small body sizes, so ingested toxins reach dangerous blood levels quickly. While cats are the most sensitive to substances processed by the liver, birds are the most sensitive to anything inhaled — making them especially vulnerable to fumes, aerosols, essential oil diffusers, and overheated cookware."
+                    ),
+                    SpeciesRisk(
+                        species: .reptile,
+                        severity: .moderate,
+                        notes: "Interestingly, reptiles share a key vulnerability with cats. Many reptile species — particularly snakes — are also deficient in UDP-glucuronosyltransferase, the same enzyme family that cats lack. This is why acetaminophen (Tylenol) is devastatingly toxic to both cats and snakes, and is actually used as a lethal control agent for invasive brown tree snakes in wildlife management programs. Reptiles' slower metabolism provides some protection by reducing the speed of toxin absorption, but their enzyme deficiencies mean that once a toxin is absorbed, it may persist in the body for a very long time. Limited research exists for most reptile species, so a precautionary approach is always recommended."
+                    )
+                ],
+                preventionTips: [
+                    "Never give your cat any human medication without explicit veterinary guidance — even common over-the-counter drugs like Tylenol (acetaminophen) and ibuprofen can be fatal to cats",
+                    "Never apply dog flea or tick products to a cat — many contain pyrethroids that cats cannot metabolize, and this is one of the most common causes of fatal poisoning in cats",
+                    "Avoid using essential oil diffusers in rooms your cat can access — the microscopic oil droplets settle on fur and are ingested during grooming",
+                    "Check whether houseplants and bouquet flowers are cat-safe before bringing them into your home — many common plants contain compounds that cats process poorly",
+                    "Read ingredient labels on cleaning products, air fresheners, and scented products — many contain essential oils or phenolic compounds that pose elevated risks to cats",
+                    "If your cat walks through, rubs against, or lies near any substance, assume they will ingest it during grooming — act accordingly",
+                    "Keep all medications stored securely — cats are curious and may bat pills, play with bottles, or chew on dropped tablets",
+                    "When in doubt about any product, call your veterinarian or animal poison control before exposing your cat — it is always better to ask first"
+                ],
+                sources: [
+                    "ASPCA Animal Poison Control Center",
+                    "Merck Veterinary Manual",
+                    "Journal of the American Veterinary Medical Association (JAVMA)",
+                    "International Cat Care"
+                ],
+                relatedEntries: [
+                    "bb223344-5566-7788-99aa-bbccddeeff11",  // Acetaminophen — glucuronidation deficiency, textbook example
+                    "eeff2233-4455-6677-8899-aabbccddeeff",  // Essential Oils — glucuronidation/sulfation deficiency
+                    "a7f3b2c1-8d4e-4f6a-b9e1-3c5d7a2f8b64",  // Eucalyptus — glucuronyl transferase deficiency
+                    "d4e5f6a7-8b9c-4d0e-a1b2-3c4d5e6f7a8b",  // Pyrethrins & Pyrethroids — cats lack metabolizing enzymes
+                    "88ff6677-99aa-bbcc-ddee-ff0011223344",  // Alpha Lipoic Acid — cats 10x more sensitive
+                    "b8c9d0e1-2f3a-4b5c-6d7e-8f9a0b1c2d3e",  // Liquid Potpourri — grooming + essential oil sensitivity
+                    "8a27c390-254f-47c9-90e7-7739694f603f",  // Onions — cats more susceptible, Heinz body anemia
+                    "dad777ea-3120-43b1-9b8f-aee413716abc",  // Garlic — cats more susceptible than dogs
+                    "00112233-4455-6677-8899-aabbccddef24"   // Inhalant Toxicity — cat liver metabolism + aerosolized oils
+                ]
+            ),
+
             // MARK: - Corn Cob Ingestion
             ToxicItem(
                 id: UUID(uuidString: "00112233-4455-6677-8899-aabbccddef19")!,
@@ -12731,7 +12844,8 @@ Many bird owners don't realize the kitchen poses multiple simultaneous risks. A 
                     "00112233-4455-6677-8899-aabbccddef22",
                     "eeff2233-4455-6677-8899-aabbccddeeff",
                     "b8c9d0e1-2f3a-4b5c-6d7e-8f9a0b1c2d3e",
-                    "a7f3b2c1-8d4e-4f6a-b9e1-3c5d7a2f8b64"  // Eucalyptus — volatile compound inhalation risk
+                    "a7f3b2c1-8d4e-4f6a-b9e1-3c5d7a2f8b64",  // Eucalyptus — volatile compound inhalation risk
+                    "b2e4c6a8-1d3f-5b7a-9e0c-4f6d8a2b7c5e"  // Why Cats Are More Sensitive — cat liver metabolism + aerosolized oils
                 ]
             ),
 
