@@ -329,10 +329,17 @@ struct CategoryListView: View {
                                         navigationPath = newPath
                                     }
                                 } label: {
-                                    Image(systemName: "chevron.left")
-                                        .font(.title3)
-                                        .foregroundStyle(.white.opacity(0.5))
-                                        .frame(width: 44, height: 44)
+                                    HStack(spacing: 4) {
+                                        Image(systemName: "chevron.left")
+                                            .font(.subheadline.weight(.semibold))
+                                        if let prev = navContext.previousCategory {
+                                            Text(prev.displayName)
+                                                .font(.subheadline)
+                                                .lineLimit(1)
+                                        }
+                                    }
+                                    .foregroundStyle(.white.opacity(0.5))
+                                    .frame(minHeight: 44)
                                 }
                                 .buttonStyle(.plain)
                             }
@@ -347,10 +354,17 @@ struct CategoryListView: View {
                                         navigationPath = newPath
                                     }
                                 } label: {
-                                    Image(systemName: "chevron.right")
-                                        .font(.title3)
-                                        .foregroundStyle(.white.opacity(0.5))
-                                        .frame(width: 44, height: 44)
+                                    HStack(spacing: 4) {
+                                        if let next = navContext.nextCategory {
+                                            Text(next.displayName)
+                                                .font(.subheadline)
+                                                .lineLimit(1)
+                                        }
+                                        Image(systemName: "chevron.right")
+                                            .font(.subheadline.weight(.semibold))
+                                    }
+                                    .foregroundStyle(.white.opacity(0.5))
+                                    .frame(minHeight: 44)
                                 }
                                 .buttonStyle(.plain)
                             }
@@ -637,25 +651,32 @@ struct ExplainerGridCard: View {
     let item: ToxicItem
 
     var body: some View {
-        VStack(spacing: 8) {
-            Image(systemName: "info.circle.fill")
-                .font(.title)
-                .foregroundColor(.purple)
-            Text(item.name)
-                .font(.caption)
-                .fontWeight(.medium)
-                .foregroundColor(.white)
-                .multilineTextAlignment(.center)
-                .lineLimit(2)
+        if let imageAsset = item.imageAsset {
+            Image(imageAsset)
+                .resizable()
+                .aspectRatio(1, contentMode: .fit)
+                .clipShape(RoundedRectangle(cornerRadius: 12))
+        } else {
+            VStack(spacing: 8) {
+                Image(systemName: "info.circle.fill")
+                    .font(.title)
+                    .foregroundColor(.purple)
+                Text(item.name)
+                    .font(.caption)
+                    .fontWeight(.medium)
+                    .foregroundColor(.white)
+                    .multilineTextAlignment(.center)
+                    .lineLimit(2)
+            }
+            .frame(maxWidth: .infinity)
+            .aspectRatio(1, contentMode: .fit)
+            .background(Color.purple.opacity(0.15))
+            .clipShape(RoundedRectangle(cornerRadius: 12))
+            .overlay(
+                RoundedRectangle(cornerRadius: 12)
+                    .stroke(Color.purple.opacity(0.3), lineWidth: 1)
+            )
         }
-        .frame(maxWidth: .infinity)
-        .aspectRatio(1, contentMode: .fit)
-        .background(Color.purple.opacity(0.15))
-        .clipShape(RoundedRectangle(cornerRadius: 12))
-        .overlay(
-            RoundedRectangle(cornerRadius: 12)
-                .stroke(Color.purple.opacity(0.3), lineWidth: 1)
-        )
     }
 }
 
@@ -664,10 +685,18 @@ struct ExplainerListRow: View {
 
     var body: some View {
         HStack(spacing: 12) {
-            Image(systemName: "info.circle.fill")
-                .font(.title2)
-                .foregroundColor(.purple)
-                .frame(width: 50, height: 50)
+            if let imageAsset = item.imageAsset {
+                Image(imageAsset)
+                    .resizable()
+                    .aspectRatio(contentMode: .fill)
+                    .frame(width: 50, height: 50)
+                    .clipShape(RoundedRectangle(cornerRadius: 8))
+            } else {
+                Image(systemName: "info.circle.fill")
+                    .font(.title2)
+                    .foregroundColor(.purple)
+                    .frame(width: 50, height: 50)
+            }
 
             VStack(alignment: .leading, spacing: 4) {
                 Text(item.name)
@@ -784,10 +813,17 @@ struct SeverityListView: View {
                                         navigationPath = newPath
                                     }
                                 } label: {
-                                    Image(systemName: "chevron.left")
-                                        .font(.title3)
-                                        .foregroundStyle(.white.opacity(0.5))
-                                        .frame(width: 44, height: 44)
+                                    HStack(spacing: 4) {
+                                        Image(systemName: "chevron.left")
+                                            .font(.subheadline.weight(.semibold))
+                                        if let prev = navContext.previousSeverityGroup {
+                                            Text(prev.displayName)
+                                                .font(.subheadline)
+                                                .lineLimit(1)
+                                        }
+                                    }
+                                    .foregroundStyle(.white.opacity(0.5))
+                                    .frame(minHeight: 44)
                                 }
                                 .buttonStyle(.plain)
                             }
@@ -802,10 +838,17 @@ struct SeverityListView: View {
                                         navigationPath = newPath
                                     }
                                 } label: {
-                                    Image(systemName: "chevron.right")
-                                        .font(.title3)
-                                        .foregroundStyle(.white.opacity(0.5))
-                                        .frame(width: 44, height: 44)
+                                    HStack(spacing: 4) {
+                                        if let next = navContext.nextSeverityGroup {
+                                            Text(next.displayName)
+                                                .font(.subheadline)
+                                                .lineLimit(1)
+                                        }
+                                        Image(systemName: "chevron.right")
+                                            .font(.subheadline.weight(.semibold))
+                                    }
+                                    .foregroundStyle(.white.opacity(0.5))
+                                    .frame(minHeight: 44)
                                 }
                                 .buttonStyle(.plain)
                             }

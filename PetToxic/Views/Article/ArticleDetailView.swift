@@ -210,10 +210,17 @@ struct ArticleDetailView: View {
                                 navContext.navigateToEntryAtIndex(index - 1)
                             }
                         } label: {
-                            Image(systemName: "chevron.left")
-                                .font(.title3)
-                                .foregroundStyle(.white.opacity(0.5))
-                                .frame(width: 44, height: 44)
+                            HStack(spacing: 4) {
+                                Image(systemName: "chevron.left")
+                                    .font(.subheadline.weight(.semibold))
+                                if let prev = navContext.previousEntry {
+                                    Text(prev.name)
+                                        .font(.subheadline)
+                                        .lineLimit(1)
+                                }
+                            }
+                            .foregroundStyle(.white.opacity(0.5))
+                            .frame(minHeight: 44)
                         }
                         .buttonStyle(.plain)
                     }
@@ -227,10 +234,17 @@ struct ArticleDetailView: View {
                                 navContext.navigateToEntryAtIndex(index + 1)
                             }
                         } label: {
-                            Image(systemName: "chevron.right")
-                                .font(.title3)
-                                .foregroundStyle(.white.opacity(0.5))
-                                .frame(width: 44, height: 44)
+                            HStack(spacing: 4) {
+                                if let next = navContext.nextEntry {
+                                    Text(next.name)
+                                        .font(.subheadline)
+                                        .lineLimit(1)
+                                }
+                                Image(systemName: "chevron.right")
+                                    .font(.subheadline.weight(.semibold))
+                            }
+                            .foregroundStyle(.white.opacity(0.5))
+                            .frame(minHeight: 44)
                         }
                         .buttonStyle(.plain)
                     }
