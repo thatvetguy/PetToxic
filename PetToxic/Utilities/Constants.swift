@@ -2,7 +2,6 @@ import SwiftUI
 import Foundation
 
 enum AppShare {
-    // TODO: Update with real App Store URL after launch
     static let url = URL(string: "https://apps.apple.com/app/pet-toxic/id6758074515")!
     static let message = "Check out Pet Toxic — a quick reference for pet poison safety! 🐾"
     static let subject = "Pet Toxic App"

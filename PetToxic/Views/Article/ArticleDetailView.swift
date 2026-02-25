@@ -487,7 +487,7 @@ struct ArticleDetailView: View {
         // App Download Link
         text += String(repeating: "─", count: 40) + "\n"
         text += "📱 Download Pet Toxic — the complete poison guide for pet owners:\n"
-        text += "[App Store link coming soon]\n\n"
+        text += "\(AppShare.url.absoluteString)\n\n"
 
         // Attribution
         text += "(Shared from Pet Toxic app)"
