@@ -5034,6 +5034,113 @@ class DatabaseService {
                 relatedEntries: nil
             ),
 
+            // MARK: - Acrylamide (Hydrogel Products)
+            ToxicItem(
+                id: UUID(uuidString: "aa2c3266-831b-4db5-b7e9-41bd7d6f4c80")!,
+                name: "Acrylamide (Hydrogel Products)",
+                alternateNames: [
+                    "acrylamide",
+                    "polyacrylamide",
+                    "hydrogel",
+                    "hydrogel toxicity",
+                    "cooling face mask",
+                    "cooling mask",
+                    "gel face mask",
+                    "migraine wrap",
+                    "migraine mask",
+                    "headache wrap",
+                    "cooling wrap",
+                    "gel pack",
+                    "cooling gel pack",
+                    "cooling dog pad",
+                    "cooling pet pad",
+                    "cooling pad",
+                    "water beads",
+                    "Orbeez",
+                    "gel beads",
+                    "water crystals",
+                    "gel bead toxicity",
+                    "face mask toxicity",
+                    "acrylamide monomer",
+                    "polyacrylamide gel"
+                ],
+                categories: [.householdItems],
+                imageAsset: "acrylamide_thumb",
+                description: """
+Acrylamide is a chemical compound found as a manufacturing byproduct (residual monomer) in many polyacrylamide-based hydrogel products. These are everyday household items that most pet owners would never suspect as a danger — including cooling face masks, migraine relief wraps, gel eye masks, cooling pet pads, and water beads (such as Orbeez). The typical ingredient label on these products lists water, glycerol, and polyacrylamide — acrylamide itself may not appear by name.
+
+Pet Poison Helpline and ASPCA Poison Control have both reported an increase in severe poisoning cases linked to these products, including fatalities. These products should be stored securely and kept completely out of reach of all pets.
+""",
+                toxicityInfo: """
+Acrylamide is a potent neurotoxin (a substance that damages the nervous system). In hydrogel products such as cooling face masks and migraine wraps, it is present as a residual manufacturing byproduct within the polyacrylamide gel matrix. Although the concentrations are small, even a tablespoon of ingested hydrogel has been reported to cause life-threatening signs in a small dog.
+
+The pattern of illness is distinctive: gastrointestinal signs typically appear first (vomiting, drooling, loss of appetite), followed by rapid-onset neurological signs including unsteady walking (ataxia), muscle tremors, heightened sensitivity to touch or sound (hyperesthesia), elevated heart rate (tachycardia), and seizures. Liver and kidney injury have also been documented. In several reported cases, signs progressed to death. Some dogs that recovered still showed neurological abnormalities at discharge, suggesting possible lasting injury in some patients.
+
+**Products to be aware of:**
+Cooling face masks and gel eye masks, migraine relief wraps and headache wraps, cooling pet pads and cooling dog beds, water beads and gel beads (e.g., Orbeez, sensory play beads), and certain cosmetics and packaging materials containing polyacrylamide gels.
+
+There is no specific antidote for acrylamide toxicity. Because signs can progress rapidly, any suspected ingestion of a hydrogel product should be treated as an emergency. Bring the product packaging to the veterinary clinic if possible — this helps toxicologists identify the specific product and compounds involved.
+""",
+                onsetTime: OnsetTime(
+                    early: "Gastrointestinal signs (vomiting, drooling, loss of appetite) may appear within minutes to a few hours of ingestion.",
+                    delayed: "Neurological signs including ataxia, tremors, tachycardia, and seizures can follow rapidly — sometimes within hours of initial GI signs. Liver and kidney effects may develop over the following 24–48 hours."
+                ),
+                symptoms: [
+                    "Vomiting",
+                    "Drooling",
+                    "Loss of appetite",
+                    "Unsteady walking or loss of coordination (ataxia)",
+                    "Muscle tremors",
+                    "Heightened sensitivity to touch or sound (hyperesthesia)",
+                    "Rapid heart rate (tachycardia)",
+                    "Panting or restlessness",
+                    "Seizures",
+                    "Signs of liver or kidney injury (yellowing of skin/eyes, decreased urination)"
+                ],
+                entrySeverity: .severe,
+                speciesRisks: [
+                    SpeciesRisk(
+                        species: .dog,
+                        severity: .severe,
+                        notes: "Multiple cases of severe and fatal poisoning documented in dogs following ingestion of polyacrylamide hydrogel products, including cooling face masks, migraine wraps, and cooling dog pads. Signs include vomiting followed by rapid-onset ataxia, tremors, tachycardia, and seizures. Even small amounts of hydrogel have caused life-threatening signs in small dogs. Bring product packaging to the veterinary clinic if possible."
+                    ),
+                    SpeciesRisk(
+                        species: .cat,
+                        severity: .high,
+                        notes: "Cats are susceptible to acrylamide neurotoxicity. ASPCA Poison Control includes cats in their advisory for hydrogel product exposures. Cats are less likely than dogs to chew on these products, but any ingestion should be treated as an emergency. Signs would be expected to mirror those seen in dogs — vomiting, tremors, ataxia, and seizures."
+                    ),
+                    SpeciesRisk(
+                        species: .smallMammal,
+                        severity: .high,
+                        notes: "Small mammals (rabbits, guinea pigs, hamsters, ferrets, and others) are at serious risk from acrylamide neurotoxicity due to their small body size. Water beads and gel sensory products — a common exposure route — are particularly concerning for small mammals with access to play areas or children's toys containing these products. Any suspected ingestion should be evaluated by a veterinarian immediately."
+                    ),
+                    SpeciesRisk(
+                        species: .bird,
+                        severity: .severe,
+                        notes: "Birds are highly sensitive to neurotoxins due to their small body size and rapid metabolism. Acrylamide's potent neurotoxic effects would be expected to be especially dangerous in pet birds. Gel beads and water beads used in floral arrangements or decorative displays are a potential exposure risk. Any suspected exposure warrants immediate veterinary contact."
+                    ),
+                    SpeciesRisk(
+                        species: .reptile,
+                        severity: .moderate,
+                        notes: "Reptiles are unlikely to intentionally seek out hydrogel products, but accidental ingestion is possible — particularly water beads, which can resemble eggs or prey items to some species. The neurotoxic effects of acrylamide would be expected to affect reptiles, though specific case data in reptiles is very limited. Any suspected ingestion should be evaluated by a veterinarian."
+                    )
+                ],
+                preventionTips: [
+                    "Store cooling face masks, migraine wraps, and gel eye masks in closed drawers or cabinets — never leave them on nightstands, coffee tables, or countertops within pet reach",
+                    "Water beads (Orbeez, sensory play beads) should be kept away from all pets — supervise any use and dispose of carefully",
+                    "Cooling pet pads labeled as 'pet-safe' may still contain polyacrylamide gel — check the ingredient list and contact the manufacturer if unsure",
+                    "Discard any damaged or torn gel products immediately — a chewed or punctured mask releases gel that pets may lick or consume",
+                    "If your pet has chewed on any gel-containing product, contact a veterinarian or animal poison control center immediately — do not wait for symptoms to appear"
+                ],
+                sources: [
+                    "Pet Poison Helpline. Doggy Spa Day Gone Wrong. Press Release, February 25, 2026. petpoisonhelpline.com",
+                    "ASPCA Animal Poison Control Center. Acrylamide Exposure in Dogs and Cats. aspcapro.org",
+                    "AAHA Trends Magazine. Migraine gel masks can cause potentially life-threatening toxicity in dogs, experts warn. February 2026. aaha.org",
+                    "Dorman DC, et al. Toxicity associated with ingestion of a polyacrylic acid hydrogel dog pad. Journal of Veterinary Diagnostic Investigation. 2018;30(5):708-714."
+                ],
+                relatedEntries: nil
+            ),
+
             // MARK: - Cocoa Mulch
             ToxicItem(
                 id: UUID(uuidString: "f2a3b4c5-6d7e-8f9a-0b1c-2d3e4f5a6b7c")!,
