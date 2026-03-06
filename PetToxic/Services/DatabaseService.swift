@@ -2616,7 +2616,7 @@ A published case series in the Australian Veterinary Journal documented four sep
                     "Wikipedia. Duranta erecta. en.wikipedia.org/wiki/Duranta_erecta",
                     "ASPCA Animal Poison Control Center. Toxic and Non-Toxic Plants. aspca.org"
                 ],
-                relatedEntries: nil
+                relatedEntries: ["1afa55b7-d37f-469f-9f8b-6ec3c0ff7471"]  // Ruscus (Butcher's Broom) — saponin mechanism
             ),
 
             // MARK: - Nicotine & Tobacco Products
@@ -13999,7 +13999,7 @@ The plant also contains flavonoids and minor alkaloids that may contribute to it
                     "European Medicines Agency — Ruscus aculeatus Assessment Report",
                     "PubMed — Ruscus Genus: Bioactive Steroidal Saponins (Masullo et al., 2016)"
                 ],
-                relatedEntries: nil
+                relatedEntries: ["d84a68f2-ba6d-4ad6-b4af-82721447ef83"]  // Duranta / Golden Dewdrop — saponin mechanism
             ),
 
             // MARK: - Pencil Cactus (Euphorbia tirucalli)
