@@ -1812,7 +1812,8 @@ class DatabaseService {
                     "c8a18b83-133f-4be4-9aff-5cda3f6f6a18",  // Pencil Cactus - standalone entry for this Euphorbia species (eye injury risk)
                     "a7c3e1f0-5b2d-4e8a-9f6c-3d7b1a2e4f80",  // Peonies — similar GI irritant mechanism
                     "b3d8f2a1-6c4e-4f9b-a1d7-5e2c8b3f9a04",  // Sweet Pea — GI irritant component plus neurological mechanism
-                    "c4e9a2b1-7d5f-4c3a-b8e2-6f1d9a4c5b73"  // Non-Toxic Bouquet Flowers - safe bouquet flowers counterpart
+                    "c4e9a2b1-7d5f-4c3a-b8e2-6f1d9a4c5b73",  // Non-Toxic Bouquet Flowers - safe bouquet flowers counterpart
+                    "7E52EBF4-2617-4264-A341-4E6FF77E26EB"  // Pokeweed — saponin-based GI irritant, higher severity standalone entry
                 ]
             ),
 
@@ -2702,6 +2703,103 @@ The insidious nature of PA toxicity means pets with a history of access to these
                     "Stegelmeier BL. Pyrrolizidine Alkaloid-Containing Toxic Plants (Senecio, Crotalaria, Cynoglossum, Amsinckia, Heliotropium, and Echium spp.). Veterinary Clinics of North America: Food Animal Practice. 2011."
                 ],
                 relatedEntries: ["b2e4c6a8-1d3f-5b7a-9e0c-4f6d8a2b7c5e"]  // Why Cats Are More Sensitive — cat PA metabolism deficiency
+            ),
+
+            // MARK: - Pokeweed
+            ToxicItem(
+                id: UUID(uuidString: "7E52EBF4-2617-4264-A341-4E6FF77E26EB")!,
+                name: "Pokeweed",
+                alternateNames: [
+                    "pokeweed", "Phytolacca americana", "poke berry", "pokeberry", "poke root",
+                    "inkberry", "pigeonberry", "American pokeweed", "poke salad", "poke sallet",
+                    "cancer jalap", "garget", "scoke", "Virginia poke", "red ink plant", "pokeberry plant"
+                ],
+                categories: [.plants],
+                imageAsset: "pokeweed_thumb",
+                description: """
+Pokeweed is a large, fast-growing perennial plant native to North America and found throughout the eastern and central United States, as well as parts of the Pacific Coast. It thrives in disturbed soils — roadsides, fence lines, field edges, and backyards — making it one of the most commonly encountered toxic plants for outdoor pets.
+
+In summer and fall, pokeweed produces clusters of dark purple-black berries on striking bright magenta-pink stems. These berries are visually attractive and may be mouthed or eaten by curious dogs. Wild birds eat pokeweed berries without apparent harm and are responsible for spreading the seeds widely — which is part of why the plant is so ubiquitous.
+
+All parts of the plant are toxic, but toxicity is not equal throughout: the roots are by far the most concentrated source of toxins and pose the greatest danger. The roots can grow very large and resemble edible root vegetables such as horseradish or parsnip — a risk factor for dogs that dig. Young shoots in spring can resemble asparagus. Leaves and berries are less concentrated but still capable of causing significant illness.
+
+Interesting fact: Pokeweed berries were historically used as ink — the common name "inkberry" reflects this. The juice stains intensely and can sometimes be seen around a pet's mouth after berry ingestion, which can be a useful clue for owners.
+""",
+                toxicityInfo: """
+Toxic Mechanism: Pokeweed contains several classes of toxic compounds. Phytolaccatoxin and phytolaccigenin (triterpenoid saponins) are present throughout the plant and cause severe gastrointestinal irritation. The roots additionally contain pokeweed mitogen (PWM) — a compound that abnormally stimulates immune cell division, a mechanism not seen in most plant toxins. Oxalates contribute to oral and GI irritation as well.
+
+Signs typically begin within 2–6 hours of ingestion and may include:
+• Excessive drooling, nausea
+• Vomiting (may be severe and persistent)
+• Diarrhea, which may become bloody
+• Abdominal pain
+• Weakness, lethargy
+• Low heart rate or abnormal heart rhythm (cardiovascular effects more common with root ingestion or large exposures)
+• Respiratory distress (in severe cases)
+• Collapse in severe or untreated cases
+
+Root ingestion is a particular concern because the high toxin concentration can produce more severe cardiovascular effects than berry or leaf ingestion alone. Dogs that dig in areas where pokeweed grows should be monitored carefully.
+
+Interesting fact: Despite its toxicity, pokeweed leaves were traditionally eaten in the American South as "poke sallet" — but only after boiling the leaves multiple times and discarding the water each time to reduce toxins. This preparation is not safe for pets under any circumstances, and the process itself illustrates just how potent the plant's compounds are.
+""",
+                onsetTime: OnsetTime(
+                    early: "Signs typically begin within 2–6 hours of ingestion",
+                    delayed: "Cardiovascular effects (bradycardia, arrhythmias) may develop later, especially with root ingestion or large exposures"
+                ),
+                symptoms: [
+                    "Excessive drooling and nausea",
+                    "Vomiting (may be severe and persistent)",
+                    "Diarrhea (may become bloody)",
+                    "Abdominal pain",
+                    "Weakness and lethargy",
+                    "Low heart rate (bradycardia)",
+                    "Abnormal heart rhythm (arrhythmia)",
+                    "Respiratory distress",
+                    "Collapse"
+                ],
+                entrySeverity: .high,
+                speciesRisks: [
+                    SpeciesRisk(
+                        species: .dog,
+                        severity: .high,
+                        notes: "All parts toxic; root ingestion carries greatest risk due to high toxin concentration. Digging behavior increases root exposure risk."
+                    ),
+                    SpeciesRisk(
+                        species: .cat,
+                        severity: .high,
+                        notes: "All parts toxic; cats are less likely to ingest large quantities but even small amounts can cause significant GI signs."
+                    ),
+                    SpeciesRisk(
+                        species: .smallMammal,
+                        severity: .moderate,
+                        notes: "Rabbits and guinea pigs should have no access to this plant; limited companion animal data but saponin toxicity is expected across small species."
+                    ),
+                    SpeciesRisk(
+                        species: .bird,
+                        severity: .low,
+                        notes: "Wild birds consume berries without apparent harm due to differences in digestive metabolism; caution is still warranted for pet birds given the presence of saponins and other toxins."
+                    ),
+                    SpeciesRisk(
+                        species: .reptile,
+                        severity: .low,
+                        notes: "Limited data available. GI irritant effects are possible; avoid exposure."
+                    )
+                ],
+                preventionTips: [
+                    "Remove pokeweed plants from yards and gardens where pets roam",
+                    "Be aware of young spring shoots, which resemble asparagus and may be overlooked",
+                    "Monitor dogs that dig — roots are the most toxic part and can grow very large",
+                    "The berries' dark staining juice may be visible around a pet's mouth after exposure — contact a veterinarian or animal poison control immediately"
+                ],
+                sources: [
+                    "ASPCA Animal Poison Control Center — Phytolacca americana",
+                    "Pet Poison Helpline — Pokeweed",
+                    "Merck Veterinary Manual — Pokeweed Poisoning",
+                    "Burrows GE, Tyrl RJ. Toxic Plants of North America. 2nd ed. Wiley-Blackwell; 2013."
+                ],
+                relatedEntries: [
+                    "045fe2d3-3c59-4f15-b72a-09371b675d77"  // GI Irritant Plants — similar GI irritant mechanism (saponins)
+                ]
             ),
 
             // MARK: - Nicotine & Tobacco Products
