@@ -77,177 +77,14 @@ Dynamic Type, VoiceOver, high contrast, 44pt minimum touch targets.
 
 | Document | Purpose |
 |----------|---------|
-| `PetToxic_Database_Audit_Rules.md` | Full audit rules reference *(TODO: not yet created)* |
-| `PetToxic_Database_Audit_Rules_ClaudeCode.md` | Condensed rules for batch files *(TODO: not yet created)* |
-| `EntryReferenceDocument.md` | Complete list of all entries with UUIDs *(TODO: not yet created)* |
+| `PetToxic_Database_Audit_Rules.md` | Full audit rules: sources, content policies, species, severity, categories, fields, cross-references |
+| `PetToxic_Database_Audit_Rules_ClaudeCode.md` | Condensed checklist for batch editing sessions |
+| `EntryReferenceDocument.md` | Complete list of all 183 entries with UUIDs, severity, and categories |
 | `Documentation/DataModels.md` | Data model specifications |
 | `Documentation/Design/UI-Spec.md` | UI specifications |
 | `Documentation/Design/StyleGuide.md` | Visual design guidelines |
 
----
-
-## Categories
-
-| Category | Key | Icon | Notes |
-|----------|-----|------|-------|
-| Foods | `.foods` | `fork.knife` | |
-| Plants | `.plants` | `leaf.fill` | |
-| Medications | `.medications` | `pills.fill` | Includes pet meds & pesticides |
-| Cleaning Products | `.cleaningProducts` | `bubbles.and.sparkles` | |
-| Garage & Garden | `.garageGarden` | `wrench.and.screwdriver.fill` | |
-| Household Items | `.householdItems` | `house.fill` | |
-| Recreational Substances | `.recreationalSubstances` | `smoke.fill` | |
-| Outdoor Hazards | `.outdoorHazards` | `figure.hiking` | Animal encounters, environmental |
-| Informational | `.informational` | `info.circle.fill` | Umbrella entries, mechanical hazards |
-
-**Cross-listing:** Entries can appear in multiple categories (e.g., Hops in Foods + Plants).
-
----
-
-## Severity Levels
-
-| Level | Definition | UI Color | Recommendation |
-|-------|------------|----------|----------------|
-| `.severe` | Life-threatening | Red | Immediate emergency care |
-| `.high` | Serious symptoms expected | Orange | Prompt veterinary care |
-| `.moderate` | Significant symptoms possible | Yellow | Veterinary evaluation recommended |
-| `.low` | Mild, self-limiting | Green | Monitor; contact vet if worsens |
-| `nil` | Informational entry | Gray | Educational/umbrella content |
-
-**Sorting:** Entries sort by severity (SEVERE → HIGH → MODERATE → LOW → nil).
-
----
-
-## Species Requirements
-
-**Every entry MUST include all 5 species:**
-
-| Species | Includes |
-|---------|----------|
-| `.dog` | All domestic dogs |
-| `.cat` | All domestic cats |
-| `.smallMammal` | Rabbits, guinea pigs, hamsters, rats, mice, ferrets, chinchillas, gerbils |
-| `.bird` | Budgies, canaries, parrots, macaws, cockatiels, finches, pet birds |
-| `.reptile` | Snakes, lizards, turtles, tortoises, bearded dragons, geckos |
-
-**Research notes:**
-- Small mammals: Research rabbits, guinea pigs, AND rodents separately (sensitivities vary)
-- Birds: Consider both small (budgies) and large (parrots) — small birds often more sensitive
-- Reptiles: Research snakes, lizards, AND chelonians separately if needed
-
----
-
-## Entry Editing Rules
-
-### Sources
-
-| Action | Rule |
-|--------|------|
-| **REMOVE** | "Veterinary Information Network (VIN)" or "VIN" monograph sources |
-| **KEEP** | "Veterinary Partner" (VIN's public website — acceptable) |
-| **REQUIRE** | Minimum 3 publicly accessible sources per entry |
-
-**Preferred sources (in order):**
-1. ASPCA Animal Poison Control Center
-2. Pet Poison Helpline
-3. Merck Veterinary Manual
-4. Peer-reviewed journals (JAVMA, JVIM, JVECC)
-5. Veterinary school websites (UC Davis, Cornell, Purdue)
-6. Veterinary Partner
-7. VCA Animal Hospitals, PetMD
-
-### Content to REMOVE
-
-| Remove | Reason |
-|--------|--------|
-| VIN sources | Subscription-only; not publicly accessible |
-| Dosage thresholds (mg/kg) | Implies safe amounts exist |
-| LD50 data | Laypersons don't understand; implies thresholds |
-| "Safe amount" language | Never imply any quantity is safe |
-| "Generally well tolerated" | Could discourage seeking care |
-| Prognosis statements | "Prognosis is excellent/poor" — depends on many factors |
-| Treatment protocols | Constitutes medical advice |
-| Specific doctor/author names | Use organization names only |
-
-### Content to KEEP or ADD
-
-| Keep/Add | Notes |
-|----------|-------|
-| Practical examples | "Even a small amount can be dangerous to cats" |
-| Plain language explanations | "methemoglobinemia (a condition where blood cannot carry oxygen properly)" |
-| Observable symptoms | What owners might see (not diagnosis) |
-| Species-specific warnings | Important safety information |
-| Common exposure scenarios | Helps with prevention |
-| Common misspellings | Improves searchability (e.g., "metaldahyde") |
-| Seasonal context | When exposures peak (spring/fall for fertilizers) |
-| Product identification tips | Colors, packaging details |
-| "Pet-safe" product cautions | Marketing claims vs. reality |
-
-### Permitted First Aid
-
-| Permitted | Example |
-|-----------|---------|
-| Bathing/rinsing | "Bathe to remove substance from fur" |
-| Eye rinsing | "Rinse eyes with clean water or saline" |
-| Remove from exposure | "Move pet to fresh air" |
-| Karo syrup | For expected hypoglycemia (xylitol, diabetes meds) |
-
-### Language Guidelines
-
-- **Target audience:** Pet owners without medical training
-- **Jargon format:** "technical term (plain language explanation)"
-- **Use:** "Animal poison control" (not specific hotline names — numbers listed separately)
-- **Tone:** Informative but urgent; never dismissive of risk
-
----
-
-## Cross-References (relatedEntries)
-
-**All cross-references must be BIDIRECTIONAL.**
-
-If Entry A links to Entry B, Entry B must link back to Entry A.
-
-**Common cross-reference patterns:**
-- Umbrella → Specific entries (Rodenticides → Bromethalin, Anticoagulants, etc.)
-- Same toxic mechanism (Cocoa Mulch ↔ Chocolate — both methylxanthines)
-- Combined products (Fertilizers ↔ Herbicides — "weed and feed")
-
----
-
-## Informational Entries
-
-Entries describing **mechanical hazards** (not chemical toxicosis) or **umbrella/educational content**:
-
-| Setting | Value |
-|---------|-------|
-| `entrySeverity` | `nil` |
-| `categories` | Include `.informational` (can be cross-listed with other categories) |
-
-**Examples:**
-- Mechanical hazards: Corn Cob, Fruit Pits, Expanding Glues (Gorilla Glue), Linear Foreign Bodies
-- Umbrella entries: Rodenticides, Pesticides & Insecticides, Calcium Oxalate Plants
-
----
-
-## Fields Reference
-
-### Fields to EDIT during audits
-- `speciesRisks` — Add missing species
-- `sources` — Remove VIN, ensure 3+ remain
-- `toxicityInfo` / `description` — Remove prohibited content, add plain language
-- `relatedEntries` — Add cross-references (bidirectional)
-- `alternateNames` — Add misspellings, brand names, synonyms
-- `categories` — Add cross-listings if appropriate
-- `entrySeverity` — Set to `nil` for informational entries
-
-### ToxicItem Initializer Field Order
-When adding new entries, fields MUST appear in this exact order:
-`id, name, alternateNames, categories, imageAsset, description, toxicityInfo, onsetTime, symptoms, entrySeverity, speciesRisks, preventionTips, sources, relatedEntries`
-
-### Fields NOT to EDIT
-- `id` (UUID) — Breaking change; affects app functionality
-- `name` — Affects search and navigation
-- `imageAsset` / `thumbnailURL` — Linked to external assets; coordinate with user
+**For entry editing sessions:** Read `PetToxic_Database_Audit_Rules_ClaudeCode.md` for quick rules or `PetToxic_Database_Audit_Rules.md` for full details. Use `EntryReferenceDocument.md` to look up UUIDs and verify cross-references.
 
 ---
 
@@ -290,11 +127,7 @@ feat: Session 75 Garage & Garden Audit - Mothballs, Expanding Glues
 5. Is the code testable?
 6. Correct branch?
 
-**Additional questions for entry edits:**
-7. Are all 5 species present with severity + notes?
-8. Is VIN removed from sources? Are 3+ sources remaining?
-9. Is any "safe amount" language present that should be removed?
-10. Are cross-references bidirectional?
+**For entry edits:** See audit checklist in `PetToxic_Database_Audit_Rules.md`.
 
 ---
 
@@ -409,23 +242,6 @@ PetToxic/
 
 ---
 
-## Audit Progress Tracking
-
-| Category | Entries | Status |
-|----------|---------|--------|
-| Plants | ~48 | ✅ Complete |
-| Foods | ~17 | ✅ Complete |
-| Medications | ~24 | ✅ Complete |
-| Garage & Garden | ~21 | ✅ Complete |
-| Household Items | ~15 | ✅ Complete |
-| Cleaning Products | 9 | ✅ Complete |
-| Recreational Substances | 6 | ✅ Complete |
-| Outdoor Hazards | 12 | ✅ Complete |
-
-*All 8 main categories audited. Remaining: Informational entries (~15), common toxicities enhancement, new Albuterol entry.*
-
----
-
 ## Session Handoff Protocol
 
 When ending a session, create a handoff document including:
@@ -441,4 +257,4 @@ Handoff files: `Handoff_SessionXX_to_SessionYY.md`
 
 ---
 
-*Last Updated: February 2026 (Session 128)*
+*Last Updated: March 2026 (Session 135)*
