@@ -77,9 +77,9 @@ Dynamic Type, VoiceOver, high contrast, 44pt minimum touch targets.
 
 | Document | Purpose |
 |----------|---------|
-| `PetToxic_Database_Audit_Rules.md` | Full audit rules reference |
-| `PetToxic_Database_Audit_Rules_ClaudeCode.md` | Condensed rules for batch files |
-| `EntryReferenceDocument.md` | Complete list of all entries with UUIDs |
+| `PetToxic_Database_Audit_Rules.md` | Full audit rules reference *(TODO: not yet created)* |
+| `PetToxic_Database_Audit_Rules_ClaudeCode.md` | Condensed rules for batch files *(TODO: not yet created)* |
+| `EntryReferenceDocument.md` | Complete list of all entries with UUIDs *(TODO: not yet created)* |
 | `Documentation/DataModels.md` | Data model specifications |
 | `Documentation/Design/UI-Spec.md` | UI specifications |
 | `Documentation/Design/StyleGuide.md` | Visual design guidelines |
