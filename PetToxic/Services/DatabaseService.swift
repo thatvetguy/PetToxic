@@ -2526,6 +2526,99 @@ class DatabaseService {
                 relatedEntries: nil
             ),
 
+            // MARK: - Duranta / Golden Dewdrop
+            ToxicItem(
+                id: UUID(uuidString: "d84a68f2-ba6d-4ad6-b4af-82721447ef83")!,
+                name: "Duranta / Golden Dewdrop",
+                alternateNames: [
+                    "Duranta",
+                    "Duranta erecta",
+                    "Duranta repens",
+                    "golden dewdrop",
+                    "pigeon berry",
+                    "skyflower",
+                    "Geisha Girl",
+                    "Sheena's Gold",
+                    "Gold Mound",
+                    "Sapphire Showers",
+                    "golden dew drop",
+                    "duranta berries",
+                    "duranta shrub",
+                    "Verbenaceae"
+                ],
+                categories: [.plants],
+                imageAsset: "duranta_thumb",
+                description: """
+Duranta erecta (also known as golden dewdrop, pigeon berry, or skyflower) is a fast-growing ornamental shrub widely planted in warm US states including Florida, Texas, Arizona, and California, as well as throughout tropical and subtropical regions worldwide. It is commonly found in home gardens, parks, and commercial landscaping. Popular cultivars include 'Geisha Girl,' 'Sheena's Gold,' 'Gold Mound,' and 'Sapphire Showers.'
+
+The plant produces clusters of small lavender-blue flowers followed by bright golden-orange berry clusters. The berries are attractive and accessible to pets — dogs are known to be drawn to them and may actively seek them out or jump up into shrubs to reach them. Unripened berries and leaves are considered the most toxic parts of the plant. Note that the same berries are eaten by wild songbirds (such as cedar waxwings and robins) without apparent harm — this does not mean the plant is safe for dogs, cats, or other pets.
+""",
+                toxicityInfo: """
+The exact toxic compound in Duranta erecta has not been fully identified. Saponins and glycosides have been isolated from the plant and are suspected to contribute to toxicity. The clinical picture documented in published veterinary case reports involves both nervous system and gastrointestinal effects, which distinguishes it from a simple GI irritant.
+
+A published case series in the Australian Veterinary Journal documented four separate incidents of Duranta poisoning affecting nine dogs and one cat. All affected animals developed drowsiness, heightened sensitivity to stimulation (hyperaesthesia), and tetanic seizures (severe, sustained muscle contractions). Five of the dogs and the cat also showed gastrointestinal signs including vomiting, diarrhea, bloody stool (melaena), and evidence of gastric and intestinal hemorrhage. Not all animals survived. The severity of signs appears to be related to the quantity consumed.
+
+**Important note about songbirds:** Wild songbirds consume ripe Duranta berries without apparent harm. This does not make the plant safe for dogs, cats, or pet birds. The reason for this difference is not fully understood, but pet owners should not interpret bird feeding on Duranta as a sign that the plant is non-toxic.
+""",
+                onsetTime: OnsetTime(
+                    early: "Signs may appear within a few hours of ingestion. Initial signs include drowsiness, lethargy, vomiting, and diarrhea.",
+                    delayed: "Neurological signs including heightened sensitivity, tremors, and seizures may develop after initial GI signs. Animals that survive severe poisoning may take days to recover."
+                ),
+                symptoms: [
+                    "Drowsiness or lethargy",
+                    "Vomiting",
+                    "Diarrhea (may contain blood)",
+                    "Drooling",
+                    "Heightened sensitivity to touch, sound, or stimulation (hyperaesthesia)",
+                    "Tremors",
+                    "Tetanic seizures (severe, sustained muscle contractions)",
+                    "Decreased heart rate (in severe cases)",
+                    "Signs of internal GI bleeding (dark, tarry stools)"
+                ],
+                entrySeverity: .high,
+                speciesRisks: [
+                    SpeciesRisk(
+                        species: .dog,
+                        severity: .high,
+                        notes: "Confirmed toxicity with documented fatalities. Dogs are known to be attracted to the berries and may actively seek them out. Signs in published case reports included drowsiness, hyperaesthesia, tetanic seizures, vomiting, bloody diarrhea, and GI hemorrhage. Not all affected dogs survived. Unripened berries and leaves are considered most toxic."
+                    ),
+                    SpeciesRisk(
+                        species: .cat,
+                        severity: .high,
+                        notes: "Confirmed toxicity documented in the published veterinary case series. The affected cat showed drowsiness, hyperaesthesia, tetanic seizures, and GI signs including hemorrhage. Treat any suspected ingestion as an emergency."
+                    ),
+                    SpeciesRisk(
+                        species: .smallMammal,
+                        severity: .moderate,
+                        notes: "No specific case data available for small mammals such as rabbits, guinea pigs, or hamsters. Given the documented severity in dogs and cats, small mammals should be considered at risk. Their small body size and inability to vomit (in most species) could increase risk. Avoid all exposure."
+                    ),
+                    SpeciesRisk(
+                        species: .bird,
+                        severity: .moderate,
+                        notes: "The picture for birds is nuanced. Wild songbirds (robins, cedar waxwings) consume ripe Duranta berries without apparent harm. However, toxicity has been reported in parrots and finches — pet bird species that may be more sensitive, or that consume leaves and unripe berries in addition to ripe fruit. Do not assume Duranta is safe for pet birds based on wild bird behavior. Any suspected ingestion by a pet bird should be evaluated by a veterinarian."
+                    ),
+                    SpeciesRisk(
+                        species: .reptile,
+                        severity: .low,
+                        notes: "No documented cases of Duranta toxicity in reptiles. Herbivorous reptiles such as tortoises and iguanas allowed outdoor access in warm climates should not have access to this plant as a precaution, but risk is considered low based on available data."
+                    )
+                ],
+                preventionTips: [
+                    "Remove Duranta shrubs from gardens where dogs have unsupervised access — dogs are known to actively seek out the berries",
+                    "Be aware of Duranta in neighbors' gardens, parks, and public landscaping, particularly in Florida, Texas, Arizona, and California where it is widely planted",
+                    "Common cultivars 'Geisha Girl,' 'Sheena's Gold,' and 'Gold Mound' are all the same species and equally toxic — the cultivar name does not indicate safety",
+                    "The bright golden-orange berry clusters are the most accessible and attractive part of the plant to pets — be especially vigilant when berries are present (late summer through fall)",
+                    "Do not assume the plant is safe because wild birds eat the berries — wild songbirds appear to tolerate ripe Duranta fruit but this does not apply to dogs, cats, or pet birds"
+                ],
+                sources: [
+                    "Scanlan SN, Eagles DA, Vacher NE, et al. Duranta erecta poisoning in nine dogs and a cat. Australian Veterinary Journal. 2006;84(10):367-370.",
+                    "Animal Poisons Helpline. Duranta (Golden Dewdrop) Toxicity in Pets. animalpoisons.com.au",
+                    "Wikipedia. Duranta erecta. en.wikipedia.org/wiki/Duranta_erecta",
+                    "ASPCA Animal Poison Control Center. Toxic and Non-Toxic Plants. aspca.org"
+                ],
+                relatedEntries: nil
+            ),
+
             // MARK: - Nicotine & Tobacco Products
             ToxicItem(
                 id: UUID(uuidString: "fd98d3c0-368c-4b20-9192-c98dd3c17f14")!,
