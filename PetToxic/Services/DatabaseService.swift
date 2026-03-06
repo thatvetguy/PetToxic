@@ -2619,6 +2619,91 @@ A published case series in the Australian Veterinary Journal documented four sep
                 relatedEntries: ["1afa55b7-d37f-469f-9f8b-6ec3c0ff7471"]  // Ruscus (Butcher's Broom) — saponin mechanism
             ),
 
+            // MARK: - Packera / Ragwort
+            ToxicItem(
+                id: UUID(uuidString: "8adc8891-ee42-4980-b263-4ef8c14dffcd")!,
+                name: "Packera / Ragwort",
+                alternateNames: [
+                    "ragwort", "golden ragwort", "Packera aurea", "Senecio", "Senecio jacobaea",
+                    "Jacobaea vulgaris", "tansy ragwort", "groundsel", "squaw weed", "liferoot",
+                    "Packera spp.", "butterweed", "ragwort plant"
+                ],
+                categories: [.plants],
+                imageAsset: "ragwort_thumb",
+                description: """
+Packera (formerly classified as Senecio) is a large genus of flowering plants in the daisy family (Asteraceae) found throughout North America, Europe, and beyond. Golden ragwort (Packera aurea) is native to eastern North America and commonly found in moist woodlands, meadows, and along roadsides. Tansy ragwort (Jacobaea vulgaris, formerly Senecio jacobaea) is widespread across the US Pacific Northwest and Europe.
+
+These plants are considered highly toxic to pets — particularly livestock and dogs — due to the presence of pyrrolizidine alkaloids (PAs). What makes Packera especially dangerous is that toxicity is cumulative: liver damage builds up with repeated small exposures over time, meaning a pet that grazes or nibbles on these plants regularly may develop serious liver disease without any obvious acute illness. By the time symptoms appear, significant irreversible liver damage may already have occurred.
+
+The plants produce yellow daisy-like flowers and are often considered wildflowers or weeds. They are occasionally present in hay, dried herbal products, and "wildflower" seed mixes — meaning indoor or non-roaming pets can also be exposed through contaminated plant material.
+""",
+                toxicityInfo: """
+Pyrrolizidine alkaloids (PAs) — particularly senecionine, seneciphylline, and retrorsine — are metabolized in the liver into reactive pyrrole compounds that bind to and destroy liver cells (hepatocytes). This damage is cumulative and largely irreversible. Even low-level repeated ingestion can result in progressive hepatic fibrosis (scarring of the liver) and ultimately liver failure. The liver's large functional reserve means significant damage can occur before clinical signs appear — sometimes called "delayed toxicity."
+
+Horses and livestock are classically most sensitive to PA toxicity; however, dogs are also susceptible, particularly with cumulative exposure. Cats have reduced ability to metabolize PAs due to differences in hepatic enzyme activity, placing them at significant risk. Birds metabolize PAs differently and toxicity data is limited; caution is still warranted. Reptiles and small mammals have limited specific data but liver-toxic compounds are generally a concern across species.
+
+The insidious nature of PA toxicity means pets with a history of access to these plants should be evaluated by a veterinarian even in the absence of acute signs.
+""",
+                onsetTime: OnsetTime(
+                    early: "Loss of appetite, weight loss, lethargy, vomiting, and diarrhea may appear within days of a large acute ingestion",
+                    delayed: "With cumulative low-level exposure, signs of liver failure (jaundice, abdominal distension, neurological signs) may not appear for weeks to months — by this point, significant irreversible liver damage has typically already occurred"
+                ),
+                symptoms: [
+                    "Loss of appetite and weight loss",
+                    "Lethargy",
+                    "Vomiting",
+                    "Diarrhea",
+                    "Increased thirst and urination (early liver dysfunction)",
+                    "Jaundice — yellowing of skin, gums, or whites of eyes (icterus)",
+                    "Abdominal distension (fluid accumulation from liver failure)",
+                    "Disorientation, head pressing, or circling (hepatic encephalopathy)",
+                    "Seizures (hepatic encephalopathy — severe cases)",
+                    "Weakness or collapse"
+                ],
+                entrySeverity: .high,
+                speciesRisks: [
+                    SpeciesRisk(
+                        species: .dog,
+                        severity: .high,
+                        notes: "Susceptible to cumulative PA hepatotoxicity; exposure through grazing, hay, or dried plant material. Symptoms may be delayed until significant liver damage has occurred."
+                    ),
+                    SpeciesRisk(
+                        species: .cat,
+                        severity: .high,
+                        notes: "Reduced hepatic PA metabolism increases sensitivity compared to many other species; even low-level repeated exposure is concerning. Seek veterinary evaluation promptly."
+                    ),
+                    SpeciesRisk(
+                        species: .smallMammal,
+                        severity: .moderate,
+                        notes: "Rabbits are historically sensitive to pyrrolizidine alkaloids; guinea pigs and rodents have limited specific data. Avoid any exposure."
+                    ),
+                    SpeciesRisk(
+                        species: .bird,
+                        severity: .moderate,
+                        notes: "Limited species-specific data available. PA compounds are hepatotoxic and all exposure should be avoided."
+                    ),
+                    SpeciesRisk(
+                        species: .reptile,
+                        severity: .low,
+                        notes: "Limited data available. Reptiles are not known to be preferentially sensitive to PAs, but liver-toxic compounds warrant caution regardless."
+                    )
+                ],
+                preventionTips: [
+                    "Learn to identify ragwort and groundsel — yellow daisy-like flowers on erect stems, commonly found along roadsides, meadows, and disturbed soil",
+                    "Remove ragwort plants from pastures and yards where pets have access — pull plants before they go to seed to prevent spread",
+                    "Inspect hay and dried herbal products for dried ragwort before giving to pets — dried plant material retains full toxicity and may be more palatable than fresh",
+                    "Be cautious with 'wildflower' seed mixes — some may contain Senecio or Packera species",
+                    "If your pet has had repeated access to areas where ragwort grows, consult your veterinarian about liver screening even if no symptoms are present — damage can be silent"
+                ],
+                sources: [
+                    "ASPCA Animal Poison Control Center — Senecio/Packera",
+                    "Pet Poison Helpline — Pyrrolizidine Alkaloid Toxicosis",
+                    "Merck Veterinary Manual — Pyrrolizidine Alkaloidosis",
+                    "Stegelmeier BL. Pyrrolizidine Alkaloid-Containing Toxic Plants (Senecio, Crotalaria, Cynoglossum, Amsinckia, Heliotropium, and Echium spp.). Veterinary Clinics of North America: Food Animal Practice. 2011."
+                ],
+                relatedEntries: ["b2e4c6a8-1d3f-5b7a-9e0c-4f6d8a2b7c5e"]  // Why Cats Are More Sensitive — cat PA metabolism deficiency
+            ),
+
             // MARK: - Nicotine & Tobacco Products
             ToxicItem(
                 id: UUID(uuidString: "fd98d3c0-368c-4b20-9192-c98dd3c17f14")!,
@@ -12551,7 +12636,8 @@ Washington State University Veterinary Clinical Pharmacology Laboratory offers t
                     "b8c9d0e1-2f3a-4b5c-6d7e-8f9a0b1c2d3e",  // Liquid Potpourri — grooming + essential oil sensitivity
                     "8a27c390-254f-47c9-90e7-7739694f603f",  // Onions — cats more susceptible, Heinz body anemia
                     "dad777ea-3120-43b1-9b8f-aee413716abc",  // Garlic — cats more susceptible than dogs
-                    "00112233-4455-6677-8899-aabbccddef24"   // Inhalant Toxicity — cat liver metabolism + aerosolized oils
+                    "00112233-4455-6677-8899-aabbccddef24",  // Inhalant Toxicity — cat liver metabolism + aerosolized oils
+                    "8adc8891-ee42-4980-b263-4ef8c14dffcd"   // Packera / Ragwort — reduced PA metabolism in cats
                 ]
             ),
 
