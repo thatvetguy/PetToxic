@@ -2893,6 +2893,87 @@ Note that toxicity varies between Lonicera species — trumpet honeysuckle (Loni
                 ]
             ),
 
+            // MARK: - Tree of Heaven
+            ToxicItem(
+                id: UUID(uuidString: "3C48AB30-D291-4519-9F2F-B4DA1E0D4C02")!,
+                name: "Tree of Heaven",
+                alternateNames: [
+                    "Ailanthus altissima",
+                    "tree-of-heaven",
+                    "stinking sumac",
+                    "Chinese sumac",
+                    "varnish tree",
+                    "ailanthus",
+                    "paradise tree",
+                    "copal tree"
+                ],
+                categories: [.plants],
+                imageAsset: "tree_of_heaven_thumb",
+                description: """
+Tree of Heaven (Ailanthus altissima) is one of the most aggressive invasive trees in North America, found across virtually every US state. Originally introduced from China in the 1700s, it is infamous for its ability to grow through pavement cracks, in building walls, along highway margins, and in disturbed urban lots. Many pet owners encounter it without recognizing it as a plant worth being cautious about.
+
+The tree produces large compound leaves — each composed of 11 to 25 leaflets with distinctive notched bases — and clusters of winged seed pods (samaras) that can number in the thousands. The entire plant emits a strong, unpleasant odor when leaves or bark are crushed, often described as rancid peanut butter. This odor may deter most pets from consuming large quantities. The tree is widely recognizable by its rapid growth and tendency to appear in disturbed, neglected areas — and is perhaps best known from the novel A Tree Grows in Brooklyn.
+""",
+                toxicityInfo: """
+The primary toxic compound in Tree of Heaven is ailanthone, a quassinoid — a type of bitter plant chemical — concentrated mainly in the bark and roots. Ailanthone acts as a GI irritant and has shown some cardiac effects in animal studies. Companion animal toxicity data is limited compared to many other plant entries; most available information comes from agricultural and human toxicology literature rather than veterinary case series.
+
+Bark and roots contain the highest concentrations of ailanthone; leaves contain lower levels. The strong odor of the plant likely discourages most pets from consuming significant quantities, which may partly explain the limited number of documented serious cases in companion animals. Ingestion should still prompt veterinary contact.
+""",
+                onsetTime: OnsetTime(
+                    early: "GI signs (vomiting, diarrhea, drooling) typically appear within a few hours of ingestion",
+                    delayed: "Cardiac effects have been noted in animal studies but documented clinical cases in companion animals are limited; seek veterinary evaluation if ingestion is confirmed"
+                ),
+                symptoms: [
+                    "Vomiting",
+                    "Diarrhea",
+                    "Drooling",
+                    "Lethargy",
+                    "Decreased appetite",
+                    "Cardiac arrhythmias (abnormal heart rhythm) — reported in animal studies; clinical cases in companion animals are limited"
+                ],
+                entrySeverity: .moderate,
+                speciesRisks: [
+                    SpeciesRisk(
+                        species: .dog,
+                        severity: .moderate,
+                        notes: "Most documented case reports involve dogs. GI irritation is the most expected outcome. Cardiac effects have been noted in animal studies, though documented clinical cases in companion animals are limited. The plant's strong odor likely deters large ingestions in most cases. Contact your veterinarian if ingestion occurs."
+                    ),
+                    SpeciesRisk(
+                        species: .cat,
+                        severity: .moderate,
+                        notes: "Same mechanism applies; limited specific feline data exists. Cats are less likely to chew bark or leaves than dogs. Contact your veterinarian if ingestion occurs."
+                    ),
+                    SpeciesRisk(
+                        species: .smallMammal,
+                        severity: .low,
+                        notes: "No meaningful companion animal data exists. GI irritant mechanism would apply if ingestion occurred. Most small mammals are housed indoors and are unlikely to encounter this tree. Contact a veterinarian if ingestion occurs."
+                    ),
+                    SpeciesRisk(
+                        species: .bird,
+                        severity: .low,
+                        notes: "No meaningful companion animal data exists. Unlikely exposure for pet birds. Contact an avian veterinarian if ingestion occurs."
+                    ),
+                    SpeciesRisk(
+                        species: .reptile,
+                        severity: .low,
+                        notes: "No meaningful companion animal data exists. Unlikely exposure for most pet reptiles. Contact a reptile veterinarian if ingestion occurs."
+                    )
+                ],
+                preventionTips: [
+                    "Learn to identify Tree of Heaven — large compound leaves with notched leaflet bases and a strong unpleasant odor when crushed",
+                    "Remove Tree of Heaven saplings from your yard; this invasive tree spreads aggressively and regrows from root fragments",
+                    "Monitor dogs in urban areas and along roadsides where Tree of Heaven commonly grows",
+                    "Contact your veterinarian if your pet chews on bark, leaves, or seed pods from this tree"
+                ],
+                sources: [
+                    "ASPCA Animal Poison Control Center",
+                    "Merck Veterinary Manual",
+                    "NC State Extension — Plant Toolbox (Ailanthus altissima)",
+                    "Burrows & Tyrl — Toxic Plants of North America"
+                ],
+                relatedEntries: []
+            ),
+
             // MARK: - Nicotine & Tobacco Products
             ToxicItem(
                 id: UUID(uuidString: "fd98d3c0-368c-4b20-9192-c98dd3c17f14")!,
