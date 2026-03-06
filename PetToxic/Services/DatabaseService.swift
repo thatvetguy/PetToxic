@@ -10978,7 +10978,101 @@ Bufo toad toxin contains several dangerous compounds: BUFAGENINS and BUFOTOXINS 
                     "Australian Veterinary Journal — Retrospective report of 90 dogs with suspected cane toad toxicity (2004)",
                     "Merck Veterinary Manual — Toad Poisoning"
                 ],
-                relatedEntries: ["00112233-4455-6677-8899-aabbccddef07", "00112233-4455-6677-8899-aabbccddef29"]
+                relatedEntries: [
+                    "00112233-4455-6677-8899-aabbccddef07",
+                    "00112233-4455-6677-8899-aabbccddef29",
+                    "C55B5E77-7CFC-449F-A8AC-BD369A38F1EB"  // Colorado River Toad — standalone entry for Sonoran Desert toad
+                ]
+            ),
+
+            // MARK: - Colorado River Toad
+            ToxicItem(
+                id: UUID(uuidString: "C55B5E77-7CFC-449F-A8AC-BD369A38F1EB")!,
+                name: "Colorado River Toad",
+                alternateNames: [
+                    "Colorado River toad",
+                    "Sonoran Desert toad",
+                    "Incilius alvarius",
+                    "Bufo alvarius",
+                    "Bufo alvarius poisoning",
+                    "giant toad",
+                    "Sonoran toad",
+                    "Colorado River toad poisoning"
+                ],
+                categories: [.outdoorHazards],
+                imageAsset: "coloradotoad_thumb",
+                description: """
+The Colorado River Toad — also called the Sonoran Desert Toad — is one of the largest native toads in North America, with adults reaching up to 7 inches in length. It is found primarily in the southwestern United States, including Arizona, New Mexico, southern California, and parts of Texas, as well as northern Mexico.
+
+The toad is olive to dark brown with smooth skin and prominent oval parotoid glands — large raised structures located just behind each eye and on the shoulders. These glands are the source of a potent toxic secretion that is released when the toad feels threatened. Simply mouthing or licking the toad is enough to cause a serious reaction in dogs.
+
+This toad is most active during the summer monsoon season (July through September), when seasonal rains bring toads out in large numbers to breed. This seasonal surge is when pet exposures peak — particularly in Arizona. The Colorado River Toad is sometimes confused with the non-native Cane Toad (also known as the Marine Toad or Bufo Toad), which shares a similar toxic mechanism and is found in Florida, Hawaii, and parts of Texas.
+""",
+                toxicityInfo: """
+The parotoid glands of the Colorado River Toad secrete a mixture of toxic compounds, the most dangerous of which are bufadienolides — a class of cardiac glycosides that disrupt the heart's electrical conduction system and can cause life-threatening cardiac arrhythmias. These toxins are absorbed almost immediately through the mucous membranes of the mouth when a dog mouths, licks, or bites the toad. Absorption is rapid enough that serious signs can develop within minutes of exposure.
+
+The secretion also contains 5-MeO-DMT, a potent hallucinogenic compound — the same substance that has led to illegal recreational use of toad secretions by humans, and a fact that illustrates just how pharmacologically powerful this animal's chemistry is. In pets, neurological effects compound the cardiac effects and contribute to seizures and disorientation.
+
+If you witness your pet mouth or lick a Colorado River Toad, immediately rinse the mouth with water — flushing sideways (not back toward the throat) for several minutes to remove as much toxin as possible. Seek emergency veterinary care immediately. Do not wait for signs to develop.
+""",
+                onsetTime: OnsetTime(
+                    early: "Local signs (profuse drooling, pawing at mouth) occur immediately upon contact. Neurological signs (disorientation, stumbling, seizures) can develop within minutes.",
+                    delayed: "Cardiac effects (arrhythmias) may develop within 15 minutes to several hours. Death can occur rapidly in severe cases. This is a life-threatening emergency."
+                ),
+                symptoms: [
+                    "Profuse drooling and foaming at the mouth (often the first sign seen)",
+                    "Pawing at the mouth",
+                    "Disorientation, stumbling, or collapse",
+                    "Brick-red or pale gums",
+                    "Seizures or muscle tremors",
+                    "Cardiac arrhythmias (abnormal heart rhythm)",
+                    "Rapid deterioration — signs can progress from drooling to collapse within minutes"
+                ],
+                entrySeverity: .severe,
+                speciesRisks: [
+                    SpeciesRisk(
+                        species: .dog,
+                        severity: .severe,
+                        notes: "Dogs are the primary at-risk species. They readily investigate and mouth toads out of curiosity. Bufadienolide toxins are absorbed almost instantly through oral mucous membranes, and rapid deterioration — including seizures and cardiac arrest — is well documented. Deaths have been reported. THIS IS A LIFE-THREATENING EMERGENCY. Rinse the mouth with water immediately and seek emergency veterinary care without delay."
+                    ),
+                    SpeciesRisk(
+                        species: .cat,
+                        severity: .high,
+                        notes: "Cats are susceptible to the same toxic mechanism. Cats are behaviorally less likely than dogs to mouth a toad, making exposures less common — but when exposure does occur, serious signs are expected. Seek emergency veterinary care immediately."
+                    ),
+                    SpeciesRisk(
+                        species: .smallMammal,
+                        severity: .moderate,
+                        notes: "Cardiac glycosides would affect small mammals via the same mechanism. Most small mammals are housed indoors and are unlikely to encounter this toad. Severity is based on mechanism; limited companion animal data exists. Seek veterinary care if exposure occurs."
+                    ),
+                    SpeciesRisk(
+                        species: .bird,
+                        severity: .moderate,
+                        notes: "Wild birds have been documented in toad toxicosis cases. Pet birds are rarely exposed to outdoor toads. Severity is based on mechanism; limited companion animal data exists. Seek veterinary care if exposure occurs."
+                    ),
+                    SpeciesRisk(
+                        species: .reptile,
+                        severity: .low,
+                        notes: "Many reptile species — particularly snakes — have evolved resistance to bufadienolides, a well-documented evolutionary adaptation. Chelonians (turtles and tortoises) may be more sensitive. Overall the lowest risk among the five species. Data is limited; consult a reptile veterinarian if exposure occurs."
+                    )
+                ],
+                preventionTips: [
+                    "If you live in Arizona, New Mexico, southern California, or parts of Texas, be aware that Colorado River Toads are present and dangerous to pets",
+                    "Supervise pets outdoors during the monsoon season (July–September), especially at dawn, dusk, and after rainfall",
+                    "Keep your yard well-lit to spot toads before your dog does",
+                    "Remove standing water, debris, and areas where toads may hide",
+                    "Cover or bring in outdoor water bowls at night — toads can soak in them and leave behind toxin",
+                    "If your dog mouths a toad, IMMEDIATELY rinse the mouth with water (flushing sideways, not toward the throat) and seek emergency veterinary care — do not wait for symptoms"
+                ],
+                sources: [
+                    "ASPCA Animal Poison Control Center",
+                    "Pet Poison Helpline",
+                    "Merck Veterinary Manual",
+                    "Roder JD — Small Animal Toxicology (toad toxicosis)"
+                ],
+                relatedEntries: [
+                    "00112233-4455-6677-8899-aabbccddef05"  // Toad Poisoning (Bufo Toads) — shared toxic mechanism, broader toad poisoning entry
+                ]
             ),
 
             // MARK: - Bee, Wasp, and Ant Stings (Hymenoptera)
