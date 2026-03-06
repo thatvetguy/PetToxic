@@ -254,8 +254,10 @@ When adding new entries, fields MUST appear in this exact order:
 ## Branch Strategy
 - `main` — Stable, release-ready only
 - `develop` — Active development
-- `feature/[name]` — Individual features
-- `content/[name]` — Content additions
+- `feature/[name]` — Individual features (new UI, new functionality)
+- `content/[name]` — Content additions (optional; not required for routine edits)
+
+**Default behavior for content edits:** Work directly on `develop`. Do NOT create new branches for routine content additions (new entries, alternateNames updates, cross-references, text edits). Branching is only needed when a change could break existing functionality or when explicitly requested by the user.
 
 ## Commit Format
 - `feat:` New features
