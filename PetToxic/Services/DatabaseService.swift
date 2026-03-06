@@ -1813,7 +1813,8 @@ class DatabaseService {
                     "a7c3e1f0-5b2d-4e8a-9f6c-3d7b1a2e4f80",  // Peonies — similar GI irritant mechanism
                     "b3d8f2a1-6c4e-4f9b-a1d7-5e2c8b3f9a04",  // Sweet Pea — GI irritant component plus neurological mechanism
                     "c4e9a2b1-7d5f-4c3a-b8e2-6f1d9a4c5b73",  // Non-Toxic Bouquet Flowers - safe bouquet flowers counterpart
-                    "7E52EBF4-2617-4264-A341-4E6FF77E26EB"  // Pokeweed — saponin-based GI irritant, higher severity standalone entry
+                    "7E52EBF4-2617-4264-A341-4E6FF77E26EB",  // Pokeweed — saponin-based GI irritant, higher severity standalone entry
+                    "048CDED7-251B-4F1C-89E6-93ACB63E6621"  // Honeysuckle — saponin-based GI irritant
                 ]
             ),
 
@@ -2799,6 +2800,96 @@ Interesting fact: Despite its toxicity, pokeweed leaves were traditionally eaten
                 ],
                 relatedEntries: [
                     "045fe2d3-3c59-4f15-b72a-09371b675d77"  // GI Irritant Plants — similar GI irritant mechanism (saponins)
+                ]
+            ),
+
+            // MARK: - Honeysuckle
+            ToxicItem(
+                id: UUID(uuidString: "048CDED7-251B-4F1C-89E6-93ACB63E6621")!,
+                name: "Honeysuckle",
+                alternateNames: [
+                    "Lonicera",
+                    "English honeysuckle",
+                    "Lonicera periclymenum",
+                    "Japanese honeysuckle",
+                    "Lonicera japonica",
+                    "coral honeysuckle",
+                    "trumpet honeysuckle",
+                    "woodbine",
+                    "Lonicera caprifolium",
+                    "honeysuckle vine",
+                    "honeysuckle berries",
+                    "honeysuckle bush"
+                ],
+                categories: [.plants],
+                imageAsset: "honeysuckle_thumb",
+                description: """
+Honeysuckle refers to a large group of flowering vines and shrubs in the genus Lonicera, with over 180 species found worldwide. Several species are common garden plants and naturalised across much of North America, making them a frequent source of pet owner concern. The most widely recognised species include Japanese honeysuckle (Lonicera japonica), English honeysuckle (Lonicera periclymenum), trumpet honeysuckle (Lonicera sempervirens), and coral honeysuckle.
+
+The plant produces tubular flowers — commonly yellow, white, pink, or red — followed by small berries that range in color from red to black or blue depending on species. While the flowers and nectar are often considered low-risk and some species produce edible berries for humans, the berries contain the highest concentration of the plant's irritating compounds and are the most likely source of problems in pets.
+
+Honeysuckle is one of the most commonly searched plants when it comes to pet safety. Overall toxicity is considered low — most exposures result in mild, self-limiting signs rather than a serious emergency.
+""",
+                toxicityInfo: """
+Honeysuckle berries contain saponins — naturally occurring compounds that act as GI irritants in pets. Saponins are found throughout the plant kingdom and typically cause mild digestive upset rather than systemic toxicity. The berries contain higher concentrations of these compounds than the flowers or leaves, making berry ingestion the most likely scenario to produce visible signs.
+
+Significant quantities would generally be required to produce more than mild GI upset in a typical dog or cat. However, smaller pets, birds, and animals with sensitive digestive systems may react to smaller amounts.
+
+Note that toxicity varies between Lonicera species — trumpet honeysuckle (Lonicera sempervirens) is generally considered to have very low toxicity, while English honeysuckle (Lonicera periclymenum) has more documented cases of GI upset. When in doubt, treat any honeysuckle ingestion — particularly berry ingestion — as a reason to contact your veterinarian.
+""",
+                onsetTime: OnsetTime(
+                    early: "GI signs (vomiting, diarrhea, drooling) typically appear within a few hours of berry ingestion",
+                    delayed: "Symptoms are generally self-limiting and resolve within 24 hours without treatment"
+                ),
+                symptoms: [
+                    "Vomiting",
+                    "Diarrhea",
+                    "Drooling",
+                    "Decreased appetite",
+                    "Lethargy (mild)"
+                ],
+                entrySeverity: .low,
+                speciesRisks: [
+                    SpeciesRisk(
+                        species: .dog,
+                        severity: .low,
+                        notes: "Mild GI signs (vomiting, diarrhea, drooling) are the expected outcome with most exposures. Large ingestions of berries may cause more pronounced upset. Monitor for signs; contact your veterinarian if signs are persistent or worsening."
+                    ),
+                    SpeciesRisk(
+                        species: .cat,
+                        severity: .low,
+                        notes: "Cats are less likely than dogs to ingest significant quantities of berries. Mild GI upset is the expected outcome. Monitor for signs; contact your veterinarian if signs are persistent or worsening."
+                    ),
+                    SpeciesRisk(
+                        species: .smallMammal,
+                        severity: .low,
+                        notes: "Saponins can cause GI irritation in small mammals. Rabbits and guinea pigs have sensitive digestive systems and may react to smaller quantities than dogs or cats. Avoid offering honeysuckle berries to small mammals. Contact a veterinarian if ingestion occurs."
+                    ),
+                    SpeciesRisk(
+                        species: .bird,
+                        severity: .low,
+                        notes: "Limited companion animal data exists for birds. Berry ingestion could cause GI upset. Small birds may be more sensitive than larger parrots due to body size. Contact an avian veterinarian if berry ingestion is suspected."
+                    ),
+                    SpeciesRisk(
+                        species: .reptile,
+                        severity: .low,
+                        notes: "Exposure is unlikely in typical pet reptile husbandry. Limited data exists. Herbivorous reptiles (tortoises, iguanas) could potentially encounter honeysuckle in outdoor enclosures. Contact a reptile veterinarian if significant ingestion occurs."
+                    )
+                ],
+                preventionTips: [
+                    "If honeysuckle grows in your yard, be aware that the berries are the most likely part to cause GI upset in pets",
+                    "Consider removing berry-producing honeysuckle varieties from areas where pets roam unsupervised",
+                    "Monitor pets around honeysuckle vines and bushes, especially when berries are present in late summer and fall",
+                    "Contact your veterinarian if your pet ingests honeysuckle berries and shows persistent vomiting, diarrhea, or lethargy"
+                ],
+                sources: [
+                    "ASPCA Animal Poison Control Center",
+                    "Pet Poison Helpline",
+                    "Merck Veterinary Manual",
+                    "University of California Agriculture & Natural Resources"
+                ],
+                relatedEntries: [
+                    "045fe2d3-3c59-4f15-b72a-09371b675d77"  // GI Irritant Plants — similar saponin-based GI irritant mechanism
                 ]
             ),
 
