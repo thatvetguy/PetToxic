@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		TRIAL001BBBB1111111111 /* TrialManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = TRIAL001AAAA1111111111 /* TrialManager.swift */; };
-		TRIALBV01BBBB1111111111 /* TrialBannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = TRIALBV01AAAA1111111111 /* TrialBannerView.swift */; };
 		047D61DFD0831C22C171B07C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4892A0DA69F9D82CF1D8373B /* Assets.xcassets */; };
 		0A35A2B438F7FE2009ABCC3C /* EmptyStateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24B2882F5F5387A02F14DC1B /* EmptyStateView.swift */; };
 		0ED8DF5F0BC3B56D614CF741 /* SpeciesFilterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81DA312D440067CFD3E192A8 /* SpeciesFilterView.swift */; };
@@ -92,12 +90,14 @@
 		PHOTO003BBBB3333333333333 /* PetAvatarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = PHOTO004BBBB4444444444444 /* PetAvatarView.swift */; };
 		PHOTO005BBBB5555555555555 /* PetPhotoPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = PHOTO006BBBB6666666666666 /* PetPhotoPickerView.swift */; };
 		POISONCASE001AAAA111111 /* PoisonControlCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = POISONCASE002AAAA222222 /* PoisonControlCase.swift */; };
-		VACCRECORD01AAAA111111 /* VaccinationRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = VACCRECORD02AAAA222222 /* VaccinationRecord.swift */; };
-		VACCPRESET01AAAA111111 /* VaccinePresets.swift in Sources */ = {isa = PBXBuildFile; fileRef = VACCPRESET02AAAA222222 /* VaccinePresets.swift */; };
-		VACCLOGVW01AAAA1111111 /* VaccinationLogView.swift in Sources */ = {isa = PBXBuildFile; fileRef = VACCLOGVW02AAAA2222222 /* VaccinationLogView.swift */; };
-		VACCSUMCD01AAAA1111111 /* VaccinationSummaryCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = VACCSUMCD02AAAA2222222 /* VaccinationSummaryCard.swift */; };
 		PRIV002AAAA2222222222222 /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = PRIV001AAAA1111111111111 /* PrivacyInfo.xcprivacy */; };
 		SHCARD001AAAA1111111111 /* ShareCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = SHCARD002AAAA2222222222 /* ShareCardView.swift */; };
+		TRIAL001BBBB1111111111 /* TrialManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = TRIAL001AAAA1111111111 /* TrialManager.swift */; };
+		TRIALBV01BBBB1111111111 /* TrialBannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = TRIALBV01AAAA1111111111 /* TrialBannerView.swift */; };
+		VACCLOGVW01AAAA1111111 /* VaccinationLogView.swift in Sources */ = {isa = PBXBuildFile; fileRef = VACCLOGVW02AAAA2222222 /* VaccinationLogView.swift */; };
+		VACCPRESET01AAAA111111 /* VaccinePresets.swift in Sources */ = {isa = PBXBuildFile; fileRef = VACCPRESET02AAAA222222 /* VaccinePresets.swift */; };
+		VACCRECORD01AAAA111111 /* VaccinationRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = VACCRECORD02AAAA222222 /* VaccinationRecord.swift */; };
+		VACCSUMCD01AAAA1111111 /* VaccinationSummaryCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = VACCSUMCD02AAAA2222222 /* VaccinationSummaryCard.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -118,8 +118,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		TRIAL001AAAA1111111111 /* TrialManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrialManager.swift; sourceTree = "<group>"; };
-		TRIALBV01AAAA1111111111 /* TrialBannerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrialBannerView.swift; sourceTree = "<group>"; };
 		0B85A0BAA5B698970D8F9ADA /* EmergencyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmergencyView.swift; sourceTree = "<group>"; };
 		1CC831E76E0F0F17894ADA65 /* PetToxicUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetToxicUITests.swift; sourceTree = "<group>"; };
 		1CCB51A6977A5572FDF23398 /* Font+Poppins.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "Font+Poppins.swift"; sourceTree = "<group>"; };
@@ -208,12 +206,14 @@
 		PHOTO004BBBB4444444444444 /* PetAvatarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetAvatarView.swift; sourceTree = "<group>"; };
 		PHOTO006BBBB6666666666666 /* PetPhotoPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetPhotoPickerView.swift; sourceTree = "<group>"; };
 		POISONCASE002AAAA222222 /* PoisonControlCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoisonControlCase.swift; sourceTree = "<group>"; };
-		VACCRECORD02AAAA222222 /* VaccinationRecord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VaccinationRecord.swift; sourceTree = "<group>"; };
-		VACCPRESET02AAAA222222 /* VaccinePresets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VaccinePresets.swift; sourceTree = "<group>"; };
-		VACCLOGVW02AAAA2222222 /* VaccinationLogView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VaccinationLogView.swift; sourceTree = "<group>"; };
-		VACCSUMCD02AAAA2222222 /* VaccinationSummaryCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VaccinationSummaryCard.swift; sourceTree = "<group>"; };
 		PRIV001AAAA1111111111111 /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
 		SHCARD002AAAA2222222222 /* ShareCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareCardView.swift; sourceTree = "<group>"; };
+		TRIAL001AAAA1111111111 /* TrialManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrialManager.swift; sourceTree = "<group>"; };
+		TRIALBV01AAAA1111111111 /* TrialBannerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrialBannerView.swift; sourceTree = "<group>"; };
+		VACCLOGVW02AAAA2222222 /* VaccinationLogView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VaccinationLogView.swift; sourceTree = "<group>"; };
+		VACCPRESET02AAAA222222 /* VaccinePresets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VaccinePresets.swift; sourceTree = "<group>"; };
+		VACCRECORD02AAAA222222 /* VaccinationRecord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VaccinationRecord.swift; sourceTree = "<group>"; };
+		VACCSUMCD02AAAA2222222 /* VaccinationSummaryCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VaccinationSummaryCard.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -784,7 +784,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 20260213;
+				CURRENT_PROJECT_VERSION = 20260306;
 				DEVELOPMENT_TEAM = 6KA5CB5S3A;
 				GENERATE_INFOPLIST_FILE = NO;
 				INFOPLIST_FILE = PetToxic/Resources/Info.plist;
@@ -795,6 +795,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.2.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.thatvetguy.PetToxic;
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = iphoneos;
@@ -971,7 +972,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 20260213;
+				CURRENT_PROJECT_VERSION = 20260306;
 				DEVELOPMENT_TEAM = 6KA5CB5S3A;
 				GENERATE_INFOPLIST_FILE = NO;
 				INFOPLIST_FILE = PetToxic/Resources/Info.plist;
@@ -982,6 +983,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.2.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.thatvetguy.PetToxic;
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = iphoneos;

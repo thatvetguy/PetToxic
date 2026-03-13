@@ -802,7 +802,7 @@ class DatabaseService {
                     "A single swallowed pit may pass without issue, but contact your vet for guidance, especially for smaller dogs"
                 ],
                 sources: ["ASPCA Animal Poison Control Center", "Pet Poison Helpline", "Poison Control (poison.org)", "BirdTricks"],
-                relatedEntries: ["00112233-4455-6677-8899-aabbccddef19"]
+                relatedEntries: ["00112233-4455-6677-8899-aabbccddef19", "3816a23f-40cf-47e7-88e6-158fddc21b71"]
             ),
 
             // MARK: - Moldy Foods
@@ -1141,7 +1141,7 @@ class DatabaseService {
             ToxicItem(
                 id: UUID(uuidString: "f52b8aba-d899-418b-8ce6-2844408a5e3c")!,
                 name: "Insoluble Calcium Oxalate Plants",
-                alternateNames: ["Dieffenbachia", "dumbcane", "dumb cane", "Philodendron", "heartleaf philodendron", "split-leaf philodendron", "Pothos", "golden pothos", "devil's ivy", "Peace lily", "Spathiphyllum", "Calla lily", "Zantedeschia", "Caladium", "angel wings", "Elephant ear", "Alocasia", "Colocasia", "Arrowhead vine", "Syngonium", "Monstera", "Swiss cheese plant", "Chinese evergreen", "Aglaonema", "Anthurium", "flamingo flower", "flamingo lily", "Araceae", "aroid", "arum family", "calcium oxalate crystals", "raphides", "ZZ plant", "Zamioculcas zamiifolia", "Zanzibar gem", "eternity plant", "aroid palm", "emerald palm", "Raven ZZ", "ZZ Raven", "Schefflera", "Schefflera actinophylla", "Schefflera arboricola", "umbrella tree", "umbrella plant", "dwarf umbrella tree", "octopus tree", "starleaf", "Queensland umbrella tree", "Australian ivy palm", "Jack-in-the-pulpit", "Arisaema", "Arisaema triphyllum", "Indian turnip", "bog onion", "brown dragon", "wild turnip", "dragon root", "pepper turnip", "three-leaved Indian turnip", "wake robin", "Epipremnum", "Epipremnum aureum", "Scindapsus", "Scindapsus pictus", "satin pothos", "silver pothos", "Rhaphidophora", "Rhaphidophora tetrasperma", "mini monstera", "Monstera deliciosa", "Xanthosoma"],
+                alternateNames: ["Dieffenbachia", "dumbcane", "dumb cane", "Philodendron", "heartleaf philodendron", "split-leaf philodendron", "Pothos", "golden pothos", "devil's ivy", "Peace lily", "Spathiphyllum", "Calla lily", "Zantedeschia", "Caladium", "angel wings", "Elephant ear", "Alocasia", "Colocasia", "Arrowhead vine", "Syngonium", "Monstera", "Swiss cheese plant", "Chinese evergreen", "Aglaonema", "Anthurium", "flamingo flower", "flamingo lily", "Araceae", "aroid", "arum family", "calcium oxalate crystals", "raphides", "ZZ plant", "Zamioculcas zamiifolia", "Zanzibar gem", "eternity plant", "aroid palm", "emerald palm", "Raven ZZ", "ZZ Raven", "Schefflera", "Schefflera actinophylla", "Schefflera arboricola", "umbrella tree", "umbrella plant", "dwarf umbrella tree", "octopus tree", "starleaf", "Queensland umbrella tree", "Australian ivy palm", "Jack-in-the-pulpit", "Arisaema", "Arisaema triphyllum", "Indian turnip", "bog onion", "brown dragon", "wild turnip", "dragon root", "pepper turnip", "three-leaved Indian turnip", "wake robin", "Epipremnum", "Epipremnum aureum", "Scindapsus", "Scindapsus pictus", "satin pothos", "silver pothos", "Rhaphidophora", "Rhaphidophora tetrasperma", "mini monstera", "Monstera deliciosa", "Xanthosoma", "taro", "taro root", "Zantedeschia aethiopica", "Dieffenbachia seguine", "Dieffenbachia amoena", "Philodendron hederaceum", "Caladium bicolor"],
                 categories: [.plants],
                 imageAsset: "insol_caox_thumb",
                 description: "The Araceae (aroid) family includes many of the most popular houseplants: Dieffenbachia (dumbcane), Philodendron, Pothos (Epipremnum, also called devil's ivy), Peace lily, Calla lily, Caladium, Elephant ear, Monstera, Chinese evergreen, Anthurium, and Arrowhead vine. These plants are favored because they tolerate low light and infrequent watering, making them common in homes and offices. According to the ASPCA Animal Poison Control Center, the Araceae family is the most common plant exposure reported in pets. Also included in this family is the increasingly popular ZZ plant (Zamioculcas zamiifolia), known for its glossy, dark green leaves and extreme tolerance of neglect. Jack-in-the-pulpit (Arisaema triphyllum) is a native woodland wildflower in the same family, recognized by its distinctive hooded spathe and bright red berry cluster in fall — pets may encounter it on hiking trails or in wooded yards. Schefflera (umbrella tree), while belonging to a different plant family (Araliaceae), also contains insoluble calcium oxalate crystals and causes the same localized oral irritation.\n\nCommon plants in this category include:\n• Pothos / Devil's Ivy (Epipremnum aureum)\n• Philodendron species\n• Peace Lily (Spathiphyllum)\n• Dieffenbachia (Dumb Cane)\n• Chinese Evergreen (Aglaonema)\n• Elephant's Ear (Alocasia, Colocasia, Xanthosoma)\n• Caladium\n• Calla Lily\n• Arrowhead Vine (Syngonium)\n• Monstera / Swiss Cheese Plant (Monstera deliciosa)\n• Flamingo Plant (Anthurium)\n• Jack-in-the-Pulpit\n• Satin Pothos / Silver Pothos (Scindapsus pictus)\n• Mini Monstera (Rhaphidophora tetrasperma)\n• Schefflera (Umbrella Plant)",
@@ -1184,10 +1184,10 @@ class DatabaseService {
             ToxicItem(
                 id: UUID(uuidString: "8e6a2493-6fc9-4ddd-83b1-acb7148fbdd4")!,
                 name: "Soluble Calcium Oxalate Plants",
-                alternateNames: ["Rhubarb", "rhubarb leaves", "garden rhubarb", "common rhubarb", "Rheum rhabarbarum", "Star fruit", "starfruit", "carambola", "Averrhoa carambola", "Shamrock", "shamrock plant", "Oxalis", "wood sorrel", "sorrel", "oxalic acid", "soluble oxalates", "Begonia", "Begonia spp", "wax begonia", "rex begonia", "tuberous begonia", "angel wing begonia", "begonia tuber", "elephant ear begonia", "polka dot begonia", "Rheum", "Rumex", "Rumex acetosa", "garden sorrel", "common sorrel", "Beta", "Beta vulgaris", "beet greens", "beet leaves", "Swiss chard", "chard", "silver beet", "Begoniaceae"],
+                alternateNames: ["Rhubarb", "rhubarb leaves", "garden rhubarb", "common rhubarb", "Rheum rhabarbarum", "Star fruit", "starfruit", "carambola", "Averrhoa carambola", "Shamrock", "shamrock plant", "Oxalis", "wood sorrel", "sorrel", "oxalic acid", "soluble oxalates", "Begonia", "Begonia spp", "wax begonia", "rex begonia", "tuberous begonia", "angel wing begonia", "begonia tuber", "elephant ear begonia", "polka dot begonia", "Rheum", "Rumex", "Rumex acetosa", "garden sorrel", "common sorrel", "Beta", "Beta vulgaris", "beet greens", "beet leaves", "Swiss chard", "chard", "silver beet", "Begoniaceae", "Rumex obtusifolius", "broad-leaved dock", "broadleaf dock", "bitter dock", "Rumex crispus", "curly dock", "yellow dock", "Rumex acetosella", "sheep sorrel", "red sorrel", "dock", "docks", "Oxalis triangularis", "purple shamrock", "false shamrock", "Oxalis acetosella", "Portulaca", "Portulaca oleracea", "common purslane", "purslane", "pigweed", "little hogweed"],
                 categories: [.plants, .foods],
                 imageAsset: "soluble_caox_thumb",
-                description: "Soluble calcium oxalate plants contain oxalic acid and oxalate salts that can be absorbed into the bloodstream — making them fundamentally different from the insoluble calcium oxalate houseplants (Philodendron, Pothos, etc.).\n\nCommon plants in this category include:\n• Rhubarb (Rheum rhabarbarum) — leaves contain highest concentration\n• Shamrock / Wood Sorrel (Oxalis)\n• Star Fruit / Carambola (Averrhoa carambola)\n• Sorrel (Rumex acetosa)\n• Beet Greens & Swiss Chard (Beta vulgaris) — high oxalate content in leaves\n• Begonia (Begonia spp.) — especially tubers/underground parts\n\nWhen ingested, soluble oxalates bind with calcium in the body to form calcium oxalate crystals that can deposit in the kidneys and other tissues, potentially causing serious systemic effects including kidney damage. This is in contrast to insoluble calcium oxalate plants, which cause only local mouth and throat irritation.",
+                description: "Soluble calcium oxalate plants contain oxalic acid and oxalate salts that can be absorbed into the bloodstream — making them fundamentally different from the insoluble calcium oxalate houseplants (Philodendron, Pothos, etc.).\n\nCommon plants in this category include:\n• Rhubarb (Rheum rhabarbarum) — leaves contain highest concentration\n• Shamrock / Wood Sorrel (Oxalis)\n• Star Fruit / Carambola (Averrhoa carambola)\n• Sorrel & Dock (Rumex spp.) — includes garden sorrel (R. acetosa), curly dock (R. crispus), broad-leaved dock (R. obtusifolius), and sheep sorrel (R. acetosella); leaves contain the highest concentration\n• Beet Greens & Swiss Chard (Beta vulgaris) — high oxalate content in leaves\n• Begonia (Begonia spp.) — especially tubers/underground parts\n• Purslane (Portulaca oleracea) — a common garden weed and occasional salad green with moderate oxalate content\n\nWhen ingested, soluble oxalates bind with calcium in the body to form calcium oxalate crystals that can deposit in the kidneys and other tissues, potentially causing serious systemic effects including kidney damage. This is in contrast to insoluble calcium oxalate plants, which cause only local mouth and throat irritation.",
                 toxicityInfo: "When soluble oxalates are absorbed from the GI tract, they bind with calcium in the bloodstream, causing a sudden drop in blood calcium levels (acute hypocalcemia). The calcium oxalate crystals that form can then accumulate in the kidneys, potentially causing acute kidney injury (AKI). While kidney damage from these plants is rare in dogs and cats, there is no established safe dose. Pets that are dehydrated or have pre-existing kidney disease may be at higher risk and should be treated more aggressively. Note that rhubarb toxicity applies to the LEAVES only — the stems (stalks) that humans eat are safe, though not particularly good for pets due to their tartness. Star fruit poses an additional concern because it can cause neurological effects in humans and animals with kidney disease.\n\n**Begonia** — All parts of begonias contain soluble oxalates, but the tubers (underground portions) have the highest concentration. Chewing on leaves typically causes only mild oral irritation and GI upset. However, if a pet digs up and consumes the tubers, more significant toxicity is possible, including the same hypocalcemia and potential kidney effects seen with other soluble oxalate plants. Tuberous begonias, commonly planted outdoors, pose a higher risk than wax begonias or rex begonias typically kept as houseplants.",
                 onsetTime: OnsetTime(
                     early: "GI signs (hypersalivation, vomiting, diarrhea, loss of appetite) and signs of hypocalcemia (weakness, tremors, muscle twitching) may appear within hours of ingestion",
@@ -1720,10 +1720,10 @@ class DatabaseService {
             ToxicItem(
                 id: UUID(uuidString: "3816a23f-40cf-47e7-88e6-158fddc21b71")!,
                 name: "Cyanogenic Glycoside Plants",
-                alternateNames: ["Nandina", "Nandina domestica", "heavenly bamboo", "sacred bamboo", "nandina berries", "Hydrangea", "Hydrangea macrophylla", "hortensia", "hydrangea leaves", "hydrangea flowers", "Cherry laurel", "Prunus laurocerasus", "English laurel", "Chokecherry", "Prunus virginiana", "Photinia", "red tip photinia", "Photinia fraseri", "cyanide plants", "hydrogen cyanide", "amygdalin", "prunasin", "Prunus", "Sambucus", "Sambucus nigra", "elderberry", "elder tree", "elderberry bush", "black elder", "Cotoneaster", "Cotoneaster horizontalis", "cotoneaster berries", "rockspray cotoneaster"],
+                alternateNames: ["Nandina", "Nandina domestica", "heavenly bamboo", "sacred bamboo", "nandina berries", "Hydrangea", "Hydrangea macrophylla", "hortensia", "hydrangea leaves", "hydrangea flowers", "Cherry laurel", "Prunus laurocerasus", "English laurel", "Chokecherry", "Prunus virginiana", "Photinia", "red tip photinia", "Photinia fraseri", "cyanide plants", "hydrogen cyanide", "amygdalin", "prunasin", "Prunus", "Sambucus", "Sambucus nigra", "elderberry", "elder tree", "elderberry bush", "black elder", "Cotoneaster", "Cotoneaster horizontalis", "cotoneaster berries", "rockspray cotoneaster", "Prunus serotina", "black cherry", "wild black cherry", "Prunus caroliniana", "Carolina cherry laurel", "Prunus persica", "peach tree", "peach leaves", "Prunus domestica", "plum tree", "plum leaves", "Prunus armeniaca", "apricot tree", "apricot leaves", "Sambucus racemosa", "red elderberry", "Sambucus canadensis", "American elder", "American elderberry", "Eriobotrya japonica", "loquat", "Japanese plum", "Amelanchier", "serviceberry", "juneberry", "shadbush"],
                 categories: [.plants],
                 imageAsset: "cyanogenic_glycosides_thumb",
-                description: "Several common ornamental plants contain cyanogenic glycosides — compounds that can release hydrogen cyanide when plant tissue is damaged (chewed). Common plants in this category include:\n• Nandina / Heavenly Bamboo (Nandina domestica) — berries are the most concentrated source; documented bird deaths\n• Cherry Laurel (Prunus laurocerasus) and other ornamental Prunus species — wilted leaves are more toxic than fresh due to higher cyanide release\n• Chokecherry (Prunus virginiana)\n• Photinia / Red Tip Photinia (Photinia fraseri)\n• Hydrangea (Hydrangea macrophylla) — contains lower concentrations; serious illness is uncommon but veterinary evaluation is still recommended\n• Elderberry (Sambucus nigra) — leaves, stems, bark, and unripe berries contain cyanogenic glycosides; ripe cooked berries are used in human foods\n• Cotoneaster (Cotoneaster spp.) — berries contain lower concentrations of cyanogenic glycosides than other plants in this group, but ingestion should still be reported to a veterinarian\n\nThe danger varies significantly between plants in this group. Contact a veterinarian or animal poison control for any suspected ingestion regardless of the plant involved.",
+                description: "Several common ornamental plants contain cyanogenic glycosides — compounds that can release hydrogen cyanide when plant tissue is damaged (chewed). Common plants in this category include:\n• Nandina / Heavenly Bamboo (Nandina domestica) — berries are the most concentrated source; documented bird deaths\n• Cherry Laurel (Prunus laurocerasus) and other ornamental Prunus species — wilted leaves are more toxic than fresh due to higher cyanide release\n• Chokecherry (Prunus virginiana)\n• Fruit pits and seeds of Prunus species (cherry, peach, apricot, plum) — the seeds/pits contain amygdalin; see also the Fruit Pits & Seeds entry for detail on mechanical vs. cyanide risk\n• Photinia / Red Tip Photinia (Photinia fraseri)\n• Hydrangea (Hydrangea macrophylla) — contains lower concentrations; serious illness is uncommon but veterinary evaluation is still recommended\n• Elderberry (Sambucus nigra) — leaves, stems, bark, and unripe berries contain cyanogenic glycosides; ripe cooked berries are used in human foods\n• Cotoneaster (Cotoneaster spp.) — berries contain lower concentrations of cyanogenic glycosides than other plants in this group, but ingestion should still be reported to a veterinarian\n\nThe danger varies significantly between plants in this group. Contact a veterinarian or animal poison control for any suspected ingestion regardless of the plant involved.",
                 toxicityInfo: "Cyanogenic glycosides are converted to hydrogen cyanide when plant cells are crushed during chewing. Cyanide blocks cellular oxygen utilization, which can theoretically cause rapid death. However, the reality in small animal practice is more nuanced:\n\n**Nandina (Heavenly Bamboo)** — The most concerning plant in this group. The berries contain the highest concentration of cyanogenic glycosides and have caused documented deaths in birds (cedar waxwings, robins) that gorge on the berries in winter. Dogs and cats that eat Nandina berries can develop cyanide toxicity, though cases are less commonly reported than in birds. The leaves are also toxic but less so than the berries.\n\n**Hydrangea** — Despite widespread concern, severe hydrangea toxicity is rare. According to ASPCA data, most hydrangea ingestions result in only mild GI upset (vomiting, diarrhea, lethargy). Actual cyanide poisoning from hydrangea is uncommon in dogs and cats. The buds and leaves contain the highest concentration of toxins.\n\n**Prunus Ornamentals (Cherry Laurel, Chokecherry)** — The leaves, especially when wilted or damaged, can concentrate cyanogenic glycosides. Fresh, healthy leaves are less dangerous. These plants are more of a concern for livestock that graze on large quantities, but dogs chewing on branches or wilted leaves can be affected.\n\n**Photinia (Red Tip)** — Similar to Prunus; the young red leaves contain cyanogenic glycosides but severe toxicity is uncommon in pets.\n\nClassic signs of cyanide poisoning include bright cherry-red gums (due to inability to use oxygen), rapid breathing, dilated pupils, and collapse.",
                 onsetTime: OnsetTime(
                     early: "GI signs (vomiting, diarrhea, drooling) typically appear within a few hours. True cyanide poisoning signs (if they occur) can develop within 15-60 minutes of ingestion.",
@@ -1759,14 +1759,14 @@ class DatabaseService {
                     "If you see bright cherry-red gums, rapid breathing, or sudden weakness after plant ingestion, seek emergency veterinary care immediately — these are signs of cyanide poisoning"
                 ],
                 sources: ["ASPCA Animal Poison Control Center", "Pet Poison Helpline", "Merck Veterinary Manual", "Cornell University Poisonous Plants Database"],
-                relatedEntries: nil
+                relatedEntries: ["f1369ae0-b97d-424d-98b7-b46a9b245109"]
             ),
 
             // MARK: - GI Irritant Plants
             ToxicItem(
                 id: UUID(uuidString: "045fe2d3-3c59-4f15-b72a-09371b675d77")!,
                 name: "GI Irritant Plants",
-                alternateNames: ["Poinsettia", "Euphorbia pulcherrima", "Christmas flower", "Christmas plant", "Mexican flame leaf", "Iris", "iris rhizome", "flag iris", "bearded iris", "Chrysanthemum", "chrysanthemums", "mums", "garden mums", "florist's mum", "Hosta", "hostas", "plantain lily", "funkia", "Baby's breath", "babys breath", "Gypsophila", "Gypsophila paniculata", "Carnation", "carnations", "Dianthus", "Dianthus caryophyllus", "pinks", "Jade plant", "jade plant", "Crassula ovata", "Crassula argentea", "money plant", "money tree", "lucky plant", "friendship tree", "Mistletoe", "mistletoe", "Phoradendron", "Phoradendron leucarpum", "American mistletoe", "Christmas mistletoe", "Holly", "holly", "Ilex", "Ilex aquifolium", "English holly", "Christmas holly", "holly berries", "Christmas cactus", "Schlumbergera", "Schlumbergera truncata", "crab claw cactus", "Thanksgiving cactus", "Easter cactus", "holiday cactus", "Clematis", "clematis vine", "Clematis spp", "virgin's bower", "leather flower", "leatherflower", "old man's beard", "traveller's joy", "Asparagus fern", "asparagus fern", "Asparagus setaceus", "Asparagus densiflorus", "Asparagus aethiopicus", "sprengeri fern", "foxtail fern", "plumosa fern", "lace fern", "emerald fern", "climbing asparagus", "asparagus fern berries", "Spring crocus", "spring crocus", "Crocus vernus", "Crocus spp", "Dutch crocus", "giant crocus", "snow crocus", "crocus bulb", "crocus corm", "Euphorbia", "Crown of Thorns", "crown of thorns plant", "Euphorbia milii", "Christ plant", "Christ thorn", "Pencil Cactus", "pencil cactus plant", "Euphorbia tirucalli", "firestick plant", "sticks on fire", "sticks of fire", "milk bush", "pencil tree", "finger tree", "fire sticks", "pencil euphorbia", "Ficus", "Ficus benjamina", "Ficus elastica", "Ficus lyrata", "Ficus pumila", "Ficus carica", "weeping fig", "rubber plant", "rubber tree", "rubber tree plant", "Indian rubber plant", "fiddle leaf fig", "fiddle-leaf fig", "creeping fig", "fig tree", "common fig", "Croton", "croton plant", "Codiaeum variegatum", "Codiaeum", "garden croton", "variegated laurel", "Joseph's coat croton", "Petra croton", "Gold Dust croton", "Mammy croton", "Oakleaf croton", "Zanzibar croton", "croton houseplant", "Dahlia", "dahlia", "dahlias", "Dahlia spp", "Bird of Paradise", "bird of paradise", "Birds of Paradise", "birds of paradise", "Strelitzia", "Strelitzia reginae", "crane flower"],
+                alternateNames: ["Poinsettia", "Euphorbia pulcherrima", "Christmas flower", "Christmas plant", "Mexican flame leaf", "Iris", "iris rhizome", "flag iris", "bearded iris", "Chrysanthemum", "chrysanthemums", "mums", "garden mums", "florist's mum", "Hosta", "hostas", "plantain lily", "funkia", "Baby's breath", "babys breath", "Gypsophila", "Gypsophila paniculata", "Carnation", "carnations", "Dianthus", "Dianthus caryophyllus", "pinks", "Jade plant", "jade plant", "Crassula ovata", "Crassula argentea", "money plant", "money tree", "lucky plant", "friendship tree", "Mistletoe", "mistletoe", "Phoradendron", "Phoradendron leucarpum", "American mistletoe", "Christmas mistletoe", "Holly", "holly", "Ilex", "Ilex aquifolium", "English holly", "Christmas holly", "holly berries", "Christmas cactus", "Schlumbergera", "Schlumbergera truncata", "crab claw cactus", "Thanksgiving cactus", "Easter cactus", "holiday cactus", "Clematis", "clematis vine", "Clematis spp", "virgin's bower", "leather flower", "leatherflower", "old man's beard", "traveller's joy", "Asparagus fern", "asparagus fern", "Asparagus setaceus", "Asparagus densiflorus", "Asparagus aethiopicus", "sprengeri fern", "foxtail fern", "plumosa fern", "lace fern", "emerald fern", "climbing asparagus", "asparagus fern berries", "Spring crocus", "spring crocus", "Crocus vernus", "Crocus spp", "Dutch crocus", "giant crocus", "snow crocus", "crocus bulb", "crocus corm", "Euphorbia", "Crown of Thorns", "crown of thorns plant", "Euphorbia milii", "Christ plant", "Christ thorn", "Pencil Cactus", "pencil cactus plant", "Euphorbia tirucalli", "firestick plant", "sticks on fire", "sticks of fire", "milk bush", "pencil tree", "finger tree", "fire sticks", "pencil euphorbia", "Ficus", "Ficus benjamina", "Ficus elastica", "Ficus lyrata", "Ficus pumila", "Ficus carica", "weeping fig", "rubber plant", "rubber tree", "rubber tree plant", "Indian rubber plant", "fiddle leaf fig", "fiddle-leaf fig", "creeping fig", "fig tree", "common fig", "Croton", "croton plant", "Codiaeum variegatum", "Codiaeum", "garden croton", "variegated laurel", "Joseph's coat croton", "Petra croton", "Gold Dust croton", "Mammy croton", "Oakleaf croton", "Zanzibar croton", "croton houseplant", "Dahlia", "dahlia", "dahlias", "Dahlia spp", "Bird of Paradise", "bird of paradise", "Birds of Paradise", "birds of paradise", "Strelitzia", "Strelitzia reginae", "crane flower", "Wisteria", "Wisteria sinensis", "Chinese wisteria", "Wisteria floribunda", "Japanese wisteria", "wisteria vine", "wisterin"],
                 categories: [.plants, .holidayHazards],
                 imageAsset: "gi_irritants_thumb",
                 description: "Many common houseplants, garden plants, and cut flowers contain substances that can cause mild gastrointestinal irritation when ingested by pets. While these plants are technically 'toxic,' they rarely cause serious illness — symptoms are generally limited to vomiting, diarrhea, drooling, and temporary loss of appetite.\n\nCommon plants in this category include:\n• Poinsettia (Euphorbia pulcherrima)\n• Iris (Iris spp.)\n• Chrysanthemums / Mums (Chrysanthemum spp.)\n• Hosta (Hosta spp.)\n• Baby's Breath (Gypsophila paniculata)\n• Carnations (Dianthus caryophyllus)\n• Jade Plant (Crassula ovata)\n• Mistletoe — American (Phoradendron leucarpum)\n• Holly (Ilex aquifolium)\n• Christmas Cactus (Schlumbergera)\n• Clematis (Clematis spp.)\n• Asparagus Fern (Asparagus densiflorus)\n• Spring Crocus (Crocus vernus)\n\nNote: Spring Crocus is NOT the same as Autumn Crocus (Colchicum), which is extremely dangerous — see separate entry.\n\nAdditional plants covered in this entry include: Crown of Thorns and Pencil Cactus (Euphorbia species), Ficus / Fig Plants (Weeping Fig, Rubber Plant, Fiddle Leaf Fig), and Croton. Dahlias (Dahlia spp.) and Bird of Paradise flowers (Strelitzia reginae) — both common in bouquets and floral arrangements — also fall into this category.",
@@ -1812,7 +1812,9 @@ class DatabaseService {
                     "c8a18b83-133f-4be4-9aff-5cda3f6f6a18",  // Pencil Cactus - standalone entry for this Euphorbia species (eye injury risk)
                     "a7c3e1f0-5b2d-4e8a-9f6c-3d7b1a2e4f80",  // Peonies — similar GI irritant mechanism
                     "b3d8f2a1-6c4e-4f9b-a1d7-5e2c8b3f9a04",  // Sweet Pea — GI irritant component plus neurological mechanism
-                    "c4e9a2b1-7d5f-4c3a-b8e2-6f1d9a4c5b73"  // Non-Toxic Bouquet Flowers - safe bouquet flowers counterpart
+                    "c4e9a2b1-7d5f-4c3a-b8e2-6f1d9a4c5b73",  // Non-Toxic Bouquet Flowers - safe bouquet flowers counterpart
+                    "7E52EBF4-2617-4264-A341-4E6FF77E26EB",  // Pokeweed — saponin-based GI irritant, higher severity standalone entry
+                    "048CDED7-251B-4F1C-89E6-93ACB63E6621"  // Honeysuckle — saponin-based GI irritant
                 ]
             ),
 
@@ -2524,6 +2526,452 @@ class DatabaseService {
                 ],
                 sources: ["Pet Poison Helpline", "ASPCA Animal Poison Control Center", "Colorado State University Guide to Poisonous Plants", "WagWalking Veterinary Resources"],
                 relatedEntries: nil
+            ),
+
+            // MARK: - Duranta / Golden Dewdrop
+            ToxicItem(
+                id: UUID(uuidString: "d84a68f2-ba6d-4ad6-b4af-82721447ef83")!,
+                name: "Duranta / Golden Dewdrop",
+                alternateNames: [
+                    "Duranta",
+                    "Duranta erecta",
+                    "Duranta repens",
+                    "golden dewdrop",
+                    "pigeon berry",
+                    "skyflower",
+                    "Geisha Girl",
+                    "Sheena's Gold",
+                    "Gold Mound",
+                    "Sapphire Showers",
+                    "golden dew drop",
+                    "duranta berries",
+                    "duranta shrub",
+                    "Verbenaceae"
+                ],
+                categories: [.plants],
+                imageAsset: "duranta_thumb",
+                description: """
+Duranta erecta (also known as golden dewdrop, pigeon berry, or skyflower) is a fast-growing ornamental shrub widely planted in warm US states including Florida, Texas, Arizona, and California, as well as throughout tropical and subtropical regions worldwide. It is commonly found in home gardens, parks, and commercial landscaping. Popular cultivars include 'Geisha Girl,' 'Sheena's Gold,' 'Gold Mound,' and 'Sapphire Showers.'
+
+The plant produces clusters of small lavender-blue flowers followed by bright golden-orange berry clusters. The berries are attractive and accessible to pets — dogs are known to be drawn to them and may actively seek them out or jump up into shrubs to reach them. Unripened berries and leaves are considered the most toxic parts of the plant. Note that the same berries are eaten by wild songbirds (such as cedar waxwings and robins) without apparent harm — this does not mean the plant is safe for dogs, cats, or other pets.
+""",
+                toxicityInfo: """
+The exact toxic compound in Duranta erecta has not been fully identified. Saponins and glycosides have been isolated from the plant and are suspected to contribute to toxicity. The clinical picture documented in published veterinary case reports involves both nervous system and gastrointestinal effects, which distinguishes it from a simple GI irritant.
+
+A published case series in the Australian Veterinary Journal documented four separate incidents of Duranta poisoning affecting nine dogs and one cat. All affected animals developed drowsiness, heightened sensitivity to stimulation (hyperaesthesia), and tetanic seizures (severe, sustained muscle contractions). Five of the dogs and the cat also showed gastrointestinal signs including vomiting, diarrhea, bloody stool (melaena), and evidence of gastric and intestinal hemorrhage. Not all animals survived. The severity of signs appears to be related to the quantity consumed.
+
+**Important note about songbirds:** Wild songbirds consume ripe Duranta berries without apparent harm. This does not make the plant safe for dogs, cats, or pet birds. The reason for this difference is not fully understood, but pet owners should not interpret bird feeding on Duranta as a sign that the plant is non-toxic.
+""",
+                onsetTime: OnsetTime(
+                    early: "Signs may appear within a few hours of ingestion. Initial signs include drowsiness, lethargy, vomiting, and diarrhea.",
+                    delayed: "Neurological signs including heightened sensitivity, tremors, and seizures may develop after initial GI signs. Animals that survive severe poisoning may take days to recover."
+                ),
+                symptoms: [
+                    "Drowsiness or lethargy",
+                    "Vomiting",
+                    "Diarrhea (may contain blood)",
+                    "Drooling",
+                    "Heightened sensitivity to touch, sound, or stimulation (hyperaesthesia)",
+                    "Tremors",
+                    "Tetanic seizures (severe, sustained muscle contractions)",
+                    "Decreased heart rate (in severe cases)",
+                    "Signs of internal GI bleeding (dark, tarry stools)"
+                ],
+                entrySeverity: .high,
+                speciesRisks: [
+                    SpeciesRisk(
+                        species: .dog,
+                        severity: .high,
+                        notes: "Confirmed toxicity with documented fatalities. Dogs are known to be attracted to the berries and may actively seek them out. Signs in published case reports included drowsiness, hyperaesthesia, tetanic seizures, vomiting, bloody diarrhea, and GI hemorrhage. Not all affected dogs survived. Unripened berries and leaves are considered most toxic."
+                    ),
+                    SpeciesRisk(
+                        species: .cat,
+                        severity: .high,
+                        notes: "Confirmed toxicity documented in the published veterinary case series. The affected cat showed drowsiness, hyperaesthesia, tetanic seizures, and GI signs including hemorrhage. Treat any suspected ingestion as an emergency."
+                    ),
+                    SpeciesRisk(
+                        species: .smallMammal,
+                        severity: .moderate,
+                        notes: "No specific case data available for small mammals such as rabbits, guinea pigs, or hamsters. Given the documented severity in dogs and cats, small mammals should be considered at risk. Their small body size and inability to vomit (in most species) could increase risk. Avoid all exposure."
+                    ),
+                    SpeciesRisk(
+                        species: .bird,
+                        severity: .moderate,
+                        notes: "The picture for birds is nuanced. Wild songbirds (robins, cedar waxwings) consume ripe Duranta berries without apparent harm. However, toxicity has been reported in parrots and finches — pet bird species that may be more sensitive, or that consume leaves and unripe berries in addition to ripe fruit. Do not assume Duranta is safe for pet birds based on wild bird behavior. Any suspected ingestion by a pet bird should be evaluated by a veterinarian."
+                    ),
+                    SpeciesRisk(
+                        species: .reptile,
+                        severity: .low,
+                        notes: "No documented cases of Duranta toxicity in reptiles. Herbivorous reptiles such as tortoises and iguanas allowed outdoor access in warm climates should not have access to this plant as a precaution, but risk is considered low based on available data."
+                    )
+                ],
+                preventionTips: [
+                    "Remove Duranta shrubs from gardens where dogs have unsupervised access — dogs are known to actively seek out the berries",
+                    "Be aware of Duranta in neighbors' gardens, parks, and public landscaping, particularly in Florida, Texas, Arizona, and California where it is widely planted",
+                    "Common cultivars 'Geisha Girl,' 'Sheena's Gold,' and 'Gold Mound' are all the same species and equally toxic — the cultivar name does not indicate safety",
+                    "The bright golden-orange berry clusters are the most accessible and attractive part of the plant to pets — be especially vigilant when berries are present (late summer through fall)",
+                    "Do not assume the plant is safe because wild birds eat the berries — wild songbirds appear to tolerate ripe Duranta fruit but this does not apply to dogs, cats, or pet birds"
+                ],
+                sources: [
+                    "Scanlan SN, Eagles DA, Vacher NE, et al. Duranta erecta poisoning in nine dogs and a cat. Australian Veterinary Journal. 2006;84(10):367-370.",
+                    "Animal Poisons Helpline. Duranta (Golden Dewdrop) Toxicity in Pets. animalpoisons.com.au",
+                    "Wikipedia. Duranta erecta. en.wikipedia.org/wiki/Duranta_erecta",
+                    "ASPCA Animal Poison Control Center. Toxic and Non-Toxic Plants. aspca.org"
+                ],
+                relatedEntries: ["1afa55b7-d37f-469f-9f8b-6ec3c0ff7471"]  // Ruscus (Butcher's Broom) — saponin mechanism
+            ),
+
+            // MARK: - Packera / Ragwort
+            ToxicItem(
+                id: UUID(uuidString: "8adc8891-ee42-4980-b263-4ef8c14dffcd")!,
+                name: "Packera / Ragwort",
+                alternateNames: [
+                    "ragwort", "golden ragwort", "Packera aurea", "Senecio", "Senecio jacobaea",
+                    "Jacobaea vulgaris", "tansy ragwort", "groundsel", "squaw weed", "liferoot",
+                    "Packera spp.", "butterweed", "ragwort plant"
+                ],
+                categories: [.plants],
+                imageAsset: "ragwort_thumb",
+                description: """
+Packera (formerly classified as Senecio) is a large genus of flowering plants in the daisy family (Asteraceae) found throughout North America, Europe, and beyond. Golden ragwort (Packera aurea) is native to eastern North America and commonly found in moist woodlands, meadows, and along roadsides. Tansy ragwort (Jacobaea vulgaris, formerly Senecio jacobaea) is widespread across the US Pacific Northwest and Europe.
+
+These plants are considered highly toxic to pets — particularly livestock and dogs — due to the presence of pyrrolizidine alkaloids (PAs). What makes Packera especially dangerous is that toxicity is cumulative: liver damage builds up with repeated small exposures over time, meaning a pet that grazes or nibbles on these plants regularly may develop serious liver disease without any obvious acute illness. By the time symptoms appear, significant irreversible liver damage may already have occurred.
+
+The plants produce yellow daisy-like flowers and are often considered wildflowers or weeds. They are occasionally present in hay, dried herbal products, and "wildflower" seed mixes — meaning indoor or non-roaming pets can also be exposed through contaminated plant material.
+""",
+                toxicityInfo: """
+Pyrrolizidine alkaloids (PAs) — particularly senecionine, seneciphylline, and retrorsine — are metabolized in the liver into reactive pyrrole compounds that bind to and destroy liver cells (hepatocytes). This damage is cumulative and largely irreversible. Even low-level repeated ingestion can result in progressive hepatic fibrosis (scarring of the liver) and ultimately liver failure. The liver's large functional reserve means significant damage can occur before clinical signs appear — sometimes called "delayed toxicity."
+
+Horses and livestock are classically most sensitive to PA toxicity; however, dogs are also susceptible, particularly with cumulative exposure. Cats have reduced ability to metabolize PAs due to differences in hepatic enzyme activity, placing them at significant risk. Birds metabolize PAs differently and toxicity data is limited; caution is still warranted. Reptiles and small mammals have limited specific data but liver-toxic compounds are generally a concern across species.
+
+The insidious nature of PA toxicity means pets with a history of access to these plants should be evaluated by a veterinarian even in the absence of acute signs.
+""",
+                onsetTime: OnsetTime(
+                    early: "Loss of appetite, weight loss, lethargy, vomiting, and diarrhea may appear within days of a large acute ingestion",
+                    delayed: "With cumulative low-level exposure, signs of liver failure (jaundice, abdominal distension, neurological signs) may not appear for weeks to months — by this point, significant irreversible liver damage has typically already occurred"
+                ),
+                symptoms: [
+                    "Loss of appetite and weight loss",
+                    "Lethargy",
+                    "Vomiting",
+                    "Diarrhea",
+                    "Increased thirst and urination (early liver dysfunction)",
+                    "Jaundice — yellowing of skin, gums, or whites of eyes (icterus)",
+                    "Abdominal distension (fluid accumulation from liver failure)",
+                    "Disorientation, head pressing, or circling (hepatic encephalopathy)",
+                    "Seizures (hepatic encephalopathy — severe cases)",
+                    "Weakness or collapse"
+                ],
+                entrySeverity: .high,
+                speciesRisks: [
+                    SpeciesRisk(
+                        species: .dog,
+                        severity: .high,
+                        notes: "Susceptible to cumulative PA hepatotoxicity; exposure through grazing, hay, or dried plant material. Symptoms may be delayed until significant liver damage has occurred."
+                    ),
+                    SpeciesRisk(
+                        species: .cat,
+                        severity: .high,
+                        notes: "Reduced hepatic PA metabolism increases sensitivity compared to many other species; even low-level repeated exposure is concerning. Seek veterinary evaluation promptly."
+                    ),
+                    SpeciesRisk(
+                        species: .smallMammal,
+                        severity: .moderate,
+                        notes: "Rabbits are historically sensitive to pyrrolizidine alkaloids; guinea pigs and rodents have limited specific data. Avoid any exposure."
+                    ),
+                    SpeciesRisk(
+                        species: .bird,
+                        severity: .moderate,
+                        notes: "Limited species-specific data available. PA compounds are hepatotoxic and all exposure should be avoided."
+                    ),
+                    SpeciesRisk(
+                        species: .reptile,
+                        severity: .low,
+                        notes: "Limited data available. Reptiles are not known to be preferentially sensitive to PAs, but liver-toxic compounds warrant caution regardless."
+                    )
+                ],
+                preventionTips: [
+                    "Learn to identify ragwort and groundsel — yellow daisy-like flowers on erect stems, commonly found along roadsides, meadows, and disturbed soil",
+                    "Remove ragwort plants from pastures and yards where pets have access — pull plants before they go to seed to prevent spread",
+                    "Inspect hay and dried herbal products for dried ragwort before giving to pets — dried plant material retains full toxicity and may be more palatable than fresh",
+                    "Be cautious with 'wildflower' seed mixes — some may contain Senecio or Packera species",
+                    "If your pet has had repeated access to areas where ragwort grows, consult your veterinarian about liver screening even if no symptoms are present — damage can be silent"
+                ],
+                sources: [
+                    "ASPCA Animal Poison Control Center — Senecio/Packera",
+                    "Pet Poison Helpline — Pyrrolizidine Alkaloid Toxicosis",
+                    "Merck Veterinary Manual — Pyrrolizidine Alkaloidosis",
+                    "Stegelmeier BL. Pyrrolizidine Alkaloid-Containing Toxic Plants (Senecio, Crotalaria, Cynoglossum, Amsinckia, Heliotropium, and Echium spp.). Veterinary Clinics of North America: Food Animal Practice. 2011."
+                ],
+                relatedEntries: ["b2e4c6a8-1d3f-5b7a-9e0c-4f6d8a2b7c5e"]  // Why Cats Are More Sensitive — cat PA metabolism deficiency
+            ),
+
+            // MARK: - Pokeweed
+            ToxicItem(
+                id: UUID(uuidString: "7E52EBF4-2617-4264-A341-4E6FF77E26EB")!,
+                name: "Pokeweed",
+                alternateNames: [
+                    "pokeweed", "Phytolacca americana", "poke berry", "pokeberry", "poke root",
+                    "inkberry", "pigeonberry", "American pokeweed", "poke salad", "poke sallet",
+                    "cancer jalap", "garget", "scoke", "Virginia poke", "red ink plant", "pokeberry plant"
+                ],
+                categories: [.plants],
+                imageAsset: "pokeweed_thumb",
+                description: """
+Pokeweed is a large, fast-growing perennial plant native to North America and found throughout the eastern and central United States, as well as parts of the Pacific Coast. It thrives in disturbed soils — roadsides, fence lines, field edges, and backyards — making it one of the most commonly encountered toxic plants for outdoor pets.
+
+In summer and fall, pokeweed produces clusters of dark purple-black berries on striking bright magenta-pink stems. These berries are visually attractive and may be mouthed or eaten by curious dogs. Wild birds eat pokeweed berries without apparent harm and are responsible for spreading the seeds widely — which is part of why the plant is so ubiquitous.
+
+All parts of the plant are toxic, but toxicity is not equal throughout: the roots are by far the most concentrated source of toxins and pose the greatest danger. The roots can grow very large and resemble edible root vegetables such as horseradish or parsnip — a risk factor for dogs that dig. Young shoots in spring can resemble asparagus. Leaves and berries are less concentrated but still capable of causing significant illness.
+
+Interesting fact: Pokeweed berries were historically used as ink — the common name "inkberry" reflects this. The juice stains intensely and can sometimes be seen around a pet's mouth after berry ingestion, which can be a useful clue for owners.
+""",
+                toxicityInfo: """
+Toxic Mechanism: Pokeweed contains several classes of toxic compounds. Phytolaccatoxin and phytolaccigenin (triterpenoid saponins) are present throughout the plant and cause severe gastrointestinal irritation. The roots additionally contain pokeweed mitogen (PWM) — a compound that abnormally stimulates immune cell division, a mechanism not seen in most plant toxins. Oxalates contribute to oral and GI irritation as well.
+
+Signs typically begin within 2–6 hours of ingestion and may include:
+• Excessive drooling, nausea
+• Vomiting (may be severe and persistent)
+• Diarrhea, which may become bloody
+• Abdominal pain
+• Weakness, lethargy
+• Low heart rate or abnormal heart rhythm (cardiovascular effects more common with root ingestion or large exposures)
+• Respiratory distress (in severe cases)
+• Collapse in severe or untreated cases
+
+Root ingestion is a particular concern because the high toxin concentration can produce more severe cardiovascular effects than berry or leaf ingestion alone. Dogs that dig in areas where pokeweed grows should be monitored carefully.
+
+Interesting fact: Despite its toxicity, pokeweed leaves were traditionally eaten in the American South as "poke sallet" — but only after boiling the leaves multiple times and discarding the water each time to reduce toxins. This preparation is not safe for pets under any circumstances, and the process itself illustrates just how potent the plant's compounds are.
+""",
+                onsetTime: OnsetTime(
+                    early: "Signs typically begin within 2–6 hours of ingestion",
+                    delayed: "Cardiovascular effects (bradycardia, arrhythmias) may develop later, especially with root ingestion or large exposures"
+                ),
+                symptoms: [
+                    "Excessive drooling and nausea",
+                    "Vomiting (may be severe and persistent)",
+                    "Diarrhea (may become bloody)",
+                    "Abdominal pain",
+                    "Weakness and lethargy",
+                    "Low heart rate (bradycardia)",
+                    "Abnormal heart rhythm (arrhythmia)",
+                    "Respiratory distress",
+                    "Collapse"
+                ],
+                entrySeverity: .high,
+                speciesRisks: [
+                    SpeciesRisk(
+                        species: .dog,
+                        severity: .high,
+                        notes: "All parts toxic; root ingestion carries greatest risk due to high toxin concentration. Digging behavior increases root exposure risk."
+                    ),
+                    SpeciesRisk(
+                        species: .cat,
+                        severity: .high,
+                        notes: "All parts toxic; cats are less likely to ingest large quantities but even small amounts can cause significant GI signs."
+                    ),
+                    SpeciesRisk(
+                        species: .smallMammal,
+                        severity: .moderate,
+                        notes: "Rabbits and guinea pigs should have no access to this plant; limited companion animal data but saponin toxicity is expected across small species."
+                    ),
+                    SpeciesRisk(
+                        species: .bird,
+                        severity: .low,
+                        notes: "Wild birds consume berries without apparent harm due to differences in digestive metabolism; caution is still warranted for pet birds given the presence of saponins and other toxins."
+                    ),
+                    SpeciesRisk(
+                        species: .reptile,
+                        severity: .low,
+                        notes: "Limited data available. GI irritant effects are possible; avoid exposure."
+                    )
+                ],
+                preventionTips: [
+                    "Remove pokeweed plants from yards and gardens where pets roam",
+                    "Be aware of young spring shoots, which resemble asparagus and may be overlooked",
+                    "Monitor dogs that dig — roots are the most toxic part and can grow very large",
+                    "The berries' dark staining juice may be visible around a pet's mouth after exposure — contact a veterinarian or animal poison control immediately"
+                ],
+                sources: [
+                    "ASPCA Animal Poison Control Center — Phytolacca americana",
+                    "Pet Poison Helpline — Pokeweed",
+                    "Merck Veterinary Manual — Pokeweed Poisoning",
+                    "Burrows GE, Tyrl RJ. Toxic Plants of North America. 2nd ed. Wiley-Blackwell; 2013."
+                ],
+                relatedEntries: [
+                    "045fe2d3-3c59-4f15-b72a-09371b675d77"  // GI Irritant Plants — similar GI irritant mechanism (saponins)
+                ]
+            ),
+
+            // MARK: - Honeysuckle
+            ToxicItem(
+                id: UUID(uuidString: "048CDED7-251B-4F1C-89E6-93ACB63E6621")!,
+                name: "Honeysuckle",
+                alternateNames: [
+                    "Lonicera",
+                    "English honeysuckle",
+                    "Lonicera periclymenum",
+                    "Japanese honeysuckle",
+                    "Lonicera japonica",
+                    "coral honeysuckle",
+                    "trumpet honeysuckle",
+                    "woodbine",
+                    "Lonicera caprifolium",
+                    "honeysuckle vine",
+                    "honeysuckle berries",
+                    "honeysuckle bush"
+                ],
+                categories: [.plants],
+                imageAsset: "honeysuckle_thumb",
+                description: """
+Honeysuckle refers to a large group of flowering vines and shrubs in the genus Lonicera, with over 180 species found worldwide. Several species are common garden plants and naturalised across much of North America, making them a frequent source of pet owner concern. The most widely recognised species include Japanese honeysuckle (Lonicera japonica), English honeysuckle (Lonicera periclymenum), trumpet honeysuckle (Lonicera sempervirens), and coral honeysuckle.
+
+The plant produces tubular flowers — commonly yellow, white, pink, or red — followed by small berries that range in color from red to black or blue depending on species. While the flowers and nectar are often considered low-risk and some species produce edible berries for humans, the berries contain the highest concentration of the plant's irritating compounds and are the most likely source of problems in pets.
+
+Honeysuckle is one of the most commonly searched plants when it comes to pet safety. Overall toxicity is considered low — most exposures result in mild, self-limiting signs rather than a serious emergency.
+""",
+                toxicityInfo: """
+Honeysuckle berries contain saponins — naturally occurring compounds that act as GI irritants in pets. Saponins are found throughout the plant kingdom and typically cause mild digestive upset rather than systemic toxicity. The berries contain higher concentrations of these compounds than the flowers or leaves, making berry ingestion the most likely scenario to produce visible signs.
+
+Significant quantities would generally be required to produce more than mild GI upset in a typical dog or cat. However, smaller pets, birds, and animals with sensitive digestive systems may react to smaller amounts.
+
+Note that toxicity varies between Lonicera species — trumpet honeysuckle (Lonicera sempervirens) is generally considered to have very low toxicity, while English honeysuckle (Lonicera periclymenum) has more documented cases of GI upset. When in doubt, treat any honeysuckle ingestion — particularly berry ingestion — as a reason to contact your veterinarian.
+""",
+                onsetTime: OnsetTime(
+                    early: "GI signs (vomiting, diarrhea, drooling) typically appear within a few hours of berry ingestion",
+                    delayed: "Symptoms are generally self-limiting and resolve within 24 hours without treatment"
+                ),
+                symptoms: [
+                    "Vomiting",
+                    "Diarrhea",
+                    "Drooling",
+                    "Decreased appetite",
+                    "Lethargy (mild)"
+                ],
+                entrySeverity: .low,
+                speciesRisks: [
+                    SpeciesRisk(
+                        species: .dog,
+                        severity: .low,
+                        notes: "Mild GI signs (vomiting, diarrhea, drooling) are the expected outcome with most exposures. Large ingestions of berries may cause more pronounced upset. Monitor for signs; contact your veterinarian if signs are persistent or worsening."
+                    ),
+                    SpeciesRisk(
+                        species: .cat,
+                        severity: .low,
+                        notes: "Cats are less likely than dogs to ingest significant quantities of berries. Mild GI upset is the expected outcome. Monitor for signs; contact your veterinarian if signs are persistent or worsening."
+                    ),
+                    SpeciesRisk(
+                        species: .smallMammal,
+                        severity: .low,
+                        notes: "Saponins can cause GI irritation in small mammals. Rabbits and guinea pigs have sensitive digestive systems and may react to smaller quantities than dogs or cats. Avoid offering honeysuckle berries to small mammals. Contact a veterinarian if ingestion occurs."
+                    ),
+                    SpeciesRisk(
+                        species: .bird,
+                        severity: .low,
+                        notes: "Limited companion animal data exists for birds. Berry ingestion could cause GI upset. Small birds may be more sensitive than larger parrots due to body size. Contact an avian veterinarian if berry ingestion is suspected."
+                    ),
+                    SpeciesRisk(
+                        species: .reptile,
+                        severity: .low,
+                        notes: "Exposure is unlikely in typical pet reptile husbandry. Limited data exists. Herbivorous reptiles (tortoises, iguanas) could potentially encounter honeysuckle in outdoor enclosures. Contact a reptile veterinarian if significant ingestion occurs."
+                    )
+                ],
+                preventionTips: [
+                    "If honeysuckle grows in your yard, be aware that the berries are the most likely part to cause GI upset in pets",
+                    "Consider removing berry-producing honeysuckle varieties from areas where pets roam unsupervised",
+                    "Monitor pets around honeysuckle vines and bushes, especially when berries are present in late summer and fall",
+                    "Contact your veterinarian if your pet ingests honeysuckle berries and shows persistent vomiting, diarrhea, or lethargy"
+                ],
+                sources: [
+                    "ASPCA Animal Poison Control Center",
+                    "Pet Poison Helpline",
+                    "Merck Veterinary Manual",
+                    "University of California Agriculture & Natural Resources"
+                ],
+                relatedEntries: [
+                    "045fe2d3-3c59-4f15-b72a-09371b675d77"  // GI Irritant Plants — similar saponin-based GI irritant mechanism
+                ]
+            ),
+
+            // MARK: - Tree of Heaven
+            ToxicItem(
+                id: UUID(uuidString: "3C48AB30-D291-4519-9F2F-B4DA1E0D4C02")!,
+                name: "Tree of Heaven",
+                alternateNames: [
+                    "Ailanthus altissima",
+                    "tree-of-heaven",
+                    "stinking sumac",
+                    "Chinese sumac",
+                    "varnish tree",
+                    "ailanthus",
+                    "paradise tree",
+                    "copal tree"
+                ],
+                categories: [.plants],
+                imageAsset: "tree_of_heaven_thumb",
+                description: """
+Tree of Heaven (Ailanthus altissima) is one of the most aggressive invasive trees in North America, found across virtually every US state. Originally introduced from China in the 1700s, it is infamous for its ability to grow through pavement cracks, in building walls, along highway margins, and in disturbed urban lots. Many pet owners encounter it without recognizing it as a plant worth being cautious about.
+
+The tree produces large compound leaves — each composed of 11 to 25 leaflets with distinctive notched bases — and clusters of winged seed pods (samaras) that can number in the thousands. The entire plant emits a strong, unpleasant odor when leaves or bark are crushed, often described as rancid peanut butter. This odor may deter most pets from consuming large quantities. The tree is widely recognizable by its rapid growth and tendency to appear in disturbed, neglected areas — and is perhaps best known from the novel A Tree Grows in Brooklyn.
+""",
+                toxicityInfo: """
+The primary toxic compound in Tree of Heaven is ailanthone, a quassinoid — a type of bitter plant chemical — concentrated mainly in the bark and roots. Ailanthone acts as a GI irritant and has shown some cardiac effects in animal studies. Companion animal toxicity data is limited compared to many other plant entries; most available information comes from agricultural and human toxicology literature rather than veterinary case series.
+
+Bark and roots contain the highest concentrations of ailanthone; leaves contain lower levels. The strong odor of the plant likely discourages most pets from consuming significant quantities, which may partly explain the limited number of documented serious cases in companion animals. Ingestion should still prompt veterinary contact.
+""",
+                onsetTime: OnsetTime(
+                    early: "GI signs (vomiting, diarrhea, drooling) typically appear within a few hours of ingestion",
+                    delayed: "Cardiac effects have been noted in animal studies but documented clinical cases in companion animals are limited; seek veterinary evaluation if ingestion is confirmed"
+                ),
+                symptoms: [
+                    "Vomiting",
+                    "Diarrhea",
+                    "Drooling",
+                    "Lethargy",
+                    "Decreased appetite",
+                    "Cardiac arrhythmias (abnormal heart rhythm) — reported in animal studies; clinical cases in companion animals are limited"
+                ],
+                entrySeverity: .moderate,
+                speciesRisks: [
+                    SpeciesRisk(
+                        species: .dog,
+                        severity: .moderate,
+                        notes: "Most documented case reports involve dogs. GI irritation is the most expected outcome. Cardiac effects have been noted in animal studies, though documented clinical cases in companion animals are limited. The plant's strong odor likely deters large ingestions in most cases. Contact your veterinarian if ingestion occurs."
+                    ),
+                    SpeciesRisk(
+                        species: .cat,
+                        severity: .moderate,
+                        notes: "Same mechanism applies; limited specific feline data exists. Cats are less likely to chew bark or leaves than dogs. Contact your veterinarian if ingestion occurs."
+                    ),
+                    SpeciesRisk(
+                        species: .smallMammal,
+                        severity: .low,
+                        notes: "No meaningful companion animal data exists. GI irritant mechanism would apply if ingestion occurred. Most small mammals are housed indoors and are unlikely to encounter this tree. Contact a veterinarian if ingestion occurs."
+                    ),
+                    SpeciesRisk(
+                        species: .bird,
+                        severity: .low,
+                        notes: "No meaningful companion animal data exists. Unlikely exposure for pet birds. Contact an avian veterinarian if ingestion occurs."
+                    ),
+                    SpeciesRisk(
+                        species: .reptile,
+                        severity: .low,
+                        notes: "No meaningful companion animal data exists. Unlikely exposure for most pet reptiles. Contact a reptile veterinarian if ingestion occurs."
+                    )
+                ],
+                preventionTips: [
+                    "Learn to identify Tree of Heaven — large compound leaves with notched leaflet bases and a strong unpleasant odor when crushed",
+                    "Remove Tree of Heaven saplings from your yard; this invasive tree spreads aggressively and regrows from root fragments",
+                    "Monitor dogs in urban areas and along roadsides where Tree of Heaven commonly grows",
+                    "Contact your veterinarian if your pet chews on bark, leaves, or seed pods from this tree"
+                ],
+                sources: [
+                    "ASPCA Animal Poison Control Center",
+                    "Merck Veterinary Manual",
+                    "NC State Extension — Plant Toolbox (Ailanthus altissima)",
+                    "Burrows & Tyrl — Toxic Plants of North America"
+                ],
+                relatedEntries: []
             ),
 
             // MARK: - Nicotine & Tobacco Products
@@ -5031,6 +5479,113 @@ class DatabaseService {
                     "Keep storage containers locked and out of pet reach"
                 ],
                 sources: ["ASPCA Animal Poison Control Center", "Pet Poison Helpline", "VCA Animal Hospitals", "Merck Veterinary Manual"],
+                relatedEntries: nil
+            ),
+
+            // MARK: - Acrylamide (Hydrogel Products)
+            ToxicItem(
+                id: UUID(uuidString: "aa2c3266-831b-4db5-b7e9-41bd7d6f4c80")!,
+                name: "Acrylamide (Hydrogel Products)",
+                alternateNames: [
+                    "acrylamide",
+                    "polyacrylamide",
+                    "hydrogel",
+                    "hydrogel toxicity",
+                    "cooling face mask",
+                    "cooling mask",
+                    "gel face mask",
+                    "migraine wrap",
+                    "migraine mask",
+                    "headache wrap",
+                    "cooling wrap",
+                    "gel pack",
+                    "cooling gel pack",
+                    "cooling dog pad",
+                    "cooling pet pad",
+                    "cooling pad",
+                    "water beads",
+                    "Orbeez",
+                    "gel beads",
+                    "water crystals",
+                    "gel bead toxicity",
+                    "face mask toxicity",
+                    "acrylamide monomer",
+                    "polyacrylamide gel"
+                ],
+                categories: [.householdItems],
+                imageAsset: "acrylamide_thumb",
+                description: """
+Acrylamide is a chemical compound found as a manufacturing byproduct (residual monomer) in many polyacrylamide-based hydrogel products. These are everyday household items that most pet owners would never suspect as a danger — including cooling face masks, migraine relief wraps, gel eye masks, cooling pet pads, and water beads (such as Orbeez). The typical ingredient label on these products lists water, glycerol, and polyacrylamide — acrylamide itself may not appear by name.
+
+Pet Poison Helpline and ASPCA Poison Control have both reported an increase in severe poisoning cases linked to these products, including fatalities. These products should be stored securely and kept completely out of reach of all pets.
+""",
+                toxicityInfo: """
+Acrylamide is a potent neurotoxin (a substance that damages the nervous system). In hydrogel products such as cooling face masks and migraine wraps, it is present as a residual manufacturing byproduct within the polyacrylamide gel matrix. Although the concentrations are small, even a tablespoon of ingested hydrogel has been reported to cause life-threatening signs in a small dog.
+
+The pattern of illness is distinctive: gastrointestinal signs typically appear first (vomiting, drooling, loss of appetite), followed by rapid-onset neurological signs including unsteady walking (ataxia), muscle tremors, heightened sensitivity to touch or sound (hyperesthesia), elevated heart rate (tachycardia), and seizures. Liver and kidney injury have also been documented. In several reported cases, signs progressed to death. Some dogs that recovered still showed neurological abnormalities at discharge, suggesting possible lasting injury in some patients.
+
+**Products to be aware of:**
+Cooling face masks and gel eye masks, migraine relief wraps and headache wraps, cooling pet pads and cooling dog beds, water beads and gel beads (e.g., Orbeez, sensory play beads), and certain cosmetics and packaging materials containing polyacrylamide gels.
+
+There is no specific antidote for acrylamide toxicity. Because signs can progress rapidly, any suspected ingestion of a hydrogel product should be treated as an emergency. Bring the product packaging to the veterinary clinic if possible — this helps toxicologists identify the specific product and compounds involved.
+""",
+                onsetTime: OnsetTime(
+                    early: "Gastrointestinal signs (vomiting, drooling, loss of appetite) may appear within minutes to a few hours of ingestion.",
+                    delayed: "Neurological signs including ataxia, tremors, tachycardia, and seizures can follow rapidly — sometimes within hours of initial GI signs. Liver and kidney effects may develop over the following 24–48 hours."
+                ),
+                symptoms: [
+                    "Vomiting",
+                    "Drooling",
+                    "Loss of appetite",
+                    "Unsteady walking or loss of coordination (ataxia)",
+                    "Muscle tremors",
+                    "Heightened sensitivity to touch or sound (hyperesthesia)",
+                    "Rapid heart rate (tachycardia)",
+                    "Panting or restlessness",
+                    "Seizures",
+                    "Signs of liver or kidney injury (yellowing of skin/eyes, decreased urination)"
+                ],
+                entrySeverity: .severe,
+                speciesRisks: [
+                    SpeciesRisk(
+                        species: .dog,
+                        severity: .severe,
+                        notes: "Multiple cases of severe and fatal poisoning documented in dogs following ingestion of polyacrylamide hydrogel products, including cooling face masks, migraine wraps, and cooling dog pads. Signs include vomiting followed by rapid-onset ataxia, tremors, tachycardia, and seizures. Even small amounts of hydrogel have caused life-threatening signs in small dogs. Bring product packaging to the veterinary clinic if possible."
+                    ),
+                    SpeciesRisk(
+                        species: .cat,
+                        severity: .high,
+                        notes: "Cats are susceptible to acrylamide neurotoxicity. ASPCA Poison Control includes cats in their advisory for hydrogel product exposures. Cats are less likely than dogs to chew on these products, but any ingestion should be treated as an emergency. Signs would be expected to mirror those seen in dogs — vomiting, tremors, ataxia, and seizures."
+                    ),
+                    SpeciesRisk(
+                        species: .smallMammal,
+                        severity: .high,
+                        notes: "Small mammals (rabbits, guinea pigs, hamsters, ferrets, and others) are at serious risk from acrylamide neurotoxicity due to their small body size. Water beads and gel sensory products — a common exposure route — are particularly concerning for small mammals with access to play areas or children's toys containing these products. Any suspected ingestion should be evaluated by a veterinarian immediately."
+                    ),
+                    SpeciesRisk(
+                        species: .bird,
+                        severity: .severe,
+                        notes: "Birds are highly sensitive to neurotoxins due to their small body size and rapid metabolism. Acrylamide's potent neurotoxic effects would be expected to be especially dangerous in pet birds. Gel beads and water beads used in floral arrangements or decorative displays are a potential exposure risk. Any suspected exposure warrants immediate veterinary contact."
+                    ),
+                    SpeciesRisk(
+                        species: .reptile,
+                        severity: .moderate,
+                        notes: "Reptiles are unlikely to intentionally seek out hydrogel products, but accidental ingestion is possible — particularly water beads, which can resemble eggs or prey items to some species. The neurotoxic effects of acrylamide would be expected to affect reptiles, though specific case data in reptiles is very limited. Any suspected ingestion should be evaluated by a veterinarian."
+                    )
+                ],
+                preventionTips: [
+                    "Store cooling face masks, migraine wraps, and gel eye masks in closed drawers or cabinets — never leave them on nightstands, coffee tables, or countertops within pet reach",
+                    "Water beads (Orbeez, sensory play beads) should be kept away from all pets — supervise any use and dispose of carefully",
+                    "Cooling pet pads labeled as 'pet-safe' may still contain polyacrylamide gel — check the ingredient list and contact the manufacturer if unsure",
+                    "Discard any damaged or torn gel products immediately — a chewed or punctured mask releases gel that pets may lick or consume",
+                    "If your pet has chewed on any gel-containing product, contact a veterinarian or animal poison control center immediately — do not wait for symptoms to appear"
+                ],
+                sources: [
+                    "Pet Poison Helpline. Doggy Spa Day Gone Wrong. Press Release, February 25, 2026. petpoisonhelpline.com",
+                    "ASPCA Animal Poison Control Center. Acrylamide Exposure in Dogs and Cats. aspcapro.org",
+                    "AAHA Trends Magazine. Migraine gel masks can cause potentially life-threatening toxicity in dogs, experts warn. February 2026. aaha.org",
+                    "Dorman DC, et al. Toxicity associated with ingestion of a polyacrylic acid hydrogel dog pad. Journal of Veterinary Diagnostic Investigation. 2018;30(5):708-714."
+                ],
                 relatedEntries: nil
             ),
 
@@ -12659,7 +13214,8 @@ Washington State University Veterinary Clinical Pharmacology Laboratory offers t
                     "b8c9d0e1-2f3a-4b5c-6d7e-8f9a0b1c2d3e",  // Liquid Potpourri — grooming + essential oil sensitivity
                     "8a27c390-254f-47c9-90e7-7739694f603f",  // Onions — cats more susceptible, Heinz body anemia
                     "dad777ea-3120-43b1-9b8f-aee413716abc",  // Garlic — cats more susceptible than dogs
-                    "00112233-4455-6677-8899-aabbccddef24"   // Inhalant Toxicity — cat liver metabolism + aerosolized oils
+                    "00112233-4455-6677-8899-aabbccddef24",  // Inhalant Toxicity — cat liver metabolism + aerosolized oils
+                    "8adc8891-ee42-4980-b263-4ef8c14dffcd"   // Packera / Ragwort — reduced PA metabolism in cats
                 ]
             ),
 
@@ -14107,7 +14663,7 @@ The plant also contains flavonoids and minor alkaloids that may contribute to it
                     "European Medicines Agency — Ruscus aculeatus Assessment Report",
                     "PubMed — Ruscus Genus: Bioactive Steroidal Saponins (Masullo et al., 2016)"
                 ],
-                relatedEntries: nil
+                relatedEntries: ["d84a68f2-ba6d-4ad6-b4af-82721447ef83"]  // Duranta / Golden Dewdrop — saponin mechanism
             ),
 
             // MARK: - Pencil Cactus (Euphorbia tirucalli)
