@@ -4842,7 +4842,7 @@ class DatabaseService {
                     "Cover or remove fish tanks when using any pesticide sprays indoors"
                 ],
                 sources: ["ASPCA Animal Poison Control Center", "Pet Poison Helpline", "Merck Veterinary Manual: Insecticide Toxicosis"],
-                relatedEntries: ["d4e5f6a7-8b9c-4d0e-a1b2-3c4d5e6f7a8b", "e5f6a7b8-9c0d-4e1f-b2a3-4c5d6e7f8a9b", "f6a7b8c9-0d1e-4f2a-b3c4-5d6e7f8a9b0c", "a7b8c9d0-1e2f-4a3b-c4d5-6e7f8a9b0c1d", "d0e1f2a3-4b5c-6d7e-f8a9-0b1c2d3e4f5a", "b8c9d0e1-2f3a-4b5c-d6e7-8f9a0b1c2d3e", "b4c5d6e7-8f9a-0b1c-2d3e-4f5a6b7c8d9e", "a7d3e8f2-6b4c-4a1e-9f5d-2c8b7a3e6d1f"]
+                relatedEntries: ["d4e5f6a7-8b9c-4d0e-a1b2-3c4d5e6f7a8b", "e5f6a7b8-9c0d-4e1f-b2a3-4c5d6e7f8a9b", "f6a7b8c9-0d1e-4f2a-b3c4-5d6e7f8a9b0c", "a7b8c9d0-1e2f-4a3b-c4d5-6e7f8a9b0c1d", "d0e1f2a3-4b5c-6d7e-f8a9-0b1c2d3e4f5a", "b8c9d0e1-2f3a-4b5c-d6e7-8f9a0b1c2d3e", "b4c5d6e7-8f9a-0b1c-2d3e-4f5a6b7c8d9e", "a7d3e8f2-6b4c-4a1e-9f5d-2c8b7a3e6d1f", "a2c4e6f8-1b3d-4e5f-8a9b-0c1d2e3f4a5b"]  // + Cicadas — pesticide contamination concern
             ),
 
             // MARK: - Rodenticides (Overview)
@@ -10798,6 +10798,114 @@ If you witness your pet mouth or lick a Colorado River Toad, immediately rinse t
                 ]
             ),
 
+            // MARK: - Cicadas
+            ToxicItem(
+                id: UUID(uuidString: "a2c4e6f8-1b3d-4e5f-8a9b-0c1d2e3f4a5b")!,
+                name: "Cicadas",
+                alternateNames: [
+                    "cicada",
+                    "periodical cicada",
+                    "annual cicada",
+                    "17-year cicada",
+                    "13-year cicada",
+                    "Magicicada",
+                    "locust",
+                    "locusts",
+                    "dog day cicada",
+                    "dog day locust",
+                    "Brood XIII",
+                    "Brood XIX",
+                    "cicada emergence",
+                    "cicada season",
+                    "cicada swarm"
+                ],
+                categories: [.outdoorHazards],
+                imageAsset: "cicada_thumb",
+                description: """
+    Cicadas are large winged insects known for their loud, distinctive buzzing calls during summer months. There are two types: annual cicadas, which emerge every year in late summer (sometimes called "dog day cicadas"), and periodical cicadas, which emerge in massive synchronized broods on 13- or 17-year cycles in the eastern United States. Periodical cicada emergences can produce staggering numbers of insects — billions to trillions covering trees, sidewalks, and lawns in affected areas.
+
+    During emergence events, dogs often discover cicadas as an irresistible snack. The insects are easy to catch, crunchy, and seemingly abundant — which is exactly the problem. Most cicadas are not chemically toxic, but eating large numbers can cause significant gastrointestinal problems. Pesticide contamination is an additional concern for cicadas emerging from treated lawns and garden areas.
+    """,
+                toxicityInfo: """
+    **Why Cicadas Cause Problems**
+
+    Cicadas themselves are not venomous or chemically toxic. The problems they cause are primarily mechanical and related to quantity:
+
+    **Chitin Shell Irritation**
+    Cicada exoskeletons are made of chitin, a hard, fibrous material that is difficult to digest. Eating cicadas — especially in large numbers — can cause significant GI irritation, vomiting, and diarrhea. In some dogs, the hard shells can contribute to intestinal obstruction, particularly in smaller breeds or dogs that swallow insects whole without chewing.
+
+    **Gorging and GI Obstruction**
+    During large emergence events, dogs may eat dozens or even hundreds of cicadas in a short period. This volume of indigestible material overwhelms the digestive tract and can cause bloating, obstruction, and pancreatitis (inflammation of the pancreas). Dogs have been known to eat cicadas until they vomit, then continue eating.
+
+    **Pesticide Contamination**
+    Cicadas spend years underground absorbing water and nutrients from plant roots. In lawns and gardens treated with pesticides or herbicides, emerging cicadas may carry residue from soil and plant material. This is a particular concern for reptiles and birds that eat insects as a regular part of their diet — wild-caught cicadas should never be offered as food to pet reptiles or birds during or after periods of lawn chemical application.
+
+    **Mold Risk**
+    Dead and decaying cicadas can harbor mold, including species that produce tremorgenic mycotoxins (the same type found in compost). Pets that eat large quantities of dead cicadas — especially from piles of decomposing insects — may be at risk.
+    """,
+                onsetTime: OnsetTime(
+                    early: "GI signs (vomiting, diarrhea) typically appear within 1–6 hours of eating a large quantity of cicadas.",
+                    delayed: "Signs of intestinal obstruction may develop 12–48 hours after ingestion if large amounts of chitin accumulate. Pancreatitis symptoms may be delayed 24–72 hours."
+                ),
+                symptoms: [
+                    "Vomiting (may contain cicada shells or whole insects)",
+                    "Diarrhea",
+                    "Excessive drooling",
+                    "Decreased appetite",
+                    "Abdominal bloating or discomfort",
+                    "Lethargy",
+                    "Straining to defecate",
+                    "Signs of intestinal obstruction: repeated vomiting, abdominal pain, failure to pass stool (large quantities)"
+                ],
+                entrySeverity: .low,
+                speciesRisks: [
+                    SpeciesRisk(
+                        species: .dog,
+                        severity: .low,
+                        notes: "Dogs are the most commonly affected species — they are attracted to cicadas and may eat large quantities very quickly. A few cicadas are unlikely to cause problems in a healthy adult dog. The concern is volume: dogs that gorge on cicadas during emergence events can develop vomiting, diarrhea, bloating, and in some cases intestinal obstruction or pancreatitis. Smaller breeds are at higher obstruction risk than large breeds. Supervise dogs closely during cicada emergence season."
+                    ),
+                    SpeciesRisk(
+                        species: .cat,
+                        severity: .low,
+                        notes: "Cats may catch and eat individual cicadas but are far less likely than dogs to gorge. Occasional cicada ingestion is unlikely to cause significant problems. Mild GI upset is the most common outcome. Monitor for vomiting or lethargy."
+                    ),
+                    SpeciesRisk(
+                        species: .smallMammal,
+                        severity: .low,
+                        notes: "Herbivorous small mammals (rabbits, guinea pigs, chinchillas) would not typically eat cicadas. Ferrets and rats, being omnivores, might consume one if encountered. Occasional ingestion is unlikely to be significant, but the chitin content and pesticide contamination concern apply. No specific action needed unless signs develop."
+                    ),
+                    SpeciesRisk(
+                        species: .bird,
+                        severity: .low,
+                        notes: "Many bird species naturally consume insects, and a single cicada is unlikely to cause harm. However, wild-caught cicadas from treated lawns or gardens may carry pesticide residue and should never be offered to pet birds as food. During cicada emergence season, avoid offering any wild-caught insects to pet birds."
+                    ),
+                    SpeciesRisk(
+                        species: .reptile,
+                        severity: .low,
+                        notes: "Insectivorous reptiles (bearded dragons, leopard geckos, blue-tongued skinks) may be fed insects as part of their diet, but wild-caught cicadas are not recommended. Cicadas from treated lawns or gardens may carry pesticide residue. Stick to commercially raised feeder insects for reptiles. Additionally, cicadas are large insects — whole cicadas may pose a choking or impaction risk for smaller reptiles."
+                    )
+                ],
+                preventionTips: [
+                    "Supervise dogs closely outdoors during cicada emergence events — gorging can happen very quickly",
+                    "Consider keeping dogs on leash in heavily affected areas during peak emergence periods",
+                    "Never offer wild-caught cicadas to pet reptiles or birds — pesticide contamination from treated lawns is a real risk",
+                    "If your dog has eaten a large quantity of cicadas, contact your veterinarian — obstruction risk depends on the amount consumed and your dog's size",
+                    "Remove piles of dead or decaying cicadas from areas where pets roam — decomposing cicadas can harbor mold",
+                    "Periodical cicada emergences in the US are heavily covered in the news — check local reports to know if a major emergence is active in your area"
+                ],
+                sources: [
+                    "ASPCA Animal Poison Control Center",
+                    "Pet Poison Helpline",
+                    "Merck Veterinary Manual",
+                    "VCA Animal Hospitals",
+                    "Veterinary Partner"
+                ],
+                relatedEntries: [
+                    "00112233-4455-6677-8899-aabbccddef19",  // Corn Cob Ingestion — GI obstruction from volume
+                    "c9d0e1f2-3a4b-5c6d-e7f8-9a0b1c2d3e4f"   // Pesticides & Insecticides — contamination concern
+                ]
+            ),
+
             // MARK: - Bee, Wasp, and Ant Stings (Hymenoptera)
             ToxicItem(
                 id: UUID(uuidString: "00112233-4455-6677-8899-aabbccddef06")!,
@@ -12663,7 +12771,7 @@ Cats rarely eat corn cobs due to selective eating habits.
                     "BluePearl Specialty and Emergency Pet Hospital",
                     "Merck Veterinary Manual"
                 ],
-                relatedEntries: ["00112233-4455-6677-8899-aabbccddef03", "f1369ae0-b97d-424d-98b7-b46a9b245109", "59cf7dc4-5d83-4811-97f1-ce1d0162cd28", "e1f2a3b4-5c6d-7e8f-9a0b-1c2d3e4f5a6b", "00112233-4455-6677-8899-aabbccddef21"]
+                relatedEntries: ["00112233-4455-6677-8899-aabbccddef03", "f1369ae0-b97d-424d-98b7-b46a9b245109", "59cf7dc4-5d83-4811-97f1-ce1d0162cd28", "e1f2a3b4-5c6d-7e8f-9a0b-1c2d3e4f5a6b", "00112233-4455-6677-8899-aabbccddef21", "a2c4e6f8-1b3d-4e5f-8a9b-0c1d2e3f4a5b"]  // + Cicadas — GI obstruction from volume
             ),
 
             // MARK: - Foxtails (Grass Awns)
