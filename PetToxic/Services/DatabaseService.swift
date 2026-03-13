@@ -10595,7 +10595,207 @@ Bufo toad toxin contains several dangerous compounds: BUFAGENINS and BUFOTOXINS 
                     "Australian Veterinary Journal — Retrospective report of 90 dogs with suspected cane toad toxicity (2004)",
                     "Merck Veterinary Manual — Toad Poisoning"
                 ],
-                relatedEntries: ["00112233-4455-6677-8899-aabbccddef07", "00112233-4455-6677-8899-aabbccddef29"]
+                relatedEntries: [
+                    "00112233-4455-6677-8899-aabbccddef07",
+                    "00112233-4455-6677-8899-aabbccddef29",
+                    "C55B5E77-7CFC-449F-A8AC-BD369A38F1EB",  // Colorado River Toad — standalone entry for Sonoran Desert toad
+                    "f7a9c2e1-4b6d-4f83-9e15-2a7b8c3d0e5f"   // Fireflies — shared bufadienolide mechanism
+                ]
+            ),
+
+            // MARK: - Fireflies / Lightning Bugs
+            ToxicItem(
+                id: UUID(uuidString: "f7a9c2e1-4b6d-4f83-9e15-2a7b8c3d0e5f")!,
+                name: "Fireflies",
+                alternateNames: [
+                    "lightning bugs",
+                    "lightning bug",
+                    "firefly",
+                    "glowworm",
+                    "glow worm",
+                    "Lampyridae",
+                    "luciferin",
+                    "bioluminescent beetle",
+                    "fireflys"
+                ],
+                categories: [.outdoorHazards],
+                imageAsset: "firefly_thumb",
+                description: """
+    Fireflies (also called lightning bugs) are beetles in the family Lampyridae, recognized by the yellow-green bioluminescent glow they produce in their abdomens on summer evenings. Approximately 2,000 species exist worldwide, with many species common across the eastern and central United States. Fireflies are found in yards, fields, woodlands, and gardens — anywhere pets spend time outdoors during late spring and summer months.
+
+    Despite their harmless appearance, fireflies produce potent defensive compounds called lucibufagins throughout their bodies. These compounds make fireflies one of the most dangerous insects a reptile can encounter. Even a single firefly ingested by a bearded dragon or other lizard can be fatal.
+    """,
+                toxicityInfo: """
+    **How Fireflies Are Toxic**
+
+    Fireflies produce defensive steroid compounds called lucibufagins throughout their bodies (not just in the glowing abdomen). Lucibufagins are bufadienolides — a class of cardiac glycoside (heart-disrupting compound) in the same chemical family as the toxins produced by cane toads and Colorado River toads. These compounds interfere with normal heart muscle function by disrupting the electrical signals that regulate heartbeat, potentially causing dangerous abnormal heart rhythms (cardiac arrhythmias).
+
+    **Why Reptiles Are Uniquely at Risk**
+
+    Reptiles — particularly lizards such as bearded dragons, blue-tongued skinks, and leopard geckos — are extraordinarily sensitive to lucibufagins. Documented cases exist of rapid death in bearded dragons after ingesting a single firefly. The reason for this extreme sensitivity is not fully understood, but appears related to fundamental differences in reptilian cardiac physiology compared to mammals. This is one of the most well-documented reptile-specific toxicological emergencies.
+
+    **Dogs and Cats**
+
+    Dogs and cats that eat fireflies typically experience self-limiting gastrointestinal irritation — the bitter taste of lucibufagins often causes immediate head shaking, excessive drooling, and vomiting. Cardiac effects in dogs and cats are uncommon but theoretically possible with ingestion of large numbers of fireflies.
+
+    **Birds and Small Mammals**
+
+    Less clinical data exists for birds and small mammals, but cardiac glycoside sensitivity in these species warrants prompt veterinary evaluation following any known exposure.
+    """,
+                onsetTime: OnsetTime(
+                    early: "Signs can appear within minutes in reptiles. Dogs and cats typically show signs of oral/GI irritation within 30 minutes of ingestion.",
+                    delayed: "Reptile cases can deteriorate rapidly and unpredictably. Cardiac signs may develop hours after initial gastrointestinal symptoms in any species."
+                ),
+                symptoms: [
+                    "Head shaking and pawing at mouth (oral irritation)",
+                    "Excessive drooling or hypersalivation",
+                    "Vomiting or regurgitation",
+                    "Loss of appetite",
+                    "Lethargy or weakness",
+                    "Abnormal body color or darkening (reptiles)",
+                    "Loss of coordination or balance",
+                    "Abnormal heart rhythm",
+                    "Collapse",
+                    "Death (reptiles — can occur rapidly, even after a single firefly)"
+                ],
+                entrySeverity: .severe,
+                speciesRisks: [
+                    SpeciesRisk(
+                        species: .dog,
+                        severity: .low,
+                        notes: "Dogs that eat fireflies most commonly experience self-limiting oral irritation and gastrointestinal signs due to the bitter taste of lucibufagins. Head shaking, hypersalivation, and vomiting are typical. Cardiac effects are uncommon in dogs but contact a veterinarian if large numbers were ingested or if signs progress beyond vomiting."
+                    ),
+                    SpeciesRisk(
+                        species: .cat,
+                        severity: .low,
+                        notes: "Similar to dogs — the bitter taste of lucibufagins typically causes immediate oral irritation, drooling, and vomiting. Cats are less likely than dogs to consume large numbers of fireflies. Contact a veterinarian if signs persist or worsen."
+                    ),
+                    SpeciesRisk(
+                        species: .smallMammal,
+                        severity: .moderate,
+                        notes: "Limited clinical data available for rabbits, guinea pigs, and other small mammals. The cardiac glycoside properties of lucibufagins are concerning given small body size and the metabolic sensitivity of many small mammals. Any known ingestion warrants veterinary evaluation."
+                    ),
+                    SpeciesRisk(
+                        species: .bird,
+                        severity: .moderate,
+                        notes: "Limited data exists for pet birds, but birds are generally sensitive to cardiac glycoside compounds. The small body size of birds increases risk. Do not allow birds to have access to fireflies. Any known ingestion warrants prompt veterinary evaluation."
+                    ),
+                    SpeciesRisk(
+                        species: .reptile,
+                        severity: .severe,
+                        notes: "REPTILES ARE AT EXTREME RISK. Even a single firefly can be fatal to a bearded dragon, blue-tongued skink, leopard gecko, or other lizard. Documented deaths in bearded dragons from single-firefly ingestion are reported in veterinary literature. This is one of the most dangerous insects a reptile can encounter. Keep all reptile enclosures secure and never allow fireflies indoors where reptiles are kept. This is a veterinary emergency — contact a reptile-experienced veterinarian or animal poison control immediately if ingestion is suspected."
+                    )
+                ],
+                preventionTips: [
+                    "Keep reptile enclosures securely closed, especially during summer evenings when fireflies are active",
+                    "Never allow fireflies indoors in homes where reptiles, birds, or small mammals are kept",
+                    "Do not use firefly-catching activities as enrichment for any pet — even brief contact can result in ingestion",
+                    "Supervise dogs and cats outdoors during summer evenings, particularly in areas where fireflies are abundant",
+                    "Educate children not to bring fireflies inside or place them near pet enclosures",
+                    "Firefly season in the US typically peaks May through August — be especially vigilant during warm summer nights"
+                ],
+                sources: [
+                    "ASPCA Animal Poison Control Center",
+                    "Pet Poison Helpline",
+                    "Merck Veterinary Manual",
+                    "Journal of Herpetological Medicine and Surgery",
+                    "Veterinary Partner"
+                ],
+                relatedEntries: [
+                    "C55B5E77-7CFC-449F-A8AC-BD369A38F1EB",  // Colorado River Toad — same bufadienolide mechanism
+                    "00112233-4455-6677-8899-aabbccddef05"   // Cane Toad / Toad Poisoning — same bufadienolide mechanism
+                ]
+            ),
+
+            // MARK: - Colorado River Toad
+            ToxicItem(
+                id: UUID(uuidString: "C55B5E77-7CFC-449F-A8AC-BD369A38F1EB")!,
+                name: "Colorado River Toad",
+                alternateNames: [
+                    "Colorado River toad",
+                    "Sonoran Desert toad",
+                    "Incilius alvarius",
+                    "Bufo alvarius",
+                    "Bufo alvarius poisoning",
+                    "giant toad",
+                    "Sonoran toad",
+                    "Colorado River toad poisoning"
+                ],
+                categories: [.outdoorHazards],
+                imageAsset: "coloradotoad_thumb",
+                description: """
+The Colorado River Toad — also called the Sonoran Desert Toad — is one of the largest native toads in North America, with adults reaching up to 7 inches in length. It is found primarily in the southwestern United States, including Arizona, New Mexico, southern California, and parts of Texas, as well as northern Mexico.
+
+The toad is olive to dark brown with smooth skin and prominent oval parotoid glands — large raised structures located just behind each eye and on the shoulders. These glands are the source of a potent toxic secretion that is released when the toad feels threatened. Simply mouthing or licking the toad is enough to cause a serious reaction in dogs.
+
+This toad is most active during the summer monsoon season (July through September), when seasonal rains bring toads out in large numbers to breed. This seasonal surge is when pet exposures peak — particularly in Arizona. The Colorado River Toad is sometimes confused with the non-native Cane Toad (also known as the Marine Toad or Bufo Toad), which shares a similar toxic mechanism and is found in Florida, Hawaii, and parts of Texas.
+""",
+                toxicityInfo: """
+The parotoid glands of the Colorado River Toad secrete a mixture of toxic compounds, the most dangerous of which are bufadienolides — a class of cardiac glycosides that disrupt the heart's electrical conduction system and can cause life-threatening cardiac arrhythmias. These toxins are absorbed almost immediately through the mucous membranes of the mouth when a dog mouths, licks, or bites the toad. Absorption is rapid enough that serious signs can develop within minutes of exposure.
+
+The secretion also contains 5-MeO-DMT, a potent hallucinogenic compound — the same substance that has led to illegal recreational use of toad secretions by humans, and a fact that illustrates just how pharmacologically powerful this animal's chemistry is. In pets, neurological effects compound the cardiac effects and contribute to seizures and disorientation.
+
+If you witness your pet mouth or lick a Colorado River Toad, immediately rinse the mouth with water — flushing sideways (not back toward the throat) for several minutes to remove as much toxin as possible. Seek emergency veterinary care immediately. Do not wait for signs to develop.
+""",
+                onsetTime: OnsetTime(
+                    early: "Local signs (profuse drooling, pawing at mouth) occur immediately upon contact. Neurological signs (disorientation, stumbling, seizures) can develop within minutes.",
+                    delayed: "Cardiac effects (arrhythmias) may develop within 15 minutes to several hours. Death can occur rapidly in severe cases. This is a life-threatening emergency."
+                ),
+                symptoms: [
+                    "Profuse drooling and foaming at the mouth (often the first sign seen)",
+                    "Pawing at the mouth",
+                    "Disorientation, stumbling, or collapse",
+                    "Brick-red or pale gums",
+                    "Seizures or muscle tremors",
+                    "Cardiac arrhythmias (abnormal heart rhythm)",
+                    "Rapid deterioration — signs can progress from drooling to collapse within minutes"
+                ],
+                entrySeverity: .severe,
+                speciesRisks: [
+                    SpeciesRisk(
+                        species: .dog,
+                        severity: .severe,
+                        notes: "Dogs are the primary at-risk species. They readily investigate and mouth toads out of curiosity. Bufadienolide toxins are absorbed almost instantly through oral mucous membranes, and rapid deterioration — including seizures and cardiac arrest — is well documented. Deaths have been reported. THIS IS A LIFE-THREATENING EMERGENCY. Rinse the mouth with water immediately and seek emergency veterinary care without delay."
+                    ),
+                    SpeciesRisk(
+                        species: .cat,
+                        severity: .high,
+                        notes: "Cats are susceptible to the same toxic mechanism. Cats are behaviorally less likely than dogs to mouth a toad, making exposures less common — but when exposure does occur, serious signs are expected. Seek emergency veterinary care immediately."
+                    ),
+                    SpeciesRisk(
+                        species: .smallMammal,
+                        severity: .moderate,
+                        notes: "Cardiac glycosides would affect small mammals via the same mechanism. Most small mammals are housed indoors and are unlikely to encounter this toad. Severity is based on mechanism; limited companion animal data exists. Seek veterinary care if exposure occurs."
+                    ),
+                    SpeciesRisk(
+                        species: .bird,
+                        severity: .moderate,
+                        notes: "Wild birds have been documented in toad toxicosis cases. Pet birds are rarely exposed to outdoor toads. Severity is based on mechanism; limited companion animal data exists. Seek veterinary care if exposure occurs."
+                    ),
+                    SpeciesRisk(
+                        species: .reptile,
+                        severity: .low,
+                        notes: "Many reptile species — particularly snakes — have evolved resistance to bufadienolides, a well-documented evolutionary adaptation. Chelonians (turtles and tortoises) may be more sensitive. Overall the lowest risk among the five species. Data is limited; consult a reptile veterinarian if exposure occurs."
+                    )
+                ],
+                preventionTips: [
+                    "If you live in Arizona, New Mexico, southern California, or parts of Texas, be aware that Colorado River Toads are present and dangerous to pets",
+                    "Supervise pets outdoors during the monsoon season (July–September), especially at dawn, dusk, and after rainfall",
+                    "Keep your yard well-lit to spot toads before your dog does",
+                    "Remove standing water, debris, and areas where toads may hide",
+                    "Cover or bring in outdoor water bowls at night — toads can soak in them and leave behind toxin",
+                    "If your dog mouths a toad, IMMEDIATELY rinse the mouth with water (flushing sideways, not toward the throat) and seek emergency veterinary care — do not wait for symptoms"
+                ],
+                sources: [
+                    "ASPCA Animal Poison Control Center",
+                    "Pet Poison Helpline",
+                    "Merck Veterinary Manual",
+                    "Roder JD — Small Animal Toxicology (toad toxicosis)"
+                ],
+                relatedEntries: [
+                    "00112233-4455-6677-8899-aabbccddef05",  // Toad Poisoning (Bufo Toads) — shared toxic mechanism, broader toad poisoning entry
+                    "f7a9c2e1-4b6d-4f83-9e15-2a7b8c3d0e5f"  // Fireflies — shared bufadienolide mechanism
+                ]
             ),
 
             // MARK: - Bee, Wasp, and Ant Stings (Hymenoptera)
