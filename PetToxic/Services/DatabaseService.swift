@@ -82,7 +82,8 @@ class DatabaseService {
                 relatedEntries: [
                     "f2a3b4c5-6d7e-8f9a-0b1c-2d3e4f5a6b7c",  // Cocoa Mulch - same methylxanthine toxicity
                     "ae80bf97-0ffd-4ed8-b9d9-727e747d583b",  // Caffeine - same methylxanthine toxicity
-                    "2e094121-64ea-499c-bfb4-6db98f139b55"   // Fatty Foods & Grease - white chocolate pancreatitis risk
+                    "2e094121-64ea-499c-bfb4-6db98f139b55",  // Fatty Foods & Grease - white chocolate pancreatitis risk
+                    "c7d8e9f0-1a2b-4c3d-8e4f-5a6b7c8d9e0f"   // Holiday Hazards umbrella
                 ]
             ),
 
@@ -129,7 +130,7 @@ class DatabaseService {
                     "Educate children and guests that grapes and raisins are never safe to share with dogs, regardless of past tolerance"
                 ],
                 sources: ["ASPCA Animal Poison Control Center", "Pet Poison Helpline", "Merck Veterinary Manual", "Cornell University College of Veterinary Medicine", "VCA Animal Hospitals"],
-                relatedEntries: ["63f63b3a-1172-4fb2-9702-45496c99df4d"]  // Alcohol - wine contains both grape toxins and ethanol
+                relatedEntries: ["63f63b3a-1172-4fb2-9702-45496c99df4d", "c7d8e9f0-1a2b-4c3d-8e4f-5a6b7c8d9e0f"]  // Alcohol, Holiday Hazards umbrella
             ),
 
             // MARK: - Xylitol
@@ -176,7 +177,7 @@ class DatabaseService {
                     "A dog that seems fine after eating xylitol may still be at risk—liver failure can develop 1-3 days later, so always seek veterinary evaluation even if no symptoms appear"
                 ],
                 sources: ["ASPCA Animal Poison Control Center", "Pet Poison Helpline", "VCA Animal Hospitals", "FDA Consumer Updates"],
-                relatedEntries: ["33aa1122-bbcc-ddee-ff00-112233445566"]  // Diabetes Medications - shared hypoglycemia mechanism
+                relatedEntries: ["33aa1122-bbcc-ddee-ff00-112233445566", "c7d8e9f0-1a2b-4c3d-8e4f-5a6b7c8d9e0f"]  // Diabetes Medications, Holiday Hazards umbrella
             ),
 
             // MARK: - Onions
@@ -220,7 +221,7 @@ class DatabaseService {
                     "Remember that all forms are toxic: raw, cooked, powdered, and dehydrated"
                 ],
                 sources: ["ASPCA Animal Poison Control Center", "Pet Poison Helpline", "Merck Veterinary Manual", "American College of Veterinary Pharmacists"],
-                relatedEntries: ["b2e4c6a8-1d3f-5b7a-9e0c-4f6d8a2b7c5e"]  // Why Cats Are More Sensitive — cats more susceptible, Heinz body anemia
+                relatedEntries: ["b2e4c6a8-1d3f-5b7a-9e0c-4f6d8a2b7c5e", "c7d8e9f0-1a2b-4c3d-8e4f-5a6b7c8d9e0f"]  // Why Cats Are More Sensitive, Holiday Hazards umbrella
             ),
 
             // MARK: - Garlic
@@ -264,7 +265,7 @@ class DatabaseService {
                     "Check ingredient lists on prepared foods, sauces, and seasonings"
                 ],
                 sources: ["ASPCA Animal Poison Control Center", "Pet Poison Helpline", "Merck Veterinary Manual", "Colorado State University Guide to Poisonous Plants"],
-                relatedEntries: ["b2e4c6a8-1d3f-5b7a-9e0c-4f6d8a2b7c5e"]  // Why Cats Are More Sensitive — cats more susceptible than dogs
+                relatedEntries: ["b2e4c6a8-1d3f-5b7a-9e0c-4f6d8a2b7c5e", "c7d8e9f0-1a2b-4c3d-8e4f-5a6b7c8d9e0f"]  // Why Cats Are More Sensitive, Holiday Hazards umbrella
             ),
 
             // MARK: - Macadamia Nuts
@@ -314,7 +315,7 @@ class DatabaseService {
                 id: UUID(uuidString: "63f63b3a-1172-4fb2-9702-45496c99df4d")!,
                 name: "Alcohol",
                 alternateNames: ["ethanol", "ethyl alcohol", "beer", "wine", "liquor", "spirits", "vodka", "whiskey", "rum", "cocktail", "isopropanol", "isopropyl alcohol", "rubbing alcohol", "methanol", "methyl alcohol", "wood alcohol", "hand sanitizer"],
-                categories: [.foods, .recreationalSubstances],
+                categories: [.foods, .recreationalSubstances, .holidayHazards],
                 imageAsset: "alcohol_thumb",
                 description: "Alcohol toxicity can occur from ethanol (alcoholic beverages, some liquid medications, mouthwash, fermenting fruits), isopropanol (rubbing alcohol, some hand sanitizers, certain flea sprays), or methanol (windshield washer fluid, some paint removers).",
                 toxicityInfo: "Alcohols are rapidly absorbed and act as central nervous system depressants. They cross the blood-brain barrier quickly and can cause dangerous drops in blood sugar, blood pressure, and body temperature. Isopropanol is more than twice as potent as ethanol. Dogs are highly susceptible to the effects of alcohol, and cats are especially sensitive. Significant absorption can also occur through the skin or by inhalation.\n\nNote: Raw yeast bread dough produces ethanol as it ferments—see the separate entry for Raw Yeast Dough.",
@@ -352,7 +353,7 @@ class DatabaseService {
                     "Be aware that cocktails made with milk or cream may be especially attractive to pets"
                 ],
                 sources: ["ASPCA Animal Poison Control Center", "Pet Poison Helpline", "Merck Veterinary Manual", "VCA Animal Hospitals", "Today's Veterinary Practice"],
-                relatedEntries: ["ec90eb4b-765b-45cb-9255-f449b656b7d3", "d1bde5cd-6881-4765-ac4c-b9f43b40da70"]  // Raw Yeast Dough, Grapes & Raisins
+                relatedEntries: ["ec90eb4b-765b-45cb-9255-f449b656b7d3", "d1bde5cd-6881-4765-ac4c-b9f43b40da70", "c7d8e9f0-1a2b-4c3d-8e4f-5a6b7c8d9e0f"]  // Raw Yeast Dough, Grapes & Raisins, Holiday Hazards umbrella
             ),
 
             // MARK: - Raw Yeast Dough
@@ -398,7 +399,7 @@ class DatabaseService {
                     "Be extra vigilant during holiday baking when dough is frequently left to rise"
                 ],
                 sources: ["ASPCA Animal Poison Control Center", "Pet Poison Helpline", "Merck Veterinary Manual", "VCA Animal Hospitals"],
-                relatedEntries: ["63f63b3a-1172-4fb2-9702-45496c99df4d"]
+                relatedEntries: ["63f63b3a-1172-4fb2-9702-45496c99df4d", "c7d8e9f0-1a2b-4c3d-8e4f-5a6b7c8d9e0f"]  // Alcohol, Holiday Hazards umbrella
             ),
 
             // MARK: - Caffeine
@@ -491,7 +492,7 @@ class DatabaseService {
                     "Be cautious with guacamole at parties—it may also contain onion and garlic"
                 ],
                 sources: ["ASPCA Animal Poison Control Center", "Pet Poison Helpline", "Merck Veterinary Manual", "University of Illinois College of Veterinary Medicine", "Rabbit Hole Hay"],
-                relatedEntries: nil
+                relatedEntries: ["c7d8e9f0-1a2b-4c3d-8e4f-5a6b7c8d9e0f"]  // Holiday Hazards umbrella
             ),
 
             // MARK: - Nutmeg
@@ -534,7 +535,7 @@ class DatabaseService {
                     "A small bite of baked goods with nutmeg is unlikely to cause serious harm, but avoid sharing intentionally"
                 ],
                 sources: ["Pet Poison Helpline", "PetMD", "NCBI Toxicity Report on Myristicin", "World Parrot Trust - Dangerous Foods for Parrots"],
-                relatedEntries: nil
+                relatedEntries: ["c7d8e9f0-1a2b-4c3d-8e4f-5a6b7c8d9e0f"]  // Holiday Hazards umbrella
             ),
 
             // MARK: - Salt
@@ -627,7 +628,7 @@ class DatabaseService {
                     "Store cooking grease and drippings securely before disposal"
                 ],
                 sources: ["Pet Poison Helpline", "ASPCA Animal Poison Control Center", "Merck Veterinary Manual", "American Veterinary Medical Association (JAVMA)"],
-                relatedEntries: ["59cf7dc4-5d83-4811-97f1-ce1d0162cd28", "91000011-2233-4455-6677-889900aabb01", "d8c34930-fe78-414c-a182-49521dbfc266"]  // Cooked Bones, Macadamia Nuts (or other), Chocolate - white chocolate pancreatitis
+                relatedEntries: ["59cf7dc4-5d83-4811-97f1-ce1d0162cd28", "91000011-2233-4455-6677-889900aabb01", "d8c34930-fe78-414c-a182-49521dbfc266", "c7d8e9f0-1a2b-4c3d-8e4f-5a6b7c8d9e0f"]  // Cooked Bones, Macadamia Nuts, Chocolate, Holiday Hazards umbrella
             ),
 
             // MARK: - Cooked Bones
@@ -891,7 +892,7 @@ class DatabaseService {
                     "Educate family members, pet sitters, and houseguests about the danger of lilies to cats"
                 ],
                 sources: ["ASPCA Animal Poison Control Center", "Pet Poison Helpline", "Merck Veterinary Manual", "Journal of Veterinary Emergency and Critical Care"],
-                relatedEntries: nil
+                relatedEntries: ["c7d8e9f0-1a2b-4c3d-8e4f-5a6b7c8d9e0f"]  // Holiday Hazards umbrella
             ),
 
             // MARK: - Sago Palm
@@ -1034,7 +1035,7 @@ class DatabaseService {
                     "If you see your pet chewing on tulip or hyacinth plants, contact your veterinarian even if symptoms haven't appeared yet"
                 ],
                 sources: ["ASPCA Animal Poison Control Center", "Pet Poison Helpline", "California Turtle & Tortoise Club (CTTC)", "DVM360"],
-                relatedEntries: nil
+                relatedEntries: ["c7d8e9f0-1a2b-4c3d-8e4f-5a6b7c8d9e0f"]  // Holiday Hazards umbrella
             ),
 
             // MARK: - Oleander
@@ -1271,7 +1272,7 @@ class DatabaseService {
                     "Amaryllis bulbs are popular holiday gifts — keep them out of reach of pets, especially during the winter holiday season"
                 ],
                 sources: ["ASPCA Animal Poison Control Center", "Pet Poison Helpline", "Poison Control — Daffodils: Beautiful But Potentially Toxic", "Rabbit Hole Hay — Narcissus Toxicity"],
-                relatedEntries: nil
+                relatedEntries: ["c7d8e9f0-1a2b-4c3d-8e4f-5a6b7c8d9e0f"]  // Holiday Hazards umbrella
             ),
 
             // MARK: - Foxglove
@@ -1858,7 +1859,8 @@ class DatabaseService {
                     "Veterinary Partner"
                 ],
                 relatedEntries: [
-                    "045fe2d3-3c59-4f15-b72a-09371b675d77"  // GI Irritant Plants — poinsettia previously listed there; shared mild irritant mechanism
+                    "045fe2d3-3c59-4f15-b72a-09371b675d77",  // GI Irritant Plants — poinsettia previously listed there; shared mild irritant mechanism
+                    "c7d8e9f0-1a2b-4c3d-8e4f-5a6b7c8d9e0f"   // Holiday Hazards umbrella
                 ]
             ),
 
@@ -1885,7 +1887,7 @@ class DatabaseService {
                     "chrysanthamum",
                     "chrysanthemum plant"
                 ],
-                categories: [.plants],
+                categories: [.plants, .holidayHazards],
                 imageAsset: "chrysanthemum_thumb",
                 description: """
     Chrysanthemums — commonly called mums — are among the most popular flowering plants in the world, sold year-round as potted plants and cut flowers. They are especially abundant in autumn, appearing in garden centers, grocery stores, and floral arrangements from late summer through fall. Mums are also widely used in funeral flowers, making them a common household exposure year-round.
@@ -1972,7 +1974,8 @@ class DatabaseService {
                 relatedEntries: [
                     "d4e5f6a7-8b9c-4d0e-a1b2-3c4d5e6f7a8b",  // Pyrethrins & Pyrethroids — same pyrethrin mechanism
                     "045fe2d3-3c59-4f15-b72a-09371b675d77",   // GI Irritant Plants — formerly grouped here
-                    "c4e9a2b1-7d5f-4c3a-b8e2-6f1d9a4c5b73"   // Non-Toxic Bouquet Flowers — bouquet context
+                    "c4e9a2b1-7d5f-4c3a-b8e2-6f1d9a4c5b73",  // Non-Toxic Bouquet Flowers — bouquet context
+                    "c7d8e9f0-1a2b-4c3d-8e4f-5a6b7c8d9e0f"   // Holiday Hazards umbrella
                 ]
             ),
 
@@ -2028,7 +2031,8 @@ class DatabaseService {
                     "c4e9a2b1-7d5f-4c3a-b8e2-6f1d9a4c5b73",  // Non-Toxic Bouquet Flowers - safe bouquet flowers counterpart
                     "7E52EBF4-2617-4264-A341-4E6FF77E26EB",  // Pokeweed — saponin-based GI irritant, higher severity standalone entry
                     "048CDED7-251B-4F1C-89E6-93ACB63E6621",  // Honeysuckle — saponin-based GI irritant
-                    "b1d3f5a7-2c4e-4a6b-8d0f-1e3c5a7b9d2f"  // Chrysanthemums — standalone entry
+                    "b1d3f5a7-2c4e-4a6b-8d0f-1e3c5a7b9d2f",  // Chrysanthemums — standalone entry
+                    "c7d8e9f0-1a2b-4c3d-8e4f-5a6b7c8d9e0f"   // Holiday Hazards umbrella
                 ]
             ),
 
@@ -2595,7 +2599,7 @@ class DatabaseService {
                     "If your pet shows signs of poisoning after contact with cyclamen, contact your veterinarian promptly — cardiac monitoring may be needed for large ingestions"
                 ],
                 sources: ["ASPCA Animal Poison Control Center", "Pet Poison Helpline", "PMC - Toxicity of House Plants to Pet Animals (peer-reviewed)", "WagWalking Veterinary Resources"],
-                relatedEntries: nil
+                relatedEntries: ["c7d8e9f0-1a2b-4c3d-8e4f-5a6b7c8d9e0f"]  // Holiday Hazards umbrella
             ),
 
             // MARK: - Bird of Paradise (Caesalpinia)
@@ -4569,7 +4573,7 @@ Bark and roots contain the highest concentrations of ailanthone; leaves contain 
                     "Note: Fully dried antifreeze spills pose minimal risk, but wet spills are extremely dangerous"
                 ],
                 sources: ["ASPCA Animal Poison Control Center", "Pet Poison Helpline — Antifreeze Poisoning", "Merck Veterinary Manual — Ethylene Glycol Toxicosis"],
-                relatedEntries: ["00112233-4455-6677-8899-aabbccddef27"]  // Hypothermia & Frostbite
+                relatedEntries: ["00112233-4455-6677-8899-aabbccddef27", "c7d8e9f0-1a2b-4c3d-8e4f-5a6b7c8d9e0f"]  // Hypothermia & Frostbite, Holiday Hazards umbrella
             ),
 
             // MARK: - Petroleum Products
@@ -6093,7 +6097,7 @@ There is no specific antidote for acrylamide toxicity. Because signs can progres
                     "Remember that the dramatic drooling and behavioral signs look scary but are not dangerous"
                 ],
                 sources: ["ASPCA Animal Poison Control Center", "Pet Poison Helpline", "PetMD", "Vetstreet"],
-                relatedEntries: nil
+                relatedEntries: ["c7d8e9f0-1a2b-4c3d-8e4f-5a6b7c8d9e0f"]  // Holiday Hazards umbrella
             ),
 
             // MARK: - Electrical Cords & Electrocution
@@ -11147,7 +11151,7 @@ There is no specific antidote for acrylamide toxicity. Because signs can progres
                     "Pet Poison Helpline",
                     "VCA Animal Hospitals"
                 ],
-                relatedEntries: ["00112233-4455-6677-8899-aabbccddef21", "00112233-4455-6677-8899-aabbccddef19", "e5f6a7b8-9c0d-1e2f-3a4b-5c6d7e8f9a0b"]
+                relatedEntries: ["00112233-4455-6677-8899-aabbccddef21", "00112233-4455-6677-8899-aabbccddef19", "e5f6a7b8-9c0d-1e2f-3a4b-5c6d7e8f9a0b", "c7d8e9f0-1a2b-4c3d-8e4f-5a6b7c8d9e0f"]  // + Holiday Hazards umbrella
             ),
 
             // MARK: - Skunk Spray
@@ -13433,6 +13437,314 @@ Washington State University Veterinary Clinical Pharmacology Laboratory offers t
                 ]
             ),
 
+            // MARK: - Holiday Hazards
+            ToxicItem(
+                id: UUID(uuidString: "c7d8e9f0-1a2b-4c3d-8e4f-5a6b7c8d9e0f")!,
+                name: "Holiday Hazards",
+                alternateNames: [
+                    "holiday pet safety",
+                    "seasonal hazards",
+                    "Christmas hazards",
+                    "Halloween hazards",
+                    "Thanksgiving hazards",
+                    "Easter hazards",
+                    "holiday plants",
+                    "party hazards",
+                    "celebration hazards",
+                    "birthday hazards",
+                    "Hanukkah hazards",
+                    "Diwali hazards",
+                    "Lunar New Year hazards"
+                ],
+                categories: [.informational, .holidayHazards],
+                imageAsset: "holiday_hazards_thumb",
+                description: """
+    Holidays and celebrations bring together foods, decorations, plants, and activities \
+    that can pose serious risks to pets. This guide covers hazards across major holidays \
+    and cultural celebrations observed in the United States — from well-known winter \
+    holidays to year-round events like birthdays.
+
+    **How to use this entry:** Each hazard listed here links to a dedicated entry with \
+    full toxicity details, species-specific severity, and symptoms. This guide is a \
+    quick reference and planning tool — tap any cross-referenced entry for complete \
+    information.
+
+    If your pet has been exposed to any of the substances listed here, contact a \
+    licensed veterinarian or animal poison control center immediately. Do not wait \
+    for symptoms to appear.
+    """,
+                toxicityInfo: """
+    **RECURRING HAZARDS — Present at Many Celebrations**
+
+    These hazards appear across multiple holidays and cultural events throughout the year. \
+    Familiarizing yourself with this short list will prepare you for almost any celebration.
+
+    **Chocolate** is present at Halloween, Valentine's Day, Easter, Christmas, Hanukkah \
+    (chocolate gelt), Purim (hamantaschen), and birthday celebrations. All forms are \
+    toxic — dark chocolate and baking chocolate are the most dangerous.
+
+    **Xylitol** (an artificial sweetener) appears in sugar-free candies, gum, baked goods, \
+    frosting, and some peanut butters. It is found at virtually every celebration where \
+    sweets are present and is severely toxic to dogs.
+
+    **Grapes and raisins** appear in fruit cakes, trail mix, hot cross buns, charoset \
+    (Passover), raisin challah (Rosh Hashanah), hamantaschen (Purim), and party platters. \
+    Even small amounts can cause acute kidney injury in dogs and cats.
+
+    **Alcohol** is present at New Year's, St. Patrick's Day, Cinco de Mayo, Mardi Gras, \
+    Passover seder (wine), and most adult gatherings. Unattended glasses and punch bowls \
+    are common exposure routes. Even small amounts are dangerous to pets.
+
+    **Onions and alliums** appear in stuffing (Thanksgiving), guacamole, party dips, \
+    cooked roasts, and many savory holiday dishes. Toxic whether raw, cooked, or powdered.
+
+
+    **NEW YEAR'S EVE & NEW YEAR'S DAY**
+
+    Alcohol is the primary hazard — unattended glasses and spilled drinks are common \
+    exposure routes. Fireworks and noisemakers cause significant stress in noise-sensitive \
+    pets; keep pets indoors during countdowns. Fireworks debris ingested from the yard the \
+    following morning is a secondary concern.
+
+
+    **LUNAR NEW YEAR / TẾT / SEOLLAL**
+    *(Date varies: late January to mid-February)*
+
+    The largest fireworks celebration outside of the Fourth of July — noise stress and \
+    outdoor debris ingestion apply equally here. **Narcissus and paperwhite flowers** are \
+    traditional Lunar New Year decorations and are toxic to dogs and cats (covered under \
+    the Daffodil entry). Traditional sweets and dried fruit platters may contain raisins.
+
+
+    **VALENTINE'S DAY**
+
+    **Chocolate** is the dominant hazard — boxed chocolates are often left accessible on \
+    counters and tables. **Xylitol** appears in sugar-free chocolates and candy. **Cut \
+    flower bouquets** frequently contain true lilies (Lilium species), which are severely \
+    toxic to cats — a single petal or leaf, or water from the vase, can cause fatal kidney \
+    failure. When accepting or purchasing flower arrangements, check for true lilies if you \
+    have cats.
+
+
+    **MARDI GRAS**
+
+    Alcohol is the primary pet hazard at Mardi Gras gatherings.
+
+
+    **PURIM**
+    *(Date varies: February to March)*
+
+    Hamantaschen pastries commonly contain chocolate or raisin fillings — both toxic. \
+    Candy exchanges are a feature of this holiday; keep all sweets secured away from pets.
+
+
+    **ST. PATRICK'S DAY**
+
+    Alcohol is the primary hazard at gatherings. Green-dyed foods and drinks are not \
+    themselves toxic, but alcohol in cocktails and beer is.
+
+
+    **EASTER & PASSOVER**
+    *(Date varies: March to April)*
+
+    **Easter lilies** (Lilium longiflorum) are among the most dangerous plants for cats — \
+    see the True Lilies entry. They are sold at grocery stores, florists, and garden centers \
+    throughout the Easter season. **Plastic Easter grass** and foil wrapping from baskets \
+    are linear foreign body risks if ingested, particularly by cats. **Hot cross buns** \
+    contain raisins. Chocolate eggs and xylitol-containing sugar-free candies are widespread.
+
+    At Passover seder, **charoset** combines wine (alcohol), raisins (grapes/raisins), and \
+    nuts — multiple hazards in a single dish. Wine and grape juice are prominent throughout \
+    the meal.
+
+
+    **CINCO DE MAYO**
+
+    **Avocado** (guacamole) and **onions/garlic** are common in traditional dishes. \
+    Alcohol is present at many Cinco de Mayo gatherings.
+
+
+    **MOTHER'S DAY**
+
+    Cut flower arrangements are the primary hazard. **True lilies** are among the most \
+    popular Mother's Day flowers and are severely toxic to cats. Stargazer lilies, tiger \
+    lilies, and Asiatic lilies are commonly included in bouquets. Check all floral \
+    arrangements carefully before bringing them into a home with cats.
+
+
+    **EID AL-FITR & EID AL-ADHA**
+    *(Dates vary by Islamic calendar)*
+
+    Traditional mithai and sweets may contain dried fruits (raisins) and nuts. Eid \
+    al-Adha involves significant meat preparation; **cooked bones** are a mechanical \
+    hazard (splintering, obstruction, perforation) — dispose of securely. Party gatherings \
+    carry the usual chocolate and xylitol candy risks.
+
+
+    **BIRTHDAYS** *(Year-Round)*
+
+    Birthday celebrations are one of the most common sources of accidental pet exposure \
+    because they occur in every household, in every season. **Chocolate cake and cupcakes** \
+    are the most frequent culprit — chocolate frosting is often the most concentrated form. \
+    **Xylitol** appears in sugar-free frosting, ice cream, and candy. **Macadamia nuts** \
+    appear in cookies and baked goods. **Balloons**, **curling ribbon**, and **streamers** \
+    are linear foreign body risks if chewed and swallowed — particularly by dogs and cats \
+    who investigate fallen decorations. Keep pets out of the room during cake cutting and \
+    gift opening, and clean up ribbon and balloon fragments promptly.
+
+
+    **FOURTH OF JULY**
+
+    **BBQ hazards** are significant: fatty foods and grease, cooked bones (splintering), \
+    corn cobs (GI obstruction), onions in sauces and seasonings. **Glow sticks and glow \
+    jewelry** are commonly distributed at Fourth of July events — the dibutyl phthalate \
+    inside causes intense salivation and foaming in cats (dramatic but not life-threatening; \
+    rinse the mouth and contact your vet). **Fireworks debris** ingested from the yard \
+    after the event contains heavy metals and oxidizing agents. Keep pets indoors during \
+    fireworks. Noise-sensitive pets may need veterinary support well in advance of the holiday.
+
+
+    **DIWALI**
+    *(Date varies: October to November)*
+
+    **Fireworks and firecrackers** make Diwali one of the most stressful noise events of \
+    the year for pets — plan ahead for noise-sensitive animals. **Diyas** (oil lamps) and \
+    candles are central to the celebration; wax and lamp oil ingestion is possible if pets \
+    investigate. Traditional mithai sweets may contain dried fruits and nuts.
+
+
+    **ROSH HASHANAH & YOM KIPPUR**
+    *(Date varies: September to October)*
+
+    **Raisin challah** is traditional for Rosh Hashanah — raisins are toxic to dogs and \
+    cats at any amount. Honey cake and apples-and-honey are traditional; honey in large \
+    amounts can cause GI upset but is a lower-priority concern compared to the raisin risk. \
+    Keep all baked goods secured away from pets.
+
+
+    **HALLOWEEN**
+
+    One of the highest-risk holidays for pets. **Chocolate** in all forms circulates in \
+    large quantities. **Xylitol** is present in sugar-free candy, gum, and some lollipops — \
+    check labels carefully. **Raisins** appear in snack-size boxes commonly distributed \
+    as treats. **Glow sticks and glow jewelry** cause alarming but typically mild reactions \
+    (profuse salivation, foaming) in cats who chew them. Keep all candy secured and \
+    inaccessible. Costume stress and repeated doorbell activity can cause anxiety in \
+    sensitive pets.
+
+
+    **THANKSGIVING**
+
+    The highest-risk food holiday of the year. **Fatty foods and turkey skin/grease** \
+    are a leading cause of pancreatitis in dogs around Thanksgiving. **Turkey and chicken \
+    bones** splinter when cooked — dispose of securely in a sealed bag. **Onions, garlic, \
+    and chives** appear in stuffing, gravies, and casseroles. **Grapes and raisins** appear \
+    in fruit salads, stuffing, and desserts. **Raw yeast dough** (for rolls and breads) \
+    can cause life-threatening bloat and alcohol toxicosis if ingested. **Nutmeg** in \
+    pies and baked goods. **Macadamia nuts** in cookies and nut mixes.
+
+
+    **HANUKKAH**
+    *(Date varies: November to December)*
+
+    **Chocolate gelt** (foil-wrapped chocolate coins) is a Hanukkah tradition and a \
+    significant chocolate exposure risk — coins are small, easily dropped, and appealing \
+    to pets. **Fried foods** (latkes, sufganiyot/doughnuts) present a fatty food and \
+    pancreatitis risk, especially for dogs. **Menorah candles** — wax ingestion is possible \
+    if a pet investigates a low menorah; the larger risk is burns or fire if a pet knocks \
+    over an unattended lit menorah.
+
+
+    **CHRISTMAS & WINTER HOLIDAYS**
+
+    The most hazard-dense holiday period of the year.
+
+    *Plants:* **True lilies** in floral arrangements (severe cat toxicity). **Cyclamen** \
+    is a popular winter houseplant — cardiac glycoside toxicity, all species. **Poinsettia** \
+    is widely feared but actually causes only mild GI irritation. **Holly and mistletoe** \
+    cause GI signs ranging from mild to serious depending on quantity. **Amaryllis** bulb \
+    kits are popular gifts — toxic to dogs and cats (covered under the Daffodil entry). \
+    **Daffodil** and **narcissus** bulb arrangements are common winter forcing projects.
+
+    *Decorations:* **Tinsel and ribbon** are linear foreign body risks, especially for cats. \
+    **Glass ornaments** can cause oral and GI lacerations if broken and ingested. \
+    **Christmas tree water** may contain preservatives, fertilizers, or bacteria — treat \
+    as potentially toxic; cover the tree stand.
+
+    *Other:* **Antifreeze** usage peaks in winter — even tiny amounts of ethylene glycol \
+    are lethal to cats and highly toxic to dogs. Check driveways and garage floors. \
+    **Chocolate** in all holiday forms (boxes of chocolates, baking supplies, advent \
+    calendars). **Xylitol** in sugar-free holiday baking and candy.
+
+
+    **KWANZAA**
+    *(December 26 – January 1)*
+
+    Kinara candles are central to Kwanzaa — same wax and flame hazard as Hanukkah and \
+    Diwali candles. Holiday food hazards overlap with Christmas and New Year's gatherings.
+
+
+    **A NOTE ON FIREWORKS AND NOISE STRESS**
+
+    Fireworks cause significant distress in noise-sensitive pets and are a feature of New \
+    Year's Eve, Fourth of July, Lunar New Year, Diwali, and many local celebrations. \
+    Planning ahead with your veterinarian — including behavioral support or anti-anxiety \
+    medication where appropriate — is far more effective than reactive management. Keep \
+    pets indoors, ensure microchip and ID tag information is current (lost pets spike \
+    around fireworks holidays), and clear fireworks debris from outdoor areas before \
+    allowing pets outside the following morning.
+    """,
+                onsetTime: nil,
+                symptoms: [
+                    "Varies by substance — see individual entries for specific symptoms",
+                    "General signs of toxin ingestion: vomiting, diarrhea, lethargy, drooling, tremors",
+                    "Contact a veterinarian immediately if any exposure is suspected"
+                ],
+                entrySeverity: nil,
+                speciesRisks: [],
+                preventionTips: [
+                    "Keep all chocolate, candy, and baked goods in sealed containers or high cabinets — not on counters or tables",
+                    "Check all flower arrangements for true lilies before bringing them into a home with cats",
+                    "Dispose of cooked bones in a sealed bag inside a closed trash can",
+                    "Cover Christmas tree water stands — the water may contain bacteria, preservatives, or fertilizers",
+                    "Clean up ribbon, tinsel, balloon fragments, and plastic Easter grass immediately after use",
+                    "Plan ahead with your veterinarian for noise-sensitive pets before fireworks holidays",
+                    "Ensure your pet's microchip and ID tag information are current before major holidays",
+                    "Brief all guests that table scraps and 'just a little taste' are not safe for pets",
+                    "Keep glow sticks and glow jewelry away from cats — the contents cause dramatic but frightening reactions",
+                    "Check ingredient labels on sugar-free products for xylitol before any holiday baking or candy purchase"
+                ],
+                sources: [
+                    "ASPCA Animal Poison Control Center",
+                    "Pet Poison Helpline",
+                    "Merck Veterinary Manual",
+                    "Veterinary Partner"
+                ],
+                relatedEntries: [
+                    "d8c34930-fe78-414c-a182-49521dbfc266",  // Chocolate
+                    "d7723ed0-6496-40b3-8b1c-84e129083cb9",  // Xylitol
+                    "d1bde5cd-6881-4765-ac4c-b9f43b40da70",  // Grapes & Raisins
+                    "63f63b3a-1172-4fb2-9702-45496c99df4d",  // Alcohol
+                    "8a27c390-254f-47c9-90e7-7739694f603f",  // Onions
+                    "2e094121-64ea-499c-bfb4-6db98f139b55",  // Fatty Foods & Grease
+                    "ec90eb4b-765b-45cb-9255-f449b656b7d3",  // Raw Yeast Dough
+                    "d6ac2e8a-00de-42cb-9c6b-f912ec43d5f3",  // Nutmeg
+                    "df7f2d18-6f6c-40c8-9f77-cdfbc815e946",  // Macadamia Nuts
+                    "419a437f-3834-47e1-934a-5fa379b98a00",  // Lilies (True Lilies)
+                    "1669461b-b725-4e4b-a30a-99c26b34e5c1",  // Cyclamen
+                    "e3f5a7c9-2b4d-4e6f-8a0b-1c3d5e7f9a2b",  // Poinsettia
+                    "cdb80d59-274a-45f9-b5c5-1e716a7b402b",  // Daffodils
+                    "81d94db6-b452-4997-818a-fb89fde196fa",  // Tulips & Hyacinths
+                    "b1d3f5a7-2c4e-4a6b-8d0f-1e3c5a7b9d2f",  // Chrysanthemums
+                    "045fe2d3-3c59-4f15-b72a-09371b675d77",  // GI Irritant Plants (covers Mistletoe, Holly)
+                    "00112233-4455-6677-8899-aabbccddef03",  // Linear Foreign Bodies
+                    "00112233-4455-6677-8899-aabbccddef19",  // Corn Cob Ingestion
+                    "61b259ac-d3af-4451-a1a4-b050fb70d455",  // Antifreeze & Coolant
+                    "d4e5f6a7-8b9c-0d1e-2f3a-4b5c6d7e8f9a",  // Glow Sticks
+                    "6a0dda24-d0e1-47c4-af59-068101844c8b"   // Avocado
+                ]
+            ),
+
             // MARK: - Corn Cob Ingestion
             ToxicItem(
                 id: UUID(uuidString: "00112233-4455-6677-8899-aabbccddef19")!,
@@ -13541,7 +13853,7 @@ Cats rarely eat corn cobs due to selective eating habits.
                     "BluePearl Specialty and Emergency Pet Hospital",
                     "Merck Veterinary Manual"
                 ],
-                relatedEntries: ["00112233-4455-6677-8899-aabbccddef03", "f1369ae0-b97d-424d-98b7-b46a9b245109", "59cf7dc4-5d83-4811-97f1-ce1d0162cd28", "e1f2a3b4-5c6d-7e8f-9a0b-1c2d3e4f5a6b", "00112233-4455-6677-8899-aabbccddef21", "a2c4e6f8-1b3d-4e5f-8a9b-0c1d2e3f4a5b"]  // + Cicadas — GI obstruction from volume
+                relatedEntries: ["00112233-4455-6677-8899-aabbccddef03", "f1369ae0-b97d-424d-98b7-b46a9b245109", "59cf7dc4-5d83-4811-97f1-ce1d0162cd28", "e1f2a3b4-5c6d-7e8f-9a0b-1c2d3e4f5a6b", "00112233-4455-6677-8899-aabbccddef21", "a2c4e6f8-1b3d-4e5f-8a9b-0c1d2e3f4a5b", "c7d8e9f0-1a2b-4c3d-8e4f-5a6b7c8d9e0f"]  // + Cicadas, Holiday Hazards umbrella
             ),
 
             // MARK: - Foxtails (Grass Awns)
