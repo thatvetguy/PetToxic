@@ -1762,6 +1762,106 @@ class DatabaseService {
                 relatedEntries: ["f1369ae0-b97d-424d-98b7-b46a9b245109"]
             ),
 
+            // MARK: - Poinsettia
+            ToxicItem(
+                id: UUID(uuidString: "e3f5a7c9-2b4d-4e6f-8a0b-1c3d5e7f9a2b")!,
+                name: "Poinsettia",
+                alternateNames: [
+                    "Euphorbia pulcherrima",
+                    "Christmas star",
+                    "Christmas flower",
+                    "lobster plant",
+                    "painted leaf",
+                    "Mexican flame leaf",
+                    "poinsetta",
+                    "pointsettia"
+                ],
+                categories: [.plants, .holidayHazards],
+                imageAsset: "poinsettia_thumb",
+                description: """
+    Poinsettia (Euphorbia pulcherrima) is a popular holiday plant native to Mexico, \
+    widely used as seasonal decoration from late fall through winter. Its distinctive \
+    red, white, or pink leaf-like bracts make it one of the most recognizable plants \
+    in North America during the holiday season.
+
+    **Poinsettia has one of the most overstated toxicity reputations in veterinary medicine.** \
+    Despite decades of warnings, the plant is not deadly — it is a mild GI irritant. \
+    If your pet has eaten poinsettia, a call to your veterinarian or animal poison control \
+    center is still recommended, but this is not typically an emergency.
+
+    The milky white sap (latex) present in the stems and leaves is the source of irritation. \
+    Pets with known latex sensitivities may experience more pronounced reactions.
+    """,
+                toxicityInfo: """
+    **Why it's actually LOW risk (and why everyone thinks otherwise)**
+
+    Poinsettia belongs to the Euphorbiaceae family, whose members produce a milky latex sap \
+    containing diterpene esters. These compounds cause direct irritation to the mouth, \
+    gastrointestinal tract, and skin on contact — but they do not cause systemic toxicity \
+    at the quantities a pet would typically ingest.
+
+    The widespread belief that poinsettia is deadly likely traces back to a single unverified \
+    report from 1919. Modern veterinary toxicology, including data from the ASPCA Animal \
+    Poison Control Center involving thousands of exposures, consistently shows that \
+    poinsettia causes only mild, self-limiting signs in the vast majority of cases.
+
+    **What to expect after ingestion:**
+    Drooling, mild vomiting, and occasionally loose stool are the most common signs. \
+    Symptoms typically appear within a few hours and resolve on their own. Skin or eye \
+    contact with the latex sap can cause mild irritation or redness.
+
+    **When to be more concerned:**
+    Large ingestions — especially in small pets — may cause more persistent vomiting. \
+    Eye contact with latex sap warrants rinsing with clean water and a call to your \
+    veterinarian. Pets with known sensitivities to latex or Euphorbia species should \
+    be evaluated promptly.
+
+    **Always contact a veterinarian or animal poison control center** after any plant \
+    ingestion, even when the expected risk is low.
+    """,
+                onsetTime: OnsetTime(
+                    early: "Mouth and GI irritation typically within 1–2 hours of ingestion",
+                    delayed: nil
+                ),
+                symptoms: [
+                    "Drooling or hypersalivation",
+                    "Vomiting",
+                    "Diarrhea or loose stool",
+                    "Pawing at the mouth (oral irritation)",
+                    "Skin redness or irritation at contact site",
+                    "Eye redness or squinting if sap contacts eyes",
+                    "Decreased appetite"
+                ],
+                entrySeverity: .low,
+                speciesRisks: [
+                    SpeciesRisk(species: .dog, severity: .low,
+                        notes: "Mild GI irritation from latex sap. Drooling, vomiting, and loose stool are typical. Symptoms are self-limiting in most cases. Monitor and contact your veterinarian if symptoms persist or worsen."),
+                    SpeciesRisk(species: .cat, severity: .low,
+                        notes: "Cats may be more likely to chew on decorative plants. Expect the same mild GI irritation seen in dogs. Despite common belief, poinsettia is not a deadly plant for cats — but veterinary contact is still recommended after any ingestion."),
+                    SpeciesRisk(species: .smallMammal, severity: .low,
+                        notes: "Limited specific data in small mammals, but the irritant mechanism is consistent with a low-risk profile. Rabbits and guinea pigs that nibble on the plant may show mild GI upset. Contact your veterinarian if symptoms develop."),
+                    SpeciesRisk(species: .bird, severity: .low,
+                        notes: "Birds are unlikely to ingest large quantities, and the irritant compounds do not cause systemic toxicity. Mild GI irritation possible. Keep plants out of reach as a precaution."),
+                    SpeciesRisk(species: .reptile, severity: .low,
+                        notes: "Reptiles are unlikely to encounter or ingest poinsettia. Minimal data available. The latex sap would act as a local irritant if contacted. Veterinary consultation recommended if ingestion is suspected.")
+                ],
+                preventionTips: [
+                    "Place poinsettias on high shelves or in rooms your pets cannot access during the holiday season",
+                    "Be aware that even 'pet-safe' holiday plants can cause mild GI upset — 'low risk' does not mean 'no risk'",
+                    "Wear gloves when handling poinsettia to avoid latex sap skin irritation yourself",
+                    "If you have a cat that chews on plants, consider artificial poinsettia decorations as an alternative"
+                ],
+                sources: [
+                    "ASPCA Animal Poison Control Center",
+                    "Pet Poison Helpline",
+                    "Merck Veterinary Manual",
+                    "Veterinary Partner"
+                ],
+                relatedEntries: [
+                    "045fe2d3-3c59-4f15-b72a-09371b675d77"  // GI Irritant Plants — poinsettia previously listed there; shared mild irritant mechanism
+                ]
+            ),
+
             // MARK: - Chrysanthemums
             ToxicItem(
                 id: UUID(uuidString: "b1d3f5a7-2c4e-4a6b-8d0f-1e3c5a7b9d2f")!,
