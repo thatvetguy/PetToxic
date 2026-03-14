@@ -2,7 +2,10 @@ import SwiftUI
 
 struct SearchView: View {
     @StateObject private var viewModel = SearchViewModel()
+    @ObservedObject private var proSettings = ProSettings.shared
     @State private var navigationPath = NavigationPath()
+    @State private var showProUpsell = false
+    @State private var showUpgradeSheet = false
     @FocusState private var isSearchFocused: Bool
     var body: some View {
         NavigationStack(path: $navigationPath) {
@@ -80,6 +83,15 @@ struct SearchView: View {
             }
             .navigationDestination(for: ToxicItem.self) { item in
                 ArticleDetailView(item: item, saveSearchTerm: true, searchQuery: viewModel.searchText)
+            }
+            .alert("Pro Feature", isPresented: $showProUpsell) {
+                Button("Learn More") { showUpgradeSheet = true }
+                Button("Not Now", role: .cancel) { }
+            } message: {
+                Text("Diseases & Conditions is a Pro feature. Upgrade to access detailed information for all species.")
+            }
+            .sheet(isPresented: $showUpgradeSheet) {
+                UpgradeView()
             }
         }
     }
@@ -226,12 +238,23 @@ struct SearchView: View {
     private var searchResultsContent: some View {
         VStack(spacing: 0) {
             ForEach(viewModel.searchResults) { result in
-                NavigationLink(value: result.item) {
-                    SearchResultRow(result: result)
-                        .padding(.horizontal)
-                        .padding(.vertical, 12)
+                if result.item.categories.contains(.diseasesAndConditions) && !proSettings.isPro {
+                    Button {
+                        showProUpsell = true
+                    } label: {
+                        SearchResultRow(result: result)
+                            .padding(.horizontal)
+                            .padding(.vertical, 12)
+                    }
+                    .buttonStyle(.plain)
+                } else {
+                    NavigationLink(value: result.item) {
+                        SearchResultRow(result: result)
+                            .padding(.horizontal)
+                            .padding(.vertical, 12)
+                    }
+                    .buttonStyle(.plain)
                 }
-                .buttonStyle(.plain)
 
                 if result.id != viewModel.searchResults.last?.id {
                     Divider()

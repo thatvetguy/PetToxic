@@ -5,6 +5,7 @@ class BrowseViewModel: ObservableObject {
     @Published var itemsByCategory: [Category: [ToxicItem]] = [:]
 
     private let databaseService = DatabaseService.shared
+    private let diseaseService = DiseasesConditionsService.shared
     private(set) var allItems: [ToxicItem] = []
 
     init() {
@@ -12,9 +13,16 @@ class BrowseViewModel: ObservableObject {
     }
 
     private func loadItems() {
-        allItems = databaseService.allToxicItems()
+        let toxinItems = databaseService.allToxicItems()
+        let diseaseItems = diseaseService.entries
+        allItems = toxinItems + diseaseItems
+
         for category in Category.allCases {
-            itemsByCategory[category] = databaseService.items(for: category)
+            if category == .diseasesAndConditions {
+                itemsByCategory[category] = diseaseItems
+            } else {
+                itemsByCategory[category] = databaseService.items(for: category)
+            }
         }
     }
 

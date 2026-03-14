@@ -9,8 +9,11 @@ struct BrowseView: View {
 
     @StateObject private var viewModel = BrowseViewModel()
     @StateObject private var searchViewModel = SearchViewModel()
+    @ObservedObject private var proSettings = ProSettings.shared
     @FocusState private var isSearchFocused: Bool
     @Environment(BrowseNavigationContext.self) private var navContext
+    @State private var showProUpsell = false
+    @State private var showUpgradeSheet = false
 
     private let columns = [
         GridItem(.flexible(), spacing: 16),
@@ -48,14 +51,39 @@ struct BrowseView: View {
                             // Normal category grid
                             LazyVGrid(columns: columns, spacing: 16) {
                                 ForEach(Category.allCases) { category in
-                                    NavigationLink(value: category) {
-                                        CategoryGridItem(
-                                            category: category,
-                                            itemCount: viewModel.itemCount(for: category)
-                                        )
+                                    if category.isProLocked && !proSettings.isPro {
+                                        // Locked: show as button with upsell
+                                        Button {
+                                            showProUpsell = true
+                                        } label: {
+                                            CategoryGridItem(
+                                                category: category,
+                                                itemCount: viewModel.itemCount(for: category),
+                                                isLocked: true
+                                            )
+                                        }
+                                        .buttonStyle(.plain)
+                                        .disabled(isSwipeBlocking)
+                                    } else if category == .diseasesAndConditions {
+                                        // Pro user: navigate to disease list
+                                        NavigationLink(value: "diseasesConditionsList") {
+                                            CategoryGridItem(
+                                                category: category,
+                                                itemCount: viewModel.itemCount(for: category)
+                                            )
+                                        }
+                                        .buttonStyle(.plain)
+                                        .disabled(isSwipeBlocking)
+                                    } else {
+                                        NavigationLink(value: category) {
+                                            CategoryGridItem(
+                                                category: category,
+                                                itemCount: viewModel.itemCount(for: category)
+                                            )
+                                        }
+                                        .buttonStyle(.plain)
+                                        .disabled(isSwipeBlocking)
                                     }
-                                    .buttonStyle(.plain)
-                                    .disabled(isSwipeBlocking)
                                 }
                             }
                             .padding()
@@ -90,6 +118,20 @@ struct BrowseView: View {
             }
             .navigationDestination(for: SeverityEntry.self) { entry in
                 ArticleDetailView(item: entry.item, sourceSeverityGroup: entry.sourceSeverityGroup)
+            }
+            .navigationDestination(for: String.self) { value in
+                if value == "diseasesConditionsList" {
+                    DiseasesConditionsListView(navigationPath: $navigationPath)
+                }
+            }
+            .alert("Pro Feature", isPresented: $showProUpsell) {
+                Button("Learn More") { showUpgradeSheet = true }
+                Button("Not Now", role: .cancel) { }
+            } message: {
+                Text("Diseases & Conditions is a Pro feature. Upgrade to access detailed information for all species.")
+            }
+            .sheet(isPresented: $showUpgradeSheet) {
+                UpgradeView()
             }
             // NOTE: No onChange(of: navigationPath.count) observer here.
             // Context is managed explicitly: popToGrid()/popNavigation() in
@@ -150,12 +192,24 @@ struct BrowseView: View {
     private var browseSearchResults: some View {
         VStack(spacing: 0) {
             ForEach(searchViewModel.searchResults) { result in
-                NavigationLink(value: result.item) {
-                    SearchResultRow(result: result)
-                        .padding(.horizontal)
-                        .padding(.vertical, 12)
+                if result.item.categories.contains(.diseasesAndConditions) && !proSettings.isPro {
+                    // Non-Pro: show upsell instead of navigating
+                    Button {
+                        showProUpsell = true
+                    } label: {
+                        SearchResultRow(result: result)
+                            .padding(.horizontal)
+                            .padding(.vertical, 12)
+                    }
+                    .buttonStyle(.plain)
+                } else {
+                    NavigationLink(value: result.item) {
+                        SearchResultRow(result: result)
+                            .padding(.horizontal)
+                            .padding(.vertical, 12)
+                    }
+                    .buttonStyle(.plain)
                 }
-                .buttonStyle(.plain)
 
                 if result.id != searchViewModel.searchResults.last?.id {
                     Divider()

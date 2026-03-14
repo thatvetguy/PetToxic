@@ -121,6 +121,7 @@ struct UpgradeView: View {
                 featureRow(icon: "pawprint.fill", text: "My Pets")
                 featureRow(icon: "character.book.closed.fill", text: "Medical Glossary")
                 featureRow(icon: "cross.vial.fill", text: "Lab Work Guide")
+                featureRow(icon: "microbe", text: "Diseases & Conditions")
             }
 
             Button {
@@ -190,6 +191,7 @@ struct UpgradeView: View {
                 featureRow(icon: "pawprint.fill", text: "My Pets")
                 featureRow(icon: "character.book.closed.fill", text: "Medical Glossary")
                 featureRow(icon: "cross.vial.fill", text: "Lab Work Guide")
+                featureRow(icon: "microbe", text: "Diseases & Conditions")
             }
 
             buyButton(

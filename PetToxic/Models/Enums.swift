@@ -115,6 +115,7 @@ enum Category: String, Codable, CaseIterable, Identifiable {
     case householdItems
     case outdoorHazards
     case informational
+    case diseasesAndConditions
 
     var id: String { rawValue }
 
@@ -130,6 +131,7 @@ enum Category: String, Codable, CaseIterable, Identifiable {
         case .householdItems: return "Household Items"
         case .outdoorHazards: return "Outdoor Hazards"
         case .informational: return "Informational"
+        case .diseasesAndConditions: return "Diseases & Conditions"
         }
     }
 
@@ -145,7 +147,24 @@ enum Category: String, Codable, CaseIterable, Identifiable {
         case .householdItems: return "house.fill"
         case .outdoorHazards: return "figure.hiking"
         case .informational: return "info.circle.fill"
+        case .diseasesAndConditions: return "microbe"
         }
+    }
+
+    /// Whether this category requires Pro access
+    var isProLocked: Bool {
+        switch self {
+        case .diseasesAndConditions: return true
+        default: return false
+        }
+    }
+
+    /// Categories available for swipe navigation (excludes Pro-locked categories for non-Pro users)
+    static func navigableCategories(isPro: Bool) -> [Category] {
+        if isPro {
+            return Category.allCases.filter { $0 != .diseasesAndConditions }
+        }
+        return Category.allCases.filter { !$0.isProLocked }
     }
 }
 

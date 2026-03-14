@@ -84,30 +84,37 @@ class BrowseNavigationContext {
 
     // MARK: - Computed Properties: Category Navigation
 
+    /// Categories available for swipe navigation.
+    /// Infectious Diseases is always excluded from swipe navigation
+    /// (it uses a separate list view, not CategoryListView).
+    private var swipeCategories: [Category] {
+        Category.allCases.filter { $0 != .diseasesAndConditions }
+    }
+
     var canSwipeToPreviousCategory: Bool {
         guard let category = currentCategory else { return false }
-        let categories = Category.allCases
+        let categories = swipeCategories
         guard let index = categories.firstIndex(of: category) else { return false }
         return index > categories.startIndex
     }
 
     var canSwipeToNextCategory: Bool {
         guard let category = currentCategory else { return false }
-        let categories = Category.allCases
+        let categories = swipeCategories
         guard let index = categories.firstIndex(of: category) else { return false }
         return categories.index(after: index) < categories.endIndex
     }
 
     var previousCategory: Category? {
         guard let category = currentCategory else { return nil }
-        let categories = Category.allCases
+        let categories = swipeCategories
         guard let index = categories.firstIndex(of: category), index > categories.startIndex else { return nil }
         return categories[categories.index(before: index)]
     }
 
     var nextCategory: Category? {
         guard let category = currentCategory else { return nil }
-        let categories = Category.allCases
+        let categories = swipeCategories
         guard let index = categories.firstIndex(of: category) else { return nil }
         let next = categories.index(after: index)
         guard next < categories.endIndex else { return nil }
@@ -116,7 +123,7 @@ class BrowseNavigationContext {
 
     var currentCategoryIndex: Int? {
         guard let category = currentCategory else { return nil }
-        return Category.allCases.firstIndex(of: category).map { Category.allCases.distance(from: Category.allCases.startIndex, to: $0) }
+        return swipeCategories.firstIndex(of: category).map { swipeCategories.distance(from: swipeCategories.startIndex, to: $0) }
     }
 
     // MARK: - Computed Properties: Severity Group Navigation

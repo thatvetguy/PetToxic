@@ -42,6 +42,7 @@
 		BRWFLT001EEEE1111111111 /* BrowseFilterService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BRWFLT002EEEE2222222222 /* BrowseFilterService.swift */; };
 		C36B4977AA78A0B98A512B6A /* SeveritySection.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC88BF3EB74D97FF8EF70C32 /* SeveritySection.swift */; };
 		C3D4E5F67890123456789ABC /* AppearanceSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4E5F6789012345678901234 /* AppearanceSettings.swift */; };
+		C784A37D575D3506C1EBFB60 /* DiseasesConditionsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9D958F919DF57E9C5404D70 /* DiseasesConditionsListView.swift */; };
 		CA79B1FBAA2D70C587CD81B9 /* ArticleDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F222F1B00290D1DB61D22D2 /* ArticleDetailView.swift */; };
 		CASEFIELD001CCCC11111111 /* AddCaseNumberField.swift in Sources */ = {isa = PBXBuildFile; fileRef = CASEFIELD002CCCC22222222 /* AddCaseNumberField.swift */; };
 		CASEROW001BBBB1111111111 /* CaseNumberRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = CASEROW002BBBB2222222222 /* CaseNumberRow.swift */; };
@@ -67,6 +68,7 @@
 		F31D053BA08F486404401C7A /* DisclaimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA5A3886892E1B5E6CAF9D5F /* DisclaimerView.swift */; };
 		F9A72513ED135639C093EC77 /* StoreKitService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 862C7987CDE89D884F670AF0 /* StoreKitService.swift */; };
 		FA855506E3D8A1DB2CC6BA80 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4AF21A98F3346F34930A106 /* LoadingView.swift */; };
+		FBE1035AC2F6505A6ABC5668 /* DiseasesConditionsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E25EEABF67BEC92E27F9B0A /* DiseasesConditionsService.swift */; };
 		GLOSS001AAAA1111111111 /* GlossaryTerm.swift in Sources */ = {isa = PBXBuildFile; fileRef = GLOSS002AAAA2222222222 /* GlossaryTerm.swift */; };
 		GLOSS003AAAA3333333333 /* GlossaryService.swift in Sources */ = {isa = PBXBuildFile; fileRef = GLOSS004AAAA4444444444 /* GlossaryService.swift */; };
 		GLOSS005AAAA5555555555 /* GlossaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = GLOSS006AAAA6666666666 /* GlossaryView.swift */; };
@@ -122,6 +124,7 @@
 		1CC831E76E0F0F17894ADA65 /* PetToxicUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetToxicUITests.swift; sourceTree = "<group>"; };
 		1CCB51A6977A5572FDF23398 /* Font+Poppins.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "Font+Poppins.swift"; sourceTree = "<group>"; };
 		1E1A648E35297523A4222EE2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		1E25EEABF67BEC92E27F9B0A /* DiseasesConditionsService.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = DiseasesConditionsService.swift; sourceTree = "<group>"; };
 		207482A283C5391FDFEFAFC1 /* PoisonControlButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoisonControlButton.swift; sourceTree = "<group>"; };
 		237521FB4875580645396715 /* BookmarkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarkService.swift; sourceTree = "<group>"; };
 		24B2882F5F5387A02F14DC1B /* EmptyStateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyStateView.swift; sourceTree = "<group>"; };
@@ -163,6 +166,7 @@
 		CASEROW002BBBB2222222222 /* CaseNumberRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaseNumberRow.swift; sourceTree = "<group>"; };
 		D4E5F6789012345678901234 /* AppearanceSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppearanceSettings.swift; sourceTree = "<group>"; };
 		D6CE357649A1298A4A9761B2 /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
+		D9D958F919DF57E9C5404D70 /* DiseasesConditionsListView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = DiseasesConditionsListView.swift; sourceTree = "<group>"; };
 		DSCPOP002AAAA2222222222 /* DisclaimerPopupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisclaimerPopupView.swift; sourceTree = "<group>"; };
 		E5D4123DE87463A4CF858927 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		EA6BC59CB914FF0A323C3DCC /* ToxicItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToxicItem.swift; sourceTree = "<group>"; };
@@ -270,6 +274,7 @@
 			children = (
 				4D9C35BFC5F34211851F5060 /* BrowseView.swift */,
 				C2A1F327069C6F80D711B112 /* CategoryGridItem.swift */,
+				D9D958F919DF57E9C5404D70 /* DiseasesConditionsListView.swift */,
 			);
 			path = Browse;
 			sourceTree = "<group>";
@@ -440,6 +445,7 @@
 				GLOSS004AAAA4444444444 /* GlossaryService.swift */,
 				LABSVC002AAAA2222222222 /* LabWorkGuideService.swift */,
 				VACCPRESET02AAAA222222 /* VaccinePresets.swift */,
+				1E25EEABF67BEC92E27F9B0A /* DiseasesConditionsService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -593,8 +599,6 @@
 			);
 			mainGroup = EE5DA48B16C54F453B1773CE;
 			minimizedProjectReferenceProxies = 1;
-			packageReferences = (
-			);
 			productRefGroup = F95BFEAAE9F71A6F51F04D61 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -710,6 +714,8 @@
 				VACCPRESET01AAAA111111 /* VaccinePresets.swift in Sources */,
 				VACCLOGVW01AAAA1111111 /* VaccinationLogView.swift in Sources */,
 				VACCSUMCD01AAAA1111111 /* VaccinationSummaryCard.swift in Sources */,
+				FBE1035AC2F6505A6ABC5668 /* DiseasesConditionsService.swift in Sources */,
+				C784A37D575D3506C1EBFB60 /* DiseasesConditionsListView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

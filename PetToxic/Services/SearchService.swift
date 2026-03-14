@@ -2,6 +2,7 @@ import Foundation
 
 class SearchService {
     private let databaseService = DatabaseService.shared
+    private let diseaseService = DiseasesConditionsService.shared
 
     /// Maps severity search terms to their corresponding group levels.
     private static let severityTermMap: [String: SeverityGroupLevel] = [
@@ -20,8 +21,10 @@ class SearchService {
             return severitySearchResults(for: severityGroup, species: species)
         }
 
-        // Normal search
-        let items = databaseService.search(query: query, species: species)
+        // Normal search — combine toxin + disease results
+        let toxinItems = databaseService.search(query: query, species: species)
+        let diseaseItems = searchDiseaseEntries(query: query, species: species)
+        let items = toxinItems + diseaseItems
 
         return items.enumerated().map { index, item in
             let matchType = determineMatchType(query: query, item: item)
@@ -59,6 +62,24 @@ class SearchService {
                     matchType: .exact
                 )
             }
+    }
+
+    /// Search disease entries by name/alternate names, optionally filtered by species
+    private func searchDiseaseEntries(query: String, species: [Species]?) -> [ToxicItem] {
+        let lowercasedQuery = query.lowercased()
+
+        var results = diseaseService.entries.filter { item in
+            item.name.lowercased().contains(lowercasedQuery) ||
+            item.alternateNames.contains { $0.lowercased().contains(lowercasedQuery) }
+        }
+
+        if let species = species, !species.isEmpty {
+            results = results.filter { item in
+                item.speciesRisks.contains { species.contains($0.species) }
+            }
+        }
+
+        return results
     }
 
     private func determineMatchType(query: String, item: ToxicItem) -> MatchType {

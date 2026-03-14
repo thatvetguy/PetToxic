@@ -13,8 +13,19 @@ struct SearchResultRow: View {
 
             // Content
             VStack(alignment: .leading, spacing: 4) {
-                Text(result.item.name)
-                    .font(.headline)
+                HStack(spacing: 6) {
+                    Text(result.item.name)
+                        .font(.headline)
+
+                    if result.item.categories.contains(.diseasesAndConditions) {
+                        Text("PRO")
+                            .font(.system(size: 9, weight: .bold))
+                            .foregroundColor(.white)
+                            .padding(.horizontal, 5)
+                            .padding(.vertical, 2)
+                            .background(Capsule().fill(Color.yellow.opacity(0.85)))
+                    }
+                }
 
                 Text(result.item.categories.map(\.displayName).joined(separator: ", "))
                     .font(.subheadline)
