@@ -2697,7 +2697,9 @@ class DatabaseService {
                     "With legalization, highly concentrated products are more available — even small amounts of vape liquid or concentrates can cause severe toxicity"
                 ],
                 sources: ["ASPCA Animal Poison Control Center", "Pet Poison Helpline", "Veterinary Partner", "Reptiles Magazine - Toxic Plants List"],
-                relatedEntries: nil
+                relatedEntries: [
+                    "b1c2d3e4-5f6a-4b7c-8d9e-0f1a2b3c4d5e"   // Leonotis leonurus (Lion's Tail) — both informally associated as psychoactive plants
+                ]
             ),
 
             // MARK: - Bleeding Heart
@@ -16442,6 +16444,67 @@ Encounters peak in **spring and fall** when porcupines are more active with fora
                 relatedEntries: [
                     "b8c9d0e1-2f3a-4b5c-6d7e-8f9a0b1c2d3e",  // Liquid Potpourri & Scented Products — shared cationic surfactant mechanism
                     "00112233-4455-6677-8899-aabbccddef24"    // Inhalant Toxicity (Birds & Respiratory Hazards) — fragrance/inhalant risk for birds
+                ]
+            ),
+
+            // MARK: - Leonotis leonurus (Lion's Tail)
+            ToxicItem(
+                id: UUID(uuidString: "b1c2d3e4-5f6a-4b7c-8d9e-0f1a2b3c4d5e")!,
+                name: "Leonotis leonurus (Lion's Tail)",
+                alternateNames: ["leonotis", "lion's tail", "lions tail", "lion tail", "wild dagga", "dagga", "klip dagga", "Cape dagga", "Leonotis", "Leonotis leonurus", "Leonotis nepetifolia", "leonurine", "wild cannabis", "marijuana substitute", "cannabis substitute", "false cannabis", "South African cannabis", "lion's ear", "lions ear", "torch plant", "orange lion's tail", "orange lions tail", "leonotis plant", "leonotis shrub"],
+                categories: [.plants],
+                imageAsset: "leonotis_thumb",
+                description: """
+    *Leonotis leonurus*, commonly known as **lion's tail** or **wild dagga**, is a tall flowering shrub native to southern Africa. It produces striking **bright orange tubular flowers** arranged in whorls along tall upright stems and is widely grown as an ornamental plant in warm climates, particularly in California, Florida, and other frost-free regions of the United States. It is commonly found in gardens, public landscapes, and nurseries.
+
+    Lion's tail has a long history of traditional use in southern Africa, where it has been smoked and used in herbal preparations. It is sometimes referred to informally as a cannabis substitute due to mild psychoactive properties in humans — an angle that gives it cultural visibility but should not be interpreted as indicating safety for pets.
+
+    The entire plant — leaves, stems, and flowers — is considered potentially toxic to animals, though **companion animal toxicity data is limited and serious documented outcomes in pets are largely absent from the veterinary literature.** The risk to pets is considered theoretical based on known chemical constituents rather than well-documented clinical case series.
+    """,
+                toxicityInfo: """
+    Leonotis leonurus contains **leonurine** (a uterine-stimulating alkaloid), **diterpene compounds**, and various other bioactive constituents. In traditional human use, these compounds produce mild sedation and euphoria; in animals, the same compounds are expected to cause **CNS depression, GI upset, and potentially mild cardiovascular effects** at significant ingestion amounts.
+
+    **It is important to note that serious toxicity from Leonotis ingestion in companion animals (dogs, cats, and exotic pets) is poorly documented.** The risk profile is largely extrapolated from the plant's known chemical composition and its documented effects in other contexts, rather than from a large body of companion animal case reports. Most pet exposures are likely to result in mild, self-limiting signs if any.
+
+    Theoretical effects based on the plant's constituents include:
+    - **GI upset** — vomiting, diarrhea, drooling — the most likely signs after typical garden-level ingestion
+    - **CNS effects** — mild sedation, lethargy, incoordination — possible with more significant ingestion
+    - **Cardiovascular effects** — changes in heart rate — theoretically possible with large ingestions; not well-documented in pets
+
+    The uterotonic (uterus-stimulating) properties of leonurine are a concern for **pregnant animals** and warrant extra caution even at lower ingestion amounts.
+
+    Contact a veterinarian or animal poison control center if your pet has ingested any part of this plant.
+    """,
+                symptoms: [
+                    "Vomiting",
+                    "Diarrhea",
+                    "Drooling (hypersalivation)",
+                    "Lethargy or sedation",
+                    "Incoordination (ataxia)",
+                    "Dilated pupils",
+                    "Changes in heart rate (rare, larger ingestions)"
+                ],
+                entrySeverity: .moderate,
+                speciesRisks: [
+                    SpeciesRisk(species: .dog, severity: .low, notes: "Significant ingestion of Leonotis leonurus in dogs is poorly documented in the veterinary literature — the risk is considered theoretical based on the plant's known chemical constituents (leonurine, diterpenes). Dogs that consume garden-level amounts are most likely to show mild, self-limiting GI upset if any signs develop at all. Seek veterinary care if signs are persistent or if a large amount was consumed."),
+                    SpeciesRisk(species: .cat, severity: .low, notes: "As with dogs, significant companion animal toxicity from Leonotis in cats is poorly documented and the risk is largely theoretical. Cats are less likely to seek out and consume this plant than dogs. GI upset would be the expected outcome of minor ingestion. Seek veterinary care if signs develop or if ingestion of a significant amount is suspected."),
+                    SpeciesRisk(species: .smallMammal, severity: .moderate, notes: "Companion animal toxicity data for small mammals is absent from the literature, and the risk is theoretical. However, rabbits and guinea pigs cannot vomit, meaning ingested plant material and its active compounds remain in the GI tract longer than in dogs or cats. Small body size also increases the relative dose from a given amount of plant material. The uterotonic properties of leonurine are an additional concern in pregnant small mammals. Seek veterinary care for any suspected ingestion."),
+                    SpeciesRisk(species: .bird, severity: .moderate, notes: "No companion animal case data exists for birds and Leonotis. The risk is theoretical. Birds' small body size and fast metabolism mean that plant alkaloids and diterpenes could have more pronounced effects than in larger mammals. The plant's mild psychoactive and sedating properties in humans suggest CNS effects are possible. Seek veterinary care for any suspected ingestion."),
+                    SpeciesRisk(species: .reptile, severity: .low, notes: "Reptiles are unlikely to seek out or consume Leonotis leonurus. No clinical data exists for reptile exposures. Risk is theoretical and considered low based on exposure probability. Contact a reptile-experienced veterinarian if ingestion is suspected.")
+                ],
+                preventionTips: [
+                    "Be aware of Leonotis leonurus in your garden or surrounding landscape — it is a common ornamental shrub in warm climates",
+                    "Supervise pets in gardens where the plant is present, particularly curious dogs that may chew on shrubs",
+                    "Pregnant animals should be kept away from the plant given the uterotonic properties of leonurine"
+                ],
+                sources: [
+                    "ASPCA Animal Poison Control Center",
+                    "Pet Poison Helpline",
+                    "Merck Veterinary Manual — Toxic Plants Overview",
+                    "University of California Agriculture & Natural Resources — Safe and Poisonous Garden Plants"
+                ],
+                relatedEntries: [
+                    "e293e8ba-eefc-4fe0-bf93-9e8842873a35"  // Cannabis / Marijuana — both informally associated as psychoactive plants
                 ]
             )
         ]
