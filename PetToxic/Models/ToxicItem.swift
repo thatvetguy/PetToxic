@@ -17,6 +17,7 @@ struct ToxicItem: Identifiable, Codable, Hashable {
     let imageAsset: String?
     let description: String
     let toxicityInfo: String
+    var toxicityInfoSectionTitle: String?
     let onsetTime: OnsetTime?
     let symptoms: [String]
     let entrySeverity: Severity?    // Overall entry severity (nil for Informational)

@@ -73,7 +73,7 @@ struct ArticleDetailView: View {
                     }
 
                     // Toxicity info
-                    section(title: "Why is it toxic?") {
+                    section(title: item.toxicityInfoSectionTitle ?? "Why is it toxic?") {
                         GlossaryStyledText(content: item.toxicityInfo, searchTerm: searchQuery)
                             .font(.body)
                             .lineSpacing(4)

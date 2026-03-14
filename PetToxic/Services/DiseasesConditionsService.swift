@@ -29,6 +29,7 @@ class DiseasesConditionsService {
                 imageAsset: nil,
                 description: "Rabies is a fatal viral disease that affects the central nervous system of all mammals. It is transmitted through the saliva of infected animals, most commonly via bites. Rabies is almost always fatal once clinical signs appear.",
                 toxicityInfo: "Rabies virus (Lyssavirus) travels from the bite wound along peripheral nerves to the brain. The incubation period varies widely — typically 2 weeks to several months. Once the virus reaches the brain, it causes progressive encephalitis. There is no treatment once symptoms develop. Vaccination is the only effective prevention.",
+                toxicityInfoSectionTitle: "What makes it harmful?",
                 onsetTime: OnsetTime(
                     early: "Incubation period is typically 2-8 weeks but can range from days to months depending on bite location and viral load.",
                     delayed: "Progressive neurological signs develop over 3-7 days once symptoms appear: behavioral changes, paralysis, and death."
@@ -72,6 +73,7 @@ class DiseasesConditionsService {
                 imageAsset: nil,
                 description: "Canine parvovirus is a highly contagious viral disease that attacks rapidly dividing cells, particularly in the intestinal lining, bone marrow, and lymph nodes. It is one of the most serious diseases affecting unvaccinated puppies and dogs.",
                 toxicityInfo: "Parvovirus is extremely resilient in the environment, surviving on surfaces for months to years. It spreads through direct contact with infected dogs or contaminated feces, environments, or objects. The virus destroys the intestinal lining, causing severe bloody diarrhea, vomiting, and dehydration. It also suppresses the immune system by attacking bone marrow, making secondary infections common and often fatal.",
+                toxicityInfoSectionTitle: "What makes it harmful?",
                 onsetTime: OnsetTime(
                     early: "Incubation period is 3-7 days. Initial signs include lethargy, loss of appetite, and fever.",
                     delayed: "Severe vomiting and bloody diarrhea develop within 24-48 hours of initial signs. Without treatment, death can occur within 48-72 hours."
@@ -113,6 +115,7 @@ class DiseasesConditionsService {
                 imageAsset: nil,
                 description: "Feline panleukopenia is a highly contagious and often fatal viral disease in cats caused by feline parvovirus (FPV). It attacks rapidly dividing cells in the bone marrow, intestines, and developing fetuses. It is one of the core vaccines for all cats.",
                 toxicityInfo: "FPV is extremely hardy in the environment, surviving for over a year on contaminated surfaces. The virus causes severe depletion of white blood cells (panleukopenia), destroying the immune system's ability to fight infection. It also damages the intestinal lining, causing severe diarrhea and dehydration. In pregnant cats, it can cause cerebellar hypoplasia in kittens.",
+                toxicityInfoSectionTitle: "What makes it harmful?",
                 onsetTime: OnsetTime(
                     early: "Incubation period is 2-7 days. Early signs include fever (up to 105°F), depression, and loss of appetite.",
                     delayed: "Severe vomiting and diarrhea develop 1-2 days after initial signs. Kittens can deteriorate rapidly and die within 12 hours."
@@ -154,6 +157,7 @@ class DiseasesConditionsService {
                 imageAsset: nil,
                 description: "Psittacosis is a bacterial disease caused by Chlamydia psittaci that primarily affects birds but can also be transmitted to humans (zoonotic). It is most common in parrots, parakeets, cockatiels, and macaws but can affect any bird species.",
                 toxicityInfo: "Chlamydia psittaci is spread through inhaling dried droppings, feather dust, or respiratory secretions from infected birds. Infected birds may carry the bacteria without showing symptoms, shedding it intermittently especially during stress. The bacteria attacks the respiratory system, liver, and spleen. This is a reportable disease in many jurisdictions due to its zoonotic potential.",
+                toxicityInfoSectionTitle: "What makes it harmful?",
                 onsetTime: OnsetTime(
                     early: "Incubation period varies from days to weeks. Stress (new environment, breeding, overcrowding) often triggers clinical disease in carrier birds.",
                     delayed: "Chronic carriers may show intermittent signs over months. Without treatment, the disease can progress to severe systemic illness."
@@ -196,6 +200,7 @@ class DiseasesConditionsService {
                 imageAsset: nil,
                 description: "Metabolic Bone Disease is a common and serious condition in captive reptiles caused by inadequate calcium, improper calcium-to-phosphorus ratios, or insufficient UVB lighting. While not infectious, it is one of the most prevalent health conditions in pet reptiles and is entirely preventable with proper husbandry.",
                 toxicityInfo: "MBD occurs when reptiles cannot properly metabolize calcium due to dietary deficiency, improper calcium:phosphorus ratio (should be 2:1), or lack of UVB light needed to produce vitamin D3. Without adequate calcium, the body draws it from bones, causing progressive skeletal weakening. Early stages are reversible with proper husbandry corrections, but advanced cases cause permanent deformity.",
+                toxicityInfoSectionTitle: "What makes it harmful?",
                 onsetTime: OnsetTime(
                     early: "Early signs may appear within weeks to months of improper husbandry: lethargy, decreased appetite, and muscle twitching.",
                     delayed: "Without correction, progressive bone softening, deformities, pathological fractures, and organ damage develop over months."
@@ -239,6 +244,7 @@ class DiseasesConditionsService {
                 imageAsset: nil,
                 description: "Leptospirosis is a bacterial disease caused by Leptospira species that can affect dogs and other mammals, including humans. It is spread through contact with infected urine or contaminated water, soil, or food. It is a significant zoonotic disease.",
                 toxicityInfo: "Leptospira bacteria enter through mucous membranes or broken skin, then spread through the bloodstream to the kidneys and liver. The bacteria cause damage to these organs through direct invasion and inflammatory responses. Severity ranges from subclinical infection to fatal organ failure. Risk increases with exposure to standing water, wildlife, and livestock.",
+                toxicityInfoSectionTitle: "What makes it harmful?",
                 onsetTime: OnsetTime(
                     early: "Incubation period is 2-12 days. Early signs include fever, lethargy, loss of appetite, and muscle stiffness.",
                     delayed: "Kidney and/or liver failure may develop 1-2 weeks after infection. Some dogs develop chronic kidney disease after recovery."
@@ -280,6 +286,7 @@ class DiseasesConditionsService {
                 imageAsset: nil,
                 description: "Myxomatosis is a severe and usually fatal viral disease of rabbits caused by the Myxoma virus. It is spread by biting insects (mosquitoes, fleas) and direct contact with infected rabbits. It is endemic in wild rabbit populations in many regions.",
                 toxicityInfo: "The Myxoma virus causes severe swelling of the mucous membranes, skin, and internal organs. It suppresses the immune system, leading to secondary bacterial infections that often cause death. Mortality in domestic rabbits is extremely high (over 99% in naive populations). The virus is primarily transmitted by fleas, mosquitoes, and other biting insects, though direct contact and fomites can also spread it.",
+                toxicityInfoSectionTitle: "What makes it harmful?",
                 onsetTime: OnsetTime(
                     early: "Incubation period is 1-14 days (typically 5-6 days). Early signs include puffy, swollen eyelids, lethargy, fever, and loss of appetite.",
                     delayed: "Severe swelling of head, ears, and genitals develops over days. Secondary infections lead to pneumonia. Most rabbits die within 10-14 days of symptom onset."
@@ -321,6 +328,7 @@ class DiseasesConditionsService {
                 imageAsset: nil,
                 description: "Kennel cough is a highly contagious respiratory disease complex caused by multiple bacteria and viruses, most commonly Bordetella bronchiseptica and canine parainfluenza virus. It is spread through airborne droplets, direct contact, or contaminated surfaces, and commonly occurs where dogs are in close quarters.",
                 toxicityInfo: "Kennel cough involves inflammation of the upper airways (trachea and bronchi). Multiple pathogens can be involved simultaneously. While usually self-limiting in healthy adult dogs, it can progress to pneumonia in puppies, elderly dogs, or immunocompromised animals. The characteristic 'honking' cough is caused by tracheal inflammation.",
+                toxicityInfoSectionTitle: "What makes it harmful?",
                 onsetTime: OnsetTime(
                     early: "Incubation period is 2-14 days. A persistent dry, honking cough develops first, often triggered by excitement or pulling on a leash.",
                     delayed: "Most cases resolve within 1-3 weeks. Complicated cases (pneumonia) may develop 1-2 weeks after initial signs, especially in young or immunocompromised dogs."
