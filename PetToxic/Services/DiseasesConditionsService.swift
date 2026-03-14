@@ -178,40 +178,117 @@ class DiseasesConditionsService {
             ToxicItem(
                 id: UUID(uuidString: "1D000001-0000-0000-0000-000000000003")!,
                 name: "Feline Panleukopenia (Feline Distemper)",
-                alternateNames: ["feline distemper", "feline parvo", "FPV", "panleukopenia", "cat distemper"],
+                alternateNames: [
+                    "feline distemper",
+                    "panleukopenia",
+                    "feline parvo",
+                    "FPV",
+                    "feline parvovirus",
+                    "feline infectious enteritis",
+                    "cat distemper",
+                    "panleukopenia virus",
+                    "FPL"
+                ],
                 categories: [.diseasesAndConditions],
-                imageAsset: nil,
-                description: "Feline panleukopenia is a highly contagious and often fatal viral disease in cats caused by feline parvovirus (FPV). It attacks rapidly dividing cells in the bone marrow, intestines, and developing fetuses. It is one of the core vaccines for all cats.",
-                toxicityInfo: "FPV is extremely hardy in the environment, surviving for over a year on contaminated surfaces. The virus causes severe depletion of white blood cells (panleukopenia), destroying the immune system's ability to fight infection. It also damages the intestinal lining, causing severe diarrhea and dehydration. In pregnant cats, it can cause cerebellar hypoplasia in kittens.",
+                imageAsset: "panleukopenia_thumb",
+                description: """
+                Feline panleukopenia — sometimes called feline distemper, though it is \
+                unrelated to canine distemper — is a highly contagious and life-threatening \
+                viral disease caused by feline parvovirus. It is one of the most serious \
+                infectious diseases affecting cats, and despite its alternate name, it belongs \
+                to the same parvovirus family as canine parvovirus. Like its canine counterpart, \
+                it is an acute illness that can progress to death within days.
+
+                The name "panleukopenia" describes one of the disease's hallmarks: a severe \
+                drop in all white blood cells (pan = all, leuko = white blood cells, \
+                penia = deficiency), which devastates the immune system. The disease is \
+                vaccine-preventable, and vaccination is among the most important steps a cat \
+                owner can take. Unvaccinated kittens under 6 months are most vulnerable, \
+                though unvaccinated cats of any age are at risk. Ferrets are also susceptible.
+
+                Feline panleukopenia carries a more guarded outlook than canine parvovirus — \
+                even with prompt, aggressive veterinary care, many cats do not survive. This \
+                makes immediate veterinary evaluation critical; every hour matters.
+                """,
+                toxicityInfo: """
+                **How It Harms the Body**
+                Feline parvovirus attacks rapidly dividing cells throughout the body. In the \
+                intestinal tract, it destroys the cells lining the gut, causing severe vomiting, \
+                hemorrhagic (bloody) diarrhea, and life-threatening dehydration. Simultaneously, \
+                the virus devastates the bone marrow — the body's blood cell factory — causing \
+                a catastrophic drop in white blood cells (panleukopenia). With virtually no \
+                immune defenses remaining, the body becomes unable to fight off bacterial \
+                infections, and sepsis (a life-threatening whole-body infection) rapidly follows.
+
+                In pregnant cats, the virus can cross the placenta and infect developing kittens. \
+                Kittens infected in the womb or shortly after birth may develop cerebellar \
+                hypoplasia — a condition where the cerebellum (the part of the brain responsible \
+                for balance and coordination) does not develop properly. Affected kittens often \
+                survive but are left with permanent neurological signs including tremors and an \
+                unsteady gait.
+
+                **Transmission & Spread**
+                Feline panleukopenia spreads through direct contact with an infected cat, or \
+                through contact with contaminated feces, urine, bedding, food bowls, or other \
+                objects. The virus is highly resilient and can survive in the environment for \
+                up to a year. Humans can unknowingly carry the virus on hands, clothing, or \
+                shoes and introduce it to unexposed cats. High-risk environments include \
+                shelters, catteries, multi-cat households, and any setting with unvaccinated \
+                cats. Recovered cats can shed the virus for several weeks after recovery.
+
+                **Treatment Goals**
+                There is no cure for feline panleukopenia — treatment is intensive supportive \
+                care aimed at keeping the cat alive while their immune system recovers. \
+                Veterinary treatment focuses on restoring and maintaining hydration, controlling \
+                vomiting and nausea, and aggressively preventing or treating secondary bacterial \
+                infections (sepsis). Even with prompt, aggressive treatment, outcomes are often \
+                poor. Do not delay seeking veterinary care — early intervention gives the best \
+                possible chance of survival.
+                """,
                 toxicityInfoSectionTitle: "What makes it harmful?",
                 onsetTime: OnsetTime(
-                    early: "Incubation period is 2-7 days. Early signs include fever (up to 105°F), depression, and loss of appetite.",
-                    delayed: "Severe vomiting and diarrhea develop 1-2 days after initial signs. Kittens can deteriorate rapidly and die within 12 hours."
+                    early: "Incubation period is 2–10 days. Initial signs include sudden lethargy, loss of appetite, and fever — gastrointestinal signs typically follow within 24 hours.",
+                    delayed: "Vomiting and severe, often bloody diarrhea develop rapidly. Affected cats can deteriorate and die within 24–48 hours of symptom onset. Immediate veterinary care is critical."
                 ),
                 symptoms: [
-                    "Severe vomiting",
-                    "Watery or bloody diarrhea",
-                    "High fever followed by subnormal temperature",
-                    "Severe dehydration",
+                    "Sudden, severe lethargy",
                     "Complete loss of appetite",
-                    "Depression and lethargy",
-                    "Tucked abdomen from pain"
+                    "High fever (or low body temperature in severe cases)",
+                    "Persistent vomiting",
+                    "Severe diarrhea, often bloody",
+                    "Rapid and severe dehydration",
+                    "Hanging head over water bowl without drinking (a classic sign)",
+                    "Abdominal pain",
+                    "Neurological signs in kittens born to infected mothers (unsteady gait, tremors)",
+                    "Collapse (severe cases)"
                 ],
                 entrySeverity: .severe,
                 speciesRisks: [
-                    SpeciesRisk(species: .cat, severity: .severe, notes: "Kittens 3-5 months old are most severely affected, with mortality rates up to 90% in unvaccinated kittens. Adult cats may have milder disease. Vaccination is highly effective and considered a core vaccine for all cats.")
+                    SpeciesRisk(
+                        species: .cat,
+                        severity: .severe,
+                        notes: "Unvaccinated kittens under 6 months are most vulnerable, but unvaccinated cats of any age are at serious risk. Even with aggressive veterinary treatment, many cats do not survive. Immediate veterinary care is essential."
+                    ),
+                    SpeciesRisk(
+                        species: .smallMammal,
+                        severity: .severe,
+                        notes: "Ferrets are susceptible to feline parvovirus and can develop a similar life-threatening illness. Other small mammals are not considered at significant risk."
+                    )
                 ],
                 preventionTips: [
-                    "Vaccinate all cats — FVRCP is a core vaccine that protects against panleukopenia",
-                    "Keep unvaccinated kittens indoors and away from other cats until fully vaccinated",
-                    "Disinfect with diluted bleach (1:32) — the virus is resistant to most common disinfectants",
-                    "Quarantine new cats for at least 2 weeks before introducing to resident cats",
-                    "Recovered cats can shed virus for up to 6 weeks"
+                    "Vaccination is the most effective protection — follow your veterinarian's recommended schedule; kittens require a series of vaccines beginning at 6–8 weeks of age",
+                    "Keep unvaccinated kittens strictly indoors and away from unknown cats or environments where cats have been",
+                    "The virus survives in the environment for up to a year — disinfect with diluted bleach (1 part bleach to 32 parts water), one of the few agents effective against parvovirus",
+                    "Isolate any cat showing signs of illness immediately — the virus spreads easily to other cats in the household",
+                    "Recovered cats may shed the virus for several weeks — maintain hygiene precautions during this period",
+                    "Wash hands and change clothing after handling unknown cats before contact with your own unvaccinated pets",
+                    "Ferrets are susceptible — consult your veterinarian regarding appropriate vaccination protocols for ferrets"
                 ],
                 sources: [
-                    "Cornell Feline Health Center - Feline Panleukopenia",
-                    "AVMA - Feline Panleukopenia",
-                    "Merck Veterinary Manual - Feline Panleukopenia"
+                    "Veterinary Partner — Feline Panleukopenia",
+                    "Merck Veterinary Manual — Feline Panleukopenia",
+                    "Cornell University College of Veterinary Medicine — Feline Panleukopenia",
+                    "AAFP Feline Vaccination Advisory Panel Guidelines"
                 ],
                 relatedEntries: [
                     "1D000001-0000-0000-0000-000000000002"  // Canine Parvovirus — related parvovirus family
