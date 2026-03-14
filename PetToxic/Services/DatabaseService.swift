@@ -16288,6 +16288,7 @@ Encounters peak in **spring and fall** when porcupines are more active with fora
 
     **Vomiting after eating grass is common and usually self-limiting.** Occasional vomiting after grass ingestion is not an emergency on its own. However, repeated vomiting, lethargy, loss of appetite, or a distended abdomen after grass ingestion warrants immediate veterinary evaluation.
     """,
+                onsetTime: nil,
                 symptoms: [
                     "Vomiting (common, often self-limiting)",
                     "Repeated or unproductive retching",
@@ -16350,6 +16351,7 @@ Encounters peak in **spring and fall** when porcupines are more active with fora
 
     Contact a veterinarian or animal poison control center if your pet has ingested any part of this plant.
     """,
+                onsetTime: nil,
                 symptoms: [
                     "Vomiting",
                     "Diarrhea",
@@ -16408,6 +16410,7 @@ Encounters peak in **spring and fall** when porcupines are more active with fora
 
     Contact a veterinarian or animal poison control center if your pet has ingested, groomed, or been significantly exposed to dryer sheets or fabric softener products.
     """,
+                onsetTime: nil,
                 symptoms: [
                     "Drooling (hypersalivation)",
                     "Pawing at the mouth",
@@ -16475,6 +16478,7 @@ Encounters peak in **spring and fall** when porcupines are more active with fora
 
     Contact a veterinarian or animal poison control center if your pet has ingested any part of this plant.
     """,
+                onsetTime: nil,
                 symptoms: [
                     "Vomiting",
                     "Diarrhea",
