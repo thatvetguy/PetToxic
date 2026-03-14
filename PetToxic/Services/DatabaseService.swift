@@ -6398,7 +6398,7 @@ There is no specific antidote for acrylamide toxicity. Because signs can progres
                     "Keep reed diffusers out of reach—cats may knock them over and walk through the spilled oil"
                 ],
                 sources: ["ASPCA Animal Poison Control Center", "Pet Poison Helpline", "Merck Veterinary Manual"],
-                relatedEntries: ["11223344-5566-7788-99aa-bbccddeeff00", "88990011-aabb-ccdd-eeff-223344556677", "00112233-4455-6677-8899-aabbccddef24", "b2e4c6a8-1d3f-5b7a-9e0c-4f6d8a2b7c5e"]
+                relatedEntries: ["11223344-5566-7788-99aa-bbccddeeff00", "88990011-aabb-ccdd-eeff-223344556677", "00112233-4455-6677-8899-aabbccddef24", "b2e4c6a8-1d3f-5b7a-9e0c-4f6d8a2b7c5e", "c2d3e4f5-6a7b-4c8d-9e0f-1a2b3c4d5e6f"]  // + Dryer Sheets & Fabric Softener
             ),
 
             // MARK: - Ice Packs
@@ -14238,7 +14238,8 @@ Many bird owners don't realize the kitchen poses multiple simultaneous risks. A 
                     "eeff2233-4455-6677-8899-aabbccddeeff",
                     "b8c9d0e1-2f3a-4b5c-6d7e-8f9a0b1c2d3e",
                     "a7f3b2c1-8d4e-4f6a-b9e1-3c5d7a2f8b64",  // Eucalyptus — volatile compound inhalation risk
-                    "b2e4c6a8-1d3f-5b7a-9e0c-4f6d8a2b7c5e"  // Why Cats Are More Sensitive — cat liver metabolism + aerosolized oils
+                    "b2e4c6a8-1d3f-5b7a-9e0c-4f6d8a2b7c5e",  // Why Cats Are More Sensitive — cat liver metabolism + aerosolized oils
+                    "c2d3e4f5-6a7b-4c8d-9e0f-1a2b3c4d5e6f"   // Dryer Sheets & Fabric Softener — fragrance/inhalant risk for birds
                 ]
             ),
 
@@ -16377,6 +16378,70 @@ Encounters peak in **spring and fall** when porcupines are more active with fora
                 ],
                 relatedEntries: [
                     "045fe2d3-3c59-4f15-b72a-09371b675d77"  // GI Irritant Plants — same saponin/GI irritant mechanism
+                ]
+            ),
+
+            // MARK: - Dryer Sheets & Fabric Softener
+            ToxicItem(
+                id: UUID(uuidString: "c2d3e4f5-6a7b-4c8d-9e0f-1a2b3c4d5e6f")!,
+                name: "Dryer Sheets & Fabric Softener",
+                alternateNames: ["dryer sheet", "dryer sheets", "fabric softener sheet", "fabric softener sheets", "dryer sheet toxicity", "fabric softener", "liquid fabric softener", "fabric softener liquid", "Bounce dryer sheets", "Downy dryer sheets", "Snuggle dryer sheets", "Gain dryer sheets", "Tide dryer sheets", "dryer sheet ingestion", "dog ate dryer sheet", "cat licked dryer sheet", "cationic surfactant", "scented dryer sheet", "used dryer sheet", "fresh dryer sheet", "dryer sheet in laundry basket", "softener sheet"],
+                categories: [.cleaningProducts, .householdItems],
+                imageAsset: "dryer_sheets_thumb",
+                description: """
+    Dryer sheets and liquid fabric softeners are common laundry products found in virtually every household. They work by coating fabrics with **cationic surfactants** — positively charged chemical compounds that reduce static and soften fibers. Most products also contain fragrance compounds and other chemical additives.
+
+    Pets encounter dryer sheets in several ways: dogs commonly raid laundry baskets and chew on or ingest sheets; cats may groom fragrance or softener residue off freshly dried laundry or off their own fur if they curl up on warm clothes; and fresh or warm sheets from the dryer can release chemical vapors that affect birds.
+
+    Both **used and unused dryer sheets are considered toxic** — while used sheets contain lower concentrations of active compounds, the cationic surfactant residue remains and can still cause significant irritation. Unused sheets contain full-strength product.
+    """,
+                toxicityInfo: """
+    The primary toxic components of dryer sheets and fabric softeners are **cationic surfactants** (such as quaternary ammonium compounds). Unlike mild household soaps, cationic surfactants are more irritating to mucous membranes and can cause tissue damage at higher concentrations.
+
+    **Ingestion** causes oral irritation, ulceration of the mouth and throat, hypersalivation, vomiting, and GI upset. In more significant exposures, esophageal irritation and systemic effects are possible. Dogs that chew and swallow dryer sheets — particularly whole unused sheets — are at risk for GI obstruction as well as chemical irritation.
+
+    **Dermal exposure** is a particular concern for cats. Cats that groom residue off their fur after contact with fabric-softened laundry receive repeated low-level oral exposure, which can cause oral ulceration and GI upset that may not be immediately obvious to the owner.
+
+    **Inhalant exposure** is the primary concern for birds. The fragrance compounds and chemical vapors released by warm dryer sheets are hazardous to birds' sensitive respiratory systems. Birds should never be in rooms where dryer sheets are in active use, and bird owners should consider fragrance-free alternatives entirely.
+
+    Contact a veterinarian or animal poison control center if your pet has ingested, groomed, or been significantly exposed to dryer sheets or fabric softener products.
+    """,
+                symptoms: [
+                    "Drooling (hypersalivation)",
+                    "Pawing at the mouth",
+                    "Vomiting",
+                    "Foamy saliva",
+                    "Lethargy",
+                    "Loss of appetite",
+                    "Oral redness or ulceration (may require veterinary exam to detect)",
+                    "Difficulty swallowing",
+                    "Respiratory distress (birds — seek emergency care immediately)",
+                    "Wheezing or labored breathing (birds)"
+                ],
+                entrySeverity: .moderate,
+                speciesRisks: [
+                    SpeciesRisk(species: .dog, severity: .moderate, notes: "Primary exposure is chewing or ingesting sheets from laundry baskets — both used and unused sheets are a concern. Ingestion causes oral and GI irritation from cationic surfactants. A whole ingested sheet also poses a physical obstruction risk. Seek veterinary care for any significant ingestion."),
+                    SpeciesRisk(species: .cat, severity: .moderate, notes: "Cats are commonly exposed by grooming residue off their fur after sleeping on or contacting freshly laundered fabrics. This repeated low-level oral exposure can cause oral ulceration and GI upset. Signs may develop gradually and be subtle initially. Cats may also directly chew on sheets. Seek veterinary care if oral irritation, drooling, or GI signs develop."),
+                    SpeciesRisk(species: .smallMammal, severity: .moderate, notes: "Small mammals may contact and groom residue from fabric-softened bedding or nesting materials. Rabbits and guinea pigs cannot vomit, meaning ingested irritants remain in the GI tract longer. Monitor for drooling, lethargy, loss of appetite, or reduced fecal output. Seek veterinary care promptly for any suspected exposure."),
+                    SpeciesRisk(species: .bird, severity: .high, notes: "Birds are highly sensitive to the fragrance compounds and chemical vapors released by dryer sheets, particularly warm or freshly used sheets. Respiratory signs can develop rapidly and escalate quickly given birds' efficient air sac respiratory system. Birds should never be kept in the same room where dryer sheets are used. Consider switching to fragrance-free, bird-safe laundry products. Seek emergency veterinary care immediately for any bird showing respiratory distress after chemical exposure."),
+                    SpeciesRisk(species: .reptile, severity: .low, notes: "Reptiles are unlikely to contact or ingest dryer sheets under normal circumstances. Fragrance compounds in enclosed reptile enclosures could cause respiratory irritation. Ensure reptile enclosures are kept in well-ventilated areas away from laundry rooms. Limited clinical data available; contact a reptile-experienced veterinarian if exposure is suspected.")
+                ],
+                preventionTips: [
+                    "Store dryer sheets in a closed cabinet or container — do not leave them in open laundry baskets accessible to pets",
+                    "Dispose of used dryer sheets promptly in a lidded trash can",
+                    "Bird owners should strongly consider switching to fragrance-free, dye-free laundry products and avoid using dryer sheets entirely",
+                    "Do not allow cats to sleep on laundry immediately out of the dryer if fabric softener sheets were used",
+                    "Consider unscented dryer balls (wool or rubber) as a pet-safer alternative to dryer sheets"
+                ],
+                sources: [
+                    "ASPCA Animal Poison Control Center",
+                    "Pet Poison Helpline",
+                    "Merck Veterinary Manual — Cationic Detergent Toxicosis",
+                    "VCA Animal Hospitals — Fabric Softener and Dryer Sheet Poisoning in Dogs and Cats"
+                ],
+                relatedEntries: [
+                    "b8c9d0e1-2f3a-4b5c-6d7e-8f9a0b1c2d3e",  // Liquid Potpourri & Scented Products — shared cationic surfactant mechanism
+                    "00112233-4455-6677-8899-aabbccddef24"    // Inhalant Toxicity (Birds & Respiratory Hazards) — fragrance/inhalant risk for birds
                 ]
             )
         ]
