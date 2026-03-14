@@ -176,36 +176,52 @@ struct DiseasesConditionsListView: View {
 
     // MARK: - Disease Grid Card
 
+    @ViewBuilder
     private func diseaseGridCard(item: ToxicItem) -> some View {
-        VStack(spacing: 8) {
-            Image(systemName: "microbe")
-                .font(.title)
-                .foregroundColor(AppColors.teal)
-            Text(item.name)
-                .font(.caption)
-                .fontWeight(.medium)
-                .foregroundColor(.white)
-                .multilineTextAlignment(.center)
-                .lineLimit(2)
+        if let imageAsset = item.imageAsset {
+            Image(imageAsset)
+                .resizable()
+                .aspectRatio(1, contentMode: .fit)
+                .clipShape(RoundedRectangle(cornerRadius: 12))
+        } else {
+            VStack(spacing: 8) {
+                Image(systemName: "microbe")
+                    .font(.title)
+                    .foregroundColor(AppColors.teal)
+                Text(item.name)
+                    .font(.caption)
+                    .fontWeight(.medium)
+                    .foregroundColor(.white)
+                    .multilineTextAlignment(.center)
+                    .lineLimit(2)
+            }
+            .frame(maxWidth: .infinity)
+            .aspectRatio(1, contentMode: .fit)
+            .background(Color.teal.opacity(0.1))
+            .clipShape(RoundedRectangle(cornerRadius: 12))
+            .overlay(
+                RoundedRectangle(cornerRadius: 12)
+                    .stroke(Color.teal.opacity(0.2), lineWidth: 1)
+            )
         }
-        .frame(maxWidth: .infinity)
-        .aspectRatio(1, contentMode: .fit)
-        .background(Color.teal.opacity(0.1))
-        .clipShape(RoundedRectangle(cornerRadius: 12))
-        .overlay(
-            RoundedRectangle(cornerRadius: 12)
-                .stroke(Color.teal.opacity(0.2), lineWidth: 1)
-        )
     }
 
     // MARK: - Disease List Row
 
     private func diseaseListRow(item: ToxicItem, species: Species) -> some View {
         HStack(spacing: 12) {
-            Image(systemName: "microbe")
-                .font(.title2)
-                .foregroundColor(AppColors.teal)
-                .frame(width: 50, height: 50)
+            if let imageAsset = item.imageAsset {
+                Image(imageAsset)
+                    .resizable()
+                    .aspectRatio(contentMode: .fill)
+                    .frame(width: 50, height: 50)
+                    .clipShape(RoundedRectangle(cornerRadius: 8))
+            } else {
+                Image(systemName: "microbe")
+                    .font(.title2)
+                    .foregroundColor(AppColors.teal)
+                    .frame(width: 50, height: 50)
+            }
 
             VStack(alignment: .leading, spacing: 4) {
                 Text(item.name)
