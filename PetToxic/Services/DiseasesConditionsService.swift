@@ -68,42 +68,110 @@ class DiseasesConditionsService {
             ToxicItem(
                 id: UUID(uuidString: "1D000001-0000-0000-0000-000000000002")!,
                 name: "Canine Parvovirus (Parvo)",
-                alternateNames: ["parvo", "parvovirus", "CPV", "CPV-2", "canine parvo"],
+                alternateNames: [
+                    "parvo",
+                    "parvovirus",
+                    "CPV",
+                    "CPV-2",
+                    "canine parvo",
+                    "puppy parvo",
+                    "parvoviral enteritis",
+                    "canine parvoviral enteritis"
+                ],
                 categories: [.diseasesAndConditions],
-                imageAsset: nil,
-                description: "Canine parvovirus is a highly contagious viral disease that attacks rapidly dividing cells, particularly in the intestinal lining, bone marrow, and lymph nodes. It is one of the most serious diseases affecting unvaccinated puppies and dogs.",
-                toxicityInfo: "Parvovirus is extremely resilient in the environment, surviving on surfaces for months to years. It spreads through direct contact with infected dogs or contaminated feces, environments, or objects. The virus destroys the intestinal lining, causing severe bloody diarrhea, vomiting, and dehydration. It also suppresses the immune system by attacking bone marrow, making secondary infections common and often fatal.",
+                imageAsset: "canine_parvo_thumb",
+                description: """
+                Canine parvovirus — commonly called "parvo" — is a highly contagious and \
+                potentially life-threatening viral disease that primarily affects dogs. It is \
+                an acute illness, meaning it develops rapidly and can progress to death within \
+                days without treatment. The virus attacks rapidly dividing cells in the body, \
+                particularly in the intestinal lining, bone marrow, and lymphoid tissue.
+
+                Parvo is vaccine-preventable, and vaccination is one of the most important \
+                things a dog owner can do to protect their pet. Despite this, it remains one \
+                of the most common serious infectious diseases seen in veterinary practice, \
+                particularly in unvaccinated puppies and young dogs. Puppies between 6 weeks \
+                and 6 months of age are most vulnerable. Certain breeds — including \
+                Rottweilers, Doberman Pinschers, American Pit Bull Terriers, and German \
+                Shepherds — may be at higher risk of severe disease even when vaccinated.
+                """,
+                toxicityInfo: """
+                **How It Harms the Body**
+                Parvovirus targets cells that divide rapidly — which is why the intestinal \
+                lining, bone marrow, and immune tissue are hit hardest. In the gut, the virus \
+                destroys the cells lining the intestines, stripping away the protective barrier \
+                that absorbs nutrients and keeps bacteria contained within the digestive tract. \
+                This leads to severe hemorrhagic (bloody) diarrhea, protein loss, and \
+                life-threatening dehydration. At the same time, the virus attacks the bone \
+                marrow, suppressing the immune system by impairing the production of white \
+                blood cells. With a weakened immune system and a damaged intestinal barrier, \
+                bacteria can enter the bloodstream — leading to sepsis (a life-threatening \
+                whole-body infection) that significantly worsens outcomes.
+
+                **Transmission & Spread**
+                Parvovirus spreads through direct contact with an infected dog or — more \
+                commonly — through contact with contaminated feces, environments, or objects \
+                such as bowls, leashes, clothing, and shoes. The virus is extraordinarily \
+                resilient: it can survive on surfaces and in soil for months to years, and it \
+                is resistant to most common household disinfectants. This means an environment \
+                where an infected dog has been can remain a source of infection long after the \
+                animal has recovered or been removed. High-risk settings include kennels, \
+                shelters, dog parks, pet stores, and any area frequented by unvaccinated dogs. \
+                Recovered dogs can continue to shed the virus in their feces for up to 6 weeks \
+                after recovery.
+
+                **Treatment Goals**
+                Parvo has no cure — treatment is supportive, and the goal is to keep the dog \
+                alive long enough for their immune system to fight off the virus. Veterinary \
+                treatment focuses on restoring and maintaining hydration, controlling nausea \
+                and vomiting, and preventing or aggressively treating secondary bacterial \
+                infections (sepsis). Most dogs that receive prompt, aggressive veterinary care \
+                survive — but outcomes worsen significantly with any delay in treatment. A \
+                monoclonal antibody treatment has become available in recent years that directly \
+                targets the parvovirus and can improve outcomes — this option is most effective \
+                when administered early in the disease course, which is another reason why \
+                immediate veterinary evaluation is critical.
+                """,
                 toxicityInfoSectionTitle: "What makes it harmful?",
                 onsetTime: OnsetTime(
-                    early: "Incubation period is 3-7 days. Initial signs include lethargy, loss of appetite, and fever.",
-                    delayed: "Severe vomiting and bloody diarrhea develop within 24-48 hours of initial signs. Without treatment, death can occur within 48-72 hours."
+                    early: "Incubation period is 3–7 days. Initial signs include lethargy, loss of appetite, and fever — often appearing before gastrointestinal signs develop.",
+                    delayed: "Severe vomiting and bloody diarrhea typically develop within 24–48 hours of initial signs. The condition can deteriorate rapidly — prompt veterinary care is critical."
                 ),
                 symptoms: [
-                    "Severe, often bloody diarrhea",
-                    "Persistent vomiting",
-                    "Lethargy and depression",
+                    "Lethargy and sudden loss of energy",
                     "Loss of appetite",
-                    "Fever or subnormal temperature",
-                    "Rapid dehydration",
-                    "Abdominal pain"
+                    "Fever (or in severe cases, abnormally low body temperature)",
+                    "Persistent vomiting",
+                    "Severe diarrhea, often bloody",
+                    "Rapid and severe dehydration",
+                    "Abdominal pain or bloating",
+                    "Collapse (severe cases)"
                 ],
                 entrySeverity: .severe,
                 speciesRisks: [
-                    SpeciesRisk(species: .dog, severity: .severe, notes: "Puppies between 6 weeks and 6 months are most vulnerable. Certain breeds (Rottweilers, Dobermans, Pit Bulls, German Shepherds) may be at higher risk. Mortality rate is 90% without treatment, reduced to 10-20% with aggressive veterinary care.")
+                    SpeciesRisk(
+                        species: .dog,
+                        severity: .severe,
+                        notes: "Puppies between 6 weeks and 6 months are most vulnerable. Certain breeds including Rottweilers, Doberman Pinschers, Pit Bulls, and German Shepherds may be at higher risk of severe disease. Life-threatening without prompt veterinary care — do not delay seeking treatment."
+                    )
                 ],
                 preventionTips: [
-                    "Follow your veterinarian's recommended vaccination schedule — puppies need a series of vaccines",
-                    "Avoid exposing unvaccinated puppies to public areas, dog parks, or unknown dogs",
-                    "Clean contaminated areas with diluted bleach (1:32 ratio) — one of the few disinfectants effective against parvo",
-                    "Isolate infected dogs immediately and for at least 2 weeks after recovery",
-                    "Recovered dogs can shed the virus for up to 6 weeks"
+                    "Vaccination is the most effective protection — follow your veterinarian's recommended schedule; puppies require a series of vaccines starting at 6–8 weeks of age",
+                    "Keep unvaccinated puppies away from public areas, dog parks, pet stores, and any environments where unknown dogs have been",
+                    "The virus survives on surfaces for months to years — disinfect with a diluted bleach solution (1 part bleach to 32 parts water), one of the few agents effective against parvovirus",
+                    "If a dog in your household is diagnosed with parvo, isolate them immediately and for at least 2 weeks after full recovery",
+                    "Recovered dogs can shed the virus in their feces for up to 6 weeks — continue hygiene precautions during this period",
+                    "Wash hands thoroughly after contact with any dog of unknown vaccination status"
                 ],
                 sources: [
-                    "AVMA - Canine Parvovirus",
-                    "Merck Veterinary Manual - Canine Parvovirus",
-                    "Cornell University College of Veterinary Medicine"
+                    "Veterinary Partner — Parvovirus in Dogs",
+                    "Merck Veterinary Manual — Canine Parvovirus",
+                    "Cornell University College of Veterinary Medicine — Canine Parvovirus",
+                    "AAHA Canine Vaccination Guidelines"
                 ],
-                relatedEntries: nil
+                relatedEntries: [
+                    "1D000001-0000-0000-0000-000000000003"  // Feline Panleukopenia — related parvovirus family
+                ]
             ),
 
             // MARK: - Feline Panleukopenia
@@ -145,7 +213,9 @@ class DiseasesConditionsService {
                     "AVMA - Feline Panleukopenia",
                     "Merck Veterinary Manual - Feline Panleukopenia"
                 ],
-                relatedEntries: nil
+                relatedEntries: [
+                    "1D000001-0000-0000-0000-000000000002"  // Canine Parvovirus — related parvovirus family
+                ]
             ),
 
             // MARK: - Psittacosis (Parrot Fever)
