@@ -5153,7 +5153,8 @@ Bark and roots contain the highest concentrations of ailanthone; leaves contain 
                 sources: ["ASPCA Animal Poison Control Center: Fertilizers: A Growing Problem for Pets", "Pet Poison Helpline: Bone Meal & Blood Meal Toxicity", "PetMD: My Dog Ate Fertilizer", "DVM360: Spring Toxin - Fertilizers"],
                 relatedEntries: [
                     "e5f6a7b8-9c0d-4e1f-b2a3-4c5d6e7f8a9b",
-                    "b4c5d6e7-8f9a-0b1c-2d3e-4f5a6b7c8d9e"
+                    "b4c5d6e7-8f9a-0b1c-2d3e-4f5a6b7c8d9e",
+                    "a3b4c5d6-7e8f-4a1b-9c2d-3e4f5a6b7c8d"   // Grass (Lawn Grass) — treated lawn exposure route
                 ]
             ),
 
@@ -5508,7 +5509,7 @@ Bark and roots contain the highest concentrations of ailanthone; leaves contain 
                     "Cover or remove fish tanks when using any pesticide sprays indoors"
                 ],
                 sources: ["ASPCA Animal Poison Control Center", "Pet Poison Helpline", "Merck Veterinary Manual: Insecticide Toxicosis"],
-                relatedEntries: ["d4e5f6a7-8b9c-4d0e-a1b2-3c4d5e6f7a8b", "e5f6a7b8-9c0d-4e1f-b2a3-4c5d6e7f8a9b", "f6a7b8c9-0d1e-4f2a-b3c4-5d6e7f8a9b0c", "a7b8c9d0-1e2f-4a3b-c4d5-6e7f8a9b0c1d", "d0e1f2a3-4b5c-6d7e-f8a9-0b1c2d3e4f5a", "b8c9d0e1-2f3a-4b5c-d6e7-8f9a0b1c2d3e", "b4c5d6e7-8f9a-0b1c-2d3e-4f5a6b7c8d9e", "a7d3e8f2-6b4c-4a1e-9f5d-2c8b7a3e6d1f", "a2c4e6f8-1b3d-4e5f-8a9b-0c1d2e3f4a5b"]  // + Cicadas — pesticide contamination concern
+                relatedEntries: ["d4e5f6a7-8b9c-4d0e-a1b2-3c4d5e6f7a8b", "e5f6a7b8-9c0d-4e1f-b2a3-4c5d6e7f8a9b", "f6a7b8c9-0d1e-4f2a-b3c4-5d6e7f8a9b0c", "a7b8c9d0-1e2f-4a3b-c4d5-6e7f8a9b0c1d", "d0e1f2a3-4b5c-6d7e-f8a9-0b1c2d3e4f5a", "b8c9d0e1-2f3a-4b5c-d6e7-8f9a0b1c2d3e", "b4c5d6e7-8f9a-0b1c-2d3e-4f5a6b7c8d9e", "a7d3e8f2-6b4c-4a1e-9f5d-2c8b7a3e6d1f", "a2c4e6f8-1b3d-4e5f-8a9b-0c1d2e3f4a5b", "a3b4c5d6-7e8f-4a1b-9c2d-3e4f5a6b7c8d"]  // + Cicadas, Grass (Lawn Grass)
             ),
 
             // MARK: - Rodenticides (Overview)
@@ -5646,7 +5647,8 @@ Bark and roots contain the highest concentrations of ailanthone; leaves contain 
                 sources: ["Merck Veterinary Manual", "ASPCA Animal Poison Control Center", "Pet Poison Helpline", "PetMD", "National Pesticide Information Center"],
                 relatedEntries: [
                     "c9d0e1f2-3a4b-5c6d-e7f8-9a0b1c2d3e4f",
-                    "c3f5a8b2-7d4e-4f1a-b6c9-2e8d7f4a5b3c"
+                    "c3f5a8b2-7d4e-4f1a-b6c9-2e8d7f4a5b3c",
+                    "a3b4c5d6-7e8f-4a1b-9c2d-3e4f5a6b7c8d"   // Grass (Lawn Grass) — treated lawn exposure route
                 ]
             ),
 
@@ -13966,7 +13968,7 @@ Early removal is much easier than waiting. May require sedation, scoping, or sur
                     "American Kennel Club",
                     "VCA Animal Hospitals"
                 ],
-                relatedEntries: ["00112233-4455-6677-8899-aabbccddef13", "00112233-4455-6677-8899-aabbccddef06"]
+                relatedEntries: ["00112233-4455-6677-8899-aabbccddef13", "00112233-4455-6677-8899-aabbccddef06", "a3b4c5d6-7e8f-4a1b-9c2d-3e4f5a6b7c8d"]  // + Grass (Lawn Grass) — related grass hazard
             ),
 
             // MARK: - Tampon & Hygiene Product Ingestion
@@ -16255,6 +16257,68 @@ Encounters peak in **spring and fall** when porcupines are more active with fora
                 preventionTips: nil,
                 sources: [],
                 relatedEntries: nil
+            ),
+
+            // MARK: - Grass (Lawn Grass)
+            ToxicItem(
+                id: UUID(uuidString: "a3b4c5d6-7e8f-4a1b-9c2d-3e4f5a6b7c8d")!,
+                name: "Grass (Lawn Grass)",
+                alternateNames: ["lawn grass", "grass ingestion", "dog eating grass", "cat eating grass", "Kentucky bluegrass", "Bermuda grass", "fescue", "tall fescue", "fine fescue", "ryegrass", "perennial ryegrass", "St. Augustine grass", "zoysia grass", "buffalo grass", "centipede grass", "bahia grass", "bentgrass", "turf grass", "turfgrass", "lawn", "yard grass", "grass eating", "my dog eats grass", "why does my dog eat grass", "grass obstruction", "grass blockage"],
+                categories: [.plants, .informational],
+                imageAsset: "lawn_thumb",
+                description: """
+    Grass is one of the most commonly searched topics in veterinary poison control — and the answer is almost always reassuring: **grass itself is not toxic to pets.**
+
+    Dogs and cats eat grass regularly, and the behavior is completely normal. The exact reason is not fully understood. Theories include instinctive behavior, GI self-soothing, fiber supplementation, or simple curiosity. Most pets that eat grass show no ill effects at all.
+
+    **Where the real concern lies is not the grass itself — it is what may be on the grass.** Lawns treated with herbicides, fertilizers, or pesticides can pose real risks to pets who graze or lick their paws after walking on treated areas. See related entries for more information.
+    """,
+                toxicityInfo: """
+    **Grass is not chemically toxic.** No compounds in common lawn grasses — including Kentucky bluegrass, Bermuda grass, fescue, ryegrass, St. Augustine grass, zoysia, and buffalo grass — cause systemic toxicity in pets.
+
+    **However, there is one important physical hazard: obstruction from excessive ingestion.**
+
+    Dogs occasionally consume unusually large amounts of grass in a single sitting. In some cases, this grass can form a dense, matted bolus (clump) in the stomach that the body cannot pass or bring back up effectively. This can lead to a **gastric obstruction (blockage)** requiring surgical removal. The reason a dog may consume this much grass at one time is often not identified — it does not appear to be consistently linked to illness or nutritional deficiency.
+
+    This is primarily a concern in dogs. Cats occasionally eat grass but rarely in quantities that cause obstruction.
+
+    **Vomiting after eating grass is common and usually self-limiting.** Occasional vomiting after grass ingestion is not an emergency on its own. However, repeated vomiting, lethargy, loss of appetite, or a distended abdomen after grass ingestion warrants immediate veterinary evaluation.
+    """,
+                symptoms: [
+                    "Vomiting (common, often self-limiting)",
+                    "Repeated or unproductive retching",
+                    "Loss of appetite",
+                    "Lethargy",
+                    "Abdominal distension or bloating",
+                    "Drooling",
+                    "Restlessness or discomfort"
+                ],
+                entrySeverity: nil,
+                speciesRisks: [
+                    SpeciesRisk(species: .dog, severity: .low, notes: "Grass itself is not toxic. Occasional grass eating and vomiting is normal dog behavior. The primary concern is obstruction — a dog that consumes an unusually large amount of grass may develop a gastric obstruction (blockage) requiring surgical removal. Seek veterinary care if vomiting is repeated or if your dog shows lethargy, loss of appetite, or abdominal distension after grass ingestion."),
+                    SpeciesRisk(species: .cat, severity: .low, notes: "Cats eat grass less frequently than dogs and rarely in large enough quantities to cause obstruction. Occasional vomiting after grass ingestion is normal. Seek veterinary care if signs persist or worsen."),
+                    SpeciesRisk(species: .smallMammal, severity: .low, notes: "Rabbits and guinea pigs naturally consume grass as a normal part of their diet; fresh grass and hay are appropriate for these species. Obstruction from grass is not a typical concern. Hamsters, rats, and other small rodents may occasionally contact grass but do not typically consume large amounts."),
+                    SpeciesRisk(species: .bird, severity: .low, notes: "Pet birds do not typically graze on lawn grass. The primary hazard for outdoor birds on lawns is chemical treatment (herbicides, pesticides, fertilizers) rather than the grass itself."),
+                    SpeciesRisk(species: .reptile, severity: .low, notes: "Pet reptiles do not typically consume lawn grass. Outdoor tortoises and herbivorous lizards may graze on grass without concern. The primary hazard for outdoor reptiles on treated lawns is chemical exposure rather than the grass itself.")
+                ],
+                preventionTips: [
+                    "Know what has been applied to your lawn before allowing pets to graze or play on it",
+                    "Follow all label instructions for pesticides, herbicides, and fertilizers regarding pet re-entry times",
+                    "If your dog regularly consumes large amounts of grass, discuss the behavior with your veterinarian",
+                    "Monitor for signs of obstruction — repeated vomiting, lethargy, and abdominal distension after excessive grass eating warrants prompt veterinary evaluation"
+                ],
+                sources: [
+                    "ASPCA Animal Poison Control Center",
+                    "Pet Poison Helpline",
+                    "Veterinary Partner — Why Does My Dog Eat Grass?",
+                    "Merck Veterinary Manual — Foreign Bodies: Gastrointestinal"
+                ],
+                relatedEntries: [
+                    "b4c5d6e7-8f9a-0b1c-2d3e-4f5a6b7c8d9e",  // Herbicides — treated lawn exposure route
+                    "c3f5a8b2-7d4e-4f1a-b6c9-2e8d7f4a5b3c",  // Fertilizers — treated lawn exposure route
+                    "c9d0e1f2-3a4b-5c6d-e7f8-9a0b1c2d3e4f",  // Pesticides & Insecticides — treated lawn exposure route
+                    "00112233-4455-6677-8899-aabbccddef20"    // Foxtails (Grass Awns) — related grass hazard
+                ]
             )
         ]
     }
