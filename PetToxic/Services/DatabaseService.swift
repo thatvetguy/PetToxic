@@ -2032,7 +2032,8 @@ class DatabaseService {
                     "7E52EBF4-2617-4264-A341-4E6FF77E26EB",  // Pokeweed — saponin-based GI irritant, higher severity standalone entry
                     "048CDED7-251B-4F1C-89E6-93ACB63E6621",  // Honeysuckle — saponin-based GI irritant
                     "b1d3f5a7-2c4e-4a6b-8d0f-1e3c5a7b9d2f",  // Chrysanthemums — standalone entry
-                    "c7d8e9f0-1a2b-4c3d-8e4f-5a6b7c8d9e0f"   // Holiday Hazards umbrella
+                    "c7d8e9f0-1a2b-4c3d-8e4f-5a6b7c8d9e0f",  // Holiday Hazards umbrella
+                    "f7a8b9c0-1d2e-4f3a-b4c5-6d7e8f9a0b1c"   // Ardisia — same saponin/GI irritant mechanism
                 ]
             ),
 
@@ -16318,6 +16319,64 @@ Encounters peak in **spring and fall** when porcupines are more active with fora
                     "c3f5a8b2-7d4e-4f1a-b6c9-2e8d7f4a5b3c",  // Fertilizers — treated lawn exposure route
                     "c9d0e1f2-3a4b-5c6d-e7f8-9a0b1c2d3e4f",  // Pesticides & Insecticides — treated lawn exposure route
                     "00112233-4455-6677-8899-aabbccddef20"    // Foxtails (Grass Awns) — related grass hazard
+                ]
+            ),
+
+            // MARK: - Ardisia
+            ToxicItem(
+                id: UUID(uuidString: "f7a8b9c0-1d2e-4f3a-b4c5-6d7e8f9a0b1c")!,
+                name: "Ardisia",
+                alternateNames: ["ardisia", "coral ardisia", "coral berry", "coralberry", "spiceberry", "Christmas berry", "marlberry", "hen's eyes", "hen eyes", "Ardisia crenata", "Ardisia crenulata", "Ardisia japonica", "Ardisia solanacea", "Japanese ardisia", "coral ardisia berries", "ardisia plant", "ardisia shrub", "ardisia houseplant"],
+                categories: [.plants],
+                imageAsset: "ardisia_thumb",
+                description: """
+    Ardisia (*Ardisia crenata* and related species) is a popular ornamental shrub grown both indoors as a houseplant and outdoors in warm climates. It is widely recognized for its striking clusters of glossy **coral-red to bright red berries** that persist through winter, making it a common decorative plant during the holiday season.
+
+    Also known as coral berry, spiceberry, or Christmas berry, Ardisia is native to parts of Asia and is commonly found in nurseries and garden centers throughout the United States, particularly in the South and Pacific Coast states. The berries are visually eye-catching and can be attractive to curious pets — especially dogs and birds.
+
+    The entire plant is considered toxic, with the berries posing the greatest risk due to their accessibility and appealing appearance.
+    """,
+                toxicityInfo: """
+    Ardisia contains **saponins** — naturally occurring compounds found in many plants that disrupt cell membranes and irritate the gastrointestinal tract. Saponins interfere with normal absorption in the digestive system and can cause significant GI upset.
+
+    The berries are the most commonly ingested part and are the primary concern for pet owners. The plant also contains **triterpenoid compounds** (including ardisiacrispin) that contribute to its toxicity.
+
+    **Typical signs after ingestion include vomiting, diarrhea, drooling, and lethargy.** Systemic (whole-body) effects beyond the GI tract are not well-documented at typical pet ingestion amounts, but the berry clusters can be consumed in significant quantities — particularly by dogs attracted to fallen berries on the floor or by birds that seek out fruit.
+
+    Small mammals are of particular concern because rabbits and guinea pigs cannot vomit, meaning they cannot expel irritating plant material. Any suspected ingestion in a small mammal warrants prompt veterinary evaluation.
+
+    Contact a veterinarian or animal poison control center if your pet has ingested any part of this plant.
+    """,
+                symptoms: [
+                    "Vomiting",
+                    "Diarrhea",
+                    "Drooling (hypersalivation)",
+                    "Lethargy",
+                    "Loss of appetite",
+                    "Abdominal discomfort"
+                ],
+                entrySeverity: .moderate,
+                speciesRisks: [
+                    SpeciesRisk(species: .dog, severity: .moderate, notes: "Dogs may encounter fallen berries or chew on lower branches. The bright red berry clusters can attract curious dogs. Saponin ingestion typically causes GI upset — vomiting, diarrhea, lethargy, and drooling. Systemic toxicity is not well-documented at typical ingestion amounts, but the volume of berries a dog can consume warrants veterinary evaluation."),
+                    SpeciesRisk(species: .cat, severity: .moderate, notes: "Cats may chew on the plant or bat at berry clusters. GI upset is the expected outcome. Smaller body size means smaller amounts of plant material can cause notable signs. Contact a veterinarian for any suspected ingestion."),
+                    SpeciesRisk(species: .smallMammal, severity: .moderate, notes: "Rabbits and guinea pigs cannot vomit and cannot expel ingested irritants the way dogs and cats can. GI upset may therefore be more prolonged and concerning in these species. Monitor for lethargy, anorexia, and changes in fecal output. Seek veterinary care promptly for any suspected ingestion."),
+                    SpeciesRisk(species: .bird, severity: .moderate, notes: "Birds are naturally drawn to berries and may consume them readily. The saponin content and small body size of many pet birds increases the risk of significant GI effects. Keep Ardisia plants out of reach of pet birds. Seek veterinary care for any suspected ingestion."),
+                    SpeciesRisk(species: .reptile, severity: .low, notes: "Reptiles are unlikely to seek out or consume Ardisia berries under normal circumstances. Herbivorous reptiles (tortoises, iguanas) in outdoor enclosures may encounter the plant, but clinical reports are absent. The risk is low based on exposure probability. Contact a reptile-experienced veterinarian if ingestion is suspected.")
+                ],
+                preventionTips: [
+                    "Place Ardisia plants out of reach of pets, particularly the berry-bearing branches",
+                    "Promptly remove any berries that fall to the floor — dogs may consume fallen berries opportunistically",
+                    "During the holiday season, when Ardisia is commonly used as decoration, be aware that the berry clusters are the highest-risk part of the plant",
+                    "Consider choosing pet-safe holiday plants as alternatives"
+                ],
+                sources: [
+                    "ASPCA Animal Poison Control Center — Ardisia",
+                    "Pet Poison Helpline",
+                    "Merck Veterinary Manual — Saponin-Containing Plants",
+                    "University of California Agriculture & Natural Resources — Safe and Poisonous Garden Plants"
+                ],
+                relatedEntries: [
+                    "045fe2d3-3c59-4f15-b72a-09371b675d77"  // GI Irritant Plants — same saponin/GI irritant mechanism
                 ]
             )
         ]
