@@ -83,8 +83,11 @@ Dynamic Type, VoiceOver, high contrast, 44pt minimum touch targets.
 | `Documentation/DataModels.md` | Data model specifications |
 | `Documentation/Design/UI-Spec.md` | UI specifications |
 | `Documentation/Design/StyleGuide.md` | Visual design guidelines |
+| `PetToxic_DiseasesConditions_EntryTemplate.md` | Content & format template for Diseases & Conditions entries (field protocols, prohibited content, approved language) |
 
 **For entry editing sessions:** Read `PetToxic_Database_Audit_Rules_ClaudeCode.md` for quick rules or `PetToxic_Database_Audit_Rules.md` for full details. Use `EntryReferenceDocument.md` to look up UUIDs and verify cross-references.
+
+**For disease/condition editing sessions:** Read `PetToxic_DiseasesConditions_EntryTemplate.md` for the full field-by-field protocol, entry types, approved severity/zoonotic language, and the entry checklist. These entries follow a different content structure than toxin entries.
 
 ---
 
@@ -259,4 +262,4 @@ Handoff files: `Handoff_SessionXX_to_SessionYY.md`
 
 ---
 
-*Last Updated: March 2026 (Session 141)*
+*Last Updated: March 2026 (Session 142)*
