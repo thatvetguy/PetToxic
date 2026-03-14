@@ -79,7 +79,7 @@ Dynamic Type, VoiceOver, high contrast, 44pt minimum touch targets.
 |----------|---------|
 | `PetToxic_Database_Audit_Rules.md` | Full audit rules: sources, content policies, species, severity, categories, fields, cross-references |
 | `PetToxic_Database_Audit_Rules_ClaudeCode.md` | Condensed checklist for batch editing sessions |
-| `EntryReferenceDocument.md` | Complete list of all 183 entries with UUIDs, severity, and categories |
+| `EntryReferenceDocument.md` | Complete list of all 195 entries with UUIDs, severity, and categories |
 | `Documentation/DataModels.md` | Data model specifications |
 | `Documentation/Design/UI-Spec.md` | UI specifications |
 | `Documentation/Design/StyleGuide.md` | Visual design guidelines |
@@ -89,12 +89,10 @@ Dynamic Type, VoiceOver, high contrast, 44pt minimum touch targets.
 ---
 
 ## Branch Strategy
-- `main` — Stable, release-ready only
-- `develop` — Active development
-- `feature/[name]` — Individual features (new UI, new functionality)
-- `content/[name]` — Content additions (optional; not required for routine edits)
+- `main` — All work happens here
+- `feature/[name]` — Short-lived branches for risky changes (big UI refactors, new features that could break things)
 
-**Default behavior for content edits:** Work directly on `develop`. Do NOT create new branches for routine content additions (new entries, alternateNames updates, cross-references, text edits). Branching is only needed when a change could break existing functionality or when explicitly requested by the user.
+**Default behavior:** Work directly on `main`. Only create a feature branch when a change could break existing functionality or when explicitly requested by the user.
 
 ## Commit Format
 - `feat:` New features
@@ -148,7 +146,7 @@ PetToxic/
 │   │   ├── TrialBannerView.swift      # 30-day trial banner (4 states)
 │   │   └── VaccinationSummaryCard.swift # Vaccine status card (home screen)
 │   ├── Models/
-│   │   ├── Enums.swift                # Species, Severity, Category, SeverityGroupLevel, MatchType
+│   │   ├── Enums.swift                # Species, Severity, Category (incl. isProLocked), SeverityGroupLevel, MatchType
 │   │   ├── NavigationContext.swift     # CategoryEntry, SeverityEntry, BrowseNavigationContext
 │   │   ├── SearchResult.swift
 │   │   ├── SpeciesRisk.swift
@@ -162,6 +160,7 @@ PetToxic/
 │   │   ├── AppearanceSettings.swift   # Dark/light mode (default: dark)
 │   │   ├── BookmarkService.swift      # Save favorites
 │   │   ├── DatabaseService.swift      # Toxin data (hardcoded, SQLite planned)
+│   │   ├── DiseasesConditionsService.swift # Pro-locked disease/condition entries
 │   │   ├── SearchService.swift        # FTS5 search
 │   │   ├── TrialManager.swift         # 30-day Pro trial (Keychain-backed)
 │   │   └── VaccinePresets.swift       # Species-keyed vaccine presets & status enum
@@ -182,7 +181,8 @@ PetToxic/
 │       │   └── SymptomsListView.swift
 │       ├── Browse/
 │       │   ├── BrowseView.swift
-│       │   └── CategoryGridItem.swift
+│       │   ├── CategoryGridItem.swift
+│       │   └── DiseasesConditionsListView.swift # Pro-locked species-grouped disease list
 │       ├── Emergency/
 │       │   └── EmergencyView.swift    # Poison control contacts
 │       ├── Saved/
@@ -220,6 +220,7 @@ PetToxic/
 | Task | File(s) |
 |------|---------|
 | Add/edit toxin entry | `Services/DatabaseService.swift` |
+| Add/edit disease/condition entry | `Services/DiseasesConditionsService.swift` (Pro-locked) |
 | Modify toxin data model | `Models/ToxicItem.swift`, `Models/SpeciesRisk.swift` |
 | Change severity levels/colors | `Models/Enums.swift` (Severity enum) |
 | Browse by severity groups | `Models/Enums.swift` (SeverityGroupLevel), `Views/Browse/BrowseView.swift` (SeverityListView) |
@@ -238,6 +239,7 @@ PetToxic/
 | Vaccination data model | `Models/VaccinationRecord.swift` |
 | Vaccination summary (home) | `Components/VaccinationSummaryCard.swift` |
 | Browse navigation context | `Models/NavigationContext.swift` |
+| Diseases & Conditions list | `Views/Browse/DiseasesConditionsListView.swift` |
 | Severity explainer entry | `Services/DatabaseService.swift` (UUID: `B3F1A2D4-E5C6-47F8-9A0B-1C2D3E4F5A6B`) |
 
 ---
@@ -257,4 +259,4 @@ Handoff files: `Handoff_SessionXX_to_SessionYY.md`
 
 ---
 
-*Last Updated: March 2026 (Session 136)*
+*Last Updated: March 2026 (Session 141)*
