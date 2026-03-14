@@ -22,7 +22,7 @@ class DiseasesConditionsService {
         [
             // MARK: - Rabies
             ToxicItem(
-                id: UUID(uuidString: "ID000001-0000-0000-0000-000000000001")!,
+                id: UUID(uuidString: "1D000001-0000-0000-0000-000000000001")!,
                 name: "Rabies",
                 alternateNames: ["hydrophobia", "rabies virus", "lyssavirus"],
                 categories: [.diseasesAndConditions],
@@ -66,7 +66,7 @@ class DiseasesConditionsService {
 
             // MARK: - Canine Parvovirus
             ToxicItem(
-                id: UUID(uuidString: "ID000001-0000-0000-0000-000000000002")!,
+                id: UUID(uuidString: "1D000001-0000-0000-0000-000000000002")!,
                 name: "Canine Parvovirus (Parvo)",
                 alternateNames: ["parvo", "parvovirus", "CPV", "CPV-2", "canine parvo"],
                 categories: [.diseasesAndConditions],
@@ -108,7 +108,7 @@ class DiseasesConditionsService {
 
             // MARK: - Feline Panleukopenia
             ToxicItem(
-                id: UUID(uuidString: "ID000001-0000-0000-0000-000000000003")!,
+                id: UUID(uuidString: "1D000001-0000-0000-0000-000000000003")!,
                 name: "Feline Panleukopenia (Feline Distemper)",
                 alternateNames: ["feline distemper", "feline parvo", "FPV", "panleukopenia", "cat distemper"],
                 categories: [.diseasesAndConditions],
@@ -150,7 +150,7 @@ class DiseasesConditionsService {
 
             // MARK: - Psittacosis (Parrot Fever)
             ToxicItem(
-                id: UUID(uuidString: "ID000001-0000-0000-0000-000000000004")!,
+                id: UUID(uuidString: "1D000001-0000-0000-0000-000000000004")!,
                 name: "Psittacosis (Parrot Fever)",
                 alternateNames: ["parrot fever", "chlamydiosis", "avian chlamydiosis", "ornithosis", "chlamydia psittaci"],
                 categories: [.diseasesAndConditions],
@@ -193,7 +193,7 @@ class DiseasesConditionsService {
 
             // MARK: - Metabolic Bone Disease (MBD)
             ToxicItem(
-                id: UUID(uuidString: "ID000001-0000-0000-0000-000000000005")!,
+                id: UUID(uuidString: "1D000001-0000-0000-0000-000000000005")!,
                 name: "Metabolic Bone Disease (MBD)",
                 alternateNames: ["MBD", "nutritional secondary hyperparathyroidism", "calcium deficiency", "metabolic bone disease reptile"],
                 categories: [.diseasesAndConditions],
@@ -237,7 +237,7 @@ class DiseasesConditionsService {
 
             // MARK: - Leptospirosis
             ToxicItem(
-                id: UUID(uuidString: "ID000001-0000-0000-0000-000000000006")!,
+                id: UUID(uuidString: "1D000001-0000-0000-0000-000000000006")!,
                 name: "Leptospirosis",
                 alternateNames: ["lepto", "leptospira", "weil's disease", "rat urine disease"],
                 categories: [.diseasesAndConditions],
@@ -279,7 +279,7 @@ class DiseasesConditionsService {
 
             // MARK: - Myxomatosis
             ToxicItem(
-                id: UUID(uuidString: "ID000001-0000-0000-0000-000000000007")!,
+                id: UUID(uuidString: "1D000001-0000-0000-0000-000000000007")!,
                 name: "Myxomatosis",
                 alternateNames: ["myxo", "myxoma virus", "rabbit myxomatosis"],
                 categories: [.diseasesAndConditions],
@@ -321,7 +321,7 @@ class DiseasesConditionsService {
 
             // MARK: - Kennel Cough (Canine Infectious Respiratory Disease Complex)
             ToxicItem(
-                id: UUID(uuidString: "ID000001-0000-0000-0000-000000000008")!,
+                id: UUID(uuidString: "1D000001-0000-0000-0000-000000000008")!,
                 name: "Kennel Cough",
                 alternateNames: ["canine infectious tracheobronchitis", "Bordetella", "CIRDC", "dog cough", "canine cough"],
                 categories: [.diseasesAndConditions],

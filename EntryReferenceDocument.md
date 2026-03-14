@@ -328,14 +328,14 @@ Complete list of all entries with UUIDs, severity, and categories.
 
 | Name | UUID | Severity | Species |
 |------|------|----------|---------|
-| Rabies | `ID000001-0000-0000-0000-000000000001` | Severe | Dogs, Cats, Small Mammals |
-| Canine Parvovirus (Parvo) | `ID000001-0000-0000-0000-000000000002` | Severe | Dogs |
-| Feline Panleukopenia (Feline Distemper) | `ID000001-0000-0000-0000-000000000003` | Severe | Cats |
-| Psittacosis (Parrot Fever) | `ID000001-0000-0000-0000-000000000004` | High | Birds |
-| Metabolic Bone Disease (MBD) | `ID000001-0000-0000-0000-000000000005` | High | Reptiles |
-| Leptospirosis | `ID000001-0000-0000-0000-000000000006` | Severe | Dogs |
-| Myxomatosis | `ID000001-0000-0000-0000-000000000007` | Severe | Small Mammals |
-| Kennel Cough | `ID000001-0000-0000-0000-000000000008` | Moderate | Dogs |
+| Rabies | `1D000001-0000-0000-0000-000000000001` | Severe | Dogs, Cats, Small Mammals |
+| Canine Parvovirus (Parvo) | `1D000001-0000-0000-0000-000000000002` | Severe | Dogs |
+| Feline Panleukopenia (Feline Distemper) | `1D000001-0000-0000-0000-000000000003` | Severe | Cats |
+| Psittacosis (Parrot Fever) | `1D000001-0000-0000-0000-000000000004` | High | Birds |
+| Metabolic Bone Disease (MBD) | `1D000001-0000-0000-0000-000000000005` | High | Reptiles |
+| Leptospirosis | `1D000001-0000-0000-0000-000000000006` | Severe | Dogs |
+| Myxomatosis | `1D000001-0000-0000-0000-000000000007` | Severe | Small Mammals |
+| Kennel Cough | `1D000001-0000-0000-0000-000000000008` | Moderate | Dogs |
 
 ### Special Entry
 
@@ -389,7 +389,7 @@ Complete list of all entries with UUIDs, severity, and categories.
 | 38 | Button Batteries | `a1b2c3d4-5e6f-7a8b-9c0d-1e2f3a4b5c6d` | High | Household Items |
 | 39 | Caffeine | `ae80bf97-0ffd-4ed8-b9d9-727e747d583b` | Severe | Foods |
 | 40 | Cannabis / Marijuana | `e293e8ba-eefc-4fe0-bf93-9e8842873a35` | Moderate | Plants, Recreational Substances |
-| 41 | Canine Parvovirus (Parvo) | `ID000001-0000-0000-0000-000000000002` | Severe | Diseases & Conditions |
+| 41 | Canine Parvovirus (Parvo) | `1D000001-0000-0000-0000-000000000002` | Severe | Diseases & Conditions |
 | 42 | Castor Beans | `0bf15704-86a3-40a9-94e1-4ba4ffbdea1b` | Severe | Plants |
 | 42 | Chinaberry Tree | `52bd87dd-b94f-4c72-9dfa-ff1f8b689193` | Severe | Plants |
 | 43 | Chocolate | `d8c34930-fe78-414c-a182-49521dbfc266` | Severe | Foods, Holiday Hazards |
@@ -417,7 +417,7 @@ Complete list of all entries with UUIDs, severity, and categories.
 | 65 | Estrogen Medications & Hormone Therapies | `ccdd0011-eeff-2233-4455-667788990011` | High | Medications |
 | 66 | Eucalyptus | `a7f3b2c1-8d4e-4f6a-b9e1-3c5d7a2f8b64` | High | Plants |
 | 67 | Expanding Glues (Gorilla Glue) | `b2e4f7a1-8c3d-4e6f-a9b2-1d5c8e3f7a2b` | nil | Garage & Garden, Informational |
-| 68 | Feline Panleukopenia (Feline Distemper) | `ID000001-0000-0000-0000-000000000003` | Severe | Diseases & Conditions |
+| 68 | Feline Panleukopenia (Feline Distemper) | `1D000001-0000-0000-0000-000000000003` | Severe | Diseases & Conditions |
 | 69 | Fatty Foods & Grease | `2e094121-64ea-499c-bfb4-6db98f139b55` | Low/Moderate | Foods, Holiday Hazards |
 | 69 | Fertilizers | `c3f5a8b2-7d4e-4f1a-b6c9-2e8d7f4a5b3c` | Moderate | Garage & Garden |
 | 70 | Fipronil (Frontline) | `a7b8c9d0-1e2f-4a3b-c4d5-6e7f8a9b0c1d` | Severe | Medications, Garage & Garden |
@@ -446,10 +446,10 @@ Complete list of all entries with UUIDs, severity, and categories.
 | 93 | Ivermectin & Macrocyclic Lactones | `bbcc9900-ddee-ff11-2233-445566778899` | High | Medications |
 | 94 | Joint Supplements (Glucosamine & Chondroitin) | `91000011-2233-4455-6677-889900aabb01` | High | Medications |
 | 95 | Kalanchoe | `dfa90432-20a6-45bb-9e19-f917b50b3765` | Severe | Plants |
-| 96 | Kennel Cough | `ID000001-0000-0000-0000-000000000008` | Moderate | Diseases & Conditions |
+| 96 | Kennel Cough | `1D000001-0000-0000-0000-000000000008` | Moderate | Diseases & Conditions |
 | 97 | Lantana | `1d9f0989-6d98-4305-ac74-56f6e6e8ca0f` | Moderate | Plants |
 | 97 | Larkspur & Delphinium | `ed41fd85-d05e-4797-9f94-5152653df2d1` | High | Plants |
-| 98 | Leptospirosis | `ID000001-0000-0000-0000-000000000006` | Severe | Diseases & Conditions |
+| 98 | Leptospirosis | `1D000001-0000-0000-0000-000000000006` | Severe | Diseases & Conditions |
 | 99 | Laundry Detergent Pods | `55667788-99aa-bbcc-ddee-ff0011223344` | Severe | Cleaning Products |
 | 99 | Lead (Batteries, Paint, Fishing Weights) | `3b605ff6-df0c-426f-8687-70226969f7c0` | High | Garage & Garden |
 | 100 | Lilies (True Lilies) | `419a437f-3834-47e1-934a-5fa379b98a00` | Severe | Plants, Holiday Hazards |
@@ -460,7 +460,7 @@ Complete list of all entries with UUIDs, severity, and categories.
 | 105 | Macadamia Nuts | `df7f2d18-6f6c-40c8-9f77-cdfbc815e946` | Moderate | Foods |
 | 106 | Magnets | `e1f2a3b4-5c6d-7e8f-9a0b-1c2d3e4f5a6b` | nil | Household Items, Informational |
 | 107 | MDMA (Ecstasy, Molly) | `ff001122-3344-5566-7788-99aabbccdd03` | Severe | Recreational Substances |
-| 108 | Metabolic Bone Disease (MBD) | `ID000001-0000-0000-0000-000000000005` | High | Diseases & Conditions |
+| 108 | Metabolic Bone Disease (MBD) | `1D000001-0000-0000-0000-000000000005` | High | Diseases & Conditions |
 | 109 | MDR1 Gene Mutation (Multi-Drug Sensitivity) | `00112233-4455-6677-8899-aabbccddef18` | nil | Informational |
 | 109 | Methamphetamine & Street Amphetamines | `ff001122-3344-5566-7788-99aabbccdd01` | Severe | Recreational Substances |
 | 110 | Metronidazole (Flagyl) | `aabb8899-ccdd-eeff-0011-223344556677` | Moderate | Medications |
@@ -472,7 +472,7 @@ Complete list of all entries with UUIDs, severity, and categories.
 | 116 | Morning Glory | `a0716b51-b922-4b95-b557-a08c5ce9ed86` | Moderate | Plants |
 | 117 | Mothballs | `e1f2a3b4-5c6d-7e8f-9a0b-1c2d3e4f5a6b` | Severe | Garage & Garden |
 | 118 | Muscle Relaxants | `44bb2233-ccdd-eeff-0011-223344556677` | Severe | Medications |
-| 119 | Myxomatosis | `ID000001-0000-0000-0000-000000000007` | Severe | Diseases & Conditions |
+| 119 | Myxomatosis | `1D000001-0000-0000-0000-000000000007` | Severe | Diseases & Conditions |
 | 120 | Neonicotinoids (Imidacloprid) | `f6a7b8c9-0d1e-4f2a-b3c4-5d6e7f8a9b0c` | Low/Moderate | Garage & Garden, Medications |
 | 120 | Nicotine & Tobacco Products | `fd98d3c0-368c-4b20-9192-c98dd3c17f14` | Severe | Recreational Substances, Plants |
 | 121 | Non-Toxic Bouquet Flowers | `c4e9a2b1-7d5f-4c3a-b8e2-6f1d9a4c5b73` | nil | Plants, Informational |
@@ -500,10 +500,10 @@ Complete list of all entries with UUIDs, severity, and categories.
 | 143 | Porcupine Quills | `00112233-4455-6677-8899-aabbccddef28` | nil | Informational, Outdoor Hazards |
 | 144 | Privet (Ligustrum) | `96000011-2233-4455-6677-889900aabb01` | Moderate | Plants |
 | 145 | Psilocybin Mushrooms & Psychedelic Edibles | `ff001122-3344-5566-7788-99aabbccdd04` | High | Recreational Substances |
-| 146 | Psittacosis (Parrot Fever) | `ID000001-0000-0000-0000-000000000004` | High | Diseases & Conditions |
+| 146 | Psittacosis (Parrot Fever) | `1D000001-0000-0000-0000-000000000004` | High | Diseases & Conditions |
 | 147 | Pyrethrins & Pyrethroids (Permethrin) | `d4e5f6a7-8b9c-4d0e-a1b2-3c4d5e6f7a8b` | Severe | Garage & Garden, Medications |
 | 147 | Quaternary Ammonium Disinfectants | `88990011-aabb-ccdd-eeff-223344556677` | High | Cleaning Products |
-| 148 | Rabies | `ID000001-0000-0000-0000-000000000001` | Severe | Diseases & Conditions |
+| 148 | Rabies | `1D000001-0000-0000-0000-000000000001` | Severe | Diseases & Conditions |
 | 149 | Ranunculus (Buttercup) | `ee90d3c6-f9cc-40ab-ae91-c13bc481ab16` | Low | Plants |
 | 149 | Raw Yeast Dough | `ec90eb4b-765b-45cb-9255-f449b656b7d3` | Severe | Foods, Holiday Hazards |
 | 150 | Rodenticides (Overview) | `049e1259-f968-4e23-aa8c-5110cb52a08c` | nil | Informational, Garage & Garden |
