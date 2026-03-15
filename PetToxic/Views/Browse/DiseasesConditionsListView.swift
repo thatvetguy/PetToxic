@@ -21,10 +21,16 @@ struct DiseasesConditionsListView: View {
     }
 
     /// Sections: each species that has at least one entry
+    /// Sort order: infectious diseases first (alphabetically), then conditions (alphabetically)
     private var sections: [(species: Species, items: [ToxicItem])] {
         orderedSpecies.compactMap { species in
             let items = diseaseService.entries(for: species).sorted {
-                $0.name.localizedCaseInsensitiveCompare($1.name) == .orderedAscending
+                let lhsInfectious = diseaseService.isInfectious($0)
+                let rhsInfectious = diseaseService.isInfectious($1)
+                if lhsInfectious != rhsInfectious {
+                    return lhsInfectious
+                }
+                return $0.name.localizedCaseInsensitiveCompare($1.name) == .orderedAscending
             }
             return items.isEmpty ? nil : (species: species, items: items)
         }

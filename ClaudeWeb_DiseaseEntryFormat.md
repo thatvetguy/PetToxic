@@ -90,6 +90,23 @@ Species-level severity is set on each `SpeciesRisk` — that's where the meaning
 
 ---
 
+## Sort Order Registration (Non-Infectious Entries Only)
+
+Entries are sorted in the app: **infectious diseases first** (alphabetically), then **non-infectious conditions** (alphabetically) within each species group.
+
+For **Type 2 (Husbandry)** or **Type 3 (Medical/Metabolic)** entries, the instruction file MUST include a step to add the entry's UUID to `nonInfectiousEntryIDs` in `DiseasesConditionsService.swift`:
+
+```swift
+private static let nonInfectiousEntryIDs: Set<String> = [
+    "1D000001-0000-0000-0000-000000000005",  // Metabolic Bone Disease (MBD)
+    "NEW-UUID-HERE",                          // New non-infectious entry
+]
+```
+
+Type 1 (Infectious) entries do NOT need this step — they sort as infectious by default.
+
+---
+
 ## Multi-line String Format
 
 Use `"""` triple-quoted strings with leading whitespace matching the surrounding indentation. Use `\` line-continuation backslashes to prevent unwanted line breaks in rendered text. Bold section headers use `**Header Text**`:

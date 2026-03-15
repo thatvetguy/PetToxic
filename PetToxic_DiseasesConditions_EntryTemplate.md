@@ -25,9 +25,14 @@ different content structure.
 
 ## Entry Types
 
-Entry types are **author-side labels only** — they guide content decisions and
-section structure. They are not surfaced to the user in the app. All entries
-appear under "Diseases & Conditions" regardless of type.
+Entry types guide content decisions, section structure, and **sort order** in the
+app. Within each species group, infectious diseases (Type 1) are listed first
+(alphabetically), followed by non-infectious conditions (Type 2 / Type 3,
+alphabetically). The type label itself is not displayed to the user.
+
+**Implementation:** `DiseasesConditionsService.nonInfectiousEntryIDs` maintains
+the set of non-infectious entry UUIDs. When adding a new Type 2 or Type 3 entry,
+its UUID **must** be added to this set — otherwise it will sort as infectious.
 
 ---
 
@@ -548,6 +553,13 @@ speciesRisks: [
     SpeciesRisk(species: .reptile, severity: .severe, notes: "..."),
     // omit species not susceptible
 ],
+
+// Sort order — infectious diseases listed first, then conditions
+// For Type 2 or Type 3 entries, add the UUID to nonInfectiousEntryIDs:
+private static let nonInfectiousEntryIDs: Set<String> = [
+    "1D000001-0000-0000-0000-000000000005",  // Metabolic Bone Disease (MBD)
+    // ADD NEW NON-INFECTIOUS ENTRY UUIDs HERE
+]
 ```
 
 ---
@@ -556,7 +568,8 @@ speciesRisks: [
 
 Before submitting any Diseases & Conditions entry for implementation:
 
-- [ ] Entry type identified (Type 1 / Type 2 / Type 3) — guides section structure
+- [ ] Entry type identified (Type 1 / Type 2 / Type 3) — guides section structure and sort order
+- [ ] If Type 2 or Type 3: UUID added to `nonInfectiousEntryIDs` in `DiseasesConditionsService`
 - [ ] `name` includes species qualifier or common name if needed
 - [ ] `alternateNames` includes abbreviations, lay terms, misspellings
 - [ ] `description` covers: what it is, acute/chronic, life-threatening potential,

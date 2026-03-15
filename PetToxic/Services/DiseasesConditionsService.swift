@@ -16,6 +16,18 @@ class DiseasesConditionsService {
         }
     }
 
+    // MARK: - Entry Type Classification
+
+    /// UUIDs of non-infectious entries (Type 2: Husbandry, Type 3: Medical/Metabolic)
+    private static let nonInfectiousEntryIDs: Set<String> = [
+        "1D000001-0000-0000-0000-000000000005",  // Metabolic Bone Disease (MBD)
+    ]
+
+    /// Whether an entry is an infectious disease (Type 1)
+    func isInfectious(_ item: ToxicItem) -> Bool {
+        !Self.nonInfectiousEntryIDs.contains(item.id.uuidString)
+    }
+
     // MARK: - Disease Data
 
     private static func loadEntries() -> [ToxicItem] {
