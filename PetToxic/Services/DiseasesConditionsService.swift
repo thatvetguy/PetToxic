@@ -21,6 +21,7 @@ class DiseasesConditionsService {
     /// UUIDs of non-infectious entries (Type 2: Husbandry, Type 3: Medical/Metabolic)
     private static let nonInfectiousEntryIDs: Set<String> = [
         "1D000001-0000-0000-0000-000000000005",  // Metabolic Bone Disease (MBD)
+        "1D000001-0000-0000-0000-000000000009",  // Thermal Burns
     ]
 
     /// Whether an entry is an infectious disease (Type 1)
@@ -1297,6 +1298,205 @@ class DiseasesConditionsService {
                     "Veterinary Partner — Kennel Cough",
                     "Cornell University College of Veterinary Medicine — Kennel Cough",
                     "American Animal Hospital Association (AAHA) — Canine Vaccination Guidelines"
+                ],
+                relatedEntries: nil
+            ),
+
+            // MARK: - Thermal Burns
+            ToxicItem(
+                id: UUID(uuidString: "1D000001-0000-0000-0000-000000000009")!,
+                name: "Thermal Burns",
+                alternateNames: [
+                    "burns", "heat burns", "contact burns", "heat rock burn",
+                    "thermal injury", "burn wound", "scalding", "reptile burns"
+                ],
+                categories: [.diseasesAndConditions],
+                imageAsset: "thermal_burns_thumb",
+                description: """
+                Thermal burns are tissue injuries caused by direct or prolonged \
+                contact with an excessively hot surface, open flame, or intense \
+                radiant heat source. Burns are an acute injury — damage to the \
+                skin and underlying tissues occurs rapidly, and the full extent \
+                of the wound may not be visible for 24 to 72 hours after \
+                exposure as tissue continues to break down.
+
+                Burns can range from superficial (affecting only the outermost \
+                skin layers) to deep and life-threatening (destroying muscle, \
+                bone, or underlying structures). Even injuries that look minor \
+                on the surface can involve significant damage beneath — \
+                particularly in reptiles, where scale coverage can mask the \
+                true extent of the wound.
+
+                This is not a contagious condition. Thermal burns result from \
+                accidental contact or a husbandry failure, not from a pathogen.
+
+                All companion animal species can suffer thermal burns. Reptiles \
+                are at the highest risk due to a critical biological difference: \
+                as ectotherms, they rely entirely on external heat to regulate \
+                their body temperature. This drive is so powerful that a reptile \
+                will press against a dangerously hot surface for hours without \
+                retreating — and many reptiles show few outward signs of \
+                distress while a serious burn is forming beneath the surface. \
+                Dogs and cats can also develop burns from heating pads, hot \
+                pavement, campfires, space heaters, and accidental contact with \
+                stoves. Birds are at risk from proximity to heat lamps and \
+                ceramic heat emitters. Small mammals can be burned by \
+                improperly used heating accessories placed beneath or inside \
+                their enclosures.
+                """,
+                toxicityInfo: """
+                **How It Harms the Body**
+
+                Heat damages tissue by denaturing — breaking down — the \
+                proteins that form skin cells, blood vessels, and underlying \
+                structures. Superficial burns affect only the outermost layers, \
+                causing redness, swelling, and pain. Deeper burns destroy the \
+                full thickness of the skin and may extend into muscle, tendon, \
+                or bone.
+
+                One of the most dangerous features of thermal burns, especially \
+                in reptiles, is burn wound progression — the injury continues \
+                to expand and deepen for hours to days after the heat source is \
+                removed. What appears to be a minor surface blemish during \
+                initial assessment may reveal itself as a deep, full-thickness \
+                wound over the following days.
+
+                Burns also destroy the skin's barrier function, leaving the \
+                underlying tissue vulnerable to bacterial invasion. Secondary \
+                infection is a major and potentially life-threatening \
+                complication. In reptiles, this risk is compounded by the fact \
+                that immune function is closely tied to environmental \
+                temperature — a reptile housed at suboptimal temperatures after \
+                a burn is immunocompromised at exactly the moment a strong \
+                immune response is most needed.
+
+                The ectotherm thermoregulatory drive deserves particular \
+                attention. Reptiles are neurologically programmed to seek heat \
+                — it is not a preference but a survival imperative. This means \
+                a snake or lizard will press its abdomen against a heat rock \
+                for hours, even as the surface temperature climbs to levels \
+                that cause full-thickness burns, without retreating. Unlike a \
+                mammal that typically flinches and moves away from a painful \
+                stimulus, a reptile may remain completely still on a burning \
+                surface until the damage is severe. This is not stubbornness \
+                — it is biology working against the animal in a poorly designed \
+                enclosure.
+
+                **Causes & Risk Factors**
+
+                Heat rocks are the single most frequently cited cause of \
+                reptile thermal burns in veterinary medicine. They heat \
+                unevenly, can malfunction and reach dramatically unsafe \
+                temperatures, and cannot be reliably regulated without an \
+                external thermostat. Despite remaining widely available in pet \
+                stores, heat rocks are considered obsolete and dangerous by \
+                most reptile veterinarians and experienced herpetoculturists.
+
+                Other common causes include under-tank heaters or heat tape \
+                running without a thermostat, allowing surface temperatures to \
+                rise unchecked; heat lamps positioned too close to the basking \
+                area, enabling direct contact with the bulb or fixture; ceramic \
+                heat emitters and radiant heat sources without protective \
+                guards; heating pads intended for human use placed under small \
+                mammal cages or used directly with pets; hot pavement, asphalt, \
+                and sand during summer months (a common cause of paw pad burns \
+                in dogs); accidental contact with stoves, campfires, \
+                fireplaces, and space heaters in dogs and cats; and thermostat \
+                malfunction — a single failure in temperature control equipment \
+                can turn a well-designed enclosure into a lethal one overnight.
+
+                Young, debilitated, sedated, or neurologically impaired animals \
+                are at elevated risk because they are less able to move away \
+                from a dangerous heat source.
+
+                There is one cause that owners often do not anticipate: heating \
+                accessories themselves can become a source of injury through \
+                ingestion. Flexible heating mats, adhesive heat tape, and \
+                similar products left accessible inside an enclosure have been \
+                documented as ingested foreign bodies — snakes in particular \
+                may constrict, chew, or swallow heating accessories, and \
+                surgical removal may be required. Heating equipment should \
+                always be secured or kept outside the animal's accessible space.
+
+                **Treatment Goals**
+
+                Thermal burns are a veterinary emergency. Even burns that \
+                appear superficial warrant prompt evaluation — the full depth \
+                of a burn wound cannot be reliably assessed by appearance \
+                alone, particularly in reptiles where wound progression may \
+                still be actively occurring.
+
+                Veterinary goals for burn management include accurately \
+                assessing the depth and extent of the injury, preventing or \
+                treating secondary infection, managing pain, and supporting \
+                wound healing. Deep or extensive burns may require surgical \
+                debridement (removal of dead tissue), wound reconstruction, or \
+                prolonged intensive wound care. Animals that stop eating due to \
+                pain or stress may also require nutritional support.
+                """,
+                toxicityInfoSectionTitle: "What makes it harmful?",
+                onsetTime: OnsetTime(
+                    early: "Burns occur at the moment of contact; visible skin changes may appear within minutes to hours of heat exposure",
+                    delayed: "The full extent of tissue damage may not be apparent for 24 to 72 hours as burn wound progression continues beneath the surface"
+                ),
+                symptoms: [
+                    "Redness, discoloration, or unusual color change of skin or scales",
+                    "Blistering or fluid-filled swellings at the injury site",
+                    "Peeling, sloughing, or shedding skin or scales — especially on the belly or underside",
+                    "Open wound or raw, weeping area on the skin",
+                    "Blackened or necrotic (dead-appearing) tissue",
+                    "Reluctance to move; unusual stillness or altered posture",
+                    "Lethargy or sudden decrease in activity",
+                    "Loss of appetite",
+                    "Swelling, discharge, or odor at a wound site — signs of secondary infection",
+                    "Vocalization, flinching, or visible pain response when touched (more common in mammals)"
+                ],
+                entrySeverity: nil,
+                speciesRisks: [
+                    SpeciesRisk(
+                        species: .reptile,
+                        severity: .severe,
+                        notes: "Highest risk due to ectotherm thermoregulatory drive; will press against overheated surfaces without retreating; burns often masked by scales; secondary infection risk compounded by temperature-dependent immunity"
+                    ),
+                    SpeciesRisk(
+                        species: .bird,
+                        severity: .high,
+                        notes: "Risk from proximity to heat lamps and ceramic heat emitters; small body mass means burns can become critical rapidly"
+                    ),
+                    SpeciesRisk(
+                        species: .smallMammal,
+                        severity: .high,
+                        notes: "Heating pads placed under or inside enclosures are a frequent cause; young or debilitated animals especially vulnerable"
+                    ),
+                    SpeciesRisk(
+                        species: .dog,
+                        severity: .moderate,
+                        notes: "Hot pavement and asphalt burns to paw pads in summer; accidental contact with stoves, campfires, and space heaters"
+                    ),
+                    SpeciesRisk(
+                        species: .cat,
+                        severity: .moderate,
+                        notes: "Proximity to stoves, space heaters, and open fireplaces; less common than in reptiles but not rare"
+                    )
+                ],
+                preventionTips: [
+                    "Remove heat rocks from your reptile's enclosure — they are considered unsafe by most reptile veterinarians and are a leading cause of thermal burns in captive reptiles",
+                    "Use under-tank heaters, heat tape, and ceramic heat emitters only with an external thermostat — never run heating elements at unregulated power",
+                    "Verify temperatures regularly with an infrared temperature gun; check both the warm basking zone and the cool retreat zone of the enclosure",
+                    "Provide a proper thermal gradient — a distinct warm end and a cooler end — so your reptile can move between zones and self-regulate body temperature",
+                    "Secure all heating equipment so your pet cannot make direct contact with bulbs, emitters, or heating elements; use protective guards and barriers where needed",
+                    "Keep heating accessories outside your pet's accessible space — flexible heating mats and heat tape have been ingested by reptiles and may require surgical removal",
+                    "Keep birds a safe distance from heat lamps and radiant heat sources; ensure all heating equipment has appropriate protective guards",
+                    "For small mammals: always place bedding or an insulating layer between your pet and any heating pad; never use human heating pads on high settings under or inside an enclosure without veterinary guidance",
+                    "Before walking your dog on hot days, test pavement with your palm for several seconds — if it is too hot for your hand, it is too hot for your dog's paws",
+                    "Inspect all heating and temperature control equipment regularly for wear, malfunction, or damage — a single thermostat failure can cause a dangerous temperature spike overnight"
+                ],
+                sources: [
+                    "ASPCA Animal Poison Control Center — Reptile Husbandry and Thermal Injury",
+                    "Merck Veterinary Manual — Burns and Scalding in Animals",
+                    "LaFeber Vet — Thermal Burns in Exotic Companion Animals",
+                    "VCA Animal Hospitals — Burns in Reptiles",
+                    "Veterinary Partner — Reptile Husbandry and Common Medical Problems"
                 ],
                 relatedEntries: nil
             ),
