@@ -36,6 +36,12 @@ struct DiseasesConditionsListView: View {
         }
     }
 
+    /// Flattened, deduplicated entry list matching display order for left/right navigation
+    private var flattenedEntries: [ToxicItem] {
+        var seen = Set<UUID>()
+        return sections.flatMap { $0.items }.filter { seen.insert($0.id).inserted }
+    }
+
     private var columns: [GridItem] {
         Array(repeating: GridItem(.flexible(), spacing: 8), count: columnCount)
     }
@@ -128,8 +134,10 @@ struct DiseasesConditionsListView: View {
             }
         }
         .onAppear {
-            let allEntries = diseaseService.entries
-            navContext.enterCategoryList(category: .diseasesAndConditions, entries: allEntries)
+            navContext.enterCategoryList(category: .diseasesAndConditions, entries: flattenedEntries)
+        }
+        .onChange(of: selectedSpecies) { _, _ in
+            navContext.updateVisibleEntries(flattenedEntries)
         }
     }
 
