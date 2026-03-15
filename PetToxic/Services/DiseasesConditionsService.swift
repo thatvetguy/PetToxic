@@ -471,41 +471,224 @@ class DiseasesConditionsService {
             ToxicItem(
                 id: UUID(uuidString: "1D000001-0000-0000-0000-000000000004")!,
                 name: "Psittacosis (Parrot Fever)",
-                alternateNames: ["parrot fever", "chlamydiosis", "avian chlamydiosis", "ornithosis", "chlamydia psittaci"],
+                alternateNames: [
+                    "parrot fever", "chlamydiosis", "chlamydophilosis",
+                    "avian chlamydiosis", "ornithosis", "Chlamydia psittaci",
+                    "chlamydophila psittaci", "psittacosis infection", "parrot disease",
+                    "bird keeper's disease", "bird handler's disease"
+                ],
                 categories: [.diseasesAndConditions],
-                imageAsset: nil,
-                description: "Psittacosis is a bacterial disease caused by Chlamydia psittaci that primarily affects birds but can also be transmitted to humans (zoonotic). It is most common in parrots, parakeets, cockatiels, and macaws but can affect any bird species.",
-                toxicityInfo: "Chlamydia psittaci is spread through inhaling dried droppings, feather dust, or respiratory secretions from infected birds. Infected birds may carry the bacteria without showing symptoms, shedding it intermittently especially during stress. The bacteria attacks the respiratory system, liver, and spleen. This is a reportable disease in many jurisdictions due to its zoonotic potential.",
+                imageAsset: "psittacosis_thumb",
+                description: """
+                Psittacosis — commonly called parrot fever — is an infectious \
+                disease caused by Chlamydia psittaci, a specialized bacterium \
+                that lives and reproduces inside the cells of its host. It \
+                primarily affects birds but can also infect cats, and it is a \
+                significant zoonotic disease — meaning it can be transmitted \
+                from infected animals to humans.
+
+                Here is the detail that surprises almost every bird owner: an \
+                infected bird may look completely healthy. Chlamydia psittaci \
+                is notorious for producing subclinical carriers — birds that \
+                harbor and shed the bacteria for months or years without any \
+                visible signs of illness. Stress, overcrowding, or concurrent \
+                illness can trigger an apparently healthy bird to begin \
+                actively shedding the organism. This makes psittacosis one of \
+                the more challenging infectious diseases in avian medicine to \
+                detect and control.
+
+                The disease affects all types of pet birds, but parrots, \
+                cockatiels, budgerigars (budgies), macaws, and pigeons are \
+                among the most commonly involved species. Cats can also \
+                contract C. psittaci, typically through hunting or close \
+                contact with infected birds.
+
+                Psittacosis is a reportable disease in many US jurisdictions \
+                and internationally, meaning suspected cases must be reported \
+                to public health authorities. If your bird is diagnosed, your \
+                veterinarian may be legally required to notify local health \
+                officials.
+                """,
+                toxicityInfo: """
+                **How It Harms the Body**
+
+                Chlamydia psittaci is an obligate intracellular pathogen — it \
+                cannot replicate outside of a living host cell. After entering \
+                the body (typically through inhalation of contaminated \
+                particles), the bacteria invade cells lining the respiratory \
+                tract and spread via the bloodstream to multiple organ systems.
+
+                In birds, the primary targets are the liver, spleen, and \
+                respiratory system. The bacteria trigger an inflammatory \
+                response that can lead to hepatitis (liver inflammation), \
+                splenomegaly (enlargement of the spleen), pneumonia, and \
+                systemic illness. Because the organism lives inside cells, it \
+                is shielded from many components of the immune system — which \
+                is part of why some birds remain chronically infected without \
+                clearing the infection on their own.
+
+                In cats, C. psittaci typically causes respiratory signs and \
+                conjunctivitis (eye inflammation), though systemic illness is \
+                possible. Cats that hunt wild birds or have close contact with \
+                infected pet birds are at greatest risk.
+
+                The disease ranges from mild and self-limiting to severe and \
+                life-threatening, depending on the species affected, the \
+                strain of bacteria, the animal's immune status, and how \
+                quickly treatment is started.
+
+                **Transmission & Spread**
+
+                Chlamydia psittaci is shed in the feces, respiratory \
+                secretions, and feather dust of infected birds. Transmission \
+                occurs most commonly through inhalation of dried fecal \
+                particles, feather dust, or respiratory secretions — the most \
+                common route for both animals and humans. Direct contact with \
+                an infected bird's secretions or tissues also carries risk, as \
+                do bite wounds (less common but documented).
+
+                The bacteria can survive in dried droppings and feather debris \
+                in the environment for several weeks, meaning an enclosure or \
+                room that housed an infected bird can remain a source of \
+                exposure after the bird is removed.
+
+                High-risk settings include pet stores, aviaries, bird shows, \
+                rescue organizations, and multi-bird households. New birds \
+                introduced to an existing flock — especially birds sourced \
+                from pet stores, markets, or breeding facilities — represent a \
+                significant introduction risk, as stressed birds are more \
+                likely to begin actively shedding the organism.
+
+                A historically significant note: the 1929–1930 psittacosis \
+                pandemic swept through Europe and North America after a wave \
+                of imported parrots from South America. Hundreds of people \
+                became seriously ill, dozens died, and the outbreak triggered \
+                international regulations on parrot importation that persist \
+                in modified form today. It remains one of the most significant \
+                zoonotic disease events of the 20th century — caused entirely \
+                by pet birds.
+
+                **Treatment Goals**
+
+                Psittacosis in birds is treatable when identified early. \
+                Veterinary treatment focuses on eliminating the bacterial \
+                infection, supporting affected organ systems (particularly the \
+                liver), and preventing spread to other birds or people in the \
+                household.
+
+                Treatment typically requires an extended course — weeks rather \
+                than days — because the organism's intracellular nature makes \
+                it more difficult to clear than many other bacterial \
+                infections. All birds in the same household or aviary should \
+                be evaluated, as subclinical carriers may be present alongside \
+                visibly sick birds.
+
+                For cats, treatment focuses on resolving respiratory signs and \
+                eliminating infection. Early veterinary intervention \
+                significantly improves outcomes for both birds and cats.
+
+                Isolation of suspected cases is important — both to protect \
+                other animals and to reduce the risk of human exposure while \
+                diagnosis and treatment are underway.
+
+                **Zoonotic Risk**
+
+                Psittacosis is a genuine and well-documented human health \
+                risk. People most commonly become infected through inhalation \
+                of contaminated dust or dried droppings from infected birds. \
+                Those at highest risk include bird owners, veterinary staff, \
+                pet store workers, and anyone who handles birds regularly.
+
+                Human psittacosis typically presents as a flu-like respiratory \
+                illness and responds well to treatment when diagnosed — but it \
+                is sometimes missed because clinicians may not immediately \
+                consider a bird-associated illness. Informing your doctor that \
+                you own birds is important if you become ill.
+
+                Immunocompromised individuals, pregnant women, the elderly, \
+                and very young children are at greater risk of severe illness \
+                and should take extra precautions around birds with suspected \
+                or confirmed psittacosis.
+
+                If your bird has been diagnosed with psittacosis, take \
+                precautions when cleaning the enclosure and handling the bird, \
+                and contact your own physician if you have concerns about your \
+                own exposure. Psittacosis in humans is a reportable condition \
+                in most US states.
+
+                **Hooks & Interesting Facts**
+
+                The name "psittacosis" comes from Psittacus — the Latin word \
+                for parrot — even though the disease affects many bird species \
+                beyond parrots, including pigeons, doves, and poultry. When \
+                the disease is contracted from non-parrot birds, it is \
+                sometimes called ornithosis — but it is the same organism.
+
+                A bird can carry and shed C. psittaci for months or years \
+                without ever appearing sick. Stress — such as being moved to a \
+                new home, overcrowding, or the arrival of a new animal — can \
+                trigger active shedding in an otherwise asymptomatic carrier.
+
+                The 1929–1930 pandemic: imported parrots from Argentina and \
+                Brazil triggered an international outbreak that killed dozens \
+                of people and prompted some of the earliest modern zoonotic \
+                disease control regulations. The parrot trade was temporarily \
+                banned in several countries as a result.
+
+                Psittacosis is reportable in most US states — a confirmed \
+                diagnosis in your bird will likely be reported to public \
+                health authorities by your veterinarian. This is standard \
+                disease surveillance, not cause for alarm.
+                """,
                 toxicityInfoSectionTitle: "What makes it harmful?",
                 onsetTime: OnsetTime(
-                    early: "Incubation period varies from days to weeks. Stress (new environment, breeding, overcrowding) often triggers clinical disease in carrier birds.",
-                    delayed: "Chronic carriers may show intermittent signs over months. Without treatment, the disease can progress to severe systemic illness."
+                    early: "Incubation period in birds is typically 3–10 days but can extend to several weeks. Early signs include lethargy, ruffled feathers, reduced appetite, and nasal or eye discharge.",
+                    delayed: "As the disease progresses, birds may develop severe respiratory distress, greenish diarrhea, and significant weight loss. Liver and spleen enlargement may occur. Untreated birds can deteriorate rapidly — contact an avian veterinarian at the first signs of illness."
                 ),
                 symptoms: [
-                    "Nasal discharge and sneezing",
-                    "Difficulty breathing",
-                    "Watery or lime-green droppings",
-                    "Lethargy and ruffled feathers",
-                    "Loss of appetite and weight loss",
-                    "Eye inflammation (conjunctivitis)",
-                    "Tremors (severe cases)"
+                    "Lethargy or unusual quietness",
+                    "Ruffled or fluffed feathers (a sign a bird is unwell)",
+                    "Reduced appetite or weight loss",
+                    "Watery or discolored droppings (greenish or yellowish)",
+                    "Nasal discharge or sneezing",
+                    "Eye discharge or conjunctivitis (red, watery, or swollen eyes)",
+                    "Labored or rapid breathing",
+                    "Tail bobbing with each breath (a sign of respiratory effort in birds)",
+                    "Swollen or tender abdomen (from liver or spleen enlargement)",
+                    "Sudden death in severe cases with no prior obvious signs",
+                    "In cats: sneezing, nasal discharge, conjunctivitis, and lethargy"
                 ],
                 entrySeverity: nil,
                 speciesRisks: [
-                    SpeciesRisk(species: .bird, severity: .high, notes: "Psittacines (parrots, cockatiels, budgies) are most commonly affected. Mortality can be high without treatment, but the disease responds well to antibiotics (typically doxycycline for 45 days). Carrier birds may shed bacteria without symptoms.")
+                    SpeciesRisk(
+                        species: .bird,
+                        severity: .severe,
+                        notes: "All pet bird species are susceptible. Parrots (including cockatiels, budgerigars, macaws, African grey parrots, conures, and lovebirds), pigeons, and doves are most commonly affected. Birds acquired from pet stores, bird fairs, aviaries, or rescue organizations carry higher risk — stress of transport and new environments can trigger shedding in subclinical carriers. New birds should be quarantined from existing birds for at least 30 days and evaluated by an avian veterinarian. Psittacosis is a reportable disease — a confirmed diagnosis must be reported to public health authorities in most jurisdictions."
+                    ),
+                    SpeciesRisk(
+                        species: .cat,
+                        severity: .low,
+                        notes: "Cats can contract Chlamydia psittaci, typically through hunting wild birds or close contact with infected pet birds. Clinical signs most commonly involve the upper respiratory tract and eyes (conjunctivitis). While systemic illness is possible, most cats present with milder signs than affected birds. Cats in households with infected or suspected birds should be evaluated by a veterinarian. Indoor cats with no bird contact are at very low risk."
+                    )
                 ],
                 preventionTips: [
-                    "Quarantine new birds for at least 30-45 days before introducing to other birds",
-                    "Maintain good ventilation in bird housing areas",
-                    "Clean cages regularly to prevent accumulation of dried droppings",
-                    "Minimize stress factors like overcrowding and temperature extremes",
-                    "Have new birds tested by an avian veterinarian",
-                    "Wash hands after handling birds — this disease can spread to humans"
+                    "Have new birds evaluated by an avian veterinarian before introducing them to your home or existing flock — and quarantine them from other birds for at least 30 days",
+                    "Purchase birds from reputable sources that can provide health documentation; avoid birds from high-density or unknown-origin environments where psittacosis is more likely to circulate",
+                    "Clean bird enclosures regularly and thoroughly — C. psittaci survives in dried droppings and feather dust for weeks",
+                    "When cleaning cages, wear a mask and dampen droppings before sweeping or wiping to reduce inhalable dust — this applies to healthy birds as well as sick ones",
+                    "Minimize stress in your birds — stress is a known trigger for active shedding in subclinical carriers; avoid overcrowding, sudden environmental changes, and unnecessary disturbances",
+                    "If a bird appears unwell — lethargy, ruffled feathers, changed droppings — contact an avian veterinarian promptly; do not wait to see if it improves on its own",
+                    "Isolate any bird showing signs of illness from other birds immediately",
+                    "Psittacosis is a reportable disease — if your bird is diagnosed, follow your veterinarian's guidance on reporting requirements and precautions for your household",
+                    "If you own birds and develop a respiratory illness, inform your physician — psittacosis in humans can be missed if your doctor does not know you have birds",
+                    "Immunocompromised individuals, pregnant women, the elderly, and very young children should take extra precautions around birds with suspected or confirmed psittacosis and consult their own physician about their personal risk"
                 ],
                 sources: [
-                    "Association of Avian Veterinarians",
-                    "CDC - Psittacosis",
-                    "Merck Veterinary Manual - Chlamydiosis in Birds"
+                    "American Veterinary Medical Association (AVMA) — Psittacosis",
+                    "Centers for Disease Control and Prevention (CDC) — Psittacosis",
+                    "Merck Veterinary Manual — Chlamydiosis in Birds",
+                    "Association of Avian Veterinarians (AAV) — Psittacosis",
+                    "Cornell University College of Veterinary Medicine — Avian Chlamydiosis"
                 ],
                 relatedEntries: nil
             ),
