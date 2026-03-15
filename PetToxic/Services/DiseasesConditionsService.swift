@@ -709,42 +709,182 @@ class DiseasesConditionsService {
             ToxicItem(
                 id: UUID(uuidString: "1D000001-0000-0000-0000-000000000005")!,
                 name: "Metabolic Bone Disease (MBD)",
-                alternateNames: ["MBD", "nutritional secondary hyperparathyroidism", "calcium deficiency", "metabolic bone disease reptile"],
+                alternateNames: [
+                    "MBD", "metabolic bone disease", "nutritional secondary hyperparathyroidism",
+                    "NSHP", "fibrous osteodystrophy", "calcium deficiency",
+                    "vitamin D deficiency", "soft bone disease", "rubber jaw",
+                    "rickets", "osteomalacia"
+                ],
                 categories: [.diseasesAndConditions],
-                imageAsset: nil,
-                description: "Metabolic Bone Disease is a common and serious condition in captive reptiles caused by inadequate calcium, improper calcium-to-phosphorus ratios, or insufficient UVB lighting. While not infectious, it is one of the most prevalent health conditions in pet reptiles and is entirely preventable with proper husbandry.",
-                toxicityInfo: "MBD occurs when reptiles cannot properly metabolize calcium due to dietary deficiency, improper calcium:phosphorus ratio (should be 2:1), or lack of UVB light needed to produce vitamin D3. Without adequate calcium, the body draws it from bones, causing progressive skeletal weakening. Early stages are reversible with proper husbandry corrections, but advanced cases cause permanent deformity.",
+                imageAsset: "mbd_thumb",
+                description: """
+                Metabolic bone disease (MBD) is one of the most common — and most \
+                preventable — conditions seen in reptiles, birds, and some small mammals \
+                kept as pets. It develops when the body cannot maintain adequate calcium \
+                levels in bone tissue, leading to progressive weakening, deformity, and \
+                eventual fracture of the skeleton.
+
+                MBD is a chronic condition that develops gradually over weeks to months. \
+                Early signs are often subtle, and many owners do not notice a problem \
+                until the disease is already advanced. Despite the slow onset, MBD can \
+                become life-threatening if left untreated — in severe cases, calcium \
+                depletion affects muscle function and the nervous system, leading to \
+                seizures and collapse.
+
+                MBD is not an infectious disease and cannot be spread between animals. \
+                It is caused almost entirely by preventable husbandry failures: inadequate \
+                UVB lighting, incorrect calcium-to-phosphorus ratios in the diet, or \
+                insufficient vitamin D3. With the right environment and nutrition, MBD is \
+                largely avoidable.
+
+                Reptiles — particularly bearded dragons, iguanas, chameleons, and \
+                tortoises — are the most commonly affected animals. Birds (especially \
+                African grey parrots) and small mammals such as rabbits and guinea pigs \
+                can also be affected. Dogs and cats are rarely affected by MBD under \
+                normal circumstances.
+                """,
+                toxicityInfo: """
+                **How It Harms the Body**
+                Bone is living tissue that is constantly being built up and broken down. \
+                This process depends on calcium — and calcium metabolism depends on two \
+                things working together: adequate dietary calcium relative to phosphorus, \
+                and vitamin D3 to absorb and regulate it.
+
+                When calcium is insufficient or vitamin D3 is deficient, the body draws \
+                calcium directly from bone to maintain blood calcium levels. Over time, \
+                this demineralization (loss of calcium from bone tissue) causes bones to \
+                become soft, porous, and prone to fracture. In reptiles, this is sometimes \
+                called "rubber jaw" or "soft bones" — the jaw and limb bones may literally \
+                bend under the animal's own weight.
+
+                Vitamin D3 plays a critical role that is often misunderstood. Most reptiles \
+                cannot absorb calcium from food without adequate vitamin D3 — and most \
+                reptiles cannot synthesize vitamin D3 without ultraviolet B (UVB) light. \
+                Without UVB, even a calcium-rich diet will not prevent MBD. Oral vitamin D3 \
+                supplementation can partially compensate but rarely fully replaces proper \
+                UVB exposure.
+
+                As MBD progresses, the consequences extend beyond the skeleton. Severely \
+                low calcium levels (hypocalcemia) affect muscle function and the nervous \
+                system, causing tremors, muscle twitching, paralysis, and seizures. At \
+                this stage, MBD has become a systemic emergency.
+
+                The connection between UVB light and reptile health was not well understood \
+                until the 1980s and 1990s — before then, MBD was documented in zoo reptile \
+                collections worldwide with no clear explanation. Once the role of UVB in \
+                vitamin D3 synthesis was established, the design of reptile enclosures \
+                changed fundamentally. It is a reminder of how much species-specific \
+                husbandry knowledge still matters, even for animals that have been kept in \
+                captivity for generations.
+
+                **Causes & Risk Factors**
+                MBD is almost always the result of one or more of the following husbandry \
+                failures:
+
+                Inadequate UVB lighting is the most common cause in reptiles. UVB output \
+                from bulbs degrades over time even when the bulb still appears to emit \
+                visible light — bulbs should be replaced on a schedule, not just when they \
+                burn out. The distance between the bulb and the animal, the presence of \
+                glass or plastic between the two, and the number of hours per day the light \
+                is on all affect UVB exposure. Reptiles housed in enclosures with no UVB \
+                source at all are at extremely high risk.
+
+                Incorrect calcium-to-phosphorus ratio in the diet is a major contributor, \
+                particularly in reptiles fed primarily insects. Many feeder insects \
+                (crickets, mealworms) have an inverted calcium-to-phosphorus ratio that \
+                actively competes with calcium absorption. Gut-loading feeder insects and \
+                dusting them with calcium powder before feeding are standard practices for \
+                this reason.
+
+                All-seed diets in birds are a common underlying cause — seeds are high in \
+                phosphorus and fat, and chronically low in calcium and vitamin D3. African \
+                grey parrots are particularly vulnerable due to a species-specific \
+                predisposition to hypocalcemia (abnormally low blood calcium) that is not \
+                yet fully understood, even on diets considered adequate for other parrot \
+                species. They remain one of the most commonly affected bird species and a \
+                model for why species-specific nutrition research matters.
+
+                In small mammals such as rabbits and guinea pigs, MBD is typically \
+                diet-driven — insufficient hay, excessive pellets, and lack of leafy greens \
+                disrupt the calcium balance needed for healthy bone.
+
+                Young, rapidly growing animals are most vulnerable because their skeletons \
+                are developing quickly and have high calcium demands. Animals that have been \
+                kept in suboptimal conditions for months or years are also at high risk, as \
+                damage accumulates silently over time.
+
+                Metabolic bone disease has been called "almost entirely a disease of \
+                inadequate husbandry" — meaning that in the vast majority of cases, it did \
+                not have to happen. The knowledge needed to prevent it is straightforward \
+                and accessible. That makes early recognition and husbandry correction among \
+                the most powerful tools an exotic pet owner can have.
+
+                **Treatment Goals**
+                Veterinary treatment focuses on correcting the underlying calcium and \
+                vitamin D3 deficiency, providing supportive care for pain and fractures, \
+                and addressing any neurological signs such as tremors or seizures. \
+                Husbandry correction — fixing the UVB setup and diet — is an essential \
+                part of treatment, not just prevention.
+
+                Outcomes are significantly better with early veterinary intervention. \
+                Animals diagnosed with mild to moderate MBD and placed in a corrected \
+                environment with appropriate veterinary support can achieve meaningful \
+                improvement. Advanced MBD with severe deformity or neurological involvement \
+                carries a much more guarded outlook — another reason why early detection \
+                matters.
+                """,
                 toxicityInfoSectionTitle: "What makes it harmful?",
                 onsetTime: OnsetTime(
-                    early: "Early signs may appear within weeks to months of improper husbandry: lethargy, decreased appetite, and muscle twitching.",
-                    delayed: "Without correction, progressive bone softening, deformities, pathological fractures, and organ damage develop over months."
+                    early: "Develops gradually over weeks to months. Early signs are often subtle — slight lethargy, reduced activity, or mild changes in posture or gait that are easy to miss or attribute to other causes.",
+                    delayed: "As the condition progresses, bones become visibly soft or deformed. In advanced cases, spontaneous fractures, paralysis, and seizures can occur. At this stage, MBD has become a systemic emergency requiring immediate veterinary care."
                 ),
                 symptoms: [
-                    "Lethargy and weakness",
-                    "Muscle tremors and twitching",
-                    "Soft or rubbery jaw",
-                    "Swollen limbs or joints",
-                    "Difficulty walking or climbing",
-                    "Bowed legs or spinal deformities",
-                    "Decreased appetite",
-                    "Constipation"
+                    "Lethargy or reduced activity",
+                    "Trembling, twitching, or muscle spasms",
+                    "Soft, rubbery, or visibly deformed jaw or limb bones",
+                    "Swollen or thickened limbs",
+                    "Abnormal posture — hunched back, bowed limbs, or inability to hold normal position",
+                    "Difficulty walking, climbing, or gripping (reptiles and birds)",
+                    "Spontaneous fractures with minimal or no trauma",
+                    "Loss of appetite",
+                    "Paralysis or weakness of the hind limbs",
+                    "Seizures or collapse (advanced disease)"
                 ],
                 entrySeverity: nil,
                 speciesRisks: [
-                    SpeciesRisk(species: .reptile, severity: .high, notes: "Most common in bearded dragons, leopard geckos, chameleons, iguanas, and turtles/tortoises. Juveniles and rapidly growing reptiles are most vulnerable. Early-stage MBD is fully reversible. Advanced cases may cause permanent skeletal deformities or be fatal.")
+                    SpeciesRisk(
+                        species: .reptile,
+                        severity: .severe,
+                        notes: "Reptiles are the most commonly affected species. Bearded dragons, iguanas, chameleons, and tortoises are at particularly high risk. UVB deficiency is the primary driver in this group — without adequate UVB, even a calcium-rich diet will not prevent MBD. Young, rapidly growing reptiles are most vulnerable."
+                    ),
+                    SpeciesRisk(
+                        species: .bird,
+                        severity: .high,
+                        notes: "African grey parrots have a species-specific predisposition to hypocalcemia and are among the most commonly affected bird species. All-seed diets are a major risk factor across all parrot species. Egg-laying hens of any species are at increased risk due to the high calcium demands of egg production."
+                    ),
+                    SpeciesRisk(
+                        species: .smallMammal,
+                        severity: .moderate,
+                        notes: "Rabbits and guinea pigs can develop MBD, typically from calcium-deficient diets — insufficient hay and leafy greens, excessive pellets or seeds. Ferrets are rarely affected. Young, growing animals are most vulnerable."
+                    )
                 ],
                 preventionTips: [
-                    "Provide appropriate UVB lighting (replace bulbs every 6-12 months as UV output diminishes)",
-                    "Dust feeder insects with calcium powder at every feeding for juveniles, every other feeding for adults",
-                    "Maintain proper calcium:phosphorus ratio (2:1) in the diet",
-                    "Offer dark leafy greens high in calcium (collard greens, mustard greens) for herbivorous species",
-                    "Use calcium supplements with vitamin D3 if UVB access is limited",
-                    "Have an annual veterinary checkup that includes evaluation for MBD"
+                    "Provide appropriate UVB-B lighting for all reptiles — consult your exotic veterinarian for species-specific requirements. Replace UVB bulbs on schedule (typically every 6–12 months) even if they still emit visible light.",
+                    "Ensure UVB bulbs are the correct distance from your reptile and are not blocked by glass, plastic, or mesh, which can filter out UVB rays.",
+                    "Dust feeder insects (crickets, mealworms, etc.) with a calcium supplement before feeding, and gut-load insects with nutritious food 24–48 hours prior.",
+                    "Feed reptiles a species-appropriate diet with a correct calcium-to-phosphorus ratio. Avoid feeding primarily high-phosphorus insects without calcium supplementation.",
+                    "Avoid all-seed diets for birds. Seeds are high in fat and phosphorus and low in calcium and vitamin D3. A varied diet including leafy greens, vegetables, and a formulated pellet is strongly recommended.",
+                    "African grey parrots have a higher-than-average calcium requirement and should be monitored closely. Consult an avian veterinarian about species-appropriate supplementation.",
+                    "For rabbits and guinea pigs, ensure unlimited access to grass hay, which is the foundation of a calcium-balanced diet. Leafy greens are also beneficial.",
+                    "Schedule regular wellness exams with a veterinarian experienced in exotic animals. Routine bloodwork can detect calcium imbalances before clinical signs appear.",
+                    "If you notice any bone softness, deformity, trembling, or changes in your pet's movement or posture, contact a veterinarian promptly — early intervention significantly improves outcomes."
                 ],
                 sources: [
-                    "Association of Reptilian and Amphibian Veterinarians",
-                    "Merck Veterinary Manual - Metabolic Bone Disease in Reptiles",
-                    "Reptile Medicine and Surgery (Mader, 2nd Edition)"
+                    "Merck Veterinary Manual — Metabolic Bone Disease in Reptiles",
+                    "Merck Veterinary Manual — Nutritional Diseases of Pet Birds",
+                    "Veterinary Partner — Metabolic Bone Disease",
+                    "Journal of Exotic Pet Medicine — Calcium and Vitamin D3 Metabolism in Reptiles",
+                    "UC Davis School of Veterinary Medicine — Reptile Husbandry Guidelines"
                 ],
                 relatedEntries: nil
             ),
