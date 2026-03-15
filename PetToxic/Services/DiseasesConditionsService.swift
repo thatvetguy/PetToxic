@@ -386,40 +386,154 @@ class DiseasesConditionsService {
             ToxicItem(
                 id: UUID(uuidString: "1D000001-0000-0000-0000-000000000006")!,
                 name: "Leptospirosis",
-                alternateNames: ["lepto", "leptospira", "weil's disease", "rat urine disease"],
+                alternateNames: [
+                    "lepto", "leptospira", "Weil's disease", "leptospiral infection",
+                    "lepto infection", "leptospirosis in dogs", "field fever", "mud fever"
+                ],
                 categories: [.diseasesAndConditions],
-                imageAsset: nil,
-                description: "Leptospirosis is a bacterial disease caused by Leptospira species that can affect dogs and other mammals, including humans. It is spread through contact with infected urine or contaminated water, soil, or food. It is a significant zoonotic disease.",
-                toxicityInfo: "Leptospira bacteria enter through mucous membranes or broken skin, then spread through the bloodstream to the kidneys and liver. The bacteria cause damage to these organs through direct invasion and inflammatory responses. Severity ranges from subclinical infection to fatal organ failure. Risk increases with exposure to standing water, wildlife, and livestock.",
+                imageAsset: "leptospirosis_thumb",
+                description: """
+                Leptospirosis is a serious bacterial disease caused by spiral-shaped bacteria \
+                of the genus Leptospira. It affects a wide range of mammals — including dogs, \
+                wildlife, and humans — and is one of the most widespread zoonotic diseases in \
+                the world, meaning it can be transmitted from animals to people.
+
+                In dogs, leptospirosis primarily targets the kidneys and liver and can cause \
+                life-threatening organ failure without prompt veterinary care. The disease can \
+                progress rapidly — some dogs deteriorate quickly with little warning, while \
+                others show a more gradual onset of illness. Outcomes are significantly better \
+                with early veterinary intervention.
+
+                Leptospirosis is spread through contact with water, soil, or mud contaminated \
+                by the urine of infected animals. Rats and other wildlife are the primary \
+                reservoir hosts — they carry and shed the bacteria continuously without becoming \
+                ill themselves. Dogs that spend time outdoors, near bodies of water, in rural \
+                areas, or in regions with high wildlife activity are at elevated risk, \
+                particularly after flooding or heavy rainfall when bacteria are more widely \
+                dispersed.
+
+                The disease is found worldwide but is more common in warm, wet climates and \
+                tropical regions. In North America, cases occur year-round but peak in late \
+                summer and fall. Urban dogs are not immune — contact with rat urine in city \
+                environments is a well-documented exposure route.
+
+                Perhaps the most striking recent example of leptospirosis' reach: in the summer \
+                of 2025, a record-breaking outbreak struck California sea lions along the central \
+                and northern coast, with over 400 animals stranding sick between June and October \
+                — the largest outbreak ever recorded. The bacteria spread among sea lions \
+                congregating on beaches through urine-contaminated sand, and authorities warned \
+                dog owners to keep pets leashed and at least 150 feet from any marine mammals. \
+                A dog that sniffs, licks, or rolls near an infected sea lion or contaminated sand \
+                can be exposed. The outbreak was a vivid reminder that leptospirosis is not just \
+                a rural or wildlife disease — it can appear anywhere animals gather.
+
+                A vaccine is available for dogs and is strongly recommended for those with \
+                outdoor exposure, waterside activity, or wildlife contact. The vaccine targets \
+                the most common serovars (strains) but does not provide complete protection \
+                against all strains — vaccinated dogs can still be infected by uncommon serovars.
+                """,
+                toxicityInfo: """
+                **How It Harms the Body**
+                After entering the body — typically through mucous membranes, cuts in the skin, \
+                or ingestion of contaminated water — Leptospira bacteria spread through the \
+                bloodstream to the kidneys and liver, where they cause inflammation and direct \
+                cellular damage. In the kidneys, this leads to acute kidney injury (sudden loss \
+                of kidney function), which can become severe enough to require dialysis-level \
+                supportive care. Liver damage causes jaundice (yellowing of the skin, eyes, and \
+                gums) and disrupts the liver's ability to manage toxins and produce essential \
+                proteins.
+
+                In severe cases, leptospirosis can cause systemic bleeding disorders — the \
+                bacteria trigger widespread inflammation that disrupts the normal clotting \
+                process, leading to bleeding into the lungs, gut, or other tissues. Pulmonary \
+                hemorrhage syndrome (severe bleeding into the lungs) is a particularly dangerous \
+                complication and can develop rapidly.
+
+                The severity of disease depends on which serovar (strain) of Leptospira is \
+                involved, the size and health of the dog, and how quickly treatment is initiated.
+
+                **Transmission & Spread**
+                The primary source of infection is urine from infected animals — most commonly \
+                rats, mice, raccoons, skunks, opossums, and other wildlife that serve as \
+                long-term reservoir hosts without becoming ill themselves. Bacteria are shed into \
+                the environment through urine and can survive for weeks to months in warm, moist \
+                soil and standing water.
+
+                Dogs most commonly become infected by swimming in, drinking from, or wading \
+                through contaminated water (lakes, ponds, puddles, flooded areas), contact with \
+                contaminated soil or mud, direct contact with an infected animal or its urine, \
+                or hunting and scavenging infected wildlife.
+
+                Cats can be exposed and may test seropositive (showing evidence of past \
+                exposure), but they rarely develop significant clinical disease. They are not \
+                considered a major clinical risk but owners of infected cats should still \
+                exercise hygiene precautions.
+
+                Leptospirosis is zoonotic — it can be transmitted from infected animals to \
+                humans. People most commonly become infected through contact with the urine of \
+                an infected animal or urine-contaminated water, soil, or surfaces. If your pet \
+                has been diagnosed with leptospirosis, take precautions when handling them — \
+                particularly when handling their urine or cleaning up after them — and contact \
+                your own physician if you have concerns about your own exposure. Individuals who \
+                are immunocompromised, pregnant, elderly, or very young may be at greater risk \
+                and should take extra precautions.
+
+                **Treatment Goals**
+                Veterinary treatment focuses on controlling the bacterial infection, supporting \
+                kidney and liver function, maintaining hydration and electrolyte balance, and \
+                managing any complications such as bleeding disorders or respiratory involvement. \
+                Early hospitalization significantly improves outcomes — dogs that receive prompt, \
+                aggressive supportive care have a much better chance of recovery than those where \
+                treatment is delayed. Even after apparent recovery, some dogs may have residual \
+                kidney damage that requires long-term management.
+                """,
                 toxicityInfoSectionTitle: "What makes it harmful?",
                 onsetTime: OnsetTime(
-                    early: "Incubation period is 2-12 days. Early signs include fever, lethargy, loss of appetite, and muscle stiffness.",
-                    delayed: "Kidney and/or liver failure may develop 1-2 weeks after infection. Some dogs develop chronic kidney disease after recovery."
+                    early: "2–12 days after exposure (typically 5–7 days)",
+                    delayed: "Kidney or liver failure may develop days after initial signs appear; some dogs progress rapidly without obvious early illness"
                 ),
                 symptoms: [
-                    "Fever and muscle pain",
-                    "Vomiting and diarrhea",
-                    "Loss of appetite and lethargy",
-                    "Increased thirst and urination (progressing to decreased urination)",
-                    "Jaundice (yellowing of skin, gums, eyes)",
-                    "Difficulty breathing",
-                    "Bleeding disorders (severe cases)"
+                    "Sudden lethargy and weakness",
+                    "Loss of appetite",
+                    "Vomiting",
+                    "Increased thirst and urination — or conversely, reduced or absent urination (sign of kidney failure)",
+                    "Abdominal pain — dog may be reluctant to move or adopt a hunched posture",
+                    "Jaundice — yellowing of the gums, whites of the eyes, or skin",
+                    "Fever",
+                    "Muscle pain or stiffness — dog may be reluctant to move",
+                    "Diarrhea (sometimes bloody)",
+                    "Bleeding from the nose or mouth, or blood in urine — sign of clotting disorder; seek emergency care immediately",
+                    "Difficulty breathing — sign of lung involvement; seek emergency care immediately"
                 ],
                 entrySeverity: nil,
                 speciesRisks: [
-                    SpeciesRisk(species: .dog, severity: .severe, notes: "Dogs are the most commonly affected domestic species. Risk is highest for dogs with outdoor exposure, especially near standing water or wildlife. Vaccination is available and recommended for at-risk dogs. Without treatment, mortality is significant.")
+                    SpeciesRisk(
+                        species: .dog,
+                        severity: .severe,
+                        notes: "Primary companion animal species affected. Can cause life-threatening acute kidney injury and liver failure. Rapid progression possible in some cases. Vaccine available but serovar-specific — does not protect against all strains."
+                    ),
+                    SpeciesRisk(
+                        species: .smallMammal,
+                        severity: .moderate,
+                        notes: "Rats and mice are natural reservoir hosts — they carry and shed Leptospira chronically without becoming ill. Guinea pigs and hamsters are susceptible to clinical disease. Ferrets can be infected; limited but documented case reports. Rabbits can be exposed; clinical disease less commonly reported."
+                    )
                 ],
                 preventionTips: [
-                    "Vaccinate at-risk dogs — discuss the leptospirosis vaccine with your veterinarian",
-                    "Avoid letting dogs drink from or swim in stagnant water, ponds, or puddles",
-                    "Control rodent populations around your property",
-                    "Wear gloves when handling potentially contaminated water or soil",
-                    "This disease can spread to humans — seek medical attention if you suspect exposure"
+                    "Vaccination is the most important preventive measure for dogs with outdoor exposure. The leptospirosis vaccine is recommended for dogs that spend time near water, in rural or wooded areas, or in regions with high wildlife activity. Ask your veterinarian whether the vaccine is appropriate for your dog.",
+                    "The vaccine targets the most common serovars (strains) of Leptospira but does not protect against all strains. Vaccinated dogs can still be infected by less common serovars — vaccination reduces risk but does not eliminate it entirely.",
+                    "Prevent dogs from drinking from, swimming in, or wading through stagnant water, ponds, puddles, or flooded areas — especially after heavy rain when bacteria are more widely dispersed.",
+                    "Discourage contact with wildlife and control rodent populations around your home. Rats and mice are the primary reservoir hosts and shed bacteria continuously through their urine.",
+                    "If visiting beaches where sea lions or other marine mammals are present, keep dogs leashed and maintain at least 150 feet of distance from any marine mammal — alive or dead. Urine-contaminated sand near haul-out areas is a known exposure risk, as highlighted by the record 2025 California sea lion outbreak.",
+                    "Leptospirosis is a zoonotic disease — it can be transmitted from infected animals to humans. If your pet is diagnosed with leptospirosis, wear gloves when handling them or cleaning up their urine, wash hands thoroughly afterward, and contact your physician if you have concerns about your own exposure.",
+                    "Be aware that urban dogs are not immune — contact with rat urine in city environments is a well-documented exposure route, particularly in areas with high rodent activity.",
+                    "Leptospirosis is a reportable disease in many jurisdictions. Your veterinarian will advise on any reporting requirements and on precautions to take within your household."
                 ],
                 sources: [
-                    "AVMA - Leptospirosis",
-                    "CDC - Leptospirosis",
-                    "Merck Veterinary Manual - Leptospirosis"
+                    "Merck Veterinary Manual — Leptospirosis",
+                    "Veterinary Partner — Leptospirosis in Dogs",
+                    "Cornell University College of Veterinary Medicine — Leptospirosis",
+                    "Centers for Disease Control and Prevention (CDC) — Leptospirosis",
+                    "American Animal Hospital Association (AAHA) — Canine Vaccination Guidelines"
                 ],
                 relatedEntries: nil
             ),
