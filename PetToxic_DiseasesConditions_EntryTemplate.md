@@ -357,6 +357,18 @@ entrySeverity: nil,
   - Severity level appropriate to that species
   - Any species-specific clinical notes
 
+**Severity `.low` and species list visibility:**
+Species with a `.low` severity rating are **excluded from that species'
+category list** in the app. The entry will not appear under that species
+group in the Diseases & Conditions browse view. The species risk data is
+still present on the entry itself — it displays when the entry is opened
+from another species group where the risk is higher.
+
+Use `.low` when a species is technically susceptible but the clinical
+significance is minimal (e.g., cats and Canine Influenza H3N2 — documented
+but uncommon and typically mild). If a species has meaningful clinical risk,
+use `.moderate` or higher so the entry appears in that species' list.
+
 **Approved species risk note framing:**
 - "Most vulnerable in [age group / unvaccinated / immunocompromised]"
 - "Certain breeds may have higher susceptibility"

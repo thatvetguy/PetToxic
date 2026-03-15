@@ -88,6 +88,8 @@ entrySeverity: nil
 
 Species-level severity is set on each `SpeciesRisk` — that's where the meaningful severity data lives.
 
+**Important:** Species with `.low` severity are **excluded from that species' browse list** in the app. The data is preserved on the entry and displays when opened from another species group. Use `.low` only for species where susceptibility is technically documented but clinically minimal. Use `.moderate` or higher if the entry should appear in that species' list.
+
 ---
 
 ## Sort Order Registration (Non-Infectious Entries Only)
