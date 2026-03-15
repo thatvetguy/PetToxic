@@ -428,40 +428,121 @@ class DiseasesConditionsService {
             ToxicItem(
                 id: UUID(uuidString: "1D000001-0000-0000-0000-000000000007")!,
                 name: "Myxomatosis",
-                alternateNames: ["myxo", "myxoma virus", "rabbit myxomatosis"],
+                alternateNames: [
+                    "myxoma", "myxoma virus", "rabbit myxomatosis", "myxomatosis virus",
+                    "myxo", "rabbit plague"
+                ],
                 categories: [.diseasesAndConditions],
-                imageAsset: nil,
-                description: "Myxomatosis is a severe and usually fatal viral disease of rabbits caused by the Myxoma virus. It is spread by biting insects (mosquitoes, fleas) and direct contact with infected rabbits. It is endemic in wild rabbit populations in many regions.",
-                toxicityInfo: "The Myxoma virus causes severe swelling of the mucous membranes, skin, and internal organs. It suppresses the immune system, leading to secondary bacterial infections that often cause death. Mortality in domestic rabbits is extremely high (over 99% in naive populations). The virus is primarily transmitted by fleas, mosquitoes, and other biting insects, though direct contact and fomites can also spread it.",
+                imageAsset: "myxomatosis_thumb",
+                description: """
+                Myxomatosis is a severe and often fatal viral disease caused by the Myxoma virus, \
+                a poxvirus that affects domestic and wild European rabbits. The disease causes \
+                widespread swelling of the skin, eyes, and mucous membranes, and rapidly progresses \
+                to systemic illness affecting multiple organ systems.
+
+                In unvaccinated rabbits, myxomatosis carries a grave prognosis — most unvaccinated \
+                rabbits who develop the full-blown disease do not survive, even with intensive \
+                veterinary care. Rabbits that do survive face a prolonged and difficult recovery.
+
+                The disease is widespread in the United Kingdom, Europe, and Australia, where it \
+                was deliberately introduced in the 1950s to control wild rabbit populations. In \
+                North America, myxomatosis occurs in wild brush rabbits and cottontails in parts \
+                of the western United States and Canada, but domestic rabbits in North America \
+                remain at risk, particularly those with outdoor access. The disease is not found \
+                in all regions — rabbit owners should consult their veterinarian about local risk.
+
+                A vaccine is available in the UK and Europe and is strongly recommended for all \
+                pet rabbits in affected regions. No myxomatosis vaccine is currently licensed for \
+                use in the United States or Canada.
+
+                Myxomatosis affects rabbits only. Dogs, cats, birds, reptiles, and other small \
+                mammals are not susceptible.
+                """,
+                toxicityInfo: """
+                **How It Harms the Body**
+                The Myxoma virus spreads through the body after initial infection, targeting cells \
+                throughout the skin, mucous membranes, and immune system. The virus causes the \
+                formation of mucinous tumors (myxomas) — soft, jelly-like swellings — that appear \
+                first at the site of infection and then spread across the face, eyes, ears, nose, \
+                and genitals. Severe swelling around the eyes can cause the rabbit to become \
+                completely unable to see.
+
+                As infection progresses, the virus suppresses the immune system, leaving the rabbit \
+                unable to mount an effective defense against the virus itself or against secondary \
+                bacterial infections. Respiratory involvement — congestion, labored breathing, and \
+                pneumonia — is common in the later stages and is frequently the cause of death. The \
+                combination of immune suppression, secondary infection, and multi-organ involvement \
+                makes recovery without aggressive veterinary intervention extremely unlikely in \
+                unvaccinated rabbits.
+
+                A less common respiratory (atypical) form of myxomatosis exists in which skin \
+                lesions are mild or absent, but respiratory signs and immune suppression are still \
+                severe. This form can be harder to recognize and carries an equally grave prognosis.
+
+                **Transmission & Spread**
+                Myxomatosis is transmitted primarily by biting insects — most commonly rabbit fleas \
+                and mosquitoes — that carry the virus from infected wild or domestic rabbits to \
+                healthy ones. Direct contact with an infected rabbit, or contact with contaminated \
+                bedding, hutches, or equipment, can also spread the disease. The virus can persist \
+                in the environment for a period of time, and hutches or equipment used by infected \
+                rabbits should be thoroughly disinfected before introducing a new rabbit.
+
+                Outdoor rabbits are at the greatest risk because of exposure to mosquitoes, fleas, \
+                and contact with wild rabbits. However, indoor rabbits are not entirely protected \
+                — mosquitoes can enter homes, and fleas can be introduced by other pets. In regions \
+                where myxomatosis is endemic, even well-cared-for indoor rabbits can be at risk.
+
+                Myxomatosis does not spread from rabbits to humans or to other pet species.
+
+                **Treatment Goals**
+                There is no antiviral treatment that directly targets the Myxoma virus. Veterinary \
+                care focuses on providing supportive care to keep the rabbit as comfortable as \
+                possible, managing secondary bacterial infections, maintaining nutrition and \
+                hydration, and controlling pain. In mild or early-stage cases in otherwise healthy \
+                rabbits, intensive supportive care can occasionally result in recovery, but outcomes \
+                in unvaccinated rabbits with full systemic disease are very poor even with treatment. \
+                Euthanasia may be the most humane option in severe cases — this is a decision made \
+                in consultation with a veterinarian based on the individual rabbit's condition.
+                """,
                 toxicityInfoSectionTitle: "What makes it harmful?",
                 onsetTime: OnsetTime(
-                    early: "Incubation period is 1-14 days (typically 5-6 days). Early signs include puffy, swollen eyelids, lethargy, fever, and loss of appetite.",
-                    delayed: "Severe swelling of head, ears, and genitals develops over days. Secondary infections lead to pneumonia. Most rabbits die within 10-14 days of symptom onset."
+                    early: "1–6 days (initial skin nodule and eye swelling)",
+                    delayed: "Full systemic disease develops within 1–2 weeks; death can occur within 10–14 days in unvaccinated rabbits"
                 ),
                 symptoms: [
-                    "Swollen, puffy eyelids (often the first sign)",
-                    "Discharge from eyes and nose",
-                    "Swelling of ears, nose, lips, and genitals",
-                    "High fever",
+                    "Soft, raised skin swellings or nodules — often appearing first around the face, eyes, or genitals",
+                    "Swollen, puffy eyelids — can progress to eyes swelling completely shut",
+                    "Thick discharge from the eyes and nose",
+                    "Swelling around the ears, lips, nose, and genital area",
                     "Lethargy and loss of appetite",
-                    "Difficulty breathing",
-                    "Skin lumps and nodules"
+                    "Labored or noisy breathing",
+                    "High fever",
+                    "Hunched posture",
+                    "Inability to see due to severe eye swelling",
+                    "In the atypical (respiratory) form: breathing difficulty may appear without obvious skin swellings"
                 ],
                 entrySeverity: nil,
                 speciesRisks: [
-                    SpeciesRisk(species: .smallMammal, severity: .severe, notes: "Affects rabbits almost exclusively. Mortality in pet rabbits is extremely high (over 99%). Vaccination is available in some countries (UK, Europe, Australia) but NOT currently approved in the US. Prevention focuses on insect control and limiting outdoor exposure.")
+                    SpeciesRisk(
+                        species: .smallMammal,
+                        severity: .severe,
+                        notes: "Affects domestic and wild European rabbits only. Other small mammals including guinea pigs, hamsters, rats, mice, ferrets, and chinchillas are not susceptible. Unvaccinated rabbits that develop systemic disease have a very poor chance of survival even with intensive veterinary care."
+                    )
                 ],
                 preventionTips: [
-                    "Use insect screens on outdoor rabbit enclosures to prevent mosquito and fly bites",
-                    "Apply rabbit-safe flea prevention (consult your veterinarian — many flea products are toxic to rabbits)",
-                    "Vaccinate where available (UK, Europe, Australia — not currently available in the US)",
-                    "Avoid contact with wild rabbits",
-                    "Bring outdoor rabbits inside during peak mosquito hours (dawn and dusk)"
+                    "In the UK and Europe, vaccination is the single most effective preventive measure and is strongly recommended for all pet rabbits. Follow your veterinarian's recommended vaccination schedule.",
+                    "No myxomatosis vaccine is currently licensed in the United States or Canada. Rabbit owners in North America should focus on reducing insect exposure and contact with wild rabbits.",
+                    "Minimize mosquito and flea exposure. Use veterinarian-approved flea prevention on household dogs and cats that may bring fleas indoors. Mosquito netting over outdoor hutches can help reduce exposure.",
+                    "Keep rabbits away from wild rabbits, which can carry the virus without showing obvious signs of illness.",
+                    "Outdoor rabbits are at significantly higher risk than indoor rabbits. Consider housing rabbits indoors or providing screened outdoor enclosures, particularly during peak mosquito season.",
+                    "If a rabbit has been diagnosed with myxomatosis, disinfect all hutches, bedding, bowls, and equipment thoroughly before housing another rabbit in the same space.",
+                    "Any rabbit showing facial swelling, eye discharge, or skin nodules should be evaluated by a veterinarian immediately — early intervention gives the best chance of survival."
                 ],
                 sources: [
-                    "Rabbit Welfare Association & Fund",
-                    "Merck Veterinary Manual - Myxomatosis",
-                    "House Rabbit Society"
+                    "Merck Veterinary Manual — Myxomatosis",
+                    "Veterinary Partner — Myxomatosis in Rabbits",
+                    "House Rabbit Society — Myxomatosis",
+                    "RSPCA (UK) — Myxomatosis in Rabbits"
                 ],
                 relatedEntries: nil
             ),
