@@ -466,44 +466,133 @@ class DiseasesConditionsService {
                 relatedEntries: nil
             ),
 
-            // MARK: - Kennel Cough (Canine Infectious Respiratory Disease Complex)
+            // MARK: - Kennel Cough (CIRDC)
             ToxicItem(
                 id: UUID(uuidString: "1D000001-0000-0000-0000-000000000008")!,
-                name: "Kennel Cough",
-                alternateNames: ["canine infectious tracheobronchitis", "Bordetella", "CIRDC", "dog cough", "canine cough"],
+                name: "Kennel Cough (CIRDC)",
+                alternateNames: [
+                    "kennel cough", "CIRDC", "canine infectious respiratory disease complex",
+                    "canine infectious tracheobronchitis", "Bordetella", "bordetellosis",
+                    "kennel hack", "dog cough", "ITB"
+                ],
                 categories: [.diseasesAndConditions],
-                imageAsset: nil,
-                description: "Kennel cough is a highly contagious respiratory disease complex caused by multiple bacteria and viruses, most commonly Bordetella bronchiseptica and canine parainfluenza virus. It is spread through airborne droplets, direct contact, or contaminated surfaces, and commonly occurs where dogs are in close quarters.",
-                toxicityInfo: "Kennel cough involves inflammation of the upper airways (trachea and bronchi). Multiple pathogens can be involved simultaneously. While usually self-limiting in healthy adult dogs, it can progress to pneumonia in puppies, elderly dogs, or immunocompromised animals. The characteristic 'honking' cough is caused by tracheal inflammation.",
+                imageAsset: "cirdc_thumb",
+                description: """
+                Kennel Cough — now more accurately called Canine Infectious Respiratory Disease \
+                Complex (CIRDC) — is a highly contagious respiratory illness in dogs caused not \
+                by a single pathogen, but by a combination of viruses and bacteria acting together. \
+                The most well-known agent is Bordetella bronchiseptica, but canine parainfluenza \
+                virus, canine adenovirus type 2, and several other pathogens are frequently involved \
+                simultaneously.
+
+                In otherwise healthy adult dogs, CIRDC is typically a self-limiting illness — \
+                uncomfortable, but not life-threatening. However, it can progress to serious \
+                pneumonia in puppies, senior dogs, immunocompromised animals, and brachycephalic \
+                breeds (flat-faced breeds such as Bulldogs and Pugs). Dogs in high-density \
+                environments — boarding kennels, shelters, dog parks, grooming facilities, and \
+                training classes — are at greatest risk of exposure.
+
+                Vaccines targeting several CIRDC pathogens are available, but because the complex \
+                involves multiple agents, vaccination reduces severity and spread rather than \
+                guaranteeing complete protection. Any dog showing respiratory signs warrants \
+                veterinary evaluation, as even apparently mild cases can progress — and high-risk \
+                dogs can deteriorate quickly.
+                """,
+                toxicityInfo: """
+                **How It Harms the Body**
+                CIRDC pathogens target the ciliated respiratory epithelium — the protective lining \
+                of the airways made up of cells with tiny hair-like projections that continuously \
+                sweep debris and pathogens out of the respiratory tract. When these cells are \
+                damaged or destroyed, the airways lose a critical layer of defense, creating an \
+                opening for secondary bacterial infections to take hold. The result is inflammation \
+                and irritation throughout the trachea (windpipe) and bronchi (the airways leading \
+                into the lungs), producing the characteristic harsh, persistent cough.
+
+                In most healthy adult dogs, the immune system mounts an effective response and \
+                recovery occurs within 1–3 weeks. In vulnerable animals — puppies with immature \
+                immune systems, senior dogs, immunocompromised individuals, and brachycephalic \
+                breeds whose airway anatomy already limits respiratory reserve — the infection can \
+                spread deeper into the lungs and cause pneumonia (infection of the lung tissue \
+                itself). Pneumonia is a serious complication that can become life-threatening \
+                without prompt veterinary care.
+
+                **Transmission & Spread**
+                CIRDC spreads efficiently through direct contact with infected dogs, airborne \
+                respiratory droplets from coughing or sneezing, and contact with contaminated \
+                surfaces such as shared water bowls, food dishes, bedding, leashes, and handlers' \
+                hands. Pathogens can survive on surfaces for hours to days depending on conditions.
+
+                Infected dogs can begin shedding pathogens and spreading the disease before they \
+                show any visible signs of illness — making containment in group settings difficult. \
+                After recovery, dogs may continue to shed Bordetella bronchiseptica for up to 3 \
+                months. High-risk settings include boarding kennels, animal shelters, dog parks, \
+                grooming facilities, training classes, and veterinary clinics where multiple dogs \
+                are present.
+
+                Bordetella bronchiseptica can also infect cats (particularly in shelter \
+                environments) and small mammals such as rabbits and guinea pigs. Notably, \
+                guinea pigs can carry and shed Bordetella bronchiseptica without showing any \
+                signs of illness themselves — meaning a healthy-appearing guinea pig in the \
+                home can be a source of infection for dogs in the same household.
+
+                **Treatment Goals**
+                For mild cases in healthy adult dogs, veterinary care focuses on rest, monitoring, \
+                and supportive management to keep the dog comfortable while the immune system clears \
+                the infection. For moderate to severe cases — or any case involving a high-risk dog \
+                — treatment goals expand to managing airway inflammation, addressing secondary \
+                bacterial infections, and supporting respiratory function. Dogs developing signs of \
+                pneumonia require prompt, more intensive intervention. Even dogs that initially \
+                appear mildly affected should be evaluated by a veterinarian, as severity can \
+                escalate and the appropriate course of care varies depending on the individual animal.
+                """,
                 toxicityInfoSectionTitle: "What makes it harmful?",
                 onsetTime: OnsetTime(
-                    early: "Incubation period is 2-14 days. A persistent dry, honking cough develops first, often triggered by excitement or pulling on a leash.",
-                    delayed: "Most cases resolve within 1-3 weeks. Complicated cases (pneumonia) may develop 1-2 weeks after initial signs, especially in young or immunocompromised dogs."
+                    early: "2–14 days after exposure (typically 3–7 days)",
+                    delayed: "Pneumonia may develop days after initial symptom onset, especially in high-risk individuals"
                 ),
                 symptoms: [
-                    "Persistent dry, honking cough",
-                    "Retching or gagging after coughing",
-                    "Nasal discharge (clear to mucoid)",
+                    "Forceful, persistent cough — often described as a goose-honk sound",
+                    "Retching or gagging after coughing episodes",
+                    "Nasal discharge (clear, white, or yellow)",
+                    "Sneezing",
+                    "Eye discharge",
                     "Mild lethargy",
-                    "Decreased appetite (mild cases)",
-                    "Fever (if secondary infection develops)",
-                    "Difficulty breathing (severe/complicated cases)"
+                    "Reduced appetite",
+                    "Fever (more common with severe disease or pneumonia)",
+                    "Rapid or labored breathing — sign of possible pneumonia; seek emergency care immediately"
                 ],
                 entrySeverity: nil,
                 speciesRisks: [
-                    SpeciesRisk(species: .dog, severity: .moderate, notes: "Very common in dogs exposed to boarding facilities, dog parks, grooming salons, and shelters. Usually self-limiting in healthy adults (1-3 weeks). Puppies and senior dogs are at higher risk for complications like pneumonia. Vaccination (Bordetella) reduces severity but does not prevent all cases.")
+                    SpeciesRisk(
+                        species: .dog,
+                        severity: .moderate,
+                        notes: "Primary species. Typically self-limiting and managed outpatient in healthy adult dogs. Puppies, senior dogs, immunocompromised animals, and brachycephalic breeds are at higher risk of progression to pneumonia."
+                    ),
+                    SpeciesRisk(
+                        species: .cat,
+                        severity: .low,
+                        notes: "Bordetella bronchiseptica can cause upper respiratory illness in cats, particularly in shelter or multi-cat environments. Generally less severe than in dogs."
+                    ),
+                    SpeciesRisk(
+                        species: .smallMammal,
+                        severity: .moderate,
+                        notes: "Rabbits and guinea pigs are susceptible to Bordetella bronchiseptica and can develop serious respiratory disease. Guinea pigs can also carry and shed the bacteria asymptomatically — a healthy-appearing guinea pig in the home can be a source of infection for dogs."
+                    )
                 ],
                 preventionTips: [
-                    "Vaccinate dogs that will be boarded, groomed, or attend dog parks or daycare",
-                    "Ensure boarding facilities require proof of vaccination",
-                    "Avoid dog parks and communal areas if outbreaks are reported in your area",
-                    "If your dog develops a cough, isolate from other dogs and contact your veterinarian",
-                    "Maintain good nutrition and overall health to support immune function"
+                    "Vaccination is the most important preventive measure. Vaccines against several CIRDC pathogens — including Bordetella, parainfluenza, and adenovirus type 2 — are available in intranasal, oral, and injectable forms. Ask your veterinarian which is most appropriate for your dog.",
+                    "Because CIRDC involves multiple pathogens, vaccination reduces severity and spread but does not guarantee complete protection. Vaccinated dogs can still contract the illness.",
+                    "The Bordetella vaccine is especially important for dogs that frequently visit kennels, groomers, dog parks, training classes, or other high-contact environments. Many facilities require it.",
+                    "Avoid exposing unvaccinated puppies, senior dogs, or immunocompromised dogs to high-density environments where respiratory disease risk is elevated.",
+                    "Isolate any dog showing signs of coughing, nasal discharge, or other respiratory illness from other household pets and avoid dog parks or group settings until cleared by a veterinarian.",
+                    "Disinfect shared items including water bowls, food dishes, bedding, and leashes. Most common household disinfectants are effective against CIRDC pathogens.",
+                    "Recovered dogs may continue to shed Bordetella for up to 3 months after symptoms resolve — keep this in mind before reintroducing a recently ill dog to other animals."
                 ],
                 sources: [
-                    "AVMA - Kennel Cough",
-                    "Merck Veterinary Manual - Canine Infectious Tracheobronchitis",
-                    "AKC - Kennel Cough in Dogs"
+                    "Merck Veterinary Manual — Infectious Tracheobronchitis (Kennel Cough)",
+                    "Veterinary Partner — Kennel Cough",
+                    "Cornell University College of Veterinary Medicine — Kennel Cough",
+                    "American Animal Hospital Association (AAHA) — Canine Vaccination Guidelines"
                 ],
                 relatedEntries: nil
             ),
