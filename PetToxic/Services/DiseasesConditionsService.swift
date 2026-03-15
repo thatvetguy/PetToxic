@@ -24,44 +24,216 @@ class DiseasesConditionsService {
             ToxicItem(
                 id: UUID(uuidString: "1D000001-0000-0000-0000-000000000001")!,
                 name: "Rabies",
-                alternateNames: ["hydrophobia", "rabies virus", "lyssavirus"],
+                alternateNames: [
+                    "rabies virus", "lyssavirus", "hydrophobia", "lyssa", "rabid",
+                    "rabies infection", "rabies exposure", "furious rabies",
+                    "dumb rabies", "paralytic rabies"
+                ],
                 categories: [.diseasesAndConditions],
-                imageAsset: nil,
-                description: "Rabies is a fatal viral disease that affects the central nervous system of all mammals. It is transmitted through the saliva of infected animals, most commonly via bites. Rabies is almost always fatal once clinical signs appear.",
-                toxicityInfo: "Rabies virus (Lyssavirus) travels from the bite wound along peripheral nerves to the brain. The incubation period varies widely — typically 2 weeks to several months. Once the virus reaches the brain, it causes progressive encephalitis. There is no treatment once symptoms develop. Vaccination is the only effective prevention.",
+                imageAsset: "rabies_thumb",
+                description: """
+                Rabies is a viral disease of the central nervous system caused by the \
+                Lyssavirus — a virus that specifically targets the brain and spinal cord. \
+                It is one of the oldest and most feared infectious diseases in the world. \
+                Once clinical signs appear in any mammal, survival is virtually unknown. \
+                There are fewer than a dozen documented survivors of clinical rabies in \
+                recorded medical history.
+
+                Rabies is vaccine-preventable, and vaccination is the single most important \
+                protection available for your pet. This disease is also zoonotic — it can be \
+                transmitted from infected animals to humans.
+
+                In North America, the primary wildlife reservoirs are bats, raccoons, skunks, \
+                and foxes. Among domestic animals, cats are the most commonly reported rabid \
+                domestic animal in the United States — a fact that surprises many pet owners. \
+                Ferrets are susceptible and have an approved rabies vaccine available.
+
+                Rabies is a legally reportable disease in most jurisdictions. If your pet has \
+                been bitten by a wild animal or an animal of unknown vaccination status, \
+                contact a veterinarian immediately — quarantine and observation protocols may \
+                be legally required, regardless of your pet's vaccination status.
+
+                Many countries — including the United Kingdom, Australia, Japan, and New \
+                Zealand — are considered rabies-free or have eliminated the classical dog \
+                rabies virus strain. North America, much of Europe, Asia, Africa, and Latin \
+                America remain endemic.
+                """,
+                toxicityInfo: """
+                **How It Harms the Body**
+
+                The rabies virus is neurotropic — meaning it specifically targets nervous \
+                tissue. After entering the body through a bite wound (or, rarely, through \
+                mucous membrane contact with infected saliva), the virus binds to nerve \
+                endings at the wound site and begins traveling along peripheral nerves toward \
+                the brain. It does not travel through the bloodstream, which is part of what \
+                makes it so difficult to detect or treat once infection is established.
+
+                Once the virus reaches the brain, it causes rapidly progressive encephalitis \
+                (severe inflammation of the brain), disrupting the functions that control \
+                behavior, coordination, swallowing, and eventually all basic life functions.
+
+                Two clinical forms are recognized. The furious form is more commonly depicted \
+                in media — characterized by extreme aggression, agitation, and erratic \
+                behavior. The paralytic (dumb) form is less dramatic but equally deadly — \
+                animals become progressively weak, lose the ability to swallow, and develop \
+                ascending paralysis (paralysis that moves up the body from the limbs toward \
+                the chest and head). Both forms are fatal. Individual animals may show signs \
+                of one, the other, or both.
+
+                **Transmission & Spread**
+
+                Rabies is almost exclusively transmitted through the saliva of an infected \
+                animal — typically through a bite wound that breaks the skin. Transmission \
+                through intact skin is not considered a risk; however, contact between \
+                infected saliva and mucous membranes (eyes, nose, mouth) or open wounds \
+                does carry risk.
+
+                The incubation period — the time from exposure to the appearance of clinical \
+                signs — is highly variable. In most pets, signs develop within 2 weeks to 3 \
+                months, but cases with incubation periods as short as a few days or as long \
+                as a year have been documented. The length of incubation depends on the \
+                location of the bite (bites closer to the brain progress faster), the amount \
+                of virus introduced, and the species affected.
+
+                Major wildlife reservoirs in North America include bats (the #1 source of \
+                human rabies exposure in the US — bat bites can be extremely small and may \
+                go unnoticed), raccoons (most common in the eastern US), skunks (most common \
+                in the central US and California), foxes (more common in Alaska and parts of \
+                the southwest), and coyotes (lower risk but documented). Stray, unvaccinated \
+                domestic dogs remain the primary global source of human rabies deaths \
+                worldwide, particularly in parts of Asia and Africa.
+
+                Any direct contact with a bat — including finding a bat in a room where a \
+                person was sleeping — warrants evaluation for both the people and any pets \
+                in the home.
+
+                **Treatment Goals**
+
+                There is no effective treatment for rabies once clinical signs appear in any \
+                species. Once the virus reaches the brain and symptoms develop, the disease \
+                is virtually always fatal. Veterinary care at that stage is focused on humane \
+                management.
+
+                The critical window is before clinical signs develop. Post-exposure protocols \
+                exist for dogs and cats, but their application depends on vaccination history, \
+                local regulations, and the nature of the exposure — this must be determined \
+                by a veterinarian immediately after any potential exposure.
+
+                If your pet has been bitten by a wild animal or animal of unknown status, \
+                contact a veterinarian immediately. Do not wait for symptoms to appear.
+
+                **Zoonotic Risk**
+
+                Rabies is one of the most serious zoonotic diseases known. The virus can be \
+                transmitted to humans through the saliva of an infected animal — most commonly \
+                through a bite, but also through mucous membrane exposure. Rabies in humans is \
+                virtually always fatal once symptoms develop.
+
+                If your pet has had potential exposure to a rabid or unknown animal, take \
+                precautions when handling them and contact your veterinarian immediately. If \
+                you have been bitten or had saliva contact with a potentially rabid animal, \
+                contact your own physician or emergency services without delay — post-exposure \
+                treatment for humans must be initiated promptly to be effective.
+
+                Rabies is a legally reportable disease. Suspected cases may involve public \
+                health authorities, and your veterinarian is required to report confirmed or \
+                suspected cases in most jurisdictions.
+
+                **Myths vs. Facts**
+
+                Myth: "You can always tell a rabid animal — they'll be foaming at the mouth \
+                and acting aggressive."
+                Fact: Foaming at the mouth is a late-stage sign caused by an inability to \
+                swallow. Early rabies often looks like subtle behavioral changes — an outdoor \
+                cat suddenly becoming unusually friendly, a normally sociable dog becoming \
+                withdrawn, or a normally nocturnal wild animal appearing during the day. The \
+                paralytic form involves quiet weakness and deterioration, not aggression.
+
+                Myth: "Indoor cats don't need rabies vaccines."
+                Fact: Rabies vaccination is legally required for cats in most US states — \
+                regardless of whether the cat ever goes outdoors. Bats can and do enter homes, \
+                and indoor cats have contracted rabies from bat encounters inside the house.
+
+                Myth: "Only wild animals get rabies."
+                Fact: Cats are the most commonly reported rabid domestic animal in the United \
+                States. Unvaccinated outdoor cats that encounter wildlife are at significant \
+                risk.
+
+                Myth: "The bat flew away fine, so it probably wasn't rabid."
+                Fact: The behavior of the bat after the encounter tells you nothing about its \
+                rabies status. Bats infected with rabies do not always appear sick. Any direct \
+                contact with a bat warrants evaluation for both people and pets involved.
+
+                Myth: "If my pet was vaccinated once as a puppy, they're protected for life."
+                Fact: Rabies vaccines require boosters — typically every 1 or 3 years \
+                depending on the vaccine and local regulations. A lapsed booster may not \
+                provide full legal or medical protection.
+
+                Myth: "Rabbits and guinea pigs can give you rabies."
+                Fact: Small rodents and rabbits are almost never found to be infected with \
+                rabies under natural conditions. However, any bite wound from a wild or \
+                unknown animal should still prompt veterinary evaluation.
+                """,
                 toxicityInfoSectionTitle: "What makes it harmful?",
                 onsetTime: OnsetTime(
-                    early: "Incubation period is typically 2-8 weeks but can range from days to months depending on bite location and viral load.",
-                    delayed: "Progressive neurological signs develop over 3-7 days once symptoms appear: behavioral changes, paralysis, and death."
+                    early: "Incubation period is typically 2 weeks to 3 months after exposure, but can range from a few days to over a year. Early signs include subtle behavioral changes, restlessness, fever, and unusual sensitivity to light, sound, or touch.",
+                    delayed: "As the virus reaches the brain, signs escalate rapidly — progressing to aggression or paralysis, loss of coordination, inability to swallow, seizures, and death. The total course of illness from first signs to death is typically 2–10 days. There is no effective treatment once clinical signs appear."
                 ),
                 symptoms: [
-                    "Behavioral changes (aggression or unusual tameness)",
-                    "Excessive drooling or difficulty swallowing",
-                    "Paralysis of jaw or limbs",
-                    "Disorientation and seizures",
-                    "Sensitivity to light and sound",
-                    "Self-mutilation at bite site"
+                    "Sudden change in behavior (friendly animal becoming withdrawn, or timid animal becoming aggressive)",
+                    "Unusual vocalizations or unprovoked barking, howling, or crying",
+                    "Restlessness, agitation, or anxiety",
+                    "Sensitivity to light, sound, or touch",
+                    "Apparent discomfort or itching at a previous bite site",
+                    "Loss of appetite",
+                    "Hiding or seeking isolation",
+                    "Weakness or stumbling, particularly in the hindlimbs (paralytic form)",
+                    "Drooping jaw or facial muscles; difficulty swallowing",
+                    "Excessive drooling or foaming at the mouth",
+                    "Snapping or biting at the air",
+                    "Dilated pupils or a glassy, unfocused stare",
+                    "Seizures or uncontrolled muscle tremors",
+                    "Progressive paralysis"
                 ],
                 entrySeverity: nil,
                 speciesRisks: [
-                    SpeciesRisk(species: .dog, severity: .severe, notes: "Dogs are a primary vector for rabies worldwide. Vaccination is required by law in most jurisdictions. Unvaccinated dogs exposed to rabies may face mandatory quarantine or euthanasia."),
-                    SpeciesRisk(species: .cat, severity: .severe, notes: "Cats are the most commonly reported domestic animal with rabies in the US. Indoor/outdoor cats are at high risk. Vaccination is strongly recommended or required by law."),
-                    SpeciesRisk(species: .smallMammal, severity: .severe, notes: "Ferrets are susceptible and should be vaccinated. Rabbits and rodents are rarely infected but exposure should be taken seriously.")
+                    SpeciesRisk(
+                        species: .dog,
+                        severity: .severe,
+                        notes: "All dogs are susceptible. Unvaccinated dogs, dogs that spend time outdoors, and working or hunting dogs have higher exposure risk. Bites from bats, raccoons, skunks, or foxes are the most common exposure routes. Rabies vaccination is legally required in most US states and many countries. If your dog is bitten by a wild animal, seek veterinary care immediately regardless of vaccination status — quarantine or observation protocols may be legally required."
+                    ),
+                    SpeciesRisk(
+                        species: .cat,
+                        severity: .severe,
+                        notes: "Cats are the most commonly reported rabid domestic animal in the United States. Outdoor and indoor/outdoor cats are at significant risk from wildlife encounters. Rabies vaccination is legally required for cats in most US states. Bats entering the home are a documented source of rabies exposure for indoor cats. Vaccination is strongly recommended for all cats regardless of lifestyle."
+                    ),
+                    SpeciesRisk(
+                        species: .smallMammal,
+                        severity: .high,
+                        notes: "Ferrets are susceptible to rabies, and a USDA-approved rabies vaccine is available for ferrets — discuss this with your exotic veterinarian. Ferrets that bite a person may be subject to quarantine or testing requirements by local authorities. Rabbits and small rodents (guinea pigs, hamsters, gerbils, rats, mice, chinchillas) are almost never found to be infected with rabies under natural conditions, and are not known to transmit rabies to humans. However, any bite wound from a wild or unknown animal should still prompt veterinary evaluation."
+                    )
                 ],
                 preventionTips: [
-                    "Keep rabies vaccinations current for all dogs, cats, and ferrets",
-                    "Avoid contact with wildlife, especially bats, raccoons, skunks, and foxes",
-                    "Report any animal bites to local animal control",
-                    "Supervise pets outdoors to minimize wildlife encounters",
-                    "If your pet is bitten by a wild animal, contact your veterinarian immediately"
+                    "Vaccinate your dogs and cats against rabies — it is legally required in most US states and many countries, and is the single most effective protection available",
+                    "Ferrets can and should receive a USDA-approved rabies vaccine — ask your veterinarian",
+                    "Keep pets away from wild animals, especially bats, raccoons, skunks, and foxes — even a brief encounter can result in exposure",
+                    "Never handle bats, dead wildlife, or stray animals with bare hands",
+                    "If your pet is bitten or scratched by a wild animal or an animal of unknown vaccination status, contact a veterinarian immediately — do not wait for symptoms, as the critical window is before signs develop",
+                    "If a bat is found inside your home, do not release it — contact your local animal control or public health department; the bat may need to be tested, and anyone in the home (including pets) may need evaluation",
+                    "Keep your pet's rabies vaccination records current and accessible — you may need to provide proof of vaccination if your pet bites someone or is exposed to a potentially rabid animal",
+                    "If you are bitten by any animal, wash the wound immediately with soap and water and contact your physician or emergency services — post-exposure treatment for humans must be started promptly to be effective",
+                    "Rabies is a reportable disease — suspected cases must be reported to local public health or animal control authorities; veterinarians are required by law to report them in most jurisdictions"
                 ],
                 sources: [
-                    "CDC - Rabies Information",
-                    "AVMA - Rabies Resources",
-                    "Merck Veterinary Manual - Rabies",
-                    "World Organisation for Animal Health (WOAH)"
+                    "American Veterinary Medical Association (AVMA) — Rabies",
+                    "Centers for Disease Control and Prevention (CDC) — Rabies",
+                    "Merck Veterinary Manual — Rabies",
+                    "Cornell University College of Veterinary Medicine — Rabies",
+                    "World Organisation for Animal Health (WOAH) — Rabies"
                 ],
-                relatedEntries: nil
+                relatedEntries: [
+                    "1D000001-0000-0000-0000-000000000006"  // Leptospirosis
+                ]
             ),
 
             // MARK: - Canine Parvovirus
@@ -535,7 +707,9 @@ class DiseasesConditionsService {
                     "Centers for Disease Control and Prevention (CDC) — Leptospirosis",
                     "American Animal Hospital Association (AAHA) — Canine Vaccination Guidelines"
                 ],
-                relatedEntries: nil
+                relatedEntries: [
+                    "1D000001-0000-0000-0000-000000000001"  // Rabies
+                ]
             ),
 
             // MARK: - Myxomatosis
