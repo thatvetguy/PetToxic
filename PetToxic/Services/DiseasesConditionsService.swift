@@ -42,7 +42,7 @@ class DiseasesConditionsService {
                     "Sensitivity to light and sound",
                     "Self-mutilation at bite site"
                 ],
-                entrySeverity: .severe,
+                entrySeverity: nil,
                 speciesRisks: [
                     SpeciesRisk(species: .dog, severity: .severe, notes: "Dogs are a primary vector for rabies worldwide. Vaccination is required by law in most jurisdictions. Unvaccinated dogs exposed to rabies may face mandatory quarantine or euthanasia."),
                     SpeciesRisk(species: .cat, severity: .severe, notes: "Cats are the most commonly reported domestic animal with rabies in the US. Indoor/outdoor cats are at high risk. Vaccination is strongly recommended or required by law."),
@@ -147,7 +147,7 @@ class DiseasesConditionsService {
                     "Abdominal pain or bloating",
                     "Collapse (severe cases)"
                 ],
-                entrySeverity: .severe,
+                entrySeverity: nil,
                 speciesRisks: [
                     SpeciesRisk(
                         species: .dog,
@@ -262,7 +262,7 @@ class DiseasesConditionsService {
                     "Neurological signs in kittens born to infected mothers (unsteady gait, tremors)",
                     "Collapse (severe cases)"
                 ],
-                entrySeverity: .severe,
+                entrySeverity: nil,
                 speciesRisks: [
                     SpeciesRisk(
                         species: .cat,
@@ -318,7 +318,7 @@ class DiseasesConditionsService {
                     "Eye inflammation (conjunctivitis)",
                     "Tremors (severe cases)"
                 ],
-                entrySeverity: .high,
+                entrySeverity: nil,
                 speciesRisks: [
                     SpeciesRisk(species: .bird, severity: .high, notes: "Psittacines (parrots, cockatiels, budgies) are most commonly affected. Mortality can be high without treatment, but the disease responds well to antibiotics (typically doxycycline for 45 days). Carrier birds may shed bacteria without symptoms.")
                 ],
@@ -362,7 +362,7 @@ class DiseasesConditionsService {
                     "Decreased appetite",
                     "Constipation"
                 ],
-                entrySeverity: .high,
+                entrySeverity: nil,
                 speciesRisks: [
                     SpeciesRisk(species: .reptile, severity: .high, notes: "Most common in bearded dragons, leopard geckos, chameleons, iguanas, and turtles/tortoises. Juveniles and rapidly growing reptiles are most vulnerable. Early-stage MBD is fully reversible. Advanced cases may cause permanent skeletal deformities or be fatal.")
                 ],
@@ -405,7 +405,7 @@ class DiseasesConditionsService {
                     "Difficulty breathing",
                     "Bleeding disorders (severe cases)"
                 ],
-                entrySeverity: .severe,
+                entrySeverity: nil,
                 speciesRisks: [
                     SpeciesRisk(species: .dog, severity: .severe, notes: "Dogs are the most commonly affected domestic species. Risk is highest for dogs with outdoor exposure, especially near standing water or wildlife. Vaccination is available and recommended for at-risk dogs. Without treatment, mortality is significant.")
                 ],
@@ -447,7 +447,7 @@ class DiseasesConditionsService {
                     "Difficulty breathing",
                     "Skin lumps and nodules"
                 ],
-                entrySeverity: .severe,
+                entrySeverity: nil,
                 speciesRisks: [
                     SpeciesRisk(species: .smallMammal, severity: .severe, notes: "Affects rabbits almost exclusively. Mortality in pet rabbits is extremely high (over 99%). Vaccination is available in some countries (UK, Europe, Australia) but NOT currently approved in the US. Prevention focuses on insect control and limiting outdoor exposure.")
                 ],
@@ -489,7 +489,7 @@ class DiseasesConditionsService {
                     "Fever (if secondary infection develops)",
                     "Difficulty breathing (severe/complicated cases)"
                 ],
-                entrySeverity: .moderate,
+                entrySeverity: nil,
                 speciesRisks: [
                     SpeciesRisk(species: .dog, severity: .moderate, notes: "Very common in dogs exposed to boarding facilities, dog parks, grooming salons, and shelters. Usually self-limiting in healthy adults (1-3 weeks). Puppies and senior dogs are at higher risk for complications like pneumonia. Vaccination (Bordetella) reduces severity but does not prevent all cases.")
                 ],
