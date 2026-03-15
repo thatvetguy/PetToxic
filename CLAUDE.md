@@ -83,11 +83,12 @@ Dynamic Type, VoiceOver, high contrast, 44pt minimum touch targets.
 | `Documentation/DataModels.md` | Data model specifications |
 | `Documentation/Design/UI-Spec.md` | UI specifications |
 | `Documentation/Design/StyleGuide.md` | Visual design guidelines |
-| `PetToxic_DiseasesConditions_EntryTemplate.md` | Content & format template for Diseases & Conditions entries (field protocols, prohibited content, approved language) |
+| `PetToxic_DiseasesConditions_EntryTemplate.md` | Content & format template for Diseases & Conditions entries: 3 entry types (Infectious / Husbandry / Medical-Metabolic), field protocols, tone guidance, prohibited content, approved language |
+| `ClaudeWeb_DiseaseEntryFormat.md` | Quick-reference for Claude Web: correct ToxicItem field order, category enum, Contents.json format, commit style |
 
 **For entry editing sessions:** Read `PetToxic_Database_Audit_Rules_ClaudeCode.md` for quick rules or `PetToxic_Database_Audit_Rules.md` for full details. Use `EntryReferenceDocument.md` to look up UUIDs and verify cross-references.
 
-**For disease/condition editing sessions:** Read `PetToxic_DiseasesConditions_EntryTemplate.md` for the full field-by-field protocol, entry types, approved severity/zoonotic language, and the entry checklist. These entries follow a different content structure than toxin entries.
+**For disease/condition editing sessions:** Read `PetToxic_DiseasesConditions_EntryTemplate.md` for the full field-by-field protocol, 3 entry types (Type 1: Infectious, Type 2: Husbandry, Type 3: Medical/Metabolic), tone guidance, approved severity/zoonotic language, and the entry checklist. Use `ClaudeWeb_DiseaseEntryFormat.md` when generating instruction files via Claude Web. These entries follow a different content structure than toxin entries.
 
 ---
 
@@ -262,4 +263,4 @@ Handoff files: `Handoff_SessionXX_to_SessionYY.md`
 
 ---
 
-*Last Updated: March 2026 (Session 142)*
+*Last Updated: March 2026 (Session 144)*
