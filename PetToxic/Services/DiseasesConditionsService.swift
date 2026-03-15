@@ -9,10 +9,12 @@ class DiseasesConditionsService {
         entries = Self.loadEntries()
     }
 
-    /// Returns entries that apply to the given species
+    /// Returns entries that apply to the given species.
+    /// Excludes entries where the species risk severity is .low to reduce clutter —
+    /// those entries are still accessible via other species groups where the risk is higher.
     func entries(for species: Species) -> [ToxicItem] {
         entries.filter { item in
-            item.speciesRisks.contains { $0.species == species }
+            item.speciesRisks.contains { $0.species == species && $0.severity != .low }
         }
     }
 
