@@ -22,6 +22,7 @@ class DiseasesConditionsService {
     private static let nonInfectiousEntryIDs: Set<String> = [
         "1D000001-0000-0000-0000-000000000005",  // Metabolic Bone Disease (MBD)
         "1D000001-0000-0000-0000-000000000009",  // Thermal Burns
+        "1D000001-0000-0000-0000-000000000010",  // Dysecdysis (Abnormal Shedding)
     ]
 
     /// Whether an entry is an infectious disease (Type 1)
@@ -1497,6 +1498,192 @@ class DiseasesConditionsService {
                     "LaFeber Vet — Thermal Burns in Exotic Companion Animals",
                     "VCA Animal Hospitals — Burns in Reptiles",
                     "Veterinary Partner — Reptile Husbandry and Common Medical Problems"
+                ],
+                relatedEntries: nil
+            ),
+
+            // MARK: - Dysecdysis (Abnormal Shedding)
+            ToxicItem(
+                id: UUID(uuidString: "1D000001-0000-0000-0000-000000000010")!,
+                name: "Dysecdysis (Abnormal Shedding)",
+                alternateNames: [
+                    "dysecdysis", "abnormal shedding", "retained shed", "stuck shed",
+                    "incomplete shed", "retained spectacle", "eye cap retention",
+                    "retained eye caps", "shedding problems", "ecdysis problems"
+                ],
+                categories: [.diseasesAndConditions],
+                imageAsset: "dysecdysis_thumb",
+                description: """
+                Dysecdysis is the medical term for abnormal or incomplete \
+                shedding in reptiles. Healthy reptiles shed their skin — a \
+                process called ecdysis — in a single, complete piece or in \
+                large sections. When shedding goes wrong, patches of old skin \
+                remain stuck to the body. This is called retained shed.
+
+                Dysecdysis is a chronic and recurring problem rather than a \
+                single acute event. In mild cases, retained patches cause \
+                discomfort and may resolve with supportive care. In more \
+                severe or neglected cases, retained shed on the toes, tail \
+                tip, or around the eyes can constrict blood flow, causing \
+                tissue damage, infection, and in some cases permanent injury \
+                or loss of the affected structure.
+
+                This is not a contagious condition. Dysecdysis results from \
+                husbandry deficiencies or underlying health problems, not \
+                from a pathogen.
+
+                Dysecdysis is almost exclusively a reptile condition. Dogs, \
+                cats, birds, and most small mammals do not shed skin in the \
+                same way and are not affected. Among reptiles, snakes are \
+                particularly prone to shedding problems — they shed the entire \
+                skin at once, including a transparent scale covering each eye \
+                called the spectacle (or eye cap). Retained spectacles are a \
+                common and vision-threatening complication unique to snakes. \
+                Lizards and chelonians (turtles and tortoises) shed in patches \
+                and are also commonly affected, though complications tend to \
+                be less dramatic than in snakes.
+                """,
+                toxicityInfo: """
+                **How It Harms the Body**
+
+                During a normal shed, the reptile produces lymphatic fluid \
+                between the old and new skin layers, allowing the old skin to \
+                lift and separate cleanly. When this process is disrupted — \
+                by low humidity, dehydration, rough handling during a shed, \
+                or underlying illness — the old skin dries out and adheres to \
+                the surface rather than releasing.
+
+                Retained shed becomes progressively more dangerous the longer \
+                it remains in place. Patches left on the body can dry, \
+                tighten, and form a constricting band around toes, the tail \
+                tip, or the limbs — cutting off circulation in the same way \
+                a tight rubber band would. Without intervention, constriction \
+                injury leads to tissue death and may require surgical \
+                amputation of the affected structure.
+
+                The spectacles of snakes deserve particular attention. These \
+                transparent scales cover the eyes directly and are shed as \
+                part of the normal skin cycle. When spectacles are retained, \
+                they accumulate layer by layer with each subsequent shed, \
+                clouding vision and creating a physical barrier against the \
+                eye surface. Repeated retention without treatment can lead to \
+                corneal damage and permanent vision impairment.
+
+                A less obvious but equally serious risk is secondary \
+                infection. Retained shed creates a warm, moist environment \
+                between the old and new skin layers — ideal conditions for \
+                bacterial and fungal growth. Skin infections (dermatitis) \
+                can establish quickly in retained shed patches, particularly \
+                in animals that are already immunocompromised.
+
+                One fact that surprises many reptile owners: a snake's shed \
+                skin comes off inside-out. As the snake pushes forward \
+                through rough substrate or branches, the skin peels backward \
+                from the nose, inverting as it goes — meaning the shed you \
+                find in the enclosure is the reverse image of your snake's \
+                surface. A healthy shed is thin, translucent, and complete. \
+                A patchy, fragmented, or opaque shed is a signal that \
+                something went wrong.
+
+                **Causes & Risk Factors**
+
+                Low humidity is the leading cause of dysecdysis. Each reptile \
+                species has specific humidity requirements, and enclosures \
+                that are too dry prevent the lymphatic fluid layer from \
+                forming properly, causing the old skin to stick rather than \
+                release. Desert species require less humidity than tropical \
+                species, but even desert reptiles need elevated humidity \
+                during the shed cycle.
+
+                Dehydration compounds the humidity problem — a reptile that \
+                is not drinking adequately cannot produce sufficient fluid to \
+                separate the skin layers effectively. Access to fresh water \
+                at all times, and a humid hide or soaking option during the \
+                shed cycle, significantly reduces shedding problems.
+
+                Other common causes and risk factors include mite infestations \
+                — mites disrupt the skin surface and are a well-established \
+                cause of chronic shedding problems, particularly in snakes; \
+                malnutrition or vitamin A deficiency — Hypovitaminosis A \
+                impairs normal skin and mucosal health and is a recognized \
+                contributor to dysecdysis in reptiles; underlying illness — \
+                systemic infections, parasitism, or organ disease can disrupt \
+                the normal shed cycle; injuries or scarring — healed wounds \
+                create abnormal skin texture that does not shed cleanly; \
+                handling during an active shed — disturbing a reptile \
+                mid-shed can cause the skin to tear and fragment rather than \
+                release in one piece; and enclosures without appropriate \
+                environmental enrichment — snakes and lizards rely on rough \
+                surfaces, branches, and rocks to help strip the old skin; a \
+                bare enclosure removes this mechanical aid.
+
+                Shedding frequency varies significantly by species, age, and \
+                growth rate. Young, rapidly growing reptiles shed more \
+                frequently than adults. Any significant change in shedding \
+                frequency or quality — more frequent sheds, very infrequent \
+                sheds, or consistently incomplete sheds — is worth discussing \
+                with a reptile-experienced veterinarian.
+
+                **Treatment Goals**
+
+                Mild retained shed can sometimes be addressed by providing a \
+                warm soak and a humid environment to loosen and soften the \
+                old skin. However, forcibly removing retained shed — \
+                particularly retained spectacles — risks tearing the new skin \
+                layer beneath and should never be attempted without veterinary \
+                guidance.
+
+                Veterinary goals for dysecdysis include identifying and \
+                correcting the underlying husbandry cause, safely removing \
+                retained shed where needed, evaluating for and treating \
+                secondary infection, and assessing for constriction injury or \
+                eye involvement. Retained spectacles in particular require \
+                careful professional removal to avoid corneal damage. \
+                Recurring dysecdysis despite corrected husbandry warrants \
+                investigation for mites, nutritional deficiencies, or \
+                underlying systemic illness.
+                """,
+                toxicityInfoSectionTitle: "What makes it harmful?",
+                onsetTime: OnsetTime(
+                    early: "Signs of an abnormal shed develop over the course of a shed cycle — typically days to weeks depending on species",
+                    delayed: "Complications from retained shed (constriction injury, infection, vision impairment) develop gradually over subsequent shed cycles if the problem is not addressed"
+                ),
+                symptoms: [
+                    "Patchy, fragmented, or incomplete shed — old skin remaining attached in pieces",
+                    "Retained shed on toes or tail tip — may appear as a tight, dry ring of skin",
+                    "Cloudy, dull, or bluish eye caps — may indicate retained spectacles in snakes",
+                    "Abnormally long pre-shed phase — eyes that stay blue/opaque longer than expected",
+                    "Discolored, thickened, or rough skin patches between shed cycles",
+                    "Reluctance to move or unusual stillness, particularly affecting digits or tail",
+                    "Swelling, redness, or discharge at a retained shed site — signs of secondary infection",
+                    "Changes in behavior during shed — increased irritability, reduced appetite (normal during shed but prolonged is not)",
+                    "Visible mites — tiny moving specks near eyes, nostrils, or skin folds"
+                ],
+                entrySeverity: nil,
+                speciesRisks: [
+                    SpeciesRisk(
+                        species: .reptile,
+                        severity: .high,
+                        notes: "Snakes at highest risk — shed full-body skin including spectacles; retained spectacles can cause permanent vision damage; constriction injury from retained toe or tail shed. Lizards and chelonians also commonly affected. Dogs, cats, birds, and small mammals do not shed skin in the same way and are not susceptible."
+                    )
+                ],
+                preventionTips: [
+                    "Research the specific humidity requirements for your species and maintain them consistently — this is the single most important factor in preventing shedding problems",
+                    "Provide a humid hide during the shed cycle — a small enclosed hide lined with damp sphagnum moss gives your reptile a high-humidity retreat when needed",
+                    "Ensure fresh water is always available; dehydration is a significant contributing factor to abnormal shedding",
+                    "Offer appropriate environmental enrichment — rough surfaces, branches, rocks, and cork bark give your reptile the friction needed to strip old skin cleanly",
+                    "Never handle your reptile during an active shed — disturbing the process can cause the skin to tear and fragment rather than release in one piece",
+                    "Check for mites regularly, especially after acquiring a new reptile or after contact with other reptiles; mites are a well-established cause of chronic shedding problems",
+                    "Examine each shed for completeness — a healthy shed is thin, translucent, and includes all structures; check for toe tips, tail tip, and (in snakes) eye caps",
+                    "If retained shed is present after a shed cycle, consult a reptile-experienced veterinarian before attempting removal — particularly if the eyes are involved",
+                    "Schedule regular veterinary checkups with a reptile-experienced vet; recurring shedding problems despite good husbandry may indicate a nutritional deficiency or underlying health condition"
+                ],
+                sources: [
+                    "Merck Veterinary Manual — Dysecdysis in Reptiles",
+                    "LaFeber Vet — Reptile Skin Disorders",
+                    "VCA Animal Hospitals — Shedding in Snakes",
+                    "Veterinary Partner — Common Reptile Husbandry Problems",
+                    "UC Davis School of Veterinary Medicine — Reptile Husbandry Guidelines"
                 ],
                 relatedEntries: nil
             ),
