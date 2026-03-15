@@ -1300,7 +1300,9 @@ class DiseasesConditionsService {
                     "Cornell University College of Veterinary Medicine — Kennel Cough",
                     "American Animal Hospital Association (AAHA) — Canine Vaccination Guidelines"
                 ],
-                relatedEntries: nil
+                relatedEntries: [
+                    "1D000001-0000-0000-0000-000000000011"  // Canine Influenza
+                ]
             ),
 
             // MARK: - Thermal Burns
@@ -1686,6 +1688,202 @@ class DiseasesConditionsService {
                     "UC Davis School of Veterinary Medicine — Reptile Husbandry Guidelines"
                 ],
                 relatedEntries: nil
+            ),
+
+            // MARK: - Canine Influenza
+            ToxicItem(
+                id: UUID(uuidString: "1D000001-0000-0000-0000-000000000011")!,
+                name: "Canine Influenza",
+                alternateNames: [
+                    "canine influenza", "dog flu", "canine flu", "CIV",
+                    "canine influenza virus", "H3N2", "H3N8",
+                    "canine influenza H3N2", "canine influenza H3N8",
+                    "influenza virus dogs", "dog cold"
+                ],
+                categories: [.diseasesAndConditions],
+                imageAsset: "influenza_thumb",
+                description: """
+                Canine influenza is a highly contagious respiratory infection \
+                caused by the canine influenza virus (CIV). Two strains are \
+                responsible for disease in dogs in the United States: H3N8, \
+                which originated in horses and first transferred to dogs in \
+                the early 2000s, and H3N2, which originated in birds and \
+                emerged in the United States in 2015 following a large \
+                outbreak in the Chicago area. H3N2 is now the dominant \
+                circulating strain in the US.
+
+                Canine influenza is an acute illness — symptoms develop \
+                rapidly after exposure, typically within two to four days. \
+                Most affected dogs experience a mild-to-moderate respiratory \
+                illness and recover with supportive care. However, a \
+                proportion of infected dogs develop complications including \
+                secondary bacterial pneumonia, which can become \
+                life-threatening.
+
+                A vaccine is available for both H3N8 and H3N2 strains. \
+                Vaccination does not always prevent infection entirely but \
+                significantly reduces the severity of illness and the risk \
+                of complications.
+
+                Canine influenza affects dogs of all ages, breeds, and health \
+                backgrounds. Because the virus is relatively new in the dog \
+                population, dogs have little to no natural immunity — meaning \
+                virtually any unvaccinated dog exposed to the virus is \
+                susceptible. Dogs in high-contact environments such as \
+                kennels, shelters, doggy daycares, dog parks, and boarding \
+                facilities are at highest risk of exposure. H3N2 has also \
+                been documented in cats, though feline infection is uncommon \
+                and typically mild.
+                """,
+                toxicityInfo: """
+                **How It Harms the Body**
+
+                Canine influenza virus infects the cells lining the \
+                respiratory tract — the nose, throat, trachea, and lungs. \
+                The virus damages these cells directly, causing inflammation, \
+                increased mucus production, and breakdown of the normal \
+                protective barrier of the airway.
+
+                In most dogs, infection remains confined to the upper \
+                respiratory tract, producing the classic signs of coughing, \
+                nasal discharge, and lethargy. In a smaller proportion of \
+                dogs — particularly those that are young, elderly, \
+                immunocompromised, or have underlying health conditions — \
+                the virus progresses into the lower respiratory tract and \
+                lungs. This leads to viral pneumonia, which impairs the \
+                ability to oxygenate the blood. Viral pneumonia also opens \
+                the door to secondary bacterial infection, which can rapidly \
+                worsen the clinical picture and become life-threatening \
+                without prompt treatment.
+
+                One of the features that makes canine influenza particularly \
+                disruptive when it enters a population is the near-universal \
+                susceptibility of unvaccinated dogs. Unlike diseases that \
+                have circulated in dog populations for decades, canine \
+                influenza is a relatively recent pathogen — most dogs \
+                encountered by the virus have no prior immunity, allowing \
+                outbreaks to spread rapidly through kennels, shelters, and \
+                social dog populations.
+
+                **Transmission & Spread**
+
+                Canine influenza spreads primarily through respiratory \
+                secretions — coughing, sneezing, and direct nose-to-nose \
+                contact are the main transmission routes. The virus can also \
+                survive on surfaces, clothing, and hands for a short period, \
+                making indirect transmission possible in high-traffic \
+                environments.
+
+                A critically important feature of canine influenza \
+                transmission is that infected dogs begin shedding the virus \
+                before clinical signs appear — during the incubation period \
+                of approximately two to four days. This means a dog can \
+                infect others before its owner is aware it is sick, making \
+                outbreak control in group settings extremely difficult.
+
+                The virus is most prevalent in areas with high dog population \
+                density and movement — large cities, regions with active \
+                shelter transfer programs, and areas surrounding major dog \
+                shows or sporting events. Outbreaks have been documented \
+                across the United States, with H3N2 responsible for most \
+                recent activity. The virus does not currently pose a risk to \
+                humans — canine influenza is not considered zoonotic.
+
+                Infected dogs typically shed the virus for up to ten days \
+                following the onset of clinical signs. Dogs with confirmed \
+                or suspected canine influenza should be isolated from other \
+                dogs during this period.
+
+                **Treatment Goals**
+
+                There is no antiviral treatment specifically approved for \
+                canine influenza. Veterinary goals focus on supportive care \
+                — managing symptoms, maintaining hydration and nutrition, \
+                and preventing or treating secondary bacterial complications. \
+                Dogs with mild illness may be managed at home under \
+                veterinary guidance. Dogs with evidence of pneumonia, \
+                significant breathing difficulty, or rapid deterioration \
+                require hospitalization and intensive supportive care.
+
+                Early veterinary evaluation is important — the clinical \
+                signs of canine influenza overlap with other respiratory \
+                diseases including Kennel Cough (CIRDC), and distinguishing \
+                between them matters for treatment decisions and isolation \
+                protocols.
+
+                **Myths vs. Facts**
+
+                **Myth:** Canine influenza is just a bad cold — it's not \
+                serious.
+                **Fact:** While many dogs recover without complications, \
+                canine influenza can progress to bacterial pneumonia, which \
+                is potentially life-threatening. The "just a cold" framing \
+                leads owners to delay veterinary care, which can worsen \
+                outcomes in dogs that do develop complications.
+
+                **Myth:** My dog can't catch canine influenza because they \
+                were vaccinated.
+                **Fact:** Vaccination significantly reduces the severity of \
+                illness and the risk of complications, but vaccinated dogs \
+                can still become infected. The goal of the vaccine is to \
+                reduce disease severity and viral shedding — not to provide \
+                absolute protection. Vaccination remains strongly recommended \
+                for dogs with regular exposure to other dogs.
+
+                **Myth:** Canine influenza can spread from dogs to people.
+                **Fact:** Canine influenza is not considered zoonotic — \
+                there are no documented cases of canine influenza virus \
+                transmitting from dogs to humans. Human influenza viruses \
+                are distinct from canine influenza viruses.
+                """,
+                toxicityInfoSectionTitle: "What makes it harmful?",
+                onsetTime: OnsetTime(
+                    early: "Clinical signs typically appear within 2 to 4 days of exposure",
+                    delayed: "Most dogs show improvement within 2 to 3 weeks; complications such as pneumonia can develop within the first week of illness"
+                ),
+                symptoms: [
+                    "Persistent cough — may be soft and moist or dry and harsh",
+                    "Nasal discharge — initially clear, may become thick or discolored with secondary infection",
+                    "Sneezing",
+                    "Lethargy and reduced energy",
+                    "Reduced appetite",
+                    "Fever",
+                    "Eye discharge",
+                    "Rapid or labored breathing — a sign of pneumonia requiring immediate veterinary attention",
+                    "Difficulty breathing or open-mouth breathing — emergency sign"
+                ],
+                entrySeverity: nil,
+                speciesRisks: [
+                    SpeciesRisk(
+                        species: .dog,
+                        severity: .high,
+                        notes: "Primary host; near-universal susceptibility in unvaccinated dogs; can progress to bacterial pneumonia; dogs in high-contact settings (kennels, shelters, dog parks) at greatest risk"
+                    ),
+                    SpeciesRisk(
+                        species: .cat,
+                        severity: .low,
+                        notes: "H3N2 strain documented in cats, typically through close contact with infected dogs; usually mild respiratory signs; uncommon"
+                    )
+                ],
+                preventionTips: [
+                    "Discuss canine influenza vaccination with your veterinarian — it is particularly recommended for dogs that regularly visit kennels, dog parks, groomers, shelters, doggy daycares, or dog shows",
+                    "Keep your dog away from dogs that are coughing, sneezing, or showing signs of respiratory illness",
+                    "If your dog develops respiratory signs after contact with other dogs, contact your veterinarian promptly — early evaluation helps distinguish canine influenza from other respiratory infections and guides appropriate care",
+                    "Isolate a dog with suspected or confirmed canine influenza from all other dogs for at least 10 days from the onset of signs to reduce the risk of spread",
+                    "Wash hands and change clothing after handling a dog with suspected canine influenza before contacting other dogs — the virus can survive briefly on surfaces and fabrics",
+                    "Inform kennels, groomers, and doggy daycares if your dog has recently recovered from a respiratory illness — responsible communication helps prevent outbreaks in group settings",
+                    "Stay informed about local canine influenza activity — outbreaks are often reported through local veterinary clinics, shelters, and veterinary association alerts"
+                ],
+                sources: [
+                    "AVMA (American Veterinary Medical Association) — Canine Influenza",
+                    "Cornell University College of Veterinary Medicine — Canine Influenza",
+                    "Merck Veterinary Manual — Canine Influenza",
+                    "CDC (Centers for Disease Control and Prevention) — Canine Influenza",
+                    "ASPCA Animal Poison Control Center — Canine Respiratory Disease"
+                ],
+                relatedEntries: [
+                    "1D000001-0000-0000-0000-000000000008"  // Kennel Cough (CIRDC)
+                ]
             ),
         ]
     }
