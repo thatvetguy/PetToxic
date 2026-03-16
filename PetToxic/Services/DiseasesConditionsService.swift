@@ -2115,6 +2115,231 @@ class DiseasesConditionsService {
                 ],
                 relatedEntries: ["1D000001-0000-0000-0000-000000000002"]
             ),
+
+            // MARK: - Ringworm (Dermatophytosis)
+            ToxicItem(
+                id: UUID(uuidString: "1D000001-0000-0000-0000-000000000013")!,
+                name: "Ringworm (Dermatophytosis)",
+                alternateNames: [
+                    "dermatophytosis",
+                    "tinea",
+                    "ringworm infection",
+                    "fungal skin infection",
+                    "Microsporum",
+                    "Trichophyton",
+                    "ringworm in cats",
+                    "ringworm in dogs",
+                    "ringworm in guinea pigs",
+                    "ringworm in rabbits",
+                    "dermatomycosis",
+                    "ringwom"
+                ],
+                categories: [.diseasesAndConditions],
+                imageAsset: "ringworm_thumb",
+                description: """
+                Despite its name, ringworm is not a worm — it is a fungal \
+                infection of the skin, hair, and occasionally nails. The name \
+                comes from the circular, raised rash it can produce in people. \
+                In animals, the classic ring-shaped lesion is less consistent, \
+                but the infection is just as contagious.
+
+                Ringworm is caused by a group of fungi called dermatophytes — \
+                organisms that feed on keratin, the structural protein that makes \
+                up skin, hair, and nails. The most common species in dogs and \
+                cats is Microsporum canis; rabbits, guinea pigs, and other small \
+                mammals are most often affected by Trichophyton species.
+
+                This is a zoonotic disease — it can spread between animals and \
+                people. It is one of the more commonly transmitted infections \
+                between pets and their owners, particularly in households with \
+                children, elderly individuals, or people with weakened immune \
+                systems.
+
+                Ringworm is rarely life-threatening in otherwise healthy animals \
+                and is generally a treatable condition — but it can be persistent, \
+                spread readily through a home, and cause significant discomfort. \
+                Prompt veterinary evaluation is important both to treat the \
+                affected animal and to reduce the risk of transmission to other \
+                pets and people in the household.
+
+                Cats, particularly young kittens and longhaired breeds, are a \
+                major reservoir and can carry the infection with no visible skin \
+                lesions at all. Guinea pigs and rabbits are similarly common \
+                silent carriers. An animal that looks completely healthy can \
+                still be contagious.
+
+                Reptiles are not susceptible to dermatophytosis and are not \
+                included in the species risk section.
+                """,
+                toxicityInfo: """
+                **How It Harms the Body**
+
+                Dermatophytes are uniquely adapted to colonize keratin-rich \
+                tissue — the outermost layer of skin, the hair shaft, and the \
+                nail surface. Unlike most pathogens, they cannot penetrate \
+                living, healthy cells; instead, they grow within the non-living, \
+                keratinized layers, breaking down keratin as a nutrient source.
+
+                The body's immune response to this invasion is what produces the \
+                visible signs of infection. As the immune system recognizes the \
+                fungal intrusion, it triggers inflammation in the surrounding \
+                tissue — causing the characteristic hair loss (alopecia), \
+                redness, scaling, and crusting associated with ringworm. In \
+                healthy adult animals, the infection tends to stay superficial \
+                and self-limiting. In young, elderly, or immunocompromised \
+                animals, it can spread more extensively and become more \
+                difficult to resolve.
+
+                The fungi also produce enzymes called keratinases that actively \
+                degrade the structural integrity of the hair shaft, which is why \
+                infected hairs break off easily — producing the patchy, \
+                moth-eaten appearance often seen in cats and small mammals.
+
+                Environmental contamination is a key part of the disease cycle. \
+                Fungal spores shed from infected animals can survive on bedding, \
+                carpet, grooming tools, and other surfaces for months to years, \
+                making household decontamination an essential part of managing \
+                an active infection.
+
+                **Transmission & Spread**
+
+                Ringworm spreads through three main routes: direct contact with \
+                an infected animal, contact with contaminated objects (fomites) \
+                such as bedding, combs, collars, and grooming equipment, and \
+                less commonly from contaminated soil. Transmission does not \
+                always result in active infection — a critical spore load, \
+                minor skin trauma, and a susceptible immune state all contribute \
+                to whether exposure leads to disease.
+
+                Cats are considered the primary source of Microsporum canis \
+                infections in both other animals and people. Longhaired cats — \
+                particularly Persians and related breeds — are significantly \
+                overrepresented as carriers and may show no outward signs of \
+                infection. Guinea pigs are among the most common sources of \
+                ringworm transmitted to people from small mammals, again often \
+                with no visible lesions in the animal itself.
+
+                High-risk settings include animal shelters, multi-cat households, \
+                rescue environments, pet stores, and breeding facilities. Newly \
+                acquired animals — especially kittens, puppies, or small mammals \
+                recently obtained from a pet store or shelter — should be \
+                monitored closely for early signs of infection.
+
+                The incubation period is typically 1 to 2 weeks, though \
+                asymptomatic carriers may never show signs at all.
+
+                **Treatment Goals**
+
+                In otherwise healthy adult animals, ringworm can resolve on its \
+                own — but treatment is always recommended to shorten the course \
+                of infection, prevent spread to other animals and people in the \
+                household, and reduce environmental contamination. Treatment \
+                typically combines topical therapy applied to the skin and coat \
+                with systemic treatment to address infection within hair \
+                follicles that topical products cannot reach alone.
+
+                Full resolution typically takes 6 to 12 weeks. All animals in \
+                the household should be evaluated, as asymptomatic carriers will \
+                continue to re-infect treated animals if left unaddressed. \
+                Environmental decontamination — regular cleaning of surfaces, \
+                bedding, and grooming tools — is an essential part of treatment.
+
+                Early veterinary evaluation means faster resolution and a lower \
+                risk of transmission to people in the home.
+
+                **Zoonotic Risk**
+
+                Ringworm is one of the most commonly transmitted infections \
+                between pets and people. People can become infected through \
+                direct contact with an infected animal or through contact with \
+                contaminated bedding, furniture, or grooming equipment. In \
+                people, ringworm typically causes itchy, circular, red skin \
+                lesions that are treatable but uncomfortable.
+
+                Children, elderly individuals, and people who are \
+                immunocompromised are at greatest risk. If your pet has been \
+                diagnosed with ringworm, take precautions when handling them \
+                and contact your own physician if you develop any skin lesions.
+
+                **Myths vs. Facts**
+
+                **Myth:** "Ringworm is caused by a worm."
+                **Fact:** Ringworm has nothing to do with worms. It is a fungal \
+                infection — the name comes from the circular, ring-shaped rash \
+                it can cause on human skin. In animals, the classic ring shape \
+                is often absent entirely.
+
+                **Myth:** "If my cat has ringworm, I'll be able to see it."
+                **Fact:** Cats — especially longhaired breeds and young kittens \
+                — are well-known for carrying ringworm with no visible signs. A \
+                completely normal-looking cat can be actively shedding infectious \
+                spores and spreading the infection to other pets and people in \
+                the home.
+
+                **Myth:** "My pet's ringworm cleared up on its own, so it's gone."
+                **Fact:** Apparent resolution of visible lesions does not mean \
+                the infection has been eliminated. Fungal culture or PCR testing \
+                is the only reliable way to confirm that an animal is no longer \
+                infectious. Stopping treatment early is one of the most common \
+                reasons ringworm persists in a household for months.
+                """,
+                toxicityInfoSectionTitle: "What makes it harmful?",
+                onsetTime: OnsetTime(
+                    early: "1–2 weeks after exposure (patchy hair loss, redness, scaling — often beginning around the face, ears, and legs)",
+                    delayed: "Without treatment, infection can spread to cover larger areas of the body; environmental spores can cause ongoing reinfection for months"
+                ),
+                symptoms: [
+                    "Patchy hair loss (often circular or irregular)",
+                    "Red, scaly, or crusted skin at the edges of hair loss patches",
+                    "Itching (variable — may be mild or absent)",
+                    "Broken or brittle hairs around affected areas",
+                    "Skin redness or inflammation",
+                    "Thickened or discolored nail beds (less common)",
+                    "No visible symptoms at all (asymptomatic carriers — especially cats and guinea pigs)"
+                ],
+                entrySeverity: nil,
+                speciesRisks: [
+                    SpeciesRisk(
+                        species: .cat,
+                        severity: .moderate,
+                        notes: "Most significant reservoir species for Microsporum canis. Longhaired breeds (Persian, Himalayan) and young kittens are overrepresented. Asymptomatic carriage is common — cats can be infectious with no visible lesions. Persian cats may develop nodular lesions."
+                    ),
+                    SpeciesRisk(
+                        species: .dog,
+                        severity: .moderate,
+                        notes: "Affected but typically less severely than cats. Lesions most often appear on the face, ears, feet, and tail. Yorkshire Terriers and Jack Russell Terriers are overrepresented. Working and hunting dogs may develop kerion lesions — inflamed, nodular, draining skin masses."
+                    ),
+                    SpeciesRisk(
+                        species: .smallMammal,
+                        severity: .moderate,
+                        notes: "Rabbits and guinea pigs are commonly affected; guinea pigs are among the most significant sources of human ringworm from small mammals, often without showing any symptoms themselves. Chinchillas, rats, and mice are less commonly affected; ferrets occasionally via contact with infected cats."
+                    ),
+                    SpeciesRisk(
+                        species: .bird,
+                        severity: .low,
+                        notes: "Rarely affected. Dermatophytes primarily target mammalian keratin; bird feather structure differs significantly. Occasional cases reported in immunocompromised individuals. Consult an avian veterinarian if unusual skin or feather changes are observed."
+                    )
+                ],
+                preventionTips: [
+                    "If a new pet develops patchy hair loss, skin crusting, or scaling — particularly within the first few weeks of joining the household — consult your veterinarian promptly",
+                    "Newly acquired kittens, puppies, or small mammals (especially guinea pigs and rabbits) from shelters or pet stores should be monitored closely; consider a veterinary exam before introducing them to other pets",
+                    "Wear gloves when handling an animal with suspected or confirmed ringworm, and wash hands thoroughly afterward",
+                    "Avoid allowing infected animals on furniture, carpets, or bedding until cleared by your veterinarian — ringworm spores can persist in the environment for months",
+                    "Launder bedding, blankets, and soft toys from the infected animal's environment regularly",
+                    "Disinfect hard surfaces and grooming tools — diluted bleach (1:10 dilution with water) is effective against dermatophyte spores on non-porous surfaces; discard porous items (wood, rope toys) that cannot be disinfected",
+                    "All animals in the household should be evaluated when one is diagnosed — asymptomatic carriers will undermine treatment of other pets if left unaddressed",
+                    "If any person in the household develops circular, itchy, red skin lesions, contact your own physician and mention that your pet has been diagnosed with ringworm",
+                    "Individuals who are immunocompromised, pregnant, elderly, or very young should take extra precautions when handling an animal with ringworm or suspected exposure"
+                ],
+                sources: [
+                    "Merck Veterinary Manual — Dermatophytosis in Dogs and Cats",
+                    "Cornell University College of Veterinary Medicine — Ringworm",
+                    "ASPCA Animal Poison Control Center",
+                    "LafeberVet — Dermatophytosis in Small Mammals",
+                    "World Association for Veterinary Dermatology — Consensus Guidelines on Dermatophytosis in Dogs and Cats"
+                ],
+                relatedEntries: nil
+            ),
         ]
     }
 }
