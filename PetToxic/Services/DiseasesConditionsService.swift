@@ -2340,6 +2340,232 @@ class DiseasesConditionsService {
                 ],
                 relatedEntries: nil
             ),
+
+            // MARK: - Aspergillosis
+            ToxicItem(
+                id: UUID(uuidString: "1D000001-0000-0000-0000-000000000014")!,
+                name: "Aspergillosis",
+                alternateNames: [
+                    "Aspergillus infection",
+                    "fungal pneumonia",
+                    "nasal aspergillosis",
+                    "sinonasal aspergillosis",
+                    "disseminated aspergillosis",
+                    "brooder pneumonia",
+                    "fungal rhinitis",
+                    "aspergilloma",
+                    "asper",
+                    "Aspergillus fumigatus",
+                    "aspergillosis in birds",
+                    "aspergillosis in dogs"
+                ],
+                categories: [.diseasesAndConditions],
+                imageAsset: "aspergillosis_thumb",
+                description: """
+                Aspergillosis is a fungal disease caused by Aspergillus — a \
+                genus of mold found virtually everywhere in the environment: in \
+                soil, decaying plant matter, compost, dust, moldy feed, and \
+                household air. Almost every animal (and person) inhales \
+                Aspergillus spores daily without any consequence. Disease \
+                develops only when the immune system is compromised, when the \
+                animal is exposed to an overwhelming spore load, or — in some \
+                dogs — through mechanisms not yet fully understood.
+
+                What makes aspergillosis unusual among infectious diseases is \
+                that the same fungus causes completely different clinical \
+                syndromes depending on the species affected. In dogs, it most \
+                often targets the nasal cavity. In cats, it tends to invade the \
+                tissues around the eye, sometimes causing dramatic facial \
+                swelling and eye changes. In birds, it is primarily a \
+                respiratory disease that attacks the lungs and air sacs — and \
+                it is one of the most serious and common infections in pet birds.
+
+                Aspergillosis is not contagious between animals, and direct \
+                transmission from a pet to a person does not occur — both \
+                people and animals acquire the infection independently from the \
+                environment.
+
+                The clinical outlook varies significantly by species and form. \
+                The nasal form in dogs is generally manageable with treatment. \
+                The disseminated form in dogs, and respiratory aspergillosis in \
+                birds, carries a much more serious outlook — particularly when \
+                diagnosis is delayed.
+
+                Small mammals and reptiles are not considered significantly \
+                susceptible and are not included in the species section.
+                """,
+                toxicityInfo: """
+                **How It Harms the Body**
+
+                Aspergillus spores are inhaled, and in a healthy animal with \
+                an intact immune system, they are simply cleared. When the \
+                immune defenses fail — whether due to immune suppression, \
+                unusually high spore exposure, or localized immune dysfunction \
+                — the spores germinate and grow into thread-like fungal \
+                filaments called hyphae (HY-fee). These hyphae invade tissue, \
+                destroying it as they expand.
+
+                In dogs, the fungus typically colonizes the nasal cavity and \
+                sinuses, forming dense fungal plaques and sometimes a compacted \
+                mass of fungal growth called an aspergilloma (fungal ball). The \
+                infection produces enzymes that destroy the delicate turbinate \
+                bones — the thin, scroll-like bones inside the nose — and the \
+                sinus lining. This bone destruction drives the three hallmark \
+                signs of canine nasal aspergillosis: persistent bloody nasal \
+                discharge, ulceration and depigmentation (loss of color) of \
+                the nostril, and facial pain or discomfort.
+
+                In cats, Aspergillus more often invades the tissues surrounding \
+                the eye — a form called sino-orbital aspergillosis. The \
+                infection can cause the eye to bulge outward, compress the \
+                optic nerve, and in severe cases destroy orbital bone or extend \
+                toward the brain. Aspergillus felis — a relatively recently \
+                identified fungal species — is responsible for many feline \
+                cases and is notoriously difficult to treat.
+
+                The most dangerous canine form — disseminated aspergillosis — \
+                occurs when the fungus escapes the respiratory tract and seeds \
+                through the bloodstream to distant organs, most often the \
+                spine, kidneys, lymph nodes, and eyes. This form is strongly \
+                associated with German Shepherd Dogs, particularly middle-aged \
+                females, suggesting a breed-specific immune vulnerability.
+
+                In birds, the fungus lodges in the lungs and air sacs — \
+                thin-walled extensions of the respiratory system that connect \
+                to the hollow bones throughout the body. The poor blood supply \
+                to air sac tissue limits the immune response there, giving the \
+                fungus an opportunity to form plaques, nodules, and granulomas \
+                largely unchallenged. By the time obvious signs of respiratory \
+                distress appear in a pet bird, the disease is often already \
+                extensive.
+
+                **Transmission & Spread**
+
+                Aspergillosis is not transmitted from animal to animal or from \
+                a pet to a person. Every animal acquires infection directly \
+                from the environment. The fungus is found in soil, compost, \
+                decaying organic matter, hay, straw, dusty bedding, moldy \
+                feed, and even ordinary household air. It exists on every \
+                continent except Antarctica.
+
+                For pet birds, the most common sources of exposure are \
+                contaminated or poorly stored seed and feed, moldy or dusty \
+                cage litter, and poor ventilation that allows spore \
+                concentrations to build indoors. Stress is a major risk factor \
+                — capture, transport, other illness, malnutrition, or prolonged \
+                antibiotic use can all suppress the immune response enough to \
+                allow an established Aspergillus spore load to take hold. \
+                Birds fed all-seed diets are at particular risk because seeds \
+                are deficient in vitamin A, a nutrient essential to the health \
+                of the respiratory tract lining and to immune function.
+
+                In dogs, the nasal form can affect animals with apparently \
+                normal immune systems. The disseminated form, however, is \
+                generally believed to require an underlying immune defect, \
+                though one is not always identified.
+
+                The incubation period is variable and not well defined — \
+                disease develops gradually as fungal growth accumulates over \
+                weeks to months.
+
+                **Treatment Goals**
+
+                Treatment of aspergillosis is challenging and must be tailored \
+                to the form of the disease, the species affected, and how far \
+                the infection has progressed.
+
+                For nasal aspergillosis in dogs, treatment focuses on \
+                eliminating the infection from the nasal cavity and sinuses. \
+                Full resolution takes time and a single treatment course may \
+                need to be repeated. For cats with sino-orbital disease and \
+                dogs with disseminated disease, extended systemic antifungal \
+                treatment is required.
+
+                For birds, treatment goals include reducing the fungal burden \
+                in the respiratory tract, supporting immune function, and \
+                managing secondary infections. Treatment is intensive and \
+                requires prolonged care under the supervision of an avian \
+                veterinarian. Outcome depends heavily on how early the disease \
+                is identified — birds that are diagnosed before severe \
+                respiratory compromise develops have a better chance of \
+                responding to treatment.
+
+                Contact a veterinarian promptly if your pet shows signs \
+                consistent with aspergillosis — particularly chronic nasal \
+                discharge in dogs or any respiratory changes, voice change, or \
+                unexplained lethargy in a pet bird.
+
+                **The Name and the Priest**
+
+                The fungus gets its name from an unusual source. In 1729, an \
+                Italian priest and biologist named Pier Antonio Micheli was \
+                examining mold under a microscope and noticed that the \
+                spore-forming structure of the fungus bore a striking \
+                resemblance to an aspergillum — the perforated, mace-like \
+                implement Catholic priests use to sprinkle holy water during \
+                liturgical ceremonies. He named the genus Aspergillus \
+                accordingly. The name has endured for nearly 300 years, making \
+                this one of the few diseases whose name traces back to a piece \
+                of church equipment.
+                """,
+                toxicityInfoSectionTitle: "What makes it harmful?",
+                onsetTime: OnsetTime(
+                    early: "Nasal form in dogs: chronic discharge developing over weeks to months; bird respiratory form: subtle changes in breathing, activity, or voice may be the first signs",
+                    delayed: "Disseminated disease in dogs and advanced respiratory aspergillosis in birds can develop silently over weeks to months; by the time obvious illness is apparent, significant tissue damage may already be present"
+                ),
+                symptoms: [
+                    "Chronic nasal discharge — often from one nostril first, may become bloody or foul-smelling (dogs)",
+                    "Sneezing and nasal congestion (dogs, cats)",
+                    "Nosebleeds (dogs)",
+                    "Loss of color (depigmentation) or ulceration of the nostril (dogs)",
+                    "Facial pain or rubbing of the face (dogs)",
+                    "Bulging or protruding eye, or elevation of the third eyelid (cats — orbital form)",
+                    "Facial swelling (cats — orbital form)",
+                    "Labored or rapid breathing, open-mouth breathing (birds)",
+                    "Change in voice or loss of vocalization (birds)",
+                    "Tail bobbing with each breath (birds)",
+                    "Decreased activity, fluffed feathers, sleeping more than usual (birds)",
+                    "Weight loss, loss of appetite",
+                    "Lameness or spinal pain, difficulty rising (dogs — disseminated form)",
+                    "Loss of coordination (dogs — disseminated form; birds — if nervous system involved)",
+                    "Eye redness, cloudiness, or vision changes"
+                ],
+                entrySeverity: nil,
+                speciesRisks: [
+                    SpeciesRisk(
+                        species: .bird,
+                        severity: .high,
+                        notes: "Most susceptible companion animal species. Aspergillus fumigatus is the primary pathogen. African grey parrots, Amazon parrots, and raptors are especially susceptible; all pet bird species are at risk. Disease is primarily respiratory, targeting the lungs and air sacs. Often diagnosed late due to birds' instinct to mask illness. Vitamin A deficiency and stress are major risk factors."
+                    ),
+                    SpeciesRisk(
+                        species: .dog,
+                        severity: .moderate,
+                        notes: "Two distinct forms: sinonasal aspergillosis (common; long-nosed breeds preferentially affected) and disseminated aspergillosis (rare; strongly associated with German Shepherd Dogs, particularly middle-aged females). These are caused by different Aspergillus species and are clinically distinct — sinonasal disease does not progress to disseminated disease."
+                    ),
+                    SpeciesRisk(
+                        species: .cat,
+                        severity: .moderate,
+                        notes: "Less common than in dogs but can be severe. Brachycephalic breeds (Persian, Himalayan) are overrepresented. Sino-orbital disease — where infection extends to the tissues around the eye — is characteristic in cats and can cause eye bulging, facial swelling, and orbital bone destruction. Aspergillus felis is an emerging pathogen in cats that is difficult to treat."
+                    )
+                ],
+                preventionTips: [
+                    "For pet birds: provide fresh, high-quality feed and discard any seed or food that appears damp, discolored, or smells musty — moldy feed is a major source of Aspergillus spore exposure",
+                    "Feed pet birds a nutritionally complete diet; all-seed diets are deficient in vitamin A, which is essential for respiratory tract health and immune function",
+                    "Maintain good ventilation in bird enclosures — poor airflow allows spore concentrations to build indoors; avoid housing birds in dusty, damp, or poorly ventilated areas",
+                    "Clean bird cages and enclosures regularly; do not allow droppings, feathers, or old food to accumulate",
+                    "Minimize sources of stress in pet birds — capture, transport, overcrowding, prolonged illness, and extended antibiotic use are all risk factors for the immune suppression that allows aspergillosis to develop",
+                    "For dogs: promptly evaluate any chronic or bloody nasal discharge with a veterinarian — earlier diagnosis of nasal aspergillosis allows for more effective treatment",
+                    "Do not delay veterinary evaluation for a pet bird showing any signs of breathing difficulty, voice change, or unexplained lethargy — aspergillosis is often advanced by the time respiratory signs are obvious"
+                ],
+                sources: [
+                    "Merck Veterinary Manual — Aspergillosis in Animals",
+                    "Cornell University College of Veterinary Medicine — Aspergillosis",
+                    "VCA Animal Hospitals — Aspergillosis in Dogs; Aspergillosis in Birds",
+                    "Cornell Wildlife Health Lab — Aspergillosis",
+                    "Veterinary Partner — Aspergillosis in Birds"
+                ],
+                relatedEntries: nil
+            ),
         ]
     }
 }
