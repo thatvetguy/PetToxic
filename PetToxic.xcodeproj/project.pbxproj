@@ -790,7 +790,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 20260306;
+				CURRENT_PROJECT_VERSION = 20260313;
 				DEVELOPMENT_TEAM = 6KA5CB5S3A;
 				GENERATE_INFOPLIST_FILE = NO;
 				INFOPLIST_FILE = PetToxic/Resources/Info.plist;
@@ -801,7 +801,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.3;
+				MARKETING_VERSION = 1.4;
 				PRODUCT_BUNDLE_IDENTIFIER = com.thatvetguy.PetToxic;
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = iphoneos;
@@ -978,7 +978,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 20260306;
+				CURRENT_PROJECT_VERSION = 20260313;
 				DEVELOPMENT_TEAM = 6KA5CB5S3A;
 				GENERATE_INFOPLIST_FILE = NO;
 				INFOPLIST_FILE = PetToxic/Resources/Info.plist;
@@ -989,7 +989,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.3;
+				MARKETING_VERSION = 1.4;
 				PRODUCT_BUNDLE_IDENTIFIER = com.thatvetguy.PetToxic;
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = iphoneos;

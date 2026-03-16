@@ -358,7 +358,8 @@ class DiseasesConditionsService {
                     "AAHA Canine Vaccination Guidelines"
                 ],
                 relatedEntries: [
-                    "1D000001-0000-0000-0000-000000000003"  // Feline Panleukopenia — related parvovirus family
+                    "1D000001-0000-0000-0000-000000000003",  // Feline Panleukopenia — related parvovirus family
+                    "1D000001-0000-0000-0000-000000000012"   // Canine Distemper
                 ]
             ),
 
@@ -1886,6 +1887,233 @@ class DiseasesConditionsService {
                 relatedEntries: [
                     "1D000001-0000-0000-0000-000000000008"  // Kennel Cough (CIRDC)
                 ]
+            ),
+
+            // MARK: - Canine Distemper
+            ToxicItem(
+                id: UUID(uuidString: "1D000001-0000-0000-0000-000000000012")!,
+                name: "Canine Distemper",
+                alternateNames: [
+                    "CDV",
+                    "hard pad disease",
+                    "distemper",
+                    "canine distemper virus",
+                    "old dog encephalitis",
+                    "distempr"
+                ],
+                categories: [.diseasesAndConditions],
+                imageAsset: "distemper_thumb",
+                description: """
+                Canine distemper is a highly contagious, potentially fatal viral \
+                disease caused by canine distemper virus (CDV) — a paramyxovirus \
+                closely related to the human measles virus. It is one of the most \
+                serious infectious diseases in dogs and is entirely preventable \
+                through vaccination.
+
+                The virus attacks multiple body systems in sequence — beginning \
+                with the immune system, then spreading to the respiratory and \
+                gastrointestinal tracts, and in many cases ultimately reaching \
+                the central nervous system. This multi-systemic progression makes \
+                distemper one of the most complex and dangerous viral diseases in \
+                veterinary medicine.
+
+                Unvaccinated puppies and young dogs face the greatest risk, though \
+                dogs of any age can be infected if their immunity is incomplete. A \
+                full, properly timed vaccination series is essential — an incomplete \
+                series can leave puppies vulnerable during the critical window \
+                between their first and last puppy shots.
+
+                Cats are not considered susceptible to CDV. Ferrets, however, are \
+                extremely susceptible and face a nearly universally fatal outcome \
+                without vaccination. CDV is not transmissible to humans.
+                """,
+                toxicityInfo: """
+                **How It Harms the Body**
+
+                Canine distemper virus first targets lymphoid tissue — the tonsils \
+                and lymph nodes of the respiratory tract — where it replicates \
+                rapidly and begins to suppress the immune system. This \
+                immunosuppression is what makes distemper so dangerous: the dog's \
+                defenses are actively weakened at the very moment the virus is \
+                spreading through the body, leaving it vulnerable to secondary \
+                bacterial infections on top of the primary viral attack.
+
+                From the lymphoid system, the virus enters the bloodstream and \
+                spreads to the respiratory, gastrointestinal, urinary, and central \
+                nervous systems. This multi-phase progression explains why distemper \
+                can present so differently from dog to dog — some appear to have a \
+                respiratory illness, others a gastrointestinal illness, and some \
+                progress to a neurological emergency.
+
+                One of CDV's most significant effects is demyelination — stripping \
+                the protective myelin sheath (the insulating layer around nerve \
+                fibers) from the central nervous system, similar in mechanism to \
+                multiple sclerosis. This is responsible for the muscle twitches, \
+                seizures, and loss of coordination that can emerge during or after \
+                the acute illness. Neurological damage, once it develops, may be \
+                permanent even in dogs that survive.
+
+                Puppies infected before their permanent teeth have fully erupted \
+                can carry a visible reminder of the infection for life. The virus \
+                attacks the cells responsible for forming tooth enamel, causing \
+                enamel hypoplasia — teeth that are pitted, discolored, and \
+                structurally weak. These "distemper teeth" may only become apparent \
+                months after the dog has recovered.
+
+                A rare long-term consequence called old dog encephalitis (ODE) can \
+                emerge years after a CDV infection — a slow, progressive brain \
+                inflammation driven by persistent viral remnants in the nervous \
+                system. This is one of the most unusual long-term sequelae of any \
+                viral disease in companion animals.
+
+                **Transmission & Spread**
+
+                CDV spreads primarily through respiratory droplets — coughing, \
+                sneezing, or close contact with an infected animal is the most \
+                common route. The virus is also shed in urine, feces, saliva, and \
+                other bodily secretions. Infected dogs can shed the virus for weeks \
+                to months after infection; those with neurological signs may shed \
+                for longer.
+
+                The virus does not persist well in the environment — CDV survives \
+                less than a day at room temperature and is readily inactivated by \
+                heat, sunlight, drying, and common disinfectants. Sustained contact \
+                between animals, not contaminated surfaces, drives most transmission.
+
+                High-risk settings include animal shelters, rescue facilities, \
+                kennels, dog parks, pet stores, and breeding operations — any \
+                environment where unvaccinated or incompletely vaccinated dogs \
+                congregate. Wildlife also serves as a major reservoir: raccoons, \
+                foxes, skunks, and coyotes can carry and spread CDV. A distemper \
+                outbreak in local wildlife can elevate risk for unvaccinated pet \
+                dogs in the area.
+
+                The incubation period — the time from exposure to first symptoms — \
+                is typically 1 to 4 weeks.
+
+                **Treatment Goals**
+
+                There is no specific antiviral drug approved for canine distemper. \
+                Veterinary treatment focuses on providing supportive care to manage \
+                dehydration and electrolyte imbalances, controlling secondary \
+                bacterial infections, and addressing neurological signs such as \
+                seizures. The goal is to stabilize the patient and support its own \
+                immune response while limiting disease progression.
+
+                Dogs with significant neurological signs require intensive \
+                supportive care and close monitoring. Early veterinary intervention \
+                offers the best chance of limiting long-term damage — contact a \
+                veterinarian immediately if your dog shows any signs consistent \
+                with distemper.
+
+                **Ferrets and Canine Distemper**
+
+                Among companion animals, ferrets are uniquely vulnerable to canine \
+                distemper. CDV infection in ferrets is considered nearly universally \
+                fatal, and no effective treatment exists once clinical signs appear. \
+                A ferret can contract the virus through contact with an infected \
+                dog, exposure to wildlife, or contact with contaminated materials. \
+                The incubation period in ferrets is typically 7 to 10 days.
+
+                Vaccination is available for ferrets, but only a ferret-approved \
+                product should ever be used — standard canine CDV vaccines are not \
+                safe for ferrets and carry a significant risk of serious adverse \
+                reactions, including anaphylaxis. Because vaccine reactions are a \
+                recognized risk even with approved products, monitoring by a \
+                veterinarian after each dose is strongly recommended.
+
+                **Myths vs. Facts**
+
+                **Myth:** "My dog got one distemper shot as a puppy — it's protected."
+                **Fact:** A single vaccine is not sufficient. Puppies require a \
+                series of vaccines given every 3 to 4 weeks until 16 to 20 weeks \
+                of age. Stopping the series early — even after one or two doses — \
+                can leave a puppy vulnerable. Maternal antibodies passed from the \
+                mother can also interfere with early vaccines, which is why the \
+                series must continue until maternal immunity has fully waned.
+
+                **Myth:** "Distemper is basically the same as kennel cough."
+                **Fact:** They are entirely different diseases. Kennel cough \
+                (CIRDC) is typically a mild, self-limiting respiratory illness. \
+                Canine distemper is a multi-systemic disease with the potential \
+                for irreversible neurological damage — far more serious in scope \
+                and consequence.
+
+                **Myth:** "My dog recovered from distemper — it's immune forever \
+                and doesn't need vaccines anymore."
+                **Fact:** Dogs that survive natural CDV infection do typically \
+                develop strong immunity to distemper. However, continued \
+                combination vaccine boosters are still recommended to maintain \
+                protection against the other diseases in the vaccine — including \
+                parvovirus and adenovirus.
+
+                **The Measles Connection**
+
+                Canine distemper virus belongs to the Morbillivirus genus — the \
+                same viral family as human measles. The two viruses are closely \
+                related enough that ferrets have been used as a scientific model \
+                for studying measles, since CDV infection in ferrets produces a \
+                disease course strikingly similar to measles in humans. CDV cannot \
+                infect humans, but the shared biology between these viruses has \
+                made distemper an important subject in comparative medicine and \
+                vaccine research.
+                """,
+                toxicityInfoSectionTitle: "What makes it harmful?",
+                onsetTime: OnsetTime(
+                    early: "1–4 weeks after exposure (fever, eye and nasal discharge, lethargy, loss of appetite)",
+                    delayed: "Neurological signs may emerge weeks to months after the initial illness — or, rarely, years later as old dog encephalitis"
+                ),
+                symptoms: [
+                    "Eye discharge (watery at first, becoming thick and yellow or green)",
+                    "Nasal discharge",
+                    "Fever (often missed in early stages)",
+                    "Lethargy, low energy",
+                    "Loss of appetite",
+                    "Coughing, sneezing",
+                    "Difficulty breathing",
+                    "Vomiting",
+                    "Diarrhea",
+                    "Thickened or hardened nose or paw pads",
+                    "Skin rash or pustules (especially in young puppies)",
+                    "Muscle twitching or tremors",
+                    "Repetitive jaw movements (\u{201C}chewing gum fits\u{201D})",
+                    "Seizures",
+                    "Loss of coordination, stumbling",
+                    "Head tilt or circling",
+                    "Behavioral changes, disorientation",
+                    "Sensitivity to light"
+                ],
+                entrySeverity: nil,
+                speciesRisks: [
+                    SpeciesRisk(
+                        species: .dog,
+                        severity: .high,
+                        notes: "Primary host. Severity ranges from subclinical to fatal depending on vaccination status, age, and viral strain. Unvaccinated puppies face the greatest risk of severe or fatal disease. Neurological complications may cause permanent damage. Core vaccination is highly effective at preventing infection."
+                    ),
+                    SpeciesRisk(
+                        species: .smallMammal,
+                        severity: .severe,
+                        notes: "Ferrets are extremely susceptible and CDV infection is considered nearly universally fatal in this species. Other small mammals (rabbits, guinea pigs, rodents) are not susceptible. Vaccination with a ferret-approved product is essential for any ferret with potential exposure to dogs or wildlife."
+                    )
+                ],
+                preventionTips: [
+                    "Vaccinate your dog with the core DAPP (or DA2PP) combination vaccine — CDV vaccination is recommended for every dog",
+                    "Complete the full puppy vaccination series — doses are given every 3 to 4 weeks until 16 to 20 weeks of age; stopping early can leave your puppy unprotected",
+                    "Keep your dog's booster vaccinations current as recommended by your veterinarian",
+                    "If you own a ferret, discuss CDV vaccination with an exotic animal veterinarian — only ferret-approved vaccine products should be used, and monitoring after vaccination is recommended",
+                    "Avoid dog parks, kennels, pet stores, and other areas where dogs congregate until your puppy's vaccine series is complete",
+                    "Limit contact between your pets and unknown wildlife — raccoons, foxes, skunks, and coyotes can carry and spread CDV",
+                    "Isolate any dog suspected of having distemper from other pets immediately and contact your veterinarian",
+                    "Standard household disinfectants effectively inactivate CDV — routine cleaning of shared spaces is sufficient for environmental decontamination"
+                ],
+                sources: [
+                    "American Veterinary Medical Association (AVMA) — Canine Distemper",
+                    "Cornell University College of Veterinary Medicine — Canine Distemper Virus",
+                    "Merck Veterinary Manual — Canine Distemper",
+                    "UC Davis School of Veterinary Medicine — Canine Distemper",
+                    "Texas A&M University College of Veterinary Medicine & Biomedical Sciences — Ferret Distemper"
+                ],
+                relatedEntries: ["1D000001-0000-0000-0000-000000000002"]
             ),
         ]
     }
