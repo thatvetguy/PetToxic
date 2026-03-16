@@ -79,7 +79,7 @@ Dynamic Type, VoiceOver, high contrast, 44pt minimum touch targets.
 |----------|---------|
 | `PetToxic_Database_Audit_Rules.md` | Full audit rules: sources, content policies, species, severity, categories, fields, cross-references |
 | `PetToxic_Database_Audit_Rules_ClaudeCode.md` | Condensed checklist for batch editing sessions |
-| `EntryReferenceDocument.md` | Complete list of all 195 entries with UUIDs, severity, and categories |
+| `EntryReferenceDocument.md` | Complete list of all 201 entries with UUIDs, severity, and categories |
 | `Documentation/DataModels.md` | Data model specifications |
 | `Documentation/Design/UI-Spec.md` | UI specifications |
 | `Documentation/Design/StyleGuide.md` | Visual design guidelines |
@@ -263,4 +263,4 @@ Handoff files: `Handoff_SessionXX_to_SessionYY.md`
 
 ---
 
-*Last Updated: March 2026 (Session 144)*
+*Last Updated: March 2026 (Session 147)*
