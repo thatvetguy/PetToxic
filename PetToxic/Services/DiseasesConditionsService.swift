@@ -2566,7 +2566,8 @@ class DiseasesConditionsService {
                 ],
                 relatedEntries: [
                     "1D000001-0000-0000-0000-000000000015",  // Cryptococcosis
-                    "1D000001-0000-0000-0000-000000000016"   // Coccidioidomycosis (Valley Fever)
+                    "1D000001-0000-0000-0000-000000000016",  // Coccidioidomycosis (Valley Fever)
+                    "1D000001-0000-0000-0000-000000000017"   // Pythiosis
                 ]
             ),
 
@@ -2817,7 +2818,8 @@ class DiseasesConditionsService {
                 ],
                 relatedEntries: [
                     "1D000001-0000-0000-0000-000000000014",  // Aspergillosis
-                    "1D000001-0000-0000-0000-000000000016"   // Coccidioidomycosis (Valley Fever)
+                    "1D000001-0000-0000-0000-000000000016",  // Coccidioidomycosis (Valley Fever)
+                    "1D000001-0000-0000-0000-000000000017"   // Pythiosis
                 ]
             ),
 
@@ -3040,7 +3042,229 @@ class DiseasesConditionsService {
                 ],
                 relatedEntries: [
                     "1D000001-0000-0000-0000-000000000014",  // Aspergillosis
-                    "1D000001-0000-0000-0000-000000000015"   // Cryptococcosis
+                    "1D000001-0000-0000-0000-000000000015",  // Cryptococcosis
+                    "1D000001-0000-0000-0000-000000000017"   // Pythiosis
+                ]
+            ),
+
+            // MARK: - Pythiosis
+            ToxicItem(
+                id: UUID(uuidString: "1D000001-0000-0000-0000-000000000017")!,
+                name: "Pythiosis",
+                alternateNames: [
+                    "Swamp cancer",
+                    "Bursatti",
+                    "Leeches",
+                    "Gulf Coast fungus",
+                    "Pythium insidiosum",
+                    "aquatic mold infection",
+                    "pythiosis insidiosi",
+                    "phythiosis",
+                    "pythosis"
+                ],
+                categories: [.diseasesAndConditions],
+                imageAsset: "pythiosis_thumb",
+                description: """
+                Pythiosis is a severe and progressive disease caused by Pythium \
+                insidiosum — an organism that resembles a fungus but is not one. \
+                Pythium insidiosum belongs to a group called oomycetes, which are \
+                more closely related to algae and diatoms than to true fungi. This \
+                distinction is clinically critical: oomycetes do not respond to most \
+                standard antifungal medications, making Pythiosis far more difficult \
+                to treat than superficially similar fungal infections.
+
+                Dogs are the most commonly affected companion animals, developing \
+                either a severe gastrointestinal form — with progressive intestinal \
+                lesions that can mimic cancer — or a cutaneous form affecting the \
+                skin and underlying tissues, particularly on the limbs and tail base. \
+                Cats are rarely affected. Aquatic and semi-aquatic reptiles may have \
+                some exposure risk given their habitat overlap with the organism.
+
+                Pythiosis is associated with exposure to warm, stagnant, or slow-moving \
+                fresh water — swamps, ponds, ditches, and flooded fields — in subtropical \
+                and tropical regions. In the United States, the Gulf Coast states are \
+                the primary endemic zone. The disease is life-threatening and carries a \
+                guarded to grave prognosis without prompt, aggressive veterinary \
+                intervention.
+                """,
+                toxicityInfo: """
+                **How It Harms the Body**
+
+                Pythium insidiosum produces motile, flagellated spores called zoospores \
+                that are attracted to damaged or compromised tissue — including skin \
+                wounds, mucous membranes, and the gastrointestinal lining. When zoospores \
+                contact susceptible tissue, they penetrate and begin to grow, forming \
+                branching thread-like structures (hyphae) that invade and destroy \
+                surrounding tissue. The body mounts a strong inflammatory response, \
+                but this response drives additional tissue destruction rather than \
+                effectively clearing the infection.
+
+                **Not a Fungus — and Why That Matters**
+                Despite causing disease that looks clinically similar to invasive fungal \
+                infections, Pythium insidiosum is fundamentally different at the \
+                biochemical level. True fungal cell walls contain ergosterol — the \
+                target of most antifungal drugs. Oomycete cell walls do not. This means \
+                that the antifungal medications routinely used to treat Aspergillosis, \
+                Cryptococcosis, and Valley Fever are largely ineffective against \
+                Pythiosis. This treatment gap is one of the primary reasons Pythiosis \
+                carries such a serious outlook — by the time it is diagnosed, standard \
+                antifungal therapy has often already failed or been ruled out.
+
+                Two main disease forms occur in dogs. The **gastrointestinal form** \
+                produces thick, fibrous masses in the stomach or small intestine that \
+                obstruct the gut, cause protein loss, and progressively destroy the \
+                bowel wall. It can closely resemble intestinal cancer on imaging, \
+                delaying diagnosis. The **cutaneous form** causes rapidly expanding, \
+                non-healing wounds — often with a characteristic appearance of \
+                necrotic (dying) tissue surrounded by swollen, thickened skin. Draining \
+                tracts are common. Limbs, the tail base, and the face are most \
+                frequently affected, often at points of prior skin trauma or water \
+                contact.
+
+                **Transmission & Spread**
+
+                Pythiosis is not contagious between animals or from animals to humans. \
+                Infection occurs when a susceptible animal comes into contact with \
+                water or wet soil containing zoospores — the infectious, free-swimming \
+                form of Pythium insidiosum.
+
+                The organism thrives in warm (above 25°C / 77°F), stagnant or \
+                slow-moving fresh water: swamps, bayous, rice paddies, irrigation \
+                ditches, flooded fields, and ponds with abundant aquatic vegetation. \
+                In the United States, Pythiosis is most prevalent in the Gulf Coast \
+                states — Louisiana, Texas, Florida, Alabama, Mississippi, and Georgia \
+                — where warm temperatures and standing water are present for extended \
+                periods. Cases have also been documented in the Midwest following \
+                flooding events, and internationally throughout Southeast Asia, \
+                Australia, and South America.
+
+                **The Gulf Coast Retriever Problem**
+                Dogs that swim or wade regularly in warm, stagnant water bodies in \
+                endemic regions face the highest exposure risk. Retrievers and sporting \
+                breeds with high water drive are significantly overrepresented in \
+                case reports. Exposure typically occurs in late summer and fall when \
+                water temperatures peak. Skin wounds or abrasions at the time of \
+                water contact are thought to increase the risk of infection by providing \
+                Pythium zoospores with a portal of entry.
+
+                The incubation period — the time from exposure to onset of signs — \
+                is not well established but is generally thought to range from weeks \
+                to a few months. The GI form in particular may be advanced by the \
+                time signs are recognized, as early symptoms can be vague.
+
+                **Treatment Goals**
+
+                Pythiosis is treated with a combination of surgical removal of affected \
+                tissue and targeted medical therapy. Because standard antifungal drugs \
+                are largely ineffective, treatment requires specialized approaches that \
+                your veterinarian will determine based on the form and extent of the \
+                disease. In the GI form, surgical resection of the affected intestinal \
+                segment is often attempted, but complete removal is frequently not \
+                possible due to the extent of tissue involvement. In the cutaneous \
+                form, wide surgical excision — including amputation of affected limbs \
+                in some cases — offers the best chance of clearing infection. \
+                Immunotherapy protocols have been explored as adjunctive treatment \
+                and are used at some referral centers. Early veterinary intervention \
+                significantly improves the likelihood of successful surgical clearance.
+
+                **Zoonotic Risk**
+
+                Human pythiosis is documented but rare, occurring primarily in \
+                individuals with underlying conditions affecting immune function or \
+                red blood cell health. Transmission to humans occurs through the same \
+                route as in animals — direct contact with contaminated water or \
+                wet soil — not through contact with an infected pet. An infected dog \
+                does not pose a direct transmission risk to household members.
+
+                If your pet has been diagnosed with Pythiosis and you have concerns \
+                about your own exposure to the same water source, consult your \
+                physician — particularly if you are immunocompromised or have an \
+                underlying blood disorder.
+
+                **Myths vs. Facts**
+
+                **Myth:** Pythiosis is a fungal infection.
+                **Fact:** Despite being treated similarly in some respects, Pythium \
+                insidiosum is an oomycete — more closely related to algae than to \
+                fungi. This is why standard antifungal medications typically do not \
+                work against it.
+
+                **Myth:** My dog can only get Pythiosis if we live on the Gulf Coast.
+                **Fact:** While the Gulf Coast states are the primary endemic zone in \
+                the US, Pythiosis has been documented in other regions following \
+                flooding, and is prevalent throughout subtropical and tropical areas \
+                worldwide. Dogs with travel history to any warm, wet subtropical \
+                region should be considered at risk.
+
+                **Myth:** A non-healing wound after swimming is probably just a minor \
+                skin infection.
+                **Fact:** Rapidly expanding, non-healing wounds — especially on the \
+                limbs or tail base following water exposure in endemic areas — should \
+                be evaluated by a veterinarian promptly. Early diagnosis of the \
+                cutaneous form offers the best surgical options.
+                """,
+                toxicityInfoSectionTitle: "What makes it harmful?",
+                onsetTime: OnsetTime(
+                    early: "Incubation is not precisely established but typically weeks to a few months after exposure. Early GI signs include vomiting, diarrhea, and weight loss; early cutaneous signs include a non-healing wound or swelling at the exposure site.",
+                    delayed: "Both forms progress aggressively without treatment. The GI form can produce large obstructive intestinal masses; the cutaneous form can invade deeply into underlying tissue, potentially requiring limb amputation."
+                ),
+                symptoms: [
+                    "Chronic vomiting (GI form)",
+                    "Chronic diarrhea, often with blood or mucus (GI form)",
+                    "Progressive weight loss",
+                    "Reduced appetite",
+                    "Visible or palpable abdominal mass (GI form)",
+                    "Non-healing wound or ulcer, especially on limbs or tail base (cutaneous form)",
+                    "Rapidly expanding skin lesion with necrotic (dying) tissue",
+                    "Draining tracts from skin lesions",
+                    "Swelling and thickening of skin around a wound (cutaneous form)",
+                    "Lethargy",
+                    "Swollen lymph nodes near affected area"
+                ],
+                entrySeverity: nil,
+                speciesRisks: [
+                    SpeciesRisk(
+                        species: .dog,
+                        severity: .severe,
+                        notes: "Primary species affected. Two distinct forms: gastrointestinal (intestinal mass, weight loss, vomiting) and cutaneous (rapidly expanding non-healing wounds). Both forms are life-threatening. Retrievers and sporting breeds with water access in endemic areas are at highest risk."
+                    ),
+                    SpeciesRisk(
+                        species: .cat,
+                        severity: .low,
+                        notes: "Rarely affected. Occasional case reports exist, primarily the GI form. Significantly less common and less well characterized than in dogs."
+                    ),
+                    SpeciesRisk(
+                        species: .smallMammal,
+                        severity: .low,
+                        notes: "Clinical cases in pet small mammals are not well documented. Susceptibility is considered low; included as a precautionary note for pets with access to warm standing water in endemic regions."
+                    ),
+                    SpeciesRisk(
+                        species: .reptile,
+                        severity: .low,
+                        notes: "Aquatic and semi-aquatic reptiles (turtles, water dragons) have theoretical exposure risk given habitat overlap with Pythium insidiosum. Clinical cases in pet reptiles are not well documented but biological plausibility exists."
+                    )
+                ],
+                preventionTips: [
+                    "Restrict access to warm, stagnant, or slow-moving water bodies — swamps, ponds, ditches, and flooded fields — in Gulf Coast states and other subtropical regions",
+                    "Avoid allowing dogs with open skin wounds or abrasions to swim or wade in potentially contaminated water",
+                    "Dry pets thoroughly after any water exposure and inspect skin — especially limbs, tail base, and face — for any early wounds or swellings",
+                    "Seek prompt veterinary evaluation for any non-healing wound, rapidly expanding skin lesion, or chronic GI signs in a dog with a history of water exposure in endemic areas",
+                    "Inform your veterinarian about recent water exposure history and travel to subtropical or tropical regions when presenting with relevant signs — this is critical for early diagnosis",
+                    "Pythiosis is not contagious between pets or from pets to people; standard hygiene precautions are sufficient when caring for an affected animal",
+                    "If you have concerns about your own exposure to a contaminated water source, consult your physician — particularly if you are immunocompromised or have an underlying blood disorder"
+                ],
+                sources: [
+                    "Merck Veterinary Manual — Pythiosis: merckvetmanual.com",
+                    "Louisiana State University School of Veterinary Medicine — Pythiosis Research: lsu.edu",
+                    "ASPCA Animal Poison Control Center: aspca.org/pet-care/animal-poison-control",
+                    "VCA Animal Hospitals — Pythiosis in Dogs: vcahospitals.com",
+                    "Cornell University College of Veterinary Medicine: vet.cornell.edu",
+                    "Wikipedia — Pythium insidiosum (oomycete classification, geographic distribution, treatment resistance): en.wikipedia.org/wiki/Pythium_insidiosum"
+                ],
+                relatedEntries: [
+                    "1D000001-0000-0000-0000-000000000014",  // Aspergillosis
+                    "1D000001-0000-0000-0000-000000000015",  // Cryptococcosis
+                    "1D000001-0000-0000-0000-000000000016"   // Coccidioidomycosis (Valley Fever)
                 ]
             ),
         ]
