@@ -1,0 +1,13 @@
+{
+  "images": [
+    {
+      "filename": "valley_fever_thumb.png",
+      "idiom": "universal",
+      "scale": "1x"
+    }
+  ],
+  "info": {
+    "author": "xcode",
+    "version": 1
+  }
+}

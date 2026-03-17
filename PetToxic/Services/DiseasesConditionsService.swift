@@ -2564,7 +2564,10 @@ class DiseasesConditionsService {
                     "Cornell Wildlife Health Lab — Aspergillosis",
                     "Veterinary Partner — Aspergillosis in Birds"
                 ],
-                relatedEntries: ["1D000001-0000-0000-0000-000000000015"]  // Cryptococcosis
+                relatedEntries: [
+                    "1D000001-0000-0000-0000-000000000015",  // Cryptococcosis
+                    "1D000001-0000-0000-0000-000000000016"   // Coccidioidomycosis (Valley Fever)
+                ]
             ),
 
             // MARK: - Cryptococcosis
@@ -2812,7 +2815,233 @@ class DiseasesConditionsService {
                     "Wikipedia — Cryptococcus neoformans (en.wikipedia.org, citing peer-reviewed sources for Chernobyl and vomocytosis data)",
                     "PetMD — Cryptococcosis in Cats (petmd.com)",
                 ],
-                relatedEntries: ["1D000001-0000-0000-0000-000000000014"]
+                relatedEntries: [
+                    "1D000001-0000-0000-0000-000000000014",  // Aspergillosis
+                    "1D000001-0000-0000-0000-000000000016"   // Coccidioidomycosis (Valley Fever)
+                ]
+            ),
+
+            // MARK: - Coccidioidomycosis (Valley Fever)
+            ToxicItem(
+                id: UUID(uuidString: "1D000001-0000-0000-0000-000000000016")!,
+                name: "Coccidioidomycosis (Valley Fever)",
+                alternateNames: [
+                    "Valley Fever",
+                    "San Joaquin Valley Fever",
+                    "Desert Fever",
+                    "Desert Rheumatism",
+                    "Cocci",
+                    "Coccidioides",
+                    "coccidiomycosis",
+                    "coccidiodomycosis",
+                    "Coccidioidomycoses"
+                ],
+                categories: [.diseasesAndConditions],
+                imageAsset: "valley_fever_thumb",
+                description: """
+                Coccidioidomycosis — commonly known as Valley Fever — is a serious \
+                fungal infection caused by Coccidioides immitis or Coccidioides \
+                posadasii, microscopic fungi that live in the dry soil of arid and \
+                semi-arid regions. Dogs are by far the most commonly and severely \
+                affected companion animals; cats can develop infection but far less \
+                frequently and typically with a milder course.
+
+                The disease begins when a pet inhales fungal spores — called \
+                arthroconidia — released into the air by disturbed soil. In many \
+                animals, the immune system contains the infection to the lungs. In \
+                others, particularly dogs, the fungus can disseminate through the \
+                bloodstream to other organ systems including bones, joints, skin, eyes, \
+                and the brain and spinal cord. Disseminated Valley Fever can be \
+                life-threatening and may require months of treatment.
+
+                There is currently no approved vaccine for Valley Fever in dogs or \
+                cats. Pets living in or traveling through endemic areas — particularly \
+                the southwestern United States — are at ongoing risk of exposure.
+                """,
+                toxicityInfo: """
+                **How It Harms the Body**
+
+                Coccidioides fungi exist in the environment as a mold, producing hardy \
+                barrel-shaped spores called arthroconidia. When inhaled, these spores \
+                transform inside the body into a completely different structure: a \
+                large, thick-walled sphere called a spherule, which fills with hundreds \
+                of internal daughter cells called endospores. When the spherule ruptures, \
+                it releases those endospores into surrounding lung tissue — each capable \
+                of forming a new spherule. This explosive reproductive cycle drives \
+                intense inflammation.
+
+                **The Shape-Shifter**
+                This dual-form (dimorphic) life cycle — mold in the environment, \
+                spherule inside the body — is what makes Coccidioides so difficult for \
+                the immune system to clear. The spherule form is largely resistant to \
+                the initial immune response, and each rupturing spherule releases a new \
+                wave of organisms that the body must fight again from the start.
+
+                In most animals with healthy immune systems, infection remains confined \
+                to the lungs (pulmonary coccidioidomycosis), causing respiratory \
+                symptoms that may resolve — or persist — without treatment. In dogs \
+                especially, the fungus can escape pulmonary containment and travel \
+                through the bloodstream to distant sites. Disseminated disease most \
+                commonly affects bones and joints (causing pain and lameness), skin \
+                (causing draining wounds or nodules), eyes (causing inflammation or \
+                vision changes), lymph nodes, and the brain and spinal cord. \
+                Neurological involvement — including seizures and sudden behavioral \
+                changes — is considered one of the most serious and \
+                rapidly-progressing complications.
+
+                **Transmission & Spread**
+
+                Valley Fever is not contagious between animals, or from animals to \
+                humans through direct contact. All infection originates from inhaling \
+                spores from the environment.
+
+                Coccidioides fungi live exclusively in the soil of specific geographic \
+                regions — primarily the Lower Sonoran Life Zone: the desert Southwest \
+                of the United States (Arizona, California's San Joaquin Valley, New \
+                Mexico, and Texas), and parts of Mexico, Central America, and South \
+                America. Two species are recognized: Coccidioides immitis is found \
+                primarily in California and South America; Coccidioides posadasii \
+                dominates in Arizona, Texas, New Mexico, and northern Mexico.
+
+                **The Expanding Desert**
+                Historically confined to the classic desert Southwest, the endemic zone \
+                for Valley Fever has been expanding. Studies have documented Coccidioides \
+                in previously unaffected regions further north and east — a trend linked \
+                to drought conditions, warming temperatures, and shifting precipitation \
+                patterns. Veterinarians outside the traditional endemic zone are \
+                increasingly seeing Valley Fever cases, including in pets that have \
+                never left their home region.
+
+                **The Great Digger Problem**
+                Dogs are dramatically overrepresented in Valley Fever cases compared to \
+                cats — and behavior likely plays a significant role. Dogs dig, nose \
+                through soil, and sniff ground-level disturbed earth constantly, \
+                increasing their inhalation exposure to spores. Digging activities in \
+                endemic areas — particularly in dry, dusty conditions or after rain has \
+                loosened and dried the soil surface — represent some of the \
+                highest-risk exposure scenarios.
+
+                The incubation period — the time from spore inhalation to the \
+                appearance of signs — typically ranges from one to three weeks. \
+                Disseminated disease may not become apparent until weeks to months \
+                after the initial exposure.
+
+                **Treatment Goals**
+
+                Treatment for Valley Fever is aimed at suppressing fungal replication, \
+                controlling inflammation, and preventing or limiting further \
+                dissemination. Treatment courses are typically prolonged — often \
+                several months to over a year, and sometimes indefinitely in animals \
+                with severe or disseminated disease. Animals with bone, joint, or \
+                neurological involvement require close veterinary monitoring throughout \
+                treatment. Some animals experience relapses after treatment is \
+                discontinued, making long-term follow-up important.
+
+                **Zoonotic Risk**
+
+                Valley Fever is zoonotic, but the route of transmission to humans is \
+                the same as it is for pets: inhalation of spores from contaminated \
+                soil. Coccidioidomycosis cannot be transmitted from an infected pet to \
+                a human through direct contact, handling, bites, or bodily secretions.
+
+                The practical implication for pet owners is that if your pet has been \
+                diagnosed with Valley Fever, you and your pet were most likely exposed \
+                to the same environment. Humans who have spent time in endemic areas — \
+                particularly those who are immunocompromised, pregnant, elderly, or \
+                very young — should consult their own physician if they develop \
+                unexplained respiratory illness after potential soil exposure. If your \
+                pet is suspected or confirmed to have Valley Fever, take standard \
+                hygienic precautions when handling any draining skin wounds, and \
+                contact your physician if you have concerns about your own exposure.
+
+                **Myths vs. Facts**
+
+                **Myth:** I can catch Valley Fever directly from my dog.
+                **Fact:** Coccidioidomycosis is not transmitted animal-to-animal or \
+                animal-to-human through contact. Both you and your pet contract it \
+                independently from the same contaminated environment.
+
+                **Myth:** Valley Fever only affects pets in Arizona or California.
+                **Fact:** While the disease is most common in the classic desert \
+                Southwest, the endemic zone is expanding. Pets that have traveled to \
+                endemic areas — even briefly — can develop Valley Fever after returning \
+                home, and cases are increasingly documented outside the traditional \
+                geographic range.
+
+                **Myth:** A dog that recovered from Valley Fever is permanently immune.
+                **Fact:** Recovery may confer partial immunity, but reinfection and \
+                reactivation of dormant infection are both possible, particularly in \
+                immunocompromised or older animals.
+                """,
+                toxicityInfoSectionTitle: "What makes it harmful?",
+                onsetTime: OnsetTime(
+                    early: "Signs typically appear 1–3 weeks after spore inhalation. Initial signs are most often respiratory — cough, lethargy, and reduced appetite.",
+                    delayed: "Disseminated disease — spread to bones, joints, skin, eyes, or the nervous system — may develop weeks to months after initial infection and represents a significant escalation in severity."
+                ),
+                symptoms: [
+                    "Persistent or worsening cough (often the first sign)",
+                    "Lethargy and reduced energy",
+                    "Decreased appetite",
+                    "Fever",
+                    "Weight loss",
+                    "Labored or rapid breathing",
+                    "Lameness or reluctance to bear weight",
+                    "Swollen or painful joints",
+                    "Draining skin wounds or firm nodules under the skin",
+                    "Eye redness, cloudiness, or apparent vision changes",
+                    "Swollen lymph nodes",
+                    "Seizures or sudden incoordination (neurological involvement)"
+                ],
+                entrySeverity: nil,
+                speciesRisks: [
+                    SpeciesRisk(
+                        species: .dog,
+                        severity: .severe,
+                        notes: "Most commonly and severely affected species. Digging and soil-sniffing behavior increases spore inhalation exposure. Dissemination to bones, joints, skin, eyes, and the nervous system is well-documented and can be life-threatening."
+                    ),
+                    SpeciesRisk(
+                        species: .cat,
+                        severity: .moderate,
+                        notes: "Can develop Valley Fever but significantly less often than dogs. Clinical disease tends to be milder; respiratory and skin forms predominate. Disseminated disease is less common in cats."
+                    ),
+                    SpeciesRisk(
+                        species: .smallMammal,
+                        severity: .low,
+                        notes: "Wild rodents serve as environmental reservoir hosts in endemic areas but rarely develop clinical disease. Documented clinical cases in pet small mammals are limited."
+                    ),
+                    SpeciesRisk(
+                        species: .bird,
+                        severity: .low,
+                        notes: "Most avian species are considered resistant to Coccidioides infection. Rare case reports exist, but clinical disease in pet birds is not well established."
+                    ),
+                    SpeciesRisk(
+                        species: .reptile,
+                        severity: .low,
+                        notes: "Coccidioidomycosis has been documented in wild lizards in endemic regions. Clinical cases in pet reptiles are uncommon and published data are limited."
+                    )
+                ],
+                preventionTips: [
+                    "Restrict digging and ground-rooting activities in endemic areas, particularly in dry or dusty conditions and after soil disturbance",
+                    "Keep pets away from construction sites, excavation zones, and heavily disturbed soil in the southwestern United States",
+                    "Pets traveling to endemic areas (Arizona, California's San Joaquin Valley, New Mexico, Texas) should be monitored for signs of illness for several weeks after return",
+                    "No approved vaccine is currently available for Valley Fever in dogs or cats",
+                    "Seek prompt veterinary evaluation if a pet in or from an endemic area develops a persistent cough, unexplained lethargy, or lameness",
+                    "Wash hands thoroughly after handling draining skin wounds on a Valley Fever-positive pet and follow your veterinarian's hygiene guidance",
+                    "If your pet is diagnosed with Valley Fever, consult your own physician about shared environmental exposure — particularly if you are immunocompromised, pregnant, elderly, or very young",
+                    "Always inform your veterinarian about travel to endemic areas when presenting a pet with respiratory or musculoskeletal signs"
+                ],
+                sources: [
+                    "Merck Veterinary Manual — Coccidioidomycosis: merckvetmanual.com",
+                    "University of Arizona Valley Fever Center for Excellence: vfce.arizona.edu",
+                    "Centers for Disease Control and Prevention (CDC) — Valley Fever: cdc.gov/valley-fever",
+                    "Cornell University College of Veterinary Medicine: vet.cornell.edu",
+                    "VCA Animal Hospitals — Valley Fever in Dogs: vcahospitals.com",
+                    "Wikipedia — Coccidioides (geographic range, dimorphic mechanism, species distribution): en.wikipedia.org/wiki/Coccidioides"
+                ],
+                relatedEntries: [
+                    "1D000001-0000-0000-0000-000000000014",  // Aspergillosis
+                    "1D000001-0000-0000-0000-000000000015"   // Cryptococcosis
+                ]
             ),
         ]
     }
