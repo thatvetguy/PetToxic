@@ -3,11 +3,11 @@
 Complete list of all entries with UUIDs, severity, and categories.
 
 - Toxin/informational entries in `DatabaseService.swift`: 186
-- Disease/condition entries in `DiseasesConditionsService.swift`: 14 (Pro-locked)
+- Disease/condition entries in `DiseasesConditionsService.swift`: 15 (Pro-locked)
 - Severity explainer: 1
-- **Total entries: 201**
+- **Total entries: 202**
 
-*Last updated: 2026-03-16 (Session 147)*
+*Last updated: 2026-03-17 (Session 148)*
 
 ---
 
@@ -21,7 +21,7 @@ Complete list of all entries with UUIDs, severity, and categories.
 | Low/Moderate | 4 |
 | Low | 17 |
 | nil (Informational) | 26 |
-| **Total** | **201** |
+| **Total** | **202** |
 
 | Category | Count |
 |----------|-------|
@@ -35,7 +35,7 @@ Complete list of all entries with UUIDs, severity, and categories.
 | Holiday Hazards | 11 |
 | Cleaning Products | 9 |
 | Recreational Substances | 8 |
-| Diseases & Conditions | 14 |
+| Diseases & Conditions | 15 |
 
 *Counts exceed total because entries can be cross-listed in multiple categories.*
 
@@ -342,6 +342,7 @@ Complete list of all entries with UUIDs, severity, and categories.
 | Canine Distemper | `1D000001-0000-0000-0000-000000000012` | nil | Dogs, Small Mammals |
 | Ringworm (Dermatophytosis) | `1D000001-0000-0000-0000-000000000013` | nil | Cats, Dogs, Small Mammals, Birds |
 | Aspergillosis | `1D000001-0000-0000-0000-000000000014` | nil | Birds, Dogs, Cats |
+| Cryptococcosis | `1D000001-0000-0000-0000-000000000015` | nil | Cats, Dogs |
 
 ### Special Entry
 
@@ -351,7 +352,7 @@ Complete list of all entries with UUIDs, severity, and categories.
 
 ---
 
-## Alphabetical Index (All 201 Entries)
+## Alphabetical Index (All 202 Entries)
 
 | # | Name | UUID | Severity | Categories |
 |---|------|------|----------|------------|
@@ -410,149 +411,150 @@ Complete list of all entries with UUIDs, severity, and categories.
 | 53 | Cooked Bones | `59cf7dc4-5d83-4811-97f1-ce1d0162cd28` | nil | Informational, Foods |
 | 54 | Coral Snake Envenomation | `00112233-4455-6677-8899-aabbccddef08` | Severe | Outdoor Hazards |
 | 55 | Corn Cob Ingestion | `00112233-4455-6677-8899-aabbccddef19` | nil | Informational |
-| 56 | Cyanogenic Glycoside Plants | `3816a23f-40cf-47e7-88e6-158fddc21b71` | Severe | Plants |
-| 57 | Cyclamen | `1669461b-b725-4e4b-a30a-99c26b34e5c1` | Severe | Plants, Holiday Hazards |
-| 58 | Daffodils | `cdb80d59-274a-45f9-b5c5-1e716a7b402b` | High | Plants, Holiday Hazards |
-| 59 | Daphne | `0352eba9-25a1-4a99-a850-a22052c2f176` | Severe | Plants |
-| 60 | Datura (Angel's Trumpet & Jimsonweed) | `058dbd41-6a45-4486-ab20-bc2929c251a0` | High | Plants |
-| 61 | Decongestants (Pseudoephedrine & Phenylephrine) | `66dd4455-eeff-0011-2233-445566778899` | High | Medications |
-| 62 | DEET (Insect Repellent) | `b8c9d0e1-2f3a-4b5c-d6e7-8f9a0b1c2d3e` | High | Garage & Garden |
-| 63 | Diabetes Medications (Insulin & Oral Hypoglycemics) | `33aa1122-bbcc-ddee-ff00-112233445566` | Severe | Medications |
-| 64 | Drain Cleaners & Caustic Alkalis | `33445566-7788-99aa-bbcc-ddeeff001122` | Severe | Cleaning Products |
-| 65 | Duranta / Golden Dewdrop | `d84a68f2-ba6d-4ad6-b4af-82721447ef83` | High | Plants |
-| 66 | Dysecdysis (Abnormal Shedding) | `1D000001-0000-0000-0000-000000000010` | nil | Diseases & Conditions |
-| 67 | Electrical Cords & Electrocution | `e5f6a7b8-9c0d-1e2f-3a4b-5c6d7e8f9a0b` | nil | Household Items, Informational |
-| 68 | English Ivy | `8ea06fcf-b35d-4049-a73f-8c94752c783d` | Moderate | Plants |
-| 69 | Essential Oils (Tea Tree, Pennyroyal, Eucalyptus & Others) | `eeff2233-4455-6677-8899-aabbccddeeff` | Severe | Household Items |
-| 70 | Estrogen Medications & Hormone Therapies | `ccdd0011-eeff-2233-4455-667788990011` | High | Medications |
-| 71 | Eucalyptus | `a7f3b2c1-8d4e-4f6a-b9e1-3c5d7a2f8b64` | High | Plants |
-| 72 | Expanding Glues (Gorilla Glue) | `b2e4f7a1-8c3d-4e6f-a9b2-1d5c8e3f7a2b` | nil | Garage & Garden, Informational |
-| 73 | Fatty Foods & Grease | `2e094121-64ea-499c-bfb4-6db98f139b55` | Low/Moderate | Foods, Holiday Hazards |
-| 74 | Feline Panleukopenia (Feline Distemper) | `1D000001-0000-0000-0000-000000000003` | Severe | Diseases & Conditions |
-| 75 | Fertilizers | `c3f5a8b2-7d4e-4f1a-b6c9-2e8d7f4a5b3c` | Moderate | Garage & Garden |
-| 76 | Fipronil (Frontline) | `a7b8c9d0-1e2f-4a3b-c4d5-6e7f8a9b0c1d` | Severe | Medications, Garage & Garden |
-| 77 | Foxglove | `2a95c561-533e-4a73-bd11-8d43bd127bb4` | Severe | Plants |
-| 78 | Foxtails (Grass Awns) | `00112233-4455-6677-8899-aabbccddef20` | nil | Informational, Outdoor Hazards |
-| 79 | Fruit Pits & Seeds | `f1369ae0-b97d-424d-98b7-b46a9b245109` | nil | Informational, Foods |
-| 80 | Garlic | `dad777ea-3120-43b1-9b8f-aee413716abc` | Severe | Foods |
-| 81 | GI Irritant Plants | `045fe2d3-3c59-4f15-b72a-09371b675d77` | Low | Plants, Holiday Hazards |
-| 82 | Glow Sticks | `d4e5f6a7-8b9c-0d1e-2f3a-4b5c6d7e8f9a` | Low | Household Items |
-| 83 | Golden Chain Tree | `e4b28653-d4b2-42a0-ac67-f22e53fc1673` | High | Plants |
-| 84 | Grapes & Raisins | `d1bde5cd-6881-4765-ac4c-b9f43b40da70` | Severe | Foods |
-| 85 | Heart & Blood Pressure Medications | `22990011-aabb-ccdd-eeff-223344556677` | Severe | Medications |
-| 86 | Heat Stroke & Hot Surfaces | `00112233-4455-6677-8899-aabbccddef26` | nil | Informational, Outdoor Hazards |
-| 87 | Heavy Metal Toxicosis (Lead, Zinc, Copper & Others) | `00112233-4455-6677-8899-aabbccddef23` | nil | Informational, Household Items, Garage & Garden |
-| 88 | Hemlock (Poison Hemlock & Water Hemlock) | `00112233-4455-6677-8899-aabbccddef16` | Severe | Plants |
-| 89 | Herbicides | `b4c5d6e7-8f9a-0b1c-2d3e-4f5a6b7c8d9e` | High | Garage & Garden |
-| 90 | Honeysuckle | `048CDED7-251B-4F1C-89E6-93ACB63E6621` | Low | Plants |
-| 91 | Hops | `00112233-4455-6677-8899-aabbccddef14` | Severe | Foods, Household Items, Plants |
-| 92 | Horse Chestnut & Buckeye | `c3531735-0e34-448a-82d8-660ed4c22a24` | High | Plants |
-| 93 | Hypothermia & Frostbite | `00112233-4455-6677-8899-aabbccddef27` | nil | Informational, Outdoor Hazards |
-| 94 | Ice Packs | `c9d0e1f2-3a4b-5c6d-7e8f-9a0b1c2d3e4f` | Low | Household Items |
-| 95 | Inhalant Toxicity (Birds & Respiratory Hazards) | `00112233-4455-6677-8899-aabbccddef24` | nil | Informational, Household Items |
-| 96 | Inhalant Toxins (PTFE / Teflon Toxicosis) | `00112233-4455-6677-8899-aabbccddef22` | Severe | Household Items |
-| 97 | Insoluble Calcium Oxalate Plants | `f52b8aba-d899-418b-8ce6-2844408a5e3c` | Moderate | Plants |
-| 98 | Iron-Containing Oxygen Absorbers | `f6a7b8c9-0d1e-2f3a-4b5c-6d7e8f9a0b1c` | Severe | Household Items |
-| 99 | Ivermectin & Macrocyclic Lactones | `bbcc9900-ddee-ff11-2233-445566778899` | High | Medications |
-| 100 | Joint Supplements (Glucosamine & Chondroitin) | `91000011-2233-4455-6677-889900aabb01` | High | Medications |
-| 101 | Kalanchoe | `dfa90432-20a6-45bb-9e19-f917b50b3765` | Severe | Plants |
-| 102 | Kennel Cough | `1D000001-0000-0000-0000-000000000008` | Moderate | Diseases & Conditions |
-| 103 | Lantana | `1d9f0989-6d98-4305-ac74-56f6e6e8ca0f` | Moderate | Plants |
-| 104 | Larkspur & Delphinium | `ed41fd85-d05e-4797-9f94-5152653df2d1` | High | Plants |
-| 105 | Laundry Detergent Pods | `55667788-99aa-bbcc-ddee-ff0011223344` | Severe | Cleaning Products |
-| 106 | Lead (Batteries, Paint, Fishing Weights) | `3b605ff6-df0c-426f-8687-70226969f7c0` | High | Garage & Garden |
-| 107 | Leptospirosis | `1D000001-0000-0000-0000-000000000006` | Severe | Diseases & Conditions |
-| 108 | Lilies (True Lilies) | `419a437f-3834-47e1-934a-5fa379b98a00` | Severe | Plants, Holiday Hazards |
-| 109 | Lily of the Valley | `f057eb34-f67c-4341-b971-1bde66ca3242` | Severe | Plants |
-| 110 | Linear Foreign Bodies (Thread, String, Ribbon) | `00112233-4455-6677-8899-aabbccddef03` | nil | Informational |
-| 111 | Liquid Potpourri & Scented Products | `b8c9d0e1-2f3a-4b5c-6d7e-8f9a0b1c2d3e` | High | Household Items |
-| 112 | Lupine | `71347450-35e9-4be4-b472-eedc6b9cef7a` | High | Plants |
-| 113 | Macadamia Nuts | `df7f2d18-6f6c-40c8-9f77-cdfbc815e946` | Moderate | Foods |
-| 114 | Magnets | `e1f2a3b4-5c6d-7e8f-9a0b-1c2d3e4f5a6b` | nil | Household Items, Informational |
-| 115 | MDMA (Ecstasy, Molly) | `ff001122-3344-5566-7788-99aabbccdd03` | Severe | Recreational Substances |
-| 116 | MDR1 Gene Mutation (Multi-Drug Sensitivity) | `00112233-4455-6677-8899-aabbccddef18` | nil | Informational |
-| 117 | Metabolic Bone Disease (MBD) | `1D000001-0000-0000-0000-000000000005` | High | Diseases & Conditions |
-| 118 | Methamphetamine & Street Amphetamines | `ff001122-3344-5566-7788-99aabbccdd01` | Severe | Recreational Substances |
-| 119 | Metronidazole (Flagyl) | `aabb8899-ccdd-eeff-0011-223344556677` | Moderate | Medications |
-| 120 | Milk & Dairy Products | `9bc97e12-961b-4fee-adee-182c55d91ea9` | Low | Foods |
-| 121 | Milkweed | `053d21cd-da83-448d-914d-a230343b35d7` | High | Plants |
-| 122 | Moldy Foods | `beacabe2-00ab-4e59-8c8c-c09665f940b6` | High | Foods |
-| 123 | Monkshood | `7e3f5e24-a4ef-4356-9445-16b8f37d6ab4` | Severe | Plants |
-| 124 | Moonseed | `d15976a7-a615-4d2d-a828-2f3e0e666500` | High | Plants |
-| 125 | Morning Glory | `a0716b51-b922-4b95-b557-a08c5ce9ed86` | Moderate | Plants |
-| 126 | Mothballs | `e1f2a3b4-5c6d-7e8f-9a0b-1c2d3e4f5a6b` | Severe | Garage & Garden |
-| 127 | Muscle Relaxants | `44bb2233-ccdd-eeff-0011-223344556677` | Severe | Medications |
-| 128 | Myxomatosis | `1D000001-0000-0000-0000-000000000007` | Severe | Diseases & Conditions |
-| 129 | Neonicotinoids (Imidacloprid) | `f6a7b8c9-0d1e-4f2a-b3c4-5d6e7f8a9b0c` | Low/Moderate | Garage & Garden, Medications |
-| 130 | Nicotine & Tobacco Products | `fd98d3c0-368c-4b20-9192-c98dd3c17f14` | Severe | Recreational Substances, Plants |
-| 131 | Non-Toxic Bouquet Flowers | `c4e9a2b1-7d5f-4c3a-b8e2-6f1d9a4c5b73` | nil | Plants, Informational |
-| 132 | NSAIDs (Ibuprofen, Naproxen & Veterinary NSAIDs) | `aa112233-4455-6677-8899-aabbccddeef0` | Severe | Medications |
-| 133 | Nutmeg | `d6ac2e8a-00de-42cb-9c6b-f912ec43d5f3` | Moderate | Foods, Holiday Hazards |
-| 134 | Oleander | `00270080-3cce-4b30-b9ee-571f90e92371` | Severe | Plants |
-| 135 | Onions | `8a27c390-254f-47c9-90e7-7739694f603f` | Severe | Foods |
-| 136 | Opioids & Opiates (Pain Medications) | `00778899-aabb-ccdd-eeff-001122334455` | High | Medications, Recreational Substances |
-| 137 | Organophosphates & Carbamates | `e5f6a7b8-9c0d-4e1f-b2a3-4c5d6e7f8a9b` | High | Garage & Garden |
-| 138 | Oven Cleaners | `77889900-aabb-ccdd-eeff-112233445566` | Severe | Cleaning Products |
-| 139 | Packera / Ragwort | `8adc8891-ee42-4980-b263-4ef8c14dffcd` | High | Plants |
-| 140 | Paintballs | `00112233-4455-6677-8899-aabbccddef01` | High | Household Items |
-| 141 | Paints (Latex, Oil-Based, & Spray Paints) | `00112233-4455-6677-8899-aabbccddef02` | Low | Garage & Garden |
-| 142 | Pencil Cactus | `c8a18b83-133f-4be4-9aff-5cda3f6f6a18` | Moderate | Plants |
-| 143 | Pennies & Zinc Objects | `a7b8c9d0-1e2f-3a4b-5c6d-7e8f9a0b1c2d` | Severe | Household Items |
-| 144 | Peonies | `a7c3e1f0-5b2d-4e8a-9f6c-3d7b1a2e4f80` | Low | Plants |
-| 145 | Periwinkle (Vinca) | `114b7d96-5dfe-4fe0-8fbf-fbbc19397409` | Moderate | Plants |
-| 146 | Pesticides & Insecticides | `c9d0e1f2-3a4b-5c6d-e7f8-9a0b1c2d3e4f` | nil | Informational, Garage & Garden, Medications |
-| 147 | Petroleum Products (Gasoline, Motor Oil, Diesel) | `edfcb0ed-52aa-44fb-a71f-060551350513` | High | Garage & Garden |
-| 148 | Phenylpropanolamine (PPA) | `99aa7788-bbcc-ddee-ff00-112233445566` | High | Medications |
-| 149 | Pit Viper Envenomation (Venomous Snake Bites) | `00112233-4455-6677-8899-aabbccddef07` | Severe | Outdoor Hazards |
-| 150 | Poison Ivy, Poison Oak & Poison Sumac | `00112233-4455-6677-8899-aabbccddef17` | nil | Plants, Outdoor Hazards, Informational |
-| 151 | Pokeweed | `7E52EBF4-2617-4264-A341-4E6FF77E26EB` | High | Plants |
-| 152 | Pool Chemicals | `a3b4c5d6-7e8f-9a0b-1c2d-3e4f5a6b7c8d` | Severe | Garage & Garden |
-| 153 | Porcupine Quills | `00112233-4455-6677-8899-aabbccddef28` | nil | Informational, Outdoor Hazards |
-| 154 | Privet (Ligustrum) | `96000011-2233-4455-6677-889900aabb01` | Moderate | Plants |
-| 155 | Psilocybin Mushrooms & Psychedelic Edibles | `ff001122-3344-5566-7788-99aabbccdd04` | High | Recreational Substances |
-| 156 | Psittacosis (Parrot Fever) | `1D000001-0000-0000-0000-000000000004` | High | Diseases & Conditions |
-| 157 | Pyrethrins & Pyrethroids (Permethrin) | `d4e5f6a7-8b9c-4d0e-a1b2-3c4d5e6f7a8b` | Severe | Garage & Garden, Medications |
-| 158 | Quaternary Ammonium Disinfectants | `88990011-aabb-ccdd-eeff-223344556677` | High | Cleaning Products |
-| 159 | Rabies | `1D000001-0000-0000-0000-000000000001` | Severe | Diseases & Conditions |
-| 160 | Ranunculus (Buttercup) | `ee90d3c6-f9cc-40ab-ae91-c13bc481ab16` | Low | Plants |
-| 161 | Raw Yeast Dough | `ec90eb4b-765b-45cb-9255-f449b656b7d3` | Severe | Foods, Holiday Hazards |
-| 162 | Ringworm (Dermatophytosis) | `1D000001-0000-0000-0000-000000000013` | nil | Diseases & Conditions |
-| 163 | Rodenticides (Overview) | `049e1259-f968-4e23-aa8c-5110cb52a08c` | nil | Informational, Garage & Garden |
-| 164 | Rosary Pea | `57801263-b55c-4c20-b12c-cff832a15077` | Severe | Plants |
-| 165 | Ruscus (Butcher's Broom) | `1afa55b7-d37f-469f-9f8b-6ec3c0ff7471` | Moderate | Plants |
-| 166 | Sago Palm | `7e96af6d-05e2-438b-8391-70087f947bcb` | Severe | Plants |
-| 167 | Salt | `c9fb21d1-a66a-418e-a63f-1b754ec048f2` | High | Foods, Garage & Garden |
-| 168 | Scorpion Stings | `00112233-4455-6677-8899-aabbccddef09` | High | Outdoor Hazards |
-| 169 | Silica Gel Packets | `c3d4e5f6-7a8b-9c0d-1e2f-3a4b5c6d7e8f` | Low | Household Items |
-| 170 | Skunk Spray | `00112233-4455-6677-8899-aabbccddef04` | Low | Outdoor Hazards |
-| 171 | Sleep Aids (Prescription & OTC) | `ff667788-99aa-bbcc-ddee-ff0011223355` | Moderate | Medications |
-| 172 | Slug & Snail Bait (Metaldehyde) | `a7d3e8f2-6b4c-4a1e-9f5d-2c8b7a3e6d1f` | Severe | Garage & Garden |
-| 173 | Snake Plant & Dracaena | `edb87d20-62af-4382-883e-5f979b4b7892` | Low | Plants |
-| 174 | Soaps & Mild Detergents | `11223344-5566-7788-99aa-bbccddeeff00` | Low | Cleaning Products |
-| 175 | Soluble Calcium Oxalate Plants | `8e6a2493-6fc9-4ddd-83b1-acb7148fbdd4` | Moderate | Plants, Foods |
-| 176 | Stinging Nettle | `8cd181bc-9ac5-492b-9085-aa51b6b92e44` | Low | Plants |
-| 177 | Sunscreen | `d0e1f2a3-4b5c-6d7e-8f9a-0b1c2d3e4f5a` | Low/Moderate | Household Items |
-| 178 | Superglue | `00112233-4455-6677-8899-aabbccddef25` | Low/Moderate | Household Items |
-| 179 | Sweet Pea | `b3d8f2a1-6c4e-4f9b-a1d7-5e2c8b3f9a04` | Moderate | Plants |
-| 180 | Tampon & Hygiene Product Ingestion | `00112233-4455-6677-8899-aabbccddef21` | nil | Informational |
-| 181 | Thermal Burns | `1D000001-0000-0000-0000-000000000009` | nil | Diseases & Conditions |
-| 182 | Thyroid Medications (Levothyroxine) | `55cc3344-ddee-ff00-1122-334455667788` | Moderate | Medications |
-| 183 | Tick Paralysis | `00112233-4455-6677-8899-aabbccddef13` | Moderate | Outdoor Hazards |
-| 184 | Toad Poisoning (Bufo Toads) | `00112233-4455-6677-8899-aabbccddef05` | Severe | Outdoor Hazards |
-| 185 | Toilet Bowl Cleaners | `66778899-aabb-ccdd-eeff-001122334455` | High | Cleaning Products |
-| 186 | Tomato & Potato Plants | `d8d69209-6177-411e-bd92-c541af9fe79d` | Moderate | Plants, Foods |
-| 187 | Tradescantia (Wandering Jew) | `be55d11f-23dc-4c16-a5a5-545740026b2b` | Low | Plants |
-| 188 | Traditional Laundry Detergent | `99001122-aabb-ccdd-eeff-334455667788` | Low | Cleaning Products |
-| 189 | Tree of Heaven | `3C48AB30-D291-4519-9F2F-B4DA1E0D4C02` | Moderate | Plants |
-| 190 | Tulips & Hyacinths | `81d94db6-b452-4997-818a-fb89fde196fa` | Moderate | Plants, Holiday Hazards |
-| 191 | Understanding Severity Ratings | `B3F1A2D4-E5C6-47F8-9A0B-1C2D3E4F5A6B` | nil | *(special explainer)* |
-| 192 | Vitamin D Overdose (Supplements & Medications) | `c492d990-4222-44a0-8546-634118f68f71` | High | Medications |
-| 193 | Why Cats Are More Sensitive | `b2e4c6a8-1d3f-5b7a-9e0c-4f6d8a2b7c5e` | nil | Informational |
-| 194 | Widow Spider Bites | `00112233-4455-6677-8899-aabbccddef10` | Severe | Outdoor Hazards |
-| 195 | Wild Mushrooms | `1ce957ec-633a-4946-9b76-933a16dfdb5c` | High | Plants |
-| 196 | Windshield Washer Fluid (Methanol) | `286ff548-979a-45c1-853b-3cc87ccbcaa1` | Moderate | Garage & Garden |
-| 197 | Wisteria | `b2e1e5d4-0d12-410b-83dc-da106bbc2199` | High | Plants |
-| 198 | Xylitol | `d7723ed0-6496-40b3-8b1c-84e129083cb9` | Severe | Foods |
-| 199 | Yellow Jessamine | `f96f5ad9-369a-413e-a899-971f6423a683` | Severe | Plants |
-| 200 | Yew | `35d425ef-8319-4820-9614-a9b1a0c4cfac` | Severe | Plants |
-| 201 | Zinc Phosphide | `c8ebc592-fbe3-4e06-9e8d-63399dfce710` | Severe | Garage & Garden |
+| 56 | Cryptococcosis | `1D000001-0000-0000-0000-000000000015` | nil | Diseases & Conditions |
+| 57 | Cyanogenic Glycoside Plants | `3816a23f-40cf-47e7-88e6-158fddc21b71` | Severe | Plants |
+| 58 | Cyclamen | `1669461b-b725-4e4b-a30a-99c26b34e5c1` | Severe | Plants, Holiday Hazards |
+| 59 | Daffodils | `cdb80d59-274a-45f9-b5c5-1e716a7b402b` | High | Plants, Holiday Hazards |
+| 60 | Daphne | `0352eba9-25a1-4a99-a850-a22052c2f176` | Severe | Plants |
+| 61 | Datura (Angel's Trumpet & Jimsonweed) | `058dbd41-6a45-4486-ab20-bc2929c251a0` | High | Plants |
+| 62 | Decongestants (Pseudoephedrine & Phenylephrine) | `66dd4455-eeff-0011-2233-445566778899` | High | Medications |
+| 63 | DEET (Insect Repellent) | `b8c9d0e1-2f3a-4b5c-d6e7-8f9a0b1c2d3e` | High | Garage & Garden |
+| 64 | Diabetes Medications (Insulin & Oral Hypoglycemics) | `33aa1122-bbcc-ddee-ff00-112233445566` | Severe | Medications |
+| 65 | Drain Cleaners & Caustic Alkalis | `33445566-7788-99aa-bbcc-ddeeff001122` | Severe | Cleaning Products |
+| 66 | Duranta / Golden Dewdrop | `d84a68f2-ba6d-4ad6-b4af-82721447ef83` | High | Plants |
+| 67 | Dysecdysis (Abnormal Shedding) | `1D000001-0000-0000-0000-000000000010` | nil | Diseases & Conditions |
+| 68 | Electrical Cords & Electrocution | `e5f6a7b8-9c0d-1e2f-3a4b-5c6d7e8f9a0b` | nil | Household Items, Informational |
+| 69 | English Ivy | `8ea06fcf-b35d-4049-a73f-8c94752c783d` | Moderate | Plants |
+| 70 | Essential Oils (Tea Tree, Pennyroyal, Eucalyptus & Others) | `eeff2233-4455-6677-8899-aabbccddeeff` | Severe | Household Items |
+| 71 | Estrogen Medications & Hormone Therapies | `ccdd0011-eeff-2233-4455-667788990011` | High | Medications |
+| 72 | Eucalyptus | `a7f3b2c1-8d4e-4f6a-b9e1-3c5d7a2f8b64` | High | Plants |
+| 73 | Expanding Glues (Gorilla Glue) | `b2e4f7a1-8c3d-4e6f-a9b2-1d5c8e3f7a2b` | nil | Garage & Garden, Informational |
+| 74 | Fatty Foods & Grease | `2e094121-64ea-499c-bfb4-6db98f139b55` | Low/Moderate | Foods, Holiday Hazards |
+| 75 | Feline Panleukopenia (Feline Distemper) | `1D000001-0000-0000-0000-000000000003` | Severe | Diseases & Conditions |
+| 76 | Fertilizers | `c3f5a8b2-7d4e-4f1a-b6c9-2e8d7f4a5b3c` | Moderate | Garage & Garden |
+| 77 | Fipronil (Frontline) | `a7b8c9d0-1e2f-4a3b-c4d5-6e7f8a9b0c1d` | Severe | Medications, Garage & Garden |
+| 78 | Foxglove | `2a95c561-533e-4a73-bd11-8d43bd127bb4` | Severe | Plants |
+| 79 | Foxtails (Grass Awns) | `00112233-4455-6677-8899-aabbccddef20` | nil | Informational, Outdoor Hazards |
+| 80 | Fruit Pits & Seeds | `f1369ae0-b97d-424d-98b7-b46a9b245109` | nil | Informational, Foods |
+| 81 | Garlic | `dad777ea-3120-43b1-9b8f-aee413716abc` | Severe | Foods |
+| 82 | GI Irritant Plants | `045fe2d3-3c59-4f15-b72a-09371b675d77` | Low | Plants, Holiday Hazards |
+| 83 | Glow Sticks | `d4e5f6a7-8b9c-0d1e-2f3a-4b5c6d7e8f9a` | Low | Household Items |
+| 84 | Golden Chain Tree | `e4b28653-d4b2-42a0-ac67-f22e53fc1673` | High | Plants |
+| 85 | Grapes & Raisins | `d1bde5cd-6881-4765-ac4c-b9f43b40da70` | Severe | Foods |
+| 86 | Heart & Blood Pressure Medications | `22990011-aabb-ccdd-eeff-223344556677` | Severe | Medications |
+| 87 | Heat Stroke & Hot Surfaces | `00112233-4455-6677-8899-aabbccddef26` | nil | Informational, Outdoor Hazards |
+| 88 | Heavy Metal Toxicosis (Lead, Zinc, Copper & Others) | `00112233-4455-6677-8899-aabbccddef23` | nil | Informational, Household Items, Garage & Garden |
+| 89 | Hemlock (Poison Hemlock & Water Hemlock) | `00112233-4455-6677-8899-aabbccddef16` | Severe | Plants |
+| 90 | Herbicides | `b4c5d6e7-8f9a-0b1c-2d3e-4f5a6b7c8d9e` | High | Garage & Garden |
+| 91 | Honeysuckle | `048CDED7-251B-4F1C-89E6-93ACB63E6621` | Low | Plants |
+| 92 | Hops | `00112233-4455-6677-8899-aabbccddef14` | Severe | Foods, Household Items, Plants |
+| 93 | Horse Chestnut & Buckeye | `c3531735-0e34-448a-82d8-660ed4c22a24` | High | Plants |
+| 94 | Hypothermia & Frostbite | `00112233-4455-6677-8899-aabbccddef27` | nil | Informational, Outdoor Hazards |
+| 95 | Ice Packs | `c9d0e1f2-3a4b-5c6d-7e8f-9a0b1c2d3e4f` | Low | Household Items |
+| 96 | Inhalant Toxicity (Birds & Respiratory Hazards) | `00112233-4455-6677-8899-aabbccddef24` | nil | Informational, Household Items |
+| 97 | Inhalant Toxins (PTFE / Teflon Toxicosis) | `00112233-4455-6677-8899-aabbccddef22` | Severe | Household Items |
+| 98 | Insoluble Calcium Oxalate Plants | `f52b8aba-d899-418b-8ce6-2844408a5e3c` | Moderate | Plants |
+| 99 | Iron-Containing Oxygen Absorbers | `f6a7b8c9-0d1e-2f3a-4b5c-6d7e8f9a0b1c` | Severe | Household Items |
+| 100 | Ivermectin & Macrocyclic Lactones | `bbcc9900-ddee-ff11-2233-445566778899` | High | Medications |
+| 101 | Joint Supplements (Glucosamine & Chondroitin) | `91000011-2233-4455-6677-889900aabb01` | High | Medications |
+| 102 | Kalanchoe | `dfa90432-20a6-45bb-9e19-f917b50b3765` | Severe | Plants |
+| 103 | Kennel Cough | `1D000001-0000-0000-0000-000000000008` | Moderate | Diseases & Conditions |
+| 104 | Lantana | `1d9f0989-6d98-4305-ac74-56f6e6e8ca0f` | Moderate | Plants |
+| 105 | Larkspur & Delphinium | `ed41fd85-d05e-4797-9f94-5152653df2d1` | High | Plants |
+| 106 | Laundry Detergent Pods | `55667788-99aa-bbcc-ddee-ff0011223344` | Severe | Cleaning Products |
+| 107 | Lead (Batteries, Paint, Fishing Weights) | `3b605ff6-df0c-426f-8687-70226969f7c0` | High | Garage & Garden |
+| 108 | Leptospirosis | `1D000001-0000-0000-0000-000000000006` | Severe | Diseases & Conditions |
+| 109 | Lilies (True Lilies) | `419a437f-3834-47e1-934a-5fa379b98a00` | Severe | Plants, Holiday Hazards |
+| 110 | Lily of the Valley | `f057eb34-f67c-4341-b971-1bde66ca3242` | Severe | Plants |
+| 111 | Linear Foreign Bodies (Thread, String, Ribbon) | `00112233-4455-6677-8899-aabbccddef03` | nil | Informational |
+| 112 | Liquid Potpourri & Scented Products | `b8c9d0e1-2f3a-4b5c-6d7e-8f9a0b1c2d3e` | High | Household Items |
+| 113 | Lupine | `71347450-35e9-4be4-b472-eedc6b9cef7a` | High | Plants |
+| 114 | Macadamia Nuts | `df7f2d18-6f6c-40c8-9f77-cdfbc815e946` | Moderate | Foods |
+| 115 | Magnets | `e1f2a3b4-5c6d-7e8f-9a0b-1c2d3e4f5a6b` | nil | Household Items, Informational |
+| 116 | MDMA (Ecstasy, Molly) | `ff001122-3344-5566-7788-99aabbccdd03` | Severe | Recreational Substances |
+| 117 | MDR1 Gene Mutation (Multi-Drug Sensitivity) | `00112233-4455-6677-8899-aabbccddef18` | nil | Informational |
+| 118 | Metabolic Bone Disease (MBD) | `1D000001-0000-0000-0000-000000000005` | High | Diseases & Conditions |
+| 119 | Methamphetamine & Street Amphetamines | `ff001122-3344-5566-7788-99aabbccdd01` | Severe | Recreational Substances |
+| 120 | Metronidazole (Flagyl) | `aabb8899-ccdd-eeff-0011-223344556677` | Moderate | Medications |
+| 121 | Milk & Dairy Products | `9bc97e12-961b-4fee-adee-182c55d91ea9` | Low | Foods |
+| 122 | Milkweed | `053d21cd-da83-448d-914d-a230343b35d7` | High | Plants |
+| 123 | Moldy Foods | `beacabe2-00ab-4e59-8c8c-c09665f940b6` | High | Foods |
+| 124 | Monkshood | `7e3f5e24-a4ef-4356-9445-16b8f37d6ab4` | Severe | Plants |
+| 125 | Moonseed | `d15976a7-a615-4d2d-a828-2f3e0e666500` | High | Plants |
+| 126 | Morning Glory | `a0716b51-b922-4b95-b557-a08c5ce9ed86` | Moderate | Plants |
+| 127 | Mothballs | `e1f2a3b4-5c6d-7e8f-9a0b-1c2d3e4f5a6b` | Severe | Garage & Garden |
+| 128 | Muscle Relaxants | `44bb2233-ccdd-eeff-0011-223344556677` | Severe | Medications |
+| 129 | Myxomatosis | `1D000001-0000-0000-0000-000000000007` | Severe | Diseases & Conditions |
+| 130 | Neonicotinoids (Imidacloprid) | `f6a7b8c9-0d1e-4f2a-b3c4-5d6e7f8a9b0c` | Low/Moderate | Garage & Garden, Medications |
+| 131 | Nicotine & Tobacco Products | `fd98d3c0-368c-4b20-9192-c98dd3c17f14` | Severe | Recreational Substances, Plants |
+| 132 | Non-Toxic Bouquet Flowers | `c4e9a2b1-7d5f-4c3a-b8e2-6f1d9a4c5b73` | nil | Plants, Informational |
+| 133 | NSAIDs (Ibuprofen, Naproxen & Veterinary NSAIDs) | `aa112233-4455-6677-8899-aabbccddeef0` | Severe | Medications |
+| 134 | Nutmeg | `d6ac2e8a-00de-42cb-9c6b-f912ec43d5f3` | Moderate | Foods, Holiday Hazards |
+| 135 | Oleander | `00270080-3cce-4b30-b9ee-571f90e92371` | Severe | Plants |
+| 136 | Onions | `8a27c390-254f-47c9-90e7-7739694f603f` | Severe | Foods |
+| 137 | Opioids & Opiates (Pain Medications) | `00778899-aabb-ccdd-eeff-001122334455` | High | Medications, Recreational Substances |
+| 138 | Organophosphates & Carbamates | `e5f6a7b8-9c0d-4e1f-b2a3-4c5d6e7f8a9b` | High | Garage & Garden |
+| 139 | Oven Cleaners | `77889900-aabb-ccdd-eeff-112233445566` | Severe | Cleaning Products |
+| 140 | Packera / Ragwort | `8adc8891-ee42-4980-b263-4ef8c14dffcd` | High | Plants |
+| 141 | Paintballs | `00112233-4455-6677-8899-aabbccddef01` | High | Household Items |
+| 142 | Paints (Latex, Oil-Based, & Spray Paints) | `00112233-4455-6677-8899-aabbccddef02` | Low | Garage & Garden |
+| 143 | Pencil Cactus | `c8a18b83-133f-4be4-9aff-5cda3f6f6a18` | Moderate | Plants |
+| 144 | Pennies & Zinc Objects | `a7b8c9d0-1e2f-3a4b-5c6d-7e8f9a0b1c2d` | Severe | Household Items |
+| 145 | Peonies | `a7c3e1f0-5b2d-4e8a-9f6c-3d7b1a2e4f80` | Low | Plants |
+| 146 | Periwinkle (Vinca) | `114b7d96-5dfe-4fe0-8fbf-fbbc19397409` | Moderate | Plants |
+| 147 | Pesticides & Insecticides | `c9d0e1f2-3a4b-5c6d-e7f8-9a0b1c2d3e4f` | nil | Informational, Garage & Garden, Medications |
+| 148 | Petroleum Products (Gasoline, Motor Oil, Diesel) | `edfcb0ed-52aa-44fb-a71f-060551350513` | High | Garage & Garden |
+| 149 | Phenylpropanolamine (PPA) | `99aa7788-bbcc-ddee-ff00-112233445566` | High | Medications |
+| 150 | Pit Viper Envenomation (Venomous Snake Bites) | `00112233-4455-6677-8899-aabbccddef07` | Severe | Outdoor Hazards |
+| 151 | Poison Ivy, Poison Oak & Poison Sumac | `00112233-4455-6677-8899-aabbccddef17` | nil | Plants, Outdoor Hazards, Informational |
+| 152 | Pokeweed | `7E52EBF4-2617-4264-A341-4E6FF77E26EB` | High | Plants |
+| 153 | Pool Chemicals | `a3b4c5d6-7e8f-9a0b-1c2d-3e4f5a6b7c8d` | Severe | Garage & Garden |
+| 154 | Porcupine Quills | `00112233-4455-6677-8899-aabbccddef28` | nil | Informational, Outdoor Hazards |
+| 155 | Privet (Ligustrum) | `96000011-2233-4455-6677-889900aabb01` | Moderate | Plants |
+| 156 | Psilocybin Mushrooms & Psychedelic Edibles | `ff001122-3344-5566-7788-99aabbccdd04` | High | Recreational Substances |
+| 157 | Psittacosis (Parrot Fever) | `1D000001-0000-0000-0000-000000000004` | High | Diseases & Conditions |
+| 158 | Pyrethrins & Pyrethroids (Permethrin) | `d4e5f6a7-8b9c-4d0e-a1b2-3c4d5e6f7a8b` | Severe | Garage & Garden, Medications |
+| 159 | Quaternary Ammonium Disinfectants | `88990011-aabb-ccdd-eeff-223344556677` | High | Cleaning Products |
+| 160 | Rabies | `1D000001-0000-0000-0000-000000000001` | Severe | Diseases & Conditions |
+| 161 | Ranunculus (Buttercup) | `ee90d3c6-f9cc-40ab-ae91-c13bc481ab16` | Low | Plants |
+| 162 | Raw Yeast Dough | `ec90eb4b-765b-45cb-9255-f449b656b7d3` | Severe | Foods, Holiday Hazards |
+| 163 | Ringworm (Dermatophytosis) | `1D000001-0000-0000-0000-000000000013` | nil | Diseases & Conditions |
+| 164 | Rodenticides (Overview) | `049e1259-f968-4e23-aa8c-5110cb52a08c` | nil | Informational, Garage & Garden |
+| 165 | Rosary Pea | `57801263-b55c-4c20-b12c-cff832a15077` | Severe | Plants |
+| 166 | Ruscus (Butcher's Broom) | `1afa55b7-d37f-469f-9f8b-6ec3c0ff7471` | Moderate | Plants |
+| 167 | Sago Palm | `7e96af6d-05e2-438b-8391-70087f947bcb` | Severe | Plants |
+| 168 | Salt | `c9fb21d1-a66a-418e-a63f-1b754ec048f2` | High | Foods, Garage & Garden |
+| 169 | Scorpion Stings | `00112233-4455-6677-8899-aabbccddef09` | High | Outdoor Hazards |
+| 170 | Silica Gel Packets | `c3d4e5f6-7a8b-9c0d-1e2f-3a4b5c6d7e8f` | Low | Household Items |
+| 171 | Skunk Spray | `00112233-4455-6677-8899-aabbccddef04` | Low | Outdoor Hazards |
+| 172 | Sleep Aids (Prescription & OTC) | `ff667788-99aa-bbcc-ddee-ff0011223355` | Moderate | Medications |
+| 173 | Slug & Snail Bait (Metaldehyde) | `a7d3e8f2-6b4c-4a1e-9f5d-2c8b7a3e6d1f` | Severe | Garage & Garden |
+| 174 | Snake Plant & Dracaena | `edb87d20-62af-4382-883e-5f979b4b7892` | Low | Plants |
+| 175 | Soaps & Mild Detergents | `11223344-5566-7788-99aa-bbccddeeff00` | Low | Cleaning Products |
+| 176 | Soluble Calcium Oxalate Plants | `8e6a2493-6fc9-4ddd-83b1-acb7148fbdd4` | Moderate | Plants, Foods |
+| 177 | Stinging Nettle | `8cd181bc-9ac5-492b-9085-aa51b6b92e44` | Low | Plants |
+| 178 | Sunscreen | `d0e1f2a3-4b5c-6d7e-8f9a-0b1c2d3e4f5a` | Low/Moderate | Household Items |
+| 179 | Superglue | `00112233-4455-6677-8899-aabbccddef25` | Low/Moderate | Household Items |
+| 180 | Sweet Pea | `b3d8f2a1-6c4e-4f9b-a1d7-5e2c8b3f9a04` | Moderate | Plants |
+| 181 | Tampon & Hygiene Product Ingestion | `00112233-4455-6677-8899-aabbccddef21` | nil | Informational |
+| 182 | Thermal Burns | `1D000001-0000-0000-0000-000000000009` | nil | Diseases & Conditions |
+| 183 | Thyroid Medications (Levothyroxine) | `55cc3344-ddee-ff00-1122-334455667788` | Moderate | Medications |
+| 184 | Tick Paralysis | `00112233-4455-6677-8899-aabbccddef13` | Moderate | Outdoor Hazards |
+| 185 | Toad Poisoning (Bufo Toads) | `00112233-4455-6677-8899-aabbccddef05` | Severe | Outdoor Hazards |
+| 186 | Toilet Bowl Cleaners | `66778899-aabb-ccdd-eeff-001122334455` | High | Cleaning Products |
+| 187 | Tomato & Potato Plants | `d8d69209-6177-411e-bd92-c541af9fe79d` | Moderate | Plants, Foods |
+| 188 | Tradescantia (Wandering Jew) | `be55d11f-23dc-4c16-a5a5-545740026b2b` | Low | Plants |
+| 189 | Traditional Laundry Detergent | `99001122-aabb-ccdd-eeff-334455667788` | Low | Cleaning Products |
+| 190 | Tree of Heaven | `3C48AB30-D291-4519-9F2F-B4DA1E0D4C02` | Moderate | Plants |
+| 191 | Tulips & Hyacinths | `81d94db6-b452-4997-818a-fb89fde196fa` | Moderate | Plants, Holiday Hazards |
+| 192 | Understanding Severity Ratings | `B3F1A2D4-E5C6-47F8-9A0B-1C2D3E4F5A6B` | nil | *(special explainer)* |
+| 193 | Vitamin D Overdose (Supplements & Medications) | `c492d990-4222-44a0-8546-634118f68f71` | High | Medications |
+| 194 | Why Cats Are More Sensitive | `b2e4c6a8-1d3f-5b7a-9e0c-4f6d8a2b7c5e` | nil | Informational |
+| 195 | Widow Spider Bites | `00112233-4455-6677-8899-aabbccddef10` | Severe | Outdoor Hazards |
+| 196 | Wild Mushrooms | `1ce957ec-633a-4946-9b76-933a16dfdb5c` | High | Plants |
+| 197 | Windshield Washer Fluid (Methanol) | `286ff548-979a-45c1-853b-3cc87ccbcaa1` | Moderate | Garage & Garden |
+| 198 | Wisteria | `b2e1e5d4-0d12-410b-83dc-da106bbc2199` | High | Plants |
+| 199 | Xylitol | `d7723ed0-6496-40b3-8b1c-84e129083cb9` | Severe | Foods |
+| 200 | Yellow Jessamine | `f96f5ad9-369a-413e-a899-971f6423a683` | Severe | Plants |
+| 201 | Yew | `35d425ef-8319-4820-9614-a9b1a0c4cfac` | Severe | Plants |
+| 202 | Zinc Phosphide | `c8ebc592-fbe3-4e06-9e8d-63399dfce710` | Severe | Garage & Garden |
