@@ -2564,7 +2564,255 @@ class DiseasesConditionsService {
                     "Cornell Wildlife Health Lab — Aspergillosis",
                     "Veterinary Partner — Aspergillosis in Birds"
                 ],
-                relatedEntries: nil
+                relatedEntries: ["1D000001-0000-0000-0000-000000000015"]  // Cryptococcosis
+            ),
+
+            // MARK: - Cryptococcosis
+            ToxicItem(
+                id: UUID(uuidString: "1D000001-0000-0000-0000-000000000015")!,
+                name: "Cryptococcosis",
+                alternateNames: [
+                    "Cryptococcal disease",
+                    "Cryptococcal meningitis",
+                    "Cryptococcal infection",
+                    "Cryptococcus neoformans infection",
+                    "Cryptococcus gattii infection",
+                    "C. neoformans",
+                    "C. gattii",
+                    "cryptoccocosis",
+                    "cyptococcosis",
+                ],
+                categories: [.diseasesAndConditions],
+                imageAsset: "cryptococcosis_thumb",
+                description: """
+                Cryptococcosis is a potentially serious fungal infection caused by \
+                Cryptococcus neoformans and Cryptococcus gattii — two closely related \
+                encapsulated yeasts found widely in the environment. The name comes from \
+                the Ancient Greek kryptos (\u{201C}hidden\u{201D}) and kokkos \
+                (\u{201C}berry\u{201D}) — a fitting description for an organism that \
+                conceals its yeast cells beneath a thick protective capsule designed \
+                to evade the immune system.
+
+                The disease can develop gradually over weeks to months, and in some \
+                animals may not be recognized until it has already spread beyond its \
+                initial site of infection. Cats are the most commonly affected \
+                companion animal and can develop four clinical forms: nasal (most \
+                common), central nervous system (CNS), cutaneous (skin), and systemic. \
+                Dogs are less commonly affected but are more likely to present with \
+                disseminated disease involving the brain and eyes.
+
+                Cryptococcosis is not contagious between animals or from pets to people \
+                through direct contact — infection occurs from environmental exposure, \
+                not from an infected pet. No vaccine is currently available. Both indoor \
+                and outdoor pets are susceptible. Animals with weakened immune systems \
+                may be at higher risk for severe disease.
+                """,
+                toxicityInfo: """
+                **How It Harms the Body**
+
+                The defining feature of Cryptococcus is its thick polysaccharide \
+                (complex sugar) capsule — but here is what makes it extraordinary: \
+                that capsule is not a permanent feature. In the environment, the \
+                organism carries only a minimal coat. When it detects the internal \
+                conditions of a mammalian host — lower glucose, elevated carbon dioxide, \
+                low iron — it activates full capsule production. The capsule is \
+                essentially a triggered weapon, switched on by the body it is about \
+                to infect.
+
+                Once inside, the capsule shields the organism from immune recognition \
+                and can continue to expand within host tissue. The organism is also \
+                capable of surviving inside macrophages — the immune cells specifically \
+                tasked with destroying it — and escaping without killing them, a process \
+                called vomocytosis. This allows the infection to spread stealthily \
+                through the body while appearing, at least initially, to be contained. \
+                Cryptococcus neoformans was the first pathogen in which vomocytosis \
+                was observed.
+
+                Most infections begin in the nasal cavity after a pet inhales fungal \
+                spores. From there, the organism can cross the cribriform plate — the \
+                thin bony shelf separating the nasal cavity from the brain — and enter \
+                the central nervous system directly. It can also spread through the \
+                bloodstream to the skin, eyes, lungs, and other organs. In dogs, more \
+                than half of affected animals have CNS or ocular involvement at the \
+                time of diagnosis. In cats, the nasal form is most common, though CNS \
+                spread can follow.
+
+                **Transmission & Spread**
+
+                Cryptococcus neoformans has worldwide distribution and is closely \
+                associated with pigeon and other bird droppings, where the organism \
+                thrives in a nitrogen-rich environment. Viable organisms can persist \
+                in dried pigeon droppings for up to two years. Spores and desiccated \
+                yeast cells are also found in soil, decaying wood, and leaf litter. \
+                When this material is disturbed — by wind, construction, or soil \
+                disruption — infectious particles become airborne and can be inhaled.
+
+                The animal most associated with spreading Cryptococcus neoformans — \
+                the pigeon — rarely develops clinical disease from it. The organism \
+                passes harmlessly through the pigeon\u{2019}s gut and is shed in \
+                large quantities in droppings. When that material dries and becomes \
+                airborne, it reaches susceptible hosts nearby. A pigeon roosting on \
+                a balcony or in an attic represents an environmental risk that is \
+                easy to overlook.
+
+                Cryptococcus gattii was historically considered restricted to tropical \
+                and subtropical regions. This changed in 1999, when C. gattii emerged \
+                on Vancouver Island, British Columbia — a temperate climate where no \
+                tropical pathogen had been expected. The outbreak strain was later \
+                identified as a novel genotype produced by an unusual same-sex mating \
+                event. The organism spread to mainland British Columbia by 2004 and \
+                to Washington and Oregon by 2006, establishing an endemic zone across \
+                the Pacific Northwest. Pet owners along the Pacific coast — particularly \
+                in California, Oregon, Washington, and British Columbia — face elevated \
+                environmental exposure compared to other regions of North America.
+
+                Infection requires inhalation of spores from the environment. Direct \
+                transmission between animals, or from an infected pet to a person, \
+                does not occur.
+
+                **Treatment Goals**
+
+                Because the organism can spread significantly before symptoms become \
+                obvious, prompt diagnosis is important. Veterinary evaluation — \
+                including antigen detection testing on blood or other body fluids and \
+                potentially imaging — helps determine the extent of disease. Treatment \
+                requires extended antifungal therapy lasting many months, with regular \
+                monitoring for medication tolerance and disease response. Antigen levels \
+                in the blood can be tracked over time to assess treatment progress. \
+                Animals with CNS or disseminated disease require more intensive \
+                management. Even after apparent resolution, ongoing monitoring for \
+                relapse is recommended, as recurrence is documented.
+
+                **Zoonotic Risk**
+
+                Cryptococcosis is not considered a direct zoonotic disease — a sick \
+                cat or dog cannot pass the infection to you through normal contact. \
+                Both animals and humans acquire infection from the same environmental \
+                sources: contaminated soil, bird droppings, and decaying organic \
+                material.
+
+                Immunocompromised individuals — including transplant recipients, those \
+                on immunosuppressive medications, or people with HIV — face genuine \
+                risk from environmental Cryptococcus exposure. Rare cases of infection \
+                linked to exposure to infected pet bird droppings have been documented \
+                in medical literature. Pets with cryptococcosis may serve as sentinels \
+                alerting owners to the presence of the organism in their shared \
+                environment. If you or a household member is immunocompromised and \
+                your pet has been diagnosed with cryptococcosis, contact your physician \
+                to discuss appropriate precautions.
+
+                **The Hidden Berry**
+
+                The name Cryptococcus — \u{201C}hidden berry\u{201D} — was originally \
+                chosen because early microscopists struggled to see the organism clearly. \
+                The species name neoformans (\u{201C}new shaping\u{201D}) was given by \
+                Italian researcher Francesco Sanfelice in 1895, after isolating it from \
+                fermented peach juice. The genus was formally described in 1901 by \
+                French mycologist Jean-Paul Vuillemin, after he realized the organism \
+                did not behave like the yeast it was originally mistaken for.
+
+                The leading theory for why this soil fungus evolved the ability to \
+                evade mammalian immune systems involves amoebae. For millions of years, \
+                Cryptococcus lived in soil where amoebae — single-celled organisms that \
+                engulf and digest microbes — posed the primary threat. Amoebae attack \
+                cells the same way mammalian macrophages do. The fungus developed its \
+                immune evasion and intracellular survival tools to defeat amoebae, and \
+                those same tools happen to work against mammalian immune cells. \
+                Mammals are, in a sense, collateral damage. Researchers call this \
+                concept \u{201C}accidental virulence.\u{201D}
+
+                **The Chernobyl Fungus**
+
+                In one of the more unexpected footnotes in mycology, colonies of \
+                Cryptococcus neoformans were found growing inside the ruins of the \
+                Chernobyl Nuclear Power Plant — one of the most radioactively \
+                contaminated environments on Earth. Studies have suggested these \
+                colonies may be able to metabolize ionizing radiation as an energy \
+                source, in a process analogous to photosynthesis. The same melanin \
+                pigment that helps Cryptococcus survive inside macrophages appears to \
+                be involved. Whether this represents a meaningful survival advantage \
+                in clinical infection is still being studied.
+
+                **Myths vs. Facts**
+
+                **Myth:** If my indoor cat never goes outside, they are safe from \
+                cryptococcosis.
+                **Fact:** Indoor cats can still be exposed. Spores can be tracked \
+                indoors on shoes or on the paws of other pets that go outside. Both \
+                indoor and outdoor cats have been diagnosed with the disease.
+
+                **Myth:** If my cat has cryptococcosis, I can catch it from them.
+                **Fact:** Cryptococcosis is not transmitted directly from pet to \
+                person. A sick cat is not contagious to you. However, you and your \
+                pet may have been exposed to the same environmental source — the real \
+                risk comes from the environment, not the animal.
+                """,
+                toxicityInfoSectionTitle: "What makes it harmful?",
+                onsetTime: OnsetTime(
+                    early: "Weeks to months after exposure: chronic nasal discharge, sneezing, facial swelling, skin nodules",
+                    delayed: "Months to years: central nervous system signs including sudden blindness, seizures, behavioral changes, and loss of balance may develop as disease progresses or spreads"
+                ),
+                symptoms: [
+                    "Chronic nasal discharge (thick; may be bloody, yellow, or green)",
+                    "Frequent sneezing",
+                    "Loud or labored breathing",
+                    "Swelling over the bridge of the nose",
+                    "Visible masses or growths in or around the nostrils",
+                    "Skin nodules — firm, non-painful lumps, especially around the head, face, and neck",
+                    "Sudden blindness or dilated, unresponsive pupils",
+                    "Seizures",
+                    "Behavioral changes, confusion, or disorientation",
+                    "Head tilt, loss of balance, or difficulty walking",
+                    "Weight loss and loss of appetite",
+                    "Lethargy",
+                ],
+                entrySeverity: nil,
+                speciesRisks: [
+                    SpeciesRisk(
+                        species: .cat,
+                        severity: .high,
+                        notes: "Most commonly affected companion animal; both indoor and outdoor cats at risk; nasal form most common; CNS, skin, and systemic forms possible; cats with FIV may experience more severe disease or poorer treatment response"
+                    ),
+                    SpeciesRisk(
+                        species: .dog,
+                        severity: .moderate,
+                        notes: "Less common than cats; however, more than half of affected dogs have CNS or ocular involvement at diagnosis; neurological and eye signs often predominate over nasal signs"
+                    ),
+                    SpeciesRisk(
+                        species: .smallMammal,
+                        severity: .low,
+                        notes: "Ferrets are the most commonly affected small mammal; documented in the Vancouver Island C. gattii outbreak; cases in guinea pigs and rodents reported rarely; immunocompromised individuals at higher risk"
+                    ),
+                    SpeciesRisk(
+                        species: .bird,
+                        severity: .low,
+                        notes: "Pet birds can harbor the organism in droppings without developing clinical disease; rare clinical infections documented (notably in cockatoos); pigeons are the primary environmental reservoir but rarely develop disease themselves"
+                    ),
+                    SpeciesRisk(
+                        species: .reptile,
+                        severity: .low,
+                        notes: "Documented in literature but very rare; any chronic respiratory illness in reptiles warrants veterinary evaluation"
+                    ),
+                ],
+                preventionTips: [
+                    "Keep cats indoors where possible, particularly in endemic regions (Pacific coast of North America, parts of Europe and Australia)",
+                    "Avoid areas with heavy accumulations of pigeon or bird droppings; clean them up promptly and wear a mask when doing so",
+                    "Limit your pet\u{2019}s access to areas with disturbed soil, decaying wood, or leaf litter accumulations, especially in endemic regions",
+                    "No vaccine is currently available for cryptococcosis",
+                    "Pets with weakened immune systems — including those on long-term immunosuppressive therapy — may be at higher risk; discuss this with your veterinarian",
+                    "Even indoor cats can be exposed; spores can be carried inside on shoes or the paws of other pets",
+                    "If you are immunocompromised and your pet is diagnosed with cryptococcosis, consult your physician about appropriate precautions",
+                ],
+                sources: [
+                    "Merck Veterinary Manual — Cryptococcosis in Animals (merckvetmanual.com, revised 2024)",
+                    "Cornell University College of Veterinary Medicine — Cryptococcosis (vet.cornell.edu)",
+                    "Texas A&M School of Veterinary Medicine — Cryptococcal Fungal Infections (vetmed.tamu.edu, 2024)",
+                    "ABCD Guidelines — Cryptococcosis in Cats (abcdcatsvets.org, revised 2025)",
+                    "CDC MMWR — Emergence of Cryptococcus gattii, Pacific Northwest, 2004\u{2013}2010 (cdc.gov)",
+                    "Wikipedia — Cryptococcus neoformans (en.wikipedia.org, citing peer-reviewed sources for Chernobyl and vomocytosis data)",
+                    "PetMD — Cryptococcosis in Cats (petmd.com)",
+                ],
+                relatedEntries: ["1D000001-0000-0000-0000-000000000014"]
             ),
         ]
     }
