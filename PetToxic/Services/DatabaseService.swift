@@ -11944,19 +11944,21 @@ If you witness your pet mouth or lick a Colorado River Toad, immediately rinse t
 Coral snakes are elapids with potent NEUROTOXIC venom distinct from pit viper hemotoxic venom. Three species exist in the US: Eastern coral snake (Micrurus fulvius) in Southeast, Texas coral snake (M. tener) in Texas/Louisiana, and Arizona/Sonoran coral snake (Micruroides euryxanthus) in Southwest.
 
 **Critical Identification:**
-- Color pattern: Red-yellow-black bands. The rhyme 'red touches yellow, kills a fellow; red touches black, venom lack' can help identify North American coral snakes, but is not reliable for all subspecies or regions outside the continental U.S. When in doubt, avoid any brightly banded snake.
-- Small head, round pupils, small fixed fangs — coral snakes have small, fixed fangs and tend to chew rather than strike quickly. Bites often occur on paws or nose when pets investigate.
-- Non-aggressive but will bite if stepped on or handled
-- King snakes (harmless mimics): red touches black bands
+
+**Color pattern:** Red-yellow-black bands. The rhyme 'red touches yellow, kills a fellow; red touches black, venom lack' can help identify North American coral snakes, but is not reliable for all subspecies or regions outside the continental U.S. When in doubt, avoid any brightly banded snake.
+
+**Small head, round pupils, small fixed fangs** — coral snakes tend to chew rather than strike quickly. Bites often occur on paws or nose when pets investigate.
+
+Non-aggressive but will bite if stepped on or handled.
+
+**King snakes (harmless mimics):** red touches black bands.
 
 **Venom Mechanism:**
 Coral snake venom contains alpha-neurotoxins that block acetylcholine receptors at neuromuscular junctions, causing ascending paralysis. Unlike pit viper bites, there is typically MINIMAL local tissue reaction—DO NOT be falsely reassured by lack of swelling.
 
 **CRITICAL TIMING:**
-- Signs may be DELAYED 10-18 hours after bite
-- Once neurological signs appear, they progress rapidly
-- Respiratory paralysis can develop within 24-72 hours
-- Early treatment BEFORE symptom onset is critical — do not wait for symptoms to develop
+
+Signs may be DELAYED 10-18 hours after bite. Once neurological signs appear, they progress rapidly. Respiratory paralysis can develop within 24-72 hours. Early treatment BEFORE symptom onset is critical — do not wait for symptoms to develop.
 
 Seek emergency veterinary care immediately — specialized treatment is available and most effective before symptoms appear.
 
@@ -12055,25 +12057,21 @@ Symptoms may not appear for up to 13-18 hours after the bite — DO NOT wait for
 Over 70 scorpion species exist in the US, but only the Arizona bark scorpion (Centruroides sculpturatus/exilicauda) causes significant systemic envenomation. Found primarily in Arizona, New Mexico, and adjacent areas of California, Nevada, Utah, and Mexico.
 
 **Species Identification:**
-- Arizona bark scorpion: Yellowish-tan, 2-3 inches, slender pincers, climbs walls
-- Other US species: Larger pincers, ground-dwelling, cause only local reactions
-- Rule of thumb: Large pincers = less toxic; small pincers = more toxic
+
+**Arizona bark scorpion:** Yellowish-tan, 2-3 inches, slender pincers, climbs walls.
+
+**Other US species:** Larger pincers, ground-dwelling, cause only local reactions.
+
+**Rule of thumb:** Large pincers = less toxic; small pincers = more toxic.
 
 **Venom Mechanism:**
-Centruroides venom contains neurotoxins affecting sodium channels, causing:
-- Excessive nerve firing
-- Muscle fasciculations and tremors
-- Autonomic dysfunction
-- Respiratory compromise in severe cases
+Centruroides venom contains neurotoxins affecting sodium channels, causing excessive nerve firing, muscle fasciculations and tremors, autonomic dysfunction, and respiratory compromise in severe cases.
 
 **Risk Stratification:**
 Small dogs are at significantly higher risk of severe envenomation from bark scorpions. Cats have limited data but likely follow a similar size-dependent pattern.
 
 **Non-Centruroides Stings:**
-Most US scorpion stings cause only:
-- Local pain (often intense but brief)
-- Mild swelling
-- Self-limiting within hours
+Most US scorpion stings cause only local pain (often intense but brief), mild swelling, and are self-limiting within hours.
 
 **Indoor Encounters:**
 Bark scorpions are the only U.S. scorpion that can climb smooth vertical surfaces (walls, ceilings) — they may enter homes and encounter pets indoors.
@@ -12178,10 +12176,14 @@ Geographic location matters most. Outside Arizona bark scorpion range, severe sy
 Widow spiders (Latrodectus spp.) are the most medically significant spiders worldwide. Five species are found in the United States, with the black widow (Latrodectus mactans) being most common. Female black widows are identified by their shiny black color and distinctive red or orange hourglass marking on the underside of their globular abdomen. Males are much smaller and not considered a significant bite risk.
 
 **Identification:**
-- Female: Shiny black, red/orange hourglass on abdomen underside
-- Immature females may be red, brown, or beige without hourglass but still dangerous
-- Males: Much smaller, brown, generally not dangerous
-- Brown widow (spreading in southern states): Orange hourglass, similar venom
+
+**Female:** Shiny black, red/orange hourglass on abdomen underside.
+
+**Immature females** may be red, brown, or beige without hourglass but still dangerous.
+
+**Males:** Much smaller, brown, generally not dangerous.
+
+**Brown widow** (spreading in southern states): Orange hourglass, similar venom.
 
 **Habitat & Behavior:**
 Widow spiders prefer dark, warm, dry areas—basements, attics, garages, closets, woodpiles, and outdoor debris. They are not aggressive and typically bite only when accidentally disturbed.
@@ -12315,10 +12317,8 @@ The brown recluse spider (Loxosceles reclusa) is found in the south-central and 
 Brown recluse bites are frequently OVER-DIAGNOSED, especially outside their endemic range. Many suspicious wounds have other causes (abscesses, insect bites, infections). Unless the spider is seen and identified, diagnosis is presumptive.
 
 **Identification:**
-- Brown to yellow-brown, about 2-3 cm across
-- Distinctive violin-shaped marking on back ("fiddle-back" or "violin spider")
-- Six eyes in three pairs (most spiders have eight)
-- Females larger and more venomous than males
+
+Brown to yellow-brown, about 2-3 cm across. Distinctive violin-shaped marking on back ("fiddle-back" or "violin spider"). Six eyes in three pairs (most spiders have eight). Females larger and more venomous than males.
 
 **Habitat & Behavior:**
 Named for their reclusive nature—they hide in dark, undisturbed places and are NOT aggressive. They bite only when accidentally trapped or pressed against skin. Found in closets, attics, basements, under furniture, inside cardboard boxes, and in stored bedding.
@@ -12327,10 +12327,8 @@ Named for their reclusive nature—they hide in dark, undisturbed places and are
 Unlike widow spider neurotoxic venom, brown recluse venom is CYTOTOXIC—it destroys tissue locally. Sphingomyelinase D causes platelet aggregation, microvascular thrombosis, and progressive tissue necrosis. The result is the characteristic "bull's-eye" or "target" lesion that can ulcerate.
 
 **Clinical Course:**
-- Initial bite usually PAINLESS and may go unnoticed
-- ~90% of bites result in minimal reaction or small self-healing lesion
-- ~10% develop significant dermonecrotic lesions requiring prolonged care
-- Systemic effects (hemolytic anemia, kidney injury) are RARE
+
+Initial bite usually PAINLESS and may go unnoticed. ~90% of bites result in minimal reaction or small self-healing lesion. ~10% develop significant dermonecrotic lesions requiring prolonged care. Systemic effects (hemolytic anemia, kidney injury) are RARE.
 
 **Geographic Limitations:**
 NOT found in California, Florida, Pacific Northwest, or Atlantic seaboard. Single spiders can be accidentally transported but do not establish populations outside endemic range.
@@ -12459,20 +12457,14 @@ Found throughout the southern and southeastern United States, from Texas (epicen
 There are two peak seasons for asp caterpillar encounters: early summer (June-July) and fall (September-November). The fall surge occurs when caterpillars are searching for sites to spin cocoons.
 
 **OTHER STINGING CATERPILLARS:**
-- Saddleback caterpillar: distinctive horns with spines
-- Hag moth caterpillar (monkey slug): East Coast
-- Buck moth caterpillar
-- Io moth caterpillar
-- Hickory tussock moth caterpillar
+
+Saddleback caterpillar (distinctive horns with spines), Hag moth caterpillar/monkey slug (East Coast), Buck moth caterpillar, Io moth caterpillar, and Hickory tussock moth caterpillar.
 
 While the asp is most painful, all stinging caterpillars should be avoided.
 
 **HOW EXPOSURE OCCURS:**
-- Stepping on caterpillars
-- Pawing at them
-- Rolling on them
-- Mouthing or eating them
-- Caterpillars falling from trees onto resting pets
+
+Stepping on caterpillars, pawing at them, rolling on them, mouthing or eating them, or caterpillars falling from trees onto resting pets.
 
 A pet's fur coat provides some protection from skin contact, but oral exposure from mouthing or eating caterpillars typically causes more severe symptoms including intense drooling, tongue and lip swelling, and difficulty swallowing.
 
@@ -12575,16 +12567,16 @@ Tick paralysis is a potentially life-threatening but FULLY REVERSIBLE condition 
 Tick paralysis is FULLY REVERSIBLE with prompt tick removal. Once the tick is removed, most dogs begin recovering within hours and return to normal within 24-72 hours. However, if untreated, it can be fatal due to respiratory muscle paralysis.
 
 **RESPONSIBLE TICK SPECIES (North America):**
-- Dermacentor variabilis (American dog tick): Eastern 2/3 of US, Pacific Northwest
-- Dermacentor andersoni (Rocky Mountain wood tick): Western US
-- Occasionally: Lone Star tick, Gulf Coast tick, Ixodes species
+
+**Dermacentor variabilis** (American dog tick): Eastern 2/3 of US, Pacific Northwest.
+
+**Dermacentor andersoni** (Rocky Mountain wood tick): Western US.
+
+Occasionally: Lone Star tick, Gulf Coast tick, Ixodes species.
 
 **HOW IT DEVELOPS:**
-- Requires 5-9 days of tick attachment and feeding
-- Neurotoxin not present in early feeding stages
-- A SINGLE tick can cause paralysis
-- Ticks near head, neck, or spine more likely to cause symptoms
-- Toxin blocks nerve-to-muscle signal transmission
+
+Requires 5-9 days of tick attachment and feeding. Neurotoxin not present in early feeding stages. A SINGLE tick can cause paralysis. Ticks near head, neck, or spine more likely to cause symptoms. Toxin blocks nerve-to-muscle signal transmission.
 
 **SYMPTOMS PROGRESSION:**
 Begins in hind legs and progresses forward over 24-48 hours:
@@ -12704,31 +12696,18 @@ With prompt tick removal and appropriate care, most affected dogs recover fully.
 Hops (Humulus lupulus) are the flowering cones of the hop plant, used in beer brewing. Hops are EXTREMELY DANGEROUS to dogs and can cause a life-threatening condition characterized by rapidly rising body temperature. Without treatment, death can occur within hours.
 
 **WHY HOPS ARE DANGEROUS:**
-The exact toxic compound is unknown, but ingestion triggers a malignant hyperthermia-like reaction. Body temperature rises uncontrollably, sometimes exceeding 109°F (42.8°C). Severe hyperthermia leads to:
-- Rhabdomyolysis (muscle breakdown)
-- DIC (disseminated intravascular coagulopathy)
-- Kidney injury
-- Liver damage
-- Neurologic dysfunction
+The exact toxic compound is unknown, but ingestion triggers a malignant hyperthermia-like reaction. Body temperature rises uncontrollably, sometimes exceeding 109°F (42.8°C). Severe hyperthermia leads to rhabdomyolysis (muscle breakdown), DIC (disseminated intravascular coagulopathy), kidney injury, liver damage, and neurologic dysfunction.
 
 In untreated dogs, death generally occurs within 3 HOURS of symptom onset.
 
 **HOW EXPOSURE OCCURS:**
-Dogs are typically exposed through home brewing:
-- Unused hop plugs (28-57 grams each)
-- Spent hops (discarded after brewing)
+Dogs are typically exposed through home brewing — unused hop plugs (28-57 grams each) or spent hops (discarded after brewing).
 
 A single 28-gram hop plug can expand to ~900 grams of rehydrated material in a dog's stomach. Toxicosis documented only from ingestion of compressed flowers (cones).
 
 **BREED PREDISPOSITION:**
-Large breed dogs appear overrepresented in case reports:
-- Labrador Retrievers
-- Saint Bernards
-- Doberman Pinschers
-- Golden Retrievers
-- Greyhounds
-- Border Collies
-- Northern breeds
+
+Large breed dogs appear overrepresented in case reports: Labrador Retrievers, Saint Bernards, Doberman Pinschers, Golden Retrievers, Greyhounds, Border Collies, and Northern breeds.
 
 However, ANY dog can be affected.
 
@@ -12836,20 +12815,13 @@ Hops toxicosis has NOT been reported in cats. However, given the severity in dog
 Aflatoxins are invisible, odorless toxins produced by Aspergillus mold that can contaminate pet food ingredients. Dogs are EXTREMELY susceptible to aflatoxin poisoning, which causes severe liver damage and can be fatal. Aflatoxin contamination has caused multiple pet food recalls and outbreaks worldwide.
 
 **WHAT ARE AFLATOXINS?**
-Aflatoxin B1 (AFB1) is the most toxic mycotoxin. These toxins are:
-- Colorless, odorless, and flavorless
-- Impossible to detect without lab testing
-- HEAT-STABLE—survive cooking and food processing
+Aflatoxin B1 (AFB1) is the most toxic mycotoxin. These toxins are colorless, odorless, and flavorless — impossible to detect without lab testing and HEAT-STABLE, surviving cooking and food processing.
 
 **THIS IS DIFFERENT FROM TREMORGENIC MYCOTOXINS:**
 Aflatoxicosis causes LIVER FAILURE. Do not confuse with tremorgenic mycotoxin poisoning (see Moldy Foods entry), which causes neurological signs like tremors and seizures. Different toxins, different effects.
 
 **HOW CONTAMINATION OCCURS:**
-Aspergillus mold grows on grains and crops in hot, humid conditions. Common sources:
-- Corn (most common)
-- Peanuts
-- Grains (wheat, rice, sorghum)
-- Soybeans, cottonseed, tree nuts
+Aspergillus mold grows on grains and crops in hot, humid conditions. Common sources include corn (most common), peanuts, grains (wheat, rice, sorghum), soybeans, cottonseed, and tree nuts.
 
 Most cases involve commercial pet food. Grain-free diets are NOT protective—aflatoxins can also contaminate legumes.
 
@@ -12862,10 +12834,8 @@ Because pets eat the same food daily, even low aflatoxin levels accumulate over 
 Major US outbreaks: 2005, 2011, 2020, 2021—numerous pet deaths. FDA maintains updated recall list at www.fda.gov.
 
 **WHAT TO DO:**
-- STOP feeding suspected food immediately
-- SAVE food and packaging (including lot number)
-- Contact veterinarian right away
-- Report to FDA: www.fda.gov/reportproblem
+
+STOP feeding suspected food immediately. SAVE food and packaging (including lot number). Contact veterinarian right away. Report to FDA: www.fda.gov/reportproblem.
 """,
                 toxicityInfo: "Aflatoxin B1 (AFB1) is the most toxic mycotoxin, produced by Aspergillus mold on contaminated grains. It is colorless, odorless, flavorless, and HEAT-STABLE—survives cooking and food processing. Dogs have naturally low liver glutathione levels, making them extremely susceptible. When toxin levels exceed detoxification capacity, metabolites damage liver cells and DNA, causing severe liver failure. Even low aflatoxin levels accumulate over time with daily feeding.",
                 onsetTime: OnsetTime(
@@ -12986,18 +12956,12 @@ Do NOT confuse with hemlock trees (Tsuga species). Hemlock trees are evergreen c
 **TWO PLANTS, TWO DIFFERENT TOXINS:**
 
 **POISON HEMLOCK (Conium maculatum):**
-- Contains coniine (piperidine alkaloid)
-- Nicotine-like effects
-- Causes progressive PARALYSIS
-- Death from respiratory paralysis
-- Onset: 30 min to 2 hours
+
+Contains coniine (piperidine alkaloid) with nicotine-like effects. Causes progressive PARALYSIS. Death from respiratory paralysis. Onset: 30 min to 2 hours.
 
 **WATER HEMLOCK (Cicuta species):**
-- Contains cicutoxin
-- Most violently toxic plant in North America
-- Causes violent SEIZURES
-- Death can occur within 15 MINUTES
-- Onset: 15-60 minutes
+
+Contains cicutoxin — the most violently toxic plant in North America. Causes violent SEIZURES. Death can occur within 15 MINUTES. Onset: 15-60 minutes.
 
 **WHY COMPANION ANIMAL CASES ARE RARE:**
 Dogs and cats are not grazers. Over 5 years, Pet Poison Helpline received only 19 calls for poison hemlock in pets. However, curious pets chewing on plants—especially water hemlock roots (highest toxin concentration)—can be affected.
@@ -13115,11 +13079,7 @@ Poison ivy, poison oak, and poison sumac contain urushiol, an oily resin that ca
 The ASPCA classifies poison ivy, oak, and sumac as NON-TOXIC to dogs, cats, and horses. While urushiol can technically cause allergic contact dermatitis, pets are naturally protected by their fur coat, which prevents oil from reaching skin. Allergic reactions in dogs and cats are uncommon.
 
 **WHEN REACTIONS CAN OCCUR:**
-Pets with short hair or exposed skin may develop mild irritation in:
-- Belly and groin (little fur coverage)
-- Muzzle and lips
-- Ear flaps
-- Between toes
+Pets with short hair or exposed skin may develop mild irritation on the belly and groin (little fur coverage), muzzle and lips, ear flaps, or between toes.
 
 Signs: redness, itching, scratching, occasionally small bumps or blisters.
 
@@ -13130,11 +13090,7 @@ Ingesting can cause mild GI upset—vomiting, diarrhea, drooling. Severe reactio
 Urushiol oil can cling to fur for hours or days. When you pet, hug, or snuggle your pet, oil transfers to YOUR skin, potentially causing a rash. 50-75% of humans are allergic to urushiol.
 
 **WHAT TO DO:**
-If your pet may have contacted these plants:
-- Bathe promptly with pet-safe shampoo or mild dish soap
-- Wear rubber/nitrile gloves while bathing
-- Wash collar, harness, and leash
-- Avoid petting until bathed
+If your pet may have contacted these plants: bathe promptly with pet-safe shampoo or mild dish soap, wear rubber/nitrile gloves while bathing, wash collar, harness, and leash, and avoid petting until bathed.
 
 **PLANT IDENTIFICATION:**
 Poison ivy and oak: "Leaves of three, let it be"—clusters of three shiny leaflets.
@@ -13237,15 +13193,8 @@ MDR1 (Multi-Drug Resistance 1, also called ABCB1) gene produces P-glycoprotein, 
 Inheritance: Dogs can be normal (two normal copies), carriers (one normal, one mutant), or affected (two mutant copies). Both carriers AND affected dogs may show drug sensitivity.
 
 **BREEDS COMMONLY AFFECTED:**
-- Collies (rough and smooth): Up to 70% affected
-- Australian Shepherds
-- Shetland Sheepdogs (Shelties)
-- English Shepherds
-- Old English Sheepdogs
-- Border Collies
-- German Shepherds
-- Longhaired Whippets
-- Mixed breeds with herding ancestry
+
+Collies (rough and smooth) — up to 70% affected — Australian Shepherds, Shetland Sheepdogs (Shelties), English Shepherds, Old English Sheepdogs, Border Collies, German Shepherds, Longhaired Whippets, and mixed breeds with herding ancestry.
 
 Memory aid: "White feet, don't treat" (referring to white markings common in affected breeds).
 
@@ -13253,13 +13202,8 @@ Memory aid: "White feet, don't treat" (referring to white markings common in aff
 Not every dog of these breeds carries the mutation. GENETIC TESTING is available and highly recommended. A simple cheek swab determines status.
 
 **DRUGS THAT CAN BE DANGEROUS:**
-- Ivermectin (some heartworm preventives, livestock dewormers)
-- Loperamide (Imodium)
-- Acepromazine (sedative)
-- Butorphanol (pain medication)
-- Certain chemotherapy drugs
-- Apomorphine (induces vomiting)
-- Many others
+
+Ivermectin (some heartworm preventives, livestock dewormers), Loperamide (Imodium), Acepromazine (sedative), Butorphanol (pain medication), certain chemotherapy drugs, Apomorphine (induces vomiting), and many others.
 
 IMPORTANT: Standard-dose monthly heartworm preventives (like Heartgard) are generally SAFE for MDR1 dogs. Concern is with higher doses or livestock formulations.
 
@@ -13897,11 +13841,16 @@ Found in: roadsides, trails, vacant lots, fields, hiking paths, parks, yard edge
 Foxtails may be unfamiliar. This is essential information for West Coast residents.
 
 **HOW FOXTAILS CAUSE HARM:**
-- EARS: Works down ear canal → head shaking, scratching, pain, ruptured eardrum
-- NOSE: Violent sudden sneezing, bloody discharge
-- EYES: Squinting, tearing, redness, corneal damage
-- PAWS: Burrows between toes → painful swelling, abscesses, draining tracts
-- SKIN: Can penetrate anywhere, forming abscesses
+
+**EARS:** Works down ear canal → head shaking, scratching, pain, ruptured eardrum
+
+**NOSE:** Violent sudden sneezing, bloody discharge
+
+**EYES:** Squinting, tearing, redness, corneal damage
+
+**PAWS:** Burrows between toes → painful swelling, abscesses, draining tracts
+
+**SKIN:** Can penetrate anywhere, forming abscesses
 
 **MOST CONCERNING:** Inhaled or migrated foxtails have been found in lungs, abdominal cavity, spine, even internal organs like the spleen.
 
@@ -14011,12 +13960,12 @@ Dogs have incredibly sensitive smell and are attracted to biological scents. Bat
 **WHY THESE PRODUCTS ARE DANGEROUS:**
 
 **TAMPONS pose particular risk:**
-- Designed to absorb and EXPAND—swell significantly inside stomach/intestines
-- String creates LINEAR FOREIGN BODY risk (especially dangerous—can saw through intestinal walls)
+
+Designed to absorb and EXPAND — swell significantly inside stomach/intestines. String creates LINEAR FOREIGN BODY risk (especially dangerous — can saw through intestinal walls).
 
 **PADS AND DIAPERS:**
-- Super-absorbent materials swell DRAMATICALLY when wet
-- Small pad can expand to many times original size
+
+Super-absorbent materials swell DRAMATICALLY when wet. Small pad can expand to many times original size.
 
 **These products do NOT break down in the digestive system.**
 
@@ -16470,9 +16419,12 @@ Encounters peak in **spring and fall** when porcupines are more active with fora
     **It is important to note that serious toxicity from Leonotis ingestion in companion animals (dogs, cats, and exotic pets) is poorly documented.** The risk profile is largely extrapolated from the plant's known chemical composition and its documented effects in other contexts, rather than from a large body of companion animal case reports. Most pet exposures are likely to result in mild, self-limiting signs if any.
 
     Theoretical effects based on the plant's constituents include:
-    - **GI upset** — vomiting, diarrhea, drooling — the most likely signs after typical garden-level ingestion
-    - **CNS effects** — mild sedation, lethargy, incoordination — possible with more significant ingestion
-    - **Cardiovascular effects** — changes in heart rate — theoretically possible with large ingestions; not well-documented in pets
+
+    **GI upset** — vomiting, diarrhea, drooling — the most likely signs after typical garden-level ingestion.
+
+    **CNS effects** — mild sedation, lethargy, incoordination — possible with more significant ingestion.
+
+    **Cardiovascular effects** — changes in heart rate — theoretically possible with large ingestions; not well-documented in pets.
 
     The uterotonic (uterus-stimulating) properties of leonurine are a concern for **pregnant animals** and warrant extra caution even at lower ingestion amounts.
 
