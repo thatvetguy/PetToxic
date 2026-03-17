@@ -36,19 +36,16 @@ struct HomeHeader: View {
             .padding(.horizontal)
             .padding(.top, 8)
 
-            // Logo + App Name row
-            HStack(spacing: 12) {
-                // Logo image (from asset catalog)
-                Image("LaunchLogo")
-                    .resizable()
-                    .aspectRatio(contentMode: .fit)
-                    .frame(width: 50, height: 50)
+            // Logo
+            Image("LaunchLogo")
+                .resizable()
+                .aspectRatio(contentMode: .fit)
+                .frame(width: 50, height: 50)
 
-                // App name
-                Text("Pet Toxic")
-                    .font(.poppinsBold(size: 32))
-                    .foregroundColor(.white)
-            }
+            // App name
+            Text("Pet Toxic")
+                .font(.poppinsBold(size: 32))
+                .foregroundColor(.white)
 
             // Tagline
             Text("For When Curiosity Bites Back")
