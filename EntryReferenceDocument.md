@@ -3,9 +3,9 @@
 Complete list of all entries with UUIDs, severity, and categories.
 
 - Toxin/informational entries in `DatabaseService.swift`: 186
-- Disease/condition entries in `DiseasesConditionsService.swift`: 27 (Pro-locked)
+- Disease/condition entries in `DiseasesConditionsService.swift`: 28 (Pro-locked)
 - Severity explainer: 1
-- **Total entries: 214**
+- **Total entries: 215**
 
 *Last updated: 2026-03-17 (Session 153)*
 
@@ -21,7 +21,7 @@ Complete list of all entries with UUIDs, severity, and categories.
 | Low/Moderate | 4 |
 | Low | 17 |
 | nil (Informational) | 26 |
-| **Total** | **214** |
+| **Total** | **215** |
 
 | Category | Count |
 |----------|-------|
@@ -35,7 +35,7 @@ Complete list of all entries with UUIDs, severity, and categories.
 | Holiday Hazards | 11 |
 | Cleaning Products | 9 |
 | Recreational Substances | 8 |
-| Diseases & Conditions | 27 |
+| Diseases & Conditions | 28 |
 
 *Counts exceed total because entries can be cross-listed in multiple categories.*
 
@@ -355,6 +355,7 @@ Complete list of all entries with UUIDs, severity, and categories.
 | Heartworms | `1D000001-0000-0000-0000-000000000025` | nil | Dogs, Cats, Small Mammals |
 | Mange (Sarcoptic & Demodectic) | `1D000001-0000-0000-0000-000000000026` | nil | Dogs, Cats, Small Mammals |
 | Baylisascaris (Raccoon Roundworm) | `1D000001-0000-0000-0000-000000000027` | nil | Dogs, Cats, Small Mammals, Birds |
+| Fleas | `1D000001-0000-0000-0000-000000000028` | nil | Dogs, Cats, Small Mammals |
 
 ### Special Entry
 
@@ -364,7 +365,7 @@ Complete list of all entries with UUIDs, severity, and categories.
 
 ---
 
-## Alphabetical Index (All 214 Entries)
+## Alphabetical Index (All 215 Entries)
 
 | Name | UUID | Severity | Categories |
 |------|------|----------|------------|
@@ -451,6 +452,7 @@ Complete list of all entries with UUIDs, severity, and categories.
 | Feline Herpesvirus-1 (FHV-1) | `1D000001-0000-0000-0000-000000000021` | nil | Diseases & Conditions |
 | Fertilizers | `c3f5a8b2-7d4e-4f1a-b6c9-2e8d7f4a5b3c` | Moderate | Garage & Garden |
 | Fipronil (Frontline) | `a7b8c9d0-1e2f-4a3b-c4d5-6e7f8a9b0c1d` | Severe | Medications, Garage & Garden |
+| Fleas | `1D000001-0000-0000-0000-000000000028` | nil | Diseases & Conditions |
 | Foxglove | `2a95c561-533e-4a73-bd11-8d43bd127bb4` | Severe | Plants |
 | Foxtails (Grass Awns) | `00112233-4455-6677-8899-aabbccddef20` | nil | Informational, Outdoor Hazards |
 | Fruit Pits & Seeds | `f1369ae0-b97d-424d-98b7-b46a9b245109` | nil | Informational, Foods |

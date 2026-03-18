@@ -1173,7 +1173,9 @@ class DiseasesConditionsService {
                     "House Rabbit Society — Myxomatosis",
                     "RSPCA (UK) — Myxomatosis in Rabbits"
                 ],
-                relatedEntries: nil
+                relatedEntries: [
+                    "1D000001-0000-0000-0000-000000000028"  // Fleas
+                ]
             ),
 
             // MARK: - Kennel Cough (CIRDC)
@@ -4906,7 +4908,8 @@ class DiseasesConditionsService {
                 relatedEntries: [
                     "1D000001-0000-0000-0000-000000000022",  // Tick-Borne Diseases
                     "1D000001-0000-0000-0000-000000000024",  // Toxoplasma
-                    "1D000001-0000-0000-0000-000000000027"   // Baylisascaris
+                    "1D000001-0000-0000-0000-000000000027",  // Baylisascaris
+                    "1D000001-0000-0000-0000-000000000028"   // Fleas
                 ]
             ),
 
@@ -5589,7 +5592,10 @@ class DiseasesConditionsService {
                     "https://www.aspca.org/pet-care/general-pet-care/parasites",
                     "https://lafeber.com/vet/demodex-and-sarcoptic-mange-in-small-mammals/"
                 ],
-                relatedEntries: ["1D000001-0000-0000-0000-000000000022"]
+                relatedEntries: [
+                    "1D000001-0000-0000-0000-000000000022",  // Tick-Borne Diseases
+                    "1D000001-0000-0000-0000-000000000028"   // Fleas
+                ]
             ),
 
             // MARK: - Baylisascaris (Raccoon Roundworm)
@@ -5822,6 +5828,245 @@ class DiseasesConditionsService {
                     "https://www.vet.cornell.edu/departments-centers-and-institutes/cornell-wildlife-health-lab/wildlife-health-topics/baylisascaris"
                 ],
                 relatedEntries: ["1D000001-0000-0000-0000-000000000023"]
+            ),
+
+            // MARK: - Fleas
+            ToxicItem(
+                id: UUID(uuidString: "1D000001-0000-0000-0000-000000000028")!,
+                name: "Fleas",
+                alternateNames: [
+                    "Flea infestation",
+                    "Ctenocephalides felis",
+                    "Ctenocephalides canis",
+                    "Cat flea",
+                    "Dog flea",
+                    "Flea allergy dermatitis",
+                    "FAD",
+                    "Flea bite hypersensitivity",
+                    "Flea dirt",
+                    "Flea eggs",
+                    "Siphonaptera",
+                    "Ectoparasite",
+                    "Flea control",
+                    "Flea prevention",
+                    "Rabbit flea",
+                    "Spilopsyllus cuniculi"
+                ],
+                categories: [.diseasesAndConditions],
+                imageAsset: "fleas_thumb",
+                description: """
+                Fleas are small, wingless, blood-feeding insects that are among the most \
+                common external parasites affecting companion animals worldwide. The cat \
+                flea (Ctenocephalides felis) is the species responsible for the vast \
+                majority of infestations in both dogs and cats, despite its name.
+
+                Flea infestations cause more than itching. Fleas are medically \
+                significant disease vectors: they transmit tapeworms, Bartonella \
+                bacteria (the cause of cat scratch disease in humans), murine typhus, \
+                and — in certain geographic regions — plague. In young, small, or \
+                debilitated animals, heavy flea infestations can cause life-threatening \
+                blood loss anemia. In animals with flea allergy dermatitis, even a \
+                single flea bite can trigger an intense, prolonged skin reaction.
+
+                Fleas are not vaccine-preventable. Control requires treating both the \
+                affected animal and the environment simultaneously — because adult fleas \
+                on a pet represent only a small fraction of the total flea population \
+                in a household. Flea infestations are a year-round concern in most of \
+                North America and in many other regions, and they affect indoor and \
+                outdoor pets alike.
+                """,
+                toxicityInfo: """
+                **How It Harms the Body**
+
+                Fleas cause harm through several distinct mechanisms.
+
+                The most immediate is blood loss. Each flea consumes many times its \
+                body weight in blood daily. In adult healthy animals, this is rarely \
+                significant on its own. In kittens, puppies, elderly animals, small \
+                mammals, or animals carrying large flea burdens, blood loss accumulates \
+                rapidly and can result in life-threatening anemia — sometimes within \
+                days in very young or small animals.
+
+                The second mechanism is allergic hypersensitivity. Many animals develop \
+                flea allergy dermatitis (FAD), an immune-mediated skin reaction to \
+                proteins in flea saliva. Animals with FAD do not need a large flea \
+                burden to suffer severely — a single bite can trigger intense, \
+                widespread itching that persists long after the flea is gone. FAD is \
+                one of the most common causes of skin disease in dogs and cats and can \
+                lead to self-trauma, hair loss, open wounds, and secondary bacterial \
+                skin infection if not managed.
+
+                The third mechanism is disease transmission. Fleas are vectors for \
+                multiple pathogens with consequences for animal and human health alike.
+
+                **Beyond the Itch: Fleas as Disease Vectors**
+
+                Most pet owners think of fleas as a nuisance. In reality, fleas are \
+                capable of transmitting several significant diseases:
+
+                Tapeworms (Dipylidium caninum): Fleas are the essential intermediate \
+                host for the most common tapeworm affecting dogs and cats. Flea larvae \
+                ingest tapeworm eggs from the environment; when a dog or cat swallows \
+                an infected adult flea during grooming, the tapeworm cycle completes in \
+                the pet\u{2019}s intestine. Children can acquire Dipylidium the same way — by \
+                accidentally swallowing an infected flea. Rigorous flea control is \
+                essential for effective tapeworm prevention. See the GI Parasites entry \
+                for full detail on the flea-tapeworm lifecycle.
+
+                Bartonella (Cat Scratch Disease): Bartonella henselae is a bacterium \
+                transmitted among cats primarily through flea feces (flea dirt). Cats \
+                serve as the main animal reservoir and are often asymptomatic carriers. \
+                Humans typically acquire cat scratch disease through a scratch or bite \
+                from an infected cat — flea dirt in the wound, not the flea bite itself, \
+                is the primary transmission route to people. In healthy humans, cat \
+                scratch disease causes swollen lymph nodes and flu-like illness; in \
+                immunocompromised individuals, it can cause more serious systemic \
+                disease.
+
+                Murine Typhus (Rickettsia typhi): Murine typhus is a bacterial \
+                infection transmitted primarily by rat fleas, but the cat flea can also \
+                serve as a vector. It is endemic in parts of the southern United States, \
+                Hawaii, and tropical and subtropical regions worldwide. Clinical signs \
+                in pets are generally mild or absent; human infection causes fever, \
+                headache, and rash and is occasionally severe.
+
+                Plague (Yersinia pestis): Plague is a rare but serious flea-borne \
+                bacterial disease endemic to parts of the western United States and \
+                other global regions. Rodent fleas are the primary transmission vehicle, \
+                but cats — who hunt infected rodents and can carry infected fleas into \
+                the home — are a recognized bridge to human exposure. Dogs are more \
+                resistant than cats but can carry fleas from plague-endemic environments. \
+                Flea prevention is a meaningful plague risk reduction measure in \
+                endemic areas.
+
+                **The Flea-Tapeworm Connection**
+
+                Fleas and tapeworms have an obligate relationship: Dipylidium caninum \
+                cannot complete its lifecycle without a flea. Flea larvae eat tapeworm \
+                eggs shed in feces; adult fleas carry the developing tapeworm stage \
+                internally. An animal (or child) swallowing an infected flea completes \
+                the cycle. This is why treating a tapeworm infestation without \
+                simultaneously eliminating fleas is a reliable path to reinfection. \
+                Full detail on this lifecycle is covered in the GI Parasites entry.
+
+                **95% of the Problem Is in Your Home**
+
+                One of the most important — and most underappreciated — facts about \
+                flea infestations is that adult fleas living on your pet represent \
+                roughly 5% of the total flea population in an infested household. The \
+                remaining 95% exists as eggs, larvae, and pupae in carpets, upholstered \
+                furniture, bedding, floor cracks, and other environmental hiding places. \
+                These immature stages are invisible to the naked eye and are not killed \
+                by treatments applied only to the animal.
+
+                Treating the pet alone — without treating the home environment — will \
+                not resolve a flea infestation. The pupal stage is particularly \
+                resilient: flea pupae can remain dormant inside their cocoons for \
+                months, protected from both environmental conditions and most insect \
+                growth regulators. Emergence from pupae is triggered by vibration, \
+                warmth, and carbon dioxide — which is why returning to a home that has \
+                been empty for weeks can result in a sudden apparent explosion of adult \
+                fleas.
+
+                Effective flea control requires simultaneous treatment of all pets in \
+                the household and targeted environmental treatment, sustained over a \
+                period of months. A veterinarian can recommend an appropriate \
+                coordinated strategy.
+
+                **Treatment Goals**
+
+                Veterinary management of flea infestation aims to eliminate the adult \
+                flea burden from all affected animals, interrupt the flea life cycle in \
+                the home environment, treat secondary consequences including anemia, \
+                skin infection, and allergic skin disease, and address any transmitted \
+                parasites such as tapeworms. Animals with severe anemia from flea \
+                infestation — particularly young or small animals — may require urgent \
+                supportive care. Animals with flea allergy dermatitis require sustained \
+                flea prevention to prevent recurrence, since even very low-level \
+                exposure can trigger relapse.
+
+                **Myths vs. Facts**
+
+                **Myth:** My pet lives indoors, so they can\u{2019}t get fleas.
+                **Fact:** Fleas enter homes on clothing, shoes, other animals, and \
+                through small gaps in doors or screens. Indoor-only pets acquire flea \
+                infestations regularly. Indoor pets in multi-pet households are also \
+                exposed through any pet that goes outdoors.
+
+                **Myth:** I\u{2019}ve looked at my pet carefully and I don\u{2019}t see any fleas, \
+                so they don\u{2019}t have them.
+                **Fact:** Adult fleas move fast and hide effectively in fur, especially \
+                around the base of the tail, the groin, and the abdomen. In animals \
+                with flea allergy dermatitis, intense skin symptoms can be caused by \
+                very few fleas — by the time you look, the flea may already be gone. \
+                Look for flea dirt (tiny dark specks that turn red-brown when wet on a \
+                damp white tissue) rather than the fleas themselves.
+
+                **Myth:** Once I treat my pet, the flea problem is solved.
+                **Fact:** Treating only the animal leaves the 95% of the flea \
+                population living in the environment untreated. Re-infestation from the \
+                environment is nearly certain without concurrent home treatment. Full \
+                resolution of an established infestation typically takes several months \
+                of consistent treatment.
+                """,
+                toxicityInfoSectionTitle: "What makes it harmful?",
+                onsetTime: OnsetTime(
+                    early: "Signs of flea infestation — itching, flea dirt, visible fleas — can appear quickly once fleas establish on a pet. In animals with flea allergy dermatitis, intense skin reaction can begin within minutes to hours of a single bite. Anemia from blood loss develops over days to weeks depending on flea burden and animal size.",
+                    delayed: "Environmental flea populations build over weeks to months, making infestations progressively harder to control without treating the home. Flea pupae can remain dormant for months and emerge long after surface treatments appear to have worked."
+                ),
+                symptoms: [
+                    "Persistent scratching, biting, or licking — especially at the base of the tail, groin, and abdomen",
+                    "Visible fleas or flea dirt (dark specks in the coat that turn red-brown on a damp white tissue)",
+                    "Hair loss — typically at the base of the tail, inner thighs, and belly",
+                    "Red, inflamed, or scabbed skin",
+                    "Skin thickening or discoloration in chronic cases",
+                    "Restlessness and agitation",
+                    "Pale gums (sign of anemia — especially in young, small, or heavily infested animals)",
+                    "Lethargy and weakness (severe anemia)",
+                    "Tapeworm segments visible near the rear end or in feces (rice-grain sized, may move)"
+                ],
+                entrySeverity: nil,
+                speciesRisks: [
+                    SpeciesRisk(
+                        species: .dog,
+                        severity: .moderate,
+                        notes: "Dogs are highly susceptible to flea infestation and flea allergy dermatitis. Ctenocephalides felis (cat flea) is responsible for most infestations despite its name. Dogs with FAD suffer intense skin disease from minimal flea exposure and require sustained prevention. Dogs in plague-endemic regions of the western US represent a bridge risk for human exposure if they carry infected fleas from outdoor environments."
+                    ),
+                    SpeciesRisk(
+                        species: .cat,
+                        severity: .moderate,
+                        notes: "Cats are the primary reservoir host for Bartonella henselae and are commonly asymptomatic carriers. Flea allergy dermatitis is a leading cause of skin disease in cats. Kittens are at significant risk of anemia from heavy infestations. Cats that hunt in plague-endemic areas carry a recognized risk of bringing infected fleas — and occasionally infected prey — into contact with household members."
+                    ),
+                    SpeciesRisk(
+                        species: .smallMammal,
+                        severity: .high,
+                        notes: "Rabbits, ferrets, and guinea pigs are susceptible to flea infestation, typically from fleas carried by cohabiting dogs or cats. Small body size means blood loss anemia can develop rapidly and become life-threatening, particularly in young or small animals. Rabbits in the UK and Europe face an additional risk: the rabbit flea (Spilopsyllus cuniculi) is the primary vector of myxomatosis. Rabbit owners in myxomatosis-endemic regions should treat for fleas as part of myxomatosis prevention. See the Myxomatosis entry for detail."
+                    )
+                ],
+                preventionTips: [
+                    "Use veterinarian-recommended year-round flea prevention for all pets in the household — including pets that primarily stay indoors.",
+                    "Treat all pets in the home simultaneously. Leaving even one untreated animal in a household allows flea populations to persist.",
+                    "If an infestation is established, treat both the animals and the home environment. Wash all bedding in hot water, vacuum thoroughly and frequently (including under furniture and along baseboards), and use a veterinarian- or pest-management-recommended environmental product.",
+                    "Vacuum bags or canisters should be emptied outside immediately after use during active infestation — flea eggs and larvae can survive inside a vacuum.",
+                    "Consistent treatment over several months is required to fully interrupt the flea lifecycle. Stopping early allows emerging pupae to restart the cycle.",
+                    "Check your pet regularly for flea dirt during grooming — comb through the coat over a damp white tissue and look for red-brown specks.",
+                    "If your pet is diagnosed with tapeworms, assume fleas are present or recently present and address both simultaneously.",
+                    "In plague-endemic areas of the western United States, year-round flea prevention for dogs and cats is a meaningful public health measure — especially for pets that may contact wild rodents or their environments.",
+                    "If a household member develops swollen lymph nodes, fever, or a rash after contact with a cat — particularly a cat with suspected flea infestation — consult a physician and mention the possible Bartonella exposure."
+                ],
+                sources: [
+                    "https://www.merckvetmanual.com/integumentary-system/fleas-and-flea-allergy-dermatitis/overview-of-fleas",
+                    "https://www.capcvet.org/guidelines/fleas/",
+                    "https://www.cdc.gov/bartonella/pets/index.html",
+                    "https://www.cdc.gov/plague/prevention/index.html",
+                    "https://www.avma.org/resources-tools/pet-owners/petcare/fleas",
+                    "https://vcahospitals.com/know-your-pet/fleas-and-flea-control-in-dogs"
+                ],
+                relatedEntries: [
+                    "1D000001-0000-0000-0000-000000000007",  // Myxomatosis
+                    "1D000001-0000-0000-0000-000000000023",  // GI Parasites
+                    "1D000001-0000-0000-0000-000000000026"   // Mange
+                ]
             ),
         ]
     }
