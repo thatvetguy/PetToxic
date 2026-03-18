@@ -6611,7 +6611,8 @@ class DiseasesConditionsService {
                     "1D000001-0000-0000-0000-000000000029",  // Encephalitozoon cuniculi (E. cuniculi)
                     "1D000001-0000-0000-0000-000000000038",  // GI Stasis in Rabbits
                     "1D000001-0000-0000-0000-000000000045",  // Small Mammal Husbandry Guide
-                    "1D000001-0000-0000-0000-000000000047"   // Myiasis (Fly Strike)
+                    "1D000001-0000-0000-0000-000000000047",  // Myiasis (Fly Strike)
+                    "1D000001-0000-0000-0000-000000000048"   // Cheyletiellosis (Walking Dandruff)
                 ]
             ),
 
@@ -6933,7 +6934,8 @@ class DiseasesConditionsService {
                     "1D000001-0000-0000-0000-000000000034",  // Inclusion Body Disease (IBD)
                     "1D000001-0000-0000-0000-000000000041",  // Stomatitis / Mouth Rot
                     "1D000001-0000-0000-0000-000000000042",  // Reptile Respiratory Infections
-                    "1D000001-0000-0000-0000-000000000043"   // Reptile Husbandry Guide
+                    "1D000001-0000-0000-0000-000000000043",  // Reptile Husbandry Guide
+                    "1D000001-0000-0000-0000-000000000048"   // Cheyletiellosis (Walking Dandruff)
                 ]
             ),
 
@@ -7342,7 +7344,8 @@ class DiseasesConditionsService {
                     "1D000001-0000-0000-0000-000000000014",  // Aspergillosis
                     "1D000001-0000-0000-0000-000000000030",  // PBFD (Psittacine Beak and Feather Disease)
                     "1D000001-0000-0000-0000-000000000036",  // PDD (Proventricular Dilatation Disease)
-                    "1D000001-0000-0000-0000-000000000044"   // Bird Husbandry Guide
+                    "1D000001-0000-0000-0000-000000000044",  // Bird Husbandry Guide
+                    "1D000001-0000-0000-0000-000000000048"   // Cheyletiellosis (Walking Dandruff)
                 ]
             ),
 
@@ -9872,7 +9875,8 @@ class DiseasesConditionsService {
                     "1D000001-0000-0000-0000-000000000037",  // Coccidiosis & Cryptosporidiosis
                     "1D000001-0000-0000-0000-000000000038",  // GI Stasis in Rabbits
                     "1D000001-0000-0000-0000-000000000039",  // Hypovitaminosis A
-                    "1D000001-0000-0000-0000-000000000047"   // Myiasis (Fly Strike)
+                    "1D000001-0000-0000-0000-000000000047",  // Myiasis (Fly Strike)
+                    "1D000001-0000-0000-0000-000000000048"   // Cheyletiellosis (Walking Dandruff)
                 ]
             ),
 
@@ -10243,6 +10247,196 @@ class DiseasesConditionsService {
                     "1D000001-0000-0000-0000-000000000045",  // Small Mammal Husbandry Guide
                     "1D000001-0000-0000-0000-000000000038",  // GI Stasis in Rabbits
                     "1D000001-0000-0000-0000-000000000031"   // Rabbit Ear Mites
+                ]
+            ),
+
+            // MARK: - Cheyletiellosis (Walking Dandruff)
+            ToxicItem(
+                id: UUID(uuidString: "1D000001-0000-0000-0000-000000000048")!,
+                name: "Cheyletiellosis (Walking Dandruff)",
+                alternateNames: ["Walking Dandruff", "Cheyletiella", "Cheyletiella Mites",
+                                 "Rabbit Mites", "Fur Mites", "Cheyletiella yasguri",
+                                 "Cheyletiella blakei", "Cheyletiella parasitovorax"],
+                categories: [.diseasesAndConditions],
+                imageAsset: "w_dandruff_thumb",
+                description: """
+                    Cheyletiellosis is a skin disease caused by Cheyletiella mites — \
+                    large, non-burrowing surface mites that live in the keratin layer \
+                    of the skin and feed on tissue fluid and skin debris. The condition \
+                    gets its memorable common name, \u{201C}Walking Dandruff,\u{201D} \
+                    from a striking and distinctive sign: when the coat is examined \
+                    closely, the skin scales appear to move — because the mites \
+                    beneath them are moving through the debris.
+
+                    Cheyletiellosis affects rabbits, dogs, and cats, with rabbits \
+                    being the most commonly and severely affected species. Guinea pigs \
+                    are occasionally affected. Three species of Cheyletiella mites are \
+                    recognized in companion animals: C. parasitovorax (rabbits), \
+                    C. yasguri (dogs), and C. blakei (cats), though cross-species \
+                    infestation does occur.
+
+                    One of the most important aspects of cheyletiellosis is that it \
+                    is frequently misidentified by owners — and sometimes even \
+                    initially by clinicians — as ordinary dry skin or dandruff. This \
+                    delay in recognition matters because Cheyletiella mites are \
+                    contagious between animals in the same household and can \
+                    temporarily infest humans. Any animal with persistent or \
+                    unexplained skin scaling should be evaluated by a veterinarian \
+                    rather than assumed to have a simple grooming or dietary issue.
+                    """,
+                toxicityInfo: """
+                    **How It Harms the Body**
+
+                    Cheyletiella mites live on the surface of the skin rather than \
+                    burrowing into it. They pierce the skin to feed on tissue fluid, \
+                    causing an inflammatory reaction that produces scaling, flaking, \
+                    and variable degrees of itching. In rabbits, heavy infestations \
+                    can cause large, thick crusts — particularly along the dorsal \
+                    midline (back) — and intense pruritus. In some rabbits, especially \
+                    immunocompromised or debilitated individuals, infestations can \
+                    become severe and debilitating.
+
+                    Dogs and cats tend to show milder clinical signs than rabbits, \
+                    sometimes presenting with only minimal scaling and little to no \
+                    itch — which contributes to the condition being overlooked. In \
+                    some cats, cheyletiellosis is nearly asymptomatic and discovered \
+                    incidentally during grooming or veterinary examination.
+
+                    **The Walking Dandruff Sign**
+
+                    The characteristic \u{201C}walking dandruff\u{201D} appearance \
+                    results from mites moving through the loose skin scales on the \
+                    coat surface. This can sometimes be observed with the naked eye \
+                    in heavy infestations — large white flakes near the dorsal midline \
+                    or rump that appear to shift or move. A magnifying glass or \
+                    examination under low magnification makes this far easier to \
+                    detect. The mites are among the largest ectoparasites of companion \
+                    animals and are visible under standard microscopy.
+
+                    **Transmission & Spread**
+
+                    Cheyletiella mites spread through direct contact between animals. \
+                    They can also survive off the host for several days on bedding, \
+                    grooming tools, and cage surfaces, enabling indirect transmission. \
+                    Multi-animal households, shelters, boarding facilities, and \
+                    grooming environments are common settings for spread. New animals \
+                    introduced to a household should be examined before contact with \
+                    resident pets.
+
+                    **Zoonotic Risk**
+
+                    Cheyletiella mites can temporarily infest humans, causing an \
+                    itchy, self-limiting papular rash — most often on the arms, \
+                    abdomen, and chest, reflecting areas of close contact with \
+                    affected pets. Because human skin is not a suitable permanent \
+                    host, the infestation is self-resolving once the source animal \
+                    is treated and the environment is cleaned. Standard hygiene \
+                    practices (handwashing after handling affected animals, laundering \
+                    bedding) are sufficient precautions. Anyone experiencing a \
+                    persistent or worsening rash after contact with an infested pet \
+                    should consult a physician.
+
+                    **Why It Gets Missed**
+
+                    Cheyletiellosis is a classic example of a parasitic condition \
+                    that is regularly dismissed as a non-infectious problem. Owners \
+                    commonly attribute the scaling to diet, dry air, or insufficient \
+                    grooming. The itch in dogs and cats can be subtle enough to go \
+                    unnoticed. And because the mites are not visible to the naked eye \
+                    under casual inspection, there is no obvious external trigger to \
+                    prompt veterinary evaluation. The key message: visible skin \
+                    flaking — especially along the back and rump — in any rabbit, \
+                    dog, or cat should prompt veterinary evaluation rather than \
+                    a trial of grooming products or dietary supplements.
+
+                    **Treatment Goals**
+
+                    Treatment involves antiparasitic therapy prescribed by a \
+                    veterinarian for all animals in the household simultaneously — \
+                    treating only the symptomatic individual risks reinfection from \
+                    untreated housemates. Environmental decontamination (washing \
+                    bedding, disinfecting cage surfaces and grooming tools) is an \
+                    essential component of successful treatment. Your veterinarian \
+                    will recommend the appropriate antiparasitic product for your \
+                    pet's species, as not all products are safe across species.
+
+                    **Myths vs. Facts**
+
+                    Myth: \u{201C}My pet just has dry skin — it doesn\u{2019}t need \
+                    a vet visit.\u{201D}
+                    Fact: Persistent scaling, especially along the back or rump, \
+                    can be cheyletiellosis. A veterinary skin examination and \
+                    microscopy can confirm or rule out mites quickly.
+
+                    Myth: \u{201C}Only one of my pets is itchy, so the others \
+                    don\u{2019}t need treatment.\u{201D}
+                    Fact: Cheyletiella infestations in dogs and cats can be \
+                    asymptomatic. All in-contact animals should be treated \
+                    simultaneously to prevent reinfection.
+
+                    Myth: \u{201C}My indoor pet can\u{2019}t get mites.\u{201D}
+                    Fact: Cheyletiella can be introduced through new animals, \
+                    contaminated grooming equipment, bedding, or contact at \
+                    boarding or veterinary facilities.
+                    """,
+                toxicityInfoSectionTitle: "What makes it harmful?",
+                onsetTime: OnsetTime(
+                    early: "Signs may develop within 1–3 weeks of exposure; initial scaling and flaking along the dorsal midline are often the first observable signs",
+                    delayed: "Infestations can persist for months if untreated or if housemate animals are not treated simultaneously; zoonotic human rash typically appears within days of contact and resolves after source treatment"
+                ),
+                symptoms: [
+                    "Visible skin scaling or flaking, especially along the back and rump",
+                    "Large white scales that appear to move (\u{201C}walking dandruff\u{201D} sign)",
+                    "Itching — variable; may be absent in dogs and cats",
+                    "Excessive grooming or scratching",
+                    "Coat thinning or hair loss over affected areas",
+                    "Thick crusting along the dorsal midline (rabbits — severe cases)",
+                    "Mild to no symptoms in some cats (incidental finding)"
+                ],
+                entrySeverity: nil,
+                speciesRisks: [
+                    SpeciesRisk(
+                        species: .smallMammal,
+                        severity: .high,
+                        notes: "Rabbits are the most commonly and severely affected species. Heavy infestations cause thick scaling and crusting along the dorsal midline and can be highly debilitating, particularly in debilitated or immunocompromised animals. Guinea pigs are occasionally affected. C. parasitovorax is the primary mite species in rabbits. All in-contact small mammals should be treated simultaneously."
+                    ),
+                    SpeciesRisk(
+                        species: .dog,
+                        severity: .moderate,
+                        notes: "Dogs are commonly affected, typically presenting with scaling and variable pruritus. Signs are often milder than in rabbits and can be subtle enough to be overlooked. C. yasguri is the primary species in dogs. All in-contact dogs and cats in the household should be treated simultaneously."
+                    ),
+                    SpeciesRisk(
+                        species: .cat,
+                        severity: .moderate,
+                        notes: "Cats can be infested with relatively few clinical signs — some cases are essentially asymptomatic. C. blakei is the primary species in cats. Cats in multi-pet households with affected rabbits or dogs should be examined and treated even if they appear unaffected."
+                    ),
+                    SpeciesRisk(
+                        species: .bird,
+                        severity: .low,
+                        notes: "Cheyletiella infestation is not a recognized concern in birds under normal husbandry. Included for completeness; consult a veterinarian if unusual skin scaling is observed in any bird."
+                    )
+                ],
+                preventionTips: [
+                    "Have any new rabbit, dog, or cat examined by a veterinarian before introducing them to resident pets",
+                    "If cheyletiellosis is diagnosed in one household pet, treat all in-contact animals simultaneously — asymptomatic animals can carry and transmit mites",
+                    "Wash all bedding, blankets, and soft furnishings in hot water and disinfect cage surfaces and grooming tools as part of treatment",
+                    "Do not share grooming brushes, combs, or bedding between animals from different households without cleaning first",
+                    "If you or a family member develops an unexplained itchy rash after contact with a pet, mention recent animal contact to your physician and have your pet evaluated",
+                    "Consult your veterinarian before using any antiparasitic product — not all treatments are safe across species, and incorrect products can be harmful"
+                ],
+                sources: [
+                    "Merck Veterinary Manual — Cheyletiellosis (merckvetmanual.com)",
+                    "VCA Animal Hospitals — Cheyletiella Mites in Rabbits (vcahospitals.com)",
+                    "House Rabbit Society — Mites and Cheyletiellosis (rabbit.org)",
+                    "Cornell University College of Veterinary Medicine — Rabbit Dermatology (vet.cornell.edu)",
+                    "PDSA (UK) — Mites in Rabbits (pdsa.org.uk)",
+                    "Veterinary Partner — Cheyletiellosis (veterinarypartner.vin.com)"
+                ],
+                relatedEntries: [
+                    "1D000001-0000-0000-0000-000000000031",  // Rabbit Ear Mites
+                    "1D000001-0000-0000-0000-000000000045",  // Small Mammal Husbandry Guide
+                    "1D000001-0000-0000-0000-000000000033",  // Snake Mites
+                    "1D000001-0000-0000-0000-000000000035"   // Air Sac Mites
                 ]
             ),
         ]
