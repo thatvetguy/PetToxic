@@ -5597,7 +5597,8 @@ class DiseasesConditionsService {
                 ],
                 relatedEntries: [
                     "1D000001-0000-0000-0000-000000000022",  // Tick-Borne Diseases
-                    "1D000001-0000-0000-0000-000000000028"   // Fleas
+                    "1D000001-0000-0000-0000-000000000028",  // Fleas
+                    "1D000001-0000-0000-0000-000000000031"   // Rabbit Ear Mites (Psoroptes cuniculi)
                 ]
             ),
 
@@ -6232,7 +6233,8 @@ class DiseasesConditionsService {
                 ],
                 relatedEntries: [
                     "1D000001-0000-0000-0000-000000000024",  // Toxoplasma
-                    "1D000001-0000-0000-0000-000000000027"   // Baylisascaris
+                    "1D000001-0000-0000-0000-000000000027",  // Baylisascaris
+                    "1D000001-0000-0000-0000-000000000031"   // Rabbit Ear Mites (Psoroptes cuniculi)
                 ]
             ),
 
@@ -6412,6 +6414,160 @@ class DiseasesConditionsService {
                 ],
                 relatedEntries: [
                     "1D000001-0000-0000-0000-000000000004"   // Psittacosis (Parrot Fever)
+                ]
+            ),
+
+            // MARK: - Rabbit Ear Mites (Psoroptes cuniculi)
+            ToxicItem(
+                id: UUID(uuidString: "1D000001-0000-0000-0000-000000000031")!,
+                name: "Rabbit Ear Mites (Psoroptes cuniculi)",
+                alternateNames: ["Psoroptes cuniculi", "ear canker", "rabbit ear mite",
+                                 "otoacariasis", "psoroptic mange", "ear mange",
+                                 "rabbit ear mites", "psoroptes", "ear mites in rabbits"],
+                categories: [.diseasesAndConditions],
+                imageAsset: "psoroptes_thumb",
+                description: """
+                    Rabbit ear mites — caused by the parasite Psoroptes cuniculi — \
+                    are one of the most common ectoparasite (external parasite) \
+                    infestations in pet rabbits worldwide. The condition is also \
+                    known as ear canker or psoroptic mange.
+
+                    P. cuniculi is a non-burrowing mite that lives on the surface \
+                    of the skin inside the ear canal. Its saliva and waste products \
+                    trigger intense inflammation, producing the thick, layered crusts \
+                    that are the hallmark of this condition. Many owners mistake these \
+                    early crusts for ordinary ear dirt — a dangerous misidentification, \
+                    because untreated infestations can progress to deep ear infections \
+                    and, in severe cases, to neurological disease and fatal meningitis.
+
+                    With prompt veterinary treatment, most affected rabbits recover \
+                    fully. Delays in treatment significantly worsen outcomes and allow \
+                    the infestation to spread to other animals in the household.
+                    """,
+                toxicityInfo: """
+                    **How It Harms the Body**
+                    P. cuniculi mites pierce the skin at the base of hairs inside the \
+                    ear canal and feed on the host's lymphatic fluids and skin debris. \
+                    Their saliva and fecal material trigger a powerful inflammatory \
+                    response — causing intense itching, redness, and the release of \
+                    serum (fluid from the bloodstream) onto the skin surface.
+
+                    **The Cycle That Feeds Itself**
+                    This serum, along with mite waste, shed skin cells, and ear wax, \
+                    dries out and forms the characteristic crusts of ear canker. What \
+                    makes this infestation self-reinforcing is that the mites then \
+                    feed on those crusts, fueling further population growth. As the \
+                    infestation matures, mites shift to feeding directly on serum, \
+                    hemoglobin, and red blood cells drawn from the inflamed tissue. \
+                    The crusts build up in thick, layered deposits — sometimes filling \
+                    the entire ear canal and spilling onto the external ear flap, face, \
+                    and neck. In heavy infestations, the sheer weight of crust \
+                    accumulation can cause the ears to droop.
+
+                    The skin beneath the crusts is raw, moist, and painful. A foul \
+                    odor from the ears is a common indicator of secondary bacterial \
+                    infection, which develops readily in this warm, inflamed \
+                    environment. If the infection spreads inward to the middle ear \
+                    (otitis media) or inner ear (otitis interna), it can cause \
+                    vestibular signs — head tilt, loss of balance, and rolling — that \
+                    owners may mistake for a neurological disease. Without treatment, \
+                    the infection can progress to meningitis (inflammation of the \
+                    membranes surrounding the brain), which can be fatal.
+
+                    One notable feature of P. cuniculi: unlike many mite species, \
+                    these mites are large enough to be visible to the naked eye inside \
+                    the ear, appearing as small white moving specks. Veterinary \
+                    confirmation via ear cytology (microscopic examination of debris) \
+                    is still recommended to confirm the diagnosis and check for \
+                    secondary infections.
+
+                    **Transmission & Spread**
+                    Ear mites spread primarily through direct contact between animals. \
+                    They can also survive off a host for up to 21 days in the \
+                    environment — particularly in warm, humid conditions — making \
+                    contaminated bedding, enclosures, and shared equipment a secondary \
+                    transmission route. The full mite life cycle from egg to adult \
+                    takes approximately 21 days, meaning a single untreated rabbit \
+                    can rapidly sustain and expand an infestation without reinfection.
+
+                    Rabbits are the primary host. Occasional infections have been \
+                    documented in guinea pigs, dogs, and cats, though these species \
+                    are far less commonly affected. Lop-eared rabbit breeds may be \
+                    more prone to wax and debris accumulation in the ear canal, \
+                    which can predispose them to infestation.
+
+                    **Important: Do Not Remove the Crusts**
+                    The crusts of ear canker are extremely painful, and attempting \
+                    to remove them from an unsedated rabbit causes significant \
+                    distress and can leave raw, ulcerated wounds. Crust removal \
+                    should only be performed by a veterinarian with appropriate \
+                    pain management. With proper treatment, the crusts will soften \
+                    and resolve on their own.
+
+                    **Treatment Goals**
+                    Veterinary care focuses on eliminating the mite infestation, \
+                    treating secondary bacterial or yeast infections, and managing \
+                    pain. The environment must also be treated simultaneously to \
+                    prevent reinfection from surviving mites in bedding and \
+                    enclosure materials. Treatment must extend beyond 21 days to \
+                    cover the full mite life cycle. Early veterinary intervention \
+                    is essential — rabbits with head tilt or balance problems from \
+                    advanced infection may not recover completely even with treatment.
+                    """,
+                toxicityInfoSectionTitle: "What makes it harmful?",
+                onsetTime: OnsetTime(
+                    early: "Initial signs — ear scratching, head shaking, and light crusting in the ear canal — may appear within days to weeks of infestation. Early crusts are often mistaken for normal ear wax.",
+                    delayed: "Without treatment, crusts thicken and expand over weeks to months. Secondary bacterial infection, deep ear involvement, and vestibular signs (head tilt, loss of balance) represent advanced disease requiring urgent veterinary care."
+                ),
+                symptoms: [
+                    "Scratching at the ears or head",
+                    "Frequent head shaking",
+                    "Brown, red-brown, or honey-colored crusts inside the ear canal",
+                    "Crusting extending to the ear flap (pinna), face, or neck",
+                    "Ear drooping from the weight of crust accumulation",
+                    "Foul odor from the ears",
+                    "Head tilt (sign of inner ear involvement)",
+                    "Loss of balance or stumbling (sign of inner ear involvement)",
+                    "Becoming head-shy or resisting being touched around the ears",
+                    "Lethargy and reduced appetite",
+                    "Weight loss in severe or prolonged cases"
+                ],
+                entrySeverity: nil,
+                speciesRisks: [
+                    SpeciesRisk(
+                        species: .smallMammal,
+                        severity: .severe,
+                        notes: "Rabbits are the primary host; one of the most common ectoparasite infestations in pet rabbits worldwide. Untreated cases can progress to secondary bacterial ear infection, vestibular disease, and fatal meningitis. Also documented occasionally in guinea pigs."
+                    ),
+                    SpeciesRisk(
+                        species: .dog,
+                        severity: .low,
+                        notes: "Occasional infection documented. Dogs are not a primary host and rarely develop significant disease, but exposure from an infested rabbit in the household is possible."
+                    ),
+                    SpeciesRisk(
+                        species: .cat,
+                        severity: .low,
+                        notes: "Occasional infection documented. Cats are not a primary host and rarely develop significant disease, but exposure from an infested rabbit in the household is possible."
+                    ),
+                ],
+                preventionTips: [
+                    "Have any new rabbit examined by a veterinarian before introducing it to other animals — ear mites are easily transmitted and may not be immediately visible.",
+                    "Quarantine new rabbits for a minimum of 4 weeks before housing them with resident animals.",
+                    "Clean and disinfect enclosures, bedding, and food and water bowls regularly — mites can survive in the environment for up to 21 days.",
+                    "If one rabbit in a multi-rabbit household is diagnosed with ear mites, all rabbits in the household should be evaluated and treated.",
+                    "Avoid contact between pet rabbits and wild rabbits.",
+                    "Schedule routine wellness exams for pet rabbits — early detection allows treatment before the infestation progresses to ear infection or neurological involvement."
+                ],
+                sources: [
+                    "Merck Veterinary Manual — Ear Mites in Rabbits",
+                    "LafeberVet — Psoroptes cuniculi in Rabbits",
+                    "VCA Animal Hospitals — Ear Mites in Rabbits",
+                    "PetMD — Rabbit Ear Mites (Psoroptes cuniculi)",
+                    "Rutgers NJAES — Common Mites of Your Rabbit: Ear Mites and Canker"
+                ],
+                relatedEntries: [
+                    "1D000001-0000-0000-0000-000000000026",  // Mange (Sarcoptic & Demodectic)
+                    "1D000001-0000-0000-0000-000000000029"   // Encephalitozoon cuniculi (E. cuniculi)
                 ]
             ),
         ]
