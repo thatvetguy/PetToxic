@@ -6610,7 +6610,8 @@ class DiseasesConditionsService {
                     "1D000001-0000-0000-0000-000000000026",  // Mange (Sarcoptic & Demodectic)
                     "1D000001-0000-0000-0000-000000000029",  // Encephalitozoon cuniculi (E. cuniculi)
                     "1D000001-0000-0000-0000-000000000038",  // GI Stasis in Rabbits
-                    "1D000001-0000-0000-0000-000000000045"   // Small Mammal Husbandry Guide
+                    "1D000001-0000-0000-0000-000000000045",  // Small Mammal Husbandry Guide
+                    "1D000001-0000-0000-0000-000000000047"   // Myiasis (Fly Strike)
                 ]
             ),
 
@@ -8065,7 +8066,8 @@ class DiseasesConditionsService {
                 relatedEntries: [
                     "1D000001-0000-0000-0000-000000000029",  // E. cuniculi
                     "1D000001-0000-0000-0000-000000000031",  // Rabbit Ear Mites
-                    "1D000001-0000-0000-0000-000000000045"   // Small Mammal Husbandry Guide
+                    "1D000001-0000-0000-0000-000000000045",  // Small Mammal Husbandry Guide
+                    "1D000001-0000-0000-0000-000000000047"   // Myiasis (Fly Strike)
                 ]
             ),
 
@@ -9869,7 +9871,8 @@ class DiseasesConditionsService {
                     "1D000001-0000-0000-0000-000000000032",  // RHDV2
                     "1D000001-0000-0000-0000-000000000037",  // Coccidiosis & Cryptosporidiosis
                     "1D000001-0000-0000-0000-000000000038",  // GI Stasis in Rabbits
-                    "1D000001-0000-0000-0000-000000000039"   // Hypovitaminosis A
+                    "1D000001-0000-0000-0000-000000000039",  // Hypovitaminosis A
+                    "1D000001-0000-0000-0000-000000000047"   // Myiasis (Fly Strike)
                 ]
             ),
 
@@ -10054,6 +10057,192 @@ class DiseasesConditionsService {
                     "1D000001-0000-0000-0000-000000000021",  // FHV-1 (Feline Herpesvirus-1)
                     "1D000001-0000-0000-0000-000000000003",  // Feline Panleukopenia
                     "1D000001-0000-0000-0000-000000000032"   // RHDV2 (same virus family, different virus)
+                ]
+            ),
+
+            // MARK: - Myiasis (Fly Strike)
+            ToxicItem(
+                id: UUID(uuidString: "1D000001-0000-0000-0000-000000000047")!,
+                name: "Myiasis (Fly Strike)",
+                alternateNames: ["Fly Strike", "Flystrike", "Blowfly Strike", "Botfly",
+                                 "Cuterebra", "Warble Fly", "Maggot Infestation",
+                                 "Subcutaneous Myiasis", "Wound Myiasis"],
+                categories: [.diseasesAndConditions],
+                imageAsset: "myiasis_thumb",
+                description: """
+                    Myiasis is the infestation of a living animal by fly larvae \
+                    (maggots). While the word may sound clinical, the condition is \
+                    better known by pet owners as \u{201C}fly strike\u{201D} — and \
+                    it is one of the most rapid-onset emergencies in small animal \
+                    medicine, particularly in rabbits.
+
+                    Two distinct types of myiasis are seen in pets. Blowfly strike \
+                    occurs when flies (most commonly Lucilia sericata and related \
+                    species) lay eggs on soiled, wounded, or compromised skin. Eggs \
+                    hatch within hours, and larvae begin feeding on tissue \
+                    immediately — causing destruction that can become life-threatening \
+                    within 24 hours in rabbits. Dogs and cats with open wounds, skin \
+                    folds, or heavily soiled coats are also at significant risk.
+
+                    Cuterebra myiasis (botfly or warble fly infestation) is a \
+                    separate and distinct presentation. Cuterebra flies do not lay \
+                    eggs directly on the host — larvae hatch from eggs deposited near \
+                    burrows or on vegetation and enter the host through natural \
+                    openings or skin abrasions. The larva then migrates subcutaneously \
+                    (under the skin), forming a visible breathing pore and a \
+                    characteristic swelling, most often on the face, neck, or trunk. \
+                    Cuterebra is most common in dogs, cats, and rabbits in North America.
+
+                    Both forms peak during warm months (spring through early fall) \
+                    when fly populations are highest. Outdoor, partially outdoor, and \
+                    hutch-housed animals face the greatest exposure risk.
+                    """,
+                toxicityInfo: """
+                    **How It Harms the Body**
+
+                    In blowfly strike, fly eggs hatch into larvae within as little as \
+                    8–12 hours. The larvae feed on necrotic and living tissue, \
+                    secreting enzymes that liquefy skin and underlying structures. \
+                    Bacterial toxins and the larval waste products are rapidly absorbed \
+                    into the bloodstream, causing systemic toxemia — fever, \
+                    cardiovascular shock, and organ compromise. In rabbits, this \
+                    cascade can be fatal within 24 hours if untreated. Even cases \
+                    that appear superficially localized often involve far more \
+                    extensive tissue destruction than is visible on the surface.
+
+                    In Cuterebra myiasis, a single larva migrates through subcutaneous \
+                    tissue, occasionally entering abnormal migration pathways — \
+                    including the central nervous system in cats — causing \
+                    neurological signs that may persist even after larval removal. \
+                    The breathing pore (warble) typically appears as a raised lump \
+                    with a small opening. Attempting to remove the larva without \
+                    veterinary guidance risks rupturing it, which can trigger a severe \
+                    anaphylactic reaction.
+
+                    **The Rabbit Emergency**
+
+                    Fly strike is a disproportionate emergency in rabbits compared to \
+                    dogs and cats. Rabbits groom differently, mask signs of illness, \
+                    and have skin that is particularly vulnerable to rapid larval \
+                    penetration. A rabbit with fly strike can deteriorate from \
+                    early infestation to fatal toxemia within hours. Any rabbit \
+                    showing sudden agitation, hunched posture, reluctance to move, or \
+                    visible larvae or eggs near the hindquarters, tail, or perineum \
+                    requires emergency veterinary care immediately — do not wait.
+
+                    GI stasis, obesity, dental disease, or any condition that \
+                    prevents a rabbit from grooming its hindquarters dramatically \
+                    increases fly strike risk by allowing urine scalding and fecal \
+                    soiling to accumulate — providing the moist, soiled environment \
+                    flies prefer for egg laying.
+
+                    **Transmission & Spread**
+
+                    Flies are attracted to wounds, soiled coats, urine scalding, \
+                    diarrhea, odorous skin folds, and the perineal region of animals \
+                    with loose cecotropes or GI disturbance. Risk is highest in \
+                    warm, humid conditions when fly populations peak. Cuterebra \
+                    infestation occurs through contact with larva-bearing vegetation \
+                    or soil near rodent burrows, particularly during outdoor \
+                    exploration in late summer and fall.
+
+                    **Zoonotic Risk**
+
+                    Cuterebra larvae can very rarely infest humans, typically through \
+                    accidental contact with larva-bearing environments. This is \
+                    uncommon and does not require alarm-level precautions — standard \
+                    hygiene when handling affected animals is sufficient. Blowfly \
+                    strike in pets does not pose meaningful human risk under normal \
+                    handling conditions.
+
+                    **Treatment Goals**
+
+                    Blowfly strike treatment involves prompt removal of all larvae \
+                    under veterinary supervision, thorough wound debridement, \
+                    systemic antibiotics for secondary infection and toxemia, fluid \
+                    therapy, pain management, and nutritional support. The full extent \
+                    of tissue damage is often not apparent until larvae are removed \
+                    and the wound is fully explored. Cuterebra removal is a \
+                    veterinary procedure — the larva must be extracted intact to \
+                    avoid anaphylaxis from larval contents.
+
+                    **Seasonal Awareness**
+
+                    Fly strike risk rises sharply in spring and remains elevated \
+                    through early fall. Owners of outdoor rabbits and other small \
+                    mammals should perform daily hindquarter checks during warm \
+                    months. Fly-proof hutch screening, prompt removal of soiled \
+                    bedding, and regular grooming of long-coated animals are the \
+                    most effective preventive measures.
+                    """,
+                toxicityInfoSectionTitle: "What makes it harmful?",
+                onsetTime: OnsetTime(
+                    early: "Blowfly eggs hatch in as little as 8–12 hours; larvae begin tissue destruction immediately; Cuterebra warble (swelling with breathing pore) typically develops over 3–4 weeks after larval entry",
+                    delayed: "Systemic toxemia and shock from blowfly strike can develop within 24 hours in rabbits; Cuterebra CNS migration (particularly in cats) may cause neurological signs that persist after larval removal"
+                ),
+                symptoms: [
+                    "Visible maggots, fly eggs (white specks), or larval tracks in coat or wounds",
+                    "Foul-smelling discharge from affected area",
+                    "Matted or wet fur over damaged skin",
+                    "Skin wounds that appear larger than expected or rapidly worsening",
+                    "Sudden agitation, distress, or abnormal behavior (early rabbit sign)",
+                    "Hunched posture or reluctance to move (rabbits)",
+                    "Fever",
+                    "Inappetence or lethargy",
+                    "Raised lump with small central pore (Cuterebra warble)",
+                    "Scratching or biting at a specific skin area (Cuterebra)",
+                    "Neurological signs: head tilt, circling, seizures (Cuterebra CNS migration — cats)",
+                    "Cardiovascular shock in severe or advanced cases"
+                ],
+                entrySeverity: nil,
+                speciesRisks: [
+                    SpeciesRisk(
+                        species: .smallMammal,
+                        severity: .severe,
+                        notes: "Rabbits are the highest-risk species — fly strike is a rapid-onset emergency with systemic toxemia and death possible within 24 hours. Hindquarter soiling from GI stasis, obesity, or dental disease dramatically elevates risk. Daily hindquarter checks are essential during warm months for all outdoor or hutch-housed rabbits. Guinea pigs, chinchillas, and other hutch-housed small mammals are also at meaningful risk."
+                    ),
+                    SpeciesRisk(
+                        species: .dog,
+                        severity: .severe,
+                        notes: "Significant risk, particularly around open wounds, skin folds, and heavily soiled coats. Cuterebra infestation most common in dogs with outdoor access in late summer and fall. Botfly warbles typically appear on the face, neck, or trunk."
+                    ),
+                    SpeciesRisk(
+                        species: .cat,
+                        severity: .severe,
+                        notes: "Significant risk from blowfly strike around wounds and soiled fur. Cuterebra infestation can result in aberrant CNS larval migration, causing neurological signs (head tilt, seizures, circling) that may persist after larval removal — an important species-specific risk."
+                    ),
+                    SpeciesRisk(
+                        species: .bird,
+                        severity: .low,
+                        notes: "Rare in healthy indoor birds and not a primary concern under good husbandry. Risk increases meaningfully for birds kept outdoors or in outdoor aviaries, particularly those with wounds, compromised feathering, or accumulated fecal soiling — conditions that attract flies."
+                    ),
+                    SpeciesRisk(
+                        species: .reptile,
+                        severity: .low,
+                        notes: "Myiasis is rare in captive reptiles under appropriate husbandry conditions. Outdoor-housed reptiles or those with skin wounds may occasionally be affected. Veterinary evaluation required if suspected."
+                    )
+                ],
+                preventionTips: [
+                    "Perform daily hindquarter checks on rabbits and small mammals during warm months (spring through early fall) — fly strike can progress to an emergency within hours",
+                    "Keep outdoor hutches and enclosures fly-screened and clean; remove soiled bedding promptly",
+                    "Address any condition that causes hindquarter soiling — including GI stasis, obesity, or dental disease in rabbits — as these dramatically elevate fly strike risk",
+                    "Keep wounds clean, dry, and covered; consult your veterinarian about any wound that is slow to heal",
+                    "Regularly groom long-coated dogs and cats, especially during summer, and inspect skin folds in predisposed breeds",
+                    "Do NOT attempt to remove a Cuterebra (botfly) larva at home — rupture can cause a severe anaphylactic reaction; seek veterinary care immediately",
+                    "Consult your veterinarian about fly repellent options approved for use in your pet's species — many human and equine products are toxic to small animals"
+                ],
+                sources: [
+                    "Merck Veterinary Manual — Myiasis (merckvetmanual.com)",
+                    "House Rabbit Society — Flystrike (rabbit.org)",
+                    "VCA Animal Hospitals — Cuterebra Infestation in Cats and Dogs (vcahospitals.com)",
+                    "Cornell University College of Veterinary Medicine — Cuterebra (vet.cornell.edu)",
+                    "LafeberVet — Myiasis in Exotic Animals (lafeber.com)",
+                    "PDSA (UK) — Flystrike in Rabbits (pdsa.org.uk)"
+                ],
+                relatedEntries: [
+                    "1D000001-0000-0000-0000-000000000045",  // Small Mammal Husbandry Guide
+                    "1D000001-0000-0000-0000-000000000038",  // GI Stasis in Rabbits
+                    "1D000001-0000-0000-0000-000000000031"   // Rabbit Ear Mites
                 ]
             ),
         ]
