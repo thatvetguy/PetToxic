@@ -5120,7 +5120,8 @@ class DiseasesConditionsService {
                     "UC Davis School of Veterinary Medicine — Zoonotic Disease: Toxoplasmosis: https://www.vetmed.ucdavis.edu/hospital/small-animal/ccah/zoonoses"
                 ],
                 relatedEntries: [
-                    "1D000001-0000-0000-0000-000000000023"  // GI Parasites
+                    "1D000001-0000-0000-0000-000000000023",  // GI Parasites
+                    "1D000001-0000-0000-0000-000000000029"   // E. cuniculi
                 ]
             ),
 
@@ -5827,7 +5828,10 @@ class DiseasesConditionsService {
                     "https://www.capcvet.org/guidelines/baylisascaris/",
                     "https://www.vet.cornell.edu/departments-centers-and-institutes/cornell-wildlife-health-lab/wildlife-health-topics/baylisascaris"
                 ],
-                relatedEntries: ["1D000001-0000-0000-0000-000000000023"]
+                relatedEntries: [
+                    "1D000001-0000-0000-0000-000000000023",  // GI Parasites
+                    "1D000001-0000-0000-0000-000000000029"   // E. cuniculi
+                ]
             ),
 
             // MARK: - Fleas
@@ -6066,6 +6070,167 @@ class DiseasesConditionsService {
                     "1D000001-0000-0000-0000-000000000007",  // Myxomatosis
                     "1D000001-0000-0000-0000-000000000023",  // GI Parasites
                     "1D000001-0000-0000-0000-000000000026"   // Mange
+                ]
+            ),
+
+            // MARK: - Encephalitozoon cuniculi (E. cuniculi)
+            ToxicItem(
+                id: UUID(uuidString: "1D000001-0000-0000-0000-000000000029")!,
+                name: "Encephalitozoon cuniculi (E. cuniculi)",
+                alternateNames: ["E. cuniculi", "Encephalitozoonosis", "rabbit encephalitozoonosis",
+                                 "microsporidian infection", "E cuniculi", "Encephalitozoon"],
+                categories: [.diseasesAndConditions],
+                imageAsset: "e_cuniculi_thumb",
+                description: """
+                Encephalitozoon cuniculi — commonly shortened to E. cuniculi — is a \
+                microscopic obligate intracellular parasite that primarily infects \
+                rabbits, targeting the brain, kidneys, and eyes. It belongs to a group \
+                called microsporidia, which are fungal-related organisms that can only \
+                survive and replicate inside the cells of a host.
+
+                Infection is widespread in domestic rabbit populations, but many \
+                animals carry the organism for life without ever developing illness. \
+                When active disease does occur, it can range from subtle kidney changes \
+                to severe neurological signs that appear suddenly — and can be \
+                life-threatening. A distinctive pattern in young rabbits is eye disease \
+                caused by infection acquired in the womb. This condition is not \
+                vaccine-preventable.
+
+                A separate strain (Strain III) is documented in dogs, where it can \
+                cause renal and neurological disease. E. cuniculi is considered \
+                zoonotic, though clinically significant infection in humans is rare \
+                and primarily a concern for immunocompromised individuals.
+                """,
+                toxicityInfo: """
+                **How It Harms the Body**
+
+                E. cuniculi invades the cells of its host and replicates inside them, \
+                triggering inflammatory responses that damage the organs it targets. \
+                It has a particular affinity for three systems: the brain and spinal \
+                cord, the kidneys, and the lens of the eye.
+
+                In the nervous system, the parasite causes granulomatous inflammation \
+                (a localized immune attack) that disrupts normal brain function. This \
+                is responsible for the most dramatic signs owners notice — sudden head \
+                tilt, loss of balance, rolling, or collapse.
+
+                In the kidneys, E. cuniculi produces a slow, progressive inflammatory \
+                injury that can go undetected for months to years. Some rabbits present \
+                with kidney disease as the only finding, with no neurological signs at all.
+
+                In the eye, a uniquely striking mechanism occurs. When a pregnant doe \
+                is infected, the parasite can cross into developing fetuses and become \
+                trapped inside the lens — a structure with no blood supply, and \
+                therefore unreachable by the immune system. As the rabbit matures, \
+                the organism eventually triggers rupture of the lens capsule, releasing \
+                inflammatory material directly into the eye. This causes phacoclastic \
+                uveitis (severe internal eye inflammation from a ruptured lens), which \
+                presents as a white, cloudy, or visibly damaged eye. This pattern in a \
+                young rabbit is highly characteristic of E. cuniculi, even before \
+                any testing is performed.
+
+                **The Silent Passenger**
+
+                A critical feature of this organism is how often it causes no disease \
+                at all. Seroprevalence studies — which detect antibodies indicating \
+                prior exposure — suggest that a significant proportion of domestic \
+                rabbits have been exposed without ever becoming clinically ill. A \
+                healthy immune system can hold the organism in check indefinitely. \
+                This makes interpretation tricky: a positive antibody test confirms \
+                exposure, but not necessarily active disease. Diagnosis requires \
+                veterinary evaluation to determine whether the organism is actually \
+                responsible for the signs a rabbit is showing.
+
+                **Transmission & Spread**
+
+                E. cuniculi spores are shed in the urine of infected animals. \
+                Transmission occurs when another rabbit ingests or inhales spores \
+                from contaminated bedding, food, or water. Spores are environmentally \
+                resilient and can persist for several weeks outside a host.
+
+                Intrauterine transmission (from infected mother to offspring) also \
+                occurs and is the primary route responsible for the eye disease \
+                described above.
+
+                Three genetically distinct strains have been identified: Strain I \
+                (rabbit), Strain II (mouse), and Strain III (dog/canis). Each strain \
+                has a primary host species, though cross-species infection can occur. \
+                Pet rabbits are most commonly affected by Strain I.
+
+                **Treatment Goals**
+
+                Veterinary care focuses on controlling inflammation, supporting \
+                affected organ systems, and managing secondary complications. \
+                Neurological signs — particularly head tilt — may improve with \
+                appropriate treatment over weeks to months, though full resolution \
+                is not always achieved. Kidney disease is generally managed long-term \
+                rather than cured. Severe eye involvement may require surgical removal \
+                of the lens to relieve pain and ongoing inflammation. Early veterinary \
+                evaluation is essential — many rabbits with this diagnosis can \
+                maintain a good quality of life with appropriate ongoing care, and \
+                outcomes are significantly better when treatment begins early.
+
+                **Zoonotic Risk**
+
+                E. cuniculi is considered zoonotic, but clinically significant \
+                infection in humans is rare. Risk is primarily a concern for \
+                immunocompromised individuals — including those undergoing \
+                chemotherapy, organ transplant recipients, and people with HIV/AIDS. \
+                Healthy adults rarely develop illness from exposure. If your rabbit \
+                has been diagnosed with E. cuniculi, practice good hand hygiene after \
+                handling your pet or cleaning their enclosure, and consult your own \
+                physician if you have any health concerns.
+                """,
+                toxicityInfoSectionTitle: "What makes it harmful?",
+                onsetTime: OnsetTime(
+                    early: "Incubation ranges from weeks to months; many infected animals remain asymptomatic indefinitely. Neurological signs may appear suddenly, even after a long silent period.",
+                    delayed: "Kidney disease often develops silently over months to years. Eye disease from intrauterine infection typically becomes apparent in young rabbits as the immune system matures."
+                ),
+                symptoms: [
+                    "Head tilt (torticollis)",
+                    "Loss of balance or stumbling",
+                    "Rolling or spinning episodes",
+                    "Rapid involuntary eye movements (nystagmus)",
+                    "White, cloudy, or inflamed eye",
+                    "Visible cataract or lens opacity",
+                    "Hind limb weakness or paralysis",
+                    "Urinary incontinence or wet hindquarters",
+                    "Increased thirst and urination",
+                    "Weight loss",
+                    "Seizures (rare)",
+                    "Sudden death (rare)"
+                ],
+                entrySeverity: nil,
+                speciesRisks: [
+                    SpeciesRisk(
+                        species: .smallMammal,
+                        severity: .severe,
+                        notes: "Rabbits are the primary host. Infection is widespread in domestic rabbit populations; many animals remain asymptomatic, but active disease can cause severe neurological signs, progressive kidney failure, or destructive eye disease. Also documented in mice and chinchillas."
+                    ),
+                    SpeciesRisk(
+                        species: .dog,
+                        severity: .moderate,
+                        notes: "Strain III (canis) is documented in dogs and can cause renal disease and neurological signs. Clinical disease is less common than in rabbits but is well-established, particularly in immunosuppressed or young animals."
+                    ),
+                ],
+                preventionTips: [
+                    "Quarantine new rabbits for a minimum of 4 weeks before introducing them to resident animals.",
+                    "Clean and disinfect housing, food bowls, and water sources regularly — E. cuniculi spores can survive in the environment for several weeks.",
+                    "Practice thorough hand hygiene after handling rabbits or cleaning their enclosures, especially if anyone in the household is immunocompromised.",
+                    "Schedule routine veterinary wellness exams for rabbits — bloodwork and urinalysis can detect kidney changes before symptoms become apparent.",
+                    "Purchase rabbits from reputable breeders who screen breeding animals for E. cuniculi.",
+                    "If your rabbit has been diagnosed with E. cuniculi and you have concerns about your own health, consult your physician."
+                ],
+                sources: [
+                    "Merck Veterinary Manual — Encephalitozoonosis in Rabbits",
+                    "LafeberVet — Encephalitozoon cuniculi in Rabbits",
+                    "Veterinary Partner (VIN) — Encephalitozoonosis",
+                    "VCA Animal Hospitals — Encephalitozoon cuniculi Infection in Rabbits",
+                    "House Rabbit Society — E. cuniculi"
+                ],
+                relatedEntries: [
+                    "1D000001-0000-0000-0000-000000000024",  // Toxoplasma
+                    "1D000001-0000-0000-0000-000000000027"   // Baylisascaris
                 ]
             ),
         ]

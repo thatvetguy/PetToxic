@@ -3,9 +3,9 @@
 Complete list of all entries with UUIDs, severity, and categories.
 
 - Toxin/informational entries in `DatabaseService.swift`: 186
-- Disease/condition entries in `DiseasesConditionsService.swift`: 28 (Pro-locked)
+- Disease/condition entries in `DiseasesConditionsService.swift`: 29 (Pro-locked)
 - Severity explainer: 1
-- **Total entries: 215**
+- **Total entries: 216**
 
 *Last updated: 2026-03-17 (Session 153)*
 
@@ -21,7 +21,7 @@ Complete list of all entries with UUIDs, severity, and categories.
 | Low/Moderate | 4 |
 | Low | 17 |
 | nil (Informational) | 26 |
-| **Total** | **215** |
+| **Total** | **216** |
 
 | Category | Count |
 |----------|-------|
@@ -35,7 +35,7 @@ Complete list of all entries with UUIDs, severity, and categories.
 | Holiday Hazards | 11 |
 | Cleaning Products | 9 |
 | Recreational Substances | 8 |
-| Diseases & Conditions | 28 |
+| Diseases & Conditions | 29 |
 
 *Counts exceed total because entries can be cross-listed in multiple categories.*
 
@@ -356,6 +356,7 @@ Complete list of all entries with UUIDs, severity, and categories.
 | Mange (Sarcoptic & Demodectic) | `1D000001-0000-0000-0000-000000000026` | nil | Dogs, Cats, Small Mammals |
 | Baylisascaris (Raccoon Roundworm) | `1D000001-0000-0000-0000-000000000027` | nil | Dogs, Cats, Small Mammals, Birds |
 | Fleas | `1D000001-0000-0000-0000-000000000028` | nil | Dogs, Cats, Small Mammals |
+| Encephalitozoon cuniculi (E. cuniculi) | `1D000001-0000-0000-0000-000000000029` | nil | Small Mammals, Dogs |
 
 ### Special Entry
 
@@ -365,7 +366,7 @@ Complete list of all entries with UUIDs, severity, and categories.
 
 ---
 
-## Alphabetical Index (All 215 Entries)
+## Alphabetical Index (All 216 Entries)
 
 | Name | UUID | Severity | Categories |
 |------|------|----------|------------|
@@ -439,6 +440,7 @@ Complete list of all entries with UUIDs, severity, and categories.
 | Duranta / Golden Dewdrop | `d84a68f2-ba6d-4ad6-b4af-82721447ef83` | High | Plants |
 | Dysecdysis (Abnormal Shedding) | `1D000001-0000-0000-0000-000000000010` | nil | Diseases & Conditions |
 | Electrical Cords & Electrocution | `e5f6a7b8-9c0d-1e2f-3a4b-5c6d7e8f9a0b` | nil | Household Items, Informational |
+| Encephalitozoon cuniculi (E. cuniculi) | `1D000001-0000-0000-0000-000000000029` | nil | Diseases & Conditions |
 | English Ivy | `8ea06fcf-b35d-4049-a73f-8c94752c783d` | Moderate | Plants |
 | Essential Oils (Tea Tree, Pennyroyal, Eucalyptus & Others) | `eeff2233-4455-6677-8899-aabbccddeeff` | Severe | Household Items |
 | Estrogen Medications & Hormone Therapies | `ccdd0011-eeff-2233-4455-667788990011` | High | Medications |
