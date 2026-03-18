@@ -3532,7 +3532,8 @@ class DiseasesConditionsService {
                     "MDPI Veterinary Sciences — From Challenge to Cure: FIP and Emerging Treatment Strategies (2025)"
                 ],
                 relatedEntries: [
-                    "1D000001-0000-0000-0000-000000000019"  // FeLV
+                    "1D000001-0000-0000-0000-000000000019",  // FeLV
+                    "1D000001-0000-0000-0000-000000000020"   // FIV
                 ]
             ),
 
@@ -3660,10 +3661,13 @@ class DiseasesConditionsService {
 
                 FeLV-positive cats with progressive infection require more frequent \
                 veterinary monitoring than healthy cats — at minimum every six months, \
-                and promptly at any sign of new illness. Keeping FeLV-positive cats \
-                strictly indoors both protects them from additional infectious \
-                exposures and prevents transmission to other cats. All FeLV-positive \
-                cats should be neutered.
+                and promptly at any sign of new illness. Per the 2020 AAFP Feline Retrovirus Guidelines, FeLV-positive cats \
+                should live separately from FeLV-negative cats, or only with other \
+                FeLV-positive cats — household transmission of FeLV carries a \
+                meaningfully higher risk than FIV. Keeping FeLV-positive cats strictly \
+                indoors protects them from additional infectious exposures and prevents \
+                transmission to cats in the broader community. All FeLV-positive cats \
+                should be neutered.
 
                 Cats with regressive infection often live normal, healthy lifespans \
                 with no signs of disease, though monitoring for reactivation is \
@@ -3753,7 +3757,7 @@ class DiseasesConditionsService {
                 preventionTips: [
                     "Vaccinate all kittens against FeLV — this is one of the most effective preventive steps available. Discuss a booster schedule for adult cats with outdoor access with your veterinarian.",
                     "Test all cats for FeLV before vaccination and before introducing a new cat to a household with existing cats.",
-                    "Keep FeLV-positive cats strictly indoors to protect both their health and the health of other cats.",
+                    "Per the 2020 AAFP Feline Retrovirus Guidelines, FeLV-positive cats should live separately from FeLV-negative cats, or only with other FeLV-positive cats. FeLV carries a higher risk of household transmission than FIV. Keeping FeLV-positive cats strictly indoors also protects them from new infections and prevents spread to cats in the community.",
                     "Test and quarantine any new cat before introducing them to existing household cats — FeLV-positive cats can appear completely healthy.",
                     "Do not allow cats of unknown FeLV status to share food dishes, water bowls, or litter boxes with your cats.",
                     "Have FeLV-positive cats examined by a veterinarian at least every six months, and promptly at any sign of illness.",
@@ -3769,7 +3773,247 @@ class DiseasesConditionsService {
                     "PMC / NIH — Feline Leukemia Virus Infection (peer-reviewed review)"
                 ],
                 relatedEntries: [
-                    "1D000001-0000-0000-0000-000000000018"  // FIP
+                    "1D000001-0000-0000-0000-000000000018",  // FIP
+                    "1D000001-0000-0000-0000-000000000020"   // FIV
+                ]
+            ),
+
+            // MARK: - Feline Immunodeficiency Virus (FIV)
+            ToxicItem(
+                id: UUID(uuidString: "1D000001-0000-0000-0000-000000000020")!,
+                name: "Feline Immunodeficiency Virus (FIV)",
+                alternateNames: [
+                    "FIV",
+                    "Feline AIDS",
+                    "Feline Immunodeficiency",
+                    "FIV positive",
+                    "feline immunodeficiency",
+                    "feline HIV",
+                    "cat AIDS",
+                    "feline T-lymphotropic lentivirus",
+                    "FTLV"
+                ],
+                categories: [.diseasesAndConditions],
+                imageAsset: "fiv_thumb",
+                description: """
+                Feline Immunodeficiency Virus (FIV) is a lentivirus that infects \
+                cats worldwide, progressively weakening the immune system over \
+                time. It belongs to the same family of viruses as HIV — the virus \
+                responsible for AIDS in humans — and causes a strikingly similar \
+                disease process in cats. Despite this parallel, FIV infects only \
+                cats. It cannot be transmitted to humans, dogs, or any other \
+                companion animal species.
+
+                FIV is transmitted almost exclusively through bite wounds. Unlike \
+                feline leukemia virus (FeLV), which spreads more easily through \
+                casual contact such as grooming or shared food dishes, FIV \
+                requires the direct inoculation of infected saliva into another \
+                cat's tissue during a fight. Outdoor intact male cats — who fight \
+                frequently — carry by far the highest risk of infection.
+
+                One of the most important things to understand about FIV is that \
+                a positive test result is not a death sentence, and FIV-positive \
+                is not the same as having feline AIDS. FIV is a slow-moving virus. \
+                Many infected cats remain clinically healthy for years — sometimes \
+                for their entire lives — before any signs of immune compromise \
+                appear. The long, often silent period between infection and \
+                clinical illness is a hallmark of lentiviruses.
+
+                There is no cure for FIV, and no vaccine is currently available \
+                in the United States or Canada. Management focuses on protecting \
+                the immune system, preventing secondary infections, and monitoring \
+                the cat closely for signs of decline. With attentive care, many \
+                FIV-positive cats live comfortable, good-quality lives for years \
+                after diagnosis.
+
+                Outdoor cats — particularly unneutered males with a history of \
+                fighting — are at greatest risk. Indoor-only cats with no bite \
+                wound exposure are at minimal risk. FIV is found worldwide in \
+                domestic cats and also infects several wild felid species, \
+                including lions, pumas, and cheetahs.
+                """,
+                toxicityInfo: """
+                **How It Harms the Body**
+
+                FIV is a retrovirus — specifically a lentivirus, meaning it causes \
+                disease slowly and establishes a lifelong persistent infection that \
+                the immune system cannot clear. Once a cat is infected, the virus \
+                integrates into the DNA of immune cells and remains there for life. \
+                The primary targets are CD4+ T-helper lymphocytes — the same class \
+                of immune cells destroyed by HIV in humans. As these cells are \
+                progressively depleted and exhausted over time, the cat's immune \
+                system loses its ability to coordinate defenses against infection.
+
+                The result is not illness caused directly by FIV itself — in most \
+                cases the virus causes relatively little direct tissue damage. \
+                Rather, it is the immune collapse that follows that becomes \
+                life-threatening. Bacteria, viruses, fungi, and parasites that a \
+                healthy cat's immune system would handle without difficulty become \
+                persistent, difficult-to-treat problems. This is the same mechanism \
+                seen in HIV-induced AIDS in humans, and is why severe FIV disease \
+                is sometimes referred to as feline AIDS.
+
+                FIV can also directly affect the nervous system, infecting cells \
+                in the brain and spinal cord and causing neurological signs in \
+                some cats.
+
+                **Transmission & Spread**
+
+                Bite wounds are the primary route of FIV transmission. The virus \
+                is present in saliva at sufficient concentrations to establish \
+                infection when inoculated directly into another cat's tissue \
+                during a fight. This is why the typical FIV-positive cat is an \
+                outdoor, unneutered male with a history of fighting — the \
+                infection pattern follows the pattern of cat combat.
+
+                Casual contact carries very low transmission risk. Shared food and \
+                water dishes, mutual grooming, shared litter boxes, and close \
+                proximity without fighting are not considered efficient routes of \
+                transmission. Per the 2020 AAFP Feline Retrovirus Guidelines, \
+                FIV-positive cats that are neutered or spayed and live peacefully \
+                with FIV-negative cats pose a very low transmission risk in stable \
+                households where fighting does not occur.
+
+                Mother-to-kitten transmission can occur — in the womb or through \
+                nursing — but appears to be relatively uncommon under natural \
+                conditions. The virus does not survive long outside a cat's body \
+                and is readily destroyed by common disinfectants.
+
+                **Treatment Goals**
+
+                There is no treatment that eliminates FIV from a cat's body. \
+                Management is focused on preserving quality and length of life. \
+                The goals of care for an FIV-positive cat are to minimize exposure \
+                to secondary infections, monitor closely for early signs of new \
+                illness, and treat complications promptly and aggressively when \
+                they arise. Secondary infections — which are the primary source of \
+                illness in FIV-positive cats — may respond well to treatment even \
+                when the underlying FIV infection cannot be resolved.
+
+                Per the 2020 AAFP Feline Retrovirus Guidelines, FIV-positive cats \
+                that are neutered or spayed can safely cohabit with FIV-negative \
+                cats in stable, peaceful households where fighting does not occur, \
+                with very little risk of transmission. If fighting occurs at any \
+                time, separation is essential. Discuss housing arrangements with \
+                your veterinarian. Keeping FIV-positive cats strictly indoors \
+                protects them from new pathogens that their compromised immune \
+                system may struggle to fight, and eliminates the risk of bite \
+                wound transmission to outdoor cats. Regular veterinary checkups — \
+                at least twice yearly — allow early detection of problems. Any \
+                sign of illness in an FIV-positive cat warrants prompt veterinary \
+                evaluation, as infections that a healthy cat would shake off can \
+                become serious quickly in an immunocompromised animal.
+
+                **The Lentivirus Connection**
+
+                FIV's membership in the lentivirus family places it in \
+                distinguished and sobering company. Lentiviruses — named for the \
+                slow, persistent nature of the diseases they cause — include not \
+                only FIV and HIV, but also viruses responsible for immunodeficiency \
+                in primates, sheep, goats, horses, and cattle. The discovery of \
+                FIV in 1986 at UC Davis was significant not only for feline \
+                medicine but for biomedical research broadly: FIV-infected cats \
+                became a valuable natural model for the study of HIV, contributing \
+                to research into antiviral strategies that benefit both species.
+
+                Despite the close biological kinship between FIV and HIV, the \
+                viruses are strictly species-specific. FIV cannot infect humans, \
+                and HIV cannot infect cats. This point is frequently misunderstood \
+                and causes unnecessary anxiety in owners of FIV-positive cats.
+
+                **FIV-Positive Is Not Feline AIDS**
+
+                FIV-positive means a cat has been infected with the virus. Feline \
+                AIDS — the clinical syndrome of profound immune failure — is the \
+                end stage of FIV disease, and many FIV-positive cats never reach \
+                it. The long, often asymptomatic period between infection and \
+                illness is a defining characteristic of lentiviruses. Some cats \
+                remain clinically healthy for the remainder of their natural lives. \
+                Others develop immune compromise over years. The trajectory depends \
+                on the strain of virus, the individual cat's immune response, \
+                co-infections, and other factors that are not fully predictable.
+
+                An FIV-positive diagnosis is information — information that changes \
+                how a cat should be managed, monitored, and protected. It is not, \
+                by itself, a reason for euthanasia.
+
+                **Myths vs. Facts**
+
+                **Myth:** My FIV-positive cat will infect my other cats just by \
+                living with them.
+                **Fact:** FIV spreads almost exclusively through bite wounds — not \
+                through grooming, shared food bowls, or close contact. Per the \
+                2020 AAFP Feline Retrovirus Guidelines, neutered or spayed \
+                FIV-positive cats living peacefully with FIV-negative cats in \
+                stable households pose very low transmission risk. If any fighting \
+                occurs, separation is necessary — consult your veterinarian about \
+                your specific situation.
+
+                **Myth:** FIV can spread to the people in my household.
+                **Fact:** FIV is strictly species-specific to cats. It cannot \
+                infect humans, dogs, or any other companion animal. No human case \
+                of FIV infection has ever been documented.
+
+                **Myth:** An FIV-positive cat needs to be euthanized.
+                **Fact:** Many FIV-positive cats live normal, healthy, \
+                good-quality lives for years after diagnosis. A positive result \
+                is not a terminal sentence — it is a reason to change how the \
+                cat is managed and monitored.
+
+                **Myth:** My indoor cat can't have FIV.
+                **Fact:** Indoor cats are at very low risk, but FIV can be \
+                acquired from any bite wound, including from an unfamiliar cat \
+                encountered briefly outdoors. Any cat with a history of bite \
+                wounds or unknown background should be tested.
+                """,
+                toxicityInfoSectionTitle: "What makes it harmful?",
+                onsetTime: OnsetTime(
+                    early: "Initial infection may cause brief mild illness — low-grade fever, swollen lymph nodes, lethargy — that resolves on its own within a few weeks and is often not noticed. The cat then typically enters a long asymptomatic period.",
+                    delayed: "The asymptomatic period following FIV infection can last months to years, or a cat's entire lifetime. When immune compromise eventually develops, it typically appears as recurring or non-resolving infections, weight loss, and progressive decline."
+                ),
+                symptoms: [
+                    "Recurring or non-resolving infections (mouth, eyes, skin, respiratory, urinary)",
+                    "Chronic or severe gum inflammation or mouth sores (gingivostomatitis)",
+                    "Weight loss or failure to maintain body condition",
+                    "Persistent lethargy or reduced activity",
+                    "Swollen lymph nodes, especially early in infection",
+                    "Chronic eye inflammation or discharge",
+                    "Diarrhea that recurs or does not resolve",
+                    "Poor coat condition",
+                    "Persistent nasal discharge or chronic upper respiratory signs",
+                    "Uneven pupil size",
+                    "Neurological signs: behavioral changes, disorientation, or seizures"
+                ],
+                entrySeverity: nil,
+                speciesRisks: [
+                    SpeciesRisk(
+                        species: .cat,
+                        severity: .severe,
+                        notes: "Cats are the only companion animal species susceptible to FIV. Outdoor unneutered males with a history of fighting carry the greatest risk of infection. Indoor-only cats with no bite wound exposure are at minimal risk. FIV is found worldwide and also infects wild felids including lions, pumas, and cheetahs."
+                    )
+                ],
+                preventionTips: [
+                    "Keep cats indoors — this is the single most effective way to prevent FIV, which spreads almost exclusively through bite wounds during fighting.",
+                    "Neuter all cats. Unneutered males roam widely and fight frequently, placing them at the highest risk of FIV exposure.",
+                    "Test all cats for FIV before introducing a new cat to a household with existing cats, after any known bite wound from a cat of unknown health status, and whenever a cat shows signs of illness.",
+                    "Any cat bitten by a cat of unknown health status should be tested for FIV approximately two months after the bite — antibodies may take up to two months to develop and become detectable.",
+                    "Per the 2020 AAFP Feline Retrovirus Guidelines, FIV-positive cats that are neutered or spayed can safely cohabit with FIV-negative cats in stable, peaceful households where fighting does not occur. If fighting occurs, separation is essential. Discuss your specific household situation with your veterinarian.",
+                    "FIV-positive cats should be kept strictly indoors — this protects them from new infections their immune system may struggle to fight, and eliminates the risk of bite wound transmission to other cats.",
+                    "Have FIV-positive cats examined by a veterinarian at least every six months, and promptly at any sign of illness — early treatment of secondary infections is the cornerstone of FIV management.",
+                    "No FIV vaccine is currently available in the United States or Canada."
+                ],
+                sources: [
+                    "Cornell Feline Health Center — Feline Immunodeficiency Virus",
+                    "Merck Veterinary Manual — Feline Immunodeficiency Virus",
+                    "VCA Animal Hospitals — Feline Immunodeficiency Virus Infection",
+                    "International Cat Care (iCatCare) — Feline Immunodeficiency Virus",
+                    "Wikipedia — Feline Immunodeficiency Virus",
+                    "AAFP — 2020 Feline Retrovirus Testing and Management Guidelines",
+                    "PMC / NIH — Feline Immunodeficiency Virus Infection (peer-reviewed review)"
+                ],
+                relatedEntries: [
+                    "1D000001-0000-0000-0000-000000000018",  // FIP
+                    "1D000001-0000-0000-0000-000000000019"   // FeLV
                 ]
             ),
         ]
