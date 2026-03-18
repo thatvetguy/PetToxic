@@ -26,6 +26,7 @@ class DiseasesConditionsService {
         "1D000001-0000-0000-0000-000000000009",  // Thermal Burns
         "1D000001-0000-0000-0000-000000000010",  // Dysecdysis (Abnormal Shedding)
         "1D000001-0000-0000-0000-000000000038",  // GI Stasis in Rabbits
+        "1D000001-0000-0000-0000-000000000039",  // Hypovitaminosis A
     ]
 
     /// Whether an entry is an infectious disease (Type 1)
@@ -896,7 +897,9 @@ class DiseasesConditionsService {
                     "Journal of Exotic Pet Medicine — Calcium and Vitamin D3 Metabolism in Reptiles",
                     "UC Davis School of Veterinary Medicine — Reptile Husbandry Guidelines"
                 ],
-                relatedEntries: nil
+                relatedEntries: [
+                    "1D000001-0000-0000-0000-000000000039"   // Hypovitaminosis A
+                ]
             ),
 
             // MARK: - Leptospirosis
@@ -1514,7 +1517,9 @@ class DiseasesConditionsService {
                     "VCA Animal Hospitals — Burns in Reptiles",
                     "Veterinary Partner — Reptile Husbandry and Common Medical Problems"
                 ],
-                relatedEntries: nil
+                relatedEntries: [
+                    "1D000001-0000-0000-0000-000000000039"   // Hypovitaminosis A
+                ]
             ),
 
             // MARK: - Dysecdysis (Abnormal Shedding)
@@ -1702,7 +1707,8 @@ class DiseasesConditionsService {
                 ],
                 relatedEntries: [
                     "1D000001-0000-0000-0000-000000000033",  // Snake Mites (Ophionyssus natricis)
-                    "1D000001-0000-0000-0000-000000000034"   // Inclusion Body Disease (IBD)
+                    "1D000001-0000-0000-0000-000000000034",  // Inclusion Body Disease (IBD)
+                    "1D000001-0000-0000-0000-000000000039"   // Hypovitaminosis A
                 ]
             ),
 
@@ -8027,6 +8033,237 @@ class DiseasesConditionsService {
                 relatedEntries: [
                     "1D000001-0000-0000-0000-000000000029",  // E. cuniculi
                     "1D000001-0000-0000-0000-000000000031"   // Rabbit Ear Mites
+                ]
+            ),
+
+            // MARK: - Hypovitaminosis A (Vitamin A Deficiency)
+            ToxicItem(
+                id: UUID(uuidString: "1D000001-0000-0000-0000-000000000039")!,
+                name: "Hypovitaminosis A (Vitamin A Deficiency)",
+                alternateNames: [
+                    "vitamin A deficiency",
+                    "hypo A",
+                    "hypovitaminosis A",
+                    "VAD",
+                    "vitamin A deficiency disease",
+                    "avitaminosis A",
+                    "low vitamin A"
+                ],
+                categories: [.diseasesAndConditions],
+                imageAsset: "hypovitaminosis_a_thumb",
+                description: """
+                    Hypovitaminosis A is a nutritional disease caused by a chronic deficiency \
+                    of vitamin A (retinol) in the diet. It is one of the most common \
+                    diet-related diseases seen in captive reptiles and birds, and is \
+                    almost entirely preventable with correct feeding.
+
+                    Vitamin A is a fat-soluble vitamin essential for maintaining the \
+                    integrity of epithelial tissues — the cell layers that line the skin, \
+                    eyes, mouth, respiratory tract, and internal organs. When the body \
+                    cannot obtain enough vitamin A over time, these linings begin to \
+                    break down and are replaced by a thickened, non-functional cell type. \
+                    The resulting damage creates a cascade of problems that affects \
+                    multiple organ systems simultaneously.
+
+                    The condition develops gradually over weeks to months. Owners often \
+                    miss early signs because the disease appears insidious until it \
+                    reaches an advanced and more visibly obvious stage. By the time \
+                    swollen eyes, respiratory symptoms, or mouth changes are obvious, \
+                    the deficiency has typically been ongoing for some time.
+
+                    Reptiles — particularly box turtles, aquatic turtles, tortoises, \
+                    chameleons, and bearded dragons — are the most commonly affected \
+                    group in clinical practice. Parrots, budgerigars, and other psittacine \
+                    birds on seed-only diets are also highly susceptible. Small mammals \
+                    including rabbits and guinea pigs can develop vitamin A deficiency on \
+                    inadequate diets, though this is less common when appropriate hay and \
+                    fresh vegetables are provided. Dogs and cats are rarely affected, as \
+                    commercial pet foods are routinely supplemented with vitamin A. \
+                    This entry focuses on reptiles, birds, and small mammals.
+
+                    Hypovitaminosis A is not contagious and is not caused by a pathogen. \
+                    No vaccine exists or is applicable.
+                    """,
+                toxicityInfo: """
+                    **How It Harms the Body**
+                    Vitamin A plays a fundamental role in the maintenance of epithelial \
+                    tissue — the cell layers that line and protect virtually every surface \
+                    inside and outside the body. In a well-nourished animal, these linings \
+                    are moist, functional, and effective barriers against infection and \
+                    environmental insult.
+
+                    When vitamin A is chronically deficient, a process called squamous \
+                    metaplasia (skway-mus meh-tah-PLAY-zhuh) occurs: normal, healthy \
+                    epithelial cells are progressively replaced by a thickened, dry, \
+                    non-functional layer of squamous (scale-like) cells. This replacement \
+                    happens across multiple organ systems at once.
+
+                    In the eyes, the conjunctiva and cornea become dry and thickened. \
+                    Fluid accumulates beneath the eyelids, producing the characteristic \
+                    swollen-eyelid appearance that is among the most recognizable signs of \
+                    vitamin A deficiency in turtles and tortoises. Left untreated, this \
+                    leads to corneal damage and permanent vision loss.
+
+                    In the mouth and respiratory tract, the normal moist lining is replaced \
+                    by dry, thickened tissue that accumulates caseous (cheese-like) debris \
+                    and becomes vulnerable to secondary bacterial infection. In birds, this \
+                    produces blunting or loss of the choanal papillae — the small, spike-like \
+                    projections visible in the roof of the mouth on examination. Their \
+                    flattening or absence is a classic clinical finding in vitamin A-deficient \
+                    psittacines.
+
+                    In the kidneys, squamous metaplasia of the tubular lining impairs waste \
+                    filtration and can progress to visceral gout — a painful, serious \
+                    condition in which uric acid crystals deposit in the organs and tissues.
+
+                    The damaged linings also lose their barrier function, making affected \
+                    animals significantly more vulnerable to secondary bacterial, viral, and \
+                    fungal infections — which often become the presenting complaint, \
+                    masking the underlying nutritional cause.
+
+                    **The Carrot Problem — and Why Beta-Carotene Is Not Always Enough**
+                    Vitamin A does not occur in plant foods — what plants contain is \
+                    beta-carotene, a precursor that must be converted to active vitamin A \
+                    in the body. In humans and many mammals, this conversion is reasonably \
+                    efficient. In reptiles, conversion is poor to negligible. A tortoise \
+                    eating carrots and leafy greens is not reliably meeting its vitamin A \
+                    needs from beta-carotene alone. Preformed vitamin A — found in animal-\
+                    sourced foods such as liver and certain prey items — is far more \
+                    bioavailable for reptiles than any plant-based source. This is why \
+                    dietary correction in reptiles requires veterinary guidance specific to \
+                    the species, rather than simply adding more vegetables.
+
+                    Birds are somewhat better at converting beta-carotene than reptiles, \
+                    which is why a parrot eating a varied diet that includes dark leafy \
+                    greens, sweet potato, and red/orange vegetables is much better \
+                    protected than one living on a seed mix. Seeds are virtually devoid of \
+                    vitamin A or beta-carotene — a seed-only diet is a slow-motion \
+                    nutritional crisis.
+
+                    **Causes & Risk Factors**
+                    • **Seed-only diets in birds** — the most common single cause of \
+                    hypovitaminosis A in psittacines. Seeds contain almost no vitamin A \
+                    or beta-carotene. Birds fed exclusively on seed mix with no fresh \
+                    vegetables, leafy greens, or formulated pellets are at high risk. \
+                    Budgerigars, cockatiels, and Amazon parrots are particularly \
+                    over-represented in clinical cases.
+
+                    • **Monotonous or inadequate diets in reptiles** — box turtles fed \
+                    primarily on fruit (low in vitamin A); aquatic turtles fed \
+                    exclusively on commercial turtle sticks; tortoises without access \
+                    to appropriate leafy vegetation; chameleons fed feeder insects without \
+                    supplementation. Any reptile diet lacking variety and appropriate \
+                    supplementation is at risk.
+
+                    • **Reliance on beta-carotene alone in reptiles** — as described above, \
+                    reptiles convert beta-carotene to vitamin A poorly. A diet that appears \
+                    colorful and vegetable-rich may still be deficient in bioavailable \
+                    vitamin A for reptile species.
+
+                    • **Missing or inadequate supplementation** — captive reptiles typically \
+                    require vitamin A supplementation, but over-supplementation causes \
+                    toxicity (hypervitaminosis A). Species-appropriate supplementation \
+                    should always be guided by a veterinarian familiar with exotic species.
+
+                    • **Small mammals on restricted diets** — rabbits and guinea pigs on \
+                    hay-only or pellet-only diets without fresh vegetables can develop \
+                    mild to moderate deficiency over time. Guinea pigs, like humans, also \
+                    cannot synthesize vitamin C — dietary deficiencies in this species \
+                    tend to cluster.
+
+                    • **Young and growing animals** — rapidly growing juveniles have higher \
+                    vitamin A demands and develop deficiency faster than adults on the same \
+                    inadequate diet.
+
+                    **Treatment Goals**
+                    Veterinary treatment focuses on correcting the vitamin A deficiency \
+                    in a controlled, species-appropriate manner, managing secondary \
+                    infections that have developed as a result of compromised epithelial \
+                    barriers, and providing supportive care for affected organ systems \
+                    including the eyes and kidneys. Vitamin A supplementation requires \
+                    careful veterinary management — the margin between corrective and \
+                    toxic doses (hypervitaminosis A) is narrow in some species, and \
+                    inappropriate supplementation can cause additional harm. Dietary \
+                    correction is a central part of long-term management. Outcomes are \
+                    significantly better when the deficiency is identified and addressed \
+                    before advanced organ damage has occurred.
+
+                    **Myths vs. Facts**
+                    **Myth:** \u{201C}My turtle eats carrots, so it must be getting enough vitamin A.\u{201D}
+                    **Fact:** Reptiles convert beta-carotene from plant sources to active \
+                    vitamin A very poorly. Carrots and orange vegetables are not a reliable \
+                    vitamin A source for turtles or tortoises. Species-appropriate \
+                    supplementation and dietary guidance from an exotic animal veterinarian \
+                    is essential.
+
+                    **Myth:** \u{201C}Seeds are a natural diet for parrots, so they must be nutritionally complete.\u{201D}
+                    **Fact:** Wild parrots eat a diverse range of foods including fruits, \
+                    flowers, shoots, nuts, and insects — not a single-food seed diet. \
+                    Commercial seed mixes are particularly poor in vitamin A. A captive \
+                    parrot on seeds alone is on a path toward nutritional deficiency.
+
+                    **Myth:** \u{201C}The swelling around my turtle\u{2019}s eyes is just an infection.\u{201D}
+                    **Fact:** Periocular swelling (swelling around the eyes) in turtles and \
+                    tortoises is a classic sign of vitamin A deficiency, not a primary \
+                    infection. Secondary infection is common, but treating the infection \
+                    without addressing the underlying nutritional deficiency will result \
+                    in recurrence.
+                    """,
+                toxicityInfoSectionTitle: "What makes it harmful?",
+                onsetTime: OnsetTime(
+                    early: "Develops gradually over weeks to months of inadequate dietary intake. Early signs are often subtle — reduced appetite, mild lethargy, or slightly dull eyes — and are frequently missed until the condition is more advanced.",
+                    delayed: "Advanced signs including swollen eyelids, respiratory symptoms, mouth lesions, and secondary infections typically emerge after prolonged deficiency. Once organ systems such as the kidneys are involved, recovery is significantly more difficult and outcomes are less predictable."
+                ),
+                symptoms: [
+                    "Swollen, puffy, or closed eyelids (particularly in turtles and tortoises)",
+                    "Discharge or crusting around the eyes",
+                    "Mouth breathing or wheezing",
+                    "Nasal discharge",
+                    "White or yellowish deposits in the mouth (secondary infection)",
+                    "Loss of appetite or refusal to eat",
+                    "Lethargy and weakness",
+                    "Skin changes — dry, flaky, or abnormal shedding",
+                    "Blunted or absent choanal papillae (visible in birds on veterinary exam)",
+                    "Swollen limbs or facial swelling (advanced cases)"
+                ],
+                entrySeverity: nil,
+                speciesRisks: [
+                    SpeciesRisk(
+                        species: .reptile,
+                        severity: .severe,
+                        notes: "Turtles, tortoises, and chelonians are the most commonly affected reptiles in clinical practice. Box turtles, red-eared sliders, and other aquatic turtles are frequently presented with periocular swelling as the primary complaint. Chameleons and bearded dragons are also at risk. Squamous metaplasia affecting eyes, kidneys, and respiratory tract can cause permanent damage if the deficiency is prolonged."
+                    ),
+                    SpeciesRisk(
+                        species: .bird,
+                        severity: .severe,
+                        notes: "Psittacine birds (parrots, budgerigars, cockatiels, Amazon parrots) on seed-only diets are at high risk. Classic finding on veterinary examination is blunting or loss of choanal papillae. Respiratory lesions, secondary infections, and kidney involvement are common in advanced cases. Dietary correction is central to treatment and long-term prevention."
+                    ),
+                    SpeciesRisk(
+                        species: .smallMammal,
+                        severity: .moderate,
+                        notes: "Rabbits and guinea pigs on restricted diets lacking fresh vegetables can develop vitamin A deficiency. Less commonly seen than in reptiles and birds when appropriate hay and varied vegetables are provided. Reproductive problems and immune suppression have been documented in deficient small mammals."
+                    )
+                ],
+                preventionTips: [
+                    "For reptiles: work with a veterinarian experienced in exotic species to design a species-appropriate diet and supplementation plan — generic reptile supplements vary widely in vitamin A content and form",
+                    "For turtles and tortoises: do not rely on carrots or orange vegetables as primary vitamin A sources; reptiles convert beta-carotene to active vitamin A poorly",
+                    "For birds: transition psittacines away from seed-only diets toward a varied diet including dark leafy greens (kale, dandelion, parsley), orange and yellow vegetables (sweet potato, squash, peppers), and a formulated pellet base",
+                    "For all captive exotic pets: schedule regular veterinary check-ups including nutritional assessments — deficiency develops silently and early detection substantially improves outcomes",
+                    "Do not supplement vitamin A without veterinary guidance — the margin between a corrective dose and a toxic dose is narrow in some species, and hypervitaminosis A (vitamin A toxicity) is a serious condition in its own right",
+                    "For small mammals: ensure diet includes varied fresh vegetables; rabbits and guinea pigs benefit from dark leafy greens as a regular dietary component",
+                    "Research your specific species' dietary requirements before acquiring any exotic pet — nutritional disease is among the most common causes of preventable illness in captive reptiles and birds"
+                ],
+                sources: [
+                    "Merck Veterinary Manual — Vitamin A Deficiency in Animals",
+                    "LafeberVet — Hypovitaminosis A in Birds",
+                    "VCA Animal Hospitals — Vitamin A Deficiency in Reptiles",
+                    "UC Davis School of Veterinary Medicine — Exotic Animal Care Sheets",
+                    "Veterinary Partner — Nutritional Disorders in Pet Birds"
+                ],
+                relatedEntries: [
+                    "1D000001-0000-0000-0000-000000000005",  // Metabolic Bone Disease (MBD)
+                    "1D000001-0000-0000-0000-000000000010",  // Dysecdysis (Abnormal Shedding)
+                    "1D000001-0000-0000-0000-000000000009"   // Thermal Burns
                 ]
             ),
         ]
