@@ -1713,7 +1713,8 @@ class DiseasesConditionsService {
                     "1D000001-0000-0000-0000-000000000034",  // Inclusion Body Disease (IBD)
                     "1D000001-0000-0000-0000-000000000039",  // Hypovitaminosis A
                     "1D000001-0000-0000-0000-000000000040",  // Shell Rot
-                    "1D000001-0000-0000-0000-000000000041"   // Stomatitis / Mouth Rot
+                    "1D000001-0000-0000-0000-000000000041",  // Stomatitis / Mouth Rot
+                    "1D000001-0000-0000-0000-000000000042"   // Reptile Respiratory Infections
                 ]
             ),
 
@@ -2592,7 +2593,8 @@ class DiseasesConditionsService {
                     "1D000001-0000-0000-0000-000000000015",  // Cryptococcosis
                     "1D000001-0000-0000-0000-000000000016",  // Coccidioidomycosis (Valley Fever)
                     "1D000001-0000-0000-0000-000000000017",  // Pythiosis
-                    "1D000001-0000-0000-0000-000000000035"   // Air Sac Mites (Sternostoma tracheacolum)
+                    "1D000001-0000-0000-0000-000000000035",  // Air Sac Mites (Sternostoma tracheacolum)
+                    "1D000001-0000-0000-0000-000000000042"   // Reptile Respiratory Infections
                 ]
             ),
 
@@ -6912,7 +6914,8 @@ class DiseasesConditionsService {
                     "1D000001-0000-0000-0000-000000000010",  // Dysecdysis
                     "1D000001-0000-0000-0000-000000000026",  // Mange
                     "1D000001-0000-0000-0000-000000000034",  // Inclusion Body Disease (IBD)
-                    "1D000001-0000-0000-0000-000000000041"   // Stomatitis / Mouth Rot
+                    "1D000001-0000-0000-0000-000000000041",  // Stomatitis / Mouth Rot
+                    "1D000001-0000-0000-0000-000000000042"   // Reptile Respiratory Infections
                 ]
             ),
 
@@ -7095,7 +7098,8 @@ class DiseasesConditionsService {
                 ],
                 relatedEntries: [
                     "1D000001-0000-0000-0000-000000000033",  // Snake Mites
-                    "1D000001-0000-0000-0000-000000000010"   // Dysecdysis
+                    "1D000001-0000-0000-0000-000000000010",  // Dysecdysis
+                    "1D000001-0000-0000-0000-000000000042"   // Reptile Respiratory Infections
                 ]
             ),
 
@@ -8691,7 +8695,204 @@ class DiseasesConditionsService {
                     "1D000001-0000-0000-0000-000000000010",  // Dysecdysis (Abnormal Shedding)
                     "1D000001-0000-0000-0000-000000000033",  // Snake Mites
                     "1D000001-0000-0000-0000-000000000039",  // Hypovitaminosis A
-                    "1D000001-0000-0000-0000-000000000040"   // Shell Rot
+                    "1D000001-0000-0000-0000-000000000040",  // Shell Rot
+                    "1D000001-0000-0000-0000-000000000042"   // Reptile Respiratory Infections
+                ]
+            ),
+
+            // MARK: - Reptile Respiratory Infections
+            ToxicItem(
+                id: UUID(uuidString: "1D000001-0000-0000-0000-000000000042")!,
+                name: "Reptile Respiratory Infections",
+                alternateNames: [
+                    "Snake Pneumonia",
+                    "Lizard Respiratory Infection",
+                    "Reptile Pneumonia",
+                    "Ophidian Paramyxovirus",
+                    "OPMV",
+                    "Fer-de-Lance Virus",
+                    "Ferlavirus",
+                    "Nidovirus",
+                    "Nannizziopsis",
+                    "Yellow Fungus Disease",
+                    "Snake URI",
+                    "Reptile URI",
+                    "Upper Respiratory Infection",
+                    "Respiratory Infection"
+                ],
+                categories: [.diseasesAndConditions],
+                imageAsset: "reptile_respiratory_thumb",
+                description: """
+                    Respiratory infections are among the most common illnesses seen in captive \
+                    reptiles — affecting snakes, lizards, and chelonians (turtles and tortoises). \
+                    Most cases are caused by opportunistic bacteria such as Pseudomonas, Aeromonas, \
+                    and Klebsiella that exploit husbandry failures — most often inadequate \
+                    temperatures, excess humidity, poor ventilation, or chronic stress. A smaller \
+                    but far more dangerous subset is caused by viruses including ophidian \
+                    paramyxovirus (OPMV), nidovirus, and adenovirus, which act as primary \
+                    pathogens and can cause rapidly progressive, life-threatening disease. Fungal \
+                    pathogens — most notably Aspergillus species and Nannizziopsis species — \
+                    represent a third, less common but often severe category, typically arising \
+                    in immunocompromised individuals.
+
+                    Bacterial and fungal pneumonia are not contagious between animals — they arise \
+                    from each individual animal's own opportunistic flora or environmental spore \
+                    exposure when the immune system is compromised. Viral infections, by contrast, \
+                    are highly contagious and can spread rapidly through a collection. There is no \
+                    vaccine available for any reptile respiratory pathogen.
+
+                    This entry covers the full spectrum from common bacterial pneumonia to severe \
+                    viral and fungal disease. Snakes are most commonly and severely affected, \
+                    though lizards and chelonians are also susceptible. Open-mouth breathing in a \
+                    reptile is never normal and always warrants prompt veterinary evaluation.
+                    """,
+                toxicityInfo: """
+                    **Breathing in Cold Blood**
+                    Reptiles are ectotherms — they rely on their environment to regulate body \
+                    temperature rather than generating heat internally. This has profound \
+                    consequences for immune function. A reptile's immune cells operate most \
+                    effectively within its species-specific preferred optimal temperature zone \
+                    (POTZ). When temperatures fall below this range, immune activity slows \
+                    significantly. A sick reptile in a too-cool enclosure is literally unable to \
+                    mount an effective defense against infection — bacterial, viral, or fungal.
+
+                    This connection between temperature and immunity explains why husbandry \
+                    correction — restoring proper thermal gradients — is not merely background \
+                    advice but an essential component of treatment. It also explains why \
+                    respiratory infections can deteriorate rapidly in animals already stressed \
+                    by suboptimal conditions.
+
+                    **How It Harms the Body**
+                    In bacterial pneumonia, gram-negative organisms colonize the lower airways \
+                    and lung tissue when immune surveillance is impaired. Unlike mammals, reptiles \
+                    have limited respiratory clearance mechanisms — they lack an effective cough \
+                    reflex and have reduced mucociliary function. Mucus, inflammatory debris, \
+                    and bacteria accumulate in the airways, impairing gas exchange and creating \
+                    conditions for further bacterial proliferation.
+
+                    Viral infections cause more direct and severe damage. Ophidian paramyxovirus \
+                    (OPMV), also called Ferlavirus, was first identified in Fer-de-Lance vipers \
+                    (Bothrops spp.) — hence its common name. It infects both respiratory \
+                    epithelium and neural tissue, which is why affected snakes often show a \
+                    combination of breathing difficulty and neurological signs such as star-gazing \
+                    and loss of the righting reflex. This overlap with the neurological \
+                    presentation of Inclusion Body Disease (IBD) can make clinical differentiation \
+                    challenging without diagnostic testing. Nidovirus, increasingly recognized in \
+                    ball pythons and other pythonids, causes severe necrotizing pneumonia with \
+                    thick mucus production and can progress rapidly to respiratory failure. \
+                    Adenovirus causes respiratory and hepatic disease across a range of species \
+                    and may co-infect alongside other pathogens.
+
+                    Fungal respiratory infections are less common but frequently severe. Aspergillus \
+                    species — the same genus responsible for aspergillosis in birds — can infect \
+                    reptile airways when spore loads are high or immune function is significantly \
+                    depressed. Nannizziopsis species (associated with Yellow Fungus Disease in \
+                    bearded dragons and other agamids) primarily cause destructive skin and tissue \
+                    disease, but in severe cases can disseminate internally and involve the \
+                    respiratory tract. Fungal infections are difficult to diagnose on clinical \
+                    signs alone, often progress insidiously, and typically require prolonged \
+                    veterinary-directed antifungal treatment that differs fundamentally from \
+                    antibacterial therapy — making accurate diagnosis essential.
+
+                    **Transmission & Spread**
+                    Bacterial and fungal pneumonia are not directly contagious between animals. \
+                    Bacterial infections arise from each individual's own commensal flora under \
+                    conditions of immune suppression; fungal infections arise from environmental \
+                    spore exposure in a similarly immunocompromised host. Each affected animal \
+                    represents its own husbandry or immune problem — not a contagion event.
+
+                    Viral pathogens are a different matter entirely. OPMV and nidovirus spread \
+                    through direct contact, respiratory secretions, and fomites — contaminated \
+                    surfaces, shared equipment, and unwashed hands. Infected animals may shed \
+                    virus before clinical signs appear, making early detection difficult. \
+                    Once introduced to a collection, these viruses can spread rapidly, and \
+                    there is no specific antiviral treatment available. Strict quarantine of \
+                    all new animals — for a minimum of 90 days — and immediate isolation of \
+                    any symptomatic animal are the only effective defenses.
+
+                    **Treatment Goals**
+                    Treatment is directed entirely by a veterinarian. For bacterial infections, \
+                    goals include correcting husbandry deficiencies, providing supportive care \
+                    such as fluid therapy and nutritional support, and systemic antimicrobial \
+                    treatment guided by culture and sensitivity results. Nebulization therapy \
+                    may be used to deliver medications directly to the airways and help clear \
+                    accumulated secretions. For fungal infections, treatment goals similarly \
+                    include husbandry correction and supportive care, alongside antifungal \
+                    therapy — a distinct category of medication that must be prescribed and \
+                    monitored by a veterinarian. For viral infections, there is no specific \
+                    treatment — management is supportive, and outcomes depend heavily on the \
+                    pathogen involved and how early veterinary care was sought. Early \
+                    intervention for any respiratory infection significantly improves the \
+                    chances of recovery.
+
+                    **Myths vs. Facts**
+                    **Myth:** \u{201C}Open-mouth breathing just means my snake is too warm.\u{201D}
+                    **Fact:** A reptile may briefly gape when severely overheated, but sustained \
+                    open-mouth breathing in a correctly-temperatured enclosure is a classic sign \
+                    of respiratory distress. Any reptile gaping repeatedly or persistently \
+                    requires veterinary evaluation — it is not normal behavior to dismiss.
+
+                    **Myth:** \u{201C}My reptile is still eating, so it can\u{2019}t be that sick.\u{201D}
+                    **Fact:** Many reptiles, particularly snakes, continue eating in the early \
+                    stages of a respiratory infection. Continued feeding does not rule out \
+                    significant disease. By the time anorexia develops, the infection is often \
+                    well advanced.
+
+                    **Myth:** \u{201C}I\u{2019}ll just warm up the enclosure and wait to see if it clears.\u{201D}
+                    **Fact:** Improving temperature is a necessary first step — but it is not \
+                    treatment. Bacterial infections require antimicrobials; fungal infections \
+                    require antifungal therapy; viral infections require veterinary-directed \
+                    supportive care. Delaying evaluation allows infections to progress and \
+                    narrows the window for effective treatment.
+                    """,
+                toxicityInfoSectionTitle: "What makes it harmful?",
+                onsetTime: OnsetTime(
+                    early: "Bacterial and fungal infections often develop gradually over days to weeks. Early signs may be subtle: a slight increase in nasal mucus, mild lethargy, or reduced appetite. Viral infections can progress more rapidly — sometimes within days of exposure.",
+                    delayed: "Advanced disease includes persistent open-mouth breathing, audible wheezing or crackling, significant mucus discharge from the mouth or nostrils, severe weight loss, and inability to maintain normal posture. In viral infections, neurological signs — star-gazing, head tremors, loss of the righting reflex — may develop alongside respiratory deterioration."
+                ),
+                symptoms: [
+                    "Open-mouth breathing (gaping)",
+                    "Wheezing, clicking, or crackling sounds when breathing",
+                    "Mucus or discharge from the nostrils or mouth",
+                    "Lethargy and reduced activity",
+                    "Loss of appetite",
+                    "Upward head positioning to help drain respiratory secretions",
+                    "Labored or rapid breathing",
+                    "Weight loss",
+                    "Star-gazing, head tremors, or loss of righting reflex (viral infections)"
+                ],
+                entrySeverity: nil,
+                speciesRisks: [
+                    SpeciesRisk(
+                        species: .reptile,
+                        severity: .severe,
+                        notes: "Snakes are most commonly and severely affected — particularly boids (ball pythons, boa constrictors) and viperids. Viral pathogens (OPMV, nidovirus) drive the severe rating and can cause rapid respiratory failure. Lizards and chelonians are primarily affected by bacterial and fungal pneumonia, which are serious but more treatable with prompt veterinary care. The severe rating reflects the worst-case viral presentation."
+                    )
+                ],
+                preventionTips: [
+                    "Maintain correct temperature gradients with a hot spot appropriate for the species — thermal regulation is essential for immune function",
+                    "Keep humidity at species-appropriate levels; excessive moisture promotes bacterial and fungal growth in the respiratory tract",
+                    "Provide adequate enclosure ventilation while avoiding cold drafts",
+                    "Quarantine all new reptiles for a minimum of 90 days before any contact with established animals",
+                    "Isolate any animal showing signs of respiratory illness immediately — viral pathogens spread through direct contact and shared surfaces",
+                    "Use dedicated equipment for each animal (feeding tongs, water dishes, cleaning tools) and disinfect thoroughly between uses",
+                    "Wash hands thoroughly after handling any reptile or cleaning its enclosure",
+                    "Schedule regular veterinary checkups — early respiratory infections may not be obvious to owners, and prompt treatment significantly improves outcomes"
+                ],
+                sources: [
+                    "Merck Veterinary Manual — Respiratory Diseases of Reptiles: https://www.merckvetmanual.com/exotic-and-laboratory-animals/reptiles/respiratory-diseases-of-reptiles",
+                    "LafeberVet — Respiratory Diseases in Snakes: https://lafeber.com/vet/respiratory-diseases-in-snakes/",
+                    "Veterinary Partner — Reptile Health Resources: https://veterinarypartner.vin.com/",
+                    "UC Davis School of Veterinary Medicine — Exotic Animal Resources: https://www.vetmed.ucdavis.edu/hospital/small-animal/ccr/exotics",
+                    "Wikipedia — Ferlavirus (Ophidian Paramyxovirus): https://en.wikipedia.org/wiki/Ferlavirus",
+                    "Wikipedia — Nannizziopsis vriesii (Yellow Fungus Disease): https://en.wikipedia.org/wiki/Nannizziopsis_vriesii"
+                ],
+                relatedEntries: [
+                    "1D000001-0000-0000-0000-000000000034",  // Inclusion Body Disease (IBD)
+                    "1D000001-0000-0000-0000-000000000033",  // Snake Mites
+                    "1D000001-0000-0000-0000-000000000041",  // Stomatitis / Mouth Rot
+                    "1D000001-0000-0000-0000-000000000010",  // Dysecdysis
+                    "1D000001-0000-0000-0000-000000000014"   // Aspergillosis
                 ]
             ),
         ]
