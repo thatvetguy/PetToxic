@@ -487,7 +487,8 @@ class DiseasesConditionsService {
                     "AAFP Feline Vaccination Advisory Panel Guidelines"
                 ],
                 relatedEntries: [
-                    "1D000001-0000-0000-0000-000000000002"  // Canine Parvovirus — related parvovirus family
+                    "1D000001-0000-0000-0000-000000000002",  // Canine Parvovirus — related parvovirus family
+                    "1D000001-0000-0000-0000-000000000046"   // Feline Calicivirus (FCV)
                 ]
             ),
 
@@ -4319,7 +4320,8 @@ class DiseasesConditionsService {
                     "1D000001-0000-0000-0000-000000000018",  // FIP
                     "1D000001-0000-0000-0000-000000000019",  // FeLV
                     "1D000001-0000-0000-0000-000000000020",  // FIV
-                    "1D000001-0000-0000-0000-000000000008"   // Kennel Cough (CIRDC)
+                    "1D000001-0000-0000-0000-000000000008",  // Kennel Cough (CIRDC)
+                    "1D000001-0000-0000-0000-000000000046"   // Feline Calicivirus (FCV)
                 ]
             ),
 
@@ -6761,7 +6763,8 @@ class DiseasesConditionsService {
                 ],
                 relatedEntries: [
                     "1D000001-0000-0000-0000-000000000007",  // Myxomatosis
-                    "1D000001-0000-0000-0000-000000000045"   // Small Mammal Husbandry Guide
+                    "1D000001-0000-0000-0000-000000000045",  // Small Mammal Husbandry Guide
+                    "1D000001-0000-0000-0000-000000000046"   // Feline Calicivirus (FCV)
                 ]
             ),
 
@@ -9867,6 +9870,190 @@ class DiseasesConditionsService {
                     "1D000001-0000-0000-0000-000000000037",  // Coccidiosis & Cryptosporidiosis
                     "1D000001-0000-0000-0000-000000000038",  // GI Stasis in Rabbits
                     "1D000001-0000-0000-0000-000000000039"   // Hypovitaminosis A
+                ]
+            ),
+
+            // MARK: - Feline Calicivirus (FCV)
+            ToxicItem(
+                id: UUID(uuidString: "1D000001-0000-0000-0000-000000000046")!,
+                name: "Feline Calicivirus (FCV)",
+                alternateNames: ["FCV", "Feline Calici", "Calicivirus", "VS-FCV",
+                                 "Virulent Systemic FCV", "Feline Upper Respiratory Infection",
+                                 "Feline URI", "Limping Kitten Syndrome"],
+                categories: [.diseasesAndConditions],
+                imageAsset: "fcv_thumb",
+                description: """
+                    Feline Calicivirus (FCV) is one of the most prevalent infectious \
+                    diseases in cats worldwide and a leading cause of feline upper \
+                    respiratory infection, alongside Feline Herpesvirus-1 (FHV-1). \
+                    FCV belongs to the Caliciviridae family — the same virus family \
+                    that includes Rabbit Hemorrhagic Disease Virus 2 (RHDV2), though \
+                    the two are entirely different viruses with no cross-infection risk.
+
+                    FCV presents in two distinct clinical forms. Classic FCV causes \
+                    oral ulcers, sneezing, nasal discharge, and conjunctivitis, with \
+                    severity ranging from mild to debilitating depending on the strain. \
+                    A rarer and far more dangerous form — Virulent Systemic FCV \
+                    (VS-FCV) — causes widespread vascular inflammation, facial and \
+                    limb swelling, hemorrhagic discharge, jaundice, and multi-organ \
+                    failure, with reported mortality rates as high as 60–67%.
+
+                    One of FCV's defining challenges is its genetic diversity. Unlike \
+                    Feline Panleukopenia, where vaccination is highly protective, FCV \
+                    mutates rapidly and exists as many antigenically distinct strains — \
+                    meaning vaccinated cats can still contract the disease. Vaccination \
+                    with the core FVRCP vaccine significantly reduces severity and \
+                    remains strongly recommended, but does not guarantee full protection.
+
+                    Cats in multi-cat households, shelters, and catteries face the \
+                    highest exposure risk. VS-FCV outbreaks have occurred in shelter \
+                    populations and among vaccinated adult cats, making early \
+                    recognition and isolation protocols essential.
+                    """,
+                toxicityInfo: """
+                    **How It Harms the Body**
+
+                    Classic FCV primarily targets the epithelial cells lining the \
+                    mouth and upper respiratory tract. Viral replication causes cell \
+                    death, producing the characteristic oral ulcers that form most \
+                    often on the tongue, hard palate, and the skin bordering the nose \
+                    and lips. Oral pain can be severe enough to cause complete refusal \
+                    to eat.
+
+                    Some cats develop immune-mediated polyarthritis — joint \
+                    inflammation triggered by the immune response to infection or \
+                    vaccination — resulting in sudden lameness in one or more limbs. \
+                    This presentation is sometimes called \u{201C}Limping Kitten \
+                    Syndrome\u{201D} and is typically self-limiting, resolving within \
+                    days without specific treatment.
+
+                    Virulent Systemic FCV (VS-FCV) causes systemic vasculitis — \
+                    widespread blood vessel inflammation — leading to fluid leakage \
+                    into surrounding tissues. This produces the distinctive facial \
+                    and limb edema seen in affected cats, along with skin ulceration, \
+                    jaundice, respiratory distress from pneumonia, and multi-organ \
+                    failure. VS-FCV is a true emergency requiring immediate \
+                    veterinary intervention.
+
+                    **Transmission & Spread**
+
+                    FCV spreads efficiently through direct contact with infected cats \
+                    (nasal and ocular discharge, saliva), aerosol transmission from \
+                    sneezing, and contaminated surfaces, hands, clothing, food bowls, \
+                    and litter boxes. FCV is a non-enveloped virus that is \
+                    environmentally stable — it can survive on surfaces for up to one \
+                    month at room temperature.
+
+                    Recovered cats can become asymptomatic carriers and shed virus \
+                    intermittently for months, particularly during periods of stress. \
+                    Some cats become persistent long-term shedders. This makes \
+                    multi-cat household introductions and shelter environments \
+                    especially high-risk settings. Dilute bleach solution (1:32 ratio) \
+                    is effective at inactivating the virus on surfaces.
+
+                    **The Vaccination Reality**
+
+                    FCV vaccination is included in the core FVRCP vaccine recommended \
+                    for all cats. It significantly reduces disease severity and is \
+                    strongly recommended — but FCV's rapid mutation rate and antigenic \
+                    diversity mean that even fully vaccinated cats can contract \
+                    infection. This is a fundamental difference from Feline \
+                    Panleukopenia, where vaccination is highly reliable. Keeping \
+                    vaccinations current remains the most important preventive step.
+
+                    **Treatment Goals**
+
+                    There is no specific antiviral treatment for FCV. Supportive care \
+                    is the cornerstone of management and may include nutritional \
+                    support (appetite stimulants, assisted feeding, or feeding tubes \
+                    for cats refusing food due to oral pain), fluid therapy, antibiotics \
+                    for secondary bacterial infections, and pain management for oral \
+                    ulcers and joint inflammation. VS-FCV cases require aggressive \
+                    hospitalization and intensive supportive care.
+
+                    **Myths vs. Facts**
+
+                    Myth: \u{201C}My cat is vaccinated, so it can\u{2019}t get \
+                    calicivirus.\u{201D}
+                    Fact: The FVRCP vaccine significantly reduces disease severity \
+                    but does not guarantee protection against all FCV strains. \
+                    Vaccination is still strongly recommended.
+
+                    Myth: \u{201C}Limping after a calicivirus vaccine means something \
+                    went wrong.\u{201D}
+                    Fact: Transient lameness is a recognized, self-limiting side \
+                    effect of some FCV vaccines, caused by a mild immune-mediated \
+                    joint response. It typically resolves within days without treatment.
+
+                    Myth: \u{201C}FCV only affects kittens.\u{201D}
+                    Fact: Cats of any age can contract FCV. Adult cats — particularly \
+                    unvaccinated individuals and those in high-density environments — \
+                    are at significant risk. VS-FCV outbreaks have disproportionately \
+                    affected adult cats.
+
+                    **Ferrets & Rabbits: A Note on Caliciviruses**
+
+                    FCV has been reported in ferrets, though clinical disease is \
+                    uncommon. Rabbits have limited documented susceptibility to FCV. \
+                    Importantly, Rabbit Hemorrhagic Disease Virus 2 (RHDV2) — an \
+                    entirely separate calicivirus — poses a life-threatening risk to \
+                    rabbits and is covered in its own dedicated entry.
+                    """,
+                toxicityInfoSectionTitle: "What makes it harmful?",
+                onsetTime: OnsetTime(
+                    early: "2–10 days after exposure; oral ulcers, sneezing, nasal discharge, and fever typically appear first",
+                    delayed: "VS-FCV systemic signs (facial/paw edema, jaundice, hemorrhagic discharge) develop rapidly as disease progresses; recovered cats may shed virus for months without active signs"
+                ),
+                symptoms: [
+                    "Oral ulcers (tongue, hard palate, nasal philtrum)",
+                    "Excessive drooling",
+                    "Sneezing",
+                    "Nasal discharge",
+                    "Conjunctivitis (eye discharge and redness)",
+                    "Fever",
+                    "Inappetence or refusal to eat",
+                    "Sudden limping or lameness (Limping Kitten Syndrome)",
+                    "Facial swelling (muzzle, nose, and eye area) — VS-FCV",
+                    "Limb edema (paw/leg swelling) — VS-FCV",
+                    "Skin ulcers on the face and body — VS-FCV",
+                    "Jaundice (yellow tint to skin and gums) — VS-FCV",
+                    "Hemorrhagic discharge from eyes or nose — VS-FCV",
+                    "Labored breathing or pneumonia — VS-FCV"
+                ],
+                entrySeverity: nil,
+                speciesRisks: [
+                    SpeciesRisk(
+                        species: .cat,
+                        severity: .severe,
+                        notes: "Primary species. Classic FCV causes oral ulcers, sneezing, and upper respiratory signs of variable severity. Virulent Systemic FCV (VS-FCV) is rare but carries mortality rates up to 60–67%; any cat showing facial swelling, jaundice, or hemorrhagic signs requires emergency veterinary care. All cats should receive the core FVRCP vaccine, though vaccination reduces — but does not eliminate — infection risk due to FCV's rapid mutation."
+                    ),
+                    SpeciesRisk(
+                        species: .smallMammal,
+                        severity: .low,
+                        notes: "FCV has been documented in ferrets, though clinical disease is uncommon. Rabbits have limited documented susceptibility to FCV. Note that Rabbit Hemorrhagic Disease Virus 2 (RHDV2) — a separate but related calicivirus — is a serious and distinct threat to rabbits covered in its own entry."
+                    )
+                ],
+                preventionTips: [
+                    "Vaccinate all cats with the core FVRCP vaccine and maintain boosters on schedule — this significantly reduces disease severity even if it does not guarantee full protection",
+                    "Isolate any new cats for at least 2 weeks before introducing them to resident cats",
+                    "Separate sick cats from healthy cats immediately at the first sign of upper respiratory illness",
+                    "Disinfect food bowls, litter boxes, and surfaces with a dilute bleach solution (1 part bleach to 32 parts water) — FCV can survive on surfaces for up to one month",
+                    "Wash hands thoroughly between handling different cats, especially in multi-cat or shelter settings",
+                    "Minimize stress in multi-cat households — stress triggers viral shedding in recovered carrier cats",
+                    "Inform your veterinarian if your cat was recently adopted from a shelter, as shelter cats have elevated FCV exposure risk"
+                ],
+                sources: [
+                    "Cornell Feline Health Center — Feline Calicivirus (feline.cornell.edu)",
+                    "Merck Veterinary Manual — Feline Calicivirus (merckvetmanual.com)",
+                    "American Veterinary Medical Association — Feline Calicivirus (avma.org)",
+                    "UC Davis School of Veterinary Medicine — Feline Respiratory Disease Complex (vetmed.ucdavis.edu)",
+                    "VCA Animal Hospitals — Calicivirus in Cats (vcahospitals.com)",
+                    "International Society of Feline Medicine — ISFM Consensus Guidelines on Feline Upper Respiratory Tract Disease (isfm.net)"
+                ],
+                relatedEntries: [
+                    "1D000001-0000-0000-0000-000000000021",  // FHV-1 (Feline Herpesvirus-1)
+                    "1D000001-0000-0000-0000-000000000003",  // Feline Panleukopenia
+                    "1D000001-0000-0000-0000-000000000032"   // RHDV2 (same virus family, different virus)
                 ]
             ),
         ]
