@@ -707,7 +707,9 @@ class DiseasesConditionsService {
                     "Association of Avian Veterinarians (AAV) — Psittacosis",
                     "Cornell University College of Veterinary Medicine — Avian Chlamydiosis"
                 ],
-                relatedEntries: nil
+                relatedEntries: [
+                    "1D000001-0000-0000-0000-000000000030"  // PBFD
+                ]
             ),
 
             // MARK: - Metabolic Bone Disease (MBD)
@@ -6231,6 +6233,185 @@ class DiseasesConditionsService {
                 relatedEntries: [
                     "1D000001-0000-0000-0000-000000000024",  // Toxoplasma
                     "1D000001-0000-0000-0000-000000000027"   // Baylisascaris
+                ]
+            ),
+
+            // MARK: - Psittacine Beak and Feather Disease (PBFD)
+            ToxicItem(
+                id: UUID(uuidString: "1D000001-0000-0000-0000-000000000030")!,
+                name: "Psittacine Beak and Feather Disease (PBFD)",
+                alternateNames: ["PBFD", "beak and feather disease", "beak and feather virus",
+                                 "BFDV", "circovirus", "psittacine circovirus",
+                                 "feather loss in parrots", "psittacine beak feather disease",
+                                 "psittacine circoviral disease", "PCD"],
+                categories: [.diseasesAndConditions],
+                imageAsset: "pbfd_thumb",
+                description: """
+                Psittacine Beak and Feather Disease (PBFD) is a serious viral \
+                infection caused by Beak and Feather Disease Virus (BFDV), a \
+                circovirus that affects parrots and related birds (psittacines). \
+                It is considered the most significant infectious disease in captive \
+                and wild psittacine populations worldwide.
+
+                The virus attacks the immune system and the cells responsible for \
+                feather and beak development, causing progressive, irreversible \
+                damage. There is currently no cure and no commercially available \
+                vaccine. Disease can take two distinct forms: an acute form that \
+                kills young chicks rapidly, and a chronic form in older birds \
+                characterized by the gradual destruction of feathers and beak \
+                tissue over months to years.
+
+                PBFD is not contagious to humans or to non-psittacine pets. \
+                However, the virus poses an extreme biosecurity risk in any \
+                setting where multiple birds are kept — it is environmentally \
+                stable, can persist for months to years on surfaces, and spreads \
+                readily through feather dust and contaminated materials.
+                """,
+                toxicityInfo: """
+                **How It Harms the Body**
+
+                BFDV targets two critical systems simultaneously: the immune \
+                system and the tissues that produce feathers and beak material.
+
+                The virus invades and destroys cells in the bursa of Fabricius \
+                and the thymus — the organs responsible for developing a bird\u{2019}s \
+                immune defenses. This immunosuppression (weakening of the immune \
+                system) leaves infected birds unable to fight off secondary \
+                infections that a healthy bird would normally resist. Many birds \
+                with PBFD ultimately die from opportunistic infections rather \
+                than the virus itself.
+
+                Simultaneously, the virus destroys the feather follicles — the \
+                structures that produce and maintain feathers. This causes \
+                abnormal feather growth, feather fragility, and eventually \
+                permanent feather loss. In green-plumaged species, scattered \
+                yellow contour feathers appearing throughout the plumage can be \
+                one of the earliest visible signs — often mistaken by owners for \
+                a color variation rather than a disease signal. Beak and claw \
+                tissue can also be affected, leading to structural deformities \
+                that impair the bird\u{2019}s ability to eat and function.
+
+                **A Feather at a Time**
+
+                In the chronic form of PBFD — the most commonly recognized \
+                pattern in pet birds — the progression is gradual and \
+                unmistakable once an owner knows what to look for. Abnormal \
+                feathers appear first: they may be stunted, clubbed, curled, \
+                or retained in their sheaths when they should have opened \
+                fully. With each successive molt, the feather abnormalities \
+                worsen and spread to areas previously unaffected. Eventually, \
+                large areas of the body become permanently featherless. Beak \
+                changes — softening, elongation, or irregular surfaces — \
+                typically appear later in the disease course. Birds in the \
+                chronic form may survive for months to years, but the disease \
+                is considered uniformly progressive and eventually fatal.
+
+                The acute form occurs primarily in young chicks and nestlings. \
+                It progresses rapidly, causing severe immune failure, \
+                gastrointestinal signs, and death — often before significant \
+                feather abnormalities have time to develop.
+
+                **A Flock of Naked Birds**
+
+                PBFD has almost certainly been present in Australian parrots for \
+                far longer than the disease has been formally understood. In 1888, \
+                ornithologist Edwin Ashby documented a flock of completely \
+                featherless red-rumped parrots in the Adelaide Hills of South \
+                Australia — and reported that the species disappeared from the \
+                area entirely for several years afterward. This observation, made \
+                nearly a century before the virus was identified, is now recognized \
+                as likely the earliest recorded account of PBFD in wild birds. \
+                Genetic evidence suggests BFDV has been present in Australasian \
+                psittacines for at least 10 million years, making it one of the \
+                most ancient known viral relationships between a pathogen and its \
+                host group.
+
+                **Transmission & Spread**
+
+                BFDV is shed in feather dust, feather debris, feces, and crop \
+                secretions. Transmission occurs through direct contact with an \
+                infected bird, inhalation of contaminated feather dust, or \
+                contact with contaminated surfaces, caging, food bowls, or \
+                nesting material. A bird can be infected and actively shedding \
+                virus before any clinical signs appear, making introduction of \
+                apparently healthy birds a recognized route of spread.
+
+                The virus is exceptionally environmentally stable — it can \
+                persist on surfaces and in the environment for months to years \
+                and is resistant to many common disinfectants. This makes \
+                decontamination after an infected bird has been housed in a \
+                space extremely difficult.
+
+                PBFD is thought to have originated in Australia, where it is \
+                endemic in many wild parrot populations. Its global spread is \
+                attributed largely to the international pet bird trade. The \
+                budgerigar — one of the world\u{2019}s most popular pet birds — has \
+                been identified as a likely key vehicle: widespread export of \
+                budgerigars from Australia beginning in the early 1840s is \
+                believed to have carried BFDV into Europe, North America, Asia, \
+                and Africa, where it now affects psittacine species that had \
+                no prior exposure to the virus. High-risk settings include bird \
+                fairs, pet stores, aviaries, and any environment where birds \
+                from multiple sources are housed together or nearby.
+
+                **Treatment Goals**
+
+                There is no antiviral treatment for PBFD. Veterinary care \
+                focuses on supporting the immune system, managing secondary \
+                infections as they arise, and maintaining the bird\u{2019}s quality \
+                of life for as long as possible. Birds with PBFD require \
+                ongoing veterinary monitoring and must be isolated from other \
+                birds to prevent spread. In some cases — particularly in birds \
+                with very early or limited disease — the immune system may \
+                mount a partial response, and a small number of exposed birds \
+                have been documented to clear the virus. Veterinary evaluation \
+                is essential to determine the extent of disease and guide \
+                care decisions.
+                """,
+                toxicityInfoSectionTitle: "What makes it harmful?",
+                onsetTime: OnsetTime(
+                    early: "Acute form (chicks): rapid onset within days to weeks; death can occur before feather abnormalities develop. Chronic form (older birds): initial feather abnormalities may appear weeks to months after infection.",
+                    delayed: "Chronic form progresses over months to years, with each molt bringing worsening feather loss and eventual beak involvement. Immunosuppression develops in parallel, increasing susceptibility to secondary infections over time."
+                ),
+                symptoms: [
+                    "Abnormal, stunted, or malformed feathers",
+                    "Feathers retained in sheaths (pinfeathers that fail to open)",
+                    "Curled, clubbed, or fragile feathers",
+                    "Scattered yellow feathers in green-plumaged birds (early sign)",
+                    "Progressive feather loss across the body",
+                    "Beak softening, elongation, or surface irregularities",
+                    "Claw deformities",
+                    "Lethargy and reduced activity",
+                    "Weight loss",
+                    "Diarrhea or abnormal droppings",
+                    "Recurring infections (respiratory or gastrointestinal)",
+                    "Sudden death in young chicks (acute form)"
+                ],
+                entrySeverity: nil,
+                speciesRisks: [
+                    SpeciesRisk(
+                        species: .bird,
+                        severity: .severe,
+                        notes: "Affects all psittacine species — including parrots, cockatoos, cockatiels, budgerigars, lovebirds, macaws, and conures. No cure; chronic form is uniformly progressive and fatal. Acute form in chicks is rapidly fatal. BFDV poses a major biosecurity risk in any multi-bird setting."
+                    ),
+                ],
+                preventionTips: [
+                    "Test all new birds for PBFD before introducing them to a household or aviary — PCR testing is available through avian veterinarians and is the most reliable diagnostic method.",
+                    "Quarantine all new birds for a minimum of 90 days before introducing them to resident birds.",
+                    "If a bird tests positive for PBFD, isolate it immediately from all other birds and consult an avian veterinarian.",
+                    "Disinfect caging, perches, food bowls, and any shared surfaces thoroughly — use disinfectants known to be effective against non-enveloped viruses, as BFDV is highly stable in the environment.",
+                    "Avoid purchasing birds from environments where multiple birds from different sources are housed together, such as bird fairs or large pet store aviaries.",
+                    "Schedule regular wellness exams with an avian veterinarian for all pet birds, particularly if they have contact with other birds."
+                ],
+                sources: [
+                    "Merck Veterinary Manual — Psittacine Beak and Feather Disease",
+                    "LafeberVet — Psittacine Beak and Feather Disease (PBFD)",
+                    "VCA Animal Hospitals — Beak and Feather Disease in Birds",
+                    "Veterinary Partner — Psittacine Beak and Feather Disease",
+                    "Association of Avian Veterinarians (AAV)"
+                ],
+                relatedEntries: [
+                    "1D000001-0000-0000-0000-000000000004"   // Psittacosis (Parrot Fever)
                 ]
             ),
         ]

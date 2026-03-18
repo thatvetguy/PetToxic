@@ -3,9 +3,9 @@
 Complete list of all entries with UUIDs, severity, and categories.
 
 - Toxin/informational entries in `DatabaseService.swift`: 186
-- Disease/condition entries in `DiseasesConditionsService.swift`: 29 (Pro-locked)
+- Disease/condition entries in `DiseasesConditionsService.swift`: 30 (Pro-locked)
 - Severity explainer: 1
-- **Total entries: 216**
+- **Total entries: 217**
 
 *Last updated: 2026-03-17 (Session 153)*
 
@@ -21,7 +21,7 @@ Complete list of all entries with UUIDs, severity, and categories.
 | Low/Moderate | 4 |
 | Low | 17 |
 | nil (Informational) | 26 |
-| **Total** | **216** |
+| **Total** | **217** |
 
 | Category | Count |
 |----------|-------|
@@ -35,7 +35,7 @@ Complete list of all entries with UUIDs, severity, and categories.
 | Holiday Hazards | 11 |
 | Cleaning Products | 9 |
 | Recreational Substances | 8 |
-| Diseases & Conditions | 29 |
+| Diseases & Conditions | 30 |
 
 *Counts exceed total because entries can be cross-listed in multiple categories.*
 
@@ -357,6 +357,7 @@ Complete list of all entries with UUIDs, severity, and categories.
 | Baylisascaris (Raccoon Roundworm) | `1D000001-0000-0000-0000-000000000027` | nil | Dogs, Cats, Small Mammals, Birds |
 | Fleas | `1D000001-0000-0000-0000-000000000028` | nil | Dogs, Cats, Small Mammals |
 | Encephalitozoon cuniculi (E. cuniculi) | `1D000001-0000-0000-0000-000000000029` | nil | Small Mammals, Dogs |
+| Psittacine Beak and Feather Disease (PBFD) | `1D000001-0000-0000-0000-000000000030` | nil | Birds |
 
 ### Special Entry
 
@@ -366,7 +367,7 @@ Complete list of all entries with UUIDs, severity, and categories.
 
 ---
 
-## Alphabetical Index (All 216 Entries)
+## Alphabetical Index (All 217 Entries)
 
 | Name | UUID | Severity | Categories |
 |------|------|----------|------------|
@@ -537,6 +538,7 @@ Complete list of all entries with UUIDs, severity, and categories.
 | Porcupine Quills | `00112233-4455-6677-8899-aabbccddef28` | nil | Informational, Outdoor Hazards |
 | Privet (Ligustrum) | `96000011-2233-4455-6677-889900aabb01` | Moderate | Plants |
 | Psilocybin Mushrooms & Psychedelic Edibles | `ff001122-3344-5566-7788-99aabbccdd04` | High | Recreational Substances |
+| Psittacine Beak and Feather Disease (PBFD) | `1D000001-0000-0000-0000-000000000030` | nil | Diseases & Conditions |
 | Psittacosis (Parrot Fever) | `1D000001-0000-0000-0000-000000000004` | High | Diseases & Conditions |
 | Pyrethrins & Pyrethroids (Permethrin) | `d4e5f6a7-8b9c-4d0e-a1b2-3c4d5e6f7a8b` | Severe | Garage & Garden, Medications |
 | Pythiosis | `1D000001-0000-0000-0000-000000000017` | nil | Diseases & Conditions |
