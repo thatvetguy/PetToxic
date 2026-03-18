@@ -1698,7 +1698,8 @@ class DiseasesConditionsService {
                     "UC Davis School of Veterinary Medicine — Reptile Husbandry Guidelines"
                 ],
                 relatedEntries: [
-                    "1D000001-0000-0000-0000-000000000033"   // Snake Mites (Ophionyssus natricis)
+                    "1D000001-0000-0000-0000-000000000033",  // Snake Mites (Ophionyssus natricis)
+                    "1D000001-0000-0000-0000-000000000034"   // Inclusion Body Disease (IBD)
                 ]
             ),
 
@@ -6887,7 +6888,191 @@ class DiseasesConditionsService {
                 ],
                 relatedEntries: [
                     "1D000001-0000-0000-0000-000000000010",  // Dysecdysis
-                    "1D000001-0000-0000-0000-000000000026"   // Mange
+                    "1D000001-0000-0000-0000-000000000026",  // Mange
+                    "1D000001-0000-0000-0000-000000000034"   // Inclusion Body Disease (IBD)
+                ]
+            ),
+
+            // MARK: - Inclusion Body Disease (IBD)
+            ToxicItem(
+                id: UUID(uuidString: "1D000001-0000-0000-0000-000000000034")!,
+                name: "Inclusion Body Disease (IBD)",
+                alternateNames: ["IBD", "Boid Inclusion Body Disease", "BIBD", "stargazing disease",
+                                 "twisty neck disease", "boid encephalitis", "Reptarenavirus infection"],
+                categories: [.diseasesAndConditions],
+                imageAsset: "ibd_thumb",
+                description: """
+                    Inclusion Body Disease (IBD) is a transmissible, progressive, and \
+                    always fatal viral disease of boid snakes — primarily boa constrictors \
+                    and pythons. It is caused by Reptarenavirus, a member of the arenavirus \
+                    family, and is the most commonly diagnosed viral disease in captive boid \
+                    snakes worldwide. The disease has been recognized since the mid-1970s \
+                    and has been reported in captive snake collections across North America, \
+                    Europe, Australia, and Africa.
+
+                    There is no treatment and no vaccine. Snakes that develop clinical signs \
+                    do not recover. The disease progresses to severe neurological dysfunction, \
+                    secondary infections, and death. Euthanasia is the only humane option \
+                    once clinical disease is confirmed. Boa constrictors may carry and shed \
+                    the virus for months to years before showing symptoms — making silent \
+                    carriers a significant biosecurity challenge in any collection.
+                    """,
+                toxicityInfo: """
+                    **How It Harms the Body**
+                    Reptarenavirus infects cells throughout the body, producing large \
+                    abnormal protein masses — called inclusion bodies — inside the cytoplasm \
+                    of affected cells. These inclusion bodies accumulate in neurons, liver \
+                    cells, kidney cells, pancreatic cells, red and white blood cells, and \
+                    bone marrow cells. Their presence physically disrupts normal cell \
+                    function. In the brain and spinal cord, the result is progressive \
+                    neurological deterioration: loss of coordination, inability to right \
+                    itself when placed on its back, corkscrewing of the head and neck, \
+                    and the characteristic \u{201C}stargazing\u{201D} posture — the snake \
+                    involuntarily arches its head backward as if staring at the ceiling, \
+                    a sign of severe brain dysfunction it cannot control. The accumulation \
+                    of inclusion bodies in immune cells causes widespread immunosuppression, \
+                    leaving the snake vulnerable to secondary bacterial, fungal, protozoal, \
+                    and blood-borne infections that ultimately cause death. In pythons, \
+                    neurological signs predominate and disease progresses rapidly — \
+                    typically within weeks to months. In boa constrictors, the infection \
+                    is often chronic, and some animals carry the virus for years before \
+                    clinical signs develop.
+
+                    **The Stargazer**
+                    Stargazing is the sign most commonly associated with IBD in the \
+                    reptile-keeping community — and for good reason. The image of a \
+                    snake with its head thrown back, unable to orient itself, is \
+                    distinctive and deeply unsettling to witness. It reflects irreversible \
+                    neurological damage: the pathways that allow a snake to control its \
+                    head and neck position have been destroyed by encephalitis. At this \
+                    stage, the snake cannot strike or constrict prey, cannot shed normally, \
+                    and can no longer right itself when turned over. Stargazing does not \
+                    appear until the disease is already advanced. By the time this sign \
+                    is visible, significant irreversible damage has occurred.
+
+                    **The Silent Carrier**
+                    One of the most dangerous features of IBD in collections is the \
+                    boa constrictor's capacity to carry and shed Reptarenavirus without \
+                    showing any signs of illness. In one published study of 131 captive \
+                    boid snakes, 19% tested positive for IBD — and of those infected \
+                    animals, 87% were clinically healthy at the time of testing. A boa \
+                    that appears completely normal may have been harboring and transmitting \
+                    the virus for months or years. This subclinical carrier state means \
+                    that quarantine and testing before introducing any new boa or python \
+                    into an existing collection is not optional — it is the only meaningful \
+                    biosecurity available.
+
+                    **Transmission & Spread**
+                    The exact primary route of transmission remains incompletely understood \
+                    — an unusual situation for a disease this well studied. Direct contact \
+                    between snakes, contact with infected secretions, and vertical \
+                    transmission from mother to offspring (confirmed in boa constrictors) \
+                    are all documented. Snake mites (Ophionyssus natricis) are the leading \
+                    suspected mechanical vector — mite infestations are consistently \
+                    observed in collections affected by IBD outbreaks, and controlling \
+                    mites is considered a core component of IBD prevention. Shared \
+                    equipment, enclosures, and poor quarantine practices facilitate \
+                    rapid spread through collections. Because infected snakes can shed \
+                    virus before showing any symptoms, a single asymptomatic introduction \
+                    into an established collection can be catastrophic.
+
+                    **A Forty-Year Mistaken Identity**
+                    For decades, IBD was widely described as a retrovirus disease — \
+                    a label that appears in older veterinary literature, reptile-keeping \
+                    guides, and many websites to this day. This conclusion came from \
+                    electron microscopy studies in the 1970s and 1980s that observed \
+                    retrovirus-like particles in tissue from infected snakes, and from \
+                    the detection of reverse transcriptase — a hallmark enzyme of \
+                    retroviruses — in the blood of infected animals. The retrovirus \
+                    theory was reasonable given the tools available at the time, but \
+                    it was never confirmed. In 2012, three independent research groups \
+                    using modern genomic sequencing simultaneously identified the true \
+                    causative agents: a group of novel, highly divergent arenaviruses, \
+                    now classified in the new genus Reptarenavirus within the family \
+                    Arenaviridae. This discovery reframed IBD entirely and opened the \
+                    door to modern diagnostic testing. The retrovirus label, however, \
+                    persists widely in older resources and should be treated as outdated.
+
+                    **Myths vs. Facts**
+                    **Myth:** IBD is caused by a retrovirus.
+                    **Fact:** IBD is caused by Reptarenavirus, a member of the arenavirus \
+                    family. The retrovirus theory was based on incomplete early evidence \
+                    and has been superseded by modern genomic research published from \
+                    2012 onward.
+
+                    **Myth:** Stargazing always means IBD.
+                    **Fact:** Stargazing is a neurological sign that can result from \
+                    multiple causes — spinal trauma, other infections, and toxin exposure \
+                    can all produce similar signs. IBD is one possible cause, but \
+                    diagnosis requires veterinary evaluation and confirmatory testing.
+
+                    **Myth:** Only sick-looking snakes can spread IBD.
+                    **Fact:** Published research has shown that the majority of \
+                    Reptarenavirus-infected boas are clinically healthy at the time of \
+                    diagnosis. Asymptomatic carriers are a well-documented reality and \
+                    the primary reason strict quarantine protocols exist.
+
+                    **Treatment Goals**
+                    There is no antiviral treatment for IBD and no vaccine. Veterinary \
+                    care focuses on supportive therapy for comfort and secondary infection \
+                    management, but cannot halt disease progression. Euthanasia is \
+                    recommended when clinical signs are confirmed, both for the welfare \
+                    of the affected snake and to prevent transmission to other animals. \
+                    Modern RT-PCR diagnostic testing using blood, oral swabs, or tissue \
+                    samples allows confirmation of Reptarenavirus infection in living \
+                    snakes — a significant improvement over the earlier reliance on \
+                    post-mortem inclusion body detection. Any boid snake showing \
+                    neurological signs should be evaluated by a reptile-savvy veterinarian \
+                    promptly and isolated from all other collection animals immediately.
+                    """,
+                toxicityInfoSectionTitle: "What makes it harmful?",
+                onsetTime: OnsetTime(
+                    early: "In pythons: acute neurological signs including disorientation, stargazing, and loss of righting reflex — progressing rapidly over days to weeks. In boas: early signs may be subtle — intermittent regurgitation, head tremors, reduced appetite — sometimes preceded by months to years of asymptomatic viral carriage.",
+                    delayed: "Progressive neurological deterioration: corkscrewing of the head and neck, inability to strike or constrict prey, abnormal shedding, secondary pneumonia, stomatitis. Immunosuppression opens the door to fatal secondary infections. All symptomatic cases are ultimately fatal."
+                ),
+                symptoms: [
+                    "Stargazing — head involuntarily arched backward, appearing to stare upward",
+                    "Inability to right itself when placed on its back",
+                    "Disorientation and loss of coordination",
+                    "Corkscrewing or twisting of the head and neck",
+                    "Head tremors",
+                    "Intermittent or chronic regurgitation",
+                    "Loss of appetite or refusal to feed",
+                    "Inability to strike or constrict prey",
+                    "Abnormal shedding",
+                    "Open-mouth breathing or respiratory distress",
+                    "Swollen or infected mouth (stomatitis)",
+                    "Progressive weight loss",
+                    "Lethargy and decreased responsiveness"
+                ],
+                entrySeverity: nil,
+                speciesRisks: [
+                    SpeciesRisk(
+                        species: .reptile,
+                        severity: .severe,
+                        notes: "Affects boa constrictors and pythons (including ball pythons, Burmese pythons, reticulated pythons, and green anacondas). Always fatal once clinical signs develop. Boas tend to be long-term subclinical carriers; pythons typically develop acute, rapidly fatal neurological disease. IBD-like disease has been reported anecdotally in a small number of non-boid snake species, but confirmed IBD caused by Reptarenavirus is documented primarily in the families Boidae and Pythonidae. Dogs, cats, small mammals, and birds are not susceptible."
+                    )
+                ],
+                preventionTips: [
+                    "Quarantine all new boas and pythons for a minimum of 3 to 6 months before introducing them to an existing collection — asymptomatic carriers are well documented",
+                    "Ask a reptile-savvy veterinarian about Reptarenavirus RT-PCR testing for any new acquisition before it contacts existing animals",
+                    "Control snake mites aggressively — mite infestations are consistently associated with IBD outbreaks and Ophionyssus natricis is the leading suspected vector",
+                    "Never share enclosures, water dishes, hides, or handling equipment between animals without thorough disinfection",
+                    "Wash hands thoroughly between handling different snakes, even apparently healthy ones",
+                    "Isolate any boa or python showing neurological signs, regurgitation, or abnormal shedding immediately and contact a reptile veterinarian",
+                    "If IBD is confirmed in one animal, all snakes that shared the same enclosure or equipment should be considered potentially exposed and evaluated",
+                    "Source new animals from reputable breeders with documented health screening practices — pet store animals from large mixed collections carry higher exposure risk"
+                ],
+                sources: [
+                    "Veterinary Partner (VIN) — Inclusion Body Disease of Snakes: https://veterinarypartner.vin.com/default.aspx?pid=19239&id=8006507",
+                    "Merck Veterinary Manual — Inclusion Body Disease: https://www.merckvetmanual.com/exotic-and-laboratory-animals/reptiles/viral-diseases-of-reptiles",
+                    "Wikipedia — Inclusion Body Disease: https://en.wikipedia.org/wiki/Inclusion_body_disease",
+                    "mBio (ASM Journals) — Identification of arenaviruses as candidate etiological agents for IBD (Stenglein et al., 2012): https://journals.asm.org/doi/10.1128/mbio.00180-12",
+                    "Purdue University Veterinary Teaching Hospital — Inclusion Body Disease in Boas and Pythons: https://vet.purdue.edu/hospital/small-animal/primary-care/documents/InclusionBodyDiseaseinBoasandPythons.pdf"
+                ],
+                relatedEntries: [
+                    "1D000001-0000-0000-0000-000000000033",  // Snake Mites
+                    "1D000001-0000-0000-0000-000000000010"   // Dysecdysis
                 ]
             ),
         ]
