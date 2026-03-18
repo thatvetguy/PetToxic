@@ -708,7 +708,8 @@ class DiseasesConditionsService {
                     "Cornell University College of Veterinary Medicine — Avian Chlamydiosis"
                 ],
                 relatedEntries: [
-                    "1D000001-0000-0000-0000-000000000030"  // PBFD
+                    "1D000001-0000-0000-0000-000000000030",  // PBFD
+                    "1D000001-0000-0000-0000-000000000035"   // Air Sac Mites (Sternostoma tracheacolum)
                 ]
             ),
 
@@ -2577,7 +2578,8 @@ class DiseasesConditionsService {
                 relatedEntries: [
                     "1D000001-0000-0000-0000-000000000015",  // Cryptococcosis
                     "1D000001-0000-0000-0000-000000000016",  // Coccidioidomycosis (Valley Fever)
-                    "1D000001-0000-0000-0000-000000000017"   // Pythiosis
+                    "1D000001-0000-0000-0000-000000000017",  // Pythiosis
+                    "1D000001-0000-0000-0000-000000000035"   // Air Sac Mites (Sternostoma tracheacolum)
                 ]
             ),
 
@@ -6418,7 +6420,8 @@ class DiseasesConditionsService {
                     "Association of Avian Veterinarians (AAV)"
                 ],
                 relatedEntries: [
-                    "1D000001-0000-0000-0000-000000000004"   // Psittacosis (Parrot Fever)
+                    "1D000001-0000-0000-0000-000000000004",  // Psittacosis (Parrot Fever)
+                    "1D000001-0000-0000-0000-000000000035"   // Air Sac Mites (Sternostoma tracheacolum)
                 ]
             ),
 
@@ -7073,6 +7076,228 @@ class DiseasesConditionsService {
                 relatedEntries: [
                     "1D000001-0000-0000-0000-000000000033",  // Snake Mites
                     "1D000001-0000-0000-0000-000000000010"   // Dysecdysis
+                ]
+            ),
+
+            // MARK: - Air Sac Mites (Sternostoma tracheacolum)
+            ToxicItem(
+                id: UUID(uuidString: "1D000001-0000-0000-0000-000000000035")!,
+                name: "Air Sac Mites (Sternostoma tracheacolum)",
+                alternateNames: ["air sac mite", "air sac mite disease", "tracheal mite", "respiratory mite", "Sternostoma tracheacolum", "sternostomiasis", "air sac mite infestation", "finch tracheal mites", "canary air sac mites"],
+                categories: [.diseasesAndConditions],
+                imageAsset: "air_sac_mites_thumb",
+                description: """
+                    Air Sac Mites (Sternostoma tracheacolum) is an internal \
+                    parasitic infestation caused by microscopic mites that colonize \
+                    the respiratory system — including the trachea, syrinx \
+                    (the avian vocal organ), bronchi, air sacs, and lungs. It is \
+                    one of the most serious respiratory diseases of captive finches \
+                    and canaries and can be fatal without prompt veterinary treatment.
+
+                    The disease ranges from subtle to rapidly progressive. In light \
+                    infestations, birds may appear healthy for weeks while mite \
+                    numbers gradually increase. In heavy infestations, respiratory \
+                    distress can escalate quickly and become life-threatening. Birds \
+                    are highly skilled at concealing illness, and a bird may appear \
+                    outwardly normal until the infestation is severe.
+
+                    Air Sac Mites is not vaccine-preventable. It is not zoonotic — \
+                    the mite does not infect humans. The condition is contagious \
+                    among susceptible birds through direct contact and shared \
+                    environment.
+
+                    Small passerines — particularly finches (including Gouldian, \
+                    zebra, and society finches) and canaries — are the most commonly \
+                    and severely affected. Larger psittacines such as parrots and \
+                    cockatiels are occasionally reported but are less frequently \
+                    affected with severe disease. Dogs, cats, small mammals, and \
+                    reptiles are not susceptible.
+                    """,
+                toxicityInfo: """
+                    **How It Harms the Body**
+
+                    Sternostoma tracheacolum mites colonize the inner surfaces of \
+                    the trachea, syrinx, bronchi, air sacs, and in severe cases the \
+                    lung tissue itself. As mite numbers increase, they physically \
+                    obstruct the airway and trigger chronic inflammation and thickening \
+                    of the respiratory epithelium, progressively impairing the bird's \
+                    ability to oxygenate effectively.
+
+                    The syrinx — located at the base of the trachea where it \
+                    bifurcates into the two bronchi — is particularly vulnerable. \
+                    Mite colonization of the syrinx disrupts vocal production, \
+                    causing the voice changes and loss of song that are often the \
+                    first noticed signs in canaries and finches. As the infestation \
+                    worsens, the bird must work harder to breathe, leading to visible \
+                    respiratory effort (tail bobbing), open-mouth breathing, exercise \
+                    intolerance, and eventually cardiovascular strain and anoxia \
+                    (oxygen deprivation).
+
+                    Birds have a uniquely efficient respiratory system built around \
+                    a circuit of air sacs that allows near-continuous airflow through \
+                    the lungs — unlike the in-and-out breathing cycle of mammals. \
+                    This system makes birds exceptionally aerobically capable, but \
+                    also uniquely vulnerable: mites colonizing the air sacs disrupt \
+                    a much larger portion of the breathing circuit than a simple \
+                    tracheal blockage would suggest, which is why even moderate \
+                    infestations can cause disproportionate respiratory impairment.
+
+                    **Transmission & Spread**
+
+                    The most common transmission route is parent-to-chick feeding. \
+                    Adult birds regurgitate food directly into the mouths of their \
+                    chicks, and mites present in the parent's trachea or syrinx are \
+                    transferred during this process. This means an entire clutch can \
+                    acquire a significant mite burden before the adults show any \
+                    obvious signs of illness.
+
+                    Transmission also occurs through shared perches, food and water \
+                    dishes, nest boxes, and close cage proximity. Newly introduced \
+                    birds that have not been quarantined are one of the most common \
+                    sources of infestation in established aviaries. Mites cannot \
+                    survive extended periods off a host, but cage materials and nest \
+                    boxes can sustain transmission within an active flock.
+
+                    **Treatment Goals**
+
+                    Veterinary treatment focuses on eliminating the mite infestation \
+                    using appropriate antiparasitic therapy, managing respiratory \
+                    compromise in birds that are already in distress, and \
+                    decontaminating the environment to prevent reinfection. All birds \
+                    in an affected flock should be evaluated and treated \
+                    simultaneously — subclinical carriers are a significant \
+                    reinfection risk if left untreated. An avian veterinarian \
+                    experienced with small passerines is strongly recommended; \
+                    treatment choices and dosing in finches and canaries differ \
+                    substantially from those used in dogs and cats. Early \
+                    veterinary intervention significantly improves outcomes.
+
+                    **The Song Goes Silent**
+
+                    Canaries are bred and prized for their song, and finches fill \
+                    aviaries with constant chatter. When Sternostoma tracheacolum \
+                    colonizes the syrinx, the first change many owners notice is not \
+                    a sick bird — it is a quieter one. Song may become rough, raspy, \
+                    or broken; pitch may shift noticeably; or vocalization may decline \
+                    or cease as the syrinx becomes obstructed and inflamed. In \
+                    finches, which vocalize less prominently than canaries, owners \
+                    may simply notice a bird that seems unusually still or spends \
+                    more time on the cage floor than on its perches.
+
+                    A canary that stops singing is not merely going through a molt. \
+                    Unexplained changes in vocalization in a bird should always \
+                    prompt veterinary evaluation.
+
+                    **The Click in the Night**
+
+                    One of the most distinctive clinical signs of air sac mite \
+                    infestation is an audible clicking, ticking, or rattling sound \
+                    produced during breathing. This sound is generated when the bird \
+                    inhales or exhales against mite-congested airways. Experienced \
+                    avian veterinarians and longtime finch and canary keepers often \
+                    recognize this sound immediately as a warning sign — it can \
+                    sometimes be heard from across a quiet room.
+
+                    Normal breathing in a healthy bird is nearly silent. If you can \
+                    hear your bird breathing at close range — particularly if there \
+                    is a rhythmic click, tick, or wheeze — that is a clinical sign \
+                    requiring prompt veterinary evaluation, not watchful waiting.
+
+                    **The Gouldian Crisis**
+
+                    The Gouldian finch (Erythrura gouldiae) is one of Australia's \
+                    most visually striking birds — and one of its most critically \
+                    endangered. Wild populations declined sharply through the 20th \
+                    century due to habitat loss, altered fire regimes, and the \
+                    historical live bird trade. In captivity, where the species is \
+                    widely kept and bred for both conservation and aviculture, \
+                    Sternostoma tracheacolum became a serious threat to breeding \
+                    success: research funded by Australia's CSIRO identified heavy \
+                    mite burdens as a significant cause of chick mortality and \
+                    clutch failure in captive Gouldian colonies. Because adult birds \
+                    commonly carry mites subclinically and transmit them during the \
+                    feeding of chicks, the parasite can quietly devastate a breeding \
+                    program before a single adult appears overtly ill.
+
+                    The Gouldian finch's vulnerability to air sac mites influenced \
+                    how avian veterinarians and aviculturists approach mite screening \
+                    in small passerines more broadly — establishing regular veterinary \
+                    checkups, tracheal transillumination screening, and whole-flock \
+                    treatment as recognized standards of care.
+
+                    **Myths vs. Facts**
+
+                    **Myth:** A bird that is still eating is not seriously ill.
+                    **Fact:** Birds are hardwired to conceal illness — a survival \
+                    instinct from wild ancestors for whom visible weakness meant \
+                    predation. Birds often continue eating until they are critically \
+                    compromised. Subtle signs such as fluffed feathers, tail bobbing, \
+                    or decreased vocalization frequently appear well before a bird \
+                    stops eating or looks overtly unwell.
+
+                    **Myth:** Clicking or wheezing sounds are just a harmless quirk.
+                    **Fact:** Any audible respiratory sound — clicking, ticking, \
+                    wheezing, or rattling — is a clinical sign in a bird. Healthy \
+                    birds breathe nearly silently. Audible breathing warrants \
+                    veterinary evaluation.
+
+                    **Myth:** Small birds like finches and canaries don't need \
+                    veterinary care.
+                    **Fact:** Small passerines benefit greatly from regular avian \
+                    veterinary checkups. Air sac mites can be detected before \
+                    clinical signs develop using tracheal transillumination — a \
+                    straightforward, non-invasive technique available to experienced \
+                    avian veterinarians. Early detection dramatically changes outcomes.
+                    """,
+                toxicityInfoSectionTitle: "What makes it harmful?",
+                onsetTime: OnsetTime(
+                    early: "Subtle voice changes or reduced vocalization may appear within days to a few weeks of initial infestation. Many birds — especially those acquiring mites from parents at a young age — show no obvious signs for weeks or longer while mite numbers gradually increase.",
+                    delayed: "Advanced respiratory distress, open-mouth breathing, and severe exercise intolerance develop as mite numbers increase, typically over weeks to months in untreated birds. In heavy infestations, deterioration can accelerate rapidly and become fatal."
+                ),
+                symptoms: [
+                    "Audible clicking, ticking, or rattling sounds during breathing",
+                    "Tail bobbing or pumping with each breath (increased respiratory effort)",
+                    "Open-mouth breathing or gaping",
+                    "Voice changes — rough, scratchy, or altered song quality",
+                    "Reduced or absent singing or vocalization",
+                    "Head shaking or scratching at the beak and face",
+                    "Nasal discharge or crusty nostrils",
+                    "Lethargy or decreased activity",
+                    "Fluffed feathers, appearing cold or unwell",
+                    "Exercise intolerance — breathlessness after minimal exertion",
+                    "Spending time on the cage floor rather than perching",
+                    "Weight loss",
+                    "Sudden deterioration or death in severe cases"
+                ],
+                entrySeverity: nil,
+                speciesRisks: [
+                    SpeciesRisk(
+                        species: .bird,
+                        severity: .severe,
+                        notes: "Finches (including Gouldian, zebra, and society finches) and canaries are the most severely and commonly affected. Heavy infestations are often fatal without treatment. Larger psittacines such as parrots and cockatiels may occasionally be affected but are rarely reported with severe disease. Dogs, cats, small mammals, and reptiles are not susceptible."
+                    )
+                ],
+                preventionTips: [
+                    "Quarantine all new birds for a minimum of 30 days in a separate airspace from your existing flock before any introduction.",
+                    "Schedule regular checkups with an avian veterinarian — air sac mites can often be detected before clinical signs develop using tracheal transillumination.",
+                    "During breeding season, monitor chicks closely for early respiratory signs; parent-to-chick transmission during feeding is the most common route of spread.",
+                    "If one bird in a flock is diagnosed, have all flock members evaluated and treated simultaneously — subclinical carriers will reinfect treated birds if left untreated.",
+                    "Clean and disinfect perches, food and water dishes, nest boxes, and cage furniture regularly.",
+                    "Avoid introducing wild-caught birds to captive aviaries — wild passerines may carry mites and other parasites without visible signs of illness.",
+                    "Contact an avian veterinarian if you notice any change in your bird's vocalization, breathing sounds, or activity level."
+                ],
+                sources: [
+                    "LafeberVet — Sternostoma (Air Sac Mites) in Passerine Birds",
+                    "Merck Veterinary Manual — Tracheal Mites in Birds",
+                    "VCA Animal Hospitals — Air Sac Mites in Birds",
+                    "PetMD — Air Sac Mites in Birds",
+                    "Wikipedia — Sternostoma tracheacolum",
+                    "CSIRO Australia — Gouldian Finch (Erythrura gouldiae) Parasitology Research"
+                ],
+                relatedEntries: [
+                    "1D000001-0000-0000-0000-000000000004",  // Psittacosis (Parrot Fever)
+                    "1D000001-0000-0000-0000-000000000014",  // Aspergillosis
+                    "1D000001-0000-0000-0000-000000000030"   // PBFD (Psittacine Beak and Feather Disease)
                 ]
             ),
         ]
