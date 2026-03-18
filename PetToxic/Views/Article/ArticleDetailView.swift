@@ -104,8 +104,9 @@ struct ArticleDetailView: View {
                         preventionTipsSection(preventionTips)
                     }
 
-                    // Emergency contacts (hidden for purely educational entries)
-                    if !item.speciesRisks.isEmpty || !item.symptoms.isEmpty {
+                    // Emergency contacts (hidden for educational and D&C entries)
+                    if (!item.speciesRisks.isEmpty || !item.symptoms.isEmpty)
+                        && !item.categories.contains(.diseasesAndConditions) {
                         emergencySection
                     }
 
