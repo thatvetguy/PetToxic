@@ -3,11 +3,11 @@
 Complete list of all entries with UUIDs, severity, and categories.
 
 - Toxin/informational entries in `DatabaseService.swift`: 186
-- Disease/condition entries in `DiseasesConditionsService.swift`: 20 (Pro-locked)
+- Disease/condition entries in `DiseasesConditionsService.swift`: 21 (Pro-locked)
 - Severity explainer: 1
-- **Total entries: 207**
+- **Total entries: 208**
 
-*Last updated: 2026-03-17 (Session 152)*
+*Last updated: 2026-03-17 (Session 153)*
 
 ---
 
@@ -21,7 +21,7 @@ Complete list of all entries with UUIDs, severity, and categories.
 | Low/Moderate | 4 |
 | Low | 17 |
 | nil (Informational) | 26 |
-| **Total** | **207** |
+| **Total** | **208** |
 
 | Category | Count |
 |----------|-------|
@@ -35,7 +35,7 @@ Complete list of all entries with UUIDs, severity, and categories.
 | Holiday Hazards | 11 |
 | Cleaning Products | 9 |
 | Recreational Substances | 8 |
-| Diseases & Conditions | 20 |
+| Diseases & Conditions | 21 |
 
 *Counts exceed total because entries can be cross-listed in multiple categories.*
 
@@ -348,6 +348,7 @@ Complete list of all entries with UUIDs, severity, and categories.
 | Feline Infectious Peritonitis (FIP) | `1D000001-0000-0000-0000-000000000018` | nil | Cats |
 | Feline Leukemia Virus (FeLV) | `1D000001-0000-0000-0000-000000000019` | nil | Cats |
 | Feline Immunodeficiency Virus (FIV) | `1D000001-0000-0000-0000-000000000020` | nil | Cats |
+| Feline Herpesvirus-1 (FHV-1) | `1D000001-0000-0000-0000-000000000021` | nil | Cats |
 
 ### Special Entry
 
@@ -357,7 +358,7 @@ Complete list of all entries with UUIDs, severity, and categories.
 
 ---
 
-## Alphabetical Index (All 207 Entries)
+## Alphabetical Index (All 208 Entries)
 
 | Name | UUID | Severity | Categories |
 |------|------|----------|------------|
@@ -440,6 +441,7 @@ Complete list of all entries with UUIDs, severity, and categories.
 | Feline Infectious Peritonitis (FIP) | `1D000001-0000-0000-0000-000000000018` | nil | Diseases & Conditions |
 | Feline Leukemia Virus (FeLV) | `1D000001-0000-0000-0000-000000000019` | nil | Diseases & Conditions |
 | Feline Immunodeficiency Virus (FIV) | `1D000001-0000-0000-0000-000000000020` | nil | Diseases & Conditions |
+| Feline Herpesvirus-1 (FHV-1) | `1D000001-0000-0000-0000-000000000021` | nil | Diseases & Conditions |
 | Fertilizers | `c3f5a8b2-7d4e-4f1a-b6c9-2e8d7f4a5b3c` | Moderate | Garage & Garden |
 | Fipronil (Frontline) | `a7b8c9d0-1e2f-4a3b-c4d5-6e7f8a9b0c1d` | Severe | Medications, Garage & Garden |
 | Foxglove | `2a95c561-533e-4a73-bd11-8d43bd127bb4` | Severe | Plants |

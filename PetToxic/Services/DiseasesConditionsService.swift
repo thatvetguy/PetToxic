@@ -1304,7 +1304,8 @@ class DiseasesConditionsService {
                     "American Animal Hospital Association (AAHA) — Canine Vaccination Guidelines"
                 ],
                 relatedEntries: [
-                    "1D000001-0000-0000-0000-000000000011"  // Canine Influenza
+                    "1D000001-0000-0000-0000-000000000011",  // Canine Influenza
+                    "1D000001-0000-0000-0000-000000000021"   // FHV-1
                 ]
             ),
 
@@ -3533,7 +3534,8 @@ class DiseasesConditionsService {
                 ],
                 relatedEntries: [
                     "1D000001-0000-0000-0000-000000000019",  // FeLV
-                    "1D000001-0000-0000-0000-000000000020"   // FIV
+                    "1D000001-0000-0000-0000-000000000020",  // FIV
+                    "1D000001-0000-0000-0000-000000000021"   // FHV-1
                 ]
             ),
 
@@ -3774,7 +3776,8 @@ class DiseasesConditionsService {
                 ],
                 relatedEntries: [
                     "1D000001-0000-0000-0000-000000000018",  // FIP
-                    "1D000001-0000-0000-0000-000000000020"   // FIV
+                    "1D000001-0000-0000-0000-000000000020",  // FIV
+                    "1D000001-0000-0000-0000-000000000021"   // FHV-1
                 ]
             ),
 
@@ -4013,7 +4016,275 @@ class DiseasesConditionsService {
                 ],
                 relatedEntries: [
                     "1D000001-0000-0000-0000-000000000018",  // FIP
-                    "1D000001-0000-0000-0000-000000000019"   // FeLV
+                    "1D000001-0000-0000-0000-000000000019",  // FeLV
+                    "1D000001-0000-0000-0000-000000000021"   // FHV-1
+                ]
+            ),
+
+            // MARK: - Feline Herpesvirus-1 (FHV-1)
+            ToxicItem(
+                id: UUID(uuidString: "1D000001-0000-0000-0000-000000000021")!,
+                name: "Feline Herpesvirus-1 (FHV-1)",
+                alternateNames: [
+                    "FHV-1",
+                    "Feline Viral Rhinotracheitis",
+                    "FVR",
+                    "Cat Herpes",
+                    "Feline Herpes",
+                    "Feline Herpesvirus",
+                    "Cat Flu",
+                    "Feline Upper Respiratory Infection",
+                    "Feline URI",
+                    "cat cold",
+                    "feline rhinotracheitis",
+                    "herpes virus cat",
+                    "FHV1"
+                ],
+                categories: [.diseasesAndConditions],
+                imageAsset: "fhv_thumb",
+                description: """
+                Feline Herpesvirus-1 (FHV-1) is one of the most widespread viral \
+                infections in domestic cats worldwide and the most common infectious \
+                cause of conjunctivitis in the species. It is a highly contagious \
+                alphaherpesvirus — the same biological family as the viruses that \
+                cause chickenpox, shingles, and cold sores in humans — and shares \
+                one of the defining characteristics of all herpesviruses: once a \
+                cat is infected, the virus never fully leaves. It establishes a \
+                permanent, lifelong latent infection in nerve tissue and can \
+                reactivate at any time, particularly during periods of stress or \
+                illness.
+
+                FHV-1 is strictly a cat virus. It does not infect humans, dogs, or \
+                other companion animals. However, it spreads very easily between \
+                cats through direct contact with nasal, ocular, and oral secretions. \
+                Shelters, catteries, breeding facilities, and any environment where \
+                cats are housed in groups carry high transmission risk. Many cats are \
+                exposed as kittens — often from their own mothers during early life.
+
+                FHV-1 disease has two distinct phases that owners may encounter at \
+                different points in a cat's life. The first is acute primary \
+                infection, typically seen in kittens and unvaccinated cats, which \
+                causes upper respiratory disease — sneezing, nasal discharge, fever, \
+                and eye involvement — that can range from mild to severe. Severe \
+                primary infection in young kittens can cause permanent damage to the \
+                nasal passages and eyes. The second phase is recurrent reactivation \
+                disease in adult carriers, which usually presents as intermittent \
+                conjunctivitis, eye discharge, and sometimes corneal ulcers, often \
+                triggered by stress.
+
+                FHV-1 is vaccine-preventable in the sense that vaccination \
+                significantly reduces the severity of infection and disease. However, \
+                vaccination does not fully prevent infection, does not eliminate \
+                latency in already-infected cats, and does not prevent future \
+                flare-ups. Despite this limitation, vaccination remains an important \
+                tool in reducing the severity and spread of FHV-1 disease.
+
+                Young kittens, unvaccinated cats, immunocompromised cats, and cats \
+                in multi-cat or shelter environments are at greatest risk of severe \
+                disease. Stress is the most important trigger for reactivation in \
+                latently infected cats.
+                """,
+                toxicityInfo: """
+                **How It Harms the Body**
+
+                FHV-1 is an alphaherpesvirus — a group of viruses characterized by \
+                their ability to infect and destroy epithelial cells (the lining \
+                cells of the respiratory tract and eye surfaces), and then retreat \
+                into nerve tissue where they remain permanently beyond the reach of \
+                the immune system. This dual behavior — acute destruction followed \
+                by permanent latency — defines the entire clinical course of FHV-1.
+
+                During active infection, FHV-1 directly kills the epithelial cells \
+                lining the nose, throat, conjunctiva (the membrane surrounding the \
+                eye), and cornea (the transparent outer surface of the eye). The \
+                result is the characteristic picture of feline upper respiratory \
+                disease: sneezing, nasal congestion, eye inflammation, and \
+                discharge. In severe cases, particularly in young kittens, the \
+                virus can invade the bones of the nasal cavity, causing permanent \
+                structural damage that leaves affected cats prone to chronic \
+                bacterial nasal infections for life.
+
+                The eye is frequently the most severely affected organ. FHV-1 can \
+                cause corneal ulcers — open sores on the surface of the eye — that \
+                are painful, potentially sight-threatening, and require prompt \
+                treatment. In the most severe cases, the conjunctiva can scar and \
+                adhere permanently to the cornea (symblepharon), causing chronic \
+                discomfort and vision impairment. Branching, tree-like corneal \
+                ulcers called dendritic ulcers are considered a hallmark sign of \
+                FHV-1 ocular infection.
+
+                After the acute phase resolves, the virus travels up the facial \
+                nerve and establishes permanent latency in the trigeminal ganglion — \
+                a nerve cluster at the base of the skull — where it persists \
+                indefinitely, silently, beyond immune detection.
+
+                **Transmission & Spread**
+
+                FHV-1 is highly contagious between cats. The virus is shed in nasal, \
+                ocular, and oral secretions, and transmission occurs through direct \
+                contact with an infected or actively shedding cat, or through \
+                contact with contaminated surfaces, bedding, food bowls, and hands. \
+                An acutely infected cat sheds virus for up to three weeks after \
+                symptoms begin. Latently infected cats — which represents the \
+                majority of the adult cat population — shed the virus intermittently, \
+                most commonly during or after stress, with or without visible \
+                symptoms.
+
+                FHV-1 does not survive long in the environment — typically less than \
+                18 hours — and is readily destroyed by common household disinfectants \
+                including dilute bleach.
+
+                **Treatment Goals**
+
+                There is no cure for FHV-1 and no treatment that eliminates latent \
+                infection. For acute primary infection, the focus is on supportive \
+                care — managing nasal congestion, maintaining nutrition and \
+                hydration, and preventing secondary bacterial infections, which are \
+                common and can significantly worsen the clinical picture. Corneal \
+                ulcers require prompt veterinary attention to prevent permanent eye \
+                damage; antiviral eye medications are used in severe ocular cases.
+
+                For recurrent reactivation episodes in adult cats, management \
+                centers on identifying and minimizing stress triggers, supporting \
+                the immune system, and treating active eye disease early to prevent \
+                progression to corneal scarring.
+
+                Stress management is central to long-term FHV-1 control in carrier \
+                cats. Known reactivation triggers include rehoming, introduction of \
+                new animals, illness, surgery, hospitalization, and changes in \
+                routine. When a known stressor is upcoming, proactive veterinary \
+                management may reduce the severity of a flare-up.
+
+                **The Virus That Never Leaves: Latency in the Trigeminal Ganglion**
+
+                What makes FHV-1 — and all herpesviruses — biologically remarkable \
+                is their relationship with the nervous system. After causing acute \
+                infection, FHV-1 travels along sensory nerve fibers to the \
+                trigeminal ganglion, a cluster of nerve cells that controls \
+                sensation across the face, nose, and eyes. There, the virus enters \
+                a dormant state: its genetic material persists inside nerve cells \
+                indefinitely, not replicating, not triggering immune recognition, \
+                essentially invisible.
+
+                This latency strategy is the same one used by the human herpes \
+                simplex virus (the cause of cold sores) and the varicella-zoster \
+                virus (the cause of chickenpox and shingles). In each case, the \
+                virus exploits the immune privilege of nerve tissue — a location \
+                where the immune system's surveillance is limited — to establish a \
+                permanent reservoir. Reactivation occurs when immune surveillance \
+                weakens — most commonly due to stress, illness, or \
+                immunosuppression — allowing the virus to travel back down the nerve \
+                to the eye and nose surfaces and cause disease again.
+
+                This is why stress management is not just a wellness nicety for \
+                FHV-1-positive cats — it is a direct and meaningful medical \
+                intervention.
+
+                **A Note on L-Lysine**
+
+                L-lysine supplements — available over the counter as treats, \
+                powders, and pastes — have been widely recommended and used for \
+                FHV-1-positive cats for many years. The original rationale was \
+                plausible: herpesviruses require arginine to replicate, and lysine \
+                was thought to competitively block arginine. In laboratory settings, \
+                some early studies suggested a modest benefit.
+
+                However, clinical evidence in cats has not supported this. A \
+                systematic review of all available studies found no evidence that \
+                lysine supplementation prevents or reduces FHV-1 infection in cats. \
+                Several studies found no difference between supplemented and \
+                unsupplemented cats, and some found that supplemented cats \
+                experienced more frequent or more severe infections. The ABCD \
+                (Advisory Board on Cat Diseases) guidelines explicitly state that \
+                L-lysine supplementation is not recommended due to lack of efficacy. \
+                An additional concern is that high-dose lysine supplementation may \
+                interfere with arginine availability — and cats cannot synthesize \
+                arginine on their own, making arginine deficiency a meaningful risk.
+
+                If you have been giving your cat L-lysine, discuss with your \
+                veterinarian whether to continue. Do not start supplementation \
+                without veterinary guidance.
+
+                **Myths vs. Facts**
+
+                **Myth:** My cat had herpesvirus as a kitten but recovered — it's \
+                gone now.
+                **Fact:** Once a cat is infected with FHV-1, the virus remains for \
+                life. The cat may appear completely healthy for months or years \
+                between episodes, but the virus is dormant in nerve tissue and can \
+                reactivate at any time — especially during stressful events.
+
+                **Myth:** My cat's eye problem keeps coming back — it must be a new \
+                infection each time.
+                **Fact:** Recurrent conjunctivitis and corneal disease in cats is \
+                most commonly caused by reactivation of existing latent FHV-1 \
+                infection, not new exposures. The same virus that infected the cat \
+                originally reactivates under stress.
+
+                **Myth:** FHV-1 vaccination will fully protect my cat from \
+                herpesvirus.
+                **Fact:** The FHV-1 vaccine reduces the severity of infection and \
+                disease but does not completely prevent infection, and it does not \
+                eliminate latent virus in cats already infected. Vaccination is \
+                still strongly recommended — it significantly reduces the clinical \
+                impact of the disease.
+
+                **Myth:** My cat's herpesvirus can spread to me or my dog.
+                **Fact:** FHV-1 is strictly species-specific to cats. It cannot \
+                infect humans, dogs, or any other companion animal.
+                """,
+                toxicityInfoSectionTitle: "What makes it harmful?",
+                onsetTime: OnsetTime(
+                    early: "Incubation period after exposure is typically 2 to 6 days. Acute signs — sneezing, eye discharge, nasal discharge — appear suddenly and progress rapidly, particularly in kittens.",
+                    delayed: "In latently infected adult cats, recurrent episodes may appear weeks, months, or years after the initial infection, typically triggered by stress, illness, or immunosuppression. Between episodes, affected cats often appear completely normal."
+                ),
+                symptoms: [
+                    "Sneezing — frequent and sometimes severe",
+                    "Nasal discharge (clear to thick yellow-green)",
+                    "Nasal congestion — audible breathing difficulty",
+                    "Eye discharge (watery to thick and purulent)",
+                    "Conjunctivitis — red, swollen, irritated eye membranes",
+                    "Squinting or holding one or both eyes closed",
+                    "Corneal ulcers — visible cloudiness or surface irregularity of the eye",
+                    "Fever",
+                    "Loss of appetite (often related to inability to smell food)",
+                    "Lethargy",
+                    "Drooling or mouth breathing in severe cases",
+                    "Skin sores around the nose or mouth (less common; severe or recurrent infection)"
+                ],
+                entrySeverity: nil,
+                speciesRisks: [
+                    SpeciesRisk(
+                        species: .cat,
+                        severity: .severe,
+                        notes: "Cats are the only companion animal species susceptible to FHV-1. Young kittens are at greatest risk of severe primary disease and permanent complications. Unvaccinated, immunocompromised, and stressed cats are at elevated risk of severe acute infection or reactivation. Most adult cats carry latent FHV-1 infection and may experience recurrent episodes throughout life."
+                    )
+                ],
+                preventionTips: [
+                    "Vaccinate all cats against FHV-1 — it is part of the standard core feline vaccine series. Vaccination significantly reduces the severity of infection and disease even though it does not fully prevent infection or eliminate latency.",
+                    "Isolate any cat showing signs of upper respiratory infection — sneezing, eye discharge, nasal discharge — from other cats immediately to limit spread.",
+                    "Minimize stress for latently infected cats — stress is the primary trigger for viral reactivation. Consistent routines, adequate space, and gradual introductions to new animals or environments all help reduce flare-up risk.",
+                    "When a known stressor is unavoidable — rehoming, a new pet, surgery, boarding — consult your veterinarian in advance about supportive measures to reduce the likelihood or severity of an FHV-1 flare-up.",
+                    "Disinfect shared surfaces, bedding, and food and water bowls frequently — FHV-1 is readily inactivated by dilute bleach and most common household disinfectants.",
+                    "Any cat with recurring eye problems — conjunctivitis, discharge, squinting — should be evaluated by a veterinarian for FHV-1-associated ocular disease. Early treatment prevents permanent corneal scarring.",
+                    "New cats introduced to a multi-cat household should be quarantined for at least two weeks, as apparently healthy cats can shed FHV-1 without visible symptoms.",
+                    "L-lysine supplements are widely sold over the counter for FHV-1 but are not recommended by veterinary guidelines — clinical studies have not demonstrated benefit, and some have shown increased infection severity. Discuss with your veterinarian before starting any supplement."
+                ],
+                sources: [
+                    "Cornell Feline Health Center — Feline Herpesvirus",
+                    "Merck Veterinary Manual — Feline Herpesvirus",
+                    "VCA Animal Hospitals — Feline Herpesvirus Infection (Feline Viral Rhinotracheitis)",
+                    "International Cat Care (iCatCare) — Feline Herpesvirus",
+                    "ABCD (Advisory Board on Cat Diseases) — Guideline for Feline Herpesvirus Infection",
+                    "Wikipedia — Feline Herpesvirus-1",
+                    "PMC / NIH — Feline Herpesvirus-1: Ocular Manifestations, Diagnosis and Treatment Options",
+                    "PMC / NIH — Bol & Bunnik (2015): L-Lysine supplementation is not effective for FHV-1 (systematic review)"
+                ],
+                relatedEntries: [
+                    "1D000001-0000-0000-0000-000000000018",  // FIP
+                    "1D000001-0000-0000-0000-000000000019",  // FeLV
+                    "1D000001-0000-0000-0000-000000000020",  // FIV
+                    "1D000001-0000-0000-0000-000000000008"   // Kennel Cough (CIRDC)
                 ]
             ),
         ]
