@@ -9151,6 +9151,60 @@ class DiseasesConditionsService {
                     territorial; many snakes are solitary predators that will attempt to \
                     consume cage mates.
 
+                    **Common Mistakes to Avoid**
+                    Even well-intentioned reptile owners frequently make a few recurring \
+                    errors that cause serious long-term harm.
+
+                    \u{201C}My reptile seems fine, so the husbandry must be correct.\u{201D} \
+                    Reptiles are stoic prey animals that conceal illness instinctively. A \
+                    reptile in a suboptimal setup may appear normal for months while slowly \
+                    developing metabolic bone disease, chronic dehydration, or immune \
+                    suppression. By the time signs are visible, the damage is often advanced.
+
+                    \u{201C}I don\u{2019}t need a thermostat \u{2014} I\u{2019}ll just \
+                    check the temperature.\u{201D} Unregulated heat sources are one of the \
+                    leading causes of thermal burns in captive reptiles. Heat rocks, ceramic \
+                    emitters, and heat mats without thermostats can reach dangerous \
+                    temperatures. A thermostat is not optional equipment \u{2014} it is as \
+                    essential as the heat source itself.
+
+                    \u{201C}UVB through a window is enough.\u{201D} Glass and most plastics \
+                    filter out virtually all UVB radiation. A reptile basking in a sunny \
+                    window is receiving warmth but no usable UVB. Diurnal lizards and \
+                    chelonians require a dedicated UVB bulb inside the enclosure, replaced \
+                    every 6\u{2013}12 months regardless of whether it still produces \
+                    visible light.
+
+                    \u{201C}Loose substrate will cause impaction.\u{201D} This widespread \
+                    belief has led many owners to keep reptiles on bare tile or paper towel \
+                    unnecessarily. Impaction from substrate ingestion is almost always a \
+                    secondary problem caused by dehydration, inadequate temperatures, or \
+                    nutritional deficiency \u{2014} not the substrate itself. Appropriate \
+                    loose substrates support natural behaviors like burrowing and are part \
+                    of good husbandry for many species.
+
+                    \u{201C}A 20-gallon tank is fine for a ball python.\u{201D} Minimum \
+                    enclosure size recommendations have shifted significantly in recent \
+                    years. Many species commonly sold in small enclosures \u{2014} ball \
+                    pythons, bearded dragons, corn snakes \u{2014} benefit from \
+                    substantially more space than older care guides suggest. Research \
+                    current, evidence-based recommendations for your specific species \
+                    rather than relying on pet store guidance.
+
+                    \u{201C}I\u{2019}ll just feed my snake live prey \u{2014} it\u{2019}s \
+                    more natural.\u{201D} Live prey can bite, scratch, and seriously injure \
+                    or kill a snake. Frozen/thawed prey is safer, more convenient, and \
+                    nutritionally equivalent. The perceived enrichment benefit of live \
+                    feeding does not outweigh the injury risk.
+
+                    \u{201C}All reptiles are solitary \u{2014} or all reptiles can be \
+                    housed together.\u{201D} Neither extreme is correct. Most snakes and \
+                    many lizards are genuinely solitary and will stress, fight, or attempt \
+                    to consume cage mates. Some species tolerate or benefit from same-species \
+                    cohabitation under specific conditions. Multi-species enclosures are \
+                    almost never appropriate. Research your specific species before making \
+                    any cohabitation decision.
+
                     **Veterinary Care**
                     One of the most important things a reptile owner can do is identify an \
                     exotic-specialist veterinarian before one is urgently needed. General \
