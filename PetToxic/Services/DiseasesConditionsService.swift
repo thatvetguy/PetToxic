@@ -1697,7 +1697,9 @@ class DiseasesConditionsService {
                     "Veterinary Partner — Common Reptile Husbandry Problems",
                     "UC Davis School of Veterinary Medicine — Reptile Husbandry Guidelines"
                 ],
-                relatedEntries: nil
+                relatedEntries: [
+                    "1D000001-0000-0000-0000-000000000033"   // Snake Mites (Ophionyssus natricis)
+                ]
             ),
 
             // MARK: - Canine Influenza
@@ -5599,7 +5601,8 @@ class DiseasesConditionsService {
                 relatedEntries: [
                     "1D000001-0000-0000-0000-000000000022",  // Tick-Borne Diseases
                     "1D000001-0000-0000-0000-000000000028",  // Fleas
-                    "1D000001-0000-0000-0000-000000000031"   // Rabbit Ear Mites (Psoroptes cuniculi)
+                    "1D000001-0000-0000-0000-000000000031",  // Rabbit Ear Mites (Psoroptes cuniculi)
+                    "1D000001-0000-0000-0000-000000000033"   // Snake Mites (Ophionyssus natricis)
                 ]
             ),
 
@@ -6721,6 +6724,170 @@ class DiseasesConditionsService {
                 ],
                 relatedEntries: [
                     "1D000001-0000-0000-0000-000000000007"   // Myxomatosis
+                ]
+            ),
+
+            // MARK: - Snake Mites (Ophionyssus natricis)
+            ToxicItem(
+                id: UUID(uuidString: "1D000001-0000-0000-0000-000000000033")!,
+                name: "Snake Mites (Ophionyssus natricis)",
+                alternateNames: ["Reptile mites", "O. natricis", "snake mite infestation", "ophionyssus"],
+                categories: [.diseasesAndConditions],
+                imageAsset: "snake_mites_thumb",
+                description: """
+                    Snake mites (Ophionyssus natricis) are the most common ectoparasite \
+                    of captive snakes — blood-feeding parasites that pierce soft skin \
+                    between scales to feed on blood and tissue fluids. Although small \
+                    enough to overlook, heavy infestations are well documented to cause \
+                    severe anemia, dehydration, and death. They also affect captive \
+                    lizards, blue-tongued skinks, turtles, and crocodilians — any \
+                    reptile sharing an enclosure or collection with an infested animal \
+                    is at risk.
+
+                    Snake mites are not a minor nuisance. They reproduce rapidly under \
+                    warm, humid conditions (completing a full life cycle in as little as \
+                    13 days), spread easily through reptile collections via shared \
+                    equipment or handling, and are difficult to eradicate because most \
+                    insecticides commonly used in mammal care are highly toxic to \
+                    snakes. Early detection and prompt veterinary treatment are essential. \
+                    O. natricis can also transiently bite humans, causing skin irritation \
+                    and dermatitis — though it does not establish a lasting infestation \
+                    on people.
+                    """,
+                toxicityInfo: """
+                    **How It Harms the Body**
+                    O. natricis feeds by lacerating the thin, soft skin between scales \
+                    with its chelicerae (mouthparts), drawing blood directly from the \
+                    snake. A single mite is inconsequential; a heavy infestation \
+                    represents hundreds or thousands of simultaneous feeding sites. The \
+                    cumulative blood loss causes progressive anemia — reducing the \
+                    snake's oxygen-carrying capacity — alongside dehydration from fluid \
+                    loss at feeding wounds. Open bite wounds create entry points for \
+                    bacteria, particularly Aeromonas hydrophila, a pathogen that causes \
+                    hemorrhagic septicemia in reptiles. Left untreated, the combined \
+                    effects of blood loss, dehydration, and secondary infection can be \
+                    fatal. Chronic infestation also causes dysecdysis (abnormal shedding) \
+                    as mites concentrated under retained shed skin prevent clean \
+                    separation.
+
+                    **The Invisible Load**
+                    One of the most important things to understand about snake mites is \
+                    how easily they are missed. Unfed mites are tiny (under 1mm) and \
+                    pale yellow to ivory — nearly invisible on most snakes. Only \
+                    engorged females become visibly dark red or black and large enough \
+                    to spot easily. Mites preferentially cluster in the eye caps \
+                    (spectacles), labial pits, and skin folds around the cloaca — \
+                    areas that require deliberate inspection to examine. A snake that \
+                    is spending unusual amounts of time in its water dish is often \
+                    attempting to drown mites — a behavioral sign that frequently \
+                    predates visible symptoms. Any new snake should be quarantined and \
+                    carefully examined before joining an existing collection.
+
+                    **The Poison Problem**
+                    Treating snake mites is complicated by a well-documented paradox: \
+                    most of the insecticides and acaricides routinely used against \
+                    mites in mammals are potentially neurotoxic to snakes and other \
+                    reptiles. This means treatment requires veterinary guidance \
+                    specific to reptiles — off-the-shelf flea and tick products \
+                    designed for dogs or cats must never be used on snakes. Critically, \
+                    treating only the animal is insufficient — mites spend significant \
+                    portions of their life cycle off the host, hiding in enclosure \
+                    cracks, substrate, and equipment. Effective eradication requires \
+                    simultaneous treatment of both the animal and the entire \
+                    environment.
+
+                    **Transmission & Spread**
+                    Direct contact between infested and uninfested reptiles is the \
+                    primary route of spread in collections. Mites and eggs are readily \
+                    transferred on hands, clothing, shared equipment, and untreated \
+                    substrate. The exotic pet trade is a major vector for global \
+                    spread — O. natricis has been documented on wild snakes and \
+                    lizards in Australia, Central America, and Central Asia, widely \
+                    attributed to introductions through the captive reptile trade \
+                    rather than native populations. Newly acquired reptiles — \
+                    including those sold in pet stores — should always be quarantined \
+                    and examined before introduction to any existing collection.
+
+                    **A Mite That Bites Back**
+                    O. natricis will opportunistically bite humans when mite populations \
+                    are large, food is scarce, or when reptiles are handled. Human \
+                    bites cause papular and vesiculobullous (blister-like) skin \
+                    eruptions — itchy raised welts that can be mistaken for other \
+                    dermatitis causes. The mites do not establish a lasting infestation \
+                    on humans and will not complete their life cycle on a human host, \
+                    but the dermatitis can be significant and persistent. Handlers \
+                    and household members of infested reptiles should be aware of \
+                    this possibility. If skin reactions develop after contact with \
+                    reptiles or their enclosures, consult a physician.
+
+                    **The Vector Problem**
+                    Beyond direct harm, O. natricis is a confirmed mechanical vector \
+                    of Aeromonas hydrophila (the bacterium responsible for hemorrhagic \
+                    septicemia in reptiles) and is the leading suspected vector of \
+                    Reptarenavirus — the causative agent of Inclusion Body Disease \
+                    (IBD), a fatal neurological disease of boid snakes. The IBD \
+                    vector role remains under active investigation, but the association \
+                    is strong enough that mite control is considered a core component \
+                    of IBD biosecurity in any snake collection.
+
+                    **Treatment Goals**
+                    Veterinary treatment aims to eliminate mites from both the animal \
+                    and the enclosure environment simultaneously. The snake's water \
+                    source, substrate, hides, and all cage furniture must be treated \
+                    or replaced alongside the animal — treating the snake alone \
+                    will result in rapid reinfestation from eggs and non-feeding \
+                    mite stages surviving in the environment. Biological control \
+                    using predatory mites (Stratiolaelaps scimitus, formerly \
+                    Hypoaspis miles) has been used successfully in some collections \
+                    as a non-toxic adjunct to veterinary treatment. A reptile-savvy \
+                    veterinarian should direct any treatment plan.
+                    """,
+                toxicityInfoSectionTitle: "What makes it harmful?",
+                onsetTime: OnsetTime(
+                    early: "Behavioral changes often appear before visible mites: prolonged soaking in water dish, increased rubbing against enclosure surfaces, restlessness. Visible mites (dark red or black engorged females) may be spotted in eye caps, labial pits, or skin folds.",
+                    delayed: "With sustained infestation: lethargy, progressive weight loss, dysecdysis (abnormal shedding), crusting skin lesions. Anemia, dehydration, and septicemia develop in heavy or prolonged infestations and can be fatal without treatment."
+                ),
+                symptoms: [
+                    "Prolonged soaking or unusual time spent in water dish",
+                    "Rubbing or scraping against enclosure surfaces",
+                    "Visible dark red or black mites on skin, especially around eyes, mouth, and cloaca",
+                    "Restlessness or unusual agitation",
+                    "Lethargy and reduced activity",
+                    "Loss of appetite",
+                    "Abnormal shedding (incomplete or retained shed)",
+                    "Crusting or scabbing skin, especially between scales",
+                    "Pale mucous membranes (sign of anemia)",
+                    "Weight loss",
+                    "Skin abscesses at bite sites"
+                ],
+                entrySeverity: nil,
+                speciesRisks: [
+                    SpeciesRisk(
+                        species: .reptile,
+                        severity: .severe,
+                        notes: "Snakes are the primary and most severely affected host. Heavy infestations are documented to cause fatal anemia, dehydration, and septicemia. Lizards (including blue-tongued skinks, alligator lizards), turtles, and crocodilians sharing collections or enclosures with infested snakes are also susceptible. Any captive reptile in contact with infested animals or equipment is at risk."
+                    )
+                ],
+                preventionTips: [
+                    "Quarantine all new reptiles for a minimum of 30 days and inspect thoroughly for mites before introducing them to existing animals or equipment",
+                    "Examine snakes regularly — check around the eyes, mouth, labial pits, and cloaca where mites preferentially cluster",
+                    "Treat soaking in the water dish as a warning sign — this is a common early behavioral indicator of mite infestation",
+                    "Never share equipment, hides, or substrate between enclosures without thorough disinfection",
+                    "Wash hands and change clothing before handling other reptiles after contact with a new or unknown animal",
+                    "Do not use flea or tick products designed for dogs or cats on reptiles — many are toxic to snakes",
+                    "If mites are found, consult a reptile-savvy veterinarian before treating — enclosure environment must be treated simultaneously with the animal",
+                    "If you develop itchy skin welts after handling reptiles or their enclosures, consult a physician — O. natricis can transiently bite humans"
+                ],
+                sources: [
+                    "Merck Veterinary Manual — Mites of Reptiles: https://www.merckvetmanual.com/exotic-and-laboratory-animals/reptiles/parasitic-diseases-of-reptiles",
+                    "LafeberVet — Ophionyssus natricis in Reptiles: https://lafeber.com/vet/ophionyssus-natricis/",
+                    "Wikipedia — Ophionyssus natricis: https://en.wikipedia.org/wiki/Ophionyssus_natricis",
+                    "PMC — Human Dermatitis Caused by Ophionyssus natricis: https://pmc.ncbi.nlm.nih.gov/articles/PMC4345101/",
+                    "Acarologia — Occurrence of O. natricis on captive snakes from Panama: https://www1.montpellier.inrae.fr/CBGP/acarologia/article.php?id=4161"
+                ],
+                relatedEntries: [
+                    "1D000001-0000-0000-0000-000000000010",  // Dysecdysis
+                    "1D000001-0000-0000-0000-000000000026"   // Mange
                 ]
             ),
         ]
