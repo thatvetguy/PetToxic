@@ -4206,7 +4206,7 @@ Bark and roots contain the highest concentrations of ailanthone; leaves contain 
                     "If your pet is attracted to chewing plants, hellebores are not a good choice for accessible garden areas"
                 ],
                 sources: ["ASPCA Animal Poison Control Center", "Pet Poison Helpline", "Cornell University Poisonous Plants Database", "Merck Veterinary Manual"],
-                relatedEntries: nil
+                relatedEntries: ["b1c2d3e4-0000-0000-0000-eranthis00001"]  // Winter Aconite — same family, protoanemonin
             ),
 
             // MARK: - Bittersweet
@@ -15211,7 +15211,150 @@ Skin contact with the sap can also cause contact dermatitis (skin redness, irrit
                 ],
                 relatedEntries: [
                     "045fe2d3-3c59-4f15-b72a-09371b675d77",  // GI Irritant Plants - same irritant mechanism, Clematis in same family
-                    "505a8b0e-0325-4419-8678-f543ad301997"  // Anemone (Windflower) - same family (Ranunculaceae), same toxin (protoanemonin)
+                    "505a8b0e-0325-4419-8678-f543ad301997",  // Anemone (Windflower) - same family (Ranunculaceae), same toxin (protoanemonin)
+                    "b1c2d3e4-0000-0000-0000-eranthis00001"  // Winter Aconite — same family, same toxin
+                ]
+            ),
+
+            // MARK: - Winter Aconite (Eranthis)
+            ToxicItem(
+                id: UUID(uuidString: "b1c2d3e4-0000-0000-0000-eranthis00001")!,
+                name: "Winter Aconite (Eranthis)",
+                alternateNames: [
+                    "Eranthis",
+                    "Eranthis hyemalis",
+                    "winter aconite",
+                    "winter hellebore",
+                    "Eranthis cilicica",
+                    "Eranthis tubergenii",
+                    "winter wolfsbane"
+                ],
+                categories: [.plants],
+                imageAsset: "eranthis_thumb",
+                description: """
+                    Winter Aconite (Eranthis hyemalis) is a small, low-growing \
+                    perennial bulb native to southern Europe that has become widely \
+                    naturalized in gardens across North America and the United \
+                    Kingdom. It is one of the earliest flowers to bloom each year \
+                    — often pushing through snow in late winter to produce bright \
+                    yellow, buttercup-like flowers on stems just 3\u{2013}4 inches \
+                    tall. This timing is both its charm and its risk: it flowers \
+                    when almost nothing else is growing, making it conspicuous to \
+                    curious pets exploring the garden after months of dormancy.
+
+                    All parts of the plant contain protoanemonin — the same \
+                    irritant compound found in buttercups (Ranunculus), anemones, \
+                    and clematis. The small, dark tubers contain the highest \
+                    concentration. Despite the word \u{201C}aconite\u{201D} in its \
+                    common name, Winter Aconite is not related to true aconite \
+                    (Aconitum / monkshood / wolfsbane), which is far more \
+                    dangerous. The shared name is a historical accident — both \
+                    bloom early and were found in similar woodland habitats, but \
+                    they belong to different genera with very different toxicity \
+                    profiles.
+                    """,
+                toxicityInfo: """
+                    **How it causes harm**
+
+                    Winter aconite contains protoanemonin and ranunculin — the \
+                    same irritant glycosides found across the Ranunculaceae family. \
+                    When plant tissue is crushed or chewed, ranunculin is \
+                    enzymatically converted to protoanemonin, which causes direct \
+                    chemical irritation to the mucous membranes of the mouth, \
+                    esophagus, and gastrointestinal tract. The result is oral \
+                    pain, drooling, nausea, vomiting, and diarrhea. Skin contact \
+                    with the sap can cause contact dermatitis.
+
+                    The acrid, burning taste of protoanemonin acts as a natural \
+                    deterrent — most animals that bite into the plant drop it \
+                    quickly without consuming a significant quantity. This is why \
+                    serious toxicity from winter aconite is uncommon: the plant \
+                    effectively warns the animal away before enough is consumed to \
+                    cause systemic harm. However, animals that persist in chewing \
+                    — or that consume tubers dug from the soil — may develop more \
+                    pronounced GI signs.
+
+                    Protoanemonin is unstable and breaks down into the much less \
+                    toxic anemonin when the plant material dries. Dried winter \
+                    aconite — in pressed flower arrangements, for example — is \
+                    significantly less irritating than fresh plant tissue.
+
+                    **The Name That Misleads**
+
+                    Winter Aconite\u{2019}s common name has caused unnecessary \
+                    alarm for generations of gardeners and pet owners. True aconite \
+                    (Aconitum species — also called monkshood or wolfsbane) is one \
+                    of the most toxic plants in the Northern Hemisphere, containing \
+                    aconitine — a potent cardiotoxin and neurotoxin that can be \
+                    fatal in very small quantities. Winter Aconite contains none \
+                    of these compounds. The two plants share nothing beyond a \
+                    common name, early bloom time, and a preference for woodland \
+                    settings. If you encounter the name \u{201C}aconite\u{201D} \
+                    on a plant label or in a poisonous plants list, it is \
+                    critical to determine which plant is actually being discussed \
+                    — the difference in toxicity is enormous.
+
+                    **First Flower, First Risk**
+
+                    Eranthis is among the very first plants to emerge each year, \
+                    often blooming in January or February in mild climates and \
+                    as early as March further north. It frequently pushes through \
+                    the last of the snow. For pets — particularly dogs — that \
+                    have spent months in a dormant winter garden with nothing \
+                    green to investigate, the sudden appearance of bright yellow \
+                    flowers at nose height can be irresistible. The risk is not \
+                    that winter aconite is highly dangerous — it is that it \
+                    appears at the exact moment when a bored pet is most likely \
+                    to explore it.
+
+                    **The Tuber in the Soil**
+
+                    While the flowers and leaves are mildly irritating, the small \
+                    dark tubers — planted just below the soil surface — contain \
+                    the highest concentration of protoanemonin. Dogs that dig in \
+                    garden beds during spring planting or autumn bulb-planting \
+                    season may encounter and chew on tubers. If you are planting \
+                    winter aconite tubers, keep your dog away from the planting \
+                    area and clean up any tubers that are dropped or discarded.
+                    """,
+                onsetTime: OnsetTime(
+                    early: "Oral irritation and drooling typically begin within minutes of chewing; vomiting and GI upset usually within 1–2 hours",
+                    delayed: "Most cases are self-limiting and resolve within 12–24 hours. Significant systemic toxicity from winter aconite is rare."
+                ),
+                symptoms: [
+                    "Oral irritation — pawing at the mouth, lip-licking",
+                    "Drooling (hypersalivation)",
+                    "Vomiting",
+                    "Diarrhea",
+                    "Loss of appetite",
+                    "Lethargy (with larger ingestions)",
+                    "Skin irritation or redness (contact with sap)"
+                ],
+                entrySeverity: .low,
+                speciesRisks: [
+                    SpeciesRisk(species: .dog, severity: .low, notes: "Most likely species to encounter and chew on winter aconite in the garden. The acrid taste limits voluntary ingestion. Most cases cause mild, self-limiting GI upset. Dogs that dig up and consume tubers may develop more pronounced signs."),
+                    SpeciesRisk(species: .cat, severity: .low, notes: "Cats rarely consume plant material in significant quantities. Low exposure risk. Contact your veterinarian if ingestion is suspected."),
+                    SpeciesRisk(species: .smallMammal, severity: .moderate, notes: "Rabbits and guinea pigs with outdoor garden access could encounter tubers while digging or foraging. Small body size and hindgut-fermenter physiology may increase sensitivity to GI irritation. Keep outdoor enclosures away from winter aconite plantings."),
+                    SpeciesRisk(species: .bird, severity: .low, notes: "Limited data. The small plant size and acrid taste make significant ingestion unlikely in pet birds."),
+                    SpeciesRisk(species: .reptile, severity: .low, notes: "Not a meaningful concern for captive reptiles under normal husbandry.")
+                ],
+                preventionTips: [
+                    "Learn to identify winter aconite — bright yellow buttercup-like flowers on very short stems, blooming in late winter when little else is in flower",
+                    "Do not confuse winter aconite (Eranthis — mild irritant) with true aconite (Aconitum / monkshood — potentially fatal); the two are unrelated despite the shared common name",
+                    "If planting winter aconite tubers, keep dogs away from the planting area and clean up any dropped or discarded tubers",
+                    "Supervise dogs in the garden during late winter and early spring when winter aconite is the most conspicuous thing growing",
+                    "Keep outdoor rabbit and guinea pig enclosures away from areas where winter aconite is planted"
+                ],
+                sources: [
+                    "ASPCA Animal Poison Control Center — Toxic and Non-Toxic Plants",
+                    "Pet Poison Helpline — Plant Toxicity Resources",
+                    "Cornell University Poisonous Plants Database — Ranunculaceae",
+                    "Wikipedia — Eranthis hyemalis: https://en.wikipedia.org/wiki/Eranthis_hyemalis",
+                    "Royal Horticultural Society (RHS) — Potentially Harmful Garden Plants: https://www.rhs.org.uk/prevention-protection/potentially-harmful-garden-plants"
+                ],
+                relatedEntries: [
+                    "ee90d3c6-f9cc-40ab-ae91-c13bc481ab16",  // Ranunculus (Buttercup) — same family, same toxin
+                    "165617f0-7aa5-47a2-b62c-21adb49e42ca"   // Christmas Rose & Hellebores — same family, early bloomer
                 ]
             ),
 
