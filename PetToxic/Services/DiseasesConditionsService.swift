@@ -28,6 +28,7 @@ class DiseasesConditionsService {
         "1D000001-0000-0000-0000-000000000038",  // GI Stasis in Rabbits
         "1D000001-0000-0000-0000-000000000039",  // Hypovitaminosis A
         "1D000001-0000-0000-0000-000000000040",  // Shell Rot
+        "1D000001-0000-0000-0000-000000000041",  // Stomatitis / Mouth Rot
     ]
 
     /// Whether an entry is an infectious disease (Type 1)
@@ -1711,7 +1712,8 @@ class DiseasesConditionsService {
                     "1D000001-0000-0000-0000-000000000033",  // Snake Mites (Ophionyssus natricis)
                     "1D000001-0000-0000-0000-000000000034",  // Inclusion Body Disease (IBD)
                     "1D000001-0000-0000-0000-000000000039",  // Hypovitaminosis A
-                    "1D000001-0000-0000-0000-000000000040"   // Shell Rot
+                    "1D000001-0000-0000-0000-000000000040",  // Shell Rot
+                    "1D000001-0000-0000-0000-000000000041"   // Stomatitis / Mouth Rot
                 ]
             ),
 
@@ -6909,7 +6911,8 @@ class DiseasesConditionsService {
                 relatedEntries: [
                     "1D000001-0000-0000-0000-000000000010",  // Dysecdysis
                     "1D000001-0000-0000-0000-000000000026",  // Mange
-                    "1D000001-0000-0000-0000-000000000034"   // Inclusion Body Disease (IBD)
+                    "1D000001-0000-0000-0000-000000000034",  // Inclusion Body Disease (IBD)
+                    "1D000001-0000-0000-0000-000000000041"   // Stomatitis / Mouth Rot
                 ]
             ),
 
@@ -8267,7 +8270,8 @@ class DiseasesConditionsService {
                     "1D000001-0000-0000-0000-000000000005",  // Metabolic Bone Disease (MBD)
                     "1D000001-0000-0000-0000-000000000010",  // Dysecdysis (Abnormal Shedding)
                     "1D000001-0000-0000-0000-000000000009",  // Thermal Burns
-                    "1D000001-0000-0000-0000-000000000040"   // Shell Rot
+                    "1D000001-0000-0000-0000-000000000040",  // Shell Rot
+                    "1D000001-0000-0000-0000-000000000041"   // Stomatitis / Mouth Rot
                 ]
             ),
 
@@ -8478,7 +8482,216 @@ class DiseasesConditionsService {
                 relatedEntries: [
                     "1D000001-0000-0000-0000-000000000005",  // Metabolic Bone Disease (MBD)
                     "1D000001-0000-0000-0000-000000000010",  // Dysecdysis (Abnormal Shedding)
-                    "1D000001-0000-0000-0000-000000000039"   // Hypovitaminosis A
+                    "1D000001-0000-0000-0000-000000000039",  // Hypovitaminosis A
+                    "1D000001-0000-0000-0000-000000000041"   // Stomatitis / Mouth Rot
+                ]
+            ),
+
+            // MARK: - Stomatitis / Mouth Rot (Infectious Stomatitis)
+            ToxicItem(
+                id: UUID(uuidString: "1D000001-0000-0000-0000-000000000041")!,
+                name: "Stomatitis / Mouth Rot (Infectious Stomatitis)",
+                alternateNames: [
+                    "mouth rot",
+                    "stomatitis",
+                    "infectious stomatitis",
+                    "ulcerative stomatitis",
+                    "necrotic stomatitis",
+                    "reptile mouth rot",
+                    "snake mouth rot",
+                    "lizard mouth rot",
+                    "gum rot",
+                    "oral rot"
+                ],
+                categories: [.diseasesAndConditions],
+                imageAsset: "mouth_rot_thumb",
+                description: """
+                    Mouth rot — clinically known as infectious stomatitis or ulcerative \
+                    stomatitis — is a bacterial infection of the oral cavity affecting \
+                    reptiles. It is one of the most common conditions seen in captive \
+                    snakes and lizards, and in the vast majority of cases it is a \
+                    direct consequence of husbandry deficiencies that compromise the \
+                    animal's immune defenses. Left untreated, it can progress from a \
+                    localized oral infection to a life-threatening systemic illness.
+
+                    Unlike stomatitis in dogs, cats, or humans — which often has immune-\
+                    mediated or dental causes — mouth rot in reptiles is almost always a \
+                    secondary infection. The underlying problem is not the bacteria \
+                    themselves, but the conditions that allowed bacteria to gain a \
+                    foothold: temperatures too low for the immune system to function, \
+                    chronic stress, nutritional deficiencies, or physical trauma to the \
+                    mouth. Correct the husbandry, and the predisposing conditions \
+                    resolve. Treat the infection without correcting the husbandry, \
+                    and recurrence is likely.
+
+                    The condition is not contagious in the traditional sense — a healthy \
+                    reptile with appropriate husbandry will not contract mouth rot from a \
+                    tank mate. However, multiple animals sharing a poorly maintained \
+                    enclosure may all develop the condition from the same environmental \
+                    deficiencies.
+
+                    Snakes and lizards are most commonly affected. Chelonians (turtles \
+                    and tortoises) can also develop oral infections, though they present \
+                    less frequently. Dogs, cats, birds, and small mammals are not subject \
+                    to this condition. No vaccine exists or is applicable.
+                    """,
+                toxicityInfo: """
+                    **How It Harms the Body**
+                    Reptiles carry a natural population of gram-negative bacteria in their \
+                    oral cavity — species including Pseudomonas, Aeromonas, Klebsiella, \
+                    and Salmonella are commonly found in the healthy reptile mouth. Under \
+                    normal conditions, a functioning immune system keeps these bacteria in \
+                    check. When immune function is suppressed — most often by chronic low \
+                    temperatures, stress, or nutritional deficiency — the balance shifts \
+                    and these opportunistic bacteria begin to proliferate unchecked.
+
+                    Early mouth rot affects the gingival tissue (gums) and the mucous \
+                    membranes lining the mouth. The tissue becomes inflamed, reddened, \
+                    and begins to develop petechiae (pinpoint hemorrhages — small red \
+                    dots). A characteristic caseous (cheese-like or cottage cheese-like) \
+                    discharge accumulates in the oral cavity. This material is a mixture \
+                    of dead tissue, bacteria, and inflammatory cells, and its presence is \
+                    one of the most recognizable signs of the condition.
+
+                    As the infection progresses, the tissue becomes necrotic (dies) and \
+                    the infection spreads deeper into the gums, bones of the jaw, and \
+                    palate. Teeth may loosen and fall out. In snakes, the infection can \
+                    spread posteriorly into the trachea and lungs, producing a respiratory \
+                    infection (pneumonia) as a serious secondary complication. In advanced \
+                    cases the bacteria enter the bloodstream — septicemia (a life-\
+                    threatening whole-body bacterial infection) — and the infection can \
+                    seed internal organs. At this stage the condition can be rapidly fatal.
+
+                    **The Open Mouth That Should Be Closed**
+                    Healthy reptiles breathe with their mouths closed. A reptile — \
+                    particularly a snake — that is repeatedly observed with its mouth \
+                    slightly open, or that is holding its head in an elevated or unusual \
+                    position, may be doing so because oral inflammation and caseous \
+                    discharge are physically preventing normal jaw closure. This is \
+                    not a quirk or a behavioral habit. An open-mouthed snake that is \
+                    not in the middle of eating or yawning is showing a classic warning \
+                    sign that warrants prompt veterinary evaluation.
+
+                    **Causes & Risk Factors**
+                    • **Suboptimal temperatures** — the single most common predisposing \
+                    factor. Reptile immune systems are directly temperature-dependent; \
+                    they function within a narrow optimal range specific to each species. \
+                    A reptile kept chronically below its preferred body temperature has a \
+                    suppressed immune system regardless of how clean the enclosure appears. \
+                    This is why mouth rot is so frequently seen in winter, or after a \
+                    thermostat failure, or in animals in enclosures that have never been \
+                    correctly set up thermally.
+
+                    • **Chronic stress** — inappropriate housing, excessive handling, \
+                    predator scent exposure (e.g., housing prey animals nearby), \
+                    overcrowding, or incompatible tank mates all generate chronic stress \
+                    that suppresses immune function over time.
+
+                    • **Oral trauma** — snakes that strike the glass or walls of their \
+                    enclosure repeatedly (a behavior called \u{201C}glass surfing\u{201D} driven by \
+                    stress or hunger), or that injure their mouth during feeding on prey \
+                    items that are too large, create micro-wounds that become immediate \
+                    infection entry points. Rough handling that causes the animal to bite \
+                    the handler and injure its own mouth is another common cause.
+
+                    • **Nutritional deficiency** — particularly vitamin A deficiency, \
+                    which impairs the integrity of the mucous membranes lining the oral \
+                    cavity. A reptile with underlying hypovitaminosis A is significantly \
+                    more vulnerable to oral infection. Calcium deficiency also weakens \
+                    jaw bone structure.
+
+                    • **Pre-existing illness** — any condition that weakens the animal \
+                    generally — parasitism, respiratory infection, or other concurrent \
+                    disease — reduces the immune reserve available to resist opportunistic \
+                    oral bacteria.
+
+                    • **Inadequate hygiene** — soiled substrate, fecal contamination, \
+                    or old food debris in the enclosure increases bacterial load and \
+                    provides an ongoing source of pathogen exposure.
+
+                    **Treatment Goals**
+                    Veterinary treatment focuses on removing caseous oral debris under \
+                    appropriate conditions, controlling the bacterial infection, managing \
+                    pain, providing nutritional support for animals that have stopped \
+                    eating, and — critically — identifying and correcting the underlying \
+                    husbandry deficiencies that allowed the condition to develop. In \
+                    advanced cases where the infection has spread to the jaw bones, \
+                    lungs, or bloodstream, treatment is significantly more intensive. \
+                    Early veterinary intervention substantially improves outcomes; \
+                    delayed treatment allows the infection to penetrate deeper structures \
+                    from which recovery is far more difficult.
+
+                    **Myths vs. Facts**
+                    **Myth:** \u{201C}I cleaned the mouth out with a cotton swab, so I\u{2019}ve treated it.\u{201D}
+                    **Fact:** Removing visible caseous discharge at home does not address \
+                    the infection in the underlying tissue, does not correct the \
+                    temperature or husbandry deficiencies driving the condition, and \
+                    creates a risk of further oral trauma during the process. Veterinary \
+                    debridement and targeted treatment are required; home cleaning is not \
+                    a substitute.
+
+                    **Myth:** \u{201C}My reptile is still eating, so it can\u{2019}t be that serious.\u{201D}
+                    **Fact:** Some reptiles continue eating in early or moderate stages \
+                    of mouth rot. Continued eating does not indicate the infection is \
+                    resolving — it indicates the animal has not yet reached the stage \
+                    where oral pain prevents feeding. Loss of appetite in a reptile with \
+                    mouth rot signals significant progression.
+
+                    **Myth:** \u{201C}It will clear up on its own if I improve the husbandry.\u{201D}
+                    **Fact:** Correcting husbandry is essential — but it is not \
+                    sufficient once a bacterial infection is established in oral tissue. \
+                    The infection will not resolve without veterinary treatment. \
+                    Improving husbandry prevents recurrence; it does not cure an \
+                    active infection.
+                    """,
+                toxicityInfoSectionTitle: "What makes it harmful?",
+                onsetTime: OnsetTime(
+                    early: "Early signs — reddening of the gums, pinpoint hemorrhages in the oral tissue, and slight swelling — can appear within days of immune compromise. Early-stage mouth rot may be detectable only during routine handling when the mouth is briefly visible.",
+                    delayed: "Without treatment, caseous (cheese-like) discharge accumulates in the oral cavity, tissue becomes necrotic, and the infection spreads deeper into jaw structures and potentially to the lungs and bloodstream. Advanced cases can deteriorate rapidly over days to weeks."
+                ),
+                symptoms: [
+                    "Redness, swelling, or bleeding of the gums",
+                    "White, yellow, or gray caseous (cheese-like) discharge in the mouth",
+                    "Holding the mouth open or slightly agape — especially in snakes",
+                    "Reluctance to eat or complete refusal of food",
+                    "Rubbing the face or mouth against enclosure surfaces",
+                    "Loose or missing teeth",
+                    "Swelling of the jaw or face",
+                    "Mucus or discharge from the mouth or nostrils",
+                    "Lethargy and reduced activity",
+                    "Labored or audible breathing (suggests spread to the lungs)"
+                ],
+                entrySeverity: nil,
+                speciesRisks: [
+                    SpeciesRisk(
+                        species: .reptile,
+                        severity: .severe,
+                        notes: "Snakes and lizards are most commonly affected and can deteriorate rapidly without treatment. Chelonians (turtles and tortoises) are also susceptible but present less frequently. Can progress from localized oral infection to jaw bone involvement, pneumonia, or fatal septicemia. Husbandry correction is essential alongside veterinary treatment to prevent recurrence."
+                    )
+                ],
+                preventionTips: [
+                    "Maintain species-appropriate temperatures consistently — reptile immune function is directly temperature-dependent; a reptile kept too cold is immunosuppressed regardless of other husbandry factors",
+                    "Provide a proper thermal gradient so the animal can thermoregulate — one end of the enclosure should allow the animal to reach its preferred body temperature; the other end should be cooler",
+                    "Use a quality thermostat and thermometer, and check temperatures regularly — thermostat failures are a common trigger for husbandry-related illness",
+                    "Minimize stress: provide adequate hide spots, avoid overcrowding, limit handling to appropriate frequency, and do not house prey species nearby",
+                    "Feed appropriately sized prey items — prey that is too large increases the risk of oral trauma during feeding; a mouse or rat wider than the widest part of the snake's body is too large",
+                    "If the animal repeatedly strikes the enclosure walls, address the underlying cause (hunger, stress, enclosure too small) rather than accepting the behavior as normal",
+                    "Maintain clean substrate and remove waste promptly to reduce bacterial load in the enclosure",
+                    "Ensure diet supports immune function — species-appropriate vitamin and mineral supplementation, including vitamin A, should be discussed with an exotic animal veterinarian",
+                    "Perform regular hands-on oral inspection during handling — gently opening the mouth to observe gum color and check for early discharge allows early detection before the condition advances",
+                    "Wash hands thoroughly after handling any reptile — Salmonella and other gram-negative bacteria present in the reptile oral cavity and gut are transmissible to humans"
+                ],
+                sources: [
+                    "Merck Veterinary Manual — Stomatitis in Reptiles",
+                    "VCA Animal Hospitals — Mouth Rot in Reptiles",
+                    "LafeberVet — Infectious Stomatitis in Reptiles",
+                    "Veterinary Partner — Reptile Stomatitis"
+                ],
+                relatedEntries: [
+                    "1D000001-0000-0000-0000-000000000010",  // Dysecdysis (Abnormal Shedding)
+                    "1D000001-0000-0000-0000-000000000033",  // Snake Mites
+                    "1D000001-0000-0000-0000-000000000039",  // Hypovitaminosis A
+                    "1D000001-0000-0000-0000-000000000040"   // Shell Rot
                 ]
             ),
         ]
