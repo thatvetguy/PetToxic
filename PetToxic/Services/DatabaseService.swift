@@ -3969,7 +3969,151 @@ Bark and roots contain the highest concentrations of ailanthone; leaves contain 
                     "Consider removing golden chain trees from your property if you have pets, especially dogs that tend to chew on things"
                 ],
                 sources: ["Pet Poison Helpline", "ASPCA Animal Poison Control Center", "Clinical Veterinary Toxicology (Plumlee)", "Cornell University Poisonous Plants Database"],
-                relatedEntries: nil
+                relatedEntries: ["a1b2c3d4-0000-0000-0000-gymnocladus01"],  // Kentucky Coffee Tree — shared cytisine mechanism
+            ),
+
+            // MARK: - Kentucky Coffee Tree
+            ToxicItem(
+                id: UUID(uuidString: "a1b2c3d4-0000-0000-0000-gymnocladus01")!,
+                name: "Kentucky Coffee Tree",
+                alternateNames: [
+                    "Gymnocladus dioicus",
+                    "Gymnocladus",
+                    "Kentucky coffeetree",
+                    "coffee tree",
+                    "American coffee berry",
+                    "chicot",
+                    "nicker tree",
+                    "stump tree",
+                    "Kentucky mahogany"
+                ],
+                categories: [.plants],
+                imageAsset: "gymnocladus_thumb",
+                description: """
+                    Kentucky Coffee Tree (Gymnocladus dioicus) is a large native \
+                    North American tree found throughout the eastern and central \
+                    United States, from New York to Nebraska and south to Oklahoma \
+                    and Tennessee. It is widely planted as an ornamental and urban \
+                    shade tree — valued for its tolerance of drought, pollution, \
+                    alkaline soils, and road salt, making it a popular choice for \
+                    city streetscapes and parks.
+
+                    The tree produces thick, leathery seed pods 6\u{2013}10 inches \
+                    long that persist on the tree through winter and eventually \
+                    fall to the ground in spring. The pods contain large, hard \
+                    seeds surrounded by a sticky, sweet pulp. Both the raw seeds \
+                    and the pulp contain cytisine — a nicotine-like alkaloid that \
+                    is the same toxin found in golden chain tree (Laburnum). The \
+                    primary risk to pets is dogs chewing on fallen pods, which are \
+                    large and conspicuous enough to attract attention.
+                    """,
+                toxicityInfo: """
+                    **How it causes harm**
+
+                    Kentucky coffee tree pods and raw seeds contain cytisine and \
+                    related quinolizidine alkaloids — the same class of toxins \
+                    found in golden chain tree (Laburnum) and lupine. Cytisine \
+                    binds to nicotinic acetylcholine receptors, initially causing \
+                    stimulation (excitability, salivation, rapid heart rate) \
+                    followed by receptor blockade at higher doses (muscle weakness, \
+                    tremors, respiratory depression). The sticky pulp surrounding \
+                    the seeds also contains saponins that cause direct \
+                    gastrointestinal irritation.
+
+                    The concentration of cytisine in Kentucky coffee tree is lower \
+                    than in Laburnum, and the seeds are large and hard enough that \
+                    most dogs would not consume many without significant chewing. \
+                    Most exposures result in gastrointestinal upset rather than \
+                    serious systemic toxicity. However, a dog that thoroughly \
+                    chews and swallows multiple seeds — or a small mammal that \
+                    consumes even a small amount — could develop more significant \
+                    neurological and cardiac signs.
+
+                    **The Coffee That Isn\u{2019}t**
+
+                    The tree\u{2019}s common name comes from a practice among \
+                    early European settlers in Kentucky and the Ohio River Valley, \
+                    who roasted the large seeds and brewed them as a coffee \
+                    substitute when genuine coffee was unavailable or too expensive \
+                    on the frontier. The roasting process destroys the cytisine, \
+                    rendering the seeds non-toxic — raw seeds are the hazard, not \
+                    roasted ones. Indigenous peoples of the eastern woodlands, \
+                    including the Meskwaki (Fox) and other nations, also used the \
+                    roasted seeds and recognized that the raw seeds were harmful. \
+                    The tree\u{2019}s genus name, Gymnocladus, means \
+                    \u{201C}naked branch\u{201D} in Greek — a reference to the \
+                    tree\u{2019}s strikingly bare winter silhouette, as it is one \
+                    of the last trees to leaf out in spring and one of the first \
+                    to drop its leaves in fall.
+
+                    **A Tree Built for Cities**
+
+                    Kentucky coffee tree has become one of the most recommended \
+                    urban replacement trees in North America — frequently suggested \
+                    as a substitute for ash trees lost to the emerald ash borer. \
+                    Its tolerance for compacted soil, salt spray, drought, and air \
+                    pollution makes it exceptionally well-suited to streetscapes, \
+                    parking lots, and parks. Many municipalities now plant \
+                    seedless male cultivars (\u{201C}Espresso\u{201D} and \
+                    \u{201C}Stately Manor\u{201D} are common) specifically to \
+                    avoid pod litter — and incidentally eliminating the toxicity \
+                    risk entirely. If you are choosing a new tree for a yard with \
+                    pets, a male (podless) cultivar is the safe choice.
+
+                    **Pods on the Ground**
+
+                    The primary exposure scenario for dogs is not the living tree \
+                    — it is fallen pods. Kentucky coffee tree pods are thick, \
+                    woody, and 6\u{2013}10 inches long. They persist on the tree \
+                    through winter and accumulate on the ground beneath it in \
+                    spring. The sticky, sweet-smelling pulp inside the pods can \
+                    attract dogs that investigate with their mouths. Because the \
+                    pods are large and conspicuous, they are easy for owners to \
+                    identify and remove — but only if the owner knows to look \
+                    for them.
+                    """,
+                onsetTime: OnsetTime(
+                    early: "Gastrointestinal signs (vomiting, drooling, diarrhea) typically appear within 1–4 hours of ingestion",
+                    delayed: "Neurological signs (tremors, weakness, incoordination) may develop with larger ingestions; most cases resolve within 24 hours with supportive care"
+                ),
+                symptoms: [
+                    "Vomiting",
+                    "Drooling (hypersalivation)",
+                    "Diarrhea",
+                    "Abdominal discomfort",
+                    "Lethargy",
+                    "Tremors (larger ingestions)",
+                    "Weakness or incoordination (larger ingestions)",
+                    "Rapid heart rate (larger ingestions)",
+                    "Excitement or agitation followed by depression (larger ingestions)"
+                ],
+                entrySeverity: .moderate,
+                speciesRisks: [
+                    SpeciesRisk(species: .dog, severity: .moderate, notes: "Most likely species to encounter and chew fallen pods. The sticky, sweet-smelling pulp attracts investigation. Most exposures cause GI upset; serious systemic toxicity is possible with large seed ingestion but uncommon."),
+                    SpeciesRisk(species: .cat, severity: .low, notes: "Cats rarely ingest seed pods. Low exposure risk under normal circumstances."),
+                    SpeciesRisk(species: .smallMammal, severity: .moderate, notes: "Rabbits and guinea pigs with outdoor access could encounter fallen pods. Small body size means less material is needed to cause effects. Keep outdoor enclosures clear of fallen pods."),
+                    SpeciesRisk(species: .bird, severity: .low, notes: "Limited data. Birds are unlikely to consume the large, hard seeds in meaningful quantities."),
+                    SpeciesRisk(species: .reptile, severity: .low, notes: "Not a meaningful concern for captive reptiles under normal husbandry.")
+                ],
+                preventionTips: [
+                    "Learn to identify Kentucky coffee tree pods — they are thick, leathery, 6–10 inches long, and accumulate on the ground in spring",
+                    "Promptly clear fallen pods from areas where dogs walk or play",
+                    "If planting a new Kentucky coffee tree, choose a male (podless) cultivar such as \u{2018}Espresso\u{2019} or \u{2018}Stately Manor\u{2019} — these produce no pods and eliminate the toxicity risk",
+                    "Do not allow dogs to chew on fallen pods — the sticky pulp can be attractive",
+                    "Keep outdoor rabbit and guinea pig enclosures away from beneath Kentucky coffee trees during pod-drop season",
+                    "If your dog has ingested pod material, contact your veterinarian or animal poison control — bring a pod sample if possible for identification"
+                ],
+                sources: [
+                    "ASPCA Animal Poison Control Center — Toxic and Non-Toxic Plants",
+                    "Cornell University Poisonous Plants Database — Gymnocladus dioicus",
+                    "Merck Veterinary Manual — Quinolizidine Alkaloid Toxicosis",
+                    "Wikipedia — Gymnocladus dioicus: https://en.wikipedia.org/wiki/Gymnocladus_dioicus",
+                    "US Forest Service — Gymnocladus dioicus (Kentucky Coffeetree): https://www.srs.fs.usda.gov/pubs/misc/ag_654/volume_2/gymnocladus/dioicus.htm"
+                ],
+                relatedEntries: [
+                    "e4b28653-d4b2-42a0-ac67-f22e53fc1673",  // Golden Chain Tree — shared cytisine mechanism
+                    "71347450-35e9-4be4-b472-eedc6b9cef7a"   // Lupine — shared quinolizidine alkaloid class
+                ]
             ),
 
             // MARK: - Lupine
@@ -4016,7 +4160,7 @@ Bark and roots contain the highest concentrations of ailanthone; leaves contain 
                     "Do not feed lupini beans (even prepared human-food varieties) to pets"
                 ],
                 sources: ["ASPCA Animal Poison Control Center", "Pet Poison Helpline", "Merck Veterinary Manual — Quinolizidine Alkaloid Toxicosis", "Tortoise Trust", "Panter KE, et al. Natural toxins of plant origin. In: Toxins and Other Harmful Compounds in Foods. RSC Publishing. 2017"],
-                relatedEntries: nil
+                relatedEntries: ["a1b2c3d4-0000-0000-0000-gymnocladus01"]  // Kentucky Coffee Tree — shared quinolizidine alkaloid class
             ),
 
             // MARK: - Christmas Rose & Hellebores
