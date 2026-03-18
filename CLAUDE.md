@@ -27,6 +27,10 @@ Native iOS reference app for pet owners to quickly look up toxicity information.
 - **SwiftData relationship inserts:** When adding a child record to a parent's relationship array (e.g., `pet.vaccinationRecords.append(newRecord)`), do NOT also call `modelContext.insert(newRecord)`. SwiftData handles the insert through the relationship — calling both causes a double-insert bug with duplicate records.
 - **Glossary extraction — multi-line fields:** Fields in `GlossaryService.swift` (`definition`, `searchKeywords`, `relatedTerms`) can span multiple lines. Single-line awk/sed patterns will silently miss entries with wrapped fields. **Always** use a block-based approach: accumulate lines between `GlossaryTerm(` and the closing `),`, then parse the full block. Prefer `perl -ne` with a line-by-line accumulator over awk for glossary extraction. Never assume all fields fit on one line.
 
+### Content Formatting Gotchas
+
+- **No markdown list syntax in `description` or `toxicityInfo` fields.** Lines starting with `- ` (markdown lists) use single `\n` between items. `GlossaryStyledText` splits on `\n\n` for paragraph breaks, and `AttributedString(markdown:)` swallows single `\n`, causing list items to run together with no visible separation. **Instead:** use `\n\n`-separated paragraphs with bold headers (`**EARS:**`, `**NOSE:**`, etc.) or convert short lists to inline prose. This applies to `DatabaseService.swift` and `DiseasesConditionsService.swift`. The `symptoms` and `preventionTips` arrays are unaffected — they render as individual list rows.
+
 ### SwiftUI Navigation & Gesture Gotchas
 
 - **Never replace NavigationPath for lateral navigation.** Assigning a new `NavigationPath` to swap one entry for another (same depth) is unreliable — SwiftUI may process it as pop-then-push, causing bounce-backs, transient intermediate states, or routing swipes to the wrong navigation level. Instead, keep the path stable and switch displayed content in-place via an `@Observable` context (see `BrowseNavigationContext`). The `NavigationPath` should only change for structural navigation (push/pop levels).
