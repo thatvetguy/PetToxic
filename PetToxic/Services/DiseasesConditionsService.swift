@@ -27,6 +27,7 @@ class DiseasesConditionsService {
         "1D000001-0000-0000-0000-000000000010",  // Dysecdysis (Abnormal Shedding)
         "1D000001-0000-0000-0000-000000000038",  // GI Stasis in Rabbits
         "1D000001-0000-0000-0000-000000000039",  // Hypovitaminosis A
+        "1D000001-0000-0000-0000-000000000040",  // Shell Rot
     ]
 
     /// Whether an entry is an infectious disease (Type 1)
@@ -898,7 +899,8 @@ class DiseasesConditionsService {
                     "UC Davis School of Veterinary Medicine — Reptile Husbandry Guidelines"
                 ],
                 relatedEntries: [
-                    "1D000001-0000-0000-0000-000000000039"   // Hypovitaminosis A
+                    "1D000001-0000-0000-0000-000000000039",  // Hypovitaminosis A
+                    "1D000001-0000-0000-0000-000000000040"   // Shell Rot
                 ]
             ),
 
@@ -1708,7 +1710,8 @@ class DiseasesConditionsService {
                 relatedEntries: [
                     "1D000001-0000-0000-0000-000000000033",  // Snake Mites (Ophionyssus natricis)
                     "1D000001-0000-0000-0000-000000000034",  // Inclusion Body Disease (IBD)
-                    "1D000001-0000-0000-0000-000000000039"   // Hypovitaminosis A
+                    "1D000001-0000-0000-0000-000000000039",  // Hypovitaminosis A
+                    "1D000001-0000-0000-0000-000000000040"   // Shell Rot
                 ]
             ),
 
@@ -8263,7 +8266,219 @@ class DiseasesConditionsService {
                 relatedEntries: [
                     "1D000001-0000-0000-0000-000000000005",  // Metabolic Bone Disease (MBD)
                     "1D000001-0000-0000-0000-000000000010",  // Dysecdysis (Abnormal Shedding)
-                    "1D000001-0000-0000-0000-000000000009"   // Thermal Burns
+                    "1D000001-0000-0000-0000-000000000009",  // Thermal Burns
+                    "1D000001-0000-0000-0000-000000000040"   // Shell Rot
+                ]
+            ),
+
+            // MARK: - Shell Rot (Ulcerative Shell Disease)
+            ToxicItem(
+                id: UUID(uuidString: "1D000001-0000-0000-0000-000000000040")!,
+                name: "Shell Rot (Ulcerative Shell Disease)",
+                alternateNames: [
+                    "shell rot",
+                    "ulcerative shell disease",
+                    "SCUD",
+                    "septicemic cutaneous ulcerative disease",
+                    "shell infection",
+                    "shell necrosis",
+                    "turtle shell rot",
+                    "tortoise shell rot",
+                    "shell ulcer"
+                ],
+                categories: [.diseasesAndConditions],
+                imageAsset: "shell_rot_thumb",
+                description: """
+                    Shell rot — clinically known as ulcerative shell disease — is a \
+                    progressive infection of a chelonian's shell caused by bacteria, \
+                    fungi, or both. It is one of the most common conditions seen in \
+                    captive turtles and tortoises, and in most cases it is a direct \
+                    consequence of husbandry failures that can be prevented.
+
+                    The shell of a turtle or tortoise is not inert armor — it is living \
+                    bone and keratin, richly supplied with blood vessels and nerve \
+                    endings. It is directly connected to the animal's spine and ribcage. \
+                    What begins as a soft spot, discolored patch, or minor pitting on the \
+                    surface can penetrate through the outer keratin layer (scutes) into \
+                    the underlying bone, and in severe cases reach the body cavity and \
+                    internal organs. A shell infection that reaches this depth is \
+                    life-threatening.
+
+                    Shell rot is not contagious — it cannot be transmitted from one \
+                    chelonian to another by contact. However, multiple animals sharing a \
+                    poorly maintained, chronically damp, or abrasive enclosure may all \
+                    develop the condition independently from the same environmental \
+                    deficiencies. This can appear to resemble spread, but it reflects \
+                    parallel husbandry failure rather than transmission.
+
+                    Aquatic and semi-aquatic turtles are most commonly affected due to \
+                    the moisture-rich environments they require. Tortoises and box turtles \
+                    are less commonly affected but not immune, particularly when kept in \
+                    enclosures that are too humid, too abrasive, or with inadequate \
+                    drainage. This entry focuses on chelonians (turtles, tortoises, and \
+                    terrapins). Lizards and snakes can develop analogous scale rot and \
+                    skin infections, but those conditions have distinct presentations and \
+                    are covered separately. Dogs, cats, birds, and small mammals are not \
+                    subject to this condition.
+                    """,
+                toxicityInfo: """
+                    **How It Harms the Body**
+                    The chelonian shell is composed of two main layers: the outer \
+                    keratinized scutes (the visible patterned plates) and the underlying \
+                    bone — the carapace on top and the plastron on the underside. Both \
+                    layers are vascularized living tissue. The scutes protect the bone, \
+                    and the bone protects the organs directly beneath.
+
+                    Shell rot begins when the outer surface is compromised. A small crack \
+                    from a fall or bite, chronic softening from excessive moisture, \
+                    erosion from an abrasive substrate, or tissue weakness from nutritional \
+                    deficiency (particularly calcium and vitamin A) creates an entry point \
+                    for opportunistic bacteria and fungi. Once established, the infection \
+                    breaks down tissue layer by layer.
+
+                    Early shell rot is confined to the scutes — pitting, softening, \
+                    discoloration, and a foul odor are the hallmarks at this stage. The \
+                    affected scutes may begin to lift or separate at the edges. If caught \
+                    here, outcomes with veterinary treatment are generally good.
+
+                    If the infection penetrates through the scutes into the underlying \
+                    bone (osteomyelitis — bone infection), the damage becomes significantly \
+                    more serious. The bone becomes porous, discolored, and structurally \
+                    compromised. The animal often shows systemic signs of illness at \
+                    this stage — lethargy, reduced appetite, and withdrawal.
+
+                    In the most severe cases — particularly with aggressive gram-negative \
+                    bacterial infections — the infection breaches the internal surface of \
+                    the shell and enters the coelomic cavity (the body cavity equivalent \
+                    to the abdomen). Septicemia (a life-threatening whole-body bacterial \
+                    infection) can follow, and at this stage the condition is often fatal \
+                    even with aggressive treatment.
+
+                    **Not Just Skin Deep — Why the Shell Is an Organ**
+                    Most owners understand intuitively that the shell is important, but \
+                    fewer appreciate just how anatomically integrated it is. A chelonian's \
+                    spine and ribs are fused directly into the carapace. The shell is not \
+                    worn like a house — it is part of the skeleton. Nerves run through it, \
+                    blood vessels supply it, and it can register pain. A chelonian with \
+                    shell rot is not merely disfigured — it is living with an infected bone \
+                    that is attached to its spine. This is why seemingly minor discoloration \
+                    or softness on the surface always warrants veterinary evaluation rather \
+                    than a wait-and-see approach.
+
+                    **Causes & Risk Factors**
+                    • **Chronic moisture and poor drainage (aquatic/semi-aquatic turtles)** \
+                    — aquatic turtles require clean water, but they also require a dry \
+                    basking area they can fully exit the water onto. A turtle that cannot \
+                    dry its shell completely every day is at significant risk. Stagnant, \
+                    soiled water dramatically increases bacterial load.
+
+                    • **Trauma** — shell fractures, chips, or bite wounds from tank mates \
+                    create immediate entry points for infection. Even small cracks that \
+                    appear superficial should be evaluated by a veterinarian; what is \
+                    visible on the surface rarely represents the full extent of damage.
+
+                    • **Abrasive substrate** — sharp gravel, rough rock surfaces, or \
+                    inappropriate substrate that repeatedly scratches the shell surface \
+                    creates microabrasions that accumulate into significant damage over time.
+
+                    • **Nutritional deficiencies** — calcium deficiency produces soft, \
+                    pliable shells in young chelonians that are structurally vulnerable to \
+                    compression and abrasion. Vitamin A deficiency impairs the integrity \
+                    of the epithelial tissue lining the scutes. Both conditions dramatically \
+                    increase shell rot risk when combined with environmental stressors.
+
+                    • **Poor water quality (aquatic turtles)** — high bacterial counts in \
+                    unchlorinated, unfiltered, or infrequently changed water expose the \
+                    shell surface to continuous bacterial pressure. Gram-negative bacteria \
+                    including Pseudomonas and Aeromonas species are common causative \
+                    agents and thrive in warm, stagnant, waste-laden water.
+
+                    • **Overcrowding and bite wounds** — turtles housed together may bite \
+                    each other's shells, particularly during feeding competition. Each bite \
+                    wound is a potential infection site.
+
+                    • **Low temperatures** — chelonians are ectotherms (cold-blooded); \
+                    their immune systems function optimally only within their species-\
+                    appropriate temperature range. Animals kept too cold are immunosuppressed \
+                    and significantly less able to resist opportunistic infection.
+
+                    **Treatment Goals**
+                    Veterinary treatment focuses on debriding (removing) infected and \
+                    necrotic (dead) shell tissue to halt the spread of infection, \
+                    controlling bacterial and fungal infection, supporting the animal's \
+                    immune system, and addressing the underlying husbandry deficiencies \
+                    that allowed the condition to develop. In cases where the infection \
+                    has reached the bone, treatment is more extensive and recovery is \
+                    prolonged. Shell tissue can regenerate over time with appropriate care, \
+                    but deep bone loss may result in permanent structural changes. Early \
+                    veterinary intervention significantly improves outcomes.
+
+                    **Myths vs. Facts**
+                    **Myth:** \u{201C}It\u{2019}s just a small soft spot — I\u{2019}ll keep an eye on it.\u{201D}
+                    **Fact:** Shell rot progresses beneath the surface faster than it \
+                    appears to externally. By the time a soft spot is visibly worsening, \
+                    infection may already be deeper than it looks. Early veterinary \
+                    evaluation is always the correct response to any new softness, \
+                    discoloration, pitting, or odor on the shell.
+
+                    **Myth:** \u{201C}I cleaned it with iodine/hydrogen peroxide, so it should heal.\u{201D}
+                    **Fact:** Surface antiseptics do not penetrate infected shell tissue \
+                    effectively and can damage surrounding healthy tissue. Shell rot \
+                    requires professional debridement and targeted treatment — topical \
+                    home antiseptics are not a substitute for veterinary care.
+
+                    **Myth:** \u{201C}My other turtle is fine, so it can\u{2019}t be the enclosure.\u{201D}
+                    **Fact:** Individual animals respond differently to the same \
+                    environmental stressors. One turtle developing shell rot in a shared \
+                    enclosure is a signal to evaluate the entire setup — the other \
+                    animal may develop the same problem, or may simply not have reached \
+                    the threshold yet.
+                    """,
+                toxicityInfoSectionTitle: "What makes it harmful?",
+                onsetTime: OnsetTime(
+                    early: "Early shell rot can develop over days to weeks from the point of initial shell compromise or chronic husbandry deficiency. First signs — a small soft area, slight discoloration, pitting, or faint odor — are easily missed without regular hands-on shell inspection.",
+                    delayed: "Without treatment, infection spreads progressively deeper through the scutes and into underlying bone. Bone involvement may develop over weeks to months. Systemic illness and life-threatening septicemia can follow if the infection penetrates the body cavity."
+                ),
+                symptoms: [
+                    "Soft, pliable, or spongy area on the shell (carapace or plastron)",
+                    "Discoloration — white, yellow, gray, or dark patches on the shell",
+                    "Pitting or pockmarks on the shell surface",
+                    "Lifting, separating, or flaking scutes (shell plates)",
+                    "Foul or unusual odor from the shell",
+                    "Bloody or discharge-producing areas on the shell",
+                    "Lethargy and withdrawal (suggests deeper infection)",
+                    "Loss of appetite",
+                    "Swelling around the shell margin"
+                ],
+                entrySeverity: nil,
+                speciesRisks: [
+                    SpeciesRisk(
+                        species: .reptile,
+                        severity: .severe,
+                        notes: "Chelonians (turtles, tortoises, and terrapins) are the affected group. Aquatic and semi-aquatic turtles — including red-eared sliders, painted turtles, and map turtles — are most commonly affected due to chronic moisture exposure. Tortoises and box turtles are also susceptible. Life-threatening if infection reaches the bone or body cavity. Snakes and lizards can develop scale rot, a related but distinct condition."
+                    )
+                ],
+                preventionTips: [
+                    "Ensure aquatic and semi-aquatic turtles have a dry, accessible basking area that allows the shell to dry completely every day — this is non-negotiable for preventing chronic moisture damage",
+                    "Maintain clean, filtered water with regular water changes; bacterial load in soiled water is a primary driver of shell infections in aquatic turtles",
+                    "Choose smooth, non-abrasive substrate and décor; sharp edges and rough gravel create microabrasions that accumulate into infection risk over time",
+                    "Provide species-appropriate temperatures at all times — chelonians kept too cold are immunosuppressed and cannot resist opportunistic infection",
+                    "Ensure diet provides adequate calcium and vitamin A; nutritional deficiencies produce structurally vulnerable shells and impair immune function",
+                    "Perform regular hands-on shell inspections — run a finger gently over the entire carapace and plastron to detect early softness, discoloration, or pitting before it becomes visible to the eye alone",
+                    "Any shell crack, bite wound, or chip should be evaluated by a veterinarian promptly — do not wait for visible worsening",
+                    "House compatible animals together and avoid overcrowding; bite wounds are a common shell rot entry point in communal enclosures",
+                    "Wash hands thoroughly after handling any chelonian with suspected or confirmed shell rot; opportunistic bacteria involved (including Pseudomonas and Aeromonas species) can pose a risk to immunocompromised individuals"
+                ],
+                sources: [
+                    "Merck Veterinary Manual — Shell Diseases in Reptiles",
+                    "VCA Animal Hospitals — Shell Rot in Turtles",
+                    "LafeberVet — Ulcerative Shell Disease in Chelonians",
+                    "Veterinary Partner — Turtle and Tortoise Shell Problems"
+                ],
+                relatedEntries: [
+                    "1D000001-0000-0000-0000-000000000005",  // Metabolic Bone Disease (MBD)
+                    "1D000001-0000-0000-0000-000000000010",  // Dysecdysis (Abnormal Shedding)
+                    "1D000001-0000-0000-0000-000000000039"   // Hypovitaminosis A
                 ]
             ),
         ]
