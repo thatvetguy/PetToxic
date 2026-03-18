@@ -3531,7 +3531,246 @@ class DiseasesConditionsService {
                     "Wikipedia — Feline Infectious Peritonitis",
                     "MDPI Veterinary Sciences — From Challenge to Cure: FIP and Emerging Treatment Strategies (2025)"
                 ],
-                relatedEntries: nil
+                relatedEntries: [
+                    "1D000001-0000-0000-0000-000000000019"  // FeLV
+                ]
+            ),
+
+            // MARK: - Feline Leukemia Virus (FeLV)
+            ToxicItem(
+                id: UUID(uuidString: "1D000001-0000-0000-0000-000000000019")!,
+                name: "Feline Leukemia Virus (FeLV)",
+                alternateNames: [
+                    "FeLV",
+                    "Feline Leukemia",
+                    "Feline Leukaemia Virus",
+                    "Feline Leukemia Virus Disease",
+                    "feline leukemia",
+                    "felv positive",
+                    "FeLV positive",
+                    "retrovirus cat",
+                    "cat leukemia"
+                ],
+                categories: [.diseasesAndConditions],
+                imageAsset: "felv_thumb",
+                description: """
+                Feline Leukemia Virus (FeLV) is one of the most significant infectious \
+                diseases affecting cats worldwide — and historically, the leading \
+                infectious cause of cancer-related death in the species. It is caused \
+                by a retrovirus that invades the cat's immune system and blood-forming \
+                tissues, progressively dismantling the body's ability to defend itself. \
+                Depending on how a cat's immune system responds to infection, the \
+                outcome can range from complete clearance to lifelong progressive \
+                disease. In its most serious form, FeLV causes immunosuppression, \
+                life-threatening cancers, and severe blood disorders. There is no cure.
+
+                FeLV is a vaccine-preventable disease. Vaccination has dramatically \
+                reduced its prevalence over the past three decades, and widespread \
+                testing and prevention efforts have made FeLV far less common than it \
+                once was. Despite this progress, it remains a serious and widespread \
+                threat — particularly for cats with outdoor access, those living in \
+                multi-cat households, and kittens. All cats should be tested for FeLV, \
+                and all cats at risk of exposure should be vaccinated.
+
+                The virus spreads between cats through close social contact — primarily \
+                through saliva, but also through nasal secretions, urine, feces, and \
+                milk. Mutual grooming, shared food and water dishes, shared litter \
+                boxes, bite wounds, and mother-to-kitten transmission (both in the womb \
+                and through nursing) are all established routes. Kittens are \
+                significantly more susceptible than adults and are at the greatest risk \
+                of developing progressive, life-threatening infection if exposed. FeLV \
+                does not survive long outside the cat's body — typically only a matter \
+                of hours under normal household conditions — and is readily destroyed \
+                by standard disinfectants.
+
+                FeLV affects domestic cats and some wild felids, including lions, \
+                cheetahs, and Florida panthers. It is not transmissible to dogs, other \
+                companion animals, or humans, and is not considered a zoonotic disease.
+
+                When a cat is exposed to FeLV, one of three outcomes occurs. In some \
+                cats — particularly healthy adults — the immune system successfully \
+                clears the virus (abortive infection), and the cat shows no signs of \
+                disease and cannot infect others. In others, the virus becomes dormant \
+                in the bone marrow (regressive infection) — these cats are typically \
+                healthy but may reactivate the virus if they become immunosuppressed \
+                later in life. In the most serious outcome (progressive infection), the \
+                virus replicates continuously in the bone marrow, the cat sheds virus \
+                to other cats, and the risk of FeLV-associated disease is high. Kittens \
+                are far more likely than adults to develop progressive infection.
+                """,
+                toxicityInfo: """
+                **How It Harms the Body**
+
+                FeLV is a retrovirus — a category of virus that works by inserting \
+                copies of its own genetic material into the DNA of the host's cells. \
+                Once inside a cat, FeLV initially replicates in the lymphoid tissue of \
+                the throat before spreading via infected white blood cells to the bone \
+                marrow. The bone marrow is the body's blood cell factory, and its \
+                infection is the central catastrophe of FeLV. From there, the virus \
+                can spread to the salivary glands, lymph nodes, and throughout the body.
+
+                The consequences of progressive FeLV infection fall into three \
+                overlapping categories. First, immunosuppression: FeLV cripples the \
+                immune system, leaving affected cats vulnerable to infections that a \
+                healthy cat would easily fight off. Bacteria, viruses, fungi, and \
+                parasites that are harmless in normal cats can cause life-threatening \
+                illness in FeLV-positive cats. Second, cancer: FeLV is the most common \
+                infectious cause of cancer in cats. It promotes tumor development by \
+                disrupting the genetic machinery that regulates cell growth. Lymphoma \
+                and leukemia are the most common cancers associated with progressive \
+                FeLV infection. Third, blood disorders: FeLV can directly suppress red \
+                blood cell production, causing severe non-regenerative anemia, or \
+                disrupt platelet function, leading to bleeding problems.
+
+                Neurological disease can also occur, either as a result of lymphoma \
+                pressing on the brain or spinal cord, or through a direct toxic effect \
+                of the virus itself on nerve tissue.
+
+                **Transmission & Spread**
+
+                FeLV spreads almost exclusively between cats through close social \
+                contact. The virus is present in highest concentrations in saliva — \
+                mutual grooming and shared food and water dishes are among the most \
+                common transmission routes. Bite wounds, while less frequent, are an \
+                efficient route due to the high viral load in saliva. Nasal secretions, \
+                urine, feces, and milk can also carry virus, and infected queens \
+                routinely transmit FeLV to kittens in the womb and through nursing.
+
+                FeLV does not persist in the environment. Outside a cat's body, the \
+                virus survives only hours under normal household conditions and is \
+                destroyed by most standard disinfectants. This means that a home where \
+                an FeLV-positive cat has lived can be safely introduced to a new, \
+                healthy cat within days of the infected cat's departure.
+
+                Because FeLV is shed primarily in saliva, cats that do not engage in \
+                close social contact with other cats carry very low risk of exposure. \
+                Indoor-only cats with no contact with unknown cats are at minimal risk. \
+                Outdoor cats, cats in shelters or multi-cat households, and cats from \
+                unknown histories carry the greatest risk.
+
+                **Treatment Goals**
+
+                There is no treatment that eliminates FeLV from a cat's body. \
+                Management of FeLV-positive cats focuses on supporting quality of life, \
+                monitoring closely for complications, and treating secondary infections \
+                and FeLV-associated diseases as they arise. Secondary infections — \
+                which occur because the immune system can no longer defend the cat \
+                effectively — may be treatable even when the underlying FeLV infection \
+                is not.
+
+                FeLV-positive cats with progressive infection require more frequent \
+                veterinary monitoring than healthy cats — at minimum every six months, \
+                and promptly at any sign of new illness. Keeping FeLV-positive cats \
+                strictly indoors both protects them from additional infectious \
+                exposures and prevents transmission to other cats. All FeLV-positive \
+                cats should be neutered.
+
+                Cats with regressive infection often live normal, healthy lifespans \
+                with no signs of disease, though monitoring for reactivation is \
+                appropriate.
+
+                **Vaccination: The Most Important Prevention Tool**
+
+                FeLV is one of the most effectively vaccine-preventable diseases in \
+                cats. The vaccine is recommended for all kittens and for any adult cat \
+                with outdoor access or exposure to cats of unknown FeLV status. The \
+                standard protocol involves an initial series of two vaccinations \
+                followed by a booster. Vaccination has been directly credited with the \
+                significant reduction in FeLV prevalence observed over the past three \
+                decades.
+
+                All cats should be tested for FeLV before vaccination — vaccinating a \
+                cat that is already infected provides no benefit and does not alter the \
+                course of disease. A negative test before vaccination confirms that the \
+                vaccine has something to protect against.
+
+                **The Most Common Infectious Cancer Cause**
+
+                FeLV holds a grim distinction: it is the most common infectious cause \
+                of cancer in cats. In the 1980s, FeLV was associated with the majority \
+                of feline lymphoma cases. Decades of vaccination and testing programs \
+                have shifted this dramatically — today, most cats diagnosed with \
+                lymphoma test negative for FeLV antigen. This transformation is a \
+                direct result of widespread vaccination, and one of the clearest \
+                examples in veterinary medicine of how a vaccine can reshape the \
+                disease landscape of a species.
+
+                **Myths vs. Facts**
+
+                **Myth:** An FeLV-positive cat will definitely get sick and die soon.
+                **Fact:** Outcome depends entirely on infection type. Cats with \
+                regressive infection often live normal, healthy lives. Even cats with \
+                progressive infection may remain well for months to years with \
+                attentive veterinary care. An FeLV-positive result is not a sentence — \
+                it is information that changes how the cat should be managed and \
+                monitored.
+
+                **Myth:** FeLV can spread to my dog or to people in the household.
+                **Fact:** FeLV is specific to the cat family. It cannot infect dogs, \
+                rabbits, other pets, or humans. No human case of FeLV infection has \
+                ever been documented.
+
+                **Myth:** FeLV can survive in my home for a long time after an \
+                infected cat was there.
+                **Fact:** FeLV is fragile outside a cat's body and typically survives \
+                only a few hours under normal household conditions. Standard \
+                disinfectants destroy it. A home where an FeLV-positive cat lived can \
+                safely house a new cat within days.
+
+                **Myth:** My indoor cat doesn't need FeLV vaccination.
+                **Fact:** Indoor status significantly reduces risk, but vaccination is \
+                still recommended for all kittens regardless of lifestyle, because \
+                circumstances change and kittens are highly susceptible. Discuss your \
+                cat's individual risk with your veterinarian.
+                """,
+                toxicityInfoSectionTitle: "What makes it harmful?",
+                onsetTime: OnsetTime(
+                    early: "Early FeLV infection typically causes no visible signs. Some cats develop brief mild illness — fever, lethargy, swollen lymph nodes — shortly after exposure, which then resolves. This can be followed by months to years without symptoms even in progressive infection.",
+                    delayed: "In progressive infection, health may deteriorate gradually over months to years, with recurrent cycles of illness and apparent recovery. Signs of FeLV-associated disease — including cancer, anemia, and recurring infections — may not appear until long after the initial infection."
+                ),
+                symptoms: [
+                    "Persistent lethargy or low energy",
+                    "Loss of appetite or gradual weight loss",
+                    "Pale or white gums (anemia)",
+                    "Recurring infections that don't resolve or keep returning (skin, eyes, respiratory, urinary)",
+                    "Enlarged lymph nodes, especially early in infection",
+                    "Difficulty breathing",
+                    "Diarrhea or vomiting that persists or recurs",
+                    "Poor coat condition",
+                    "Mouth sores or progressive dental disease",
+                    "Uneven pupil size",
+                    "Weakness in the limbs or difficulty walking",
+                    "Seizures or sudden behavioral changes"
+                ],
+                entrySeverity: nil,
+                speciesRisks: [
+                    SpeciesRisk(
+                        species: .cat,
+                        severity: .severe,
+                        notes: "Cats are the only companion animal species susceptible to FeLV. Kittens are at far greater risk of progressive infection than adults. Outdoor cats, cats in multi-cat households, and cats from shelters or catteries carry the highest risk of exposure. Indoor-only cats with no contact with unknown cats are at minimal risk."
+                    )
+                ],
+                preventionTips: [
+                    "Vaccinate all kittens against FeLV — this is one of the most effective preventive steps available. Discuss a booster schedule for adult cats with outdoor access with your veterinarian.",
+                    "Test all cats for FeLV before vaccination and before introducing a new cat to a household with existing cats.",
+                    "Keep FeLV-positive cats strictly indoors to protect both their health and the health of other cats.",
+                    "Test and quarantine any new cat before introducing them to existing household cats — FeLV-positive cats can appear completely healthy.",
+                    "Do not allow cats of unknown FeLV status to share food dishes, water bowls, or litter boxes with your cats.",
+                    "Have FeLV-positive cats examined by a veterinarian at least every six months, and promptly at any sign of illness.",
+                    "Neuter all FeLV-positive cats — neutering reduces roaming and bite wound risk, and is part of responsible management.",
+                    "If a cat in a multi-cat household tests positive, have all other cats in the household tested."
+                ],
+                sources: [
+                    "Cornell Feline Health Center — Feline Leukemia Virus",
+                    "Merck Veterinary Manual — Feline Leukemia Virus Disease",
+                    "VCA Animal Hospitals — Feline Leukemia Virus Disease Complex",
+                    "Veterinary Partner (VIN) — Feline Leukemia Virus",
+                    "Wikipedia — Feline Leukemia Virus",
+                    "PMC / NIH — Feline Leukemia Virus Infection (peer-reviewed review)"
+                ],
+                relatedEntries: [
+                    "1D000001-0000-0000-0000-000000000018"  // FIP
+                ]
             ),
         ]
     }
