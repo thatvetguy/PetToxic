@@ -20,8 +20,8 @@ Complete list of all entries with UUIDs, severity, and categories.
 | Moderate | 33 |
 | Low/Moderate | 4 |
 | Low | 17 |
-| nil (Informational) | 38 |
-| **Total** | **229** |
+| nil (Informational) | 42 |
+| **Total** | **233** |
 
 | Category | Count |
 |----------|-------|
@@ -35,7 +35,7 @@ Complete list of all entries with UUIDs, severity, and categories.
 | Holiday Hazards | 11 |
 | Cleaning Products | 9 |
 | Recreational Substances | 8 |
-| Diseases & Conditions | 42 |
+| Diseases & Conditions | 46 |
 
 *Counts exceed total because entries can be cross-listed in multiple categories.*
 
@@ -369,6 +369,10 @@ Complete list of all entries with UUIDs, severity, and categories.
 | Hypovitaminosis A (Vitamin A Deficiency) | `1D000001-0000-0000-0000-000000000039` | nil | Reptiles, Birds, Small Mammals |
 | Shell Rot (Ulcerative Shell Disease) | `1D000001-0000-0000-0000-000000000040` | nil | Reptiles |
 | Stomatitis / Mouth Rot (Infectious Stomatitis) | `1D000001-0000-0000-0000-000000000041` | nil | Reptiles |
+| Reptile Respiratory Infections | `1D000001-0000-0000-0000-000000000042` | nil | Reptiles |
+| Reptile Husbandry Guide | `1D000001-0000-0000-0000-000000000043` | nil | Reptiles |
+| Bird Husbandry Guide | `1D000001-0000-0000-0000-000000000044` | nil | Birds |
+| Small Mammal Husbandry Guide | `1D000001-0000-0000-0000-000000000045` | nil | Small Mammals |
 
 ### Special Entry
 
@@ -378,7 +382,7 @@ Complete list of all entries with UUIDs, severity, and categories.
 
 ---
 
-## Alphabetical Index (All 229 Entries)
+## Alphabetical Index (All 233 Entries)
 
 | Name | UUID | Severity | Categories |
 |------|------|----------|------------|
@@ -408,6 +412,7 @@ Complete list of all entries with UUIDs, severity, and categories.
 | Bee, Wasp, and Ant Stings (Hymenoptera) | `00112233-4455-6677-8899-aabbccddef06` | Moderate | Outdoor Hazards |
 | Benzocaine (Orajel, Anbesol) | `ddee1122-ff33-4455-6677-889900aabbcc` | Severe | Medications |
 | Benzodiazepines (Anti-Anxiety & Sleep Medications) | `ee556677-8899-aabb-ccdd-eeff00112244` | High | Medications |
+| Bird Husbandry Guide | `1D000001-0000-0000-0000-000000000044` | nil | Diseases & Conditions |
 | Bird of Paradise (Caesalpinia) | `892498a6-3354-4bad-a3e3-1553972d6bae` | Severe | Plants |
 | Birth Control Pills | `77ee5566-ff00-1122-3344-556677889900` | Moderate | Medications |
 | Bittersweet | `03a94b12-a160-4244-a3b0-a8050554a062` | Moderate | Plants, Holiday Hazards |
@@ -564,6 +569,8 @@ Complete list of all entries with UUIDs, severity, and categories.
 | Rabies | `1D000001-0000-0000-0000-000000000001` | Severe | Diseases & Conditions |
 | Ranunculus (Buttercup) | `ee90d3c6-f9cc-40ab-ae91-c13bc481ab16` | Low | Plants |
 | Raw Yeast Dough | `ec90eb4b-765b-45cb-9255-f449b656b7d3` | Severe | Foods, Holiday Hazards |
+| Reptile Husbandry Guide | `1D000001-0000-0000-0000-000000000043` | nil | Diseases & Conditions |
+| Reptile Respiratory Infections | `1D000001-0000-0000-0000-000000000042` | nil | Diseases & Conditions |
 | RHDV2 (Rabbit Hemorrhagic Disease) | `1D000001-0000-0000-0000-000000000032` | nil | Diseases & Conditions |
 | Ringworm (Dermatophytosis) | `1D000001-0000-0000-0000-000000000013` | nil | Diseases & Conditions |
 | Rodenticides (Overview) | `049e1259-f968-4e23-aa8c-5110cb52a08c` | nil | Informational, Garage & Garden |
@@ -576,6 +583,7 @@ Complete list of all entries with UUIDs, severity, and categories.
 | Silica Gel Packets | `c3d4e5f6-7a8b-9c0d-1e2f-3a4b5c6d7e8f` | Low | Household Items |
 | Skunk Spray | `00112233-4455-6677-8899-aabbccddef04` | Low | Outdoor Hazards |
 | Sleep Aids (Prescription & OTC) | `ff667788-99aa-bbcc-ddee-ff0011223355` | Moderate | Medications |
+| Small Mammal Husbandry Guide | `1D000001-0000-0000-0000-000000000045` | nil | Diseases & Conditions |
 | Slug & Snail Bait (Metaldehyde) | `a7d3e8f2-6b4c-4a1e-9f5d-2c8b7a3e6d1f` | Severe | Garage & Garden |
 | Snake Mites (Ophionyssus natricis) | `1D000001-0000-0000-0000-000000000033` | nil | Diseases & Conditions |
 | Snake Plant & Dracaena | `edb87d20-62af-4382-883e-5f979b4b7892` | Low | Plants |
