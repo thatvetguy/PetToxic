@@ -709,7 +709,8 @@ class DiseasesConditionsService {
                 ],
                 relatedEntries: [
                     "1D000001-0000-0000-0000-000000000030",  // PBFD
-                    "1D000001-0000-0000-0000-000000000035"   // Air Sac Mites (Sternostoma tracheacolum)
+                    "1D000001-0000-0000-0000-000000000035",  // Air Sac Mites (Sternostoma tracheacolum)
+                    "1D000001-0000-0000-0000-000000000036"   // PDD (Proventricular Dilatation Disease)
                 ]
             ),
 
@@ -6421,7 +6422,8 @@ class DiseasesConditionsService {
                 ],
                 relatedEntries: [
                     "1D000001-0000-0000-0000-000000000004",  // Psittacosis (Parrot Fever)
-                    "1D000001-0000-0000-0000-000000000035"   // Air Sac Mites (Sternostoma tracheacolum)
+                    "1D000001-0000-0000-0000-000000000035",  // Air Sac Mites (Sternostoma tracheacolum)
+                    "1D000001-0000-0000-0000-000000000036"   // PDD (Proventricular Dilatation Disease)
                 ]
             ),
 
@@ -7297,7 +7299,248 @@ class DiseasesConditionsService {
                 relatedEntries: [
                     "1D000001-0000-0000-0000-000000000004",  // Psittacosis (Parrot Fever)
                     "1D000001-0000-0000-0000-000000000014",  // Aspergillosis
-                    "1D000001-0000-0000-0000-000000000030"   // PBFD (Psittacine Beak and Feather Disease)
+                    "1D000001-0000-0000-0000-000000000030",  // PBFD (Psittacine Beak and Feather Disease)
+                    "1D000001-0000-0000-0000-000000000036"   // PDD (Proventricular Dilatation Disease)
+                ]
+            ),
+
+            // MARK: - Proventricular Dilatation Disease (PDD)
+            ToxicItem(
+                id: UUID(uuidString: "1D000001-0000-0000-0000-000000000036")!,
+                name: "Proventricular Dilatation Disease (PDD)",
+                alternateNames: ["PDD", "avian bornavirus", "parrot bornavirus", "macaw wasting disease", "macaw wasting syndrome", "proventricular dilatation syndrome", "neuropathic gastric dilatation", "PaBV", "ABV", "avian ganglioneuritis", "proventricular dilation disease"],
+                categories: [.diseasesAndConditions],
+                imageAsset: "pdd_thumb",
+                description: """
+                    Proventricular Dilatation Disease (PDD) is a progressive, \
+                    often fatal neurological and gastrointestinal disease of \
+                    psittacine birds — parrots, macaws, cockatoos, African greys, \
+                    conures, and their relatives — caused by Avian Bornavirus \
+                    (specifically Parrot Bornavirus, or PaBV). The virus attacks \
+                    the nerves of the digestive tract and, in many cases, the \
+                    central nervous system, leading to a gradual loss of the \
+                    ability to digest and pass food normally.
+
+                    The disease is chronic and insidious. Birds may carry the \
+                    virus for months to years before signs appear, and early \
+                    symptoms are often subtle — weight loss in a bird that still \
+                    has a good appetite, or the passage of obviously undigested \
+                    food in the droppings. By the time severe signs develop, \
+                    significant and often irreversible nerve damage has occurred.
+
+                    PDD is not vaccine-preventable. It is not considered a \
+                    significant zoonotic risk to humans based on current evidence. \
+                    The disease is contagious among psittacine birds through \
+                    exposure to feces and feather dust from infected individuals. \
+                    Dogs, cats, small mammals, and reptiles are not susceptible.
+
+                    Any psittacine bird can be affected, but macaws, African \
+                    greys, cockatoos, Amazon parrots, and conures are among the \
+                    most frequently reported species. Birds of any age may be \
+                    affected, though younger birds and recently acquired birds \
+                    introduced from unknown sources are at elevated risk.
+                    """,
+                toxicityInfo: """
+                    **How It Harms the Body**
+
+                    Parrot Bornavirus (PaBV) is a neurotropic virus — meaning it \
+                    specifically targets nerve tissue. After infection, the virus \
+                    triggers an immune-mediated inflammatory response \
+                    (lymphoplasmacytic ganglioneuritis) that progressively destroys \
+                    the ganglia (nerve clusters) that control the muscular activity \
+                    of the gastrointestinal tract. The result is a loss of \
+                    coordinated motility — the rhythmic muscular contractions that \
+                    move food through the digestive system slow, stall, and \
+                    eventually fail.
+
+                    The proventriculus — the glandular, enzyme-secreting portion \
+                    of the avian stomach that sits just before the muscular \
+                    gizzard — becomes dilated and dysfunctional as nerve supply \
+                    is lost. Food accumulates, ferments, and passes undigested. \
+                    Despite eating normally or even voraciously, the bird is \
+                    effectively starving: nutrients cannot be properly absorbed \
+                    from food that never undergoes normal digestion.
+
+                    In a significant proportion of cases, Avian Bornavirus also \
+                    invades the central nervous system, causing neurological \
+                    signs that may be subtle at first — mild incoordination or \
+                    unusual posturing — and progress to ataxia (loss of \
+                    coordinated movement), seizures, blindness, or severe \
+                    weakness. CNS involvement often carries a more guarded \
+                    outlook than purely gastrointestinal disease.
+
+                    **Transmission & Spread**
+
+                    Avian Bornavirus is shed primarily in the feces and urine \
+                    of infected birds, and via feather dust and respiratory \
+                    secretions. Infection occurs through ingestion of or contact \
+                    with contaminated material — shared food and water dishes, \
+                    shared perches, or direct bird-to-bird contact. Feather dust \
+                    in aviaries with high bird density is a significant exposure \
+                    route.
+
+                    One of the most challenging aspects of PDD control is the \
+                    prolonged incubation period: infected birds may shed virus \
+                    for months to years before showing any clinical signs. A \
+                    newly acquired bird that appears completely healthy may \
+                    already be infected and actively shedding, making quarantine \
+                    and testing essential before any new bird is introduced to \
+                    an existing collection. There is no reliable way to confirm \
+                    a bird is uninfected based on appearance alone.
+
+                    ABV has been detected in wild psittacine populations and in \
+                    a range of non-psittacine bird species, though clinical \
+                    disease in species other than parrots is less well \
+                    characterized.
+
+                    **Treatment Goals**
+
+                    There is currently no cure for PDD. Veterinary management \
+                    focuses on reducing the severity of the inflammatory nerve \
+                    response, supporting nutritional status with highly digestible \
+                    diets that reduce the digestive workload, managing \
+                    neurological signs where present, and maintaining quality of \
+                    life for as long as possible. Some birds with well-managed \
+                    GI disease achieve stable periods with appropriate care, \
+                    but the disease is progressive and cannot be reversed. \
+                    Early veterinary involvement is essential for diagnosis — \
+                    which typically requires imaging, crop biopsy, or PCR \
+                    testing — and for developing an appropriate long-term \
+                    management plan.
+
+                    Infected birds in multi-bird households represent an \
+                    ongoing transmission risk. An avian veterinarian should \
+                    guide decisions about isolation, testing of flock mates, \
+                    and long-term management of the affected bird and any \
+                    potentially exposed companions.
+
+                    **The Disease That Had No Name**
+
+                    PDD has one of the more dramatic discovery histories in \
+                    avian medicine. Beginning in the 1970s, veterinarians and \
+                    breeders in Europe and North America began encountering a \
+                    mysterious wasting disease in imported macaws — birds that \
+                    ate well but lost weight steadily, eventually passing \
+                    obviously undigested food and dying of malnutrition or \
+                    sudden neurological collapse. With no identifiable cause, \
+                    the condition was called Macaw Wasting Disease, then \
+                    Macaw Wasting Syndrome, then Proventricular Dilatation \
+                    Syndrome — names that described what was happening without \
+                    explaining why.
+
+                    The cause remained unknown for more than three decades. It \
+                    was not until 2008 that two independent research groups \
+                    simultaneously identified a novel bornavirus — now known as \
+                    Parrot Bornavirus — as the causative agent, using advanced \
+                    genomic sequencing techniques unavailable to earlier \
+                    researchers. The discovery reframed PDD from a mysterious \
+                    GI condition into a neurological disease with a viral driver, \
+                    and opened the door to PCR-based diagnostic testing that is \
+                    now widely used in avian practice.
+
+                    The broader Bornavirus family has an unusual history of its \
+                    own: the original Borna disease virus was first described in \
+                    sheep and horses in Borna, Germany in the late 19th century, \
+                    and the town's name became permanently attached to the entire \
+                    viral family. Avian bornaviruses are genetically distinct from \
+                    mammalian bornaviruses, and their discovery significantly \
+                    expanded understanding of how widely distributed this viral \
+                    group is across vertebrate species.
+
+                    **The Hungry Bird That Starves**
+
+                    Perhaps no aspect of PDD is more distressing to owners than \
+                    this: many affected birds maintain a normal or even increased \
+                    appetite throughout much of the disease course. A bird may \
+                    eat enthusiastically, appear engaged and alert, and yet lose \
+                    weight steadily because its damaged digestive system can no \
+                    longer extract nutrition from what it consumes. Droppings \
+                    containing clearly undigested seeds or food particles — a \
+                    finding called \u{201C}whole seed passage\u{201D} — are one \
+                    of the most telling early signs that something is \
+                    fundamentally wrong with digestive function.
+
+                    This disconnect between apparent appetite and progressive \
+                    weight loss is a key reason routine weight monitoring is \
+                    recommended for all pet parrots. A kitchen gram scale and \
+                    a weekly weigh-in can detect clinically meaningful weight \
+                    loss weeks before a bird looks visibly thin.
+
+                    **Myths vs. Facts**
+
+                    **Myth:** PDD is a stomach disease.
+                    **Fact:** PDD is primarily a neurological disease. The \
+                    stomach (proventriculus) dilates and fails because the nerves \
+                    controlling it are destroyed — the stomach itself is not the \
+                    primary target. In many birds, the central nervous system is \
+                    also affected, producing signs that have nothing to do with \
+                    digestion.
+
+                    **Myth:** A bird with PDD will obviously look sick.
+                    **Fact:** PDD is insidious. Birds can carry and shed Avian \
+                    Bornavirus for months to years before any sign of illness \
+                    appears. Early disease may show only as subtle weight loss \
+                    or slightly abnormal droppings — signs easy to overlook \
+                    without regular monitoring and veterinary checkups.
+
+                    **Myth:** Isolating the sick bird is sufficient to protect \
+                    the rest of a flock.
+                    **Fact:** Because infected birds shed virus before they show \
+                    signs, other birds in the household may already have been \
+                    exposed by the time one bird is diagnosed. All flock mates \
+                    should be evaluated and tested by an avian veterinarian, \
+                    not just the bird showing clinical signs.
+                    """,
+                toxicityInfoSectionTitle: "What makes it harmful?",
+                onsetTime: OnsetTime(
+                    early: "Incubation period is highly variable — infected birds may shed virus for months to years before signs appear. Early signs are often subtle: gradual weight loss despite normal appetite, mild changes in droppings such as the presence of undigested food, or slight behavioral changes.",
+                    delayed: "Progressive weight loss, regurgitation, and passage of clearly undigested food develop as nerve damage advances. Neurological signs — incoordination, seizures, weakness — may appear at any stage and indicate central nervous system involvement. Advanced disease is typically irreversible."
+                ),
+                symptoms: [
+                    "Progressive weight loss despite normal or increased appetite",
+                    "Undigested food in droppings (whole seeds or obvious food particles visible)",
+                    "Regurgitation or vomiting",
+                    "Crop impaction or slow crop emptying (delayed crop transit)",
+                    "Distended or visibly enlarged crop or abdomen",
+                    "Passage of abnormal droppings — unusually wet, bulky, or foul-smelling",
+                    "Ataxia — stumbling, loss of balance, difficulty perching",
+                    "Tremors or muscle weakness",
+                    "Seizures",
+                    "Head tilt or abnormal posturing",
+                    "Blindness or apparent visual disturbance",
+                    "Lethargy and decreased activity",
+                    "Fluffed feathers or behavioral changes"
+                ],
+                entrySeverity: nil,
+                speciesRisks: [
+                    SpeciesRisk(
+                        species: .bird,
+                        severity: .severe,
+                        notes: "Primarily affects psittacine birds — parrots, macaws, cockatoos, African greys, Amazon parrots, conures, and related species. Macaws, African greys, and cockatoos are among the most frequently reported. Birds of any age may be affected. ABV has been detected in non-psittacine species but clinical disease is less well characterized. Dogs, cats, small mammals, and reptiles are not susceptible."
+                    )
+                ],
+                preventionTips: [
+                    "Quarantine all new birds for a minimum of 30–45 days in a completely separate airspace before introducing them to an existing flock — and consult an avian veterinarian about PCR testing for Avian Bornavirus during the quarantine period.",
+                    "Weigh your bird regularly using a kitchen gram scale — weekly weigh-ins can detect meaningful weight loss weeks before a bird looks visibly thin. Keep a written log.",
+                    "Schedule regular wellness exams with an avian veterinarian familiar with psittacines — many cases of PDD are diagnosed incidentally during routine checkups.",
+                    "Do not share food dishes, water dishes, perches, or toys between a newly acquired bird and existing birds until quarantine is complete and veterinary clearance is obtained.",
+                    "If one bird in a multi-bird household is diagnosed with PDD, have all flock mates evaluated and tested — birds can shed ABV long before showing clinical signs.",
+                    "Clean and disinfect cage surfaces, food and water dishes, and perches regularly, particularly in multi-bird households.",
+                    "Source new birds from reputable breeders or rescues with established health-testing protocols; avoid acquiring birds whose history is unknown."
+                ],
+                sources: [
+                    "LafeberVet — Proventricular Dilatation Disease (PDD)",
+                    "Merck Veterinary Manual — Proventricular Dilatation Disease in Birds",
+                    "VCA Animal Hospitals — Proventricular Dilatation Disease in Birds",
+                    "Cornell University College of Veterinary Medicine — Avian Health",
+                    "Wikipedia — Avian bornavirus",
+                    "Wikipedia — Proventricular dilatation disease",
+                    "PetMD — Proventricular Dilatation Disease in Birds"
+                ],
+                relatedEntries: [
+                    "1D000001-0000-0000-0000-000000000004",  // Psittacosis (Parrot Fever)
+                    "1D000001-0000-0000-0000-000000000030",  // PBFD (Psittacine Beak and Feather Disease)
+                    "1D000001-0000-0000-0000-000000000035"   // Air Sac Mites
                 ]
             ),
         ]
