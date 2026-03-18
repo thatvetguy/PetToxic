@@ -3,9 +3,9 @@
 Complete list of all entries with UUIDs, severity, and categories.
 
 - Toxin/informational entries in `DatabaseService.swift`: 186
-- Disease/condition entries in `DiseasesConditionsService.swift`: 23 (Pro-locked)
+- Disease/condition entries in `DiseasesConditionsService.swift`: 24 (Pro-locked)
 - Severity explainer: 1
-- **Total entries: 210**
+- **Total entries: 211**
 
 *Last updated: 2026-03-17 (Session 153)*
 
@@ -21,7 +21,7 @@ Complete list of all entries with UUIDs, severity, and categories.
 | Low/Moderate | 4 |
 | Low | 17 |
 | nil (Informational) | 26 |
-| **Total** | **210** |
+| **Total** | **211** |
 
 | Category | Count |
 |----------|-------|
@@ -35,7 +35,7 @@ Complete list of all entries with UUIDs, severity, and categories.
 | Holiday Hazards | 11 |
 | Cleaning Products | 9 |
 | Recreational Substances | 8 |
-| Diseases & Conditions | 23 |
+| Diseases & Conditions | 24 |
 
 *Counts exceed total because entries can be cross-listed in multiple categories.*
 
@@ -351,6 +351,7 @@ Complete list of all entries with UUIDs, severity, and categories.
 | Feline Herpesvirus-1 (FHV-1) | `1D000001-0000-0000-0000-000000000021` | nil | Cats |
 | Tick-Borne Diseases | `1D000001-0000-0000-0000-000000000022` | nil | Dogs, Cats, Small Mammals |
 | GI Parasites | `1D000001-0000-0000-0000-000000000023` | nil | Dogs, Cats, Small Mammals, Birds, Reptiles |
+| Toxoplasma | `1D000001-0000-0000-0000-000000000024` | nil | Dogs, Cats, Small Mammals, Birds |
 
 ### Special Entry
 
@@ -360,7 +361,7 @@ Complete list of all entries with UUIDs, severity, and categories.
 
 ---
 
-## Alphabetical Index (All 210 Entries)
+## Alphabetical Index (All 211 Entries)
 
 | Name | UUID | Severity | Categories |
 |------|------|----------|------------|
@@ -559,6 +560,7 @@ Complete list of all entries with UUIDs, severity, and categories.
 | Toad Poisoning (Bufo Toads) | `00112233-4455-6677-8899-aabbccddef05` | Severe | Outdoor Hazards |
 | Toilet Bowl Cleaners | `66778899-aabb-ccdd-eeff-001122334455` | High | Cleaning Products |
 | Tomato & Potato Plants | `d8d69209-6177-411e-bd92-c541af9fe79d` | Moderate | Plants, Foods |
+| Toxoplasma | `1D000001-0000-0000-0000-000000000024` | nil | Diseases & Conditions |
 | Tradescantia (Wandering Jew) | `be55d11f-23dc-4c16-a5a5-545740026b2b` | Low | Plants |
 | Traditional Laundry Detergent | `99001122-aabb-ccdd-eeff-334455667788` | Low | Cleaning Products |
 | Tree of Heaven | `3C48AB30-D291-4519-9F2F-B4DA1E0D4C02` | Moderate | Plants |

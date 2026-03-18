@@ -4903,7 +4903,219 @@ class DiseasesConditionsService {
                     "Cornell University College of Veterinary Medicine — Giardia: https://www.vet.cornell.edu/animal-health-diagnostic-center/testing/protocols/giardia"
                 ],
                 relatedEntries: [
-                    "1D000001-0000-0000-0000-000000000022"  // Tick-Borne Diseases
+                    "1D000001-0000-0000-0000-000000000022",  // Tick-Borne Diseases
+                    "1D000001-0000-0000-0000-000000000024"   // Toxoplasma
+                ]
+            ),
+
+            // MARK: - Toxoplasma
+            ToxicItem(
+                id: UUID(uuidString: "1D000001-0000-0000-0000-000000000024")!,
+                name: "Toxoplasma",
+                alternateNames: [
+                    "toxoplasmosis",
+                    "Toxoplasma gondii",
+                    "T. gondii",
+                    "toxoplasma infection",
+                    "toxoplasma parasite",
+                    "cat parasite zoonotic",
+                    "litter box disease",
+                    "cat feces parasite",
+                    "protozoan parasite cat",
+                    "oocyst",
+                    "tissue cyst",
+                    "bradyzoite",
+                    "tachyzoite"
+                ],
+                categories: [.diseasesAndConditions],
+                imageAsset: "toxoplasma_thumb",
+                description: """
+                Toxoplasma gondii is a single-celled protozoan parasite that infects \
+                virtually all warm-blooded animals — but cats hold a unique and \
+                important role in its lifecycle. Cats are the only animals in which \
+                Toxoplasma can complete its sexual reproductive cycle, making them \
+                the definitive host and the primary source of environmentally \
+                infectious oocysts (eggs).
+
+                Most healthy adult cats infected with Toxoplasma show no clinical \
+                signs at all. The same is true for most other species — including \
+                humans. However, the infection carries serious risks for pregnant \
+                animals and people, and for any individual whose immune system is \
+                compromised. Understanding how Toxoplasma spreads and how to reduce \
+                exposure risk is essential for any multi-pet or multi-person household.
+                """,
+                toxicityInfo: """
+                **How It Harms the Body**
+
+                Toxoplasma gondii is an obligate intracellular parasite — it can only \
+                survive and reproduce inside the cells of a host. After ingestion, the \
+                parasite invades intestinal cells and rapidly multiplies as tachyzoites \
+                (fast-replicating forms), spreading through the bloodstream to muscles, \
+                the brain, the eyes, and other organs. In healthy, immunocompetent \
+                animals, the immune system contains the infection within weeks, and the \
+                parasite transitions to slow-replicating bradyzoites enclosed in tissue \
+                cysts — where they can remain dormant for the animal\u{2019}s lifetime.
+
+                In immunocompromised animals or young kittens, this containment can \
+                fail. Active tachyzoite replication causes severe inflammation wherever \
+                the parasite establishes — most dangerously in the lungs (pneumonia), \
+                liver (hepatitis), and brain and spinal cord (encephalitis, seizures, \
+                blindness). These presentations can be life-threatening.
+
+                **The Definitive Host: Why Cats Are Central**
+
+                Cats are the only animals in which Toxoplasma undergoes sexual \
+                reproduction, producing oocysts in the intestines that are then shed \
+                in feces. A cat newly exposed to Toxoplasma (typically by hunting and \
+                eating infected prey, or ingesting oocysts from the environment) will \
+                shed millions of oocysts in its feces for approximately one to three \
+                weeks. After this primary infection, the cat\u{2019}s immune system typically \
+                stops oocyst shedding entirely — most cats shed oocysts only once in \
+                their lifetime.
+
+                Freshly shed oocysts are not immediately infectious. They must \
+                sporulate in the environment — a process that takes one to five days \
+                depending on temperature and humidity. This means that a litter box \
+                cleaned daily before sporulation occurs dramatically reduces the risk \
+                of environmental contamination. Cats that are kept exclusively indoors \
+                and do not hunt or eat raw meat are at very low risk of ever acquiring \
+                — and therefore shedding — Toxoplasma.
+
+                **Transmission & Spread**
+
+                Toxoplasma reaches new hosts through three main routes:
+
+                Oocysts from cat feces: Sporulated oocysts in soil, sandboxes, water, \
+                or unwashed produce are ingested by humans or animals. This is the \
+                environmental contamination route most associated with cats.
+
+                Tissue cysts in raw or undercooked meat: Animals raised for food \
+                (sheep, pigs, venison) or hunted prey commonly harbor dormant tissue \
+                cysts. Carnivores and omnivores that eat raw meat — or pets fed raw \
+                diets — are at risk via this route.
+
+                Transplacental transmission: In pregnant animals (and humans) \
+                experiencing a primary infection, tachyzoites can cross the placenta \
+                and infect developing offspring, causing severe congenital disease, \
+                stillbirth, or abortion.
+
+                **Treatment Goals**
+
+                There is no treatment that eliminates Toxoplasma entirely — once \
+                tissue cysts form, they persist for life. Treatment goals focus on \
+                suppressing active tachyzoite replication during clinical disease. \
+                Antiprotozoal and antibiotic combinations prescribed by a veterinarian \
+                can reduce the severity of active infection and allow the immune system \
+                to regain control. Animals with neurological signs may require \
+                additional supportive medications. Immunocompromised pets may need \
+                long-term or lifelong suppressive therapy.
+
+                **Zoonotic Risk**
+
+                Toxoplasma is one of the most widespread zoonotic parasites in the \
+                world. The CDC estimates that more than 40 million people in the \
+                United States carry a latent Toxoplasma infection — the vast majority \
+                with no symptoms.
+
+                The primary concern is for pregnant women and immunocompromised \
+                individuals. In pregnant women experiencing a primary Toxoplasma \
+                infection, the parasite can cross the placenta and cause congenital \
+                toxoplasmosis in the fetus — potentially resulting in miscarriage, \
+                stillbirth, or serious developmental problems including brain damage \
+                and vision loss. Pregnant women are routinely advised to avoid \
+                changing cat litter boxes for this reason.
+
+                Immunocompromised individuals — those undergoing chemotherapy, \
+                living with HIV/AIDS, or taking immunosuppressive medications — \
+                are at risk of reactivation of a previously dormant infection, \
+                which can cause life-threatening encephalitis.
+
+                **Practical Risk Reduction at Home**
+
+                Clean litter boxes daily — oocysts take 1–5 days to become \
+                infectious, so daily removal breaks the transmission cycle.
+
+                Pregnant women and immunocompromised individuals should delegate \
+                litter box duty; if unavoidable, wear gloves and wash hands thoroughly.
+
+                Keep cats indoors and avoid feeding raw or undercooked meat.
+
+                Wear gloves when gardening (soil contamination from wildlife feces).
+
+                Wash hands after handling cats and before preparing food.
+
+                Wash fruits and vegetables thoroughly before eating.
+
+                If you or a family member may have been exposed, or if your pet is \
+                showing signs of illness, contact a veterinarian or physician promptly.
+                """,
+                toxicityInfoSectionTitle: "What makes it harmful?",
+                onsetTime: OnsetTime(
+                    early: "In cats with active clinical disease, signs typically appear 2–4 weeks after initial infection during the tachyzoite replication phase. Most cats never show observable signs. Kittens and immunocompromised cats may deteriorate rapidly.",
+                    delayed: "Tissue cysts persist for life without causing signs in healthy animals. Reactivation of dormant infection in immunocompromised animals can occur weeks to months after the primary infection appeared to resolve."
+                ),
+                symptoms: [
+                    "Fever",
+                    "Lethargy and loss of appetite",
+                    "Difficulty breathing (pneumonia — especially in kittens)",
+                    "Jaundice — yellowing of gums or whites of eyes (liver involvement)",
+                    "Neurological signs: seizures, tremors, incoordination, head tilt",
+                    "Vision changes or blindness (uveitis — inflammation inside the eye)",
+                    "Muscle weakness or pain",
+                    "Vomiting and diarrhea",
+                    "Enlarged lymph nodes",
+                    "Abortion or stillbirth (pregnant animals with primary infection)",
+                    "Many infected animals show no clinical signs at all"
+                ],
+                entrySeverity: nil,
+                speciesRisks: [
+                    SpeciesRisk(
+                        species: .dog,
+                        severity: .moderate,
+                        notes: "Dogs are intermediate hosts — they cannot shed oocysts. Most infections are subclinical. Clinical toxoplasmosis in dogs typically presents as neurological or muscle disease and is more common in immunocompromised animals. Dogs on immunosuppressive medications or with concurrent illness (e.g., distemper) are at higher risk. Contact a veterinarian if neurological signs or unexplained fever develop."
+                    ),
+                    SpeciesRisk(
+                        species: .cat,
+                        severity: .moderate,
+                        notes: "Cats are the definitive host and the only animals that shed oocysts. Most adult cats are asymptomatic during and after infection. Severe clinical disease — pneumonia, hepatitis, encephalitis — occurs mainly in kittens or immunocompromised cats. Cats shed oocysts for only a brief window (1–3 weeks) after primary infection and typically do not shed again. Indoor cats with no raw meat exposure are at very low risk."
+                    ),
+                    SpeciesRisk(
+                        species: .smallMammal,
+                        severity: .high,
+                        notes: "Small mammals — particularly rabbits, guinea pigs, and rodents — are classic intermediate hosts and can develop severe systemic disease including liver failure and neurological signs. Rodents serve as a major natural reservoir through the cat-prey-cat cycle. Any small mammal showing neurological signs or rapid deterioration warrants urgent veterinary evaluation."
+                    ),
+                    SpeciesRisk(
+                        species: .bird,
+                        severity: .moderate,
+                        notes: "Birds can be infected with Toxoplasma and serve as intermediate hosts. Canaries and pigeons are among the more susceptible species. Clinical disease may include respiratory signs, neurological signs, and sudden death in heavily infected birds. Avian toxoplasmosis is less commonly diagnosed than in mammals but should be considered in birds with unexplained illness."
+                    ),
+                    SpeciesRisk(
+                        species: .reptile,
+                        severity: .low,
+                        notes: "Reptiles are not considered significant hosts for Toxoplasma. Documentation of clinical toxoplasmosis in reptiles is rare. The parasite\u{2019}s lifecycle and tropism are strongly oriented toward warm-blooded vertebrates. Exotic reptile veterinary consultation is warranted for any unexplained illness."
+                    )
+                ],
+                preventionTips: [
+                    "Clean litter boxes daily — oocysts require 1–5 days outside the body to become infectious; daily removal breaks the transmission cycle",
+                    "Pregnant women and immunocompromised individuals should avoid changing litter boxes; if unavoidable, use gloves and wash hands thoroughly afterward",
+                    "Keep cats indoors and prevent hunting — cats that do not eat prey or raw meat are at very low risk of acquiring or shedding Toxoplasma",
+                    "Do not feed cats raw or undercooked meat",
+                    "Wear gloves when gardening — outdoor soil may be contaminated with oocysts from wildlife feces",
+                    "Wash hands thoroughly after handling cats or cleaning litter boxes",
+                    "Wash all fruits and vegetables before eating",
+                    "Cover children\u{2019}s sandboxes when not in use",
+                    "Pregnant women should discuss Toxoplasma risk with their obstetrician at the start of pregnancy"
+                ],
+                sources: [
+                    "CDC — Toxoplasmosis: https://www.cdc.gov/parasites/toxoplasmosis/",
+                    "Merck Veterinary Manual — Toxoplasmosis: https://www.merckvetmanual.com/generalized-conditions/toxoplasmosis/toxoplasmosis-in-animals",
+                    "Cornell University College of Veterinary Medicine — Toxoplasmosis: https://www.vet.cornell.edu/departments-centers-and-institutes/cornell-feline-health-center/health-information/feline-health-topics/toxoplasmosis-cats",
+                    "AVMA — Toxoplasmosis: https://www.avma.org/resources-tools/pet-owners/petcare/toxoplasmosis",
+                    "ASPCA Animal Poison Control Center — Toxoplasmosis overview",
+                    "UC Davis School of Veterinary Medicine — Zoonotic Disease: Toxoplasmosis: https://www.vetmed.ucdavis.edu/hospital/small-animal/ccah/zoonoses"
+                ],
+                relatedEntries: [
+                    "1D000001-0000-0000-0000-000000000023"  // GI Parasites
                 ]
             ),
         ]
