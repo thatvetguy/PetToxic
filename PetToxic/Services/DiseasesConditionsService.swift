@@ -3267,6 +3267,272 @@ class DiseasesConditionsService {
                     "1D000001-0000-0000-0000-000000000016"   // Coccidioidomycosis (Valley Fever)
                 ]
             ),
+
+            // MARK: - Feline Infectious Peritonitis (FIP)
+            ToxicItem(
+                id: UUID(uuidString: "1D000001-0000-0000-0000-000000000018")!,
+                name: "Feline Infectious Peritonitis (FIP)",
+                alternateNames: [
+                    "FIP",
+                    "Feline Coronavirus Disease",
+                    "FIPV",
+                    "Feline Infectious Peritonitus",
+                    "Wet FIP",
+                    "Dry FIP",
+                    "Effusive FIP",
+                    "Non-Effusive FIP",
+                    "feline peritonitis",
+                    "feline corona virus"
+                ],
+                categories: [.diseasesAndConditions],
+                imageAsset: "fip_thumb",
+                description: """
+                Feline Infectious Peritonitis (FIP) is a severe, progressive viral \
+                disease of cats — and one of the most feared diagnoses in feline \
+                medicine. For decades, it was considered universally and inevitably \
+                fatal. A diagnosis of FIP was effectively a death sentence: there was \
+                no treatment, and cats typically declined rapidly, surviving days to \
+                weeks at most. That has changed dramatically in recent years with the \
+                development of antiviral medications that target the virus directly. \
+                While these drugs are not yet fully approved for veterinary use in all \
+                regions (regulatory approval is pending or in process in several \
+                countries), they are increasingly available through veterinarians and \
+                have transformed FIP from a terminal diagnosis into a manageable — and \
+                in many cases curable — disease. Any cat suspected of having FIP should \
+                be evaluated for antiviral treatment as early as possible.
+
+                What makes FIP unusual is that it is not caused by an outside pathogen \
+                entering the body — it is caused by a transformation of one already \
+                there. Feline enteric coronavirus (FCoV) is a common, usually harmless \
+                gut virus found in a large proportion of cats worldwide. In a small \
+                number of cats, FCoV mutates spontaneously within the individual animal \
+                into a dangerous, immune-evading form — feline infectious peritonitis \
+                virus (FIPV) — that escapes the gut and spreads through the body. \
+                Crucially, this mutation happens inside the individual cat. FIP itself \
+                is not transmitted from cat to cat; what spreads between cats is \
+                ordinary FCoV, which most carriers never develop into FIP.
+
+                FIP presents in two primary forms. The \u{201C}wet\u{201D} (effusive) \
+                form causes fluid to accumulate in the abdomen or chest cavity, and \
+                progresses rapidly. The \u{201C}dry\u{201D} (non-effusive) form is \
+                slower and more insidious, often affecting the nervous system, eyes, \
+                kidneys, and liver. Some cats develop features of both forms. In either \
+                case, the disease is life-threatening and requires urgent veterinary \
+                evaluation.
+
+                Compounding the challenge of FIP is how notoriously difficult it is to \
+                diagnose in a living animal. There is no single test that confirms FIP. \
+                Diagnosis requires a combination of clinical signs, bloodwork patterns, \
+                imaging, and — when fluid is present — fluid analysis. Even then, \
+                certainty is often elusive, and many veterinarians describe a working \
+                diagnosis as highly consistent with FIP rather than definitively \
+                confirmed. Historically, tissue examination after death was the only \
+                way to confirm the diagnosis with certainty.
+
+                Young cats are at greatest risk — the majority of cases are diagnosed \
+                in cats under two years of age — though older cats can develop FIP as \
+                well. Cats living in multi-cat households, catteries, breeding \
+                facilities, and shelters carry higher risk due to greater FCoV exposure. \
+                Purebred cats and male cats appear to be overrepresented for reasons \
+                that are not fully understood. FIP affects cats only; no other \
+                companion animal species are susceptible. No vaccine against FIP is \
+                currently widely recommended.
+                """,
+                toxicityInfo: """
+                **How It Harms the Body**
+
+                FIP begins with a mutation: ordinary feline enteric coronavirus, \
+                typically confined to the gut, undergoes genetic changes that allow it \
+                to infect and replicate inside monocytes and macrophages — the very \
+                white blood cells the immune system sends to fight infections. Rather \
+                than being destroyed, the mutated virus hijacks these immune cells and \
+                uses them to travel throughout the body.
+
+                The result is an abnormal, overwhelming inflammatory response. In the \
+                wet (effusive) form, inflammation causes blood vessel walls to become \
+                leaky, allowing fluid to pour into the abdominal or chest cavity. In \
+                the dry (non-effusive) form, the immune response generates dense \
+                clusters of inflammatory cells (pyogranulomas) that form in organs — \
+                including the liver, kidneys, eyes, and brain. Both forms destroy \
+                normal tissue function. Neurological involvement, when it occurs, \
+                indicates the virus has reached the central nervous system and signals \
+                an advanced stage of disease.
+
+                **Transmission & Spread**
+
+                FCoV — the harmless gut virus from which FIPV derives — is highly \
+                contagious between cats. It spreads primarily through feces, shared \
+                litter boxes, contaminated surfaces, grooming, and saliva. Multi-cat \
+                environments such as catteries, shelters, and breeding facilities have \
+                high FCoV prevalence. FCoV can persist in the environment for days to \
+                weeks and is inactivated by standard disinfectants including dilute \
+                bleach.
+
+                FIP itself, however, is not meaningfully transmissible between cats. \
+                The FIPV mutation occurs independently within each affected individual. \
+                Studies have confirmed that cats with FIP are not infectious to healthy \
+                cats via normal exposure routes. This is a critical point that is \
+                frequently misunderstood: isolating a cat with FIP is not necessary to \
+                prevent FIP in housemates — though routine hygiene measures to limit \
+                FCoV spread remain worthwhile.
+
+                **Treatment Goals**
+
+                Before effective antivirals became available, treatment of FIP was \
+                purely palliative — managing symptoms such as draining accumulated \
+                fluid, supporting nutrition, and keeping the cat comfortable until the \
+                disease progressed beyond what the animal could tolerate. Without \
+                specific antiviral treatment, FIP is nearly always fatal.
+
+                Antiviral medications are now available and have dramatically changed \
+                outcomes for cats with FIP. These medications are not yet fully \
+                approved in all regions — regulatory approval is pending or in process \
+                in several countries — but they are increasingly accessible through \
+                veterinarians and have transformed FIP from a death sentence into a \
+                condition that many cats survive. The goal of treatment is to suppress \
+                viral replication, allow the immune system to regain control, and \
+                achieve clinical remission. Treatment courses are typically measured in \
+                weeks to months, and close veterinary monitoring is essential \
+                throughout.
+
+                If FIP is suspected, do not wait. Early initiation of antiviral therapy \
+                is associated with better outcomes. Cats with advanced neurological or \
+                ocular FIP can still respond to treatment, but the window for \
+                meaningful response narrows as the disease progresses. Owners should \
+                raise the question of antiviral treatment explicitly with their \
+                veterinarian at the first suspicion of FIP.
+
+                **A Death Sentence Reversed**
+
+                For most of the history of veterinary medicine, a diagnosis of FIP was \
+                delivered with the same weight as a terminal cancer prognosis. \
+                Veterinarians had nothing to offer but time and comfort. The disease \
+                was studied extensively, but treatment remained out of reach — antiviral \
+                compounds tested over the decades either failed in clinical use or \
+                caused unacceptable side effects.
+
+                The development of antiviral medications effective against FIP — \
+                emerging in part from broader coronavirus and antiviral research — \
+                changed the landscape entirely. By the late 2010s and into the 2020s, \
+                these drugs were demonstrating remarkable efficacy in research settings \
+                and in client-owned cats. Legal veterinary access followed in several \
+                countries, and more recently in the United States. Though regulatory \
+                approval remains pending or in process in many regions, access through \
+                veterinary channels has expanded substantially.
+
+                FIP is still a serious disease requiring prompt, expert veterinary \
+                management. But the era in which a diagnosis meant certain death is over.
+
+                **The Mutation Within**
+
+                What makes FIP scientifically unusual is that no cat \u{201C}catches\u{201D} \
+                FIP from another cat. A cat catches FCoV — the common, harmless gut \
+                coronavirus — and then, in a small fraction of cases, the virus mutates \
+                inside that individual cat into something dangerous. The trigger for \
+                this mutation is not fully understood. Viral genetics, the dose of \
+                initial infection, the cat's immune status, age, stress, and possibly \
+                genetic predisposition all appear to play roles.
+
+                Because the mutation is unpredictable and individual, most cats that \
+                carry FCoV — which in high-density environments can be the majority — \
+                never develop FIP at all. The same household may have ten cats with \
+                FCoV antibodies and only one develops FIP. There is currently no test \
+                that predicts which cat carrying FCoV will undergo the mutation.
+
+                **A Diagnosis Without a Test**
+
+                FIP is one of the hardest diseases to confirm in a living animal. No \
+                single test is definitive. Antibody tests detect exposure to FCoV — \
+                not FIP — and most seropositive cats are perfectly healthy. PCR tests \
+                detect coronavirus RNA but cannot reliably distinguish harmless FCoV \
+                from the disease-causing mutated form. Even supportive findings must be \
+                interpreted as part of a larger clinical picture.
+
+                A working FIP diagnosis is typically built from a constellation of \
+                findings: the right patient profile (young, purebred, or shelter-origin \
+                cat), persistent fever unresponsive to antibiotics, weight loss, \
+                abnormal bloodwork patterns, characteristic fluid when present, and \
+                imaging findings. In cats with effusion, fluid analysis showing high \
+                protein content with low cell counts is strongly supportive. In dry \
+                FIP, the picture is murkier and the diagnostic path longer.
+
+                Historically, the only way to confirm FIP with certainty was tissue \
+                examination after death. Today, with effective antivirals available, \
+                veterinarians sometimes make the clinical decision to begin antiviral \
+                treatment in a cat with a high-suspicion diagnosis — a trial of \
+                treatment that, if effective, provides additional evidence that FIP was \
+                the correct diagnosis.
+
+                **Myths vs. Facts**
+
+                **Myth:** FIP is contagious — if one cat in my household has FIP, the \
+                others will get it.
+                **Fact:** FIP is not transmitted between cats. Ordinary feline \
+                coronavirus (FCoV) is contagious, but the mutation that causes FIP \
+                happens independently within each individual cat. Housemates of a cat \
+                with FIP are not at risk of catching FIP from that cat.
+
+                **Myth:** FIP is always fatal.
+                **Fact:** This was true for most of veterinary history. It is no longer \
+                true. Antiviral medications have fundamentally changed outcomes for cats \
+                with FIP. Many cats treated early achieve full clinical remission.
+
+                **Myth:** A positive coronavirus test means my cat has FIP.
+                **Fact:** FCoV exposure is extremely common in cats, especially those \
+                from multi-cat environments. A positive antibody or PCR test reflects \
+                exposure to the common gut form of the virus — not FIP. Most cats with \
+                positive coronavirus tests never develop FIP.
+
+                **Myth:** Only kittens get FIP.
+                **Fact:** Young cats are at highest risk, and the majority of cases are \
+                diagnosed in cats under two years of age. However, FIP can occur at any \
+                age, including in older cats.
+                """,
+                toxicityInfoSectionTitle: "What makes it harmful?",
+                onsetTime: OnsetTime(
+                    early: "FCoV infection itself often causes no symptoms, or brief mild diarrhea in kittens. The mutation to FIP-causing virus can occur weeks to months after initial FCoV infection and often appears without obvious warning.",
+                    delayed: "Wet (effusive) FIP typically progresses rapidly once signs appear, with cats declining over days to weeks. Dry (non-effusive) FIP may develop gradually over weeks to months with subtle, intermittent signs that are easy to miss early."
+                ),
+                symptoms: [
+                    "Loss of appetite",
+                    "Unexplained weight loss or failure to gain weight",
+                    "Persistent lethargy",
+                    "Pot-bellied or distended abdomen (fluid accumulation)",
+                    "Difficulty breathing or rapid, shallow breathing (fluid in chest)",
+                    "Fever that does not respond to standard treatment",
+                    "Yellowing of the skin, gums, or whites of the eyes (jaundice)",
+                    "Cloudy, red, or visibly changed eyes",
+                    "Wobbling, loss of coordination, or difficulty walking",
+                    "Seizures or sudden behavioral changes",
+                    "Neurological signs: head tilt, circling, or abnormal eye movements"
+                ],
+                entrySeverity: nil,
+                speciesRisks: [
+                    SpeciesRisk(
+                        species: .cat,
+                        severity: .severe,
+                        notes: "Cats are the only species affected by FIP. Young cats under two years of age and those from multi-cat environments, catteries, or shelters carry the greatest risk. Purebred cats and male cats appear to be overrepresented. Older cats may also develop FIP, though less commonly."
+                    )
+                ],
+                preventionTips: [
+                    "If FIP is suspected, seek veterinary evaluation immediately — do not wait for symptoms to worsen. Antiviral treatment is most effective when started early.",
+                    "Ask your veterinarian explicitly about antiviral treatment options if FIP is suspected or diagnosed. These medications are increasingly available and have transformed outcomes for many cats.",
+                    "Reduce FCoV transmission in multi-cat households: clean litter boxes frequently, keep litter areas away from food and water, and avoid crowded living conditions.",
+                    "Quarantine and test new cats before introducing them to an existing multi-cat household to limit FCoV spread.",
+                    "Minimize stress in your cat's environment — stress is recognized as a potential factor in disease progression from FCoV to FIP.",
+                    "Ask your veterinarian about FCoV screening if your cat comes from a high-risk environment such as a cattery or shelter.",
+                    "No vaccine against FIP is currently widely recommended by major veterinary organizations."
+                ],
+                sources: [
+                    "Cornell Feline Health Center — Feline Infectious Peritonitis",
+                    "Merck Veterinary Manual — Feline Infectious Peritonitis",
+                    "UC Davis School of Veterinary Medicine — Feline Coronavirus & FIP",
+                    "International Cat Care (iCatCare) — Feline Infectious Peritonitis",
+                    "Wikipedia — Feline Infectious Peritonitis",
+                    "MDPI Veterinary Sciences — From Challenge to Cure: FIP and Emerging Treatment Strategies (2025)"
+                ],
+                relatedEntries: nil
+            ),
         ]
     }
 }
