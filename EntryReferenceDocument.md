@@ -20,8 +20,8 @@ Complete list of all entries with UUIDs, severity, and categories.
 | Moderate | 33 |
 | Low/Moderate | 4 |
 | Low | 17 |
-| nil (Informational) | 26 |
-| **Total** | **217** |
+| nil (Informational) | 38 |
+| **Total** | **229** |
 
 | Category | Count |
 |----------|-------|
@@ -35,7 +35,7 @@ Complete list of all entries with UUIDs, severity, and categories.
 | Holiday Hazards | 11 |
 | Cleaning Products | 9 |
 | Recreational Substances | 8 |
-| Diseases & Conditions | 30 |
+| Diseases & Conditions | 42 |
 
 *Counts exceed total because entries can be cross-listed in multiple categories.*
 
@@ -358,6 +358,17 @@ Complete list of all entries with UUIDs, severity, and categories.
 | Fleas | `1D000001-0000-0000-0000-000000000028` | nil | Dogs, Cats, Small Mammals |
 | Encephalitozoon cuniculi (E. cuniculi) | `1D000001-0000-0000-0000-000000000029` | nil | Small Mammals, Dogs |
 | Psittacine Beak and Feather Disease (PBFD) | `1D000001-0000-0000-0000-000000000030` | nil | Birds |
+| Rabbit Ear Mites (Psoroptes cuniculi) | `1D000001-0000-0000-0000-000000000031` | nil | Small Mammals, Dogs, Cats |
+| RHDV2 (Rabbit Hemorrhagic Disease) | `1D000001-0000-0000-0000-000000000032` | nil | Small Mammals |
+| Snake Mites (Ophionyssus natricis) | `1D000001-0000-0000-0000-000000000033` | nil | Reptiles |
+| Inclusion Body Disease (IBD) | `1D000001-0000-0000-0000-000000000034` | nil | Reptiles |
+| Air Sac Mites (Sternostoma tracheacolum) | `1D000001-0000-0000-0000-000000000035` | nil | Birds |
+| Proventricular Dilatation Disease (PDD) | `1D000001-0000-0000-0000-000000000036` | nil | Birds |
+| Coccidiosis & Cryptosporidiosis | `1D000001-0000-0000-0000-000000000037` | nil | Dogs, Cats, Small Mammals, Birds, Reptiles |
+| GI Stasis in Rabbits (Gut Shutdown) | `1D000001-0000-0000-0000-000000000038` | nil | Small Mammals |
+| Hypovitaminosis A (Vitamin A Deficiency) | `1D000001-0000-0000-0000-000000000039` | nil | Reptiles, Birds, Small Mammals |
+| Shell Rot (Ulcerative Shell Disease) | `1D000001-0000-0000-0000-000000000040` | nil | Reptiles |
+| Stomatitis / Mouth Rot (Infectious Stomatitis) | `1D000001-0000-0000-0000-000000000041` | nil | Reptiles |
 
 ### Special Entry
 
@@ -367,7 +378,7 @@ Complete list of all entries with UUIDs, severity, and categories.
 
 ---
 
-## Alphabetical Index (All 217 Entries)
+## Alphabetical Index (All 229 Entries)
 
 | Name | UUID | Severity | Categories |
 |------|------|----------|------------|
@@ -375,6 +386,7 @@ Complete list of all entries with UUIDs, severity, and categories.
 | Acrylamide (Hydrogel Products) | `aa2c3266-831b-4db5-b7e9-41bd7d6f4c80` | Severe | Household Items |
 | ADHD Medications (Amphetamines & Stimulants) | `11889900-aabb-ccdd-eeff-112233445566` | Severe | Medications |
 | Aflatoxin Poisoning (Aflatoxicosis) | `00112233-4455-6677-8899-aabbccddef15` | Severe | Foods |
+| Air Sac Mites (Sternostoma tracheacolum) | `1D000001-0000-0000-0000-000000000035` | nil | Diseases & Conditions |
 | Alcohol | `63f63b3a-1172-4fb2-9702-45496c99df4d` | Severe | Foods, Recreational Substances |
 | Alkaline Batteries | `b2c3d4e5-6f7a-8b9c-0d1e-2f3a4b5c6d7e` | High | Household Items |
 | Aloe Vera | `508bc9a0-e697-4c2c-83ad-e3257d597785` | Moderate | Plants |
@@ -424,6 +436,7 @@ Complete list of all entries with UUIDs, severity, and categories.
 | Cocaine | `ff001122-3344-5566-7788-99aabbccdd02` | Severe | Recreational Substances |
 | Cocoa Mulch | `f2a3b4c5-6d7e-8f9a-0b1c-2d3e4f5a6b7c` | High | Garage & Garden |
 | Coccidioidomycosis (Valley Fever) | `1D000001-0000-0000-0000-000000000016` | nil | Diseases & Conditions |
+| Coccidiosis & Cryptosporidiosis | `1D000001-0000-0000-0000-000000000037` | nil | Diseases & Conditions |
 | Colorado River Toad | `C55B5E77-7CFC-449F-A8AC-BD369A38F1EB` | Severe | Outdoor Hazards |
 | Cooked Bones | `59cf7dc4-5d83-4811-97f1-ce1d0162cd28` | nil | Informational, Foods |
 | Coral Snake Envenomation | `00112233-4455-6677-8899-aabbccddef08` | Severe | Outdoor Hazards |
@@ -462,6 +475,7 @@ Complete list of all entries with UUIDs, severity, and categories.
 | Garlic | `dad777ea-3120-43b1-9b8f-aee413716abc` | Severe | Foods |
 | GI Irritant Plants | `045fe2d3-3c59-4f15-b72a-09371b675d77` | Low | Plants, Holiday Hazards |
 | GI Parasites | `1D000001-0000-0000-0000-000000000023` | nil | Diseases & Conditions |
+| GI Stasis in Rabbits (Gut Shutdown) | `1D000001-0000-0000-0000-000000000038` | nil | Diseases & Conditions |
 | Glow Sticks | `d4e5f6a7-8b9c-0d1e-2f3a-4b5c6d7e8f9a` | Low | Household Items |
 | Golden Chain Tree | `e4b28653-d4b2-42a0-ac67-f22e53fc1673` | High | Plants |
 | Grapes & Raisins | `d1bde5cd-6881-4765-ac4c-b9f43b40da70` | Severe | Foods |
@@ -475,7 +489,9 @@ Complete list of all entries with UUIDs, severity, and categories.
 | Hops | `00112233-4455-6677-8899-aabbccddef14` | Severe | Foods, Household Items, Plants |
 | Horse Chestnut & Buckeye | `c3531735-0e34-448a-82d8-660ed4c22a24` | High | Plants |
 | Hypothermia & Frostbite | `00112233-4455-6677-8899-aabbccddef27` | nil | Informational, Outdoor Hazards |
+| Hypovitaminosis A (Vitamin A Deficiency) | `1D000001-0000-0000-0000-000000000039` | nil | Diseases & Conditions |
 | Ice Packs | `c9d0e1f2-3a4b-5c6d-7e8f-9a0b1c2d3e4f` | Low | Household Items |
+| Inclusion Body Disease (IBD) | `1D000001-0000-0000-0000-000000000034` | nil | Diseases & Conditions |
 | Inhalant Toxicity (Birds & Respiratory Hazards) | `00112233-4455-6677-8899-aabbccddef24` | nil | Informational, Household Items |
 | Inhalant Toxins (PTFE / Teflon Toxicosis) | `00112233-4455-6677-8899-aabbccddef22` | Severe | Household Items |
 | Insoluble Calcium Oxalate Plants | `f52b8aba-d899-418b-8ce6-2844408a5e3c` | Moderate | Plants |
@@ -537,15 +553,18 @@ Complete list of all entries with UUIDs, severity, and categories.
 | Pool Chemicals | `a3b4c5d6-7e8f-9a0b-1c2d-3e4f5a6b7c8d` | Severe | Garage & Garden |
 | Porcupine Quills | `00112233-4455-6677-8899-aabbccddef28` | nil | Informational, Outdoor Hazards |
 | Privet (Ligustrum) | `96000011-2233-4455-6677-889900aabb01` | Moderate | Plants |
+| Proventricular Dilatation Disease (PDD) | `1D000001-0000-0000-0000-000000000036` | nil | Diseases & Conditions |
 | Psilocybin Mushrooms & Psychedelic Edibles | `ff001122-3344-5566-7788-99aabbccdd04` | High | Recreational Substances |
 | Psittacine Beak and Feather Disease (PBFD) | `1D000001-0000-0000-0000-000000000030` | nil | Diseases & Conditions |
 | Psittacosis (Parrot Fever) | `1D000001-0000-0000-0000-000000000004` | High | Diseases & Conditions |
 | Pyrethrins & Pyrethroids (Permethrin) | `d4e5f6a7-8b9c-4d0e-a1b2-3c4d5e6f7a8b` | Severe | Garage & Garden, Medications |
 | Pythiosis | `1D000001-0000-0000-0000-000000000017` | nil | Diseases & Conditions |
 | Quaternary Ammonium Disinfectants | `88990011-aabb-ccdd-eeff-223344556677` | High | Cleaning Products |
+| Rabbit Ear Mites (Psoroptes cuniculi) | `1D000001-0000-0000-0000-000000000031` | nil | Diseases & Conditions |
 | Rabies | `1D000001-0000-0000-0000-000000000001` | Severe | Diseases & Conditions |
 | Ranunculus (Buttercup) | `ee90d3c6-f9cc-40ab-ae91-c13bc481ab16` | Low | Plants |
 | Raw Yeast Dough | `ec90eb4b-765b-45cb-9255-f449b656b7d3` | Severe | Foods, Holiday Hazards |
+| RHDV2 (Rabbit Hemorrhagic Disease) | `1D000001-0000-0000-0000-000000000032` | nil | Diseases & Conditions |
 | Ringworm (Dermatophytosis) | `1D000001-0000-0000-0000-000000000013` | nil | Diseases & Conditions |
 | Rodenticides (Overview) | `049e1259-f968-4e23-aa8c-5110cb52a08c` | nil | Informational, Garage & Garden |
 | Rosary Pea | `57801263-b55c-4c20-b12c-cff832a15077` | Severe | Plants |
@@ -553,14 +572,17 @@ Complete list of all entries with UUIDs, severity, and categories.
 | Sago Palm | `7e96af6d-05e2-438b-8391-70087f947bcb` | Severe | Plants |
 | Salt | `c9fb21d1-a66a-418e-a63f-1b754ec048f2` | High | Foods, Garage & Garden |
 | Scorpion Stings | `00112233-4455-6677-8899-aabbccddef09` | High | Outdoor Hazards |
+| Shell Rot (Ulcerative Shell Disease) | `1D000001-0000-0000-0000-000000000040` | nil | Diseases & Conditions |
 | Silica Gel Packets | `c3d4e5f6-7a8b-9c0d-1e2f-3a4b5c6d7e8f` | Low | Household Items |
 | Skunk Spray | `00112233-4455-6677-8899-aabbccddef04` | Low | Outdoor Hazards |
 | Sleep Aids (Prescription & OTC) | `ff667788-99aa-bbcc-ddee-ff0011223355` | Moderate | Medications |
 | Slug & Snail Bait (Metaldehyde) | `a7d3e8f2-6b4c-4a1e-9f5d-2c8b7a3e6d1f` | Severe | Garage & Garden |
+| Snake Mites (Ophionyssus natricis) | `1D000001-0000-0000-0000-000000000033` | nil | Diseases & Conditions |
 | Snake Plant & Dracaena | `edb87d20-62af-4382-883e-5f979b4b7892` | Low | Plants |
 | Soaps & Mild Detergents | `11223344-5566-7788-99aa-bbccddeeff00` | Low | Cleaning Products |
 | Soluble Calcium Oxalate Plants | `8e6a2493-6fc9-4ddd-83b1-acb7148fbdd4` | Moderate | Plants, Foods |
 | Stinging Nettle | `8cd181bc-9ac5-492b-9085-aa51b6b92e44` | Low | Plants |
+| Stomatitis / Mouth Rot (Infectious Stomatitis) | `1D000001-0000-0000-0000-000000000041` | nil | Diseases & Conditions |
 | Sunscreen | `d0e1f2a3-4b5c-6d7e-8f9a-0b1c2d3e4f5a` | Low/Moderate | Household Items |
 | Superglue | `00112233-4455-6677-8899-aabbccddef25` | Low/Moderate | Household Items |
 | Sweet Pea | `b3d8f2a1-6c4e-4f9b-a1d7-5e2c8b3f9a04` | Moderate | Plants |
