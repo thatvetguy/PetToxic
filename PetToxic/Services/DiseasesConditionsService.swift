@@ -4918,7 +4918,8 @@ class DiseasesConditionsService {
                     "1D000001-0000-0000-0000-000000000022",  // Tick-Borne Diseases
                     "1D000001-0000-0000-0000-000000000024",  // Toxoplasma
                     "1D000001-0000-0000-0000-000000000027",  // Baylisascaris
-                    "1D000001-0000-0000-0000-000000000028"   // Fleas
+                    "1D000001-0000-0000-0000-000000000028",  // Fleas
+                    "1D000001-0000-0000-0000-000000000037"   // Coccidiosis & Cryptosporidiosis
                 ]
             ),
 
@@ -5130,7 +5131,8 @@ class DiseasesConditionsService {
                 ],
                 relatedEntries: [
                     "1D000001-0000-0000-0000-000000000023",  // GI Parasites
-                    "1D000001-0000-0000-0000-000000000029"   // E. cuniculi
+                    "1D000001-0000-0000-0000-000000000029",  // E. cuniculi
+                    "1D000001-0000-0000-0000-000000000037"   // Coccidiosis & Cryptosporidiosis
                 ]
             ),
 
@@ -6242,7 +6244,8 @@ class DiseasesConditionsService {
                 relatedEntries: [
                     "1D000001-0000-0000-0000-000000000024",  // Toxoplasma
                     "1D000001-0000-0000-0000-000000000027",  // Baylisascaris
-                    "1D000001-0000-0000-0000-000000000031"   // Rabbit Ear Mites (Psoroptes cuniculi)
+                    "1D000001-0000-0000-0000-000000000031",  // Rabbit Ear Mites (Psoroptes cuniculi)
+                    "1D000001-0000-0000-0000-000000000037"   // Coccidiosis & Cryptosporidiosis
                 ]
             ),
 
@@ -7541,6 +7544,300 @@ class DiseasesConditionsService {
                     "1D000001-0000-0000-0000-000000000004",  // Psittacosis (Parrot Fever)
                     "1D000001-0000-0000-0000-000000000030",  // PBFD (Psittacine Beak and Feather Disease)
                     "1D000001-0000-0000-0000-000000000035"   // Air Sac Mites
+                ]
+            ),
+
+            // MARK: - Coccidiosis & Cryptosporidiosis
+            ToxicItem(
+                id: UUID(uuidString: "1D000001-0000-0000-0000-000000000037")!,
+                name: "Coccidiosis & Cryptosporidiosis",
+                alternateNames: ["coccidia", "coccidiosis", "cryptosporidium", "cryptosporidiosis", "crypto", "Isospora", "Cystoisospora", "Eimeria", "oocysts", "protozoal diarrhea", "intestinal protozoa", "coccidian parasites", "puppy coccidia", "kitten coccidia", "rabbit coccidia", "reptile cryptosporidium", "snake cryptosporidium", "Cryptosporidium varanii", "Cryptosporidium parvum"],
+                categories: [.diseasesAndConditions],
+                imageAsset: "coccidia_thumb",
+                description: """
+                    Coccidiosis and Cryptosporidiosis are two distinct but related \
+                    protozoal infections caused by microscopic single-celled \
+                    parasites belonging to the same biological group — the \
+                    Apicomplexa. Though closely related, they behave quite \
+                    differently across species and vary enormously in severity: \
+                    from a self-limiting bout of diarrhea in an otherwise healthy \
+                    puppy to a fatal, incurable wasting disease in snakes.
+
+                    Coccidia (most commonly Cystoisospora in dogs and cats, and \
+                    Eimeria in rabbits and other small mammals) primarily infect \
+                    the lining of the intestines, causing diarrhea that ranges \
+                    from mild to severe depending on the age and immune status \
+                    of the animal. Young, stressed, or immunocompromised animals \
+                    are most vulnerable. In healthy adult dogs and cats, \
+                    coccidial infections are often self-limiting, though veterinary \
+                    diagnosis and treatment are still warranted.
+
+                    Cryptosporidium is a separate genus that causes a distinct \
+                    disease with a more serious profile. In reptiles — \
+                    particularly snakes — Cryptosporidium varanii causes a \
+                    chronic, progressive gastric disease that is widely considered \
+                    incurable and often fatal. In dogs, cats, and small mammals, \
+                    Cryptosporidium typically causes diarrhea similar in \
+                    presentation to classical coccidia, but carries an additional \
+                    concern: several Cryptosporidium species are zoonotic, \
+                    capable of infecting humans.
+
+                    Neither coccidiosis nor cryptosporidiosis is \
+                    vaccine-preventable. Both spread through the fecal-oral route \
+                    via microscopic oocysts shed in the feces of infected animals.
+                    """,
+                toxicityInfo: """
+                    **How It Harms the Body**
+
+                    Both Coccidia and Cryptosporidium complete part of their life \
+                    cycle inside the cells lining the intestinal tract. They \
+                    invade and multiply within the epithelial cells (the single \
+                    cell layer that lines the gut surface), destroying them in \
+                    the process. This damages the gut's absorptive surface, \
+                    impairing the absorption of nutrients and fluids and triggering \
+                    inflammation — the result is diarrhea, dehydration, and in \
+                    severe cases, protein loss, secondary infections, and systemic \
+                    illness.
+
+                    In young animals, the intestinal lining is still maturing and \
+                    the immune system is not yet fully competent — this is why \
+                    puppies, kittens, juvenile rabbits, and hatchling reptiles are \
+                    disproportionately affected. A parasite burden that a healthy \
+                    adult might clear with minimal signs can cause life-threatening \
+                    hemorrhagic diarrhea in a six-week-old puppy or a \
+                    newly weaned rabbit.
+
+                    Cryptosporidium in reptiles follows a more destructive \
+                    course. C. varanii (the primary species affecting snakes) \
+                    does not remain limited to the intestinal surface — it \
+                    invades the gastric epithelium of the stomach and \
+                    proventriculus, triggering a chronic inflammatory reaction \
+                    that causes progressive thickening and fibrosis (hardening) \
+                    of the stomach wall. The thickened stomach can no longer \
+                    stretch and function normally, causing food to back up, \
+                    ferment, and eventually be regurgitated. The snake becomes \
+                    unable to digest and absorb prey effectively and loses weight \
+                    progressively — often despite continued feeding attempts. \
+                    This process is not reversible with currently available \
+                    treatments.
+
+                    **Transmission & Spread**
+
+                    Both parasites spread through the fecal-oral route. Infected \
+                    animals shed oocysts — microscopic, environmentally resistant \
+                    egg-like stages — in their feces. Oocysts are immediately or \
+                    near-immediately infectious when passed (unlike many \
+                    intestinal parasites that require a development period in \
+                    the environment), which makes contaminated surfaces, bedding, \
+                    soil, food, and water highly efficient transmission routes.
+
+                    Oocysts are extraordinarily resilient. They can survive for \
+                    months in moist environments and resist many standard \
+                    disinfectants. Cryptosporidium oocysts in particular are \
+                    notable for their resistance to chlorination at concentrations \
+                    used in standard water treatment — a property with significant \
+                    implications for public health.
+
+                    For reptiles, transmission within a collection occurs through \
+                    shared enclosures, shared equipment, and handling by keepers \
+                    who move between enclosures without adequate disinfection. \
+                    An infected snake may shed oocysts without showing clinical \
+                    signs, making detection difficult and silent spread within \
+                    a collection a serious concern.
+
+                    **Treatment Goals**
+
+                    For dogs, cats, and small mammals with coccidiosis, \
+                    veterinary treatment focuses on eliminating the parasitic \
+                    infection with appropriate antiparasitic therapy, correcting \
+                    dehydration and electrolyte imbalances (which can be severe \
+                    in young or small animals), managing secondary complications \
+                    such as secondary bacterial infection, and supporting the \
+                    animal's recovery with nutritional support where needed. \
+                    Most otherwise healthy animals recover well with prompt \
+                    veterinary care.
+
+                    For reptiles with Cryptosporidium, treatment goals shift \
+                    toward supportive care — maintaining body condition for as \
+                    long as possible through assisted feeding, managing secondary \
+                    complications, and maintaining quality of life — because no \
+                    reliably curative treatment currently exists for C. varanii \
+                    infection in snakes. Veterinary guidance is essential for \
+                    managing the infected animal and for protecting other reptiles \
+                    in the same collection.
+
+                    **Zoonotic Risk**
+
+                    Cryptosporidium — but not classical Coccidia — poses a \
+                    meaningful zoonotic risk. Cryptosporidium parvum and \
+                    C. hominis are the primary species that infect humans, \
+                    typically through contaminated water or contact with infected \
+                    animals or their feces. C. felis (cats), C. canis (dogs), \
+                    and C. meleagridis have all been documented causing infection \
+                    in humans, particularly in individuals who are \
+                    immunocompromised.
+
+                    Classical Coccidia (Cystoisospora, Eimeria) are \
+                    species-specific and are not considered a significant \
+                    zoonotic risk — the species infecting dogs and cats do not \
+                    normally infect humans.
+
+                    If your pet is diagnosed with Cryptosporidiosis, wash hands \
+                    thoroughly after any contact with the animal or its \
+                    environment. If you are immunocompromised, pregnant, elderly, \
+                    or very young, consult your physician about your level of \
+                    risk. Standard hygiene precautions are highly effective at \
+                    preventing transmission.
+
+                    **A Parasite That Survived Milwaukee**
+
+                    In April 1993, the municipal water supply of Milwaukee, \
+                    Wisconsin became contaminated with Cryptosporidium parvum \
+                    oocysts — almost certainly from agricultural runoff entering \
+                    the Lake Michigan intake used by one of the city's water \
+                    treatment plants. Over the following weeks, an estimated \
+                    403,000 people became ill with watery diarrhea. It remains \
+                    the largest documented waterborne disease outbreak in United \
+                    States history.
+
+                    The episode exposed a critical vulnerability: \
+                    Cryptosporidium oocysts are resistant to the chlorination \
+                    levels used in standard municipal water treatment. The \
+                    Milwaukee outbreak directly prompted the US EPA to strengthen \
+                    water treatment regulations and establish specific monitoring \
+                    requirements for Cryptosporidium in public water supplies. \
+                    It also accelerated research into the parasite's biology and \
+                    into the UV irradiation methods that are now used alongside \
+                    chlorination to address its chlorine resistance.
+
+                    For pet owners, the Milwaukee story is a reminder that \
+                    Cryptosporidium is not an exotic concern — it is a parasite \
+                    that operates at the intersection of animal health, \
+                    environmental contamination, and public health in ways that \
+                    genuinely matter.
+
+                    **The Snake That Cannot Digest**
+
+                    Experienced reptile keepers know the pattern: a snake that \
+                    begins regurgitating prey items it had previously digested \
+                    without difficulty, a mid-body swelling that appears and \
+                    disappears, steady weight loss in a snake that strikes and \
+                    constricts normally. This triad — regurgitation, mid-body \
+                    swelling (from the thickened, distended stomach), and wasting \
+                    — is the clinical signature of Cryptosporidium varanii in \
+                    snakes, and it carries a grim outlook.
+
+                    Unlike the GI cryptosporidiosis seen in mammals, which is \
+                    primarily a surface infection of the intestinal lining, \
+                    C. varanii drives a deep inflammatory reaction that \
+                    physically remodels the stomach wall. The resulting fibrosis \
+                    is structural — no antiparasitic can reverse scar tissue \
+                    once it forms. A snake that has reached the regurgitation \
+                    stage has already sustained irreversible damage. This is why \
+                    new reptile acquisitions should always be quarantined and \
+                    evaluated by a reptile-experienced veterinarian before \
+                    joining an established collection — by the time signs appear, \
+                    the window for protecting other animals has already closed.
+
+                    **Myths vs. Facts**
+
+                    **Myth:** Coccidia and Cryptosporidium are the same parasite.
+                    **Fact:** They belong to the same broad group (Apicomplexa) \
+                    but are distinct genera with different host ranges, disease \
+                    mechanisms, zoonotic profiles, and treatment responses. \
+                    Classical Coccidia (Cystoisospora, Eimeria) are not \
+                    zoonotic; Cryptosporidium is. Reptile Cryptosporidium \
+                    causes incurable gastric disease; mammalian coccidiosis is \
+                    usually treatable.
+
+                    **Myth:** A healthy-looking adult dog or cat cannot spread \
+                    coccidia.
+                    **Fact:** Adult animals frequently carry and shed coccidial \
+                    oocysts without showing any signs of illness. Subclinical \
+                    carriers are a significant source of infection for puppies, \
+                    kittens, and immunocompromised animals sharing the same \
+                    environment.
+
+                    **Myth:** Bleach kills coccidia and Cryptosporidium oocysts.
+                    **Fact:** Standard dilutions of household bleach are not \
+                    reliably effective against oocysts. Ammonia-based disinfectants \
+                    at appropriate concentrations, steam cleaning, and thorough \
+                    drying are more effective environmental control measures. \
+                    Consult your veterinarian for specific disinfection guidance.
+                    """,
+                toxicityInfoSectionTitle: "What makes it harmful?",
+                onsetTime: OnsetTime(
+                    early: "In dogs, cats, and small mammals, signs typically appear within 3–11 days of exposure. Young animals may develop diarrhea rapidly. In reptiles, gastric Cryptosporidiosis develops insidiously over weeks to months before signs are evident.",
+                    delayed: "In mammals, severe cases progress to bloody diarrhea, significant dehydration, and systemic illness without treatment, particularly in young or immunocompromised animals. In snakes, progressive regurgitation, mid-body swelling, and wasting develop over months as gastric fibrosis advances."
+                ),
+                symptoms: [
+                    "Watery or soft diarrhea — may be bloody in severe cases",
+                    "Mucus in the stool",
+                    "Straining to defecate",
+                    "Vomiting or regurgitation",
+                    "Loss of appetite",
+                    "Lethargy and weakness",
+                    "Dehydration — sunken eyes, dry gums, skin that does not spring back when gently pinched",
+                    "Pot-bellied appearance (particularly in young animals)",
+                    "Weight loss despite eating",
+                    "Mid-body swelling (snakes — from thickened, distended stomach)",
+                    "Passage of undigested or poorly digested food (snakes)",
+                    "Failure to thrive in young or juvenile animals"
+                ],
+                entrySeverity: nil,
+                speciesRisks: [
+                    SpeciesRisk(
+                        species: .dog,
+                        severity: .moderate,
+                        notes: "Cystoisospora (Isospora) canis and C. ohioensis are the most common coccidial species in dogs. Cryptosporidium canis also documented. Puppies under 6 months, stressed, or recently rehomed dogs are most vulnerable. Healthy adults often show few or no signs but can act as subclinical carriers."
+                    ),
+                    SpeciesRisk(
+                        species: .cat,
+                        severity: .moderate,
+                        notes: "Cystoisospora felis and C. rivolta are the most common coccidial species in cats. Cryptosporidium felis also documented. Kittens and immunocompromised cats are most at risk. As with dogs, healthy adult cats may carry and shed oocysts without clinical signs."
+                    ),
+                    SpeciesRisk(
+                        species: .smallMammal,
+                        severity: .moderate,
+                        notes: "Rabbits are susceptible to both intestinal and hepatic (liver-affecting) Eimeria species, with some strains causing severe or fatal disease in young rabbits. Guinea pigs and rodents are susceptible to Eimeria as well. Cryptosporidium cuniculus is documented in rabbits. Young, newly weaned, or stressed small mammals are at greatest risk."
+                    ),
+                    SpeciesRisk(
+                        species: .bird,
+                        severity: .low,
+                        notes: "Cryptosporidium baileyi and related species have been documented in pet birds but are less commonly reported in clinical practice than in other species. More significant in poultry and commercial bird settings, which are outside this app's scope."
+                    ),
+                    SpeciesRisk(
+                        species: .reptile,
+                        severity: .severe,
+                        notes: "Cryptosporidium varanii (formerly C. serpentis) causes chronic, progressive, and typically fatal gastric disease in snakes. Cryptosporidium saurophilum affects lizards, primarily causing intestinal disease. No reliably curative treatment currently exists for C. varanii in snakes. All new reptile acquisitions should be quarantined and evaluated before joining an established collection."
+                    )
+                ],
+                preventionTips: [
+                    "Keep living environments clean and dry — promptly remove feces from enclosures, litter boxes, and bedding, as oocysts become infectious quickly after being passed.",
+                    "Quarantine all new animals before introducing them to existing pets — this applies especially to reptiles, where silent Cryptosporidium infection can devastate an established collection.",
+                    "Wash hands thoroughly after handling any animal, cleaning enclosures, or contact with fecal material — particularly important for Cryptosporidium given its zoonotic potential.",
+                    "Have young animals (puppies, kittens, juvenile rabbits, hatchling reptiles) evaluated by a veterinarian early — fecal testing can detect coccidial oocysts before severe illness develops.",
+                    "Avoid overcrowding — high animal density accelerates fecal-oral transmission and increases stress, which lowers resistance to infection.",
+                    "For reptile keepers: use dedicated equipment (tongs, water dishes, feeding tools) for each enclosure, or disinfect thoroughly between uses. Standard bleach dilutions are not reliably effective against oocysts — consult your veterinarian for appropriate disinfectants.",
+                    "Source animals from reputable breeders or rescues with health-testing protocols; avoid acquiring animals with unknown histories, particularly reptiles.",
+                    "If a diagnosis of Cryptosporidiosis is confirmed, consult your physician if you or household members are immunocompromised, pregnant, elderly, or very young."
+                ],
+                sources: [
+                    "Merck Veterinary Manual — Coccidiosis in Dogs and Cats",
+                    "Merck Veterinary Manual — Cryptosporidiosis in Animals",
+                    "ASPCA Animal Poison Control Center — Protozoal Parasites",
+                    "Cornell University College of Veterinary Medicine — Feline Coccidiosis",
+                    "LafeberVet — Cryptosporidiosis in Reptiles",
+                    "VCA Animal Hospitals — Coccidiosis in Dogs",
+                    "VCA Animal Hospitals — Cryptosporidiosis in Cats",
+                    "Wikipedia — Cryptosporidiosis",
+                    "Wikipedia — Coccidiosis",
+                    "US EPA — Cryptosporidium: Drinking Water Health Advisory (Milwaukee outbreak context)"
+                ],
+                relatedEntries: [
+                    "1D000001-0000-0000-0000-000000000023",  // GI Parasites
+                    "1D000001-0000-0000-0000-000000000024",  // Toxoplasma
+                    "1D000001-0000-0000-0000-000000000029"   // Encephalitozoon cuniculi (E. cuniculi)
                 ]
             ),
         ]
