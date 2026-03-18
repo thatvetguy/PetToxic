@@ -29,6 +29,7 @@ class DiseasesConditionsService {
         "1D000001-0000-0000-0000-000000000039",  // Hypovitaminosis A
         "1D000001-0000-0000-0000-000000000040",  // Shell Rot
         "1D000001-0000-0000-0000-000000000041",  // Stomatitis / Mouth Rot
+        "1D000001-0000-0000-0000-000000000043",  // Reptile Husbandry Guide
     ]
 
     /// Whether an entry is an infectious disease (Type 1)
@@ -901,7 +902,8 @@ class DiseasesConditionsService {
                 ],
                 relatedEntries: [
                     "1D000001-0000-0000-0000-000000000039",  // Hypovitaminosis A
-                    "1D000001-0000-0000-0000-000000000040"   // Shell Rot
+                    "1D000001-0000-0000-0000-000000000040",  // Shell Rot
+                    "1D000001-0000-0000-0000-000000000043"   // Reptile Husbandry Guide
                 ]
             ),
 
@@ -1521,7 +1523,8 @@ class DiseasesConditionsService {
                     "Veterinary Partner — Reptile Husbandry and Common Medical Problems"
                 ],
                 relatedEntries: [
-                    "1D000001-0000-0000-0000-000000000039"   // Hypovitaminosis A
+                    "1D000001-0000-0000-0000-000000000039",  // Hypovitaminosis A
+                    "1D000001-0000-0000-0000-000000000043"   // Reptile Husbandry Guide
                 ]
             ),
 
@@ -1714,7 +1717,8 @@ class DiseasesConditionsService {
                     "1D000001-0000-0000-0000-000000000039",  // Hypovitaminosis A
                     "1D000001-0000-0000-0000-000000000040",  // Shell Rot
                     "1D000001-0000-0000-0000-000000000041",  // Stomatitis / Mouth Rot
-                    "1D000001-0000-0000-0000-000000000042"   // Reptile Respiratory Infections
+                    "1D000001-0000-0000-0000-000000000042",  // Reptile Respiratory Infections
+                    "1D000001-0000-0000-0000-000000000043"   // Reptile Husbandry Guide
                 ]
             ),
 
@@ -2594,7 +2598,8 @@ class DiseasesConditionsService {
                     "1D000001-0000-0000-0000-000000000016",  // Coccidioidomycosis (Valley Fever)
                     "1D000001-0000-0000-0000-000000000017",  // Pythiosis
                     "1D000001-0000-0000-0000-000000000035",  // Air Sac Mites (Sternostoma tracheacolum)
-                    "1D000001-0000-0000-0000-000000000042"   // Reptile Respiratory Infections
+                    "1D000001-0000-0000-0000-000000000042",  // Reptile Respiratory Infections
+                    "1D000001-0000-0000-0000-000000000043"   // Reptile Husbandry Guide
                 ]
             ),
 
@@ -6915,7 +6920,8 @@ class DiseasesConditionsService {
                     "1D000001-0000-0000-0000-000000000026",  // Mange
                     "1D000001-0000-0000-0000-000000000034",  // Inclusion Body Disease (IBD)
                     "1D000001-0000-0000-0000-000000000041",  // Stomatitis / Mouth Rot
-                    "1D000001-0000-0000-0000-000000000042"   // Reptile Respiratory Infections
+                    "1D000001-0000-0000-0000-000000000042",  // Reptile Respiratory Infections
+                    "1D000001-0000-0000-0000-000000000043"   // Reptile Husbandry Guide
                 ]
             ),
 
@@ -7099,7 +7105,8 @@ class DiseasesConditionsService {
                 relatedEntries: [
                     "1D000001-0000-0000-0000-000000000033",  // Snake Mites
                     "1D000001-0000-0000-0000-000000000010",  // Dysecdysis
-                    "1D000001-0000-0000-0000-000000000042"   // Reptile Respiratory Infections
+                    "1D000001-0000-0000-0000-000000000042",  // Reptile Respiratory Infections
+                    "1D000001-0000-0000-0000-000000000043"   // Reptile Husbandry Guide
                 ]
             ),
 
@@ -8275,7 +8282,8 @@ class DiseasesConditionsService {
                     "1D000001-0000-0000-0000-000000000010",  // Dysecdysis (Abnormal Shedding)
                     "1D000001-0000-0000-0000-000000000009",  // Thermal Burns
                     "1D000001-0000-0000-0000-000000000040",  // Shell Rot
-                    "1D000001-0000-0000-0000-000000000041"   // Stomatitis / Mouth Rot
+                    "1D000001-0000-0000-0000-000000000041",  // Stomatitis / Mouth Rot
+                    "1D000001-0000-0000-0000-000000000043"   // Reptile Husbandry Guide
                 ]
             ),
 
@@ -8487,7 +8495,8 @@ class DiseasesConditionsService {
                     "1D000001-0000-0000-0000-000000000005",  // Metabolic Bone Disease (MBD)
                     "1D000001-0000-0000-0000-000000000010",  // Dysecdysis (Abnormal Shedding)
                     "1D000001-0000-0000-0000-000000000039",  // Hypovitaminosis A
-                    "1D000001-0000-0000-0000-000000000041"   // Stomatitis / Mouth Rot
+                    "1D000001-0000-0000-0000-000000000041",  // Stomatitis / Mouth Rot
+                    "1D000001-0000-0000-0000-000000000043"   // Reptile Husbandry Guide
                 ]
             ),
 
@@ -8696,7 +8705,8 @@ class DiseasesConditionsService {
                     "1D000001-0000-0000-0000-000000000033",  // Snake Mites
                     "1D000001-0000-0000-0000-000000000039",  // Hypovitaminosis A
                     "1D000001-0000-0000-0000-000000000040",  // Shell Rot
-                    "1D000001-0000-0000-0000-000000000042"   // Reptile Respiratory Infections
+                    "1D000001-0000-0000-0000-000000000042",  // Reptile Respiratory Infections
+                    "1D000001-0000-0000-0000-000000000043"   // Reptile Husbandry Guide
                 ]
             ),
 
@@ -8892,7 +8902,328 @@ class DiseasesConditionsService {
                     "1D000001-0000-0000-0000-000000000033",  // Snake Mites
                     "1D000001-0000-0000-0000-000000000041",  // Stomatitis / Mouth Rot
                     "1D000001-0000-0000-0000-000000000010",  // Dysecdysis
-                    "1D000001-0000-0000-0000-000000000014"   // Aspergillosis
+                    "1D000001-0000-0000-0000-000000000014",  // Aspergillosis
+                    "1D000001-0000-0000-0000-000000000043"   // Reptile Husbandry Guide
+                ]
+            ),
+
+            // MARK: - Reptile Husbandry Guide
+            // Type 4 (Husbandry Guide)
+            ToxicItem(
+                id: UUID(uuidString: "1D000001-0000-0000-0000-000000000043")!,
+                name: "Reptile Husbandry Guide",
+                alternateNames: [
+                    "reptile care", "reptile care guide", "reptile care sheet",
+                    "reptile setup", "reptile husbandry", "snake care", "lizard care",
+                    "turtle care", "tortoise care", "bearded dragon care",
+                    "ball python care", "corn snake care", "leopard gecko care",
+                    "crested gecko care", "chameleon care", "blue tongue skink care",
+                    "iguana care", "gecko care", "boa care", "monitor lizard care",
+                    "water dragon care", "anole care", "reptile enclosure setup",
+                    "reptile vivarium", "reptile lighting", "reptile heating",
+                    "UVB reptile", "reptile substrate", "reptile feeding",
+                    "reptile humidity", "reptile thermostat", "reptile quarantine",
+                    "new reptile owner", "reptile beginner"
+                ],
+                categories: [.diseasesAndConditions],
+                imageAsset: "reptile_husbandry_thumb",
+                description: """
+                    This guide covers the foundational care requirements for commonly \
+                    kept pet reptiles \u{2014} including snakes, lizards, and chelonians \
+                    (turtles and tortoises). It is designed for new owners preparing a \
+                    setup before bringing an animal home, as well as experienced keepers \
+                    looking to audit or improve their husbandry.
+
+                    Pet reptiles in this category span a wide range of species, each with \
+                    specific needs. Snakes commonly kept as pets include ball pythons, corn \
+                    snakes, boa constrictors, and king snakes. Popular lizards include \
+                    bearded dragons, leopard geckos, crested geckos, blue-tongued skinks, \
+                    chameleons, and green iguanas. Chelonians include red-eared sliders, \
+                    box turtles, sulcata tortoises, Russian tortoises, and other aquatic, \
+                    semi-aquatic, and terrestrial species.
+
+                    The majority of health problems seen in captive reptiles \u{2014} \
+                    respiratory infections, metabolic bone disease, shedding difficulties, \
+                    stomatitis, and nutritional deficiencies \u{2014} are directly caused \
+                    by preventable husbandry failures. Correct enclosure setup, appropriate \
+                    temperatures, proper lighting, and species-appropriate nutrition are not \
+                    optional extras; they are the foundation of a healthy animal. A reptile \
+                    that appears healthy may be in early-stage decline if the fundamentals \
+                    are wrong.
+
+                    This guide provides general guidance applicable across the reptile pet \
+                    trade. Individual species requirements vary significantly \u{2014} the \
+                    needs of a ball python and a chameleon, for example, are almost entirely \
+                    different. Always research your specific species in detail, and consult \
+                    a veterinarian with experience in reptile medicine for personalized \
+                    guidance.
+                    """,
+                toxicityInfo: """
+                    Reptiles are among the most misunderstood pets in the hobby. They are \
+                    often perceived as low-maintenance, but in reality they have complex \
+                    environmental and nutritional needs that must be met precisely to prevent \
+                    illness. This guide covers the core areas of reptile husbandry \u{2014} \
+                    enclosure setup, temperature, lighting, humidity, diet, handling, and \
+                    veterinary care \u{2014} with species-specific examples for snakes, \
+                    lizards, and chelonians throughout.
+
+                    **Enclosure & Habitat**
+                    The enclosure is a reptile\u{2019}s entire world, and getting it right \
+                    is the single most important thing an owner can do. At minimum, most \
+                    reptiles need an enclosure large enough to allow full body extension plus \
+                    room to explore \u{2014} for snakes, that means the combined length and \
+                    width of the enclosure should equal or exceed the snake\u{2019}s body \
+                    length. Many species require significantly more space.
+
+                    Enclosure type matters. Glass terrariums with screen tops work well for \
+                    many lizards and snakes but lose humidity quickly \u{2014} a \
+                    consideration for tropical species. PVC or wood enclosures retain heat \
+                    and humidity better and are preferred for many snakes and high-humidity \
+                    lizards. Chelonians have varied needs: aquatic turtles require deep water \
+                    filtration systems, while tortoises need large dry enclosures \u{2014} \
+                    or outdoor pens where climate allows.
+
+                    Substrate should match the species\u{2019} natural environment. Desert \
+                    species such as bearded dragons and leopard geckos do well on \
+                    loose particle-free substrates or tile; tropical snakes and lizards \
+                    benefit from coconut fiber or bioactive soil mixes that retain humidity. \
+                    Avoid cedar and pine wood shavings \u{2014} the aromatic oils are toxic \
+                    to reptiles. A physical hide is essential for all species \u{2014} most \
+                    should have at least two: one on the warm side and one on the cool side \
+                    of the enclosure. Arboreal species such as crested geckos and chameleons \
+                    need vertical space with climbing branches and foliage. Fossorial species \
+                    such as some skinks and hognose snakes need deep substrate for burrowing.
+
+                    **Temperature & Lighting**
+                    Reptiles are ectotherms \u{2014} they cannot generate body heat \
+                    internally and depend entirely on external sources to regulate their body \
+                    temperature. This is not a limitation to work around; it is the core of \
+                    how their physiology functions. Temperature affects immune function, \
+                    digestion, metabolism, and mood. A reptile kept too cold cannot digest \
+                    food properly, cannot fight infection effectively, and will become \
+                    lethargic and ill.
+
+                    Every reptile enclosure must provide a thermal gradient: a warm end, a \
+                    cool end, and a basking spot at the warm end where the animal can raise \
+                    its body temperature to its preferred optimal temperature zone. Basking \
+                    spot temperatures vary widely \u{2014} bearded dragons require a basking \
+                    surface of around 100\u{2013}110\u{00B0}F, while ball pythons need a \
+                    warm side ambient of around 88\u{2013}92\u{00B0}F and do not require a \
+                    hot basking spot. Leopard geckos need a warm side around \
+                    88\u{2013}92\u{00B0}F. Most chelonians require basking areas of \
+                    85\u{2013}95\u{00B0}F depending on species. The cool end of all \
+                    enclosures should drop to species-appropriate ambient temperatures so \
+                    the animal can actively cool itself.
+
+                    All heat sources must be controlled by a thermostat. Unregulated heat \
+                    sources \u{2014} including older-style heat rocks \u{2014} are one of \
+                    the leading causes of thermal burns in reptiles. Heat can be provided \
+                    by ceramic heat emitters, halogen basking bulbs, radiant heat panels, \
+                    or heat mats used under-tank for species that benefit from belly heat, \
+                    always with a thermostat.
+
+                    UVB lighting is essential for most diurnal lizards and all chelonians. \
+                    UVB allows reptiles to synthesize vitamin D3 in the skin \u{2014} \
+                    without it, calcium metabolism fails, leading to metabolic bone disease. \
+                    Bearded dragons, chameleons, iguanas, blue-tongued skinks, and tortoises \
+                    all require high-output UVB. UVB output degrades over time \u{2014} most \
+                    bulbs should be replaced every 6\u{2013}12 months even if they are still \
+                    emitting visible light. Some nocturnal lizards (leopard geckos, crested \
+                    geckos) and most snakes do not require UVB to survive, but evidence \
+                    increasingly supports that low-level UVB is beneficial even for these \
+                    species. Maintain a consistent photoperiod of 12\u{2013}14 hours of \
+                    light in summer and 10\u{2013}12 hours in winter to mimic natural cycles \
+                    and support normal behavior.
+
+                    **Humidity**
+                    Humidity requirements vary dramatically between reptile species and must \
+                    be researched for each specific animal. Desert species such as bearded \
+                    dragons and leopard geckos thrive at 30\u{2013}40% relative humidity; \
+                    maintaining them above 50% consistently can predispose them to \
+                    respiratory infections. Tropical species such as ball pythons, crested \
+                    geckos, and green iguanas require 60\u{2013}80% humidity; dropping below \
+                    this chronically causes shedding problems and skin irritation. Many \
+                    chelonians fall in the middle \u{2014} Russian tortoises tolerate drier \
+                    conditions while box turtles require humid hides and higher ambient \
+                    humidity.
+
+                    Always measure humidity with a digital hygrometer \u{2014} guessing is \
+                    unreliable. Humidity can be raised by misting the enclosure, adding a \
+                    water feature, using a moisture-retaining substrate, or reducing \
+                    ventilation slightly. It can be lowered by increasing ventilation, using \
+                    non-moisture-retaining substrate, or reducing misting frequency.
+
+                    During shedding, all reptiles benefit from a slightly elevated humidity \
+                    level and access to a humid hide \u{2014} a small enclosed space with \
+                    moist moss or substrate. Low humidity is one of the most common causes \
+                    of retained shed, which can constrict blood flow to digits, tails, and \
+                    eye caps if not resolved. Too-high humidity in combination with poor \
+                    ventilation promotes bacterial and fungal growth \u{2014} including the \
+                    pathogens responsible for respiratory infections and shell rot in \
+                    chelonians.
+
+                    **Diet & Nutrition**
+                    Reptile diets fall into three broad categories \u{2014} carnivores, \
+                    insectivores, and herbivores/omnivores \u{2014} and feeding a reptile \
+                    the wrong diet is a reliable path to nutritional disease.
+
+                    Snakes are obligate carnivores and are fed whole prey: mice, rats, \
+                    chicks, and other appropriately sized prey items. Always feed \
+                    pre-killed or frozen/thawed prey \u{2014} live prey can injure or even \
+                    kill a snake. Feeding frequency varies with age: young snakes typically \
+                    eat every 5\u{2013}7 days, while adults may eat every 10\u{2013}14 \
+                    days. Monitor body condition \u{2014} visible spine and ribs indicates \
+                    underfeeding; a heavy visible fold along the sides indicates overfeeding.
+
+                    Most commonly kept lizards are insectivores, at least in part. Bearded \
+                    dragons eat insects as juveniles (roughly 70% insects, 30% greens) and \
+                    transition to primarily greens as adults (70% greens, 30% insects). \
+                    Leopard geckos and crested geckos are primarily insectivorous throughout \
+                    their lives. All insects fed to reptiles should be gut-loaded \u{2014} \
+                    fed a nutritious diet for 24\u{2013}48 hours before being offered to the \
+                    reptile \u{2014} and dusted with calcium and vitamin supplements \
+                    immediately before feeding. Suitable feeder insects include crickets, \
+                    dubia roaches, hornworms, black soldier fly larvae, and silkworms. \
+                    Mealworms and superworms are high in fat and should be offered as \
+                    occasional treats only.
+
+                    Herbivorous and omnivorous lizards (iguanas, uromastyx, adult bearded \
+                    dragons) and most tortoises should receive a varied diet of dark leafy \
+                    greens \u{2014} collard greens, mustard greens, dandelion greens, and \
+                    turnip greens form the foundation. High-oxalate greens such as spinach \
+                    and beet greens should be offered sparingly. Iceberg lettuce has \
+                    negligible nutritional value and should be avoided. Fruit should be \
+                    limited due to high sugar content. Aquatic turtles are primarily \
+                    carnivorous and eat whole prey, commercial turtle pellets, and dark \
+                    leafy greens. Always research the specific dietary requirements of your \
+                    species.
+
+                    Calcium supplementation is essential for virtually all reptiles. Calcium \
+                    deficiency over time produces metabolic bone disease \u{2014} one of the \
+                    most commonly seen and entirely preventable conditions in captive \
+                    reptiles. Use calcium without vitamin D3 for reptiles receiving adequate \
+                    UVB lighting, and calcium with D3 for those without (though providing \
+                    proper UVB is always preferred over supplementation alone). Vitamin A \
+                    deficiency is also common and causes a range of symptoms including eye \
+                    and respiratory problems \u{2014} ensure dietary sources of vitamin A \
+                    through appropriate greens and gut-loaded insects. Fresh water should be \
+                    available at all times even for desert species.
+
+                    **Handling & Enrichment**
+                    Allow newly acquired reptiles a minimum of one to two weeks to acclimate \
+                    to their enclosure before beginning regular handling. Acclimation periods \
+                    allow the animal to establish its normal feeding and hiding routines and \
+                    reduce the stress of an already stressful transition.
+
+                    Handling tolerance varies widely between species and individuals. Bearded \
+                    dragons are generally one of the most tolerant lizards and often accept \
+                    daily handling. Ball pythons, corn snakes, and most boa constrictors \
+                    typically tolerate regular handling of 15\u{2013}30 minutes a few times \
+                    per week. Chameleons are highly stress-sensitive and should be handled \
+                    minimally \u{2014} they are primarily display animals. Many tortoises \
+                    can be handled briefly but tire and stress quickly. Always avoid handling \
+                    within 48 hours of a snake feeding, as this can cause regurgitation.
+
+                    Signs of stress in reptiles include gaping or hissing, fleeing, tail \
+                    lashing, inflating the body (some lizards and tortoises), color change \
+                    to dark tones, musking (releasing musk from scent glands), and defecating \
+                    during handling. These are clear communication that the animal wants to \
+                    be returned to its enclosure. Always support the full body length \u{2014} \
+                    never dangle a reptile or restrain it tightly. Wash hands before and \
+                    after every handling session.
+
+                    Enclosure enrichment is important even for species not typically \
+                    associated with high activity. Hides, cork bark tunnels, climbing \
+                    branches, varied substrate textures, and opportunities to forage all \
+                    support normal behavioral expression and reduce chronic stress. \
+                    Rearranging the enclosure occasionally provides novelty and mental \
+                    stimulation. Most reptiles are solitary and should be housed alone \u{2014} \
+                    cohabitation of different species is never appropriate, and \
+                    same-species cohabitation requires careful research. Many lizards are \
+                    territorial; many snakes are solitary predators that will attempt to \
+                    consume cage mates.
+
+                    **Veterinary Care**
+                    One of the most important things a reptile owner can do is identify an \
+                    exotic-specialist veterinarian before one is urgently needed. General \
+                    practice veterinarians vary significantly in their experience with \
+                    reptiles \u{2014} a veterinarian who regularly sees dogs and cats may \
+                    not have the training to evaluate and treat a reptile effectively. \
+                    Contact your local reptile community, herpetological society, or the \
+                    Association of Reptilian and Amphibian Veterinarians (ARAV) for \
+                    referrals.
+
+                    Every new reptile \u{2014} whether wild-caught or captive-bred \u{2014} \
+                    should receive a wellness examination within the first one to two weeks \
+                    of ownership. This visit establishes a baseline, identifies any \
+                    underlying illness or parasites, and gives the owner a chance to confirm \
+                    their husbandry setup. A fecal parasite examination is recommended at \
+                    intake for all reptiles, and annually thereafter. Wild-caught reptiles \
+                    carry a substantially higher parasite burden than captive-bred animals \
+                    and require a thorough health evaluation. Whenever possible, \
+                    captive-bred animals from reputable breeders are strongly preferred.
+
+                    Reptiles are prey species in the wild and instinctively conceal illness \
+                    \u{2014} by the time behavioral or physical signs of disease are obvious \
+                    to an owner, the animal may already be significantly compromised. Annual \
+                    wellness exams allow veterinarians to detect early-stage issues before \
+                    they become emergencies. Signs that warrant prompt veterinary evaluation \
+                    include lethargy or unusual inactivity, refusal to eat for more than two \
+                    to three feeding cycles, unexplained weight loss, abnormal or incomplete \
+                    shedding, respiratory sounds (clicking, wheezing), swollen or discolored \
+                    limbs or face, open-mouth breathing when not basking, discharge from the \
+                    eyes or nostrils, and softening of the shell in chelonians.
+
+                    All new reptiles should be quarantined from any existing reptiles for a \
+                    minimum of 30\u{2013}90 days before introduction to shared spaces. \
+                    Reptiles carry Salmonella bacteria naturally \u{2014} it is part of \
+                    their normal flora and does not cause disease in the reptile itself. \
+                    Always wash hands thoroughly after handling any reptile or objects from \
+                    their enclosure, and take particular care when reptiles are in contact \
+                    with young children, immunocompromised individuals, or pregnant persons.
+                    """,
+                toxicityInfoSectionTitle: "Husbandry Overview",
+                onsetTime: nil,
+                symptoms: [],
+                entrySeverity: nil,
+                speciesRisks: [
+                    SpeciesRisk(
+                        species: .reptile,
+                        severity: .moderate,
+                        notes: "Covers core husbandry requirements for commonly kept reptiles, including snakes, lizards, and chelonians."
+                    )
+                ],
+                preventionTips: [
+                    "Research your specific species thoroughly before purchasing \u{2014} husbandry requirements vary dramatically even within the reptile category.",
+                    "Provide a thermal gradient with a distinct warm end, cool end, and basking spot \u{2014} never house a reptile in a single-temperature enclosure.",
+                    "Use a thermostat on all heat sources \u{2014} unregulated heat sources are a leading cause of thermal burns in reptiles.",
+                    "Provide appropriate UVB lighting for all diurnal lizards and chelonians, and replace UVB bulbs every 6\u{2013}12 months even if they still produce visible light.",
+                    "Match enclosure humidity to your species\u{2019} natural environment and measure it with a digital hygrometer \u{2014} do not guess.",
+                    "Feed whole, gut-loaded, appropriately sized prey and supplement with calcium \u{2014} nutritional deficiencies are among the most preventable causes of reptile illness.",
+                    "Always feed snakes pre-killed or frozen/thawed prey \u{2014} live prey can seriously injure or kill a snake.",
+                    "Allow newly acquired reptiles at least one to two weeks to acclimate before regular handling, and learn to recognize signs of stress.",
+                    "Quarantine all new reptiles from existing reptiles for 30\u{2013}90 days before any shared contact.",
+                    "Schedule a wellness exam with a reptile-experienced veterinarian within the first week of ownership \u{2014} do not wait for illness."
+                ],
+                sources: [
+                    "Association of Reptilian and Amphibian Veterinarians (ARAV) \u{2014} Reptile Husbandry Guidelines",
+                    "Merck Veterinary Manual \u{2014} Reptile Husbandry and Disease",
+                    "VCA Animal Hospitals \u{2014} Reptile Care Articles (various species)",
+                    "LafeberVet \u{2014} Reptile Nutrition and Husbandry",
+                    "UC Davis School of Veterinary Medicine \u{2014} Exotic Animal Care",
+                    "ReptiFiles \u{2014} Species-Specific Husbandry Research Guides: https://reptifiles.com"
+                ],
+                relatedEntries: [
+                    "1D000001-0000-0000-0000-000000000005",  // Metabolic Bone Disease (MBD)
+                    "1D000001-0000-0000-0000-000000000009",  // Thermal Burns
+                    "1D000001-0000-0000-0000-000000000010",  // Dysecdysis (Abnormal Shedding)
+                    "1D000001-0000-0000-0000-000000000014",  // Aspergillosis
+                    "1D000001-0000-0000-0000-000000000033",  // Snake Mites
+                    "1D000001-0000-0000-0000-000000000034",  // Inclusion Body Disease (IBD)
+                    "1D000001-0000-0000-0000-000000000039",  // Hypovitaminosis A
+                    "1D000001-0000-0000-0000-000000000040",  // Shell Rot
+                    "1D000001-0000-0000-0000-000000000041",  // Stomatitis / Mouth Rot
+                    "1D000001-0000-0000-0000-000000000042"   // Reptile Respiratory Infections
                 ]
             ),
         ]
