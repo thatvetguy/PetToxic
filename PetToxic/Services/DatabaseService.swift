@@ -6903,7 +6903,7 @@ There is no specific antidote for acrylamide toxicity. Because signs can progres
                     "Pet Poison Helpline",
                     "Merck Veterinary Manual"
                 ],
-                relatedEntries: ["00112233-4455-6677-8899-aabbccddef24"]
+                relatedEntries: ["00112233-4455-6677-8899-aabbccddef24", "1D000001-0000-0000-0000-000000000044"]  // Inhalant Toxicity (Birds), Bird Husbandry Guide
             ),
 
             // MARK: - Soaps & Mild Detergents

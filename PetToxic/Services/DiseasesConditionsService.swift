@@ -30,6 +30,7 @@ class DiseasesConditionsService {
         "1D000001-0000-0000-0000-000000000040",  // Shell Rot
         "1D000001-0000-0000-0000-000000000041",  // Stomatitis / Mouth Rot
         "1D000001-0000-0000-0000-000000000043",  // Reptile Husbandry Guide
+        "1D000001-0000-0000-0000-000000000044",  // Bird Husbandry Guide
     ]
 
     /// Whether an entry is an infectious disease (Type 1)
@@ -715,7 +716,8 @@ class DiseasesConditionsService {
                 relatedEntries: [
                     "1D000001-0000-0000-0000-000000000030",  // PBFD
                     "1D000001-0000-0000-0000-000000000035",  // Air Sac Mites (Sternostoma tracheacolum)
-                    "1D000001-0000-0000-0000-000000000036"   // PDD (Proventricular Dilatation Disease)
+                    "1D000001-0000-0000-0000-000000000036",  // PDD (Proventricular Dilatation Disease)
+                    "1D000001-0000-0000-0000-000000000044"   // Bird Husbandry Guide
                 ]
             ),
 
@@ -2599,7 +2601,8 @@ class DiseasesConditionsService {
                     "1D000001-0000-0000-0000-000000000017",  // Pythiosis
                     "1D000001-0000-0000-0000-000000000035",  // Air Sac Mites (Sternostoma tracheacolum)
                     "1D000001-0000-0000-0000-000000000042",  // Reptile Respiratory Infections
-                    "1D000001-0000-0000-0000-000000000043"   // Reptile Husbandry Guide
+                    "1D000001-0000-0000-0000-000000000043",  // Reptile Husbandry Guide
+                    "1D000001-0000-0000-0000-000000000044"   // Bird Husbandry Guide
                 ]
             ),
 
@@ -6446,7 +6449,8 @@ class DiseasesConditionsService {
                 relatedEntries: [
                     "1D000001-0000-0000-0000-000000000004",  // Psittacosis (Parrot Fever)
                     "1D000001-0000-0000-0000-000000000035",  // Air Sac Mites (Sternostoma tracheacolum)
-                    "1D000001-0000-0000-0000-000000000036"   // PDD (Proventricular Dilatation Disease)
+                    "1D000001-0000-0000-0000-000000000036",  // PDD (Proventricular Dilatation Disease)
+                    "1D000001-0000-0000-0000-000000000044"   // Bird Husbandry Guide
                 ]
             ),
 
@@ -7329,7 +7333,8 @@ class DiseasesConditionsService {
                     "1D000001-0000-0000-0000-000000000004",  // Psittacosis (Parrot Fever)
                     "1D000001-0000-0000-0000-000000000014",  // Aspergillosis
                     "1D000001-0000-0000-0000-000000000030",  // PBFD (Psittacine Beak and Feather Disease)
-                    "1D000001-0000-0000-0000-000000000036"   // PDD (Proventricular Dilatation Disease)
+                    "1D000001-0000-0000-0000-000000000036",  // PDD (Proventricular Dilatation Disease)
+                    "1D000001-0000-0000-0000-000000000044"   // Bird Husbandry Guide
                 ]
             ),
 
@@ -7569,7 +7574,8 @@ class DiseasesConditionsService {
                 relatedEntries: [
                     "1D000001-0000-0000-0000-000000000004",  // Psittacosis (Parrot Fever)
                     "1D000001-0000-0000-0000-000000000030",  // PBFD (Psittacine Beak and Feather Disease)
-                    "1D000001-0000-0000-0000-000000000035"   // Air Sac Mites
+                    "1D000001-0000-0000-0000-000000000035",  // Air Sac Mites
+                    "1D000001-0000-0000-0000-000000000044"   // Bird Husbandry Guide
                 ]
             ),
 
@@ -7863,7 +7869,8 @@ class DiseasesConditionsService {
                 relatedEntries: [
                     "1D000001-0000-0000-0000-000000000023",  // GI Parasites
                     "1D000001-0000-0000-0000-000000000024",  // Toxoplasma
-                    "1D000001-0000-0000-0000-000000000029"   // Encephalitozoon cuniculi (E. cuniculi)
+                    "1D000001-0000-0000-0000-000000000029",  // Encephalitozoon cuniculi (E. cuniculi)
+                    "1D000001-0000-0000-0000-000000000044"   // Bird Husbandry Guide
                 ]
             ),
 
@@ -8283,7 +8290,8 @@ class DiseasesConditionsService {
                     "1D000001-0000-0000-0000-000000000009",  // Thermal Burns
                     "1D000001-0000-0000-0000-000000000040",  // Shell Rot
                     "1D000001-0000-0000-0000-000000000041",  // Stomatitis / Mouth Rot
-                    "1D000001-0000-0000-0000-000000000043"   // Reptile Husbandry Guide
+                    "1D000001-0000-0000-0000-000000000043",  // Reptile Husbandry Guide
+                    "1D000001-0000-0000-0000-000000000044"   // Bird Husbandry Guide
                 ]
             ),
 
@@ -9224,6 +9232,281 @@ class DiseasesConditionsService {
                     "1D000001-0000-0000-0000-000000000040",  // Shell Rot
                     "1D000001-0000-0000-0000-000000000041",  // Stomatitis / Mouth Rot
                     "1D000001-0000-0000-0000-000000000042"   // Reptile Respiratory Infections
+                ]
+            ),
+
+            // MARK: - Bird Husbandry Guide
+            // Type 4 (Husbandry Guide)
+            ToxicItem(
+                id: UUID(uuidString: "1D000001-0000-0000-0000-000000000044")!,
+                name: "Bird Husbandry Guide",
+                alternateNames: [
+                    "bird care", "avian care", "parrot care", "budgie care",
+                    "budgerigar care", "cockatiel care", "finch care", "canary care",
+                    "lovebird care", "conure care", "macaw care", "cockatoo care",
+                    "avian husbandry", "bird care guide", "bird care sheet",
+                    "bird setup guide", "avian setup"
+                ],
+                categories: [.diseasesAndConditions],
+                imageAsset: "bird_husbandry_thumb",
+                description: """
+                    Birds are among the most rewarding exotic pets to keep — intelligent, \
+                    social, and long-lived — but they have precise environmental, nutritional, \
+                    and social needs that differ dramatically from dogs and cats. This guide \
+                    covers foundational care requirements for commonly kept pet bird species, \
+                    including psittacines such as parrots, macaws, cockatoos, cockatiels, \
+                    budgerigars, lovebirds, and conures, as well as passerines such as \
+                    canaries and finches.
+
+                    Most health problems seen in captive birds are directly linked to \
+                    husbandry failures — poor diet, inappropriate housing, inadequate social \
+                    interaction, or environmental toxin exposure. A bird that appears healthy \
+                    may already be suffering from chronic nutritional deficiencies or \
+                    low-level respiratory irritation. Because birds instinctively conceal \
+                    signs of illness, problems are often advanced by the time they become \
+                    obvious.
+
+                    Birds are also uniquely vulnerable to airborne toxins. Their highly \
+                    efficient respiratory system — which includes air sacs that allow \
+                    continuous airflow through the lungs — means that fumes from non-stick \
+                    cookware, aerosol sprays, scented candles, and smoke can be lethal \
+                    within minutes. This is not a minor precaution; it is one of the most \
+                    important things a bird owner can know.
+
+                    This guide provides general husbandry principles. Requirements vary \
+                    significantly across species — a macaw and a canary have very different \
+                    housing, social, and dietary needs. Consult a veterinarian with avian \
+                    experience before acquiring a bird, and establish care with an \
+                    avian-specialist veterinarian shortly after.
+                    """,
+                toxicityInfo: """
+                    Birds kept as pets represent a remarkable range of species, from small \
+                    passerines like finches and canaries to large psittacines like macaws \
+                    and cockatoos. What they share is a need for proper housing, nutrition, \
+                    social contact, and air quality — all areas where captive environments \
+                    commonly fall short.
+
+                    **Enclosure & Habitat**
+                    The cage should be as large as possible — birds fly horizontally, so \
+                    width matters more than height. Bar spacing must match the bird\u{2019}s \
+                    size: narrow bars (no more than \u{00BD} inch apart) for budgies, \
+                    finches, and canaries to prevent head entrapment, and appropriately \
+                    spaced, heavy-gauge bars for large parrots that could bend thinner wire. \
+                    Stainless steel or powder-coated cages are preferable; avoid galvanized \
+                    metal, which can cause zinc toxicity as birds chew on bars.
+
+                    Provide multiple perches of varying diameters and textures to promote \
+                    foot health and prevent pressure sores — natural wood branches are \
+                    excellent. Avoid sandpaper perch covers, which abrade the feet. Place \
+                    the cage in a stable, draft-free location away from the kitchen (air \
+                    quality risk), exterior doors, and direct air conditioning or heating \
+                    vents. Some direct natural light is beneficial but the bird must always \
+                    be able to retreat to shade.
+
+                    **Temperature & Lighting**
+                    Most companion birds are comfortable between 65\u{2013}85\u{00B0}F \
+                    (18\u{2013}29\u{00B0}C). Avoid sudden temperature swings and drafts, \
+                    which can trigger respiratory illness. Birds should never be placed near \
+                    open windows in cold weather, even briefly.
+
+                    Full-spectrum lighting that includes ultraviolet wavelengths supports \
+                    vitamin D3 synthesis, feather condition, and psychological wellbeing — \
+                    particularly important for indoor birds that receive little or no \
+                    unfiltered sunlight. Photoperiod (the daily light/dark cycle) influences \
+                    hormonal status and breeding behavior; maintaining a consistent \
+                    10\u{2013}12 hour light period helps stabilize hormone cycles in \
+                    many species.
+
+                    **Humidity**
+                    Most psittacines originate from tropical and subtropical environments \
+                    and do best at relative humidity between 40\u{2013}60%. Dry indoor \
+                    air — particularly in heated homes during winter — can cause dry skin, \
+                    feather quality problems, and irritation of the respiratory mucosa. A \
+                    room humidifier or regular misting can help. Canaries and finches are \
+                    somewhat less sensitive, though they also benefit from bathing \
+                    opportunities. Monitor with a hygrometer and aim for consistency \
+                    rather than perfection.
+
+                    **Diet & Nutrition**
+                    Diet is one of the most common sources of preventable disease in \
+                    captive birds. For psittacines, a high-quality pelleted diet should \
+                    form the majority of intake, supplemented with a wide variety of fresh \
+                    vegetables, leafy greens, and limited fresh fruit. Seeds are palatable \
+                    but nutritionally incomplete and should not be the primary food source. \
+                    All-seed diets are associated with obesity, vitamin A deficiency, and \
+                    fatty liver disease.
+
+                    Several foods are toxic to birds and must be avoided entirely: avocado \
+                    (all parts, including the flesh — contains persin, which causes cardiac \
+                    and respiratory failure), chocolate, caffeine, alcohol, onion, garlic, \
+                    and fruit pits or apple seeds. High-salt, high-sugar, and processed \
+                    human foods are also inappropriate.
+
+                    Calcium and vitamin A are the two most common nutritional deficiencies \
+                    in pet birds. Cuttlebone or mineral blocks provide accessible calcium \
+                    and support beak health. Leafy greens, orange and yellow vegetables, \
+                    and egg yolk are good dietary sources of vitamin A precursors. Avoid \
+                    supplementing with fat-soluble vitamins without veterinary guidance, as \
+                    oversupplementation can be harmful. Finches and canaries eat \
+                    proportionally more seed but still benefit from fresh food variety and \
+                    calcium sources.
+
+                    Provide fresh water daily. Wash food and water dishes thoroughly every \
+                    day — bacterial contamination of water dishes is a common and \
+                    underappreciated cause of illness.
+
+                    **Handling & Enrichment**
+                    Social needs vary enormously by species. Parrots — including cockatiels, \
+                    budgies, conures, macaws, and African greys — are highly social and can \
+                    develop serious behavioral problems including feather-destructive \
+                    behavior, excessive vocalization, and self-mutilation when their social \
+                    and cognitive needs go unmet. Daily interaction, foraging opportunities, \
+                    and rotating toys are essential. Some species bond strongly to a single \
+                    person and may become aggressive toward others; early socialization helps.
+
+                    Finches and canaries are generally not handleable in the same way — \
+                    they are better appreciated as aviary birds and are typically kept in \
+                    pairs or groups to meet their social needs. Housing a single finch or \
+                    canary alone is generally not recommended.
+
+                    For psittacines, basic training using positive reinforcement — starting \
+                    with step-up commands — builds trust and makes veterinary handling much \
+                    easier. Signs of chronic stress include feather plucking, over-preening, \
+                    repetitive movements, loss of appetite, and increased aggression. A bird \
+                    exhibiting these signs warrants both a behavioral assessment and a \
+                    veterinary examination to rule out underlying medical causes.
+
+                    **Common Mistakes to Avoid**
+                    Even well-intentioned bird owners frequently make a few recurring errors \
+                    that cause serious long-term harm.
+
+                    \u{201C}Seeds are a complete diet.\u{201D} This is the most common \
+                    nutritional mistake in companion bird care. Seeds are high in fat and \
+                    low in the vitamins and amino acids birds need — an all-seed diet is \
+                    associated with vitamin A deficiency, obesity, and fatty liver disease. \
+                    Seeds should be a small part of the diet, not its foundation.
+
+                    \u{201C}My bird seems fine, so they must be healthy.\u{201D} Birds \
+                    evolved as prey animals and are hardwired to conceal illness. By the \
+                    time a bird looks sick, it is often significantly compromised. Regular \
+                    weigh-ins and annual veterinary exams catch problems before they \
+                    become visible.
+
+                    \u{201C}Scented candles and air fresheners are safe — I just use them \
+                    in the other room.\u{201D} Airborne toxins travel freely through a \
+                    home\u{2019}s ventilation. There is no safe distance. Aerosol sprays, \
+                    plug-in fresheners, incense, and scented candles should not be used \
+                    anywhere in a bird\u{2019}s household.
+
+                    \u{201C}Non-stick cookware is only dangerous if it burns.\u{201D} PTFE \
+                    releases toxic fumes at temperatures regularly reached during normal \
+                    cooking — not just when pans are badly overheated. The risk begins well \
+                    before any visible smoke or odor. The only safe approach for bird \
+                    households is to eliminate PTFE-coated products entirely.
+
+                    \u{201C}My bird just needs a companion — any bird will do.\u{201D} \
+                    Introducing an incompatible species or a bird with an undetected \
+                    infectious disease can be fatal. Any new bird should be quarantined for \
+                    at least 30 days and screened by a veterinarian before contact with \
+                    resident birds.
+
+                    \u{201C}Birds are low-maintenance pets.\u{201D} Psittacines in \
+                    particular have cognitive and social needs comparable to a young child. \
+                    Boredom and social isolation are leading causes of feather-destructive \
+                    behavior, self-mutilation, and chronic stress. A bird left alone in a \
+                    cage for most of the day is not thriving.
+
+                    **Air Quality & Toxins**
+                    Birds have the most efficient respiratory system of any vertebrate — \
+                    air passes through a network of air sacs in addition to the lungs, \
+                    maximizing gas exchange. This makes them uniquely and acutely vulnerable \
+                    to airborne toxins at concentrations that would cause no immediate harm \
+                    to mammals.
+
+                    Polytetrafluoroethylene (PTFE), the coating used in non-stick cookware \
+                    and bakeware, releases toxic fumes when overheated. Exposure can cause \
+                    acute respiratory failure and death within minutes. PTFE is also found \
+                    in some heat lamp coatings, drip pans, self-cleaning oven linings, hair \
+                    dryers, irons, and ironing board covers. The safest approach is to \
+                    remove PTFE-coated products from any space a bird inhabits. This is not \
+                    a precaution to take lightly — PTFE toxicity kills birds rapidly and \
+                    often without warning.
+
+                    Other significant airborne hazards include: aerosol sprays (air \
+                    fresheners, cooking sprays, hairspray, pesticides, cleaning products), \
+                    scented candles and incense, cigarette and e-cigarette smoke, burning \
+                    food and overheated cooking oils, paint fumes and new carpet or \
+                    furniture off-gassing, and carbon monoxide from gas appliances. Any \
+                    bird showing sudden respiratory distress, weakness, or collapse should \
+                    be moved to fresh air immediately and seen by a veterinarian as \
+                    an emergency.
+
+                    **Veterinary Care**
+                    Birds require a veterinarian with avian training and experience — a \
+                    general small animal practice may not have the equipment or expertise \
+                    to examine birds appropriately. Establish care with an avian-specialist \
+                    veterinarian within the first few weeks of ownership. Annual wellness \
+                    examinations are recommended for most species; some long-lived parrots \
+                    benefit from twice-yearly visits.
+
+                    Because birds evolved as prey species, they instinctively suppress \
+                    outward signs of illness. A bird that appears only mildly unwell may \
+                    be significantly compromised. Symptoms warranting urgent evaluation \
+                    include: labored breathing or tail-bobbing with each breath, discharge \
+                    from the eyes or nares, changes in droppings (color, consistency, or \
+                    volume), sudden weight loss, loss of balance, seizures, or any sudden \
+                    change in behavior or vocalization. Weigh your bird regularly on a gram \
+                    scale at home — consistent weight monitoring is one of the earliest \
+                    indicators of health decline.
+
+                    Quarantine any new bird for at least 30 days before introducing it to \
+                    other birds in the household. New birds should be examined and screened \
+                    for common infectious diseases before quarantine ends. Many serious \
+                    avian diseases, including psittacosis and PBFD, can be carried \
+                    without obvious signs.
+                    """,
+                toxicityInfoSectionTitle: "Husbandry Overview",
+                onsetTime: nil,
+                symptoms: [],
+                entrySeverity: nil,
+                speciesRisks: [
+                    SpeciesRisk(
+                        species: .bird,
+                        severity: .moderate,
+                        notes: "Covers core husbandry requirements for commonly kept pet birds including psittacines (parrots, cockatiels, budgerigars, lovebirds, conures, macaws, cockatoos) and passerines (canaries, finches)."
+                    )
+                ],
+                preventionTips: [
+                    "Feed psittacines a high-quality pelleted diet as the foundation — all-seed diets are associated with obesity, vitamin A deficiency, and fatty liver disease.",
+                    "Remove all PTFE/non-stick coated cookware and appliances from areas where birds live — overheated PTFE fumes can kill a bird within minutes.",
+                    "Never allow birds access to avocado in any form — all parts of the avocado plant contain persin, which causes cardiac and respiratory failure in birds.",
+                    "Provide fresh water and clean food and water dishes every day — bacterial contamination of water dishes is a common cause of illness.",
+                    "Use a gram scale to weigh your bird regularly — consistent weight monitoring is one of the earliest signs of health decline before symptoms appear.",
+                    "Provide perches of varying diameters and materials to promote foot health — a single uniform perch leads to pressure sores and arthritis over time.",
+                    "Keep aerosol sprays, scented candles, incense, and cigarette or e-cigarette smoke away from any room a bird occupies.",
+                    "Establish care with an avian-specialist veterinarian within the first few weeks of ownership and schedule annual wellness exams.",
+                    "Quarantine any new bird for at least 30 days before introducing it to other birds — many serious avian diseases can be carried without visible signs.",
+                    "Take respiratory distress — labored breathing, tail-bobbing, open-mouth breathing — seriously as an emergency; birds deteriorate rapidly once signs are visible."
+                ],
+                sources: [
+                    "Association of Avian Veterinarians (AAV) — Avian Care Guidelines",
+                    "Merck Veterinary Manual — Psittacines: Management and Nutrition",
+                    "Merck Veterinary Manual — Canaries and Finches: Husbandry",
+                    "LafeberVet — Basic Principles of Avian Nutrition: https://lafeber.com/vet/basic-principles-of-avian-nutrition/",
+                    "LafeberVet — Toxic and Dangerous Foods for Birds: https://lafeber.com/vet/toxic-dangerous-foods-birds/",
+                    "VCA Animal Hospitals — Feeding Pet Birds",
+                    "University of California Davis School of Veterinary Medicine — Avian & Exotic Animal Care",
+                    "ASPCA Animal Poison Control Center — Birds and Toxic Substances"
+                ],
+                relatedEntries: [
+                    "1D000001-0000-0000-0000-000000000004",  // Psittacosis
+                    "1D000001-0000-0000-0000-000000000014",  // Aspergillosis
+                    "1D000001-0000-0000-0000-000000000030",  // PBFD
+                    "1D000001-0000-0000-0000-000000000035",  // Air Sac Mites
+                    "1D000001-0000-0000-0000-000000000036",  // PDD
+                    "1D000001-0000-0000-0000-000000000037",  // Coccidiosis & Cryptosporidiosis
+                    "1D000001-0000-0000-0000-000000000039",  // Hypovitaminosis A
+                    "00112233-4455-6677-8899-aabbccddef22"   // Inhalant Toxins (PTFE / Teflon Toxicosis)
                 ]
             ),
         ]
