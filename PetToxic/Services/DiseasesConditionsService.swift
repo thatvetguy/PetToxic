@@ -25,6 +25,7 @@ class DiseasesConditionsService {
         "1D000001-0000-0000-0000-000000000005",  // Metabolic Bone Disease (MBD)
         "1D000001-0000-0000-0000-000000000009",  // Thermal Burns
         "1D000001-0000-0000-0000-000000000010",  // Dysecdysis (Abnormal Shedding)
+        "1D000001-0000-0000-0000-000000000038",  // GI Stasis in Rabbits
     ]
 
     /// Whether an entry is an infectious disease (Type 1)
@@ -6245,7 +6246,8 @@ class DiseasesConditionsService {
                     "1D000001-0000-0000-0000-000000000024",  // Toxoplasma
                     "1D000001-0000-0000-0000-000000000027",  // Baylisascaris
                     "1D000001-0000-0000-0000-000000000031",  // Rabbit Ear Mites (Psoroptes cuniculi)
-                    "1D000001-0000-0000-0000-000000000037"   // Coccidiosis & Cryptosporidiosis
+                    "1D000001-0000-0000-0000-000000000037",  // Coccidiosis & Cryptosporidiosis
+                    "1D000001-0000-0000-0000-000000000038"   // GI Stasis in Rabbits
                 ]
             ),
 
@@ -6580,7 +6582,8 @@ class DiseasesConditionsService {
                 ],
                 relatedEntries: [
                     "1D000001-0000-0000-0000-000000000026",  // Mange (Sarcoptic & Demodectic)
-                    "1D000001-0000-0000-0000-000000000029"   // Encephalitozoon cuniculi (E. cuniculi)
+                    "1D000001-0000-0000-0000-000000000029",  // Encephalitozoon cuniculi (E. cuniculi)
+                    "1D000001-0000-0000-0000-000000000038"   // GI Stasis in Rabbits
                 ]
             ),
 
@@ -7838,6 +7841,192 @@ class DiseasesConditionsService {
                     "1D000001-0000-0000-0000-000000000023",  // GI Parasites
                     "1D000001-0000-0000-0000-000000000024",  // Toxoplasma
                     "1D000001-0000-0000-0000-000000000029"   // Encephalitozoon cuniculi (E. cuniculi)
+                ]
+            ),
+
+            // MARK: - GI Stasis in Rabbits (Gut Shutdown)
+            ToxicItem(
+                id: UUID(uuidString: "1D000001-0000-0000-0000-000000000038")!,
+                name: "GI Stasis in Rabbits (Gut Shutdown)",
+                alternateNames: [
+                    "GI stasis",
+                    "gut stasis",
+                    "rabbit ileus",
+                    "gastrointestinal stasis",
+                    "intestinal stasis",
+                    "gut shutdown",
+                    "gastrointestinal ileus",
+                    "rabbit gut stasis",
+                    "GI ileus"
+                ],
+                categories: [.diseasesAndConditions],
+                imageAsset: "gi_stasis_thumb",
+                description: """
+                    GI stasis is a life-threatening condition in which the normal movement of \
+                    food, fluid, and gas through a rabbit's digestive tract slows dramatically \
+                    or stops entirely. Without prompt veterinary care, the condition can become \
+                    fatal within 24 to 48 hours.
+
+                    Unlike dogs and cats, rabbits are hindgut fermenters — they rely on a \
+                    complex population of beneficial bacteria and a continuous flow of dietary \
+                    fiber to keep digestion moving. When that flow is disrupted, gas accumulates \
+                    in the gastrointestinal tract, pain intensifies, and the rabbit stops eating. \
+                    Once a rabbit stops eating, the condition accelerates rapidly.
+
+                    GI stasis is not contagious and is not caused by a pathogen. In most cases \
+                    it is directly linked to diet, environment, or stress, making it largely \
+                    preventable with correct husbandry. Any rabbit can be affected, but animals \
+                    on low-fiber diets, those experiencing stress, and those with underlying \
+                    dental disease are most commonly seen. Guinea pigs and chinchillas share a \
+                    similar physiological vulnerability and can develop GI stasis under comparable \
+                    conditions. Dogs, cats, birds, and reptiles are not subject to this \
+                    husbandry-driven form of the condition.
+                    """,
+                toxicityInfo: """
+                    **How It Harms the Body**
+                    Rabbits have a digestive system built around continuous, high-volume movement. \
+                    The cecum — a large fermentation chamber that can account for roughly 40% of \
+                    the rabbit's gastrointestinal volume — houses billions of bacteria that break \
+                    down fibrous plant material. Fiber is not just food for the rabbit; it is the \
+                    physical stimulus that keeps the entire system in motion. When fiber intake \
+                    drops, gut motility (the rhythmic muscular contractions that move food forward) \
+                    slows. Slowed motility allows gas to accumulate. Gas causes pain. Pain causes \
+                    the rabbit to stop eating. Not eating causes further motility loss — a \
+                    self-reinforcing spiral that can reach a critical point within hours.
+
+                    A critical anatomical fact: rabbits cannot vomit. Gas and gut contents \
+                    cannot be expelled orally. Once the system stalls, there is no natural \
+                    safety valve. Painful gas distension can become severe, and the gut \
+                    bacteria responsible for healthy digestion begin to die off — making \
+                    recovery harder the longer the condition is left untreated.
+
+                    **The Dropping They're Supposed to Eat**
+                    Most rabbit owners know their rabbit eats some of its own droppings — but \
+                    not all droppings are the same. Cecotropes (also called night droppings or \
+                    cecal pellets) are soft, grape-cluster-shaped droppings produced from the \
+                    cecum. They are rich in B vitamins, proteins, volatile fatty acids, and \
+                    living gut bacteria that the rabbit's digestive system cannot fully absorb \
+                    in a single pass through the gut. Eating them directly from the anus — a \
+                    behavior called cecotrophy — is not a sign of poor hygiene. It is a \
+                    nutritional requirement.
+
+                    When GI motility begins to slow, cecotrope production becomes irregular \
+                    or stops. An owner finding soft, uneaten cecotropes clustered in the hutch — \
+                    when their rabbit used to consume them without leaving a trace — is observing \
+                    one of the earliest and most reliable warning signs of developing stasis. It \
+                    also means the rabbit is being deprived of critical nutrition at exactly the \
+                    moment its system is most stressed. This detail alone is worth knowing: if \
+                    you are finding soft droppings, contact your veterinarian — do not wait for \
+                    more obvious symptoms to develop.
+
+                    **Causes & Risk Factors**
+                    • **Low-fiber diet** — the single most common driver. Rabbits require \
+                    unlimited access to grass hay (timothy, orchard grass, meadow hay) as the \
+                    foundation of their diet. Hay provides the long-strand fiber that physically \
+                    stimulates gut motility. A diet built primarily on pellets, greens, or treats \
+                    is a significant risk factor regardless of how much the rabbit eats.
+
+                    • **Dental disease** — tooth root problems, molar spurs, or incisor \
+                    misalignment cause pain while eating, leading to reduced food intake and \
+                    subsequent motility loss. A rabbit that suddenly stops eating should always \
+                    have its teeth evaluated by a veterinarian — dental pain is a frequently \
+                    missed trigger for stasis.
+
+                    • **Stress** — rabbits are prey animals that instinctively suppress visible \
+                    signs of distress. Physical or psychological stress — including transport, \
+                    environmental change, loud noise, the introduction of new animals, or pain \
+                    from any source — can slow or halt gut motility directly.
+
+                    • **Dehydration** — adequate water intake is essential for gut motility and \
+                    the passage of ingested material. Rabbits on insufficient water, or those in \
+                    hot environments, are at elevated risk. Water availability should be monitored \
+                    closely during warm weather.
+
+                    • **Hairballs (trichobezoars)** — unlike cats, rabbits cannot vomit up \
+                    ingested fur. Hair accumulates in the stomach, particularly during heavy \
+                    molting seasons. Adequate fiber helps move hair through naturally; low-fiber \
+                    diets allow hairballs to grow to an obstructive size.
+
+                    • **Inactivity and obesity** — overweight rabbits and those with insufficient \
+                    exercise space show higher rates of GI motility problems. Physical movement \
+                    directly supports gut motility.
+
+                    • **Post-illness or post-surgical vulnerability** — any period of reduced \
+                    eating, including recovery from an unrelated condition or procedure, can \
+                    initiate stasis. Rabbits recovering from illness require close dietary monitoring.
+
+                    **Treatment Goals**
+                    Veterinary treatment focuses on restoring gut motility, relieving gas pain, \
+                    correcting dehydration, and returning the rabbit to voluntary eating as \
+                    quickly as possible. Pain management is central to recovery — a rabbit in \
+                    pain will not eat, and a rabbit that will not eat cannot recover on its own. \
+                    GI stasis does not resolve without veterinary intervention. Outcomes are \
+                    significantly better with early treatment; delays of even a few hours worsen \
+                    the prognosis considerably.
+
+                    **Myths vs. Facts**
+                    **Myth:** \u{201C}My rabbit is still moving around, so it can\u{2019}t be that serious.\u{201D}
+                    **Fact:** Rabbits instinctively hide signs of illness — movement does not \
+                    rule out stasis. A rabbit that is quieter than usual, not eating its \
+                    cecotropes, or producing fewer droppings than normal may already be in the \
+                    early stages. Waiting for dramatic symptoms costs critical treatment time.
+
+                    **Myth:** \u{201C}Rabbits are fine on a pellet-only diet.\u{201D}
+                    **Fact:** Pellets are a supplement, not a dietary foundation. A pellet-only \
+                    rabbit is at significantly elevated risk for GI stasis, dental disease, and \
+                    obesity. Unlimited grass hay is not optional — it is the single most \
+                    important item in a rabbit's diet.
+
+                    **Myth:** \u{201C}GI stasis just means my rabbit needs a tummy rub.\u{201D}
+                    **Fact:** Gentle abdominal palpation may provide minor comfort in very mild \
+                    cases, but it does not address motility failure, gas accumulation, pain, or \
+                    dehydration — the four interconnected problems driving the condition. \
+                    Veterinary evaluation is required; home management is not a substitute.
+                    """,
+                toxicityInfoSectionTitle: "What makes it harmful?",
+                onsetTime: OnsetTime(
+                    early: "Reduced or absent fecal pellets and loss of appetite are often the first signs, sometimes within a few hours of onset. Uneaten cecotropes (soft, grape-cluster-shaped droppings) left in the hutch are among the earliest owner-observable warning signs and should prompt immediate veterinary contact.",
+                    delayed: "Without treatment, critical deterioration typically occurs within 24 to 48 hours. A rabbit that has not eaten or passed droppings for more than 12 hours requires urgent veterinary evaluation — do not wait overnight."
+                ),
+                symptoms: [
+                    "Loss of appetite or complete refusal to eat",
+                    "Reduced or absent fecal pellets",
+                    "Uneaten cecotropes (soft, grape-cluster-shaped droppings left in the hutch)",
+                    "Hunched, uncomfortable posture",
+                    "Teeth grinding (bruxism) — a sign of pain",
+                    "Lethargy, unusual stillness, or depression",
+                    "Visibly swollen or distended abdomen",
+                    "Hiding or avoiding contact",
+                    "Labored or rapid breathing (in severe cases)"
+                ],
+                entrySeverity: nil,
+                speciesRisks: [
+                    SpeciesRisk(
+                        species: .smallMammal,
+                        severity: .severe,
+                        notes: "Rabbits are the primary and most severely affected species; the hindgut-fermenter digestive system makes them uniquely vulnerable to stasis when fiber intake is inadequate. Guinea pigs and chinchillas share a similar physiological design and are also susceptible. Life-threatening without prompt veterinary care."
+                    )
+                ],
+                preventionTips: [
+                    "Provide unlimited grass hay (timothy, orchard grass, or meadow hay) at all times — it is the single most important factor in preventing GI stasis and should make up the majority of the diet",
+                    "Ensure fresh, clean water is always available; dehydration directly impairs gut motility and worsens risk during warm weather",
+                    "Limit pellets to small supplemental amounts appropriate for body weight; avoid high-sugar, high-starch treats including dried fruit, crackers, bread, and commercial rabbit treats",
+                    "Provide adequate exercise space — rabbits that cannot move freely are at higher risk; daily out-of-enclosure time supports gut motility",
+                    "Monitor droppings every day — a sudden reduction in the number or size of fecal pellets, or the appearance of uneaten cecotropes (soft clustered droppings) in the hutch, warrants prompt veterinary contact",
+                    "Schedule regular veterinary check-ups including dental evaluations — tooth problems are a leading hidden trigger for stasis and may not be visible to owners",
+                    "Minimize environmental stressors; avoid sudden changes to housing, routine, or social environment where possible",
+                    "During molting seasons, ensure hay intake is especially high to help move ingested fur through the digestive tract and reduce hairball risk"
+                ],
+                sources: [
+                    "House Rabbit Society — GI Stasis: The Silent Killer (rabbit.org)",
+                    "Merck Veterinary Manual — Gastrointestinal Diseases of Rabbits",
+                    "LafeberVet — GI Stasis in Rabbits",
+                    "VCA Animal Hospitals — Gastrointestinal Stasis in Rabbits",
+                    "Wikipedia — Cecotrophy"
+                ],
+                relatedEntries: [
+                    "1D000001-0000-0000-0000-000000000029",  // E. cuniculi
+                    "1D000001-0000-0000-0000-000000000031"   // Rabbit Ear Mites
                 ]
             ),
         ]
