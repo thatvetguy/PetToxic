@@ -3,9 +3,9 @@
 Complete list of all entries with UUIDs, severity, and categories.
 
 - Toxin/informational entries in `DatabaseService.swift`: 186
-- Disease/condition entries in `DiseasesConditionsService.swift`: 22 (Pro-locked)
+- Disease/condition entries in `DiseasesConditionsService.swift`: 23 (Pro-locked)
 - Severity explainer: 1
-- **Total entries: 209**
+- **Total entries: 210**
 
 *Last updated: 2026-03-17 (Session 153)*
 
@@ -21,7 +21,7 @@ Complete list of all entries with UUIDs, severity, and categories.
 | Low/Moderate | 4 |
 | Low | 17 |
 | nil (Informational) | 26 |
-| **Total** | **209** |
+| **Total** | **210** |
 
 | Category | Count |
 |----------|-------|
@@ -35,7 +35,7 @@ Complete list of all entries with UUIDs, severity, and categories.
 | Holiday Hazards | 11 |
 | Cleaning Products | 9 |
 | Recreational Substances | 8 |
-| Diseases & Conditions | 22 |
+| Diseases & Conditions | 23 |
 
 *Counts exceed total because entries can be cross-listed in multiple categories.*
 
@@ -350,6 +350,7 @@ Complete list of all entries with UUIDs, severity, and categories.
 | Feline Immunodeficiency Virus (FIV) | `1D000001-0000-0000-0000-000000000020` | nil | Cats |
 | Feline Herpesvirus-1 (FHV-1) | `1D000001-0000-0000-0000-000000000021` | nil | Cats |
 | Tick-Borne Diseases | `1D000001-0000-0000-0000-000000000022` | nil | Dogs, Cats, Small Mammals |
+| GI Parasites | `1D000001-0000-0000-0000-000000000023` | nil | Dogs, Cats, Small Mammals, Birds, Reptiles |
 
 ### Special Entry
 
@@ -359,7 +360,7 @@ Complete list of all entries with UUIDs, severity, and categories.
 
 ---
 
-## Alphabetical Index (All 209 Entries)
+## Alphabetical Index (All 210 Entries)
 
 | Name | UUID | Severity | Categories |
 |------|------|----------|------------|
@@ -450,6 +451,7 @@ Complete list of all entries with UUIDs, severity, and categories.
 | Fruit Pits & Seeds | `f1369ae0-b97d-424d-98b7-b46a9b245109` | nil | Informational, Foods |
 | Garlic | `dad777ea-3120-43b1-9b8f-aee413716abc` | Severe | Foods |
 | GI Irritant Plants | `045fe2d3-3c59-4f15-b72a-09371b675d77` | Low | Plants, Holiday Hazards |
+| GI Parasites | `1D000001-0000-0000-0000-000000000023` | nil | Diseases & Conditions |
 | Glow Sticks | `d4e5f6a7-8b9c-0d1e-2f3a-4b5c6d7e8f9a` | Low | Household Items |
 | Golden Chain Tree | `e4b28653-d4b2-42a0-ac67-f22e53fc1673` | High | Plants |
 | Grapes & Raisins | `d1bde5cd-6881-4765-ac4c-b9f43b40da70` | Severe | Foods |

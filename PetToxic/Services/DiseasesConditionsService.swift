@@ -4634,7 +4634,277 @@ class DiseasesConditionsService {
                     "https://www.cdc.gov/ticks/index.html",
                     "https://en.wikipedia.org/wiki/Cytauxzoonosis"
                 ],
-                relatedEntries: ["1D000001-0000-0000-0000-000000000006"]
+                relatedEntries: [
+                    "1D000001-0000-0000-0000-000000000006",  // Leptospirosis
+                    "1D000001-0000-0000-0000-000000000023"   // GI Parasites
+                ]
+            ),
+
+            // MARK: - GI Parasites
+            ToxicItem(
+                id: UUID(uuidString: "1D000001-0000-0000-0000-000000000023")!,
+                name: "GI Parasites",
+                alternateNames: [
+                    "intestinal parasites",
+                    "worms",
+                    "roundworms",
+                    "hookworms",
+                    "tapeworms",
+                    "whipworms",
+                    "pinworms",
+                    "Giardia",
+                    "Coccidia",
+                    "coccidiosis",
+                    "Cryptosporidium",
+                    "Toxocara",
+                    "Toxocara canis",
+                    "Toxocara cati",
+                    "Ancylostoma",
+                    "Dipylidium",
+                    "Echinococcus",
+                    "Taenia",
+                    "Trichuris",
+                    "deworming",
+                    "intestinal worms",
+                    "parasitic infection",
+                    "fecal parasites",
+                    "gastrointestinal parasites"
+                ],
+                categories: [.diseasesAndConditions],
+                imageAsset: "gi_parasites_thumb",
+                description: """
+                Gastrointestinal (GI) parasites are among the most common infectious \
+                conditions affecting pets of all species worldwide. This entry covers \
+                the major intestinal parasites encountered in companion animals: \
+                roundworms, hookworms, tapeworms (Dipylidium, Taenia, and \
+                Echinococcus), whipworms, Giardia, Coccidia, and Cryptosporidium.
+
+                Severity ranges from mild and easily treated to life-threatening — \
+                particularly in young, elderly, or immunocompromised animals. Several \
+                of these parasites are zoonotic, meaning they can infect humans, \
+                making pet parasite control a public health priority as well as an \
+                animal welfare concern.
+                """,
+                toxicityInfo: """
+                **How It Harms the Body**
+
+                Different parasites damage the body through distinct mechanisms. \
+                Roundworms (Toxocara canis in dogs, T. cati in cats) compete with \
+                the host for nutrients and migrate through the lungs during their \
+                larval stage, sometimes causing coughing or respiratory signs before \
+                settling in the intestines. Heavy infections cause pot-bellied \
+                distension and failure to thrive, especially in young animals.
+
+                **Born Infected: The Roundworm Lifecycle**
+
+                Puppies and kittens can be infected with Toxocara before they are \
+                even born. Dormant larvae in the mother\u{2019}s tissues reactivate during \
+                pregnancy and pass to offspring transplacentally (across the placenta) \
+                and transmammarily (through milk). This is why veterinarians recommend \
+                deworming puppies starting as early as 2 weeks of age — they may be \
+                carrying a worm burden from birth.
+
+                Hookworms (Ancylostoma, Uncinaria) are blood-feeding parasites that \
+                attach to the intestinal wall. Heavy infections cause life-threatening \
+                iron-deficiency anemia, particularly in puppies and kittens. Pale \
+                gums, profound weakness, and collapse are warning signs of severe \
+                hookworm anemia requiring emergency veterinary care.
+
+                Tapeworms cause intestinal irritation and compete for nutrients. \
+                Dipylidium caninum causes perianal itching and scooting and sheds \
+                rice-grain-sized segments visible near the tail or in feces. Taenia \
+                species are acquired through prey animals or raw meat. Echinococcus \
+                is the most dangerous tapeworm: its larvae form fluid-filled hydatid \
+                cysts in the organs of intermediate hosts — including, rarely, humans.
+
+                **The Flea-Tapeworm Connection**
+
+                Dipylidium tapeworm eggs are not passed directly between pets — they \
+                require a flea as an intermediate host. A pet becomes infected by \
+                accidentally swallowing an infected flea during grooming. A \
+                Dipylidium diagnosis is therefore a signal that the pet also had \
+                fleas, and effective treatment must address both the tapeworm and the \
+                flea infestation at the same time. Treating only the tapeworm without \
+                eliminating fleas will result in rapid reinfection.
+
+                Whipworms (Trichuris vulpis) embed their whip-like anterior end into \
+                the wall of the large intestine. They primarily affect dogs and are \
+                uncommon in cats. Infections cause large-bowel diarrhea — often with \
+                mucus and fresh blood — and can be difficult to detect because \
+                whipworm eggs are shed intermittently in feces.
+
+                Giardia is a single-celled protozoan parasite (not a worm) that \
+                colonizes the small intestine and disrupts its lining, impairing \
+                absorption of water and nutrients. It causes watery, greasy, \
+                foul-smelling diarrhea and spreads easily in kennels, shelters, and \
+                multi-pet households due to environmental contamination.
+
+                Coccidia (Isospora in dogs and cats; Eimeria and related genera in \
+                rabbits, guinea pigs, birds, and reptiles) are protozoan parasites \
+                that invade and destroy intestinal cells. Young animals are most \
+                susceptible — in rabbits and guinea pigs, a heavy Eimeria infection \
+                can progress rapidly to fatal hemorrhagic enteritis.
+
+                Cryptosporidium is closely related to Coccidia. In most species it \
+                causes diarrhea that resolves with supportive care, but in reptiles — \
+                particularly snakes infected with Cryptosporidium serpentis — the \
+                infection is often chronic, progressive, and incurable with currently \
+                available treatments.
+
+                **Transmission & Spread**
+
+                Most GI parasites spread through the fecal-oral route: eggs or \
+                oocysts shed in one animal\u{2019}s feces contaminate the environment, and \
+                another animal ingests them through grooming, sniffing, or drinking \
+                from contaminated water. Roundworm eggs are particularly resilient — \
+                they can survive in soil for years and resist many common disinfectants.
+
+                Tapeworms require intermediate hosts. Dipylidium spreads through \
+                fleas; Taenia and Echinococcus spread through rodents, rabbits, or \
+                other prey animals that have ingested tapeworm eggs and developed \
+                larval cysts in their tissues. Giardia and Cryptosporidium also spread \
+                through contaminated water — including standing puddles, streams, and \
+                shared water bowls. Roundworms are additionally transmitted to \
+                offspring through the placenta and mother\u{2019}s milk.
+
+                **Treatment Goals**
+
+                Treatment varies by parasite but generally involves antiparasitic \
+                medications prescribed by a veterinarian, often given in multiple \
+                rounds — most dewormers eliminate adult parasites but may not clear \
+                all larval stages in a single dose. Giardia and Coccidia require \
+                specific antiprotozoal medications rather than standard dewormers. \
+                Cryptosporidium has no reliably curative treatment, particularly in \
+                reptiles. Supportive care — fluids, nutritional support — is often \
+                needed in severe cases.
+
+                **Deworming Isn\u{2019}t Just a Puppy Thing**
+
+                Many pet owners associate deworming only with puppies and kittens, \
+                but adult animals can acquire new parasitic infections throughout \
+                their lives — especially pets that go outdoors, hunt, or interact \
+                with other animals. The Companion Animal Parasite Council (CAPC) \
+                recommends year-round parasite prevention for dogs and cats, combined \
+                with regular fecal examinations (at least once or twice yearly for \
+                adults; quarterly for puppies and kittens). Environmental control — \
+                prompt feces removal and daily litter box cleaning — significantly \
+                reduces egg and oocyst burden and lowers reinfection risk.
+
+                **Zoonotic Risk**
+
+                Several GI parasites pose genuine health risks to humans:
+
+                Roundworms (Toxocara): Humans, especially children, can accidentally \
+                ingest Toxocara eggs from soil or sand contaminated with pet or \
+                wildlife feces. Larvae cannot complete their lifecycle in humans but \
+                migrate through tissues, causing visceral larva migrans (organ damage) \
+                or ocular larva migrans (eye damage with potential vision loss). \
+                Sandboxes and playgrounds are a well-documented source of exposure. \
+                Toxocariasis is one of the most common parasitic infections in humans \
+                worldwide.
+
+                Hookworms: Larvae in contaminated soil can penetrate human skin — \
+                usually bare feet — causing cutaneous larva migrans, an intensely \
+                itchy, winding red rash that tracks the larva\u{2019}s migration path.
+
+                Echinococcus: Humans can become accidental intermediate hosts by \
+                ingesting Echinococcus eggs from the feces of an infected dog. \
+                Larvae form large fluid-filled hydatid cysts in the liver, lungs, \
+                or other organs — a serious condition (cystic echinococcosis) \
+                requiring surgery or prolonged medication.
+
+                Giardia: Zoonotic potential is debated — not all Giardia strains \
+                infect both humans and animals — but handwashing after handling pets \
+                or cleaning up feces is a reasonable precaution.
+
+                Cryptosporidium: Immunocompromised individuals (those undergoing \
+                chemotherapy, living with HIV/AIDS, or on immunosuppressive \
+                medications) are at particular risk for severe illness. Standard \
+                hand hygiene after handling reptiles or cleaning their enclosures \
+                is essential.
+
+                If you or a family member may have been exposed, contact a physician \
+                promptly. For your pet, contact a veterinarian or animal poison \
+                control immediately if you suspect GI parasitism.
+                """,
+                toxicityInfoSectionTitle: "What makes it harmful?",
+                onsetTime: OnsetTime(
+                    early: "Onset varies by parasite. Heavy hookworm infections can cause life-threatening anemia in puppies and kittens within days. Coccidia and Eimeria outbreaks in juvenile rabbits and guinea pigs can progress to fatal enteritis rapidly. Giardia typically causes signs within 1–2 weeks of infection.",
+                    delayed: "Roundworm and tapeworm infections often cause no obvious signs for weeks to months. Cryptosporidium in reptiles typically presents as chronic, slowly progressive disease over weeks to months. Adult animals with low-burden infections may show no clinical signs at all."
+                ),
+                symptoms: [
+                    "Diarrhea (may contain blood or mucus)",
+                    "Vomiting",
+                    "Weight loss or failure to thrive",
+                    "Pot-bellied appearance (especially in young animals with heavy roundworm burden)",
+                    "Pale gums (sign of blood-loss anemia — hookworms)",
+                    "Lethargy and weakness",
+                    "Poor coat or feather condition",
+                    "Coughing or respiratory signs (roundworm larval migration through lungs)",
+                    "Scooting or perianal irritation (tapeworms)",
+                    "Visible rice-grain segments near the tail or in feces (Dipylidium tapeworm)",
+                    "Visible worms in vomit or feces (roundworms)",
+                    "Increased appetite with concurrent weight loss",
+                    "Dehydration",
+                    "Loss of appetite",
+                    "Sudden collapse (severe hookworm anemia in puppies or kittens)"
+                ],
+                entrySeverity: nil,
+                speciesRisks: [
+                    SpeciesRisk(
+                        species: .dog,
+                        severity: .moderate,
+                        notes: "All major GI parasites in this entry affect dogs. Most infections are manageable with appropriate deworming, but heavy hookworm burdens can cause life-threatening anemia in puppies — pale gums, lethargy, and collapse warrant emergency evaluation. Year-round parasite prevention is strongly recommended."
+                    ),
+                    SpeciesRisk(
+                        species: .cat,
+                        severity: .moderate,
+                        notes: "Cats are susceptible to roundworms (Toxocara cati), hookworms, tapeworms, Giardia, and Coccidia. Whipworms are rare in cats. Heavy hookworm infections can be life-threatening in kittens. Year-round parasite prevention is recommended."
+                    ),
+                    SpeciesRisk(
+                        species: .smallMammal,
+                        severity: .high,
+                        notes: "Coccidia (Eimeria species) can be rapidly fatal in rabbits and guinea pigs, particularly in juveniles stressed by weaning or environmental change — this is the worst-case driver for this species group. Small mammals also serve as intermediate hosts for Echinococcus tapeworms. Giardia and Cryptosporidium are documented in rabbits and guinea pigs. Prompt veterinary evaluation is essential."
+                    ),
+                    SpeciesRisk(
+                        species: .bird,
+                        severity: .moderate,
+                        notes: "Giardia is the primary concern in pet birds, particularly budgerigars and cockatiels — the worst-case driver for this species. Coccidia affects some avian species. Roundworms (Ascaridia) can be significant in certain birds. Overall parasite burden is generally lower than in mammals, but any suspected infection warrants veterinary evaluation."
+                    ),
+                    SpeciesRisk(
+                        species: .reptile,
+                        severity: .high,
+                        notes: "Cryptosporidium is the worst-case pathogen for reptiles — particularly snakes infected with Cryptosporidium serpentis — often chronic and incurable with available treatments. Coccidia (Isospora and related genera) affect many reptile species. Oxyurid pinworms are common in herbivorous reptiles and are usually low pathogenicity. Any GI parasitism in a reptile warrants veterinary evaluation and may require long-term management."
+                    )
+                ],
+                preventionTips: [
+                    "Schedule regular fecal examinations — at least annually for adult pets; quarterly for puppies and kittens",
+                    "Use year-round intestinal parasite prevention products as recommended by your veterinarian",
+                    "Remove and dispose of feces promptly — daily removal from yards and litter boxes significantly reduces environmental contamination",
+                    "Implement comprehensive flea control to prevent Dipylidium tapeworm infection",
+                    "Prevent hunting and consumption of raw or undercooked meat (reduces Taenia and Echinococcus risk)",
+                    "Provide fresh, clean water; avoid allowing pets to drink from stagnant puddles or streams",
+                    "Wash hands thoroughly after handling pets, cleaning litter boxes, or working in soil",
+                    "Keep children\u{2019}s sandboxes covered when not in use to reduce Toxocara exposure risk",
+                    "Quarantine and test new animals before introducing them to established pets",
+                    "Keep reptile enclosures clean and practice thorough hand hygiene after handling reptiles",
+                    "Follow CAPC (Companion Animal Parasite Council) guidelines for parasite prevention in your region"
+                ],
+                sources: [
+                    "Companion Animal Parasite Council (CAPC) — Guidelines: https://capcvet.org/guidelines/",
+                    "Merck Veterinary Manual — Roundworms in Small Animals: https://www.merckvetmanual.com/digestive-system/gastrointestinal-parasites-of-small-animals/roundworms-in-small-animals",
+                    "Merck Veterinary Manual — Hookworms in Small Animals: https://www.merckvetmanual.com/digestive-system/gastrointestinal-parasites-of-small-animals/hookworms-in-small-animals",
+                    "Merck Veterinary Manual — Tapeworms in Small Animals: https://www.merckvetmanual.com/digestive-system/gastrointestinal-parasites-of-small-animals/tapeworms-in-small-animals",
+                    "CDC — Toxocariasis (Toxocara Infection): https://www.cdc.gov/parasites/toxocariasis/",
+                    "CDC — Hookworm: https://www.cdc.gov/parasites/hookworm/",
+                    "CDC — Cryptosporidiosis: https://www.cdc.gov/parasites/crypto/",
+                    "AVMA — Internal Parasites: https://www.avma.org/resources-tools/pet-owners/petcare/internal-parasites",
+                    "LafeberVet — Giardia in Companion Birds: https://lafeber.com/vet/giardia-in-companion-birds/",
+                    "Cornell University College of Veterinary Medicine — Giardia: https://www.vet.cornell.edu/animal-health-diagnostic-center/testing/protocols/giardia"
+                ],
+                relatedEntries: [
+                    "1D000001-0000-0000-0000-000000000022"  // Tick-Borne Diseases
+                ]
             ),
         ]
     }
