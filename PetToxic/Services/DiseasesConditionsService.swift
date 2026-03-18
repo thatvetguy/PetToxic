@@ -4905,7 +4905,8 @@ class DiseasesConditionsService {
                 ],
                 relatedEntries: [
                     "1D000001-0000-0000-0000-000000000022",  // Tick-Borne Diseases
-                    "1D000001-0000-0000-0000-000000000024"   // Toxoplasma
+                    "1D000001-0000-0000-0000-000000000024",  // Toxoplasma
+                    "1D000001-0000-0000-0000-000000000027"   // Baylisascaris
                 ]
             ),
 
@@ -5589,6 +5590,238 @@ class DiseasesConditionsService {
                     "https://lafeber.com/vet/demodex-and-sarcoptic-mange-in-small-mammals/"
                 ],
                 relatedEntries: ["1D000001-0000-0000-0000-000000000022"]
+            ),
+
+            // MARK: - Baylisascaris (Raccoon Roundworm)
+            ToxicItem(
+                id: UUID(uuidString: "1D000001-0000-0000-0000-000000000027")!,
+                name: "Baylisascaris (Raccoon Roundworm)",
+                alternateNames: [
+                    "Baylisascaris procyonis",
+                    "Raccoon roundworm",
+                    "Baylisascariasis",
+                    "Raccoon ascarid",
+                    "Neural larva migrans",
+                    "Ocular larva migrans",
+                    "Visceral larva migrans",
+                    "Baylisascaris infection",
+                    "Raccoon parasite",
+                    "Baylisascaris baylisascaris",
+                    "Baylis ascaris"
+                ],
+                categories: [.diseasesAndConditions],
+                imageAsset: "baylisascaris_thumb",
+                description: """
+                Baylisascaris procyonis is a roundworm that lives in the intestines of \
+                raccoons — its natural definitive host. Raccoons typically carry the \
+                parasite without showing signs of illness. The danger lies in what \
+                happens when the parasite\u{2019}s eggs are ingested by other animals or \
+                humans: in a non-raccoon host, the larvae do not complete their normal \
+                life cycle in the gut. Instead, they migrate aggressively through the \
+                body — into organs, eyes, and the brain — causing devastating, often \
+                irreversible damage.
+
+                This condition is called larva migrans, and Baylisascaris is considered \
+                one of the most dangerous causes of neural larva migrans in North \
+                America. In humans, particularly young children, neurological damage can \
+                be severe and permanent. There is no reliable cure once larvae have \
+                entered the nervous system.
+
+                Dogs are uniquely vulnerable on two levels: they can carry adult \
+                Baylisascaris in their intestines and shed infectious eggs in their \
+                feces (as raccoons do), and they are also at risk from larval migration \
+                if they ingest large numbers of eggs. Small mammals and birds are highly \
+                susceptible to fatal larval disease. Raccoon roundworm is not \
+                vaccine-preventable. Prevention depends entirely on limiting exposure to \
+                raccoon feces and contaminated environments.
+                """,
+                toxicityInfo: """
+                **How It Harms the Body**
+
+                Baylisascaris eggs are passed in raccoon feces. After one to four weeks \
+                in the environment, eggs become infectious (embryonate) and can survive \
+                in soil for years. When ingested by a host other than a raccoon, the \
+                larvae hatch in the intestine — but rather than maturing into adult \
+                worms as they would in a raccoon, they migrate. The larvae move through \
+                the intestinal wall into the bloodstream and from there into any tissue \
+                they encounter: liver, lungs, heart, eyes, and most critically, the \
+                brain and spinal cord.
+
+                In the nervous system, migrating larvae cause direct mechanical injury \
+                as they travel, and intense surrounding inflammation as the immune \
+                system reacts to their presence. The result is progressive, often \
+                catastrophic neurological damage: loss of coordination, inability to \
+                stand, blindness, seizures, and death. Because the larvae remain alive \
+                for a prolonged period during migration, damage continues to accumulate. \
+                In the eye, larval migration can destroy the retina and cause permanent \
+                blindness even if the animal or person survives.
+
+                In dogs, a unique complication exists: dogs can harbor adult intestinal \
+                Baylisascaris worms without showing signs of illness — meaning an \
+                infected dog can shed enormous numbers of infectious eggs in its feces \
+                without the owner\u{2019}s knowledge, creating a contamination risk for \
+                humans and other animals in the household.
+
+                **The Raccoon Latrine**
+
+                Raccoons are habitual animals. They tend to return to the same sites \
+                repeatedly to defecate — elevated surfaces such as logs, stumps, flat \
+                rocks, tree bases, deck railings, and rooftops. These sites are called \
+                raccoon latrines. Over time, latrines accumulate enormous concentrations \
+                of feces, and with them, enormous concentrations of Baylisascaris eggs. \
+                A single infected raccoon may shed millions of eggs per day. In a latrine \
+                used for months or years, soil and surface contamination becomes extreme.
+
+                Baylisascaris eggs are unusually resilient. They are resistant to most \
+                common disinfectants, tolerant of freezing temperatures, and can survive \
+                in soil or on surfaces for years under the right conditions. This makes \
+                latrine sites persistently dangerous long after raccoons have moved on. \
+                Dogs that investigate or roll in raccoon latrines, and pets or children \
+                who play in contaminated soil, are at meaningful risk.
+
+                Identifying and safely decontaminating a raccoon latrine — a process \
+                that requires heat (not chemicals) — is a task for professional wildlife \
+                or pest management services.
+
+                **The Wandering Larva**
+
+                In a raccoon, Baylisascaris larvae mature normally in the intestine and \
+                cause little harm. In any other host, the larvae face a biological \
+                dead-end: they cannot complete their life cycle, but they do not stop \
+                moving. Instead, they migrate continuously through tissues, following \
+                chemical gradients in the body that guide them toward — but never to — \
+                the raccoon gut that would allow them to mature. This aimless migration \
+                is what makes Baylisascaris so destructive. The larvae are not \
+                particularly large, but they are relentless, and the brain and spinal \
+                cord offer them no exit.
+
+                In small mammals and birds — the natural intermediate hosts in the wild \
+                — this process plays a role in the parasite\u{2019}s lifecycle. Raccoons \
+                acquire Baylisascaris not only by ingesting embryonated eggs directly, \
+                but also by preying on infected intermediate hosts such as mice, \
+                rabbits, and birds in which larvae have already migrated into muscle \
+                tissue. For these prey animals, larval migration is typically fatal.
+
+                **A Child\u{2019}s Greatest Risk**
+
+                Among human populations, young children are disproportionately affected \
+                by Baylisascaris infection. Toddlers explore the world with their hands \
+                and mouths; they play in sandboxes and outdoor areas that may be \
+                contaminated with raccoon feces; they do not recognize feces as \
+                dangerous. Geophagia — the deliberate eating of soil or dirt — is also \
+                seen in some young children and dramatically elevates ingestion risk.
+
+                Neurological Baylisascaris disease in humans is rare but well-documented. \
+                Cases have been reported across North America, and affected children have \
+                sustained permanent brain damage or died. The condition is often \
+                unrecognized initially because early symptoms are nonspecific and the \
+                exposure to raccoon feces may not be recalled or reported. Treatment \
+                with antiparasitic medications may slow larval migration but cannot \
+                reverse neurological damage already caused.
+
+                Households with dogs known or suspected to carry Baylisascaris, or \
+                properties with active raccoon activity, should be treated as a human \
+                health concern — not only an animal one.
+
+                **Treatment Goals**
+
+                In animals, veterinary management aims to eliminate intestinal \
+                Baylisascaris infection in dogs before egg shedding begins or \
+                continues, and to support animals with neurological disease through \
+                the acute phase of larval migration. Animals showing neurological signs \
+                from larval migration require emergency veterinary care; the goal is to \
+                reduce ongoing inflammation and limit further damage, but recovery \
+                from significant neural larva migrans is often incomplete.
+
+                Fecal testing of dogs with known or suspected raccoon exposure is \
+                critical — the window between infection and the onset of egg shedding \
+                is approximately 50 to 76 days, and fecal testing or empiric treatment \
+                may be recommended for exposed dogs even before shedding begins.
+
+                **Zoonotic Risk**
+
+                Baylisascaris procyonis is a serious zoonotic pathogen. Human infection \
+                occurs through accidental ingestion of embryonated eggs from raccoon \
+                feces, contaminated soil, surfaces, or objects. Children are at the \
+                highest risk due to hand-to-mouth behavior and ground-level play. Dogs \
+                that carry adult intestinal Baylisascaris represent an indirect zoonotic \
+                risk if their feces contaminate areas accessible to children or other \
+                household members.
+
+                If your pet is suspected or confirmed to have Baylisascaris, thorough \
+                handwashing after any fecal contact is essential. Any member of the \
+                household — especially children — who may have been exposed to \
+                contaminated environments should be discussed with a physician. Do not \
+                wait for symptoms; early intervention before neurological signs develop \
+                is far more likely to be effective.
+
+                Individuals who are immunocompromised may face additional risk and \
+                should take extra precautions. Contact your own physician for guidance \
+                specific to your situation.
+                """,
+                toxicityInfoSectionTitle: "What makes it harmful?",
+                onsetTime: OnsetTime(
+                    early: "Baylisascaris eggs require 2–4 weeks in the environment to become infectious after being shed. Once ingested, larval migration begins within days. Early neurological signs — subtle incoordination, head tilt, or behavior changes — may appear days to several weeks after a significant exposure.",
+                    delayed: "Progressive neurological deterioration can develop over days to weeks as larval migration continues. Intestinal infection in dogs typically produces no early signs. Neurological signs, once they appear, may worsen rapidly and can become irreversible."
+                ),
+                symptoms: [
+                    "Loss of coordination or stumbling (ataxia)",
+                    "Abnormal head tilt or circling",
+                    "Muscle weakness or inability to stand",
+                    "Abnormal eye movements (nystagmus)",
+                    "Vision loss or apparent blindness",
+                    "Seizures",
+                    "Behavioral changes — confusion, disorientation, loss of learned behaviors",
+                    "Lethargy and general decline",
+                    "No outward symptoms in dogs with intestinal-only infection"
+                ],
+                entrySeverity: nil,
+                speciesRisks: [
+                    SpeciesRisk(
+                        species: .dog,
+                        severity: .severe,
+                        notes: "Dogs face risk on two levels: as definitive hosts, dogs can harbor adult Baylisascaris in the intestine and shed infectious eggs in feces — typically without showing any signs of illness. As paratenic hosts (if a large egg burden is ingested), dogs can also develop neural larva migrans with serious neurological consequences. Dogs with raccoon exposure or raccoon feces contact should be assessed by a veterinarian even if asymptomatic."
+                    ),
+                    SpeciesRisk(
+                        species: .cat,
+                        severity: .moderate,
+                        notes: "Cats are resistant to intestinal Baylisascaris infection — adult worms rarely establish in feline intestines. However, cats can develop larval migration disease if exposed to significant egg quantities. Neurological signs from larval migration carry a guarded outlook. Cats with outdoor access in areas with raccoon activity carry some risk."
+                    ),
+                    SpeciesRisk(
+                        species: .smallMammal,
+                        severity: .severe,
+                        notes: "Rabbits, mice, squirrels, and other small mammals are natural intermediate hosts for Baylisascaris in the wild. Larval migration in small mammals is rapid and almost uniformly fatal at high exposure levels. Pet rabbits, guinea pigs, and rodents that have any exposure to raccoon feces — through outdoor time, contaminated hay, or environments with raccoon access — are at extreme risk. This is an underrecognized danger for small mammal owners."
+                    ),
+                    SpeciesRisk(
+                        species: .bird,
+                        severity: .high,
+                        notes: "Birds are natural intermediate hosts and are highly susceptible to neural larva migrans from Baylisascaris. Ground-foraging birds — including poultry, doves, and softbills — are at greatest risk through contact with contaminated soil or litter. Neurological signs are the primary manifestation and carry a poor prognosis. Outdoor aviaries in areas with raccoon activity should be assessed for latrine contamination."
+                    ),
+                    SpeciesRisk(
+                        species: .reptile,
+                        severity: .low,
+                        notes: "Reptiles are not a meaningful host for Baylisascaris. Documented susceptibility is limited. The primary risk would be incidental exposure via heavily contaminated substrate, and clinical disease in reptiles from this parasite is rarely reported. Risk is considered low but not zero."
+                    )
+                ],
+                preventionTips: [
+                    "Prevent your dog from accessing areas where raccoons defecate — including wood piles, flat rocks, decks, and any area with visible raccoon activity.",
+                    "Do not allow pets to roll in, sniff closely, or ingest raccoon feces or soil from suspected raccoon latrines.",
+                    "If a raccoon latrine is identified on your property, do not attempt to clean it with standard disinfectants — Baylisascaris eggs are chemically resistant. Contact a professional wildlife management service for safe remediation using heat-based methods.",
+                    "Have your dog fecally tested by a veterinarian if raccoon exposure has occurred — especially if your dog has eaten feces or soil in areas with raccoon activity.",
+                    "Keep children away from areas with known or suspected raccoon latrine activity. Sandboxes should be covered when not in use to prevent raccoon defecation.",
+                    "Teach children to wash hands thoroughly after outdoor play, especially in wooded or urban areas with raccoon populations.",
+                    "Keep small pets — rabbits, guinea pigs, rodents — in enclosures raccoons cannot access. Inspect outdoor runs and hutches regularly.",
+                    "Outdoor aviaries should be designed to prevent raccoon intrusion and substrate contact with raccoon feces.",
+                    "If a household member — especially a child — may have been exposed to raccoon feces or contaminated environments, contact a physician promptly. Do not wait for symptoms to appear."
+                ],
+                sources: [
+                    "https://www.cdc.gov/baylisascaris/index.html",
+                    "https://www.merckvetmanual.com/digestive-system/gastrointestinal-parasites-of-small-animals/baylisascaris-procyonis-in-small-animals",
+                    "https://www.avma.org/resources-tools/pet-owners/petcare/raccoon-roundworm-baylisascaris",
+                    "https://www.capcvet.org/guidelines/baylisascaris/",
+                    "https://www.vet.cornell.edu/departments-centers-and-institutes/cornell-wildlife-health-lab/wildlife-health-topics/baylisascaris"
+                ],
+                relatedEntries: ["1D000001-0000-0000-0000-000000000023"]
             ),
         ]
     }

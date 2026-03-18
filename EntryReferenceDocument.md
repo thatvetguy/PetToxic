@@ -3,9 +3,9 @@
 Complete list of all entries with UUIDs, severity, and categories.
 
 - Toxin/informational entries in `DatabaseService.swift`: 186
-- Disease/condition entries in `DiseasesConditionsService.swift`: 26 (Pro-locked)
+- Disease/condition entries in `DiseasesConditionsService.swift`: 27 (Pro-locked)
 - Severity explainer: 1
-- **Total entries: 213**
+- **Total entries: 214**
 
 *Last updated: 2026-03-17 (Session 153)*
 
@@ -21,7 +21,7 @@ Complete list of all entries with UUIDs, severity, and categories.
 | Low/Moderate | 4 |
 | Low | 17 |
 | nil (Informational) | 26 |
-| **Total** | **213** |
+| **Total** | **214** |
 
 | Category | Count |
 |----------|-------|
@@ -35,7 +35,7 @@ Complete list of all entries with UUIDs, severity, and categories.
 | Holiday Hazards | 11 |
 | Cleaning Products | 9 |
 | Recreational Substances | 8 |
-| Diseases & Conditions | 26 |
+| Diseases & Conditions | 27 |
 
 *Counts exceed total because entries can be cross-listed in multiple categories.*
 
@@ -354,6 +354,7 @@ Complete list of all entries with UUIDs, severity, and categories.
 | Toxoplasma | `1D000001-0000-0000-0000-000000000024` | nil | Dogs, Cats, Small Mammals, Birds |
 | Heartworms | `1D000001-0000-0000-0000-000000000025` | nil | Dogs, Cats, Small Mammals |
 | Mange (Sarcoptic & Demodectic) | `1D000001-0000-0000-0000-000000000026` | nil | Dogs, Cats, Small Mammals |
+| Baylisascaris (Raccoon Roundworm) | `1D000001-0000-0000-0000-000000000027` | nil | Dogs, Cats, Small Mammals, Birds |
 
 ### Special Entry
 
@@ -363,7 +364,7 @@ Complete list of all entries with UUIDs, severity, and categories.
 
 ---
 
-## Alphabetical Index (All 213 Entries)
+## Alphabetical Index (All 214 Entries)
 
 | Name | UUID | Severity | Categories |
 |------|------|----------|------------|
@@ -388,6 +389,7 @@ Complete list of all entries with UUIDs, severity, and categories.
 | Autumn Crocus | `741c92ff-a3da-4512-967c-628e8783cff8` | Severe | Plants |
 | Avocado | `6a0dda24-d0e1-47c4-af59-068101844c8b` | Severe | Foods, Plants |
 | Azalea, Rhododendron & Mountain Laurel | `674ec507-669c-4a1c-8bf5-cb745b03c2a7` | High | Plants |
+| Baylisascaris (Raccoon Roundworm) | `1D000001-0000-0000-0000-000000000027` | nil | Diseases & Conditions |
 | Bee, Wasp, and Ant Stings (Hymenoptera) | `00112233-4455-6677-8899-aabbccddef06` | Moderate | Outdoor Hazards |
 | Benzocaine (Orajel, Anbesol) | `ddee1122-ff33-4455-6677-889900aabbcc` | Severe | Medications |
 | Benzodiazepines (Anti-Anxiety & Sleep Medications) | `ee556677-8899-aabb-ccdd-eeff00112244` | High | Medications |
