@@ -3,9 +3,9 @@
 Complete list of all entries with UUIDs, severity, and categories.
 
 - Toxin/informational entries in `DatabaseService.swift`: 186
-- Disease/condition entries in `DiseasesConditionsService.swift`: 21 (Pro-locked)
+- Disease/condition entries in `DiseasesConditionsService.swift`: 22 (Pro-locked)
 - Severity explainer: 1
-- **Total entries: 208**
+- **Total entries: 209**
 
 *Last updated: 2026-03-17 (Session 153)*
 
@@ -21,7 +21,7 @@ Complete list of all entries with UUIDs, severity, and categories.
 | Low/Moderate | 4 |
 | Low | 17 |
 | nil (Informational) | 26 |
-| **Total** | **208** |
+| **Total** | **209** |
 
 | Category | Count |
 |----------|-------|
@@ -35,7 +35,7 @@ Complete list of all entries with UUIDs, severity, and categories.
 | Holiday Hazards | 11 |
 | Cleaning Products | 9 |
 | Recreational Substances | 8 |
-| Diseases & Conditions | 21 |
+| Diseases & Conditions | 22 |
 
 *Counts exceed total because entries can be cross-listed in multiple categories.*
 
@@ -349,6 +349,7 @@ Complete list of all entries with UUIDs, severity, and categories.
 | Feline Leukemia Virus (FeLV) | `1D000001-0000-0000-0000-000000000019` | nil | Cats |
 | Feline Immunodeficiency Virus (FIV) | `1D000001-0000-0000-0000-000000000020` | nil | Cats |
 | Feline Herpesvirus-1 (FHV-1) | `1D000001-0000-0000-0000-000000000021` | nil | Cats |
+| Tick-Borne Diseases | `1D000001-0000-0000-0000-000000000022` | nil | Dogs, Cats, Small Mammals |
 
 ### Special Entry
 
@@ -358,7 +359,7 @@ Complete list of all entries with UUIDs, severity, and categories.
 
 ---
 
-## Alphabetical Index (All 208 Entries)
+## Alphabetical Index (All 209 Entries)
 
 | Name | UUID | Severity | Categories |
 |------|------|----------|------------|
@@ -551,6 +552,7 @@ Complete list of all entries with UUIDs, severity, and categories.
 | Tampon & Hygiene Product Ingestion | `00112233-4455-6677-8899-aabbccddef21` | nil | Informational |
 | Thermal Burns | `1D000001-0000-0000-0000-000000000009` | nil | Diseases & Conditions |
 | Thyroid Medications (Levothyroxine) | `55cc3344-ddee-ff00-1122-334455667788` | Moderate | Medications |
+| Tick-Borne Diseases | `1D000001-0000-0000-0000-000000000022` | nil | Diseases & Conditions |
 | Tick Paralysis | `00112233-4455-6677-8899-aabbccddef13` | Moderate | Outdoor Hazards |
 | Toad Poisoning (Bufo Toads) | `00112233-4455-6677-8899-aabbccddef05` | Severe | Outdoor Hazards |
 | Toilet Bowl Cleaners | `66778899-aabb-ccdd-eeff-001122334455` | High | Cleaning Products |

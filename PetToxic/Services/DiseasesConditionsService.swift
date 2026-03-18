@@ -1048,7 +1048,8 @@ class DiseasesConditionsService {
                     "American Animal Hospital Association (AAHA) — Canine Vaccination Guidelines"
                 ],
                 relatedEntries: [
-                    "1D000001-0000-0000-0000-000000000001"  // Rabies
+                    "1D000001-0000-0000-0000-000000000001",  // Rabies
+                    "1D000001-0000-0000-0000-000000000022"   // Tick-Borne Diseases
                 ]
             ),
 
@@ -4286,6 +4287,354 @@ class DiseasesConditionsService {
                     "1D000001-0000-0000-0000-000000000020",  // FIV
                     "1D000001-0000-0000-0000-000000000008"   // Kennel Cough (CIRDC)
                 ]
+            ),
+
+            // MARK: - Tick-Borne Diseases
+            ToxicItem(
+                id: UUID(uuidString: "1D000001-0000-0000-0000-000000000022")!,
+                name: "Tick-Borne Diseases",
+                alternateNames: [
+                    "Lyme disease",
+                    "Lyme borreliosis",
+                    "borreliosis",
+                    "ehrlichiosis",
+                    "canine ehrlichiosis",
+                    "anaplasmosis",
+                    "canine anaplasmosis",
+                    "Rocky Mountain spotted fever",
+                    "RMSF",
+                    "babesiosis",
+                    "cytauxzoonosis",
+                    "tick fever",
+                    "tick paralysis",
+                    "tick-borne illness",
+                    "tick disease",
+                    "tick sickness",
+                    "tick infestation anemia"
+                ],
+                categories: [.diseasesAndConditions],
+                imageAsset: "tick_thumb",
+                description: """
+                Tick-borne diseases are a group of serious illnesses caused by \
+                bacteria, parasites, and other pathogens transmitted through tick \
+                bites. Rather than a single disease, this entry covers the major \
+                tick-borne threats to companion animals: Lyme disease (Borrelia \
+                burgdorferi), Ehrlichiosis, Anaplasmosis, Rocky Mountain Spotted \
+                Fever (RMSF), Babesiosis, and Cytauxzoonosis in cats.
+
+                These diseases are not contagious between animals or from pets \
+                to people — the tick itself is the transmitter. However, several \
+                tick-borne diseases are zoonotic, meaning the same ticks that bite \
+                your pet can also bite and infect people.
+
+                Disease severity ranges from mild to rapidly life-threatening \
+                depending on the specific pathogen, the species affected, and how \
+                quickly treatment is started. RMSF, Babesiosis, and Cytauxzoonosis \
+                (in cats) can be fatal within days without treatment. Lyme disease \
+                may not produce visible symptoms for weeks to months, while \
+                Ehrlichiosis and Anaplasmosis typically cause illness within one \
+                to two weeks of infection.
+
+                Dogs are the most commonly and seriously affected companion \
+                animals. Cats can develop Cytauxzoonosis — a severe, often rapidly \
+                fatal disease primarily in the southeastern United States. Small \
+                mammals, birds, and reptiles can carry ticks and serve as reservoir \
+                hosts, though clinical illness is less commonly documented in \
+                these species.
+
+                Heavy tick infestations — even without disease transmission — can \
+                cause significant blood-loss anemia, particularly in small, young, \
+                or debilitated animals. In rabbits, guinea pigs, kittens, and \
+                puppies, a large number of feeding ticks can rapidly deplete blood \
+                volume and cause collapse.
+
+                A Lyme vaccine is available for dogs and is recommended in endemic \
+                areas. No vaccine is currently available for most other tick-borne \
+                diseases in companion animals. Tick prevention is the cornerstone \
+                of protection for all species.
+                """,
+                toxicityInfo: """
+                **How It Harms the Body**
+
+                Tick-borne pathogens use different mechanisms to cause disease, \
+                which is why symptoms can vary significantly depending on which \
+                pathogen is involved.
+
+                Lyme disease is caused by the bacterium Borrelia burgdorferi, \
+                transmitted primarily by Ixodes ticks (black-legged ticks, also \
+                called deer ticks). The bacteria invade joint tissues and \
+                connective structures, causing inflammation most visible as \
+                shifting-leg lameness in dogs. In some cases, Lyme bacteria \
+                reach the kidneys and trigger an immune-mediated response known \
+                as Lyme nephropathy — a potentially fatal kidney complication seen \
+                more often in certain breeds, including Labrador Retrievers, \
+                Golden Retrievers, and Bernese Mountain Dogs.
+
+                Ehrlichiosis is caused by Ehrlichia bacteria that invade white \
+                blood cells, disrupting immune function and causing a dramatic \
+                drop in platelets (the cells that help blood clot), which leads \
+                to bruising and abnormal bleeding. Ehrlichiosis has three phases: \
+                acute (1–4 weeks of active illness), subclinical (months to years \
+                with no visible signs, while infection persists silently), and \
+                chronic (severe, life-threatening bone marrow involvement). Dogs \
+                in the subclinical phase can appear completely healthy while the \
+                infection quietly damages their ability to produce blood cells.
+
+                Anaplasmosis is caused by Anaplasma bacteria that infect \
+                neutrophils — a type of white blood cell that forms a critical \
+                part of the immune response. This impairs immune function and also \
+                causes platelet depletion similar to Ehrlichiosis, leading to a \
+                risk of abnormal bleeding.
+
+                Rocky Mountain Spotted Fever (RMSF) is caused by Rickettsia \
+                rickettsii, transmitted by several tick species including the \
+                American dog tick, the brown dog tick, and the Lone Star tick. \
+                The bacteria attack the cells lining blood vessels throughout \
+                the body, causing widespread inflammation and vascular damage. \
+                RMSF can affect virtually every organ system and progress to \
+                multi-organ failure within days. Despite its name, RMSF occurs \
+                across much of the United States — not only in the Rocky Mountain \
+                region.
+
+                Babesiosis is caused by Babesia parasites that directly invade \
+                and destroy red blood cells, causing hemolytic anemia (anemia \
+                from red blood cell destruction). The body's immune response to \
+                infected cells can intensify this damage. Severe cases cause \
+                weakness, pale or yellowish gums, dark urine, and collapse.
+
+                Cytauxzoonosis is the cat-specific counterpart to Babesiosis, \
+                caused by Cytauxzoon felis. It is transmitted primarily by the \
+                Lone Star tick and American dog tick in the southeastern and \
+                south-central United States. The parasite invades red blood cells \
+                and macrophages (immune cells), causing severe anemia, systemic \
+                inflammation, and organ failure. Cytauxzoonosis has historically \
+                carried a very high case fatality rate in domestic cats, though \
+                outcomes have improved with aggressive early veterinary care.
+
+                **Tick Paralysis — A Non-Infectious Complication**
+
+                Certain tick species produce a neurotoxin in their saliva that \
+                causes progressive paralysis while the tick remains attached and \
+                feeding. Tick paralysis is not an infection — it is a direct \
+                effect of the toxin on the nervous system. Signs typically begin \
+                in the hind limbs and ascend toward the head over hours to days. \
+                Removing the tick promptly usually leads to rapid improvement, \
+                but the condition can be fatal if the tick is not found and \
+                removed in time.
+
+                **The Anemia Risk of Heavy Tick Loads**
+
+                Even without transmitting disease, a heavy tick infestation poses \
+                a direct threat through blood loss. Ticks are blood-feeding \
+                parasites; in large numbers, the volume of blood they consume can \
+                cause significant anemia. This risk is most acute in small-bodied \
+                animals — rabbits, guinea pigs, small birds — as well as young \
+                animals such as kittens and puppies, and animals that are already \
+                debilitated. A small animal overwhelmed by feeding ticks may show \
+                pallor, weakness, rapid breathing, and collapse without any \
+                infectious disease involvement.
+
+                **Transmission & Spread**
+
+                Tick-borne diseases are transmitted when an infected tick attaches \
+                and feeds on a host animal. The tick typically must remain attached \
+                for a period of time before the pathogen transfers — this window \
+                varies by disease. Lyme disease generally requires 24–48 hours of \
+                tick attachment for meaningful transmission to occur. RMSF and \
+                some other pathogens can transmit more rapidly after attachment. \
+                Prompt tick removal reduces but does not completely eliminate \
+                transmission risk.
+
+                Different tick species transmit different diseases, and tick \
+                distribution varies by geography:
+
+                Ixodes scapularis (black-legged tick, deer tick): primary vector \
+                for Lyme disease and Anaplasmosis. Most prevalent in the Northeast \
+                and upper Midwest United States; range is expanding.
+
+                Dermacentor variabilis (American dog tick) and Amblyomma \
+                americanum (Lone Star tick): primary vectors for RMSF and \
+                Ehrlichiosis. Distributed broadly across the southern, eastern, \
+                and south-central United States.
+
+                Rhipicephalus sanguineus (brown dog tick): a major vector for \
+                Ehrlichiosis and RMSF. Notably, this tick can complete its entire \
+                life cycle indoors, which means dogs in heavily infested households \
+                may be exposed even without outdoor access to wooded or grassy areas.
+
+                Tick activity peaks in spring and summer but can persist year-round \
+                in warmer climates. Animals with outdoor access — particularly in \
+                wooded, brushy, or tall-grass environments — face the highest \
+                exposure risk. Ticks can also be carried indoors on clothing, \
+                hiking gear, or other animals.
+
+                **The Poppy Seed Problem**
+
+                Nymph-stage deer ticks — responsible for the majority of Lyme \
+                disease transmission — are roughly the size of a poppy seed at \
+                their most infectious life stage. They are easily overlooked even \
+                during careful visual examination, particularly in animals with \
+                thick or dark fur. Ticks prefer hidden attachment sites: between \
+                toes, inside ear flaps, around the groin and tail base, under the \
+                collar, and in the axillary (armpit) skin folds. A visual check \
+                that misses these areas may miss the tick most likely to cause \
+                disease.
+
+                **Treatment Goals**
+
+                Treatment of tick-borne diseases requires veterinary diagnosis, \
+                which typically involves blood testing to identify the specific \
+                pathogen involved. Treatment goals vary by disease:
+
+                For bacterial tick-borne diseases (Lyme, Ehrlichiosis, \
+                Anaplasmosis, RMSF), treatment focuses on eliminating the \
+                infection, reducing inflammation, and supporting affected organ \
+                systems during recovery. Early treatment is strongly associated \
+                with better outcomes — particularly for RMSF, where delays in \
+                treatment can significantly worsen the clinical course.
+
+                For Babesiosis and Cytauxzoonosis, treatment targets the parasites \
+                directly while supporting the animal through the effects of anemia \
+                and systemic inflammation. Blood transfusions may be required in \
+                severe cases.
+
+                For tick paralysis, prompt removal of the tick is the primary \
+                intervention. Supportive care may be needed while the animal \
+                recovers from the effects of the neurotoxin.
+
+                Long-term monitoring is often recommended following treatment, \
+                particularly for Ehrlichiosis (which can relapse) and Lyme disease \
+                (which may have persistent joint effects in some dogs).
+
+                **The Fence Lizard\u{2019}s Secret**
+
+                The Western fence lizard (Sceloporus occidentalis), common in the \
+                western United States, has a remarkable relationship with Lyme- \
+                carrying ticks. When Ixodes ticks feed on this lizard, proteins \
+                in the lizard\u{2019}s blood actively destroy Borrelia burgdorferi — the \
+                bacterium that causes Lyme disease — within the tick. Researchers \
+                have estimated that the presence of these lizards may meaningfully \
+                reduce the proportion of infected ticks within their range. This \
+                natural resistance is specific to this species and is not shared \
+                by most other reptiles.
+
+                **Myths vs. Facts**
+
+                **Myth:** My pet is safe because we don\u{2019}t live in the Northeast.
+                **Fact:** While Lyme disease is most common in the Northeast and \
+                upper Midwest, RMSF, Ehrlichiosis, Babesiosis, and Anaplasmosis \
+                occur across a much broader geographic area — including the South, \
+                Southeast, and central United States. Tick ranges are also \
+                expanding as climate and land use change. Tick prevention is \
+                appropriate nationwide.
+
+                **Myth:** I checked my pet and didn\u{2019}t find a tick, so they can\u{2019}t \
+                have a tick-borne disease.
+                **Fact:** Nymph-stage ticks are extremely small and easily missed, \
+                especially in animals with thick or dark fur. Visual checks alone \
+                are not a reliable method for ruling out tick exposure. Blood tests \
+                are the only reliable way to detect tick-borne infection.
+
+                **Myth:** If the tick was only attached briefly, there\u{2019}s no risk.
+                **Fact:** While longer attachment time increases transmission risk \
+                for many pathogens — particularly Lyme disease — some diseases, \
+                including RMSF, can transmit more rapidly. Prompt removal is always \
+                recommended, but brief attachment does not guarantee safety.
+
+                **Myth:** Cats don\u{2019}t get tick-borne diseases.
+                **Fact:** Cats can develop Cytauxzoonosis, a severe and often \
+                rapidly fatal tick-borne disease found in the southeastern United \
+                States. Cats can also be infected with Anaplasmosis and Ehrlichiosis.
+
+                **Zoonotic Risk**
+
+                Several tick-borne diseases in this group — including Lyme disease, \
+                RMSF, Ehrlichiosis, Anaplasmosis, and Babesiosis — are zoonotic, \
+                meaning they can infect humans as well as animals. These diseases \
+                are not transmitted directly from your pet to you. The risk comes \
+                from the same infected ticks that bit your pet potentially biting \
+                you or other household members.
+
+                If your pet has been diagnosed with a tick-borne disease, it is a \
+                signal that infected ticks are present in your environment. Check \
+                yourself and family members for tick bites and contact your \
+                physician if you have concerns about your own exposure. Individuals \
+                who are immunocompromised, pregnant, elderly, or very young may be \
+                at greater risk and should take extra precautions.
+                """,
+                toxicityInfoSectionTitle: "What makes it harmful?",
+                onsetTime: OnsetTime(
+                    early: "RMSF and Cytauxzoonosis can cause visible illness within 2–5 days of a tick bite and may progress rapidly to life-threatening status. Ehrlichiosis and Anaplasmosis typically produce signs within 1–2 weeks of infection. Tick paralysis can develop within days of a tick attaching.",
+                    delayed: "Lyme disease may produce no visible symptoms for weeks to months after infection and in some dogs is only discovered through routine bloodwork. Ehrlichiosis has a silent subclinical phase that can persist for months to years before progressing to the severe chronic form."
+                ),
+                symptoms: [
+                    "Lethargy, weakness, or sudden collapse",
+                    "Fever (animal feels warm to the touch; may shiver or shake)",
+                    "Loss of appetite",
+                    "Reluctance to move or bear weight on one or more legs",
+                    "Swollen, painful joints",
+                    "Swollen lymph nodes",
+                    "Pale, white, or yellowish gums (sign of anemia)",
+                    "Unexplained bruising or pinpoint red spots on skin or gums",
+                    "Nosebleeds or unusual bleeding from any site",
+                    "Vomiting or diarrhea",
+                    "Increased thirst and urination",
+                    "Dark, reddish-brown, or discolored urine",
+                    "Rapid or labored breathing",
+                    "Progressive weakness or paralysis beginning in the hind limbs",
+                    "Neurological signs: incoordination, stumbling, head tilt, or seizures",
+                ],
+                entrySeverity: nil,
+                speciesRisks: [
+                    SpeciesRisk(
+                        species: .dog,
+                        severity: .severe,
+                        notes: "Dogs are the companion animals most commonly and seriously affected by tick-borne diseases. All five major diseases covered here — Lyme disease, Ehrlichiosis, Anaplasmosis, RMSF, and Babesiosis — can cause serious or fatal illness in dogs. RMSF can be fatal within days without treatment; Babesiosis causes life-threatening destruction of red blood cells; Ehrlichiosis can silently progress to a severe chronic form affecting the bone marrow. Certain breeds including Bernese Mountain Dogs, Labrador Retrievers, and Golden Retrievers may have elevated susceptibility to Lyme nephropathy, a potentially fatal kidney complication. Heavy tick burdens also pose a direct anemia risk, particularly in young dogs. A Lyme vaccine is available and is recommended in endemic areas. Any dog with outdoor access in tick-endemic environments faces meaningful risk, with peak exposure in spring and summer."
+                    ),
+                    SpeciesRisk(
+                        species: .cat,
+                        severity: .moderate,
+                        notes: "Cytauxzoonosis — caused by Cytauxzoon felis — is the most serious tick-borne threat to domestic cats. Transmitted primarily by the Lone Star tick and American dog tick, it is largely confined to the southeastern and south-central United States and has historically carried a very high case fatality rate. Affected cats develop rapidly progressive fever, weakness, difficulty breathing, and collapse. Anaplasmosis and Ehrlichiosis have also been documented in cats. Cats appear relatively resistant to clinical Lyme disease. Heavy tick loads pose a direct anemia risk, particularly in kittens and small-bodied cats."
+                    ),
+                    SpeciesRisk(
+                        species: .smallMammal,
+                        severity: .moderate,
+                        notes: "Small mammals — including rabbits, guinea pigs, and rodents — are natural reservoir hosts for several tick-borne pathogens, particularly Borrelia burgdorferi (Lyme disease) and Anaplasma species. Wild rodents are the primary wildlife reservoir for Lyme disease in North America. Pet rabbits and guinea pigs with outdoor access or exposure to ticks can develop tick-borne illness; ferrets are also considered susceptible. The most acute risk for small mammals is blood-loss anemia: even moderate numbers of feeding ticks can represent a significant proportion of a small animal's total blood volume, causing rapid-onset weakness, pallor, and collapse. Young, small, or debilitated animals face the greatest risk from this direct effect even in the absence of disease transmission."
+                    ),
+                    SpeciesRisk(
+                        species: .bird,
+                        severity: .low,
+                        notes: "Pet birds and backyard poultry can harbor ticks and serve as reservoir hosts for some tick-borne pathogens, including those associated with RMSF. Birds with outdoor access may introduce infected ticks into home environments, increasing exposure risk for other pets and people in the household. Clinical tick-borne disease in companion and pet bird species is poorly documented and appears uncommon. Heavy tick burdens may cause localized irritation or mild anemia in smaller bird species. Regular examination of birds with outdoor access is recommended."
+                    ),
+                    SpeciesRisk(
+                        species: .reptile,
+                        severity: .low,
+                        notes: "Reptiles commonly carry ticks — particularly species with outdoor access or outdoor enclosures — and can introduce ticks into the home. Clinical tick-borne disease in reptiles is not well-documented, and reptiles appear largely resistant to the infectious pathogens ticks transmit to mammals. However, heavy infestations can cause localized tissue damage, debilitation, and anemia. Ticks found on reptiles should be removed promptly using appropriate technique. The Western fence lizard (Sceloporus occidentalis) is notable for a natural resistance to Borrelia burgdorferi: proteins in its blood destroy the Lyme-causing bacterium within feeding ticks, and researchers believe this reduces Lyme prevalence in ticks within the lizard's range."
+                    ),
+                ],
+                preventionTips: [
+                    "Use a veterinarian-recommended tick prevention product consistently throughout the year — not only during peak tick season. Many tick preventatives also cover fleas and other external parasites. Ask your vet which option is appropriate for your pet\u{2019}s species and lifestyle.",
+                    "Perform a thorough tick check after every outing in wooded, grassy, or brushy areas. Check carefully between toes, inside ear flaps, around the groin and tail base, under the collar, and in armpit skin folds — ticks actively seek hidden attachment sites.",
+                    "If a tick is found, remove it promptly: use fine-tipped tweezers or a tick removal tool to grasp the tick as close to the skin as possible and pull upward with steady, even pressure. Do not twist, crush, jerk, or apply heat, petroleum jelly, or nail polish — these methods can increase the risk of pathogen transmission. Dispose of the tick by placing it in alcohol, sealing it in a bag, or flushing it.",
+                    "Ask your veterinarian about the Lyme vaccine for dogs, particularly if you live in or travel to endemic regions (northeastern US, upper Midwest, parts of Canada or Europe). Vaccination does not replace tick prevention — both are needed.",
+                    "Keep grass mowed short and remove leaf litter, brush piles, and dense groundcover from areas where your pets spend time. Ticks thrive in humid, shaded environments.",
+                    "Talk to your veterinarian about routine tick-borne disease screening. Many clinics include Lyme disease, Ehrlichiosis, and Anaplasmosis on annual wellness blood panels for dogs — particularly in endemic areas.",
+                    "For rabbits, guinea pigs, and other small mammals with any outdoor access, check for ticks regularly. Even a moderate number of feeding ticks can cause significant blood loss anemia in small animals.",
+                    "If you find ticks on your pet, check yourself, your family members, and any other household pets as well. Infected ticks in your environment do not distinguish between animal and human hosts.",
+                    "If you have concerns about your own tick exposure, contact your physician. Individuals who are immunocompromised, pregnant, elderly, or very young may face greater risk from tick-borne infection and should take extra precautions.",
+                    "The brown dog tick can complete its entire life cycle indoors, meaning heavily infested dogs may be exposed to tick-borne pathogens even without outdoor access to grass or woods. If you suspect an indoor infestation, consult a pest control professional in addition to treating your pet."
+                ],
+                sources: [
+                    "https://www.vet.cornell.edu/departments-centers-and-institutes/riney-canine-health-center/canine-health-information/lyme-disease",
+                    "https://www.merckvetmanual.com/infectious-diseases/lyme-borreliosis/lyme-borreliosis-in-animals",
+                    "https://www.merckvetmanual.com/infectious-diseases/rickettsial-diseases/rocky-mountain-spotted-fever-in-animals",
+                    "https://www.merckvetmanual.com/infectious-diseases/rickettsial-diseases/ehrlichiosis-and-related-infections",
+                    "https://www.avma.org/resources/pet-owners/petcare/tick-borne-diseases-dogs",
+                    "https://vcahospitals.com/know-your-pet/lyme-disease-in-dogs",
+                    "https://www.cdc.gov/ticks/index.html",
+                    "https://en.wikipedia.org/wiki/Cytauxzoonosis"
+                ],
+                relatedEntries: ["1D000001-0000-0000-0000-000000000006"]
             ),
         ]
     }
