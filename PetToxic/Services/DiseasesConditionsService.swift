@@ -1176,7 +1176,8 @@ class DiseasesConditionsService {
                     "RSPCA (UK) — Myxomatosis in Rabbits"
                 ],
                 relatedEntries: [
-                    "1D000001-0000-0000-0000-000000000028"  // Fleas
+                    "1D000001-0000-0000-0000-000000000028",  // Fleas
+                    "1D000001-0000-0000-0000-000000000032"   // RHDV2 (Rabbit Hemorrhagic Disease)
                 ]
             ),
 
@@ -6568,6 +6569,158 @@ class DiseasesConditionsService {
                 relatedEntries: [
                     "1D000001-0000-0000-0000-000000000026",  // Mange (Sarcoptic & Demodectic)
                     "1D000001-0000-0000-0000-000000000029"   // Encephalitozoon cuniculi (E. cuniculi)
+                ]
+            ),
+
+            // MARK: - RHDV2 (Rabbit Hemorrhagic Disease)
+            ToxicItem(
+                id: UUID(uuidString: "1D000001-0000-0000-0000-000000000032")!,
+                name: "RHDV2 (Rabbit Hemorrhagic Disease)",
+                alternateNames: ["Rabbit Hemorrhagic Disease Virus 2", "RHDVb", "Viral Hemorrhagic Disease", "VHD", "Lagovirus europaeus GI.2"],
+                categories: [.diseasesAndConditions],
+                imageAsset: "rhdv2_thumb",
+                description: """
+                    Rabbit Hemorrhagic Disease Virus 2 (RHDV2) is a highly contagious \
+                    and often fatal viral disease caused by a calicivirus — the same \
+                    family of viruses responsible for norovirus in humans. It triggers \
+                    rapid, massive internal hemorrhage and acute liver destruction. \
+                    RHDV2 first emerged in France in 2010 and has since spread across \
+                    Europe, Australia, and North America. In 2020, it was confirmed in \
+                    wild North American cottontail and jackrabbit populations for the \
+                    first time — a significant shift that accelerated its spread across \
+                    the western United States and Canada.
+
+                    Unlike its predecessor RHDV1, RHDV2 affects young kittens (baby \
+                    rabbits) as well as hares and pikas, broadening its host range \
+                    considerably. Many infected rabbits are found dead with no \
+                    observable warning signs. Domestic rabbits are highly susceptible \
+                    regardless of age, breed, or whether they are kept indoors.
+                    """,
+                toxicityInfo: """
+                    **How It Harms the Body**
+                    RHDV2 attacks the liver and vascular system simultaneously. The \
+                    virus replicates explosively in liver cells, triggering acute \
+                    hepatic necrosis — a catastrophic breakdown of liver tissue. This \
+                    destroys the liver's ability to regulate blood clotting, causing \
+                    disseminated intravascular coagulation (DIC): the body attempts \
+                    to clot everywhere at once while simultaneously hemorrhaging \
+                    uncontrollably. Massive internal bleeding into the lungs, \
+                    intestines, and kidneys follows within 12 to 36 hours of \
+                    infection. Jaundice (yellow discoloration of the eyes, skin, \
+                    or gums) reflects liver failure in subacute cases.
+
+                    **Dead Without Warning**
+                    One of RHDV2's most alarming features is its peracute form: the \
+                    disease kills so rapidly that no signs of illness are ever seen. \
+                    Owners frequently find apparently healthy rabbits dead — sometimes \
+                    with blood at the nose or mouth — with no prior indication anything \
+                    was wrong. This is not unusual; it is the most common presentation \
+                    in documented outbreaks. Any sudden, unexplained rabbit death \
+                    should be reported to a veterinarian immediately, both for \
+                    diagnosis confirmation and to protect any remaining rabbits \
+                    in the household.
+
+                    **Farther Than Fences Can Stop**
+                    RHDV2 is exceptionally stable in the environment — surviving for \
+                    months on contaminated surfaces, soil, hay, and fabric at room \
+                    temperature. It can be carried into a home on shoes, clothing, \
+                    garden tools, and fresh produce. Flies, fleas, and mosquitoes \
+                    act as mechanical vectors, ferrying the virus between animals \
+                    without becoming infected themselves. Birds of prey and \
+                    scavengers can spread it over large distances after consuming \
+                    infected carcasses. Indoor-only rabbits are not automatically \
+                    protected — active biosecurity is required.
+
+                    **Transmission & Spread**
+                    Direct contact with infected rabbits or their secretions (urine, \
+                    feces, respiratory droplets) is the primary route. Indirect \
+                    transmission via contaminated hutches, food bowls, bedding, and \
+                    clothing is well documented. The virus is resistant to many \
+                    common household disinfectants but is inactivated by sodium \
+                    hypochlorite (bleach). RHDV2's 2020 breakthrough into North \
+                    American cottontail rabbits (Sylvilagus spp.) — a species \
+                    completely unaffected by RHDV1 — removed a major natural \
+                    firebreak that had previously limited spread in the wild, \
+                    and created a self-sustaining wild reservoir that continues \
+                    to expand geographically.
+
+                    **A Continent Unprepared**
+                    When RHDV2 arrived in the American Southwest in 2020, it \
+                    encountered wild rabbit populations with no prior exposure \
+                    and no immunity. It swept through desert cottontails and \
+                    black-tailed jackrabbits across New Mexico, Arizona, Colorado, \
+                    California, Nevada, Utah, and Texas, decimating local \
+                    populations. The ecological consequences extended beyond \
+                    rabbits: in Europe, RHDV-driven wild rabbit population \
+                    collapses have threatened predators that depend on rabbits \
+                    as prey — most notably the Iberian lynx, the world's most \
+                    endangered wild cat, whose recovery efforts have been \
+                    complicated by unreliable rabbit prey availability. North \
+                    American wild rabbit losses carry similar cascading risks \
+                    for hawks, eagles, foxes, and coyotes. This ongoing wild \
+                    reservoir now poses a transmission risk to domestic rabbits \
+                    throughout affected regions — even to rabbits that never \
+                    leave the home.
+
+                    **Treatment Goals**
+                    There is no approved antiviral treatment for RHDV2. Veterinary \
+                    care focuses on supportive therapy: IV fluids, nutritional \
+                    support, and management of secondary complications. Given the \
+                    speed of disease progression, outcomes are often poor even \
+                    with prompt intervention. Vaccination is the most effective \
+                    protective measure currently available. A conditional \
+                    USDA-licensed vaccine became available in the United States \
+                    in 2022; rabbit owners in affected regions should consult \
+                    a rabbit-savvy veterinarian about vaccination eligibility \
+                    and scheduling. RHDV2 does not infect humans, dogs, cats, \
+                    birds, or reptiles — but humans can passively carry the \
+                    virus on hands, clothing, and shoes and introduce it to \
+                    susceptible rabbits.
+                    """,
+                toxicityInfoSectionTitle: "What makes it harmful?",
+                onsetTime: OnsetTime(
+                    early: "Peracute form: sudden death within 12–36 hours, often with no prior signs. Subacute form: fever, lethargy, and loss of appetite appearing within 1–3 days of exposure.",
+                    delayed: "Subacute cases may develop jaundice, neurological signs, and respiratory distress over 1–2 weeks. Rabbits that survive acute illness may shed virus for several weeks."
+                ),
+                symptoms: [
+                    "Sudden death with no prior signs (most common presentation)",
+                    "Lethargy and weakness",
+                    "Loss of appetite",
+                    "High fever",
+                    "Labored or rapid breathing",
+                    "Seizures, incoordination, or paddling movements",
+                    "Bleeding from the nose, mouth, or rectum",
+                    "Jaundice (yellow tint to skin, eyes, or gums)",
+                    "Abdominal bloating or pain",
+                    "Collapse"
+                ],
+                entrySeverity: nil,
+                speciesRisks: [
+                    SpeciesRisk(
+                        species: .smallMammal,
+                        severity: .severe,
+                        notes: "Domestic rabbits of all breeds and ages are highly susceptible. Unlike RHDV1, RHDV2 affects young kittens as well as adults. Case fatality rates in unvaccinated domestic rabbits exceed 90% in documented outbreaks. Guinea pigs, hamsters, gerbils, and rats are not susceptible to RHDV2. This entry applies specifically to rabbits within the small mammal category."
+                    )
+                ],
+                preventionTips: [
+                    "Ask a rabbit-savvy veterinarian about RHDV2 vaccination — especially if you live in a state with confirmed wild rabbit cases",
+                    "Keep domestic rabbits away from wild rabbits, wild rabbit droppings, and areas frequented by wild lagomorphs",
+                    "Remove shoes before entering rabbit areas if you have been outdoors where wild rabbits are present",
+                    "Wash hands thoroughly before handling rabbits, especially after contact with other animals or outdoor environments",
+                    "Do not offer wild-foraged grass, plants, or hay from unknown sources to domestic rabbits",
+                    "Disinfect hutches, food bowls, and equipment with a dilute bleach solution — RHDV2 is resistant to many common disinfectants but is inactivated by sodium hypochlorite",
+                    "Quarantine any new rabbit for at least 30 days before introducing them to existing rabbits",
+                    "Report sudden or unexplained rabbit deaths to your veterinarian immediately — prompt diagnosis protects remaining animals and aids disease surveillance"
+                ],
+                sources: [
+                    "USDA APHIS — Rabbit Hemorrhagic Disease: https://www.aphis.usda.gov/livestock-poultry-disease/rabbit-hemorrhagic-disease",
+                    "House Rabbit Society — RHDV2 Information: https://rabbit.org/rhdv2/",
+                    "Merck Veterinary Manual — Rabbit Hemorrhagic Disease: https://www.merckvetmanual.com/exotic-and-laboratory-animals/rabbits/rabbit-hemorrhagic-disease",
+                    "AVMA — Rabbit Hemorrhagic Disease: https://www.avma.org/resources-tools/animal-health-and-welfare/animal-health/rabbit-hemorrhagic-disease",
+                    "Wikipedia — Rabbit Haemorrhagic Disease: https://en.wikipedia.org/wiki/Rabbit_haemorrhagic_disease"
+                ],
+                relatedEntries: [
+                    "1D000001-0000-0000-0000-000000000007"   // Myxomatosis
                 ]
             ),
         ]
