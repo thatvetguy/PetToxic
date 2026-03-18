@@ -6272,7 +6272,8 @@ class DiseasesConditionsService {
                     "1D000001-0000-0000-0000-000000000031",  // Rabbit Ear Mites (Psoroptes cuniculi)
                     "1D000001-0000-0000-0000-000000000037",  // Coccidiosis & Cryptosporidiosis
                     "1D000001-0000-0000-0000-000000000038",  // GI Stasis in Rabbits
-                    "1D000001-0000-0000-0000-000000000045"   // Small Mammal Husbandry Guide
+                    "1D000001-0000-0000-0000-000000000045",  // Small Mammal Husbandry Guide
+                    "1D000001-0000-0000-0000-000000000049"   // Pasteurellosis (Snuffles)
                 ]
             ),
 
@@ -8070,7 +8071,8 @@ class DiseasesConditionsService {
                     "1D000001-0000-0000-0000-000000000029",  // E. cuniculi
                     "1D000001-0000-0000-0000-000000000031",  // Rabbit Ear Mites
                     "1D000001-0000-0000-0000-000000000045",  // Small Mammal Husbandry Guide
-                    "1D000001-0000-0000-0000-000000000047"   // Myiasis (Fly Strike)
+                    "1D000001-0000-0000-0000-000000000047",  // Myiasis (Fly Strike)
+                    "1D000001-0000-0000-0000-000000000049"   // Pasteurellosis (Snuffles)
                 ]
             ),
 
@@ -9876,7 +9878,8 @@ class DiseasesConditionsService {
                     "1D000001-0000-0000-0000-000000000038",  // GI Stasis in Rabbits
                     "1D000001-0000-0000-0000-000000000039",  // Hypovitaminosis A
                     "1D000001-0000-0000-0000-000000000047",  // Myiasis (Fly Strike)
-                    "1D000001-0000-0000-0000-000000000048"   // Cheyletiellosis (Walking Dandruff)
+                    "1D000001-0000-0000-0000-000000000048",  // Cheyletiellosis (Walking Dandruff)
+                    "1D000001-0000-0000-0000-000000000049"   // Pasteurellosis (Snuffles)
                 ]
             ),
 
@@ -10437,6 +10440,255 @@ class DiseasesConditionsService {
                     "1D000001-0000-0000-0000-000000000045",  // Small Mammal Husbandry Guide
                     "1D000001-0000-0000-0000-000000000033",  // Snake Mites
                     "1D000001-0000-0000-0000-000000000035"   // Air Sac Mites
+                ]
+            ),
+
+            // MARK: - Pasteurellosis (Snuffles)
+            ToxicItem(
+                id: UUID(uuidString: "1D000001-0000-0000-0000-000000000049")!,
+                name: "Pasteurellosis (Snuffles)",
+                alternateNames: ["Snuffles", "Pasteurella", "Pasteurella multocida",
+                                 "Rabbit Snuffles", "Rabbit Respiratory Infection",
+                                 "Rabbit Upper Respiratory", "Rabbit URI",
+                                 "Rabbit Abscess", "Pasteurella Infection"],
+                categories: [.diseasesAndConditions],
+                imageAsset: "pasteurella_thumb",
+                description: """
+                    Pasteurellosis is a bacterial disease caused by Pasteurella \
+                    multocida — one of the oldest known animal pathogens and the \
+                    bacterium that bears the name of Louis Pasteur himself, whose \
+                    laboratory first isolated it in the 1880s during investigations \
+                    into fowl cholera. In pet rabbits, it is the most common \
+                    bacterial infection encountered in clinical practice and the \
+                    cause of the condition widely known as \u{201C}snuffles.\u{201D}
+
+                    What makes Pasteurella remarkable in rabbits is its near-universal \
+                    prevalence: studies have found that the majority of apparently \
+                    healthy domestic rabbits carry P. multocida in their nasal \
+                    passages without showing any signs of disease. The bacterium is \
+                    a normal resident of the rabbit upper respiratory tract. Clinical \
+                    disease develops when the immune system is compromised — by \
+                    stress, overcrowding, poor ventilation, concurrent illness, or \
+                    dental disease — allowing the bacteria to proliferate and invade \
+                    tissues they would normally be held in check.
+
+                    P. multocida is not limited to rabbits. It is a major component \
+                    of the normal oral flora of cats and dogs, and is the primary \
+                    bacterium responsible for the rapid, aggressive wound infections \
+                    that follow cat bites in both animals and humans. In birds, it \
+                    causes avian cholera — a significant disease in poultry and wild \
+                    bird populations. Guinea pigs housed with or near infected \
+                    rabbits are also susceptible to respiratory pasteurellosis.
+                    """,
+                toxicityInfo: """
+                    **How It Harms the Body**
+
+                    When P. multocida transitions from commensal carriage to active \
+                    infection, it can affect multiple organ systems simultaneously. \
+                    The upper respiratory tract is the most common site — chronic \
+                    nasal discharge (the \u{201C}snuffles\u{201D} presentation), \
+                    sneezing, and congested breathing are the hallmark signs. From \
+                    there, infection can descend into the lower airways, causing \
+                    pneumonia — a serious and potentially fatal complication.
+
+                    The middle and inner ear are frequently affected via the \
+                    Eustachian tubes. Otitis media (middle ear infection) and otitis \
+                    interna (inner ear infection) produce one of the most alarming \
+                    signs a rabbit owner may encounter: a sudden head tilt, loss of \
+                    balance, and circling. This presentation is clinically identical \
+                    to the neurological signs caused by Encephalitozoon cuniculi \
+                    (E. cuniculi) — a completely different pathogen with a different \
+                    treatment approach. Distinguishing between the two requires \
+                    veterinary evaluation, and in some cases both infections are \
+                    present simultaneously.
+
+                    Abscesses are another common manifestation — and in rabbits, \
+                    they behave very differently from abscesses in dogs and cats. \
+                    Rabbit pus is thick, caseous (cheese-like), and does not drain \
+                    freely. A dog abscess can often be lanced and flushed; a rabbit \
+                    abscess typically requires surgical excision of the entire \
+                    capsule because the contents are too solid to drain. Abscesses \
+                    can form in the jaw (often secondary to dental disease), behind \
+                    the eyes, in the nasal sinuses, and in internal organs. Jaw \
+                    abscesses in particular are notoriously difficult to resolve and \
+                    may require multiple surgeries.
+
+                    Conjunctivitis (weepy eye), genital infections, and septicemia \
+                    (bloodstream infection) are less common but well-documented \
+                    manifestations. Septicemia is rapidly life-threatening.
+
+                    **The Bacterium That Named Itself**
+
+                    Pasteurella multocida holds a unique place in the history of \
+                    microbiology. In 1880, Louis Pasteur\u{2019}s laboratory \
+                    isolated the organism during research into fowl cholera — a \
+                    devastating disease of poultry. During these experiments, \
+                    Pasteur accidentally used an attenuated (weakened) culture to \
+                    inoculate chickens and discovered that they survived and became \
+                    resistant to subsequent exposure with virulent bacteria. This \
+                    observation — that deliberate exposure to a weakened pathogen \
+                    could confer protection — became one of the foundational \
+                    principles of vaccination. The bacterium was later named \
+                    Pasteurella in his honor, making it one of the few pathogens \
+                    whose name directly commemorates a scientist\u{2019}s \
+                    contribution to understanding it.
+
+                    **The Cat Bite Connection**
+
+                    Most cat owners are unaware that the bacterium causing their \
+                    rabbit\u{2019}s snuffles is the same one that makes cat bites \
+                    so dangerous. P. multocida is carried in the mouths of \
+                    approximately 70\u{2013}90% of healthy cats. When a cat bites \
+                    — delivering bacteria deep into tissue through its narrow, \
+                    puncture-type teeth — the resulting infection develops rapidly \
+                    and aggressively, often within 12\u{2013}24 hours. Cat bite \
+                    wounds are the most common route of P. multocida infection in \
+                    humans and are a well-established medical emergency requiring \
+                    prompt antibiotic treatment. Any person bitten by a cat should \
+                    seek medical attention, particularly if redness, swelling, or \
+                    pain develops around the wound.
+
+                    This also means that a cat in the same household as a rabbit \
+                    is a potential source of P. multocida exposure — even without \
+                    a bite. Shared living spaces, grooming contact, and food bowl \
+                    proximity can facilitate transmission.
+
+                    **Transmission & Spread**
+
+                    In rabbits, P. multocida spreads through direct nose-to-nose \
+                    contact, respiratory droplets, and contaminated surfaces. Mother \
+                    rabbits commonly transmit the bacterium to their kits during \
+                    nursing and grooming, establishing carriage very early in life. \
+                    Overcrowded housing, poor ventilation, and high ammonia levels \
+                    from soiled bedding all increase transmission risk and lower \
+                    respiratory defenses.
+
+                    Between species, transmission occurs primarily through bite \
+                    wounds (cats and dogs to other animals or humans) and close \
+                    contact. Guinea pigs housed with or near rabbits are at risk \
+                    of acquiring respiratory pasteurellosis.
+
+                    **Zoonotic Risk**
+
+                    P. multocida is zoonotic. The primary human risk is from cat \
+                    and dog bite wounds, which can produce rapid, aggressive soft \
+                    tissue infections requiring medical treatment. Transmission \
+                    from rabbits to humans via respiratory route is uncommon but \
+                    has been documented in immunocompromised individuals. Standard \
+                    hygiene — handwashing after handling rabbits, prompt medical \
+                    attention for any animal bite wound — is appropriate.
+
+                    **Treatment Goals**
+
+                    Veterinary treatment focuses on controlling the active bacterial \
+                    infection with appropriate systemic antibiotics (guided by \
+                    culture and sensitivity testing where possible), managing pain \
+                    and supportive care, and addressing any underlying trigger — \
+                    dental disease, environmental stress, or concurrent illness — \
+                    that allowed the infection to establish. Abscesses typically \
+                    require surgical intervention. Ear infections causing head tilt \
+                    require prolonged antibiotic courses and may not fully resolve \
+                    in all cases.
+
+                    An important reality of pasteurellosis in rabbits: because the \
+                    bacterium is carried asymptomatically by most rabbits, \
+                    \u{201C}curing\u{201D} the infection in the sense of \
+                    eliminating the organism entirely is often not achievable. The \
+                    goal is to resolve clinical disease and manage the conditions \
+                    that triggered it. Recurrence is common, particularly in \
+                    rabbits with chronic dental disease or ongoing environmental \
+                    stressors.
+
+                    **Myths vs. Facts**
+
+                    **Myth:** \u{201C}Snuffles is just a cold — it will clear up \
+                    on its own.\u{201D}
+                    **Fact:** Pasteurellosis is a bacterial infection that requires \
+                    veterinary treatment. Without antibiotics, it can progress to \
+                    pneumonia, abscesses, ear infections, or septicemia. A rabbit \
+                    with nasal discharge needs veterinary evaluation, not watchful \
+                    waiting.
+
+                    **Myth:** \u{201C}My rabbit has a head tilt, so it must be \
+                    E. cuniculi.\u{201D}
+                    **Fact:** Head tilt in rabbits has multiple possible causes. \
+                    Pasteurella otitis (ear infection) and E. cuniculi are the two \
+                    most common — and they require different treatments. Some \
+                    rabbits have both infections simultaneously. A veterinarian \
+                    must evaluate the rabbit to determine the cause and guide \
+                    treatment.
+
+                    **Myth:** \u{201C}If my rabbit tests positive for Pasteurella, \
+                    it\u{2019}s seriously ill.\u{201D}
+                    **Fact:** Most healthy rabbits carry P. multocida without \
+                    illness. A positive culture from the nasal passages of a \
+                    healthy rabbit is expected — it does not indicate disease. \
+                    Clinical signs, not carrier status, determine whether treatment \
+                    is needed.
+                    """,
+                toxicityInfoSectionTitle: "What makes it harmful?",
+                onsetTime: OnsetTime(
+                    early: "Snuffles (nasal discharge, sneezing) can develop within days of immune compromise or stress event. Cat bite wound infections in humans and animals typically become symptomatic within 12–24 hours.",
+                    delayed: "Chronic pasteurellosis in rabbits can persist for weeks to months, with recurring episodes triggered by stress. Abscesses may develop over weeks. Ear infections causing head tilt can appear suddenly but reflect longer-standing middle ear involvement."
+                ),
+                symptoms: [
+                    "Chronic white or yellowish nasal discharge (snuffles)",
+                    "Sneezing — frequent or in bouts",
+                    "Matted or crusted fur on the inside of the front paws (from wiping nose)",
+                    "Audible congestion or noisy breathing",
+                    "Head tilt (sign of middle or inner ear infection)",
+                    "Loss of balance or circling (inner ear involvement)",
+                    "Swelling under the jaw, behind the eye, or on the face (abscess)",
+                    "Weepy or crusty eyes (conjunctivitis)",
+                    "Loss of appetite",
+                    "Lethargy or depression",
+                    "Labored breathing (sign of pneumonia — emergency)",
+                    "Rapid swelling, redness, and pain around a bite wound (cats, dogs, humans)"
+                ],
+                entrySeverity: nil,
+                speciesRisks: [
+                    SpeciesRisk(
+                        species: .smallMammal,
+                        severity: .severe,
+                        notes: "Rabbits are the primary and most severely affected species — the majority of domestic rabbits carry P. multocida asymptomatically, with clinical disease triggered by stress or immune suppression. Can cause chronic respiratory disease, abscesses, pneumonia, ear infections (head tilt), and fatal septicemia. Guinea pigs housed with or near infected rabbits are also susceptible to respiratory pasteurellosis."
+                    ),
+                    SpeciesRisk(
+                        species: .cat,
+                        severity: .moderate,
+                        notes: "Approximately 70–90% of healthy cats carry P. multocida in their oral flora. Clinical pasteurellosis in cats is uncommon, but cats are the primary source of P. multocida bite wound infections in other animals and humans. Cat bites deliver bacteria deep into tissue and produce rapidly progressive wound infections."
+                    ),
+                    SpeciesRisk(
+                        species: .dog,
+                        severity: .moderate,
+                        notes: "Dogs carry P. multocida in their oral flora at lower rates than cats. Dog bite wounds can also transmit the bacterium, though cat bites are more commonly associated with P. multocida wound infections due to their deeper puncture mechanics."
+                    ),
+                    SpeciesRisk(
+                        species: .bird,
+                        severity: .low,
+                        notes: "P. multocida causes avian cholera (fowl cholera) — a significant disease in poultry and wild bird populations. Rarely reported in pet birds under normal companion animal husbandry. Included for completeness given the pathogen's broad host range."
+                    )
+                ],
+                preventionTips: [
+                    "Minimize stress in rabbits — overcrowding, poor ventilation, high ammonia from soiled bedding, and sudden environmental changes all increase the risk of clinical pasteurellosis",
+                    "Keep rabbit enclosures clean and well-ventilated; high ammonia levels from urine-soaked bedding directly damage respiratory defenses",
+                    "Schedule regular veterinary checkups including dental examinations — dental disease is a major trigger for Pasteurella abscesses in rabbits",
+                    "Quarantine new rabbits for a minimum of 4 weeks before introducing them to resident animals",
+                    "If a rabbit in a multi-rabbit household develops snuffles, have all rabbits evaluated — asymptomatic carriers may be shedding bacteria",
+                    "Keep cats and rabbits in the same household separated or supervised — cats carry P. multocida in their mouths and can transmit it through bites, scratches, or close contact",
+                    "Seek medical attention promptly for any cat or dog bite wound — P. multocida wound infections develop rapidly and require antibiotic treatment",
+                    "Wash hands thoroughly after handling any rabbit, especially one with nasal discharge or known pasteurellosis"
+                ],
+                sources: [
+                    "Merck Veterinary Manual — Pasteurellosis in Rabbits: https://www.merckvetmanual.com/exotic-and-laboratory-animals/rabbits/bacterial-and-mycotic-diseases-of-rabbits",
+                    "House Rabbit Society — Snuffles (Pasteurella) in Rabbits: https://rabbit.org/health/snuffles/",
+                    "LafeberVet — Pasteurella multocida in Rabbits: https://lafeber.com/vet/pasteurella-multocida-in-rabbits/",
+                    "Wikipedia — Pasteurella multocida: https://en.wikipedia.org/wiki/Pasteurella_multocida",
+                    "VCA Animal Hospitals — Pasteurellosis in Rabbits: https://vcahospitals.com/know-your-pet/pasteurellosis-in-rabbits"
+                ],
+                relatedEntries: [
+                    "1D000001-0000-0000-0000-000000000029",  // E. cuniculi
+                    "1D000001-0000-0000-0000-000000000038",  // GI Stasis in Rabbits
+                    "1D000001-0000-0000-0000-000000000045"   // Small Mammal Husbandry Guide
                 ]
             ),
         ]
