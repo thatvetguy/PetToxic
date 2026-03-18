@@ -31,6 +31,7 @@ class DiseasesConditionsService {
         "1D000001-0000-0000-0000-000000000041",  // Stomatitis / Mouth Rot
         "1D000001-0000-0000-0000-000000000043",  // Reptile Husbandry Guide
         "1D000001-0000-0000-0000-000000000044",  // Bird Husbandry Guide
+        "1D000001-0000-0000-0000-000000000045",  // Small Mammal Husbandry Guide
     ]
 
     /// Whether an entry is an infectious disease (Type 1)
@@ -6268,7 +6269,8 @@ class DiseasesConditionsService {
                     "1D000001-0000-0000-0000-000000000027",  // Baylisascaris
                     "1D000001-0000-0000-0000-000000000031",  // Rabbit Ear Mites (Psoroptes cuniculi)
                     "1D000001-0000-0000-0000-000000000037",  // Coccidiosis & Cryptosporidiosis
-                    "1D000001-0000-0000-0000-000000000038"   // GI Stasis in Rabbits
+                    "1D000001-0000-0000-0000-000000000038",  // GI Stasis in Rabbits
+                    "1D000001-0000-0000-0000-000000000045"   // Small Mammal Husbandry Guide
                 ]
             ),
 
@@ -6605,7 +6607,8 @@ class DiseasesConditionsService {
                 relatedEntries: [
                     "1D000001-0000-0000-0000-000000000026",  // Mange (Sarcoptic & Demodectic)
                     "1D000001-0000-0000-0000-000000000029",  // Encephalitozoon cuniculi (E. cuniculi)
-                    "1D000001-0000-0000-0000-000000000038"   // GI Stasis in Rabbits
+                    "1D000001-0000-0000-0000-000000000038",  // GI Stasis in Rabbits
+                    "1D000001-0000-0000-0000-000000000045"   // Small Mammal Husbandry Guide
                 ]
             ),
 
@@ -6757,7 +6760,8 @@ class DiseasesConditionsService {
                     "Wikipedia — Rabbit Haemorrhagic Disease: https://en.wikipedia.org/wiki/Rabbit_haemorrhagic_disease"
                 ],
                 relatedEntries: [
-                    "1D000001-0000-0000-0000-000000000007"   // Myxomatosis
+                    "1D000001-0000-0000-0000-000000000007",  // Myxomatosis
+                    "1D000001-0000-0000-0000-000000000045"   // Small Mammal Husbandry Guide
                 ]
             ),
 
@@ -7870,7 +7874,8 @@ class DiseasesConditionsService {
                     "1D000001-0000-0000-0000-000000000023",  // GI Parasites
                     "1D000001-0000-0000-0000-000000000024",  // Toxoplasma
                     "1D000001-0000-0000-0000-000000000029",  // Encephalitozoon cuniculi (E. cuniculi)
-                    "1D000001-0000-0000-0000-000000000044"   // Bird Husbandry Guide
+                    "1D000001-0000-0000-0000-000000000044",  // Bird Husbandry Guide
+                    "1D000001-0000-0000-0000-000000000045"   // Small Mammal Husbandry Guide
                 ]
             ),
 
@@ -8056,7 +8061,8 @@ class DiseasesConditionsService {
                 ],
                 relatedEntries: [
                     "1D000001-0000-0000-0000-000000000029",  // E. cuniculi
-                    "1D000001-0000-0000-0000-000000000031"   // Rabbit Ear Mites
+                    "1D000001-0000-0000-0000-000000000031",  // Rabbit Ear Mites
+                    "1D000001-0000-0000-0000-000000000045"   // Small Mammal Husbandry Guide
                 ]
             ),
 
@@ -8291,7 +8297,8 @@ class DiseasesConditionsService {
                     "1D000001-0000-0000-0000-000000000040",  // Shell Rot
                     "1D000001-0000-0000-0000-000000000041",  // Stomatitis / Mouth Rot
                     "1D000001-0000-0000-0000-000000000043",  // Reptile Husbandry Guide
-                    "1D000001-0000-0000-0000-000000000044"   // Bird Husbandry Guide
+                    "1D000001-0000-0000-0000-000000000044",  // Bird Husbandry Guide
+                    "1D000001-0000-0000-0000-000000000045"   // Small Mammal Husbandry Guide
                 ]
             ),
 
@@ -9561,6 +9568,305 @@ class DiseasesConditionsService {
                     "1D000001-0000-0000-0000-000000000037",  // Coccidiosis & Cryptosporidiosis
                     "1D000001-0000-0000-0000-000000000039",  // Hypovitaminosis A
                     "00112233-4455-6677-8899-aabbccddef22"   // Inhalant Toxins (PTFE / Teflon Toxicosis)
+                ]
+            ),
+
+            // MARK: - Small Mammal Husbandry Guide
+            // Type 4 (Husbandry Guide)
+            ToxicItem(
+                id: UUID(uuidString: "1D000001-0000-0000-0000-000000000045")!,
+                name: "Small Mammal Husbandry Guide",
+                alternateNames: [
+                    "rabbit care", "guinea pig care", "chinchilla care", "ferret care",
+                    "hamster care", "gerbil care", "rat care", "mouse care", "degu care",
+                    "small mammal care", "exotic small mammal", "pocket pet care",
+                    "husbandry guide", "care guide", "care sheet", "setup guide",
+                    "rabbit husbandry", "guinea pig husbandry", "ferret husbandry",
+                    "small pet care", "bunny care"
+                ],
+                categories: [.diseasesAndConditions],
+                imageAsset: "small_mammal_husbandry_thumb",
+                description: """
+                    This guide covers core husbandry requirements for commonly kept \
+                    small mammal pets. It is intended for current and prospective owners \
+                    who want to provide the best possible care for their animals and \
+                    understand how husbandry choices directly affect long-term health.
+
+                    Species covered include rabbits, guinea pigs, chinchillas, ferrets, \
+                    hamsters, gerbils, rats, mice, and degus. While these animals are \
+                    often grouped together as \u{201C}small pets,\u{201D} their care \
+                    requirements differ significantly — a chinchilla and a ferret have \
+                    almost nothing in common nutritionally or environmentally. Reading \
+                    species-specific resources and consulting an exotic-specialist \
+                    veterinarian is essential for each animal you keep.
+
+                    The majority of health problems seen in captive small mammals are \
+                    directly caused by husbandry failures: incorrect diet, inadequate \
+                    enclosure size, improper temperature, inappropriate companions, or \
+                    insufficient veterinary care. This guide provides foundational \
+                    information, but it is not a substitute for professional guidance. \
+                    Requirements vary between species and individual animals — a \
+                    veterinarian familiar with exotic small mammals is your most \
+                    important resource.
+                    """,
+                toxicityInfo: """
+                    Small mammals are among the most popular exotic pets, but they are \
+                    often underestimated in the level of care they require. These are \
+                    prey animals with strong instincts to conceal illness, specialized \
+                    dietary needs, and — in many cases — complex social and behavioral \
+                    requirements. Understanding those needs is the foundation of keeping \
+                    them healthy.
+
+                    **Enclosure & Habitat**
+                    Enclosure size is one of the most consistently underestimated aspects \
+                    of small mammal care. Most commercially sold \u{201C}starter cages\u{201D} \
+                    are far too small for the animals they are marketed for. Rabbits \
+                    require a minimum of a large exercise pen or dedicated room — not a \
+                    hutch. Guinea pigs need a minimum of 7.5 square feet of floor space \
+                    for one animal, more for pairs or groups. Hamsters need enclosures \
+                    with a footprint equivalent to at least a 40-gallon tank, with a \
+                    minimum of 6 inches of loose substrate for burrowing — this is a \
+                    behavioral necessity, not a luxury. Gerbils and degus have similar \
+                    burrowing needs.
+
+                    Solid-bottom flooring is essential for rabbits and guinea pigs — \
+                    wire-bottom cages cause painful sore hocks (pododermatitis). \
+                    Chinchillas and degus tolerate metal mesh better but still benefit \
+                    from solid resting platforms. Ferrets require large multi-level \
+                    enclosures and several hours of daily supervised out-of-cage time in \
+                    a ferret-proofed space. Rats are highly intelligent and need \
+                    enclosures with both floor space and vertical height for climbing. \
+                    All species benefit from hides and shelter areas — prey animals need \
+                    places to retreat and feel secure.
+
+                    Avoid enclosures made primarily of soft plastic — chinchillas, \
+                    degus, rabbits, and ferrets will chew through plastic quickly, \
+                    with ingestion risk.
+
+                    **Temperature & Lighting**
+                    Most small mammals are sensitive to heat, particularly chinchillas, \
+                    rabbits, guinea pigs, and ferrets. Rabbits and guinea pigs are \
+                    comfortable between 60\u{2013}75\u{00B0}F and show signs of heat stress \
+                    above 80\u{00B0}F. Chinchillas and degus are adapted to cool, arid \
+                    climates — temperatures above 70\u{00B0}F are stressful, and \
+                    above 75\u{00B0}F can be dangerous. Ferrets tolerate 50\u{2013}80\u{00B0}F \
+                    but are highly susceptible to heat stroke in warm environments. \
+                    Hamsters can enter a state of torpor (a shallow, involuntary \
+                    hibernation) if temperatures drop below 50\u{00B0}F — this is often \
+                    mistaken for death by owners and is a medical concern.
+
+                    Unlike reptiles and many birds, most small mammals do not require \
+                    UVB lighting. However, a consistent photoperiod (day/night cycle) \
+                    supports natural behavior and reproductive cycles. Avoid placing \
+                    enclosures in direct sunlight — even brief exposure through a window \
+                    can cause lethal overheating, especially in rabbits and chinchillas. \
+                    Keep enclosures away from heating vents, drafts, and air conditioning \
+                    units.
+
+                    **Humidity**
+                    Chinchillas and degus are adapted to low-humidity environments and \
+                    do best between 30\u{2013}50% relative humidity. High humidity \
+                    increases their risk of respiratory disease and fungal skin \
+                    infections. Dust bathing — typically using chinchilla dust two to \
+                    three times per week — supports coat health in these species by \
+                    absorbing excess oils and moisture.
+
+                    Most other small mammals tolerate moderate household humidity without \
+                    difficulty. The key for all species is avoiding damp or wet substrate \
+                    — wet bedding promotes bacterial growth, ammonia accumulation, and \
+                    skin and respiratory problems. Spot-clean enclosures daily and perform \
+                    full substrate changes on a regular schedule.
+
+                    **Diet & Nutrition**
+                    Diet is the single most impactful aspect of small mammal husbandry \
+                    and is the source of the most common serious health problems.
+
+                    Rabbits require unlimited timothy or orchard grass hay as the \
+                    foundation of their diet — approximately 80% of daily intake. Hay \
+                    supports both gut motility and dental wear (rabbit teeth grow \
+                    continuously throughout life). Fresh leafy greens provide variety \
+                    and hydration. Pellets should be limited to a small daily portion. \
+                    High-sugar foods including fruit, carrots, and commercial treat \
+                    sticks are inappropriate as regular offerings and contribute to GI \
+                    imbalance and obesity.
+
+                    Guinea pigs also require unlimited hay and share the rabbit\u{2019}s \
+                    need for continuous dental wear. Critically, guinea pigs cannot \
+                    synthesize their own vitamin C and will develop scurvy without a \
+                    reliable dietary source. Fresh vitamin C-rich vegetables (bell \
+                    peppers are an excellent source) or a guinea pig-specific supplement \
+                    are essential daily. Do not rely on vitamin C added to water — it \
+                    degrades rapidly and intake is unreliable.
+
+                    Chinchillas and degus require a high-fiber, low-fat, low-sugar diet \
+                    based on quality grass hay and a limited amount of species-appropriate \
+                    pellets. Degus are exceptionally susceptible to diabetes and must \
+                    never receive fruit, sugary treats, or high-carbohydrate foods. \
+                    Raisins, which are sometimes recommended in older resources, are \
+                    inappropriate for both species.
+
+                    Ferrets are strict carnivores. They require a high-protein, \
+                    high-fat, low-carbohydrate diet. Fruit, vegetables, and \
+                    carbohydrate-heavy foods are inappropriate for ferrets and can \
+                    contribute to insulinoma (pancreatic tumors) over time.
+
+                    Hamsters, gerbils, rats, and mice are omnivores and generally \
+                    thrive on a high-quality commercial block or pelleted diet \
+                    supplemented with fresh vegetables and occasional protein sources. \
+                    Seed-only diets are nutritionally unbalanced — animals select \
+                    high-fat seeds preferentially and leave the rest, leading to \
+                    deficiencies over time. Fresh water must always be available; \
+                    water bottles should be checked daily for blockages.
+
+                    **Handling & Enrichment**
+                    Regular, gentle handling from an early age helps small mammals \
+                    become comfortable with human contact and makes health monitoring \
+                    easier. Prey animals instinctively conceal signs of illness — \
+                    owners who handle their animals frequently are far more likely to \
+                    detect subtle changes in weight, coat condition, or behavior before \
+                    a problem becomes critical.
+
+                    Rabbits should always have their hindquarters supported when lifted. \
+                    A rabbit that kicks out against an unsupported back can fracture or \
+                    dislocate its own spine — this is one of the most preventable \
+                    serious injuries in rabbit care. Never grab a rabbit by its ears.
+
+                    Guinea pigs are highly social animals and should be housed in \
+                    same-sex pairs or small groups whenever possible. Solitary guinea \
+                    pigs are prone to depression, stress-related illness, and shortened \
+                    lifespan. Hamsters, by contrast, are largely solitary and most \
+                    species should be housed alone — two hamsters in the same enclosure \
+                    will often fight, sometimes fatally.
+
+                    Rats are among the most social and intelligent of commonly kept \
+                    small mammals and should not be housed alone. Pairs or small \
+                    same-sex groups are strongly recommended. Enrichment for rats \
+                    includes climbing structures, foraging opportunities, tunnels, \
+                    and regular interaction with their owners.
+
+                    Chinchillas are active and agile, especially in the evenings. \
+                    They require exercise outside the enclosure in a chinchilla-proofed \
+                    space. Ferrets need several hours of supervised out-of-cage playtime \
+                    daily in a fully ferret-proofed room — they are escape artists and \
+                    will investigate every gap, cabinet, and appliance.
+
+                    **Common Mistakes to Avoid**
+                    Many of the most serious health problems in small mammals are \
+                    preventable. These are among the most common husbandry errors:
+
+                    \u{2022} Feeding rabbits a carrot-heavy or fruit-heavy diet. Carrots \
+                    are high in sugar and should be an occasional treat, not a staple. \
+                    The image of rabbits eating carrots is a cultural myth — in the wild, \
+                    rabbits eat grasses, not root vegetables.
+
+                    \u{2022} Providing insufficient hay for rabbits and guinea pigs. No \
+                    hay means no dental wear and no gut motility — both lead to \
+                    life-threatening conditions.
+
+                    \u{2022} Keeping guinea pigs alone. Solitary housing is a welfare \
+                    concern for this highly social species.
+
+                    \u{2022} Using an enclosure that is too small, especially for \
+                    hamsters. A hamster in an undersized cage without adequate burrowing \
+                    depth will display stereotypic (repetitive, stress-driven) behaviors \
+                    such as bar-chewing and pacing.
+
+                    \u{2022} Using cedar or pine wood shavings as bedding. The aromatic \
+                    phenols in these woods are respiratory irritants and can cause \
+                    liver damage in small mammals over time. Choose paper-based, \
+                    aspen, or hemp bedding instead.
+
+                    \u{2022} Feeding degus any fruit or sugary food. Degus have an \
+                    extremely low tolerance for dietary sugar and are highly prone to \
+                    diabetes mellitus.
+
+                    \u{2022} Assuming small size means low maintenance. Many small \
+                    mammals require more specialized care than a dog or cat and have \
+                    shorter windows to detect and treat illness.
+
+                    \u{2022} Skipping veterinary care because the animal \u{201C}seems \
+                    fine.\u{201D} Prey animals mask illness until they can no longer \
+                    compensate — waiting for obvious symptoms often means waiting too long.
+
+                    **Veterinary Care**
+                    Small mammals require veterinary care from a practitioner experienced \
+                    with exotic species. General practice veterinarians may have limited \
+                    training in rabbit, guinea pig, or ferret medicine — seek out an \
+                    exotic-specialist or a veterinarian who explicitly lists small \
+                    mammals as a focus.
+
+                    Annual wellness exams are a minimum standard. Prey animals mask \
+                    illness instinctively — a rabbit or guinea pig that appears healthy \
+                    may already be significantly unwell by the time symptoms become \
+                    visible. Regular exams allow a veterinarian to catch dental \
+                    disease, weight changes, and internal problems before they become \
+                    emergencies.
+
+                    Dental disease is extremely common in rabbits, guinea pigs, and \
+                    chinchillas, all of which have continuously growing teeth that can \
+                    develop painful points, overgrowth, or root elongation. Any \
+                    decrease in appetite, drooling, or weight loss in these species \
+                    should prompt a prompt dental evaluation.
+
+                    Unspayed female rabbits have a very high lifetime risk of uterine \
+                    cancer — spaying at a young age is recommended by most exotic \
+                    veterinarians as a preventive measure. Female guinea pigs, ferrets, \
+                    and rats also have significant reproductive cancer risks that may \
+                    warrant spaying.
+
+                    Ferrets are susceptible to canine distemper virus and should be \
+                    vaccinated. They are also uniquely prone to adrenal gland disease \
+                    and insulinoma, particularly in middle age — regular veterinary \
+                    monitoring is important.
+
+                    Signs that warrant same-day or emergency veterinary evaluation in \
+                    any small mammal include: not eating for more than 12 hours, \
+                    labored breathing, sudden hind limb weakness or paralysis, \
+                    significant bleeding, seizures, or suspected ingestion of a \
+                    toxic substance.
+                    """,
+                toxicityInfoSectionTitle: "Husbandry Overview",
+                onsetTime: nil,
+                symptoms: [],
+                entrySeverity: nil,
+                speciesRisks: [
+                    SpeciesRisk(
+                        species: .smallMammal,
+                        severity: .moderate,
+                        notes: "Covers core husbandry requirements for commonly kept small mammals including rabbits, guinea pigs, chinchillas, ferrets, hamsters, gerbils, rats, mice, and degus."
+                    )
+                ],
+                preventionTips: [
+                    "Provide unlimited grass hay at all times for rabbits and guinea pigs — it is the foundation of their diet and essential for dental health and gut motility.",
+                    "Guinea pigs cannot synthesize vitamin C — supply a fresh dietary source (such as bell pepper) or a species-appropriate supplement every day.",
+                    "House guinea pigs in same-sex pairs or groups — solitary guinea pigs are prone to stress-related illness and significantly shortened lifespan.",
+                    "Provide at least 6 inches of loose, deep substrate for hamsters and gerbils — burrowing is a core behavioral need, not optional enrichment.",
+                    "Keep chinchillas and degus below 70\u{00B0}F and in low humidity (30\u{2013}50%) — both species are adapted to cool, arid conditions and are vulnerable to heat and dampness.",
+                    "Never use cedar or pine shavings as bedding — the aromatic phenols are respiratory irritants that can cause lasting harm; use paper-based, aspen, or hemp bedding.",
+                    "Support a rabbit\u{2019}s full body — including hindquarters — whenever lifting; unsupported kicking can fracture the spine.",
+                    "Handle your small mammal regularly to detect early changes in weight, coat condition, and behavior — prey animals instinctively conceal illness.",
+                    "Schedule a wellness exam with an exotic-specialist veterinarian within the first week of ownership and annually thereafter.",
+                    "Ferrets require several hours of daily supervised out-of-cage exercise in a fully ferret-proofed space — they are escape artists with a talent for finding gaps."
+                ],
+                sources: [
+                    "Merck Veterinary Manual — Rabbits: https://www.merckvetmanual.com/exotic-and-laboratory-animals/rabbits",
+                    "Merck Veterinary Manual — Guinea Pigs: https://www.merckvetmanual.com/exotic-and-laboratory-animals/guinea-pigs",
+                    "Merck Veterinary Manual — Chinchillas: https://www.merckvetmanual.com/exotic-and-laboratory-animals/chinchillas",
+                    "Merck Veterinary Manual — Ferrets: https://www.merckvetmanual.com/exotic-and-laboratory-animals/ferrets",
+                    "Merck Veterinary Manual — Hamsters and Gerbils: https://www.merckvetmanual.com/exotic-and-laboratory-animals/hamsters",
+                    "House Rabbit Society — Basic Rabbit Care: https://rabbit.org/care",
+                    "LafeberVet — Small Mammal Care and Husbandry: https://lafeber.com/vet/",
+                    "VCA Animal Hospitals — Guinea Pig Care: https://vcahospitals.com/know-your-pet/guinea-pigs",
+                    "VCA Animal Hospitals — Ferret Care: https://vcahospitals.com/know-your-pet/ferrets",
+                    "Association of Exotic Mammal Veterinarians (AEMV) — Member Resources: https://aemv.org"
+                ],
+                relatedEntries: [
+                    "1D000001-0000-0000-0000-000000000029",  // E. cuniculi
+                    "1D000001-0000-0000-0000-000000000031",  // Rabbit Ear Mites
+                    "1D000001-0000-0000-0000-000000000032",  // RHDV2
+                    "1D000001-0000-0000-0000-000000000037",  // Coccidiosis & Cryptosporidiosis
+                    "1D000001-0000-0000-0000-000000000038",  // GI Stasis in Rabbits
+                    "1D000001-0000-0000-0000-000000000039"   // Hypovitaminosis A
                 ]
             ),
         ]
