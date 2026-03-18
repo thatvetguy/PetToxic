@@ -4636,7 +4636,8 @@ class DiseasesConditionsService {
                 ],
                 relatedEntries: [
                     "1D000001-0000-0000-0000-000000000006",  // Leptospirosis
-                    "1D000001-0000-0000-0000-000000000023"   // GI Parasites
+                    "1D000001-0000-0000-0000-000000000023",  // GI Parasites
+                    "1D000001-0000-0000-0000-000000000026"   // Mange
                 ]
             ),
 
@@ -5365,6 +5366,229 @@ class DiseasesConditionsService {
                     "UC Davis School of Veterinary Medicine — Heartworm Disease in Ferrets: https://www.vetmed.ucdavis.edu/hospital/small-animal/services/zoological-companion-animal-medicine/ferret-health"
                 ],
                 relatedEntries: nil
+            ),
+
+            // MARK: - Mange (Sarcoptic & Demodectic)
+            ToxicItem(
+                id: UUID(uuidString: "1D000001-0000-0000-0000-000000000026")!,
+                name: "Mange (Sarcoptic & Demodectic)",
+                alternateNames: [
+                    "Sarcoptic mange",
+                    "Demodectic mange",
+                    "Demodicosis",
+                    "Fox mange",
+                    "Red mange",
+                    "Canine scabies",
+                    "Scabies",
+                    "Demodex",
+                    "Sarcoptes",
+                    "Mange mites",
+                    "Skin mites",
+                    "Mite infestation",
+                    "Notoedric mange",
+                    "Notoedres"
+                ],
+                categories: [.diseasesAndConditions],
+                imageAsset: "mange_thumb",
+                description: """
+                Mange is a term for skin diseases caused by microscopic mites that \
+                infest the skin of companion animals. Two distinct forms exist and are \
+                often confused: sarcoptic mange and demodectic mange. They have \
+                different causes, different levels of contagiousness, and very different \
+                clinical courses — and they cannot be distinguished by appearance alone. \
+                Veterinary diagnosis by skin scraping or other testing is required.
+
+                Sarcoptic mange is caused by Sarcoptes scabiei, a mite that burrows \
+                into the skin and triggers a severe allergic reaction. It is highly \
+                contagious between animals and is zoonotic — contact with an affected \
+                animal can cause a transient itchy rash in humans. Sarcoptic mange is \
+                sometimes called fox mange because wild foxes are a common reservoir; \
+                domestic dogs can acquire it through contact with foxes or their \
+                environments.
+
+                Demodectic mange is caused by Demodex mites — microscopic organisms \
+                that normally live in small numbers within the hair follicles of healthy \
+                animals. Disease occurs when the immune system is unable to keep mite \
+                populations in check. This typically affects puppies, elderly animals, \
+                or those with underlying illness. Demodectic mange is not contagious \
+                between most animals (with one exception: Demodex gatoi, the \
+                superficial feline Demodex species, can spread between cats in close \
+                contact).
+
+                Both forms can range from mild and localized to severe and \
+                life-threatening. Prompt veterinary evaluation is essential for correct \
+                diagnosis and appropriate treatment.
+                """,
+                toxicityInfo: """
+                **How It Harms the Body**
+
+                The two forms of mange damage the skin through entirely different \
+                mechanisms.
+
+                In sarcoptic mange, the Sarcoptes mite burrows tunnels into the \
+                outermost layer of the skin (stratum corneum), where it lays eggs. The \
+                immune system mounts an intense hypersensitivity reaction against the \
+                mites, their eggs, and their waste products. This allergic response — \
+                not the physical burrowing — is responsible for the extreme, relentless \
+                itching that defines sarcoptic mange. Affected animals scratch, bite, \
+                and rub themselves raw. The resulting wounds are highly vulnerable to \
+                secondary bacterial infection, which compounds skin damage and can \
+                become severe in its own right.
+
+                In demodectic mange, Demodex mites are a normal resident of healthy \
+                skin in very small numbers. Disease develops when immune regulation \
+                breaks down and mite numbers multiply unchecked. Mites block hair \
+                follicles, trigger deep follicular inflammation, and destroy the \
+                follicular structure. Localized demodectic mange — patches of hair loss \
+                in young animals — often resolves on its own. Generalized demodectic \
+                mange involves widespread follicular destruction, secondary bacterial \
+                skin infection (pyoderma), and systemic inflammation. In severe cases, \
+                the combination of overwhelming infection burden and immune compromise \
+                becomes life-threatening.
+
+                **The Two Faces of Mange**
+
+                Sarcoptic and demodectic mange are frequently confused, even used \
+                interchangeably in casual conversation. They are fundamentally different \
+                conditions:
+
+                Sarcoptic mange: caused by Sarcoptes scabiei; highly contagious between \
+                animals; zoonotic (causes a transient rash in humans); the primary \
+                driver is an allergic immune response to the mite; intense itching is \
+                the hallmark sign.
+
+                Demodectic mange: caused by Demodex mites that normally reside in skin; \
+                not contagious between animals (with the D. gatoi exception in cats); \
+                not zoonotic; the primary driver is immune suppression; hair loss with \
+                minimal itching is the more typical picture.
+
+                These distinctions matter for treatment, isolation decisions, and \
+                household management. Only a veterinarian can confirm which type is \
+                present.
+
+                **Transmission & Spread**
+
+                Sarcoptic mange spreads rapidly through direct contact between animals. \
+                It can also spread via shared bedding, grooming tools, and other \
+                fomites. Sarcoptes mites can survive off a host for two to six days \
+                under favorable conditions, making environmental contamination a genuine \
+                concern. Dogs commonly acquire sarcoptic mange through contact with \
+                infected dogs, foxes, coyotes, or other wildlife. In shelters, kennels, \
+                and dog parks, transmission can occur quickly and affect multiple animals.
+
+                Demodectic mange does not spread between dogs. Mother dogs normally pass \
+                Demodex mites to their puppies during nursing — this is part of normal \
+                skin flora establishment and does not cause disease in a healthy puppy. \
+                Generalized demodectic mange in an adult dog is a significant clinical \
+                signal: it nearly always indicates an underlying immunocompromising \
+                condition — chronic illness, cancer, or prolonged immune-suppressing \
+                medication — and warrants investigation beyond the skin.
+
+                **Scabies by Any Other Name**
+
+                In human medicine, infestation with Sarcoptes scabiei is called scabies \
+                — caused by the same genus of mite, adapted to a different host. \
+                Sarcoptic mange is zoonotic: when humans handle or come into close \
+                contact with a mange-affected animal, mites can briefly burrow into \
+                human skin and cause an intensely itchy rash. However, mite varieties \
+                adapted to animals cannot complete their life cycle on human skin and do \
+                not establish a permanent infestation. The rash is self-limiting and \
+                typically resolves without treatment once the animal source is addressed. \
+                Any human who develops an itchy rash after contact with a \
+                mange-affected animal should consult a physician — particularly if the \
+                rash is persistent or widespread.
+
+                **Treatment Goals**
+
+                Veterinary treatment for sarcoptic mange aims to eliminate the mite \
+                infestation from all affected animals, resolve secondary bacterial skin \
+                infection, relieve itch and inflammation, and decontaminate the \
+                environment to prevent reinfestation. All animals in contact with an \
+                affected pet should be evaluated and treated simultaneously — even those \
+                without visible signs.
+
+                Treatment for demodectic mange aims to eliminate the excess mite \
+                population, manage secondary pyoderma, and — in generalized cases — \
+                identify and address any underlying immunocompromising condition driving \
+                the outbreak. Animals should not be considered clear until multiple \
+                consecutive negative skin scrapings are confirmed at veterinary \
+                re-checks. Generalized demodectic mange requires sustained, often \
+                prolonged treatment and close monitoring.
+
+                **Myths vs. Facts**
+
+                **Myth:** Demodectic mange is contagious — my dog will spread it to \
+                other dogs.
+                **Fact:** Demodectic mange caused by D. canis is not contagious between \
+                dogs. All dogs carry Demodex mites as a normal part of their skin flora. \
+                Disease only develops when a dog\u{2019}s immune system cannot keep mite \
+                populations in check.
+
+                **Myth:** My pet got mange because they were dirty or poorly cared for.
+                **Fact:** Sarcoptic mange is acquired through contact with an infected \
+                animal — not through poor hygiene. Demodectic mange is driven by immune \
+                status, which is outside an owner\u{2019}s control. Either form can affect \
+                well-cared-for, healthy-appearing animals.
+
+                **Myth:** If the itching stops, the mange is gone.
+                **Fact:** Improvement in symptoms does not confirm mite elimination. \
+                Treatment must continue until veterinary testing shows the infestation \
+                is fully cleared. Stopping treatment early is one of the most common \
+                causes of relapse.
+                """,
+                toxicityInfoSectionTitle: "What makes it harmful?",
+                onsetTime: OnsetTime(
+                    early: "Sarcoptic mange: itching and skin irritation typically begin 10 days to 8 weeks after exposure. Demodectic mange: patchy hair loss and follicular changes may develop gradually over days to weeks.",
+                    delayed: "Untreated sarcoptic mange progresses to widespread hair loss, crusting, skin thickening, and secondary bacterial infection. Generalized demodectic mange can become life-threatening in severely immunocompromised animals."
+                ),
+                symptoms: [
+                    "Intense, persistent itching (especially sarcoptic mange)",
+                    "Patchy or widespread hair loss",
+                    "Red, inflamed, crusty, or scabby skin",
+                    "Sores, scabs, or open wounds from self-trauma",
+                    "Thickened, roughened skin texture (chronic cases)",
+                    "Secondary skin infection (increased odor, discharge)",
+                    "Ear margin crusting or scaling (early sarcoptic mange sign in dogs)",
+                    "Swollen lymph nodes (generalized demodectic mange)",
+                    "Weight loss and lethargy (severe or prolonged cases)"
+                ],
+                entrySeverity: nil,
+                speciesRisks: [
+                    SpeciesRisk(
+                        species: .dog,
+                        severity: .severe,
+                        notes: "Both sarcoptic and demodectic mange occur in dogs and can reach severe levels. Sarcoptic mange causes intense, unrelenting pruritus and spreads rapidly to other animals. Generalized demodectic mange — particularly in immunocompromised adults or genetically predisposed breeds including German Shepherds, Shar Peis, and West Highland White Terriers — can become life-threatening when secondary bacterial pyoderma develops."
+                    ),
+                    SpeciesRisk(
+                        species: .cat,
+                        severity: .high,
+                        notes: "Cats are less commonly affected than dogs but are susceptible to notoedric mange (Notoedres cati — a sarcoptic-type mite causing intense pruritus) and feline demodicosis (D. cati, follicular and immune-suppression linked; D. gatoi, superficial and contagious between cats). Cats with underlying immunosuppressive conditions such as FeLV or FIV are at higher risk for severe demodectic disease."
+                    ),
+                    SpeciesRisk(
+                        species: .smallMammal,
+                        severity: .severe,
+                        notes: "Several small mammal species are susceptible to species-specific mange mites. Rabbits can develop severe sarcoptic mange (Sarcoptes scabiei var. cuniculi), particularly affecting the ears, face, and feet. Guinea pigs are highly susceptible to Trixacarus caviae, a mange mite that causes intense pruritus and, in severe infestations, can trigger seizure-like episodes and death. Hamsters and gerbils can also be affected by sarcoptic-type mites. Prompt veterinary evaluation is critical — small mammals deteriorate rapidly under the stress of severe mite infestation."
+                    )
+                ],
+                preventionTips: [
+                    "Avoid allowing your pet to contact wildlife such as foxes, coyotes, or unknown stray animals — a common source of sarcoptic mange.",
+                    "Schedule routine wellness exams with your veterinarian — early-stage demodectic mange is simpler to treat before it becomes generalized.",
+                    "If sarcoptic mange is diagnosed, have all animals in the household evaluated and treated simultaneously to prevent reinfection.",
+                    "Wash and disinfect your pet\u{2019}s bedding, blankets, and grooming tools thoroughly if sarcoptic mange is diagnosed.",
+                    "Quarantine newly acquired animals before introducing them to resident pets to reduce the risk of transmitting sarcoptic mange or other parasites.",
+                    "For dogs diagnosed with generalized demodectic mange, work with your veterinarian to investigate any underlying condition that may be suppressing immunity.",
+                    "Perform regular skin checks during grooming — especially on the ears, elbows, hocks, and belly — to notice early changes that may warrant veterinary attention.",
+                    "If you develop an itchy rash after handling a pet diagnosed with sarcoptic mange, consult your own physician."
+                ],
+                sources: [
+                    "https://www.merckvetmanual.com/integumentary-system/mange/mange-in-dogs-and-cats",
+                    "https://vcahospitals.com/know-your-pet/mange-in-dogs",
+                    "https://vcahospitals.com/know-your-pet/mange-in-cats",
+                    "https://www.vet.cornell.edu/departments-centers-and-institutes/cornell-feline-health-center/health-information/feline-health-topics/mange",
+                    "https://www.aspca.org/pet-care/general-pet-care/parasites",
+                    "https://lafeber.com/vet/demodex-and-sarcoptic-mange-in-small-mammals/"
+                ],
+                relatedEntries: ["1D000001-0000-0000-0000-000000000022"]
             ),
         ]
     }

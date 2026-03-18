@@ -3,9 +3,9 @@
 Complete list of all entries with UUIDs, severity, and categories.
 
 - Toxin/informational entries in `DatabaseService.swift`: 186
-- Disease/condition entries in `DiseasesConditionsService.swift`: 25 (Pro-locked)
+- Disease/condition entries in `DiseasesConditionsService.swift`: 26 (Pro-locked)
 - Severity explainer: 1
-- **Total entries: 212**
+- **Total entries: 213**
 
 *Last updated: 2026-03-17 (Session 153)*
 
@@ -21,7 +21,7 @@ Complete list of all entries with UUIDs, severity, and categories.
 | Low/Moderate | 4 |
 | Low | 17 |
 | nil (Informational) | 26 |
-| **Total** | **212** |
+| **Total** | **213** |
 
 | Category | Count |
 |----------|-------|
@@ -35,7 +35,7 @@ Complete list of all entries with UUIDs, severity, and categories.
 | Holiday Hazards | 11 |
 | Cleaning Products | 9 |
 | Recreational Substances | 8 |
-| Diseases & Conditions | 25 |
+| Diseases & Conditions | 26 |
 
 *Counts exceed total because entries can be cross-listed in multiple categories.*
 
@@ -353,6 +353,7 @@ Complete list of all entries with UUIDs, severity, and categories.
 | GI Parasites | `1D000001-0000-0000-0000-000000000023` | nil | Dogs, Cats, Small Mammals, Birds, Reptiles |
 | Toxoplasma | `1D000001-0000-0000-0000-000000000024` | nil | Dogs, Cats, Small Mammals, Birds |
 | Heartworms | `1D000001-0000-0000-0000-000000000025` | nil | Dogs, Cats, Small Mammals |
+| Mange (Sarcoptic & Demodectic) | `1D000001-0000-0000-0000-000000000026` | nil | Dogs, Cats, Small Mammals |
 
 ### Special Entry
 
@@ -362,7 +363,7 @@ Complete list of all entries with UUIDs, severity, and categories.
 
 ---
 
-## Alphabetical Index (All 212 Entries)
+## Alphabetical Index (All 213 Entries)
 
 | Name | UUID | Severity | Categories |
 |------|------|----------|------------|
@@ -488,6 +489,7 @@ Complete list of all entries with UUIDs, severity, and categories.
 | Lupine | `71347450-35e9-4be4-b472-eedc6b9cef7a` | High | Plants |
 | Macadamia Nuts | `df7f2d18-6f6c-40c8-9f77-cdfbc815e946` | Moderate | Foods |
 | Magnets | `e1f2a3b4-5c6d-7e8f-9a0b-1c2d3e4f5a6b` | nil | Household Items, Informational |
+| Mange (Sarcoptic & Demodectic) | `1D000001-0000-0000-0000-000000000026` | nil | Diseases & Conditions |
 | MDMA (Ecstasy, Molly) | `ff001122-3344-5566-7788-99aabbccdd03` | Severe | Recreational Substances |
 | MDR1 Gene Mutation (Multi-Drug Sensitivity) | `00112233-4455-6677-8899-aabbccddef18` | nil | Informational |
 | Metabolic Bone Disease (MBD) | `1D000001-0000-0000-0000-000000000005` | High | Diseases & Conditions |
