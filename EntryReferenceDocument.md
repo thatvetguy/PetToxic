@@ -3,9 +3,9 @@
 Complete list of all entries with UUIDs, severity, and categories.
 
 - Toxin/informational entries in `DatabaseService.swift`: 186
-- Disease/condition entries in `DiseasesConditionsService.swift`: 24 (Pro-locked)
+- Disease/condition entries in `DiseasesConditionsService.swift`: 25 (Pro-locked)
 - Severity explainer: 1
-- **Total entries: 211**
+- **Total entries: 212**
 
 *Last updated: 2026-03-17 (Session 153)*
 
@@ -21,7 +21,7 @@ Complete list of all entries with UUIDs, severity, and categories.
 | Low/Moderate | 4 |
 | Low | 17 |
 | nil (Informational) | 26 |
-| **Total** | **211** |
+| **Total** | **212** |
 
 | Category | Count |
 |----------|-------|
@@ -35,7 +35,7 @@ Complete list of all entries with UUIDs, severity, and categories.
 | Holiday Hazards | 11 |
 | Cleaning Products | 9 |
 | Recreational Substances | 8 |
-| Diseases & Conditions | 24 |
+| Diseases & Conditions | 25 |
 
 *Counts exceed total because entries can be cross-listed in multiple categories.*
 
@@ -352,6 +352,7 @@ Complete list of all entries with UUIDs, severity, and categories.
 | Tick-Borne Diseases | `1D000001-0000-0000-0000-000000000022` | nil | Dogs, Cats, Small Mammals |
 | GI Parasites | `1D000001-0000-0000-0000-000000000023` | nil | Dogs, Cats, Small Mammals, Birds, Reptiles |
 | Toxoplasma | `1D000001-0000-0000-0000-000000000024` | nil | Dogs, Cats, Small Mammals, Birds |
+| Heartworms | `1D000001-0000-0000-0000-000000000025` | nil | Dogs, Cats, Small Mammals |
 
 ### Special Entry
 
@@ -361,7 +362,7 @@ Complete list of all entries with UUIDs, severity, and categories.
 
 ---
 
-## Alphabetical Index (All 211 Entries)
+## Alphabetical Index (All 212 Entries)
 
 | Name | UUID | Severity | Categories |
 |------|------|----------|------------|
@@ -457,6 +458,7 @@ Complete list of all entries with UUIDs, severity, and categories.
 | Golden Chain Tree | `e4b28653-d4b2-42a0-ac67-f22e53fc1673` | High | Plants |
 | Grapes & Raisins | `d1bde5cd-6881-4765-ac4c-b9f43b40da70` | Severe | Foods |
 | Heart & Blood Pressure Medications | `22990011-aabb-ccdd-eeff-223344556677` | Severe | Medications |
+| Heartworms | `1D000001-0000-0000-0000-000000000025` | nil | Diseases & Conditions |
 | Heat Stroke & Hot Surfaces | `00112233-4455-6677-8899-aabbccddef26` | nil | Informational, Outdoor Hazards |
 | Heavy Metal Toxicosis (Lead, Zinc, Copper & Others) | `00112233-4455-6677-8899-aabbccddef23` | nil | Informational, Household Items, Garage & Garden |
 | Hemlock (Poison Hemlock & Water Hemlock) | `00112233-4455-6677-8899-aabbccddef16` | Severe | Plants |

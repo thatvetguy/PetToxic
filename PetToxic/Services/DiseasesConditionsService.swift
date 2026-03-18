@@ -5118,6 +5118,254 @@ class DiseasesConditionsService {
                     "1D000001-0000-0000-0000-000000000023"  // GI Parasites
                 ]
             ),
+
+            // MARK: - Heartworms
+            ToxicItem(
+                id: UUID(uuidString: "1D000001-0000-0000-0000-000000000025")!,
+                name: "Heartworms",
+                alternateNames: [
+                    "heartworm disease",
+                    "heartworm infection",
+                    "Dirofilaria immitis",
+                    "dirofilariasis",
+                    "heartworm positive",
+                    "HW positive",
+                    "heartworm prevention",
+                    "heartworm treatment",
+                    "microfilaria",
+                    "microfilariae",
+                    "HARD",
+                    "heartworm associated respiratory disease",
+                    "caval syndrome",
+                    "dog heartworm",
+                    "cat heartworm",
+                    "ferret heartworm",
+                    "mosquito parasite dog",
+                    "worms in heart",
+                    "Wolbachia",
+                    "doxycycline heartworm"
+                ],
+                categories: [.diseasesAndConditions],
+                imageAsset: "heartworms_thumb",
+                description: """
+                Heartworm disease is caused by Dirofilaria immitis, a parasitic \
+                roundworm transmitted exclusively through the bite of infected \
+                mosquitoes. Adult worms take up residence in the heart and pulmonary \
+                arteries — the major blood vessels leading from the heart to the lungs \
+                — where they cause progressive, potentially fatal damage.
+
+                Dogs are the natural definitive host, meaning worms mature, mate, and \
+                reproduce in dogs, completing their lifecycle. Cats are an atypical \
+                host — most worms die before reaching adulthood, but even a single \
+                surviving worm causes serious disease. Heartworm disease is preventable \
+                with medication but is difficult and expensive to treat once established \
+                in dogs, and has no approved adulticide treatment at all in cats. \
+                Prevention is the cornerstone of management for every species.
+                """,
+                toxicityInfo: """
+                **How It Harms the Body**
+
+                Heartworm transmission begins when a mosquito takes a blood meal from \
+                an infected animal, ingesting immature larvae called microfilariae. \
+                These develop inside the mosquito over 10–14 days into infective \
+                larvae (L3 stage), which are then deposited on the skin of the next \
+                animal the mosquito bites. The larvae migrate through the tissues, \
+                developing through additional stages before reaching the heart and \
+                pulmonary arteries — a process that takes approximately 6 months in dogs.
+
+                Adult worms (which can reach 12 inches in length) living in the \
+                pulmonary arteries trigger chronic inflammation of the vessel walls, \
+                causing them to thicken and scar. Blood flow is progressively \
+                obstructed. The right side of the heart — which pumps blood to the \
+                lungs — must work harder against this resistance, eventually leading \
+                to right-sided heart failure. Worm death, whether spontaneous or from \
+                treatment, releases proteins that cause acute inflammatory reactions \
+                and can trigger life-threatening pulmonary embolism (blockage of blood \
+                vessels by worm fragments).
+
+                **The Worm Within the Worm**
+
+                Inside every Dirofilaria immitis worm lives a bacterium called \
+                Wolbachia — an intracellular endosymbiont so deeply integrated into \
+                the worm\u{2019}s biology that the worm cannot survive without it. This \
+                relationship has a profound clinical consequence: when heartworms die \
+                — whether from treatment or naturally — they release a flood of \
+                Wolbachia proteins that trigger a severe inflammatory response in the \
+                host\u{2019}s tissues. Much of the acute lung damage seen during heartworm \
+                treatment, and the respiratory crises seen in cats when worms die \
+                spontaneously, is now understood to be driven not just by the worm \
+                itself but by this bacterial release.
+
+                This is why doxycycline — an antibiotic — is now a standard part of \
+                canine heartworm treatment protocols, given weeks before the adulticide \
+                injections begin. The doxycycline depletes Wolbachia populations in \
+                advance, blunting the inflammatory cascade when worms eventually die. \
+                It is a striking example of treating a parasitic infection with an \
+                antibiotic — targeting the bacterium inside the worm, rather than the \
+                worm itself.
+
+                **It Only Takes One**
+
+                It takes a single bite from a single infected mosquito to transmit \
+                heartworm larvae. There is no threshold of exposure, no repeated \
+                contact required. One bite during one brief encounter with one mosquito \
+                is sufficient — and six months later, adult worms may be present in \
+                the pulmonary arteries. This is why year-round prevention, without \
+                gaps, is the only reliable protection.
+
+                **Dogs and Heartworms: The Full Lifecycle**
+
+                Dogs are the definitive host for Dirofilaria immitis. Without \
+                prevention, infection is highly likely in endemic areas. Adult worms \
+                can survive 5–7 years in a dog, and a single dog can harbor hundreds \
+                of worms in a heavy infection.
+
+                Early infection is typically asymptomatic — which is why annual \
+                testing is essential, since owners have no way to detect infection \
+                without a blood test. As disease progresses, dogs develop exercise \
+                intolerance, a soft persistent cough, fatigue, and weight loss. \
+                Advanced disease can include caval syndrome — a life-threatening \
+                emergency in which a massive worm burden obstructs blood flow through \
+                the heart\u{2019}s valves, causing sudden cardiovascular collapse. Caval \
+                syndrome requires emergency surgical worm extraction, not standard \
+                treatment protocol.
+
+                **The Exercise Paradox**
+
+                During heartworm treatment, the thing most owners associate with a \
+                healthy, happy dog — running, play, exercise — becomes genuinely \
+                dangerous. Physical activity increases blood flow through the lungs \
+                and raises the risk of pulmonary embolism as dying worm fragments \
+                travel through the vessels. Dogs undergoing treatment must be strictly \
+                cage-rested for weeks to months — often the hardest part of the \
+                treatment process for both the dog and the owner. A dog that appears \
+                to be feeling better partway through treatment is still at serious \
+                risk if exercise restrictions are lifted too early.
+
+                **Cats and Heartworms: A Different and Serious Disease**
+
+                Cats are an atypical host for Dirofilaria immitis. The cat\u{2019}s immune \
+                system is far more effective at killing larvae than a dog\u{2019}s, and most \
+                larvae die before reaching adulthood. Cats typically harbor only 1–3 \
+                adult worms rather than the dozens possible in dogs.
+
+                This might sound reassuring — it is not. When larvae die in the \
+                pulmonary arteries, they trigger a severe inflammatory response driven \
+                in part by Wolbachia release. This is Heartworm Associated Respiratory \
+                Disease (HARD) — a syndrome that closely mimics feline asthma or \
+                bronchitis and is frequently misdiagnosed and treated incorrectly as \
+                a result. When adult worms die in cats, the acute inflammatory response \
+                can cause respiratory collapse and sudden death with no preceding \
+                warning signs.
+
+                There is no approved adulticide treatment for heartworms in cats. \
+                Management is supportive only — corticosteroids to reduce inflammation, \
+                monitoring, and waiting for worms to die naturally over 2–3 years. \
+                Throughout this period the cat remains at risk of sudden fatal \
+                decompensation. Prevention is the only reliable protection.
+
+                **Ferrets: Small Body, High Stakes**
+
+                Ferrets are susceptible to heartworm disease and, like cats, are an \
+                atypical host. Just one or two adult worms can be fatal given their \
+                small heart size. Clinical signs — coughing, lethargy, respiratory \
+                distress — can develop rapidly. Prevention using a \
+                veterinarian-recommended product is essential for ferrets in endemic \
+                areas.
+
+                **Myths vs. Facts**
+
+                **Myth: "My cat lives indoors — she can\u{2019}t get heartworms."**
+                Fact: Studies suggest up to 25% of heartworm-positive cats are \
+                classified as exclusively indoor. Mosquitoes enter homes routinely. \
+                Indoor cats are at lower risk than outdoor cats, but they are not \
+                protected without prevention medication.
+
+                **Myth: "Heartworm prevention kills the worms my dog already has."**
+                Fact: Monthly preventives eliminate larvae acquired in the previous \
+                30 days. They have no effect on established adult worms — which is \
+                exactly why testing before starting or restarting prevention is \
+                essential. Administering certain preventives to a microfilaria-positive \
+                dog can trigger a severe anaphylactic reaction.
+
+                **Myth: "Heartworm is a Southern problem."**
+                Fact: Heartworm has been diagnosed in all 50 US states. The range \
+                continues to expand as climate shifts extend mosquito seasons. \
+                Veterinarians in historically low-risk regions are seeing increasing \
+                case numbers.
+
+                **Myth: "My dog seems fine, so he probably doesn\u{2019}t have heartworms."**
+                Fact: Early and even moderate heartworm infection is frequently \
+                completely asymptomatic. By the time clinical signs appear, significant \
+                and potentially irreversible pulmonary damage has often already \
+                occurred. The only way to know is an annual blood test.
+                """,
+                toxicityInfoSectionTitle: "What makes it harmful?",
+                onsetTime: OnsetTime(
+                    early: "No signs are detectable in early infection — dogs are typically asymptomatic for months to years after initial infection. In cats, acute larval death can cause sudden respiratory distress (HARD) with no preceding warning signs. Ferrets may deteriorate rapidly due to their small body size.",
+                    delayed: "Clinical signs in dogs develop progressively over months to years as worm burden increases and pulmonary damage accumulates. Cats with adult worms face ongoing risk of sudden acute decompensation throughout the 2–3 year natural lifespan of the worms."
+                ),
+                symptoms: [
+                    "Persistent soft cough",
+                    "Exercise intolerance and fatigue",
+                    "Reduced appetite and weight loss",
+                    "Difficulty breathing or rapid breathing",
+                    "Pot-bellied appearance (fluid accumulation from right-sided heart failure)",
+                    "Pale or bluish gums (sign of poor oxygenation)",
+                    "Fainting or collapse",
+                    "Sudden death (particularly in cats and ferrets)",
+                    "Coughing up blood (advanced disease)",
+                    "Asthma-like wheezing or open-mouth breathing (cats — HARD presentation)",
+                    "Many infected dogs show no signs until disease is advanced"
+                ],
+                entrySeverity: nil,
+                speciesRisks: [
+                    SpeciesRisk(
+                        species: .dog,
+                        severity: .severe,
+                        notes: "Dogs are the definitive host. Without prevention, infection is highly likely in endemic areas. Adult worms cause progressive, irreversible damage to the pulmonary arteries and heart. Treatment is a prolonged, expensive, and risky process requiring strict exercise restriction for months. Advanced disease can cause caval syndrome — sudden cardiovascular collapse requiring emergency surgery. Annual testing and year-round prevention are essential."
+                    ),
+                    SpeciesRisk(
+                        species: .cat,
+                        severity: .high,
+                        notes: "Cats are less frequently infected than dogs, but when infection does occur it can be severe or fatal — even 1–2 worms can be lethal. There is no approved adulticide treatment for cats; management is supportive only. Heartworm Associated Respiratory Disease (HARD) closely mimics feline asthma and is frequently misdiagnosed. Sudden death can occur with no preceding signs. Indoor cats are not fully protected — mosquitoes enter homes. Prevention is critical in endemic areas."
+                    ),
+                    SpeciesRisk(
+                        species: .smallMammal,
+                        severity: .high,
+                        notes: "Ferrets are the primary concern among small mammals and are genuinely susceptible to heartworm disease. Due to their small heart size, even 1–2 adult worms can be rapidly fatal. Clinical signs include coughing, lethargy, and respiratory distress. Year-round prevention with a veterinarian-recommended product is essential for ferrets in endemic areas. Heartworm disease is not a significant concern in rabbits, guinea pigs, or other common small pets."
+                    ),
+                    SpeciesRisk(
+                        species: .bird,
+                        severity: .low,
+                        notes: "Birds are not a meaningful host for Dirofilaria immitis. Heartworm disease is not a clinical concern in pet birds."
+                    ),
+                    SpeciesRisk(
+                        species: .reptile,
+                        severity: .low,
+                        notes: "Reptiles are not a meaningful host for Dirofilaria immitis. Heartworm disease is not a clinical concern in pet reptiles."
+                    )
+                ],
+                preventionTips: [
+                    "Use veterinarian-prescribed heartworm prevention year-round — monthly oral, topical, or injectable options are available for dogs, cats, and ferrets",
+                    "Test dogs annually for heartworm infection — prevention must not be started or restarted without a current negative test result",
+                    "Do not assume indoor cats are safe — mosquitoes enter homes and indoor cats do develop heartworm disease",
+                    "Never skip or delay prevention doses — a single missed dose creates a window of vulnerability that cannot be reversed",
+                    "If a dose is missed, resume prevention immediately and consult your veterinarian about whether a retest is recommended",
+                    "Reduce mosquito exposure where possible — eliminate standing water around the home",
+                    "Ferrets in heartworm-endemic areas require year-round prevention — consult a veterinarian experienced with exotic species",
+                    "Follow American Heartworm Society guidelines for testing frequency and prevention protocols in your region"
+                ],
+                sources: [
+                    "American Heartworm Society — Current Canine Guidelines: https://www.heartwormsociety.org/veterinary-resources/american-heartworm-society-guidelines",
+                    "American Heartworm Society — Current Feline Guidelines: https://www.heartwormsociety.org/veterinary-resources/feline-guidelines",
+                    "Merck Veterinary Manual — Heartworm Disease: https://www.merckvetmanual.com/circulatory-system/heartworm-disease/heartworm-disease-in-dogs-and-cats",
+                    "Cornell University College of Veterinary Medicine — Heartworm in Cats: https://www.vet.cornell.edu/departments-centers-and-institutes/cornell-feline-health-center/health-information/feline-health-topics/heartworm-in-cats",
+                    "AVMA — Heartworm Disease: https://www.avma.org/resources-tools/pet-owners/petcare/heartworm-disease",
+                    "UC Davis School of Veterinary Medicine — Heartworm Disease in Ferrets: https://www.vetmed.ucdavis.edu/hospital/small-animal/services/zoological-companion-animal-medicine/ferret-health"
+                ],
+                relatedEntries: nil
+            ),
         ]
     }
 }
