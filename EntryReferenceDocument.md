@@ -2,12 +2,12 @@
 
 Complete list of all entries with UUIDs, severity, and categories.
 
-- Toxin/informational entries in `DatabaseService.swift`: 188
-- Disease/condition entries in `DiseasesConditionsService.swift`: 30 (Pro-locked)
-- Severity explainer: 1
-- **Total entries: 219**
+- Toxin/informational entries in `DatabaseService.swift`: 198
+- Disease/condition entries in `DiseasesConditionsService.swift`: 49 (Pro-locked)
+- Severity explainer: 1 (included in DatabaseService count)
+- **Total entries: 247**
 
-*Last updated: 2026-03-18 (Session 162)*
+*Last updated: 2026-03-19 (Session 162)*
 
 ---
 
@@ -15,27 +15,27 @@ Complete list of all entries with UUIDs, severity, and categories.
 
 | Severity | Count |
 |----------|-------|
-| Severe | 72 |
-| High | 49 |
-| Moderate | 34 |
+| Severe | 68 |
+| High | 47 |
+| Moderate | 36 |
 | Low/Moderate | 4 |
-| Low | 18 |
-| nil (Informational) | 42 |
-| **Total** | **235** |
+| Low | 20 |
+| nil (Informational) | 72 |
+| **Total** | **247** |
 
 | Category | Count |
 |----------|-------|
-| Plants | 72 |
+| Plants | 77 |
+| Diseases & Conditions | 49 |
 | Medications | 27 |
 | Garage & Garden | 26 |
+| Informational | 23 |
 | Foods | 22 |
-| Informational | 20 |
-| Household Items | 19 |
-| Outdoor Hazards | 18 |
-| Holiday Hazards | 11 |
-| Cleaning Products | 9 |
+| Household Items | 20 |
+| Outdoor Hazards | 20 |
+| Holiday Hazards | 15 |
+| Cleaning Products | 10 |
 | Recreational Substances | 8 |
-| Diseases & Conditions | 46 |
 
 *Counts exceed total because entries can be cross-listed in multiple categories.*
 
@@ -375,6 +375,10 @@ Complete list of all entries with UUIDs, severity, and categories.
 | Reptile Husbandry Guide | `1D000001-0000-0000-0000-000000000043` | nil | Reptiles |
 | Bird Husbandry Guide | `1D000001-0000-0000-0000-000000000044` | nil | Birds |
 | Small Mammal Husbandry Guide | `1D000001-0000-0000-0000-000000000045` | nil | Small Mammals |
+| Feline Calicivirus (FCV) | `1D000001-0000-0000-0000-000000000046` | nil | Cats |
+| Myiasis (Fly Strike) | `1D000001-0000-0000-0000-000000000047` | nil | Dogs, Cats, Small Mammals, Birds |
+| Cheyletiellosis (Walking Dandruff) | `1D000001-0000-0000-0000-000000000048` | nil | Dogs, Cats, Small Mammals |
+| Pasteurellosis (Snuffles) | `1D000001-0000-0000-0000-000000000049` | nil | Small Mammals, Cats, Dogs |
 
 ### Special Entry
 
