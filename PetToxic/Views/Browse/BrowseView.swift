@@ -432,6 +432,13 @@ struct CategoryListView: View {
                         speciesFilterChips
                     }
 
+                    // Plant ID banner for Plants category
+                    if category == .plants {
+                        PlantIDBannerCard()
+                            .padding(.horizontal, 16)
+                            .padding(.vertical, 8)
+                    }
+
                     if isGridView {
                         LazyVGrid(columns: columns, spacing: 8) {
                             ForEach(filteredItems) { item in

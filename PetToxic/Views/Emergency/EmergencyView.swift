@@ -16,6 +16,9 @@ struct EmergencyView: View {
                         // Global emergency vet
                         emergencyVetSection
 
+                        // Plant/mushroom ID help
+                        PlantIDBannerCard()
+
                         // Header
                         VStack(alignment: .leading, spacing: 8) {
                             Text("Contact Poison Control")

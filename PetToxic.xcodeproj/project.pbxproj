@@ -100,6 +100,7 @@
 		SHCARD001AAAA1111111111 /* ShareCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = SHCARD002AAAA2222222222 /* ShareCardView.swift */; };
 		TRIAL001BBBB1111111111 /* TrialManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = TRIAL001AAAA1111111111 /* TrialManager.swift */; };
 		TRIALBV01BBBB1111111111 /* TrialBannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = TRIALBV01AAAA1111111111 /* TrialBannerView.swift */; };
+		PLTIDB001AAAA1111111111 /* PlantIDBannerCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = PLTIDB002AAAA2222222222 /* PlantIDBannerCard.swift */; };
 		VACCLOGVW01AAAA1111111 /* VaccinationLogView.swift in Sources */ = {isa = PBXBuildFile; fileRef = VACCLOGVW02AAAA2222222 /* VaccinationLogView.swift */; };
 		VACCPRESET01AAAA111111 /* VaccinePresets.swift in Sources */ = {isa = PBXBuildFile; fileRef = VACCPRESET02AAAA222222 /* VaccinePresets.swift */; };
 		VACCRECORD01AAAA111111 /* VaccinationRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = VACCRECORD02AAAA222222 /* VaccinationRecord.swift */; };
@@ -222,6 +223,7 @@
 		SHCARD002AAAA2222222222 /* ShareCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareCardView.swift; sourceTree = "<group>"; };
 		TRIAL001AAAA1111111111 /* TrialManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrialManager.swift; sourceTree = "<group>"; };
 		TRIALBV01AAAA1111111111 /* TrialBannerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrialBannerView.swift; sourceTree = "<group>"; };
+		PLTIDB002AAAA2222222222 /* PlantIDBannerCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantIDBannerCard.swift; sourceTree = "<group>"; };
 		VACCLOGVW02AAAA2222222 /* VaccinationLogView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VaccinationLogView.swift; sourceTree = "<group>"; };
 		VACCPRESET02AAAA222222 /* VaccinePresets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VaccinePresets.swift; sourceTree = "<group>"; };
 		VACCRECORD02AAAA222222 /* VaccinationRecord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VaccinationRecord.swift; sourceTree = "<group>"; };
@@ -312,6 +314,7 @@
 				GLOSSDROP02AAA222222222 /* GlossaryDropdownView.swift */,
 				GLOSSSTYL02AAA222222222 /* GlossaryStyledText.swift */,
 				GLOSSLINK02BBB222222222 /* GlossaryEntryLink.swift */,
+				PLTIDB002AAAA2222222222 /* PlantIDBannerCard.swift */,
 				TRIALBV01AAAA1111111111 /* TrialBannerView.swift */,
 				VACCSUMCD02AAAA2222222 /* VaccinationSummaryCard.swift */,
 			);
@@ -706,6 +709,7 @@
 				GLOSSCARD01AAA111111111 /* GlossaryCard.swift in Sources */,
 				TRIAL001BBBB1111111111 /* TrialManager.swift in Sources */,
 				TRIALBV01BBBB1111111111 /* TrialBannerView.swift in Sources */,
+				PLTIDB001AAAA1111111111 /* PlantIDBannerCard.swift in Sources */,
 				GLOSSDROP01AAA111111111 /* GlossaryDropdownView.swift in Sources */,
 				GLOSSSTYL01AAA111111111 /* GlossaryStyledText.swift in Sources */,
 				GLOSSLINK01BBB111111111 /* GlossaryEntryLink.swift in Sources */,
