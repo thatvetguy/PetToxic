@@ -38,6 +38,11 @@ Native iOS reference app for pet owners to quickly look up toxicity information.
 - **ScrollView competes with `.simultaneousGesture(DragGesture)`.** Even with `.simultaneousGesture`, a vertical `ScrollView` can prevent `onChanged` from reliably setting state (the horizontality guard fails due to gesture interference). For swipes over ScrollView content, check the **final** `value.translation` in `onEnded` rather than relying on intermediate `onChanged` state. See the `isDragging` bypass for contextual swipes in `MainTabView`.
 - **Contextual swipes need different thresholds.** Swipes with visual drag feedback (tab switching) use 20% screen-width / velocity 200. Swipes without visual feedback (entry/category flicks) need lighter thresholds (10% / velocity 100) to feel responsive. Both use the same `DragGesture`; thresholds are selected based on `browseNavigationPath.count`.
 
+### UUID Generation for Entries
+
+- **UUIDs must contain only valid hexadecimal characters (0-9, a-f).** When generating UUIDs for new `ToxicItem` or disease entries, never embed entry names or descriptive text into UUID segments. Letters g-z are not valid hex and will cause `UUID(uuidString:)` to return `nil`, crashing the app on the force-unwrap `!`. Use random hex or structured hex patterns (e.g., `a1b2c3d4-0000-0000-0000-000c1ad00501`), not mnemonics like `gymnocladus01` or `eranthis00001`.
+- **Always validate generated UUIDs** by confirming every character in each segment is 0-9 or a-f before committing.
+
 ### SF Symbol Compatibility
 
 - **App targets iOS 17.6+.** Before using any SF Symbol, verify it exists in iOS 17. Newer symbols will cause runtime crashes on older devices.
@@ -83,12 +88,13 @@ Dynamic Type, VoiceOver, high contrast, 44pt minimum touch targets.
 |----------|---------|
 | `PetToxic_Database_Audit_Rules.md` | Full audit rules: sources, content policies, species, severity, categories, fields, cross-references |
 | `PetToxic_Database_Audit_Rules_ClaudeCode.md` | Condensed checklist for batch editing sessions |
-| `EntryReferenceDocument.md` | Complete list of all 201 entries with UUIDs, severity, and categories |
+| `EntryReferenceDocument.md` | Complete list of all entries with UUIDs, severity, and categories |
 | `Documentation/DataModels.md` | Data model specifications |
 | `Documentation/Design/UI-Spec.md` | UI specifications |
 | `Documentation/Design/StyleGuide.md` | Visual design guidelines |
 | `PetToxic_DiseasesConditions_EntryTemplate.md` | Content & format template for Diseases & Conditions entries: 3 entry types (Infectious / Husbandry / Medical-Metabolic), field protocols, tone guidance, prohibited content, approved language |
 | `ClaudeWeb_DiseaseEntryFormat.md` | Quick-reference for Claude Web: correct ToxicItem field order, category enum, Contents.json format, commit style |
+| `Documentation/EmergencyVet_And_Tracking_Reference.md` | Porting guide for Emergency Vet + Call Tracking features (Equine Edition) |
 
 **For entry editing sessions:** Read `PetToxic_Database_Audit_Rules_ClaudeCode.md` for quick rules or `PetToxic_Database_Audit_Rules.md` for full details. Use `EntryReferenceDocument.md` to look up UUIDs and verify cross-references.
 
@@ -148,7 +154,8 @@ PetToxic/
 │   │   ├── DisclaimerView.swift       # Legal disclaimer banner
 │   │   ├── EmptyStateView.swift
 │   │   ├── LoadingView.swift
-│   │   ├── PoisonControlButton.swift  # Emergency call buttons
+│   │   ├── EmergencyVetButton.swift   # Global emergency vet card (Pro)
+│   │   ├── PoisonControlButton.swift  # Emergency call buttons + tracking
 │   │   ├── RelatedEntryButton.swift
 │   │   ├── SeverityBadge.swift        # Toxicity level indicator
 │   │   ├── TrialBannerView.swift      # 30-day trial banner (4 states)
@@ -167,8 +174,10 @@ PetToxic/
 │   ├── Services/
 │   │   ├── AppearanceSettings.swift   # Dark/light mode (default: dark)
 │   │   ├── BookmarkService.swift      # Save favorites
+│   │   ├── CallTrackingService.swift  # Anonymous event tracking (Cloudflare Worker)
 │   │   ├── DatabaseService.swift      # Toxin data (hardcoded, SQLite planned)
 │   │   ├── DiseasesConditionsService.swift # Pro-locked disease/condition entries
+│   │   ├── EmergencyVetSettings.swift # Global emergency vet (UserDefaults singleton)
 │   │   ├── SearchService.swift        # FTS5 search
 │   │   ├── TrialManager.swift         # 30-day Pro trial (Keychain-backed)
 │   │   └── VaccinePresets.swift       # Species-keyed vaccine presets & status enum
@@ -192,7 +201,7 @@ PetToxic/
 │       │   ├── CategoryGridItem.swift
 │       │   └── DiseasesConditionsListView.swift # Pro-locked species-grouped disease list
 │       ├── Emergency/
-│       │   └── EmergencyView.swift    # Poison control contacts
+│       │   └── EmergencyView.swift    # Poison control + emergency vet contacts
 │       ├── Saved/
 │       │   ├── BookmarksListView.swift
 │       │   ├── HistoryListView.swift
@@ -207,14 +216,18 @@ PetToxic/
 │       │   ├── SearchView.swift
 │       │   └── SpeciesFilterView.swift
 │       └── Settings/
+│           ├── EmergencyVetFormView.swift # Emergency vet contact form (Pro)
 │           └── SettingsView.swift     # Appearance toggle
 ├── PetToxicTests/
 │   └── PetToxicTests.swift
 ├── PetToxicUITests/
 │   └── PetToxicUITests.swift
+├── CloudflareWorker/
+│   └── worker.js                      # Anonymous event tracking worker
 ├── Documentation/
 │   ├── DataModels.md
 │   ├── DesignDocument.md
+│   ├── EmergencyVet_And_Tracking_Reference.md  # Porting guide for Equine Edition
 │   └── Design/
 │       ├── StyleGuide.md
 │       └── UI-Spec.md
@@ -240,6 +253,9 @@ PetToxic/
 | Change default appearance | `Services/AppearanceSettings.swift` |
 | Add new tab | `Views/MainTabView.swift` |
 | Emergency contacts | `Components/PoisonControlButton.swift` |
+| Emergency vet (global) | `Services/EmergencyVetSettings.swift`, `Components/EmergencyVetButton.swift`, `Views/Settings/EmergencyVetFormView.swift` |
+| Anonymous event tracking | `Services/CallTrackingService.swift`, `CloudflareWorker/worker.js` |
+| Phone number formatting | `Utilities/Constants.swift` (`PhoneFormatter`) |
 | Trial/Pro gating logic | `Services/TrialManager.swift`, `Services/ProSettings.swift` |
 | Trial banner on home | `Components/TrialBannerView.swift` |
 | Vaccination records/log | `Views/MyPets/VaccinationLogView.swift` |
@@ -267,4 +283,4 @@ Handoff files: `Handoff_SessionXX_to_SessionYY.md`
 
 ---
 
-*Last Updated: March 2026 (Session 161)*
+*Last Updated: March 2026 (Session 162)*

@@ -45,3 +45,34 @@ enum AppCornerRadius {
     static let medium: CGFloat = 12
     static let large: CGFloat = 16
 }
+
+enum PhoneFormatter {
+    /// Formats a US phone number string as (XXX) XXX-XXXX while typing.
+    /// Passes through non-US numbers (11+ digits or numbers starting with +) unchanged.
+    static func format(_ value: String) -> String {
+        let digits = value.filter { $0.isNumber }
+
+        // If it starts with + or has more than 10 digits, leave as-is (international)
+        if value.hasPrefix("+") || digits.count > 10 {
+            return value
+        }
+
+        switch digits.count {
+        case 0:
+            return ""
+        case 1...3:
+            return "(\(digits)"
+        case 4...6:
+            let area = digits.prefix(3)
+            let mid = digits.dropFirst(3)
+            return "(\(area)) \(mid)"
+        case 7...10:
+            let area = digits.prefix(3)
+            let mid = digits.dropFirst(3).prefix(3)
+            let last = digits.dropFirst(6)
+            return "(\(area)) \(mid)-\(last)"
+        default:
+            return value
+        }
+    }
+}

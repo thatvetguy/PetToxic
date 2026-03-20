@@ -66,6 +66,8 @@ class SearchViewModel: ObservableObject {
             .store(in: &cancellables)
     }
 
+    private var lastMissReported: String?
+
     private func performSearch(query: String) async {
         guard !query.isEmpty else {
             searchResults = []
@@ -81,6 +83,12 @@ class SearchViewModel: ObservableObject {
             species: selectedSpecies.isEmpty ? nil : Array(selectedSpecies)
         )
         searchResults = results
+
+        // Track search misses (only once per unique term, min 3 chars to avoid noise)
+        if results.isEmpty && query.count >= 3 && query != lastMissReported {
+            lastMissReported = query
+            AppTrackingService.recordSearchMiss(term: query)
+        }
 
         isSearching = false
     }

@@ -2,12 +2,12 @@
 
 Complete list of all entries with UUIDs, severity, and categories.
 
-- Toxin/informational entries in `DatabaseService.swift`: 186
+- Toxin/informational entries in `DatabaseService.swift`: 188
 - Disease/condition entries in `DiseasesConditionsService.swift`: 30 (Pro-locked)
 - Severity explainer: 1
-- **Total entries: 217**
+- **Total entries: 219**
 
-*Last updated: 2026-03-17 (Session 153)*
+*Last updated: 2026-03-18 (Session 162)*
 
 ---
 
@@ -17,15 +17,15 @@ Complete list of all entries with UUIDs, severity, and categories.
 |----------|-------|
 | Severe | 72 |
 | High | 49 |
-| Moderate | 33 |
+| Moderate | 34 |
 | Low/Moderate | 4 |
-| Low | 17 |
+| Low | 18 |
 | nil (Informational) | 42 |
-| **Total** | **233** |
+| **Total** | **235** |
 
 | Category | Count |
 |----------|-------|
-| Plants | 70 |
+| Plants | 72 |
 | Medications | 27 |
 | Garage & Garden | 26 |
 | Foods | 22 |
@@ -122,6 +122,7 @@ Complete list of all entries with UUIDs, severity, and categories.
 | Cannabis / Marijuana | `e293e8ba-eefc-4fe0-bf93-9e8842873a35` | Moderate |
 | Christmas Rose & Hellebores | `165617f0-7aa5-47a2-b62c-21adb49e42ca` | Moderate |
 | English Ivy | `8ea06fcf-b35d-4049-a73f-8c94752c783d` | Moderate |
+| Kentucky Coffee Tree | `a1b2c3d4-0000-0000-0000-000c1ad00501` | Moderate |
 | Insoluble Calcium Oxalate Plants | `f52b8aba-d899-418b-8ce6-2844408a5e3c` | Moderate |
 | Lantana | `1d9f0989-6d98-4305-ac74-56f6e6e8ca0f` | Moderate |
 | Morning Glory | `a0716b51-b922-4b95-b557-a08c5ce9ed86` | Moderate |
@@ -142,6 +143,7 @@ Complete list of all entries with UUIDs, severity, and categories.
 | Snake Plant & Dracaena | `edb87d20-62af-4382-883e-5f979b4b7892` | Low |
 | Stinging Nettle | `8cd181bc-9ac5-492b-9085-aa51b6b92e44` | Low |
 | Tradescantia (Wandering Jew) | `be55d11f-23dc-4c16-a5a5-545740026b2b` | Low |
+| Winter Aconite (Eranthis) | `b1c2d3e4-0000-0000-0000-e4a0b1500001` | Low |
 | Non-Toxic Bouquet Flowers | `c4e9a2b1-7d5f-4c3a-b8e2-6f1d9a4c5b73` | nil |
 | Poison Ivy, Poison Oak & Poison Sumac | `00112233-4455-6677-8899-aabbccddef17` | nil |
 

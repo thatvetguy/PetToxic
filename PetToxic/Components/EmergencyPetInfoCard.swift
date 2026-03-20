@@ -223,6 +223,42 @@ struct EmergencyPetInfoCard: View {
                 }
             }
 
+            // Vet address - Open in Maps
+            if let vetAddress = pet.vetAddress, !vetAddress.isEmpty {
+                Button(action: {
+                    if let encoded = vetAddress.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed),
+                       let url = URL(string: "http://maps.apple.com/?q=\(encoded)") {
+                        UIApplication.shared.open(url)
+                    }
+                }) {
+                    HStack {
+                        Image(systemName: "map.fill")
+                            .foregroundColor(.blue)
+
+                        VStack(alignment: .leading, spacing: 1) {
+                            Text(pet.vetClinicName ?? "Vet Address")
+                                .font(.caption)
+                                .foregroundColor(.gray)
+                            Text(vetAddress)
+                                .font(.subheadline)
+                                .foregroundColor(.white)
+                                .lineLimit(2)
+                                .multilineTextAlignment(.leading)
+                        }
+
+                        Spacer()
+
+                        Text("Maps")
+                            .font(.subheadline)
+                            .fontWeight(.semibold)
+                            .foregroundColor(.blue)
+                    }
+                    .padding(10)
+                    .background(Color.blue.opacity(0.15))
+                    .clipShape(RoundedRectangle(cornerRadius: 8))
+                }
+            }
+
             // Poison Control Case Numbers
             caseNumbersSection(pet: pet)
         }

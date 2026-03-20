@@ -140,6 +140,7 @@ struct ArticleDetailView: View {
             ToolbarItem(placement: .topBarTrailing) {
                 HStack(spacing: 16) {
                     Button {
+                        AppTrackingService.recordShare()
                         showShareSheet = true
                     } label: {
                         Image(systemName: "square.and.arrow.up")

@@ -3969,12 +3969,12 @@ Bark and roots contain the highest concentrations of ailanthone; leaves contain 
                     "Consider removing golden chain trees from your property if you have pets, especially dogs that tend to chew on things"
                 ],
                 sources: ["Pet Poison Helpline", "ASPCA Animal Poison Control Center", "Clinical Veterinary Toxicology (Plumlee)", "Cornell University Poisonous Plants Database"],
-                relatedEntries: ["a1b2c3d4-0000-0000-0000-gymnocladus01"],  // Kentucky Coffee Tree — shared cytisine mechanism
+                relatedEntries: ["a1b2c3d4-0000-0000-0000-000c1ad00501"],  // Kentucky Coffee Tree — shared cytisine mechanism
             ),
 
             // MARK: - Kentucky Coffee Tree
             ToxicItem(
-                id: UUID(uuidString: "a1b2c3d4-0000-0000-0000-gymnocladus01")!,
+                id: UUID(uuidString: "a1b2c3d4-0000-0000-0000-000c1ad00501")!,
                 name: "Kentucky Coffee Tree",
                 alternateNames: [
                     "Gymnocladus dioicus",
@@ -4160,7 +4160,7 @@ Bark and roots contain the highest concentrations of ailanthone; leaves contain 
                     "Do not feed lupini beans (even prepared human-food varieties) to pets"
                 ],
                 sources: ["ASPCA Animal Poison Control Center", "Pet Poison Helpline", "Merck Veterinary Manual — Quinolizidine Alkaloid Toxicosis", "Tortoise Trust", "Panter KE, et al. Natural toxins of plant origin. In: Toxins and Other Harmful Compounds in Foods. RSC Publishing. 2017"],
-                relatedEntries: ["a1b2c3d4-0000-0000-0000-gymnocladus01"]  // Kentucky Coffee Tree — shared quinolizidine alkaloid class
+                relatedEntries: ["a1b2c3d4-0000-0000-0000-000c1ad00501"]  // Kentucky Coffee Tree — shared quinolizidine alkaloid class
             ),
 
             // MARK: - Christmas Rose & Hellebores
@@ -4206,7 +4206,7 @@ Bark and roots contain the highest concentrations of ailanthone; leaves contain 
                     "If your pet is attracted to chewing plants, hellebores are not a good choice for accessible garden areas"
                 ],
                 sources: ["ASPCA Animal Poison Control Center", "Pet Poison Helpline", "Cornell University Poisonous Plants Database", "Merck Veterinary Manual"],
-                relatedEntries: ["b1c2d3e4-0000-0000-0000-eranthis00001"]  // Winter Aconite — same family, protoanemonin
+                relatedEntries: ["b1c2d3e4-0000-0000-0000-e4a0b1500001"]  // Winter Aconite — same family, protoanemonin
             ),
 
             // MARK: - Bittersweet
@@ -15212,13 +15212,13 @@ Skin contact with the sap can also cause contact dermatitis (skin redness, irrit
                 relatedEntries: [
                     "045fe2d3-3c59-4f15-b72a-09371b675d77",  // GI Irritant Plants - same irritant mechanism, Clematis in same family
                     "505a8b0e-0325-4419-8678-f543ad301997",  // Anemone (Windflower) - same family (Ranunculaceae), same toxin (protoanemonin)
-                    "b1c2d3e4-0000-0000-0000-eranthis00001"  // Winter Aconite — same family, same toxin
+                    "b1c2d3e4-0000-0000-0000-e4a0b1500001"  // Winter Aconite — same family, same toxin
                 ]
             ),
 
             // MARK: - Winter Aconite (Eranthis)
             ToxicItem(
-                id: UUID(uuidString: "b1c2d3e4-0000-0000-0000-eranthis00001")!,
+                id: UUID(uuidString: "b1c2d3e4-0000-0000-0000-e4a0b1500001")!,
                 name: "Winter Aconite (Eranthis)",
                 alternateNames: [
                     "Eranthis",

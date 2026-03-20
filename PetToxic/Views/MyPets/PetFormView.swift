@@ -253,7 +253,15 @@ struct PetFormView: View {
                         set: { pet.vetPhone = $0.isEmpty ? nil : $0 }
                     ))
                     .keyboardType(.phonePad)
-                    .onChange(of: pet.vetPhone) { triggerAutoSave() }
+                    .onChange(of: pet.vetPhone) {
+                        if let raw = pet.vetPhone, !raw.isEmpty {
+                            let formatted = PhoneFormatter.format(raw)
+                            if formatted != raw {
+                                pet.vetPhone = formatted
+                            }
+                        }
+                        triggerAutoSave()
+                    }
 
                     if let phone = pet.vetPhone, !phone.isEmpty {
                         Button {
@@ -261,6 +269,23 @@ struct PetFormView: View {
                         } label: {
                             Image(systemName: "phone.fill")
                                 .foregroundColor(.green)
+                        }
+                    }
+                }
+
+                HStack {
+                    TextField("Vet Address", text: Binding(
+                        get: { pet.vetAddress ?? "" },
+                        set: { pet.vetAddress = $0.isEmpty ? nil : $0 }
+                    ))
+                    .onChange(of: pet.vetAddress) { triggerAutoSave() }
+
+                    if let address = pet.vetAddress, !address.isEmpty {
+                        Button {
+                            openInMaps(address: address)
+                        } label: {
+                            Image(systemName: "map.fill")
+                                .foregroundColor(.blue)
                         }
                     }
                 }
@@ -644,6 +669,12 @@ struct PetFormView: View {
     private func callVet() {
         guard let phone = pet.vetPhone,
               let url = URL(string: "tel://\(phone.filter { $0.isNumber })") else { return }
+        UIApplication.shared.open(url)
+    }
+
+    private func openInMaps(address: String) {
+        guard let encoded = address.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed),
+              let url = URL(string: "http://maps.apple.com/?q=\(encoded)") else { return }
         UIApplication.shared.open(url)
     }
 

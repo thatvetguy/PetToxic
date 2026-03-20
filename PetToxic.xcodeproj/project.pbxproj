@@ -40,6 +40,7 @@
 		BREED001AAAA1111111111111 /* BreedService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BREED002AAAA2222222222222 /* BreedService.swift */; };
 		BREED003AAAA3333333333333 /* breeds.json in Resources */ = {isa = PBXBuildFile; fileRef = BREED004AAAA4444444444444 /* breeds.json */; };
 		BRWFLT001EEEE1111111111 /* BrowseFilterService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BRWFLT002EEEE2222222222 /* BrowseFilterService.swift */; };
+		CLTRAK001AAAA1111111111 /* CallTrackingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CLTRAK002AAAA2222222222 /* CallTrackingService.swift */; };
 		C36B4977AA78A0B98A512B6A /* SeveritySection.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC88BF3EB74D97FF8EF70C32 /* SeveritySection.swift */; };
 		C3D4E5F67890123456789ABC /* AppearanceSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4E5F6789012345678901234 /* AppearanceSettings.swift */; };
 		C784A37D575D3506C1EBFB60 /* DiseasesConditionsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9D958F919DF57E9C5404D70 /* DiseasesConditionsListView.swift */; };
@@ -63,6 +64,9 @@
 		EF977BE44A1CA4C9CE80A128 /* SavedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5C6C094D6B35157F81D7872 /* SavedView.swift */; };
 		EFB4BACA347E9C89515BEDED /* EmergencyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B85A0BAA5B698970D8F9ADA /* EmergencyView.swift */; };
 		EMRGPET001DDDD1111111111 /* EmergencyPetInfoCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = EMRGPET002DDDD2222222222 /* EmergencyPetInfoCard.swift */; };
+		EMRVBT001AAAA1111111111 /* EmergencyVetButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = EMRVBT002AAAA2222222222 /* EmergencyVetButton.swift */; };
+		EMRVFM001AAAA1111111111 /* EmergencyVetFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EMRVFM002AAAA2222222222 /* EmergencyVetFormView.swift */; };
+		EMRVET001AAAA1111111111 /* EmergencyVetSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = EMRVET002AAAA2222222222 /* EmergencyVetSettings.swift */; };
 		F03D63A2599562E0A66DEB2E /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5D4123DE87463A4CF858927 /* Constants.swift */; };
 		F1372C807BFFDC33BCD4A18F /* SpeciesRisk.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F4998CA510A72304A62AC03 /* SpeciesRisk.swift */; };
 		F31D053BA08F486404401C7A /* DisclaimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA5A3886892E1B5E6CAF9D5F /* DisclaimerView.swift */; };
@@ -153,6 +157,7 @@
 		AF7B0E075A2786B63F29BED4 /* SymptomsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SymptomsListView.swift; sourceTree = "<group>"; };
 		B2C3D4E5F67890123456789A /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B53D68258BA348FBDC14FFB4 /* RelatedEntryButton.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = RelatedEntryButton.swift; sourceTree = "<group>"; };
+		CLTRAK002AAAA2222222222 /* CallTrackingService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallTrackingService.swift; sourceTree = "<group>"; };
 		BREED002AAAA2222222222222 /* BreedService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedService.swift; sourceTree = "<group>"; };
 		BREED004AAAA4444444444444 /* breeds.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = breeds.json; sourceTree = "<group>"; };
 		BRWFLT002EEEE2222222222 /* BrowseFilterService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrowseFilterService.swift; sourceTree = "<group>"; };
@@ -182,6 +187,9 @@
 		EDC056A92F30783A00AF2D0A /* HighlightableMarkdownText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HighlightableMarkdownText.swift; sourceTree = "<group>"; };
 		EDE88C278EF8FA0A290DE262 /* PetToxicTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetToxicTests.swift; sourceTree = "<group>"; };
 		EMRGPET002DDDD2222222222 /* EmergencyPetInfoCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmergencyPetInfoCard.swift; sourceTree = "<group>"; };
+		EMRVBT002AAAA2222222222 /* EmergencyVetButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmergencyVetButton.swift; sourceTree = "<group>"; };
+		EMRVFM002AAAA2222222222 /* EmergencyVetFormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmergencyVetFormView.swift; sourceTree = "<group>"; };
+		EMRVET002AAAA2222222222 /* EmergencyVetSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmergencyVetSettings.swift; sourceTree = "<group>"; };
 		F04351C3DD8FA41399338545 /* BrowseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrowseViewModel.swift; sourceTree = "<group>"; };
 		F4AF21A98F3346F34930A106 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		F6789012345678901234ABCD /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
@@ -289,6 +297,7 @@
 				CA5A3886892E1B5E6CAF9D5F /* DisclaimerView.swift */,
 				DSCPOP002AAAA2222222222 /* DisclaimerPopupView.swift */,
 				EMRGPET002DDDD2222222222 /* EmergencyPetInfoCard.swift */,
+				EMRVBT002AAAA2222222222 /* EmergencyVetButton.swift */,
 				24B2882F5F5387A02F14DC1B /* EmptyStateView.swift */,
 				FF6C448365FCE3CCE08553DE /* HomeHeader.swift */,
 				F4AF21A98F3346F34930A106 /* LoadingView.swift */,
@@ -370,6 +379,7 @@
 			children = (
 				F6789012345678901234ABCD /* SettingsView.swift */,
 				9A64D5FA5C1373809A3F0A22 /* UpgradeView.swift */,
+				EMRVFM002AAAA2222222222 /* EmergencyVetFormView.swift */,
 			);
 			path = Settings;
 			sourceTree = "<group>";
@@ -434,6 +444,7 @@
 				D4E5F6789012345678901234 /* AppearanceSettings.swift */,
 				237521FB4875580645396715 /* BookmarkService.swift */,
 				BREED002AAAA2222222222222 /* BreedService.swift */,
+				CLTRAK002AAAA2222222222 /* CallTrackingService.swift */,
 				BRWFLT002EEEE2222222222 /* BrowseFilterService.swift */,
 				4A373A23CBFA6D1C7461960B /* DatabaseService.swift */,
 				PHOTO002BBBB2222222222222 /* PetPhotoService.swift */,
@@ -446,6 +457,7 @@
 				LABSVC002AAAA2222222222 /* LabWorkGuideService.swift */,
 				VACCPRESET02AAAA222222 /* VaccinePresets.swift */,
 				1E25EEABF67BEC92E27F9B0A /* DiseasesConditionsService.swift */,
+				EMRVET002AAAA2222222222 /* EmergencyVetSettings.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -633,6 +645,7 @@
 				DE84CAE9804BECF59AED1636 /* ArticleViewModel.swift in Sources */,
 				57A1C02F3A6667A7E948CBD6 /* BookmarkService.swift in Sources */,
 				3B01471FEB78A195C78968FB /* BookmarksListView.swift in Sources */,
+				CLTRAK001AAAA1111111111 /* CallTrackingService.swift in Sources */,
 				BREED001AAAA1111111111111 /* BreedService.swift in Sources */,
 				BRWFLT001EEEE1111111111 /* BrowseFilterService.swift in Sources */,
 				315314F5C314F8DF1D589D6A /* BrowseView.swift in Sources */,
@@ -716,6 +729,9 @@
 				VACCSUMCD01AAAA1111111 /* VaccinationSummaryCard.swift in Sources */,
 				FBE1035AC2F6505A6ABC5668 /* DiseasesConditionsService.swift in Sources */,
 				C784A37D575D3506C1EBFB60 /* DiseasesConditionsListView.swift in Sources */,
+				EMRVBT001AAAA1111111111 /* EmergencyVetButton.swift in Sources */,
+				EMRVFM001AAAA1111111111 /* EmergencyVetFormView.swift in Sources */,
+				EMRVET001AAAA1111111111 /* EmergencyVetSettings.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

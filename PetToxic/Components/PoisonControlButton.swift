@@ -5,19 +5,22 @@ struct EmergencyContact {
     let phone: String
     let displayPhone: String
     let note: String?
+    let trackingId: String  // "aspca" or "pph" — sent to Cloudflare worker
 
     static let aspca = EmergencyContact(
         name: "ASPCA Animal Poison Control",
         phone: "8884264435",
         displayPhone: "(888) 426-4435",
-        note: "Consultation fee may apply"
+        note: "Consultation fee may apply",
+        trackingId: "aspca"
     )
 
     static let petPoisonHelpline = EmergencyContact(
         name: "Pet Poison Helpline",
         phone: "8557647661",
         displayPhone: "(855) 764-7661",
-        note: "Consultation fee may apply"
+        note: "Consultation fee may apply",
+        trackingId: "pph"
     )
 }
 
@@ -99,6 +102,7 @@ struct PoisonControlButton: View {
     }
 
     private func callNumber(_ number: String) {
+        CallTrackingService.recordTap(button: contact.trackingId)
         guard let url = URL(string: "tel://\(number)") else { return }
         openURL(url)
     }

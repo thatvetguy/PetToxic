@@ -16,6 +16,7 @@ final class Pet {
     var microchipNumber: String?
     var vetClinicName: String?
     var vetPhone: String?
+    var vetAddress: String?
     var notes: String?
     var dateCreated: Date
     var dateModified: Date
@@ -42,6 +43,7 @@ final class Pet {
         microchipNumber: String? = nil,
         vetClinicName: String? = nil,
         vetPhone: String? = nil,
+        vetAddress: String? = nil,
         notes: String? = nil,
         sortOrder: Int = 0,
         prioritizeInBrowse: Bool = true
@@ -59,6 +61,7 @@ final class Pet {
         self.microchipNumber = microchipNumber
         self.vetClinicName = vetClinicName
         self.vetPhone = vetPhone
+        self.vetAddress = vetAddress
         self.notes = notes
         self.dateCreated = Date()
         self.dateModified = Date()
