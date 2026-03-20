@@ -129,28 +129,34 @@ struct SettingsView: View {
                             }
                             .listRowBackground(Color.white.opacity(0.08))
                         }
-                        // My Emergency Vet
-                        if proSettings.isPro {
-                            NavigationLink {
-                                EmergencyVetFormView()
-                            } label: {
-                                proFeatureLabel(icon: "cross.case.fill", iconColor: .green, text: "My Emergency Vet")
-                            }
-                            .listRowBackground(Color.white.opacity(0.08))
-                        } else {
-                            Button {
-                                proUpsellMessage = "Save your emergency vet's contact info for quick access during emergencies. Upgrade to Pro to unlock My Emergency Vet."
-                                showProUpsell = true
-                            } label: {
-                                proFeatureLabel(icon: "cross.case.fill", iconColor: .green, text: "My Emergency Vet", showBadge: true)
-                            }
-                            .listRowBackground(Color.white.opacity(0.08))
-                        }
                     } header: {
                         Text("Pro Features")
                             .foregroundStyle(.white.opacity(0.7))
                     } footer: {
-                        Text("Manage pet profiles, save your emergency vet, look up medical terms, and understand lab results.")
+                        Text("Manage pet profiles, look up medical terms, and understand lab results.")
+                            .foregroundStyle(.white.opacity(0.5))
+                    }
+
+                    // MARK: - Emergency Vet (free for all users)
+                    Section {
+                        NavigationLink {
+                            EmergencyVetFormView()
+                        } label: {
+                            HStack {
+                                Image(systemName: "cross.case.fill")
+                                    .foregroundStyle(.green)
+                                    .frame(width: 24)
+                                Text("My Emergency Vet")
+                                    .foregroundStyle(.white)
+                                Spacer()
+                            }
+                        }
+                        .listRowBackground(Color.white.opacity(0.08))
+                    } header: {
+                        Text("Emergency")
+                            .foregroundStyle(.white.opacity(0.7))
+                    } footer: {
+                        Text("Save your emergency vet's contact info for quick access on the Emergency tab.")
                             .foregroundStyle(.white.opacity(0.5))
                     }
 

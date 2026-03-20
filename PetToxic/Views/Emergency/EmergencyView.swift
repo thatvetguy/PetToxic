@@ -71,74 +71,24 @@ struct EmergencyView: View {
 
     @ViewBuilder
     private var emergencyVetSection: some View {
-        if proSettings.isPro {
-            if emergencyVetSettings.hasAnyInfo {
-                EmergencyVetButton(
-                    name: emergencyVetSettings.emergencyVetName.isEmpty ? nil : emergencyVetSettings.emergencyVetName,
-                    phone: emergencyVetSettings.emergencyVetPhone.isEmpty ? nil : emergencyVetSettings.emergencyVetPhone,
-                    address: emergencyVetSettings.emergencyVetAddress.isEmpty ? nil : emergencyVetSettings.emergencyVetAddress
-                )
-            } else {
-                HStack(spacing: 12) {
-                    Image(systemName: "cross.case")
-                        .foregroundColor(.white.opacity(0.4))
-                    Text("Add your emergency vet in Settings")
-                        .font(.subheadline)
-                        .foregroundColor(.white.opacity(0.5))
-                    Spacer()
-                }
-                .padding()
-                .background(Color.white.opacity(0.05))
-                .clipShape(RoundedRectangle(cornerRadius: 12))
-            }
+        if emergencyVetSettings.hasAnyInfo {
+            EmergencyVetButton(
+                name: emergencyVetSettings.emergencyVetName.isEmpty ? nil : emergencyVetSettings.emergencyVetName,
+                phone: emergencyVetSettings.emergencyVetPhone.isEmpty ? nil : emergencyVetSettings.emergencyVetPhone,
+                address: emergencyVetSettings.emergencyVetAddress.isEmpty ? nil : emergencyVetSettings.emergencyVetAddress
+            )
         } else {
-            // Locked placeholder
-            HStack(spacing: 16) {
-                ZStack {
-                    Circle()
-                        .fill(Color.white.opacity(0.1))
-                        .frame(width: 50, height: 50)
-
-                    Image(systemName: "cross.case.fill")
-                        .font(.title3)
-                        .foregroundColor(.white.opacity(0.3))
-                }
-
-                VStack(alignment: .leading, spacing: 4) {
-                    HStack(spacing: 6) {
-                        Text("My Emergency Vet")
-                            .font(.subheadline)
-                            .fontWeight(.medium)
-                            .foregroundColor(.white.opacity(0.6))
-
-                        Text("PRO")
-                            .font(.caption2)
-                            .fontWeight(.bold)
-                            .foregroundColor(.white)
-                            .padding(.horizontal, 8)
-                            .padding(.vertical, 4)
-                            .background(AppColors.teal.opacity(0.8))
-                            .clipShape(Capsule())
-                    }
-
-                    Text("Save your emergency vet for quick access")
-                        .font(.caption)
-                        .foregroundColor(.white.opacity(0.4))
-                }
-
+            HStack(spacing: 12) {
+                Image(systemName: "cross.case")
+                    .foregroundColor(.white.opacity(0.4))
+                Text("Add your emergency vet in Settings")
+                    .font(.subheadline)
+                    .foregroundColor(.white.opacity(0.5))
                 Spacer()
-
-                Image(systemName: "lock.fill")
-                    .foregroundColor(.white.opacity(0.3))
             }
             .padding()
-            .background(Color.white.opacity(0.08))
+            .background(Color.white.opacity(0.05))
             .clipShape(RoundedRectangle(cornerRadius: 12))
-            .overlay(
-                RoundedRectangle(cornerRadius: 12)
-                    .stroke(Color.white.opacity(0.1), lineWidth: 1)
-            )
-            .opacity(0.6)
         }
     }
 
