@@ -15759,6 +15759,7 @@ Skin contact with the fresh sap can also cause contact dermatitis (skin redness,
                 ]
             ),
 
+            // MARK: - Heat Stroke & Hot Surfaces
             ToxicItem(
                 id: UUID(uuidString: "00112233-4455-6677-8899-aabbccddef26")!,
                 name: "Heat Stroke & Hot Surfaces",
