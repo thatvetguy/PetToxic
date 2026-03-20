@@ -15236,7 +15236,7 @@ Skin contact with the sap can also cause contact dermatitis (skin redness, irrit
                 categories: [.plants],
                 imageAsset: "eranthis_thumb",
                 description: """
-                    Winter Aconite (Eranthis hyemalis) is a small, low-growing \
+                    Winter Aconite (*Eranthis hyemalis*) is a small, low-growing \
                     perennial bulb native to southern Europe that has become widely \
                     naturalized in gardens across North America and the United \
                     Kingdom. It is one of the earliest flowers to bloom each year \
@@ -15554,7 +15554,7 @@ The milky latex of pencil cactus contains **diterpene esters** (particularly eup
                 categories: [.plants],
                 imageAsset: "peonies_thumb",
                 description: """
-                Peonies are popular flowering plants known for their large, fragrant blooms in shades of pink, white, red, and coral. They are among the most common flowers used in bouquets, floral arrangements, and wedding florals, and are also widely grown in home gardens. Pets most commonly encounter peonies when cut flowers are brought into the home — cats in particular may be attracted to the fragrant blooms and chew on petals or leaves. The entire plant is toxic, with the highest concentration of toxins found in the roots and bark. Even dried or wilted peony flowers retain some level of toxicity.
+                Peonies (*Paeonia*) are popular flowering plants known for their large, fragrant blooms in shades of pink, white, red, and coral. They are among the most common flowers used in bouquets, floral arrangements, and wedding florals, and are also widely grown in home gardens. Pets most commonly encounter peonies when cut flowers are brought into the home — cats in particular may be attracted to the fragrant blooms and chew on petals or leaves. The entire plant is toxic, with the highest concentration of toxins found in the roots and bark. Even dried or wilted peony flowers retain some level of toxicity.
                 """,
                 toxicityInfo: """
                 Peonies contain paeonol, a phenolic compound found in all parts of the plant. Paeonol is most concentrated in the roots and woody bark but is also present in the stems, leaves, and flower petals. When ingested, paeonol acts as a gastrointestinal irritant, causing vomiting, diarrhea, and depression (lethargy).
@@ -15709,7 +15709,7 @@ Skin contact with the fresh sap can also cause contact dermatitis (skin redness,
                 description: """
                 Sweet peas are popular ornamental climbing plants known for their fragrant, colorful blooms in shades of pink, purple, red, white, and mauve. They are commonly used in bouquets, floral arrangements, and garden plantings. Pets may encounter sweet peas when cut flowers are brought into the home or when they have access to garden-grown plants.
 
-                All parts of the sweet pea plant are toxic, with the seeds being the most dangerous. The ornamental sweet pea (Lathyrus odoratus) found in bouquets and home gardens is generally considered less toxic than field or forage varieties (Lathyrus sativus, L. latifolius), which have been associated with more severe poisoning in livestock and humans. However, all Lathyrus species should be considered toxic until proven otherwise.
+                All parts of the sweet pea plant are toxic, with the seeds being the most dangerous. The ornamental sweet pea (*Lathyrus odoratus*) found in bouquets and home gardens is generally considered less toxic than field or forage varieties (*L. sativus*, *L. latifolius*), which have been associated with more severe poisoning in livestock and humans. However, all *Lathyrus* species should be considered toxic until proven otherwise.
 
                 Sweet pea toxicity is primarily cumulative — serious neurological effects (lathyrism) are most often seen with repeated or chronic ingestion over days to weeks, particularly of seeds. A single exposure to flowers or stems from a bouquet is less likely to cause severe effects, but any ingestion warrants veterinary evaluation due to the neurological potential of the toxins involved.
                 """,
