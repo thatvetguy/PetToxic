@@ -2,7 +2,6 @@ import SwiftUI
 
 struct EmergencyView: View {
     @ObservedObject private var emergencyVetSettings = EmergencyVetSettings.shared
-    @ObservedObject private var proSettings = ProSettings.shared
 
     var body: some View {
         NavigationStack {
