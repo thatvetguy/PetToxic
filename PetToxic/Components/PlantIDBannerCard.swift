@@ -9,12 +9,17 @@ struct PlantIDBannerCard: View {
             UIApplication.shared.open(groupURL)
         } label: {
             VStack(spacing: 0) {
-                // Group banner image
-                Image("poisons_help_banner")
-                    .resizable()
-                    .aspectRatio(contentMode: .fill)
-                    .frame(height: 100)
-                    .clipped()
+                // Group banner image — align to bottom to show group name
+                GeometryReader { geo in
+                    Image("poisons_help_banner")
+                        .resizable()
+                        .aspectRatio(contentMode: .fill)
+                        .frame(width: geo.size.width)
+                        .frame(maxHeight: .infinity, alignment: .bottom)
+                }
+                .frame(height: 160)
+                .clipped()
+                .contentShape(Rectangle())
 
                 // Text content
                 VStack(alignment: .leading, spacing: 6) {
@@ -36,7 +41,7 @@ struct PlantIDBannerCard: View {
                         .foregroundColor(.white.opacity(0.7))
                         .lineLimit(2)
 
-                    Text("Facebook group \u{00B7} Free \u{00B7} Account required")
+                    Text("Facebook group \u{00B7} Free \u{00B7} Facebook account required")
                         .font(.caption2)
                         .foregroundColor(.white.opacity(0.4))
                 }
@@ -48,6 +53,7 @@ struct PlantIDBannerCard: View {
                 RoundedRectangle(cornerRadius: 12)
                     .stroke(Color.green.opacity(0.3), lineWidth: 1)
             )
+            .contentShape(RoundedRectangle(cornerRadius: 12))
         }
         .buttonStyle(.plain)
     }
