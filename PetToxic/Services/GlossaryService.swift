@@ -188,7 +188,7 @@ class GlossaryService {
             definition: "Central Nervous System — the brain and spinal cord. Many toxins affect the CNS, causing symptoms like ataxia, tremors, seizures, or depression. \"CNS depression\" means reduced brain activity, causing drowsiness, weakness, or unresponsiveness.",
             category: .anatomy,
             relatedTerms: ["Ataxia", "Seizures"],
-            searchKeywords: ["central nervous system", "brain", "spinal cord", "neurological"]
+            searchKeywords: ["central nervous system", "spinal cord"]
         ),
 
         GlossaryTerm(
@@ -198,7 +198,7 @@ class GlossaryService {
             definition: "Gastrointestinal tract — the digestive system including the stomach and intestines. Most ingested toxins first affect the GI tract, causing vomiting, diarrhea, drooling, or abdominal pain. \"GI upset\" refers to these digestive symptoms.",
             category: .anatomy,
             relatedTerms: nil,
-            searchKeywords: ["gastrointestinal", "intestines", "digestive"]
+            searchKeywords: ["gastrointestinal", "intestines"]
         ),
 
         // ══════════════════════════════════════════════════════════════
@@ -222,7 +222,7 @@ class GlossaryService {
             definition: "The medical term for vomiting, often referring to intentionally induced vomiting to remove a swallowed toxin. Emesis must only be induced by a veterinarian — it is contraindicated (dangerous) for caustic substances, petroleum products, or when the pet is already showing neurological symptoms.",
             category: .treatment,
             relatedTerms: ["Decontamination", "Regurgitation"],
-            searchKeywords: ["vomiting", "induce vomiting", "throwing up"]
+            searchKeywords: ["induce vomiting"]
         ),
 
         GlossaryTerm(
@@ -232,7 +232,7 @@ class GlossaryService {
             definition: "Treatment focused on managing symptoms and maintaining body functions while the toxin is eliminated, rather than targeting the toxin directly. May include IV fluids, anti-nausea medications, temperature regulation, and monitoring. Many poisonings have no specific antidote and rely entirely on supportive care.",
             category: .treatment,
             relatedTerms: nil,
-            searchKeywords: ["symptomatic treatment", "IV fluids", "hospitalization"]
+            searchKeywords: ["symptomatic treatment", "IV fluids"]
         ),
 
         // ══════════════════════════════════════════════════════════════
@@ -286,7 +286,7 @@ class GlossaryService {
             definition: "Excessive drooling or salivation. Often indicates nausea, oral irritation, or pain. Common with toxins that irritate the mouth (such as calcium oxalate plants) or cause GI upset. Also called ptyalism. Some drooling is normal in certain breeds, but sudden onset is concerning.",
             category: .symptoms,
             relatedTerms: nil,
-            searchKeywords: ["drooling", "excessive drool", "ptyalism", "salivating", "foaming"]
+            searchKeywords: ["excessive drool", "ptyalism", "salivating", "foaming"]
         ),
 
         GlossaryTerm(
@@ -380,7 +380,7 @@ class GlossaryService {
             definition: "Inflammation of the pancreas, often triggered by high-fat foods, certain medications, or toxins. Signs include vomiting, abdominal pain (hunched posture, reluctance to move), loss of appetite, and diarrhea. Can range from mild to severe and life-threatening. Requires veterinary treatment.",
             category: .conditions,
             relatedTerms: nil,
-            searchKeywords: ["pancreas inflammation", "fatty food", "abdominal pain"]
+            searchKeywords: ["pancreas inflammation", "fatty food"]
         ),
 
         GlossaryTerm(
@@ -390,7 +390,7 @@ class GlossaryService {
             definition: "Sudden loss of kidney function, often abbreviated as AKI. The kidneys filter waste from the blood — when they fail, toxins build up rapidly. Signs include decreased urination, vomiting, lethargy, and loss of appetite. Common causes include grapes/raisins (dogs), lilies (cats), antifreeze, and NSAIDs.",
             category: .conditions,
             relatedTerms: ["Nephrotoxicity", "Azotemia", "Oliguria", "Anuria"],
-            searchKeywords: ["AKI", "kidney failure", "renal failure", "acute renal failure"]
+            searchKeywords: ["AKI", "acute renal failure"]
         ),
 
         GlossaryTerm(
@@ -444,7 +444,7 @@ class GlossaryService {
             definition: "Damage or poisoning affecting the heart. Can cause arrhythmias (irregular heartbeat), heart muscle weakness, or heart failure. Cardiotoxic substances include chocolate/caffeine, cardiac glycoside plants (oleander, foxglove, lily of the valley), certain medications, and some recreational drugs.",
             category: .conditions,
             relatedTerms: ["Arrhythmia", "Bradycardia", "Tachycardia"],
-            searchKeywords: ["heart damage", "heart toxicity", "heart poison", "cardiac"]
+            searchKeywords: ["heart damage", "heart toxicity", "heart poison"]
         ),
 
         GlossaryTerm(
@@ -454,7 +454,7 @@ class GlossaryService {
             definition: "Damage or poisoning affecting the nervous system (brain, spinal cord, or nerves). Signs include tremors, seizures, ataxia, paralysis, behavior changes, or altered consciousness. Many toxins are neurotoxic, including certain pesticides, plants, medications, and recreational drugs.",
             category: .conditions,
             relatedTerms: ["CNS", "Ataxia", "Seizures", "Tremors"],
-            searchKeywords: ["nerve damage", "brain damage", "neurological", "nervous system toxicity"]
+            searchKeywords: ["nerve damage", "brain damage", "nervous system toxicity"]
         ),
 
         // ══════════════════════════════════════════════════════════════
@@ -579,7 +579,7 @@ class GlossaryService {
             definition: "The moist, pink tissues lining body openings. In pets, veterinarians commonly check the gums, inner lips, and inner eyelids. Healthy membranes are pink and moist. Color changes can indicate problems: pale (blood loss, shock), blue/purple (low oxygen), yellow (liver issues), or brick red (some toxins).",
             category: .anatomy,
             relatedTerms: ["Cyanosis", "Jaundice", "Anemia"],
-            searchKeywords: ["gums", "gum color", "pale gums", "blue gums", "yellow gums"]
+            searchKeywords: ["gum color", "pale gums", "blue gums", "yellow gums"]
         ),
 
         // 48. Toxicosis
@@ -601,7 +601,7 @@ class GlossaryService {
             definition: "Describing something that develops quickly and is typically short-term but often severe. Acute toxicosis means symptoms appear rapidly after exposure (within minutes to hours). Contrast with chronic, which develops slowly over time.",
             category: .general,
             relatedTerms: ["Chronic", "Toxicosis"],
-            searchKeywords: ["sudden", "rapid onset", "short-term"]
+            searchKeywords: ["rapid onset", "short-term"]
         ),
 
         // 50. Chronic
@@ -634,7 +634,7 @@ class GlossaryService {
             definition: "Taking a substance into the body by swallowing (eating or drinking). This is the most common route of poisoning in pets. The substance then enters the digestive system where it may be absorbed into the bloodstream.",
             category: .general,
             relatedTerms: ["GI Tract", "Decontamination", "Emesis"],
-            searchKeywords: ["swallowed", "ate", "eaten", "chewed", "consumed"]
+            searchKeywords: ["swallowed", "chewed"]
         ),
 
         // 53. Dermal Exposure
@@ -704,7 +704,7 @@ class GlossaryService {
             definition: "Loss of appetite or refusal to eat. In veterinary medicine, this simply means the pet isn't eating—it's one of the most common signs that something is wrong. Anorexia lasting more than 24 hours (or less in small pets) warrants veterinary attention.",
             category: .symptoms,
             relatedTerms: ["Lethargy", "Vomiting", "GI Tract"],
-            searchKeywords: ["not eating", "won't eat", "loss of appetite", "refusing food", "off food"]
+            searchKeywords: ["not eating", "won't eat", "refusing food", "off food"]
         ),
 
         // 59. Polyuria
@@ -770,7 +770,7 @@ class GlossaryService {
             definition: "Relating to the kidneys. 'Renal failure' means the kidneys are not working properly. 'Renal toxicity' means a substance is harmful to the kidneys. The kidneys filter waste from the blood, so damage affects the whole body.",
             category: .anatomy,
             relatedTerms: ["Nephrotoxicity", "Acute Kidney Injury", "Polyuria"],
-            searchKeywords: ["kidney", "kidneys"]
+            searchKeywords: nil
         ),
 
         // 65. Hepatic
@@ -781,7 +781,7 @@ class GlossaryService {
             definition: "Relating to the liver. 'Hepatic failure' means the liver is not working properly. 'Hepatic toxicity' means a substance is harmful to the liver. The liver processes nutrients and filters toxins, so damage can cause widespread problems including jaundice.",
             category: .anatomy,
             relatedTerms: ["Hepatotoxicity", "Jaundice"],
-            searchKeywords: ["liver"]
+            searchKeywords: nil
         ),
 
         // 66. Metabolite
@@ -884,7 +884,7 @@ class GlossaryService {
             definition: "Relating to the lungs. 'Pulmonary edema' means fluid in the lungs. 'Pulmonary toxicity' means a substance harms the lungs. The lungs are essential for oxygen exchange, so pulmonary problems quickly become serious.",
             category: .anatomy,
             relatedTerms: ["Dyspnea", "Tachypnea", "Inhalation", "Aspiration"],
-            searchKeywords: ["lung", "lungs", "respiratory"]
+            searchKeywords: nil
         ),
 
         // 75. Systemic
@@ -994,7 +994,7 @@ class GlossaryService {
             definition: "Observable physical changes that indicate illness—what can be seen, measured, or detected during examination. In veterinary medicine, 'clinical signs' is preferred over 'symptoms' because animals can't describe how they feel. Examples include vomiting, tremors, pale gums, and elevated heart rate.",
             category: .general,
             relatedTerms: ["Prognosis", "Acute"],
-            searchKeywords: ["symptoms", "signs of illness", "what to look for"]
+            searchKeywords: ["signs of illness", "what to look for"]
         ),
 
         // 85. Asymptomatic
@@ -1020,7 +1020,7 @@ class GlossaryService {
             definition: "Excessive drooling or salivation. Often used interchangeably with hypersalivation. Can be caused by nausea, oral irritation (as with calcium oxalate plants), toxin exposure, or difficulty swallowing. You may notice wet fur around the mouth, chin, or chest, or puddles of drool.",
             category: .symptoms,
             relatedTerms: ["Hypersalivation", "GI Tract", "Vomiting"],
-            searchKeywords: ["drooling", "excessive saliva", "slobbering", "foaming"]
+            searchKeywords: ["excessive saliva", "slobbering", "foaming"]
         ),
 
         // 87. Petechiae
@@ -1064,7 +1064,7 @@ class GlossaryService {
             definition: "Partial paralysis or weakness—reduced ability to move a body part, but not complete loss of function. The pet may drag a limb, have a wobbly gait, or struggle to stand. Less severe than full paralysis but still indicates significant neurological involvement.",
             category: .symptoms,
             relatedTerms: ["Paralysis", "Ataxia", "Neurotoxicity"],
-            searchKeywords: ["weakness", "partial paralysis", "weak legs", "limb weakness"]
+            searchKeywords: ["partial paralysis", "weak legs", "limb weakness"]
         ),
 
         // 91. Paralysis

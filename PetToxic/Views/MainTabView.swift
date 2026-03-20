@@ -24,6 +24,7 @@ struct MainTabView: View {
     @State private var showTrialExpiredAlert = false
     @State private var showUpgradeSheet = false
     @ObservedObject private var trialManager = TrialManager.shared
+    @ObservedObject private var proSettings = ProSettings.shared
     @Environment(BrowseNavigationContext.self) private var browseNavContext
 
     private let tabCount = 5
@@ -93,7 +94,7 @@ struct MainTabView: View {
                 showDisclaimerPopup = true
             }
 
-            if trialManager.shouldShowExpirationAlert {
+            if trialManager.shouldShowExpirationAlert && !proSettings.hasPurchasedPro {
                 showTrialExpiredAlert = true
             }
         }

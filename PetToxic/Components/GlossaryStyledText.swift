@@ -28,29 +28,77 @@ struct GlossaryStyledText: View {
 
     var body: some View {
         if paragraphs.count <= 1 {
-            Text(attributedContent(for: content))
+            Text(attributedContent(for: content, alreadyHighlighted: []))
         } else {
+            // Track which terms have been highlighted across paragraphs
+            // so each glossary term is only highlighted on first mention
+            let attributed = buildMultiParagraphContent()
             VStack(alignment: .leading, spacing: 12) {
-                ForEach(Array(paragraphs.enumerated()), id: \.offset) { _, paragraph in
-                    Text(attributedContent(for: paragraph))
+                ForEach(Array(attributed.enumerated()), id: \.offset) { _, attrString in
+                    Text(attrString)
                 }
             }
         }
     }
 
-    private func attributedContent(for text: String) -> AttributedString {
+    /// Builds attributed strings for all paragraphs, tracking highlighted terms
+    /// so each glossary keyword is only highlighted on its first appearance.
+    private func buildMultiParagraphContent() -> [AttributedString] {
+        var highlighted = Set<String>()
+        var results: [AttributedString] = []
+        for paragraph in paragraphs {
+            results.append(attributedContent(for: paragraph, alreadyHighlighted: highlighted))
+            // After rendering each paragraph, find which terms were present
+            // so subsequent paragraphs skip them
+            let lowerParagraph = paragraph.lowercased()
+            for term in glossaryTerms {
+                if containsWholeWord(lowerParagraph, term: term.term.lowercased()) {
+                    highlighted.insert(term.term.lowercased())
+                }
+                if let keywords = term.searchKeywords {
+                    for keyword in keywords {
+                        if containsWholeWord(lowerParagraph, term: keyword.lowercased()) {
+                            highlighted.insert(keyword.lowercased())
+                        }
+                    }
+                }
+            }
+        }
+        return results
+    }
+
+    /// Checks if text contains a whole-word match for the given term
+    private func containsWholeWord(_ text: String, term: String) -> Bool {
+        var searchStart = text.startIndex
+        while let range = text.range(of: term, range: searchStart..<text.endIndex) {
+            let isStartBoundary = range.lowerBound == text.startIndex ||
+                !text[text.index(before: range.lowerBound)].isLetter
+            let isEndBoundary = range.upperBound == text.endIndex ||
+                !text[range.upperBound].isLetter
+            if isStartBoundary && isEndBoundary { return true }
+            searchStart = range.upperBound
+        }
+        return false
+    }
+
+    private func attributedContent(for text: String, alreadyHighlighted: Set<String>) -> AttributedString {
         // Start with markdown parsing
         var attributed = (try? AttributedString(markdown: text)) ?? AttributedString(text)
 
         // Apply glossary teal color (do this first, before search highlight)
+        // Only highlight terms not already highlighted in a previous paragraph
         for term in glossaryTerms {
-            // Highlight main term
-            applyTealColor(to: &attributed, for: term.term)
+            let termKey = term.term.lowercased()
+            if !alreadyHighlighted.contains(termKey) {
+                applyTealColor(to: &attributed, for: term.term)
+            }
 
-            // Also highlight searchKeywords if they appear in the text
             if let keywords = term.searchKeywords {
                 for keyword in keywords {
-                    applyTealColor(to: &attributed, for: keyword)
+                    let keywordKey = keyword.lowercased()
+                    if !alreadyHighlighted.contains(keywordKey) {
+                        applyTealColor(to: &attributed, for: keyword)
+                    }
                 }
             }
         }
@@ -63,8 +111,10 @@ struct GlossaryStyledText: View {
         return attributed
     }
 
-    /// Applies teal foreground color to the FIRST whole-word occurrence of a term
-    private func applyTealColor(to attributed: inout AttributedString, for term: String) {
+    /// Applies teal foreground color to the FIRST whole-word occurrence of a term.
+    /// Returns true if a match was found and highlighted.
+    @discardableResult
+    private func applyTealColor(to attributed: inout AttributedString, for term: String) -> Bool {
         let plainText = String(attributed.characters).lowercased()
         let searchTerm = term.lowercased()
 
@@ -82,12 +132,13 @@ struct GlossaryStyledText: View {
                 if let attrRange = Range(range, in: attributed) {
                     attributed[attrRange].foregroundColor = .teal
                 }
-                return  // Only highlight first occurrence
+                return true  // Only highlight first occurrence
             }
 
             // Not a whole word match, keep searching
             searchStart = range.upperBound
         }
+        return false
     }
 
     /// Applies yellow background for search term highlighting
