@@ -388,7 +388,7 @@ Complete list of all entries with UUIDs, severity, and categories.
 
 ---
 
-## Alphabetical Index (All 233 Entries)
+## Alphabetical Index (All 241 Entries)
 
 | Name | UUID | Severity | Categories |
 |------|------|----------|------------|
@@ -403,6 +403,7 @@ Complete list of all entries with UUIDs, severity, and categories.
 | Alpha Lipoic Acid (ALA) | `88ff6677-99aa-bbcc-ddee-ff0011223344` | Severe | Medications |
 | Anemone (Windflower) | `505a8b0e-0325-4419-8678-f543ad301997` | Low | Plants |
 | Ant & Roach Bait Stations | `d0e1f2a3-4b5c-6d7e-f8a9-0b1c2d3e4f5a` | Moderate | Garage & Garden |
+| Ardisia | `f7a8b9c0-1d2e-4f3a-b4c5-6d7e8f9a0b1c` | Moderate | Plants |
 | Anticoagulant Rodenticides | `304c1824-e0b2-48bb-9991-3803d1ae87d0` | High | Garage & Garden |
 | Antidepressants (SSRIs & SNRIs) | `dd445566-7788-99aa-bbcc-ddeeff334455` | High | Medications |
 | Antifreeze & Coolant (Ethylene Glycol) | `61b259ac-d3af-4451-a1a4-b050fb70d455` | Severe | Garage & Garden |
@@ -444,6 +445,8 @@ Complete list of all entries with UUIDs, severity, and categories.
 | Chocolate | `d8c34930-fe78-414c-a182-49521dbfc266` | Severe | Foods, Holiday Hazards |
 | Cholecalciferol (Vitamin D3) Rodenticide | `3c40b99c-5653-4195-a821-19dde4e1c8f8` | Severe | Garage & Garden |
 | Christmas Rose & Hellebores | `165617f0-7aa5-47a2-b62c-21adb49e42ca` | Moderate | Plants, Holiday Hazards |
+| Chrysanthemums | `b1d3f5a7-2c4e-4a6b-8d0f-1e3c5a7b9d2f` | High | Plants, Holiday Hazards |
+| Cicadas | `a2c4e6f8-1b3d-4e5f-8a9b-0c1d2e3f4a5b` | Low | Outdoor Hazards |
 | Cocaine | `ff001122-3344-5566-7788-99aabbccdd02` | Severe | Recreational Substances |
 | Cocoa Mulch | `f2a3b4c5-6d7e-8f9a-0b1c-2d3e4f5a6b7c` | High | Garage & Garden |
 | Coccidioidomycosis (Valley Fever) | `1D000001-0000-0000-0000-000000000016` | nil | Diseases & Conditions |
@@ -462,6 +465,7 @@ Complete list of all entries with UUIDs, severity, and categories.
 | DEET (Insect Repellent) | `b8c9d0e1-2f3a-4b5c-d6e7-8f9a0b1c2d3e` | High | Garage & Garden |
 | Diabetes Medications (Insulin & Oral Hypoglycemics) | `33aa1122-bbcc-ddee-ff00-112233445566` | Severe | Medications |
 | Drain Cleaners & Caustic Alkalis | `33445566-7788-99aa-bbcc-ddeeff001122` | Severe | Cleaning Products |
+| Dryer Sheets & Fabric Softener | `c2d3e4f5-6a7b-4c8d-9e0f-1a2b3c4d5e6f` | Moderate | Cleaning Products, Household Items |
 | Duranta / Golden Dewdrop | `d84a68f2-ba6d-4ad6-b4af-82721447ef83` | High | Plants |
 | Dysecdysis (Abnormal Shedding) | `1D000001-0000-0000-0000-000000000010` | nil | Diseases & Conditions |
 | Electrical Cords & Electrocution | `e5f6a7b8-9c0d-1e2f-3a4b-5c6d7e8f9a0b` | nil | Household Items, Informational |
@@ -478,6 +482,7 @@ Complete list of all entries with UUIDs, severity, and categories.
 | Feline Immunodeficiency Virus (FIV) | `1D000001-0000-0000-0000-000000000020` | nil | Diseases & Conditions |
 | Feline Herpesvirus-1 (FHV-1) | `1D000001-0000-0000-0000-000000000021` | nil | Diseases & Conditions |
 | Fertilizers | `c3f5a8b2-7d4e-4f1a-b6c9-2e8d7f4a5b3c` | Moderate | Garage & Garden |
+| Fireflies | `f7a9c2e1-4b6d-4f83-9e15-2a7b8c3d0e5f` | Severe | Outdoor Hazards |
 | Fipronil (Frontline) | `a7b8c9d0-1e2f-4a3b-c4d5-6e7f8a9b0c1d` | Severe | Medications, Garage & Garden |
 | Fleas | `1D000001-0000-0000-0000-000000000028` | nil | Diseases & Conditions |
 | Foxglove | `2a95c561-533e-4a73-bd11-8d43bd127bb4` | Severe | Plants |
@@ -489,6 +494,7 @@ Complete list of all entries with UUIDs, severity, and categories.
 | GI Stasis in Rabbits (Gut Shutdown) | `1D000001-0000-0000-0000-000000000038` | nil | Diseases & Conditions |
 | Glow Sticks | `d4e5f6a7-8b9c-0d1e-2f3a-4b5c6d7e8f9a` | Low | Household Items |
 | Golden Chain Tree | `e4b28653-d4b2-42a0-ac67-f22e53fc1673` | High | Plants |
+| Grass (Lawn Grass) | `a3b4c5d6-7e8f-4a1b-9c2d-3e4f5a6b7c8d` | nil | Plants, Informational |
 | Grapes & Raisins | `d1bde5cd-6881-4765-ac4c-b9f43b40da70` | Severe | Foods |
 | Heart & Blood Pressure Medications | `22990011-aabb-ccdd-eeff-223344556677` | Severe | Medications |
 | Heartworms | `1D000001-0000-0000-0000-000000000025` | nil | Diseases & Conditions |
@@ -515,6 +521,7 @@ Complete list of all entries with UUIDs, severity, and categories.
 | Larkspur & Delphinium | `ed41fd85-d05e-4797-9f94-5152653df2d1` | High | Plants |
 | Laundry Detergent Pods | `55667788-99aa-bbcc-ddee-ff0011223344` | Severe | Cleaning Products |
 | Lead (Batteries, Paint, Fishing Weights) | `3b605ff6-df0c-426f-8687-70226969f7c0` | High | Garage & Garden |
+| Leonotis leonurus (Lion's Tail) | `b1c2d3e4-5f6a-4b7c-8d9e-0f1a2b3c4d5e` | Moderate | Plants |
 | Leptospirosis | `1D000001-0000-0000-0000-000000000006` | Severe | Diseases & Conditions |
 | Lilies (True Lilies) | `419a437f-3834-47e1-934a-5fa379b98a00` | Severe | Plants, Holiday Hazards |
 | Lily of the Valley | `f057eb34-f67c-4341-b971-1bde66ca3242` | Severe | Plants |
@@ -560,6 +567,7 @@ Complete list of all entries with UUIDs, severity, and categories.
 | Phenylpropanolamine (PPA) | `99aa7788-bbcc-ddee-ff00-112233445566` | High | Medications |
 | Pit Viper Envenomation (Venomous Snake Bites) | `00112233-4455-6677-8899-aabbccddef07` | Severe | Outdoor Hazards |
 | Poison Ivy, Poison Oak & Poison Sumac | `00112233-4455-6677-8899-aabbccddef17` | nil | Plants, Outdoor Hazards, Informational |
+| Poinsettia | `e3f5a7c9-2b4d-4e6f-8a0b-1c3d5e7f9a2b` | Low | Plants, Holiday Hazards |
 | Pokeweed | `7E52EBF4-2617-4264-A341-4E6FF77E26EB` | High | Plants |
 | Pool Chemicals | `a3b4c5d6-7e8f-9a0b-1c2d-3e4f5a6b7c8d` | Severe | Garage & Garden |
 | Porcupine Quills | `00112233-4455-6677-8899-aabbccddef28` | nil | Informational, Outdoor Hazards |
