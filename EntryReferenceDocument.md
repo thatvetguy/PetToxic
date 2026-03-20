@@ -388,7 +388,7 @@ Complete list of all entries with UUIDs, severity, and categories.
 
 ---
 
-## Alphabetical Index (All 241 Entries)
+## Alphabetical Index (All 247 Entries)
 
 | Name | UUID | Severity | Categories |
 |------|------|----------|------------|
@@ -441,6 +441,7 @@ Complete list of all entries with UUIDs, severity, and categories.
 | Canine Parvovirus (Parvo) | `1D000001-0000-0000-0000-000000000002` | Severe | Diseases & Conditions |
 | Cannabis / Marijuana | `e293e8ba-eefc-4fe0-bf93-9e8842873a35` | Moderate | Plants, Recreational Substances |
 | Castor Beans | `0bf15704-86a3-40a9-94e1-4ba4ffbdea1b` | Severe | Plants |
+| Cheyletiellosis (Walking Dandruff) | `1D000001-0000-0000-0000-000000000048` | nil | Diseases & Conditions |
 | Chinaberry Tree | `52bd87dd-b94f-4c72-9dfa-ff1f8b689193` | Severe | Plants |
 | Chocolate | `d8c34930-fe78-414c-a182-49521dbfc266` | Severe | Foods, Holiday Hazards |
 | Cholecalciferol (Vitamin D3) Rodenticide | `3c40b99c-5653-4195-a821-19dde4e1c8f8` | Severe | Garage & Garden |
@@ -476,11 +477,12 @@ Complete list of all entries with UUIDs, severity, and categories.
 | Eucalyptus | `a7f3b2c1-8d4e-4f6a-b9e1-3c5d7a2f8b64` | High | Plants |
 | Expanding Glues (Gorilla Glue) | `b2e4f7a1-8c3d-4e6f-a9b2-1d5c8e3f7a2b` | nil | Garage & Garden, Informational |
 | Fatty Foods & Grease | `2e094121-64ea-499c-bfb4-6db98f139b55` | Low/Moderate | Foods, Holiday Hazards |
-| Feline Panleukopenia (Feline Distemper) | `1D000001-0000-0000-0000-000000000003` | Severe | Diseases & Conditions |
+| Feline Calicivirus (FCV) | `1D000001-0000-0000-0000-000000000046` | nil | Diseases & Conditions |
+| Feline Herpesvirus-1 (FHV-1) | `1D000001-0000-0000-0000-000000000021` | nil | Diseases & Conditions |
+| Feline Immunodeficiency Virus (FIV) | `1D000001-0000-0000-0000-000000000020` | nil | Diseases & Conditions |
 | Feline Infectious Peritonitis (FIP) | `1D000001-0000-0000-0000-000000000018` | nil | Diseases & Conditions |
 | Feline Leukemia Virus (FeLV) | `1D000001-0000-0000-0000-000000000019` | nil | Diseases & Conditions |
-| Feline Immunodeficiency Virus (FIV) | `1D000001-0000-0000-0000-000000000020` | nil | Diseases & Conditions |
-| Feline Herpesvirus-1 (FHV-1) | `1D000001-0000-0000-0000-000000000021` | nil | Diseases & Conditions |
+| Feline Panleukopenia (Feline Distemper) | `1D000001-0000-0000-0000-000000000003` | Severe | Diseases & Conditions |
 | Fertilizers | `c3f5a8b2-7d4e-4f1a-b6c9-2e8d7f4a5b3c` | Moderate | Garage & Garden |
 | Fireflies | `f7a9c2e1-4b6d-4f83-9e15-2a7b8c3d0e5f` | Severe | Outdoor Hazards |
 | Fipronil (Frontline) | `a7b8c9d0-1e2f-4a3b-c4d5-6e7f8a9b0c1d` | Severe | Medications, Garage & Garden |
@@ -502,6 +504,7 @@ Complete list of all entries with UUIDs, severity, and categories.
 | Heavy Metal Toxicosis (Lead, Zinc, Copper & Others) | `00112233-4455-6677-8899-aabbccddef23` | nil | Informational, Household Items, Garage & Garden |
 | Hemlock (Poison Hemlock & Water Hemlock) | `00112233-4455-6677-8899-aabbccddef16` | Severe | Plants |
 | Herbicides | `b4c5d6e7-8f9a-0b1c-2d3e-4f5a6b7c8d9e` | High | Garage & Garden |
+| Holiday Hazards | `c7d8e9f0-1a2b-4c3d-8e4f-5a6b7c8d9e0f` | nil | Informational, Holiday Hazards |
 | Honeysuckle | `048CDED7-251B-4F1C-89E6-93ACB63E6621` | Low | Plants |
 | Hops | `00112233-4455-6677-8899-aabbccddef14` | Severe | Foods, Household Items, Plants |
 | Horse Chestnut & Buckeye | `c3531735-0e34-448a-82d8-660ed4c22a24` | High | Plants |
@@ -517,6 +520,7 @@ Complete list of all entries with UUIDs, severity, and categories.
 | Joint Supplements (Glucosamine & Chondroitin) | `91000011-2233-4455-6677-889900aabb01` | High | Medications |
 | Kalanchoe | `dfa90432-20a6-45bb-9e19-f917b50b3765` | Severe | Plants |
 | Kennel Cough | `1D000001-0000-0000-0000-000000000008` | Moderate | Diseases & Conditions |
+| Kentucky Coffee Tree | `a1b2c3d4-0000-0000-0000-000c1ad00501` | Moderate | Plants |
 | Lantana | `1d9f0989-6d98-4305-ac74-56f6e6e8ca0f` | Moderate | Plants |
 | Larkspur & Delphinium | `ed41fd85-d05e-4797-9f94-5152653df2d1` | High | Plants |
 | Laundry Detergent Pods | `55667788-99aa-bbcc-ddee-ff0011223344` | Severe | Cleaning Products |
@@ -544,6 +548,7 @@ Complete list of all entries with UUIDs, severity, and categories.
 | Morning Glory | `a0716b51-b922-4b95-b557-a08c5ce9ed86` | Moderate | Plants |
 | Mothballs | `e1f2a3b4-5c6d-7e8f-9a0b-1c2d3e4f5a6b` | Severe | Garage & Garden |
 | Muscle Relaxants | `44bb2233-ccdd-eeff-0011-223344556677` | Severe | Medications |
+| Myiasis (Fly Strike) | `1D000001-0000-0000-0000-000000000047` | nil | Diseases & Conditions |
 | Myxomatosis | `1D000001-0000-0000-0000-000000000007` | Severe | Diseases & Conditions |
 | Neonicotinoids (Imidacloprid) | `f6a7b8c9-0d1e-4f2a-b3c4-5d6e7f8a9b0c` | Low/Moderate | Garage & Garden, Medications |
 | Nicotine & Tobacco Products | `fd98d3c0-368c-4b20-9192-c98dd3c17f14` | Severe | Recreational Substances, Plants |
@@ -558,6 +563,7 @@ Complete list of all entries with UUIDs, severity, and categories.
 | Packera / Ragwort | `8adc8891-ee42-4980-b263-4ef8c14dffcd` | High | Plants |
 | Paintballs | `00112233-4455-6677-8899-aabbccddef01` | High | Household Items |
 | Paints (Latex, Oil-Based, & Spray Paints) | `00112233-4455-6677-8899-aabbccddef02` | Low | Garage & Garden |
+| Pasteurellosis (Snuffles) | `1D000001-0000-0000-0000-000000000049` | nil | Diseases & Conditions |
 | Pencil Cactus | `c8a18b83-133f-4be4-9aff-5cda3f6f6a18` | Moderate | Plants |
 | Pennies & Zinc Objects | `a7b8c9d0-1e2f-3a4b-5c6d-7e8f9a0b1c2d` | Severe | Household Items |
 | Peonies | `a7c3e1f0-5b2d-4e8a-9f6c-3d7b1a2e4f80` | Low | Plants |
@@ -627,6 +633,7 @@ Complete list of all entries with UUIDs, severity, and categories.
 | Widow Spider Bites | `00112233-4455-6677-8899-aabbccddef10` | Severe | Outdoor Hazards |
 | Wild Mushrooms | `1ce957ec-633a-4946-9b76-933a16dfdb5c` | High | Plants |
 | Windshield Washer Fluid (Methanol) | `286ff548-979a-45c1-853b-3cc87ccbcaa1` | Moderate | Garage & Garden |
+| Winter Aconite (Eranthis) | `b1c2d3e4-0000-0000-0000-e4a0b1500001` | Low | Plants |
 | Wisteria | `b2e1e5d4-0d12-410b-83dc-da106bbc2199` | High | Plants |
 | Xylitol | `d7723ed0-6496-40b3-8b1c-84e129083cb9` | Severe | Foods |
 | Yellow Jessamine | `f96f5ad9-369a-413e-a899-971f6423a683` | Severe | Plants |
