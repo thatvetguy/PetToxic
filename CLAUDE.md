@@ -154,7 +154,8 @@ PetToxic/
 │   │   ├── DisclaimerView.swift       # Legal disclaimer banner
 │   │   ├── EmptyStateView.swift
 │   │   ├── LoadingView.swift
-│   │   ├── EmergencyVetButton.swift   # Global emergency vet card (Pro)
+│   │   ├── EmergencyVetButton.swift   # Global emergency vet card (free)
+│   │   ├── PlantIDBannerCard.swift   # Poisons Help FB group link (Plants + Emergency)
 │   │   ├── PoisonControlButton.swift  # Emergency call buttons + tracking
 │   │   ├── RelatedEntryButton.swift
 │   │   ├── SeverityBadge.swift        # Toxicity level indicator
@@ -253,7 +254,8 @@ PetToxic/
 | Change default appearance | `Services/AppearanceSettings.swift` |
 | Add new tab | `Views/MainTabView.swift` |
 | Emergency contacts | `Components/PoisonControlButton.swift` |
-| Emergency vet (global) | `Services/EmergencyVetSettings.swift`, `Components/EmergencyVetButton.swift`, `Views/Settings/EmergencyVetFormView.swift` |
+| Emergency vet (global, free) | `Services/EmergencyVetSettings.swift`, `Components/EmergencyVetButton.swift`, `Views/Settings/EmergencyVetFormView.swift` |
+| Plant ID banner (FB group) | `Components/PlantIDBannerCard.swift` |
 | Anonymous event tracking | `Services/CallTrackingService.swift`, `CloudflareWorker/worker.js` |
 | Phone number formatting | `Utilities/Constants.swift` (`PhoneFormatter`) |
 | Trial/Pro gating logic | `Services/TrialManager.swift`, `Services/ProSettings.swift` |
@@ -263,7 +265,8 @@ PetToxic/
 | Vaccination data model | `Models/VaccinationRecord.swift` |
 | Vaccination summary (home) | `Components/VaccinationSummaryCard.swift` |
 | Browse navigation context | `Models/NavigationContext.swift` |
-| Diseases & Conditions list | `Views/Browse/DiseasesConditionsListView.swift` |
+| Diseases & Conditions list | `Views/Browse/DiseasesConditionsListView.swift` (browsable by free users, entries Pro-locked) |
+| Upgrade/purchase flow | `Views/Settings/UpgradeView.swift` |
 | Severity explainer entry | `Services/DatabaseService.swift` (UUID: `B3F1A2D4-E5C6-47F8-9A0B-1C2D3E4F5A6B`) |
 
 ---
