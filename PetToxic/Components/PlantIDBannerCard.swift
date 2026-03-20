@@ -36,7 +36,7 @@ struct PlantIDBannerCard: View {
                             .foregroundColor(.white.opacity(0.5))
                     }
 
-                    Text("Get emergency plant & mushroom identification from expert botanists worldwide.")
+                    Text("Get emergency plant & mushroom identification from expert botanists worldwide. For known exposures only.")
                         .font(.caption)
                         .foregroundColor(.white.opacity(0.7))
                         .lineLimit(2)
