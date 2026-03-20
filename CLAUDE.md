@@ -274,19 +274,4 @@ PetToxic/
 
 ---
 
-## Session Handoff Protocol
-
-When ending a session, create a handoff document including:
-1. Work completed this session
-2. Species/content additions made
-3. Cross-references added
-4. VIN sources removed
-5. Current audit status
-6. Next priority tasks
-7. Any unresolved questions or issues
-
-Handoff files: `Handoff_SessionXX_to_SessionYY.md`
-
----
-
 *Last Updated: March 2026 (Session 165)*
