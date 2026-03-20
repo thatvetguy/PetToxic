@@ -95,6 +95,7 @@ Dynamic Type, VoiceOver, high contrast, 44pt minimum touch targets.
 | `PetToxic_DiseasesConditions_EntryTemplate.md` | Content & format template for Diseases & Conditions entries: 3 entry types (Infectious / Husbandry / Medical-Metabolic), field protocols, tone guidance, prohibited content, approved language |
 | `ClaudeWeb_DiseaseEntryFormat.md` | Quick-reference for Claude Web: correct ToxicItem field order, category enum, Contents.json format, commit style |
 | `Documentation/EmergencyVet_And_Tracking_Reference.md` | Porting guide for Emergency Vet + Call Tracking features (Equine Edition) |
+| `ClaudeCode_Session164_AndroidJSONSchema.md` | Finalized JSON schema for shared content files (toxins.json / diseases.json), enum values, migration plan |
 
 **For entry editing sessions:** Read `PetToxic_Database_Audit_Rules_ClaudeCode.md` for quick rules or `PetToxic_Database_Audit_Rules.md` for full details. Use `EntryReferenceDocument.md` to look up UUIDs and verify cross-references.
 
