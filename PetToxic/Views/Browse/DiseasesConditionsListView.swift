@@ -4,10 +4,13 @@ struct DiseasesConditionsListView: View {
     @Binding var navigationPath: NavigationPath
     @Environment(BrowseNavigationContext.self) private var navContext
     @Environment(\.dismiss) private var dismiss
+    @ObservedObject private var proSettings = ProSettings.shared
     @AppStorage("gridColumnCount") private var columnCount: Int = 2
     @AppStorage("entryViewMode") private var isGridView: Bool = true
 
     @State private var selectedSpecies: Species? = nil
+    @State private var showProUpsell = false
+    @State private var showUpgradeSheet = false
 
     private let diseaseService = DiseasesConditionsService.shared
 
@@ -76,20 +79,44 @@ struct DiseasesConditionsListView: View {
                             if isGridView {
                                 LazyVGrid(columns: columns, spacing: 8) {
                                     ForEach(section.items) { item in
-                                        NavigationLink(value: CategoryEntry(item: item, sourceCategory: .diseasesAndConditions)) {
-                                            diseaseGridCard(item: item)
+                                        if proSettings.isPro {
+                                            NavigationLink(value: CategoryEntry(item: item, sourceCategory: .diseasesAndConditions)) {
+                                                diseaseGridCard(item: item)
+                                            }
+                                            .buttonStyle(.plain)
+                                        } else {
+                                            Button { showProUpsell = true } label: {
+                                                diseaseGridCard(item: item)
+                                                    .overlay(
+                                                        RoundedRectangle(cornerRadius: 12)
+                                                            .fill(Color.black.opacity(0.4))
+                                                    )
+                                                    .overlay(
+                                                        Image(systemName: "lock.fill")
+                                                            .foregroundColor(.white.opacity(0.6))
+                                                            .font(.title3)
+                                                    )
+                                            }
+                                            .buttonStyle(.plain)
                                         }
-                                        .buttonStyle(.plain)
                                     }
                                 }
                                 .padding(.horizontal, 16)
                             } else {
                                 LazyVStack(spacing: 4) {
                                     ForEach(section.items) { item in
-                                        NavigationLink(value: CategoryEntry(item: item, sourceCategory: .diseasesAndConditions)) {
-                                            diseaseListRow(item: item, species: section.species)
+                                        if proSettings.isPro {
+                                            NavigationLink(value: CategoryEntry(item: item, sourceCategory: .diseasesAndConditions)) {
+                                                diseaseListRow(item: item, species: section.species)
+                                            }
+                                            .buttonStyle(.plain)
+                                        } else {
+                                            Button { showProUpsell = true } label: {
+                                                diseaseListRow(item: item, species: section.species)
+                                                    .opacity(0.5)
+                                            }
+                                            .buttonStyle(.plain)
                                         }
-                                        .buttonStyle(.plain)
                                     }
                                 }
                             }
@@ -138,6 +165,15 @@ struct DiseasesConditionsListView: View {
         }
         .onChange(of: selectedSpecies) { _, _ in
             navContext.updateVisibleEntries(flattenedEntries)
+        }
+        .alert("Pro Feature", isPresented: $showProUpsell) {
+            Button("Learn More") { showUpgradeSheet = true }
+            Button("Not Now", role: .cancel) { }
+        } message: {
+            Text("Unlock detailed disease and condition entries for all species. Upgrade to Pro for full access.")
+        }
+        .sheet(isPresented: $showUpgradeSheet) {
+            UpgradeView()
         }
     }
 

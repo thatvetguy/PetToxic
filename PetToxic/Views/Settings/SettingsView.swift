@@ -40,8 +40,13 @@ struct SettingsView: View {
                                     Image(systemName: "crown.fill")
                                         .foregroundStyle(.yellow)
                                         .frame(width: 24)
-                                    Text("Upgrade to Pro")
-                                        .foregroundStyle(.white)
+                                    VStack(alignment: .leading, spacing: 2) {
+                                        Text("Unlock Pro")
+                                            .foregroundStyle(.white)
+                                        Text("One-time purchase")
+                                            .font(.caption)
+                                            .foregroundStyle(.white.opacity(0.5))
+                                    }
                                     Spacer()
                                     Image(systemName: "chevron.right")
                                         .font(.footnote.weight(.semibold))

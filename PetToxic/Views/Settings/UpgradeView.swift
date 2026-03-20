@@ -83,6 +83,16 @@ struct UpgradeView: View {
                 .font(.subheadline)
                 .foregroundColor(.white.opacity(0.7))
                 .multilineTextAlignment(.center)
+
+            if !proSettings.hasPurchasedPro {
+                HStack(spacing: 6) {
+                    Image(systemName: "checkmark.seal.fill")
+                        .foregroundColor(.green)
+                    Text("One-time purchase. No subscription. Yours forever.")
+                        .font(.caption)
+                        .foregroundColor(.white.opacity(0.6))
+                }
+            }
         }
         .padding(.top, 8)
     }
@@ -279,7 +289,7 @@ struct UpgradeView: View {
                     ProgressView()
                         .tint(.white)
                 } else {
-                    Text("Buy \(label) \u{2014} \(displayPrice)")
+                    Text("Unlock \(label) \u{2014} \(displayPrice)")
                         .fontWeight(.semibold)
                 }
             }

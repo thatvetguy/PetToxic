@@ -51,8 +51,19 @@ struct BrowseView: View {
                             // Normal category grid
                             LazyVGrid(columns: columns, spacing: 16) {
                                 ForEach(Category.allCases) { category in
-                                    if category.isProLocked && !proSettings.isPro {
-                                        // Locked: show as button with upsell
+                                    if category == .diseasesAndConditions {
+                                        // D&C: always navigable, entries locked for non-Pro
+                                        NavigationLink(value: "diseasesConditionsList") {
+                                            CategoryGridItem(
+                                                category: category,
+                                                itemCount: viewModel.itemCount(for: category),
+                                                isLocked: !proSettings.isPro
+                                            )
+                                        }
+                                        .buttonStyle(.plain)
+                                        .disabled(isSwipeBlocking)
+                                    } else if category.isProLocked && !proSettings.isPro {
+                                        // Other locked categories: show as button with upsell
                                         Button {
                                             showProUpsell = true
                                         } label: {
@@ -60,16 +71,6 @@ struct BrowseView: View {
                                                 category: category,
                                                 itemCount: viewModel.itemCount(for: category),
                                                 isLocked: true
-                                            )
-                                        }
-                                        .buttonStyle(.plain)
-                                        .disabled(isSwipeBlocking)
-                                    } else if category == .diseasesAndConditions {
-                                        // Pro user: navigate to disease list
-                                        NavigationLink(value: "diseasesConditionsList") {
-                                            CategoryGridItem(
-                                                category: category,
-                                                itemCount: viewModel.itemCount(for: category)
                                             )
                                         }
                                         .buttonStyle(.plain)
