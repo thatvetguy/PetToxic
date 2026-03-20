@@ -29,8 +29,8 @@ Native iOS reference app for pet owners to quickly look up toxicity information.
 
 ### Content Formatting Gotchas
 
-- **Scientific names must be italicized in entry text.** Use markdown italic syntax (`*Genus species*`) in `description` and `toxicityInfo` fields. Every plant/food entry should have at least the genus name italicized in the description. Use abbreviated form after first mention (e.g., `*Aconitum napellus*` first, then `*A. napellus*`). This convention was established during the Session 165 plant/food audit — all existing entries have been updated.
-- **Glossary highlighting is first-mention-only.** `GlossaryStyledText` tracks which terms have been highlighted across all paragraphs in an entry and only highlights the first occurrence of each glossary term. This prevents cluttered teal highlighting in long entries. The glossary `searchKeywords` were also pruned in Session 165 — common words like "vomiting", "liver", "kidney", "drooling", "symptoms" were removed to reduce over-highlighting.
+- **Scientific names must be italicized in entry text.** Use markdown italic syntax (`*Genus species*`) in `description` and `toxicityInfo` fields. Every plant/food entry should have at least the genus name italicized in the description. Use abbreviated form after first mention (e.g., `*Aconitum napellus*` first, then `*A. napellus*`). This convention was established during the March 2026 plant/food audit — all existing entries have been updated.
+- **Glossary highlighting is first-mention-only.** `GlossaryStyledText` tracks which terms have been highlighted across all paragraphs in an entry and only highlights the first occurrence of each glossary term. This prevents cluttered teal highlighting in long entries. The glossary `searchKeywords` were also pruned in March 2026 — common words like "vomiting", "liver", "kidney", "drooling", "symptoms" were removed to reduce over-highlighting.
 - **No markdown list syntax in `description` or `toxicityInfo` fields.** Lines starting with `- ` (markdown lists) use single `\n` between items. `GlossaryStyledText` splits on `\n\n` for paragraph breaks, and `AttributedString(markdown:)` swallows single `\n`, causing list items to run together with no visible separation. **Instead:** use `\n\n`-separated paragraphs with bold headers (`**EARS:**`, `**NOSE:**`, etc.) or convert short lists to inline prose. This applies to `DatabaseService.swift` and `DiseasesConditionsService.swift`. The `symptoms` and `preventionTips` arrays are unaffected — they render as individual list rows.
 
 ### SwiftUI Navigation & Gesture Gotchas
@@ -274,4 +274,4 @@ PetToxic/
 
 ---
 
-*Last Updated: March 2026 (Session 165)*
+*Last Updated: March 2026*
