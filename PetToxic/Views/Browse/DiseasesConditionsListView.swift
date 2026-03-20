@@ -30,9 +30,12 @@ struct DiseasesConditionsListView: View {
             let items = diseaseService.entries(for: species).sorted {
                 let lhsInfectious = diseaseService.isInfectious($0)
                 let rhsInfectious = diseaseService.isInfectious($1)
-                if lhsInfectious != rhsInfectious {
-                    return lhsInfectious
-                }
+                let lhsHusbandry = diseaseService.isHusbandry($0)
+                let rhsHusbandry = diseaseService.isHusbandry($1)
+                // Husbandry always last
+                if lhsHusbandry != rhsHusbandry { return rhsHusbandry }
+                // Infectious before conditions
+                if lhsInfectious != rhsInfectious { return lhsInfectious }
                 return $0.name.localizedCaseInsensitiveCompare($1.name) == .orderedAscending
             }
             return items.isEmpty ? nil : (species: species, items: items)

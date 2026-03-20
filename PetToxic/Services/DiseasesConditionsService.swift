@@ -34,9 +34,21 @@ class DiseasesConditionsService {
         "1D000001-0000-0000-0000-000000000045",  // Small Mammal Husbandry Guide
     ]
 
+    /// UUIDs of husbandry guide entries (Type 2)
+    private static let husbandryEntryIDs: Set<String> = [
+        "1D000001-0000-0000-0000-000000000043",  // Reptile Husbandry Guide
+        "1D000001-0000-0000-0000-000000000044",  // Bird Husbandry Guide
+        "1D000001-0000-0000-0000-000000000045",  // Small Mammal Husbandry Guide
+    ]
+
     /// Whether an entry is an infectious disease (Type 1)
     func isInfectious(_ item: ToxicItem) -> Bool {
         !Self.nonInfectiousEntryIDs.contains(item.id.uuidString)
+    }
+
+    /// Whether an entry is a husbandry guide (Type 2)
+    func isHusbandry(_ item: ToxicItem) -> Bool {
+        Self.husbandryEntryIDs.contains(item.id.uuidString)
     }
 
     // MARK: - Disease Data
