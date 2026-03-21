@@ -336,7 +336,7 @@ class GlossaryService {
             definition: "Loose, watery, or frequent bowel movements. Common with GI toxins and irritants. Can lead to dehydration, especially in small pets. Bloody diarrhea (bright red or dark/tarry) is more serious and indicates GI bleeding that requires prompt veterinary attention.",
             category: .symptoms,
             relatedTerms: ["Melena", "Hematochezia", "Dehydration"],
-            searchKeywords: ["loose stool", "watery stool", "runny poop", "bloody stool"]
+            searchKeywords: ["loose stool", "watery stool", "runny poop"]
         ),
 
         // ══════════════════════════════════════════════════════════════
@@ -410,7 +410,7 @@ class GlossaryService {
             definition: "Dangerously elevated body temperature not caused by fever. Can result from heat stroke, certain toxins (like hops or stimulants), or seizures. Normal temperature for dogs and cats is 101-102.5°F. Hyperthermia above 104°F is an emergency requiring immediate cooling and veterinary care.",
             category: .conditions,
             relatedTerms: ["Hypothermia"],
-            searchKeywords: ["high temperature", "overheating", "heat stroke", "fever"]
+            searchKeywords: ["high temperature", "overheating", "heat stroke"]
         ),
 
         GlossaryTerm(
@@ -513,7 +513,7 @@ class GlossaryService {
             definition: "A slowing of brain and nervous system activity. Signs include drowsiness, reduced alertness, slow or shallow breathing, weakness, and in severe cases, loss of consciousness. Many toxins cause CNS depression, including sedatives, alcohol, and certain plants.",
             category: .symptoms,
             relatedTerms: ["CNS", "Lethargy", "Ataxia"],
-            searchKeywords: ["sedation", "drowsy", "unresponsive", "depressed"]
+            searchKeywords: ["sedation", "unresponsive"]
         ),
 
         // 42. Hematemesis
@@ -568,7 +568,7 @@ class GlossaryService {
             definition: "Sudden inability to stand or walk, often falling to the ground. May be caused by heart problems, severe weakness, low blood pressure, blood loss, or neurological issues. Collapse is always an emergency requiring immediate veterinary care.",
             category: .symptoms,
             relatedTerms: ["Hypotension", "Bradycardia", "Lethargy"],
-            searchKeywords: ["falling down", "can't stand", "fainting", "syncope"]
+            searchKeywords: ["falling down", "can't stand", "syncope"]
         ),
 
         // 47. Mucous Membranes
@@ -634,7 +634,7 @@ class GlossaryService {
             definition: "Taking a substance into the body by swallowing (eating or drinking). This is the most common route of poisoning in pets. The substance then enters the digestive system where it may be absorbed into the bloodstream.",
             category: .general,
             relatedTerms: ["GI Tract", "Decontamination", "Emesis"],
-            searchKeywords: ["swallowed", "chewed"]
+            searchKeywords: nil
         ),
 
         // 53. Dermal Exposure
@@ -645,7 +645,7 @@ class GlossaryService {
             definition: "Contact with a toxic substance through the skin. Some toxins can be absorbed through skin, causing local irritation or systemic (whole-body) effects. Pets may also ingest the substance when grooming contaminated fur. Bathing is often recommended to remove the substance.",
             category: .general,
             relatedTerms: ["Decontamination"],
-            searchKeywords: ["skin contact", "skin exposure", "topical", "fur contamination", "touched"]
+            searchKeywords: ["skin contact", "skin exposure", "topical", "fur contamination"]
         ),
 
         // 54. Inhalation
@@ -656,7 +656,7 @@ class GlossaryService {
             definition: "Breathing a substance into the lungs. Inhaled toxins can cause respiratory irritation, difficulty breathing, or systemic effects after being absorbed into the bloodstream through the lungs. Birds are especially sensitive to inhaled toxins. Moving the pet to fresh air is an important first step.",
             category: .general,
             relatedTerms: ["Dyspnea", "Tachypnea"],
-            searchKeywords: ["breathing in", "breathed", "fumes", "smoke", "vapors", "airborne"]
+            searchKeywords: ["breathing in", "fumes", "smoke", "vapors", "airborne"]
         ),
 
         // 55. Aspiration
@@ -704,7 +704,7 @@ class GlossaryService {
             definition: "Loss of appetite or refusal to eat. In veterinary medicine, this simply means the pet isn't eating—it's one of the most common signs that something is wrong. Anorexia lasting more than 24 hours (or less in small pets) warrants veterinary attention.",
             category: .symptoms,
             relatedTerms: ["Lethargy", "Vomiting", "GI Tract"],
-            searchKeywords: ["not eating", "won't eat", "refusing food", "off food"]
+            searchKeywords: nil
         ),
 
         // 59. Polyuria
@@ -759,7 +759,7 @@ class GlossaryService {
             definition: "Dangerous loss of body fluids, often from vomiting, diarrhea, or not drinking. Signs include dry or tacky gums, skin that stays 'tented' when pinched, sunken eyes, lethargy, and decreased urination. Dehydration can quickly become serious, especially in small pets.",
             category: .conditions,
             relatedTerms: ["Vomiting", "Diarrhea", "IV Fluids", "Lethargy"],
-            searchKeywords: ["fluid loss", "not drinking"]
+            searchKeywords: ["fluid loss"]
         ),
 
         // 64. Renal
@@ -906,7 +906,7 @@ class GlossaryService {
             definition: "When the severity of effects increases with the amount of exposure. Most toxins are dose-dependent—a tiny amount may cause mild symptoms while a large amount causes severe illness. This is why the amount ingested matters when assessing poisoning risk.",
             category: .general,
             relatedTerms: ["Acute", "Toxicosis"],
-            searchKeywords: ["amount matters", "how much", "quantity"]
+            searchKeywords: ["amount matters"]
         ),
 
         // 77. Idiosyncratic Reaction
@@ -1031,7 +1031,7 @@ class GlossaryService {
             definition: "Tiny pinpoint red or purple spots on the skin, gums, or whites of the eyes caused by bleeding under the surface. A sign of clotting problems or platelet issues. Often seen with anticoagulant rodenticide poisoning. Look like small dots that don't fade when pressed.",
             category: .symptoms,
             relatedTerms: ["Coagulopathy", "Platelets", "Hematuria"],
-            searchKeywords: ["red spots", "purple spots", "bruising", "bleeding spots"]
+            searchKeywords: ["red spots", "purple spots", "bleeding spots"]
         ),
 
         // 88. Ecchymosis
@@ -1042,7 +1042,7 @@ class GlossaryService {
             definition: "Bruising—larger areas of bleeding under the skin that appear as purple, blue, or discolored patches. Like petechiae, indicates clotting problems. May appear on the belly, inner thighs, gums, or ear flaps. A serious sign requiring immediate veterinary care.",
             category: .symptoms,
             relatedTerms: ["Petechiae", "Coagulopathy", "Platelets"],
-            searchKeywords: ["bruising", "bruises", "discoloration", "purple patches"]
+            searchKeywords: ["discoloration", "purple patches"]
         ),
 
         // 89. Nystagmus
@@ -1130,7 +1130,7 @@ class GlossaryService {
             definition: "Ongoing observation and testing to track a patient's condition over time. After toxin exposure, monitoring may include checking vital signs, blood work, kidney/liver values, and watching for delayed symptoms. Some toxins require monitoring for days to weeks even if the pet initially seems fine.",
             category: .treatment,
             relatedTerms: ["Supportive Care", "Prognosis", "Latent Period"],
-            searchKeywords: ["observation", "follow-up", "rechecking"]
+            searchKeywords: nil
         ),
 
         // 97. Baseline
@@ -1253,7 +1253,7 @@ class GlossaryService {
             definition: "Fainting—a brief loss of consciousness due to temporarily reduced blood flow to the brain. The pet suddenly collapses but typically recovers within seconds to minutes. Causes include heart problems, severe arrhythmias, and certain toxins. Different from seizures (no paddling or muscle activity during syncope).",
             category: .symptoms,
             relatedTerms: ["Collapse", "Arrhythmia", "Bradycardia", "Hypotension"],
-            searchKeywords: ["fainting", "fainted", "passed out", "blacked out"]
+            searchKeywords: ["passed out", "blacked out"]
         ),
 
         // 109. Hypocalcemia
