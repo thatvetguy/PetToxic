@@ -2434,15 +2434,24 @@ class GlossaryService {
 
     // MARK: - Term Detection (Phase 2)
 
+    /// Cache for findTerms results. Keyed by text hash to avoid re-scanning
+    /// the same content on every SwiftUI view render.
+    private var termCache: [Int: [GlossaryTerm]] = [:]
+
     /// Finds all glossary terms present in the given text (whole word matches only)
     /// - Parameter text: The text to scan for glossary terms
     /// - Returns: Array of GlossaryTerm objects found, sorted alphabetically by term name
     func findTerms(in text: String) -> [GlossaryTerm] {
         guard !text.isEmpty else { return [] }
 
+        let cacheKey = text.hashValue
+        if let cached = termCache[cacheKey] {
+            return cached
+        }
+
         let lowercasedText = text.lowercased()
 
-        return terms.filter { term in
+        let result = terms.filter { term in
             // Check main term name with word boundaries
             if containsWholeWord(lowercasedText, word: term.term.lowercased()) {
                 return true
@@ -2458,6 +2467,9 @@ class GlossaryService {
             return false
         }
         .sorted { $0.term.localizedCaseInsensitiveCompare($1.term) == .orderedAscending }
+
+        termCache[cacheKey] = result
+        return result
     }
 
     /// Checks if text contains a word as a whole word (not as part of another word)

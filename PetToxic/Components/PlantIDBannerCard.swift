@@ -44,6 +44,11 @@ struct PlantIDBannerCard: View {
                     Text("Facebook group \u{00B7} Free \u{00B7} Facebook account required")
                         .font(.caption2)
                         .foregroundColor(.white.opacity(0.4))
+
+                    Text("Not affiliated with Pet Toxic")
+                        .font(.caption2)
+                        .italic()
+                        .foregroundColor(.white.opacity(0.3))
                 }
                 .padding(12)
             }

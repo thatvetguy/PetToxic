@@ -8,9 +8,15 @@ class DatabaseService {
     static let severityExplainerId = UUID(uuidString: "B3F1A2D4-E5C6-47F8-9A0B-1C2D3E4F5A6B")!
 
     private var allItems: [ToxicItem] = []
+    private var itemIndex: [UUID: ToxicItem] = [:]
 
     private init() {
         loadSampleData()
+        buildIndex()
+    }
+
+    private func buildIndex() {
+        itemIndex = Dictionary(allItems.map { ($0.id, $0) }, uniquingKeysWith: { first, _ in first })
     }
 
     private func loadSampleData() {
@@ -16767,7 +16773,7 @@ Encounters peak in **spring and fall** when porcupines are more active with fora
     }
 
     func item(withId id: UUID) -> ToxicItem? {
-        allItems.first { $0.id == id }
+        itemIndex[id]
     }
 
     func item(withIdString idString: String) -> ToxicItem? {
