@@ -11,6 +11,9 @@ DerivedData/
 .build/
 .swiftpm/
 
+# Build artifacts
+Scripts/extract_content
+
 # Sensitive
 *.p12
 *.mobileprovision
