@@ -228,6 +228,11 @@ PetToxic/
 │   └── PetToxicUITests.swift
 ├── CloudflareWorker/
 │   └── worker.js                      # Anonymous event tracking worker
+├── Content/
+│   ├── toxins.json                    # Extracted toxin data (198 entries) — shared with Android
+│   └── diseases.json                  # Extracted disease data (49 entries) — shared with Android
+├── Scripts/
+│   └── extract_content.swift          # Compiles against Swift sources, exports JSON
 ├── Documentation/
 │   ├── DataModels.md
 │   ├── DesignDocument.md
@@ -271,6 +276,33 @@ PetToxic/
 | Diseases & Conditions list | `Views/Browse/DiseasesConditionsListView.swift` (browsable by free users, entries Pro-locked) |
 | Upgrade/purchase flow | `Views/Settings/UpgradeView.swift` |
 | Severity explainer entry | `Services/DatabaseService.swift` (UUID: `B3F1A2D4-E5C6-47F8-9A0B-1C2D3E4F5A6B`) |
+| JSON content (shared) | `Content/toxins.json`, `Content/diseases.json` |
+| Re-extract JSON from Swift | `Scripts/extract_content.swift` — compile & run (see header comment for usage) |
+
+---
+
+## Android App
+
+The Android version lives in a **separate repo** at `~/Desktop/PetToxicAndroid/` (Kotlin + Jetpack Compose, package `com.pettoxic.android`).
+
+Content is shared via the JSON files in `Content/`. After editing entries in `DatabaseService.swift` or `DiseasesConditionsService.swift`, re-run the extraction script to regenerate the JSON files, then copy them to the Android project's `app/src/main/assets/`.
+
+**Extraction workflow:**
+```bash
+# From this repo's root:
+swiftc -framework SwiftUI \
+  PetToxic/Models/Enums.swift \
+  PetToxic/Models/ToxicItem.swift \
+  PetToxic/Models/SpeciesRisk.swift \
+  PetToxic/Services/DatabaseService.swift \
+  PetToxic/Services/DiseasesConditionsService.swift \
+  Scripts/extract_content.swift \
+  -o Scripts/extract_content
+./Scripts/extract_content
+
+# Then copy to Android:
+cp Content/toxins.json Content/diseases.json ~/Desktop/PetToxicAndroid/app/src/main/assets/
+```
 
 ---
 
