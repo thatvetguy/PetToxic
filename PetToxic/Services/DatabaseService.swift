@@ -6668,7 +6668,7 @@ There is no specific antidote for acrylamide toxicity. Because signs can progres
 
             // MARK: - Magnets
             ToxicItem(
-                id: UUID(uuidString: "e1f2a3b4-5c6d-7e8f-9a0b-1c2d3e4f5a6b")!,
+                id: UUID(uuidString: "a3b4c5d6-1e2f-4a8b-9c0d-7e6f5a4b3c2d")!,
                 name: "Magnets",
                 alternateNames: [
                     "Magnet",
@@ -13956,7 +13956,7 @@ Cats rarely eat corn cobs due to selective eating habits.
                     "BluePearl Specialty and Emergency Pet Hospital",
                     "Merck Veterinary Manual"
                 ],
-                relatedEntries: ["00112233-4455-6677-8899-aabbccddef03", "f1369ae0-b97d-424d-98b7-b46a9b245109", "59cf7dc4-5d83-4811-97f1-ce1d0162cd28", "e1f2a3b4-5c6d-7e8f-9a0b-1c2d3e4f5a6b", "00112233-4455-6677-8899-aabbccddef21", "a2c4e6f8-1b3d-4e5f-8a9b-0c1d2e3f4a5b", "c7d8e9f0-1a2b-4c3d-8e4f-5a6b7c8d9e0f"]  // + Cicadas, Holiday Hazards umbrella
+                relatedEntries: ["00112233-4455-6677-8899-aabbccddef03", "f1369ae0-b97d-424d-98b7-b46a9b245109", "59cf7dc4-5d83-4811-97f1-ce1d0162cd28", "a3b4c5d6-1e2f-4a8b-9c0d-7e6f5a4b3c2d", "00112233-4455-6677-8899-aabbccddef21", "a2c4e6f8-1b3d-4e5f-8a9b-0c1d2e3f4a5b", "c7d8e9f0-1a2b-4c3d-8e4f-5a6b7c8d9e0f"]  // + Cicadas, Holiday Hazards umbrella
             ),
 
             // MARK: - Foxtails (Grass Awns)
