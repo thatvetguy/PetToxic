@@ -16,6 +16,11 @@ enum AppTrackingService {
         send(["event": "share"])
     }
 
+    /// Record a generic event by name (sent as-is, no prefix).
+    static func recordEvent(_ event: String) {
+        send(["event": event])
+    }
+
     /// Record a search that returned zero results.
     static func recordSearchMiss(term: String) {
         send(["event": "search_miss", "term": term])

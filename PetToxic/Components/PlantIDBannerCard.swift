@@ -6,6 +6,7 @@ struct PlantIDBannerCard: View {
 
     var body: some View {
         Button {
+            AppTrackingService.recordEvent("plant_id_tap")
             UIApplication.shared.open(groupURL)
         } label: {
             VStack(spacing: 0) {
