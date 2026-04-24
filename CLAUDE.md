@@ -3,6 +3,10 @@
 ## Overview
 Native iOS reference app for pet owners to quickly look up toxicity information. Works offline. Never provides medical advice.
 
+## Reference Hubs
+- `~/Desktop/SASI_Projects/CLAUDE.md` — portfolio context, accounts, git conventions, **Core Principles for Veterinary Reference Apps** (shared across all PetToxic apps).
+- `~/Desktop/SASI_Projects/Gotchas_CrossApp.md` — cross-app store submission, tooling, content-safety landmines. Each entry has a stable ID (e.g. `GC-APPL-002`, `GC-SAFE-001`); cite by ID rather than restating. See the top of that file for the promotion rule (when a gotcha belongs here vs. in the hub).
+
 ## Technical Stack
 - **Language:** Swift 5.9+
 - **UI:** SwiftUI
@@ -55,32 +59,12 @@ Native iOS reference app for pet owners to quickly look up toxicity information.
 ---
 
 ## Core Principles
+See **Core Principles for Veterinary Reference Apps** in `~/Desktop/SASI_Projects/CLAUDE.md` (offline-first, no medical advice, always-visible disclaimer, speed, accessibility, authoritative content).
 
-### 1. OFFLINE FIRST
-All data bundled with app. Users may be in emergencies without connectivity.
-
-### 2. NO MEDICAL ADVICE
-Never provide: dosage calculations, inducing vomiting instructions, home treatments, prognosis, medication recommendations.
-
-### 3. ALWAYS DISCLAIM
-Every article view must display the legal disclaimer prominently, visible without scrolling.
-
-### 4. SPEED
-Information accessible within 2-3 taps. Users may be panicked.
-
-### 5. ACCESSIBILITY
-Dynamic Type, VoiceOver, high contrast, 44pt minimum touch targets.
-
----
-
-## Key Constraints
-
-**Do NOT include:**
-- Dosage or "safe amount" calculations
-- Treatment instructions of any kind
-- User accounts or cloud sync
-- Advertisements or analytics tracking
-- In-app purchases (v1.0)
+**PetToxic-specific additions:**
+- Information accessible within 2-3 taps — users may be panicked.
+- 44pt minimum touch targets (iOS HIG).
+- No user accounts, no cloud sync, no analytics tracking, no ads.
 
 ---
 
@@ -105,143 +89,8 @@ Dynamic Type, VoiceOver, high contrast, 44pt minimum touch targets.
 
 ---
 
-## Branch Strategy
-- `main` — All work happens here
-- `feature/[name]` — Short-lived branches for risky changes (big UI refactors, new features that could break things)
-
-**Default behavior:** Work directly on `main`. Only create a feature branch when a change could break existing functionality or when explicitly requested by the user.
-
-## Commit Format
-- `feat:` New features
-- `fix:` Bug fixes
-- `content:` Toxicity data additions
-- `docs:` Documentation updates
-
-**Example commit message:**
-```
-feat: Session 75 Garage & Garden Audit - Mothballs, Expanding Glues
-
-- Mothballs: Remove VIN, remove "safe amount" language
-- Expanding Glues: Convert to Informational entry, add 3 species
-```
-
----
-
-## Plan Mode
-- Keep plans concise. Sacrifice grammar for brevity.
-- End each plan with unresolved questions, if any.
-
----
-
-## Questions Before Coding
-
-1. Does this feature work offline?
-2. Could this be construed as medical advice?
-3. Is the disclaimer visible?
-4. Does it meet accessibility requirements?
-5. Is the code testable?
-6. Correct branch?
-
-**For entry edits:** See audit checklist in `PetToxic_Database_Audit_Rules.md`.
-
----
-
 ## Project Structure
-
-```
-PetToxic/
-├── PetToxic/
-│   ├── App/
-│   │   └── PetToxicApp.swift          # App entry point
-│   ├── Components/                     # Reusable UI components
-│   │   ├── DisclaimerView.swift       # Legal disclaimer banner
-│   │   ├── EmptyStateView.swift
-│   │   ├── LoadingView.swift
-│   │   ├── EmergencyVetButton.swift   # Global emergency vet card (free)
-│   │   ├── PlantIDBannerCard.swift   # Poisons Help FB group link (Plants + Emergency)
-│   │   ├── PoisonControlButton.swift  # Emergency call buttons + tracking
-│   │   ├── RelatedEntryButton.swift
-│   │   ├── SeverityBadge.swift        # Toxicity level indicator
-│   │   ├── TrialBannerView.swift      # 30-day trial banner (4 states)
-│   │   └── VaccinationSummaryCard.swift # Vaccine status card (home screen)
-│   ├── Models/
-│   │   ├── Enums.swift                # Species, Severity, Category (incl. isProLocked), SeverityGroupLevel, MatchType
-│   │   ├── NavigationContext.swift     # CategoryEntry, SeverityEntry, BrowseNavigationContext
-│   │   ├── SearchResult.swift
-│   │   ├── SpeciesRisk.swift
-│   │   ├── ToxicItem.swift            # Main toxin data model
-│   │   └── VaccinationRecord.swift    # SwiftData model for vaccine records
-│   ├── Resources/
-│   │   ├── Assets.xcassets/           # App icons, colors, images
-│   │   ├── Info.plist
-│   │   └── LaunchScreen.storyboard
-│   ├── Services/
-│   │   ├── AppearanceSettings.swift   # Dark/light mode (default: dark)
-│   │   ├── BookmarkService.swift      # Save favorites
-│   │   ├── CallTrackingService.swift  # Anonymous event tracking (Cloudflare Worker)
-│   │   ├── DatabaseService.swift      # Toxin data (hardcoded, SQLite planned)
-│   │   ├── DiseasesConditionsService.swift # Pro-locked disease/condition entries
-│   │   ├── EmergencyVetSettings.swift # Global emergency vet (UserDefaults singleton)
-│   │   ├── SearchService.swift        # FTS5 search
-│   │   ├── TrialManager.swift         # 30-day Pro trial (Keychain-backed)
-│   │   └── VaccinePresets.swift       # Species-keyed vaccine presets & status enum
-│   ├── Utilities/
-│   │   ├── Constants.swift
-│   │   └── Extensions/
-│   │       └── Color+Hex.swift
-│   ├── ViewModels/
-│   │   ├── ArticleViewModel.swift
-│   │   ├── BrowseViewModel.swift
-│   │   ├── SavedViewModel.swift
-│   │   └── SearchViewModel.swift
-│   └── Views/
-│       ├── MainTabView.swift          # Tab bar controller
-│       ├── Article/
-│       │   ├── ArticleDetailView.swift # Toxin detail page + share
-│       │   ├── SeveritySection.swift
-│       │   └── SymptomsListView.swift
-│       ├── Browse/
-│       │   ├── BrowseView.swift
-│       │   ├── CategoryGridItem.swift
-│       │   └── DiseasesConditionsListView.swift # Pro-locked species-grouped disease list
-│       ├── Emergency/
-│       │   └── EmergencyView.swift    # Poison control + emergency vet contacts
-│       ├── Saved/
-│       │   ├── BookmarksListView.swift
-│       │   ├── HistoryListView.swift
-│       │   └── SavedView.swift
-│       ├── MyPets/
-│       │   ├── PetFormView.swift      # Pet profile form
-│       │   ├── PetListView.swift
-│       │   ├── PetPhotoPickerView.swift
-│       │   └── VaccinationLogView.swift # Vaccine log + add/edit sheet
-│       ├── Search/
-│       │   ├── SearchResultRow.swift
-│       │   ├── SearchView.swift
-│       │   └── SpeciesFilterView.swift
-│       └── Settings/
-│           ├── EmergencyVetFormView.swift # Emergency vet contact form (Pro)
-│           └── SettingsView.swift     # Appearance toggle
-├── PetToxicTests/
-│   └── PetToxicTests.swift
-├── PetToxicUITests/
-│   └── PetToxicUITests.swift
-├── CloudflareWorker/
-│   └── worker.js                      # Anonymous event tracking worker
-├── Content/
-│   ├── toxins.json                    # Extracted toxin data (198 entries) — shared with Android
-│   └── diseases.json                  # Extracted disease data (49 entries) — shared with Android
-├── Scripts/
-│   └── extract_content.swift          # Compiles against Swift sources, exports JSON
-├── Documentation/
-│   ├── DataModels.md
-│   ├── DesignDocument.md
-│   ├── EmergencyVet_And_Tracking_Reference.md  # Porting guide for Equine Edition
-│   └── Design/
-│       ├── StyleGuide.md
-│       └── UI-Spec.md
-└── CLAUDE.md
-```
+Open the project in Xcode (or `ls PetToxic/` from the repo root). Swift sources live under `PetToxic/` with conventional MVVM folders: `App/`, `Components/`, `Models/`, `Services/`, `ViewModels/`, `Views/`, `Utilities/`, `Resources/`. Cross-platform JSON lives under `Content/`. Extraction script under `Scripts/`. Design/data docs under `Documentation/`. For "where do I edit X?" see the Common File Locations table below.
 
 ---
 
