@@ -55,7 +55,9 @@ onsetTime, symptoms, entrySeverity, speciesRisks, preventionTips, sources, relat
 
 ## 6. Regenerate the JSON and sync to Android — the step everyone forgets
 
-After editing the Swift, the JSON isn't updated until you regenerate it, and Android isn't updated until you copy it. Run this from the repo root (it compiles the content sources + the extractor, runs it, then copies both files to the Android repo):
+After editing the Swift, the JSON isn't updated until you regenerate it, and Android isn't updated until you copy it. Run this from the repo root (it compiles the content sources + the extractor, runs it, then copies both files to the Android repo).
+
+⚠ **These paths are PetToxic-specific — confirm which app you're in before running.** The command below copies to `~/Desktop/PetToxicAndroid`. If you're working on **PetToxic Equine**, do NOT run this block verbatim: it would push equine content into the small-animal Android project. Use the Equine repo's own Swift services and `~/Desktop/PetToxicEquineAndroid` instead (see §8), or confirm the correct source repo + Android target with the user first.
 
 ```bash
 swiftc -framework SwiftUI \
@@ -84,7 +86,7 @@ If the `swiftc` compile fails, your Swift edit has an error — fix it there; a 
 ## 8. Scope notes
 
 - **Diseases/conditions** are Pro-locked and live in `DiseasesConditionsService.swift`; same content boundary, same regenerate-and-sync pipeline.
-- **PetToxic Equine** (`~/Desktop/PetToxicEquine` + `~/Desktop/PetToxicEquineAndroid`) follows this same Swift-source → extract → copy pattern with its own files and its own species scope — reuse this discipline there, but read that app's own rules doc for equine specifics.
+- **PetToxic Equine** (`~/Desktop/PetToxicEquine` + `~/Desktop/PetToxicEquineAndroid`) follows this same Swift-source → extract → copy *discipline*, but every concrete path in this skill is for the small-animal app and must be re-pointed: edit the Equine repo's own Swift services, and the final `cp` must target `~/Desktop/PetToxicEquineAndroid/app/src/main/assets/`, NOT `~/Desktop/PetToxicAndroid`. Confirm the Equine repo's exact service filenames + extract command (they may differ) and read that app's own rules doc for equine species scope before running anything. When in doubt, treat this as a PetToxic-only skill and adapt deliberately.
 - Follow the repo's multi-AI workflow (see `CLAUDE.md` / the SASI `MultiAI_Workflow_Convention.md`): a content change of any size is a natural Codex-review checkpoint.
 
 ## Quick checklist
