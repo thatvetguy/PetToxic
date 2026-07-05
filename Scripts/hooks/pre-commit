@@ -25,12 +25,20 @@ echo "$STAGED" | grep -q '^PetToxic/Services/DiseasesConditionsService.swift$' &
 
 # Guard 2: staged content JSON must pass the validator (new errors only;
 # known pre-existing errors are baselined in Scripts/known_content_errors.txt).
+# Validate the INDEX, not the working tree — they can differ, and the index is
+# what the commit ships. Both files come from the index (git show :path) so the
+# cross-reference check sees exactly the committed pair.
 if echo "$STAGED" | grep -qE '^Content/(toxins|diseases)\.json$'; then
-    echo "Content JSON staged — running validator..."
-    if ! python3 "$REPO_ROOT/Scripts/validate_content.py" --quiet; then
+    echo "Content JSON staged — validating the staged (index) content..."
+    TMP=$(mktemp -d) || exit 1
+    trap 'rm -rf "$TMP"' EXIT
+    git show :Content/toxins.json  > "$TMP/toxins.json"  2>/dev/null || cp "$REPO_ROOT/Content/toxins.json" "$TMP/toxins.json"
+    git show :Content/diseases.json > "$TMP/diseases.json" 2>/dev/null || cp "$REPO_ROOT/Content/diseases.json" "$TMP/diseases.json"
+    if ! python3 "$REPO_ROOT/Scripts/validate_content.py" --content-dir "$TMP" --quiet; then
         echo ""
-        echo "Commit blocked: content validation failed (see errors above)."
-        echo "Fix the entries, or bypass with: git commit --no-verify"
+        echo "Commit blocked: STAGED content failed validation (see errors above)."
+        echo "Note: the staged version is what gets committed — 'git diff --cached Content/' shows it."
+        echo "Fix and re-stage, or bypass with: git commit --no-verify"
         exit 1
     fi
 fi

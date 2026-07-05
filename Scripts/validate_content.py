@@ -171,8 +171,8 @@ def check_entry(entry, kind, filename, report):
     for s in sources if isinstance(sources, list) else []:
         if not is_str(s):
             continue
-        if (re.search(r"\bVIN\b", s) or "Veterinary Information Network" in s) \
-                and "Veterinary Partner" not in s:
+        if (re.search(r"\bVIN\b", s, re.I) or re.search(r"veterinary information network", s, re.I)) \
+                and not re.search(r"veterinary partner", s, re.I):
             report.error(where, f"source '{s}' is a VIN monograph (subscription-only, "
                                 "prohibited); Veterinary Partner citations are fine")
 
@@ -512,6 +512,8 @@ def self_test():
     expect("informational empty species ok", r.errors, "species", should_fire=False)
     r = run_case([_valid_toxin(sources=["Veterinary Partner (VIN): Chocolate", "A", "B"])], [_valid_disease()])
     expect("Veterinary Partner ok", r.errors, "VIN monograph", should_fire=False)
+    r = run_case([_valid_toxin(sources=["veterinary partner (vin): Chocolate", "A", "B"])], [_valid_disease()])
+    expect("veterinary partner lowercase ok", r.errors, "VIN monograph", should_fire=False)
 
     cases = [
         ("bad uuid", [_valid_toxin(id="GYMNOCLA-DUS0-0000-0000-000000000001")], [], "not a valid UUID"),
@@ -528,6 +530,8 @@ def self_test():
         ("empty sources", [_valid_toxin(sources=[])], [], "must list 3+"),
         ("two sources", [_valid_toxin(sources=["A", "B"])], [], "must list 3+"),
         ("VIN monograph", [_valid_toxin(sources=["VIN: Chocolate Toxicosis", "A", "B"])], [], "VIN monograph"),
+        ("VIN lowercase", [_valid_toxin(sources=["vin: Chocolate Toxicosis", "A", "B"])], [], "VIN monograph"),
+        ("VIN spelled out", [_valid_toxin(sources=["veterinary information network — Grapes", "A", "B"])], [], "VIN monograph"),
         ("missing species", [_valid_toxin(speciesRisks=[{"species": "dog", "severity": "high", "notes": None}])], [], "must cover all 5 species"),
         ("dup species", [_valid_toxin(speciesRisks=_valid_toxin()["speciesRisks"] + [{"species": "dog", "severity": "low", "notes": None}])], [], "duplicate species"),
         ("dangling ref", [_valid_toxin(relatedEntries=["11111111-2222-4333-8444-555555555555"])], [], "does not exist in either file"),
