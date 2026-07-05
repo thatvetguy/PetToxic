@@ -38,9 +38,13 @@ ownership of a specific file.
    Swift content change whose regenerated JSON wasn't copied to
    `~/Desktop/PetToxicAndroid/app/src/main/assets/` (platform drift = different
    clinical content shipping on iOS vs Android).
-3. **Validator green.** `python3 Scripts/validate_content.py` must pass (errors = 0)
-   on any content-touching diff. A git pre-commit hook enforces this; treat a
-   `--no-verify` bypass in history as a P1 unless the handoff explains it.
+3. **Validator green.** `python3 Scripts/validate_content.py` must pass with **0 NEW
+   errors** on any content-touching diff — pre-existing errors are acceptable only
+   while listed in `Scripts/known_content_errors.txt` (the baseline, scheduled for
+   deletion during the JSON source-of-truth migration). A git pre-commit hook
+   enforces this and also blocks Swift content-service commits without the
+   regenerated JSON; treat a `--no-verify` bypass or a baseline *addition* in
+   history as a P1 unless the handoff explains it.
 4. **UUID rules.** Entry ids are uppercase hex 8-4-4-4-12; `relatedEntries` should
    match ids exactly (case included). Known debt: 339 legacy lowercase refs, fix
    planned during the JSON source-of-truth migration — don't re-flag it.

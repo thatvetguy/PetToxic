@@ -1,12 +1,31 @@
 #!/bin/sh
-# PetToxic pre-commit hook: validate content JSON before it can be committed.
+# PetToxic pre-commit hook: content integrity checks.
 # Installed copy lives at .git/hooks/pre-commit (git does not version hooks).
 # Reinstall after cloning:  cp Scripts/hooks/pre-commit .git/hooks/pre-commit && chmod +x .git/hooks/pre-commit
 # Bypass in an emergency:   git commit --no-verify
 
 REPO_ROOT="$(git rev-parse --show-toplevel)"
+STAGED="$(git diff --cached --name-only)"
 
-if git diff --cached --name-only | grep -qE '^Content/(toxins|diseases)\.json$'; then
+# Guard 1: Swift content services are the source of truth; committing them
+# without the regenerated JSON ships different content on iOS vs Android.
+fail_drift() {
+    echo "Commit blocked: $1 is staged but $2 is not."
+    echo "Content edits must be extracted and committed together:"
+    echo "  run the extraction (see CLAUDE.md 'Extraction workflow'), then: git add $2"
+    echo "If this Swift change touched NO content (pure code refactor), bypass with: git commit --no-verify"
+    exit 1
+}
+echo "$STAGED" | grep -q '^PetToxic/Services/DatabaseService.swift$' && \
+    ! echo "$STAGED" | grep -q '^Content/toxins.json$' && \
+    fail_drift "DatabaseService.swift" "Content/toxins.json"
+echo "$STAGED" | grep -q '^PetToxic/Services/DiseasesConditionsService.swift$' && \
+    ! echo "$STAGED" | grep -q '^Content/diseases.json$' && \
+    fail_drift "DiseasesConditionsService.swift" "Content/diseases.json"
+
+# Guard 2: staged content JSON must pass the validator (new errors only;
+# known pre-existing errors are baselined in Scripts/known_content_errors.txt).
+if echo "$STAGED" | grep -qE '^Content/(toxins|diseases)\.json$'; then
     echo "Content JSON staged — running validator..."
     if ! python3 "$REPO_ROOT/Scripts/validate_content.py" --quiet; then
         echo ""

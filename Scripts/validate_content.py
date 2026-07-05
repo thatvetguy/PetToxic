@@ -26,6 +26,7 @@ Usage:
 """
 
 import argparse
+import hashlib
 import json
 import re
 import sys
@@ -69,9 +70,9 @@ ONSET_KEYS = {"early", "delayed"}
 # The ONLY advice the app ever gives: practical, commonly accepted first aid,
 # and "seek veterinary care / contact poison control".
 POLICY_PATTERNS = [
-    (re.compile(r"mg/kg", re.I), "dosage threshold (mg/kg)"),
+    (re.compile(r"\b(?:mg|mcg|µg|ug|g)\s*(?:/|per)\s*kg\b", re.I), "dosage threshold (per-kg dose)"),
     (re.compile(r"\bLD-?50\b", re.I), "LD50 data"),
-    (re.compile(r"safe amount", re.I), '"safe amount" language'),
+    (re.compile(r"safe (?:amount|dose|level|quantity)", re.I), '"safe amount/dose" language'),
     (re.compile(r"(generally|very) well tolerated", re.I), '"well tolerated" language'),
     (re.compile(r"prognosis is", re.I), "prognosis statement"),
 ]
@@ -158,13 +159,22 @@ def check_entry(entry, kind, filename, report):
 
     sources = entry.get("sources")
     # The severity-ratings explainer is app UI content, not clinical — the one
-    # entry allowed to have no sources.
+    # entry allowed to have no sources. All others need 3+ (audit rules).
     SEVERITY_EXPLAINER_ID = "B3F1A2D4-E5C6-47F8-9A0B-1C2D3E4F5A6B"
     sources_ok = isinstance(sources, list) and all(is_str(s) for s in sources) and (
-        len(sources) > 0 or entry.get("id") == SEVERITY_EXPLAINER_ID
+        len(sources) >= 3 or entry.get("id") == SEVERITY_EXPLAINER_ID
     )
     if not sources_ok:
-        report.error(where, "'sources' must be a non-empty list of strings")
+        report.error(where, "'sources' must list 3+ publicly accessible sources (audit rules)")
+    # VIN monographs are subscription-only and prohibited; Veterinary Partner
+    # (VIN's public site) is approved source #6 and stays.
+    for s in sources if isinstance(sources, list) else []:
+        if not is_str(s):
+            continue
+        if (re.search(r"\bVIN\b", s) or "Veterinary Information Network" in s) \
+                and "Veterinary Partner" not in s:
+            report.error(where, f"source '{s}' is a VIN monograph (subscription-only, "
+                                "prohibited); Veterinary Partner citations are fine")
 
     ia = entry.get("imageAsset")
     if ia is not None and not is_str(ia):
@@ -212,6 +222,18 @@ def check_entry(entry, kind, filename, report):
     if not isinstance(srs, list):
         report.error(where, "'speciesRisks' must be a list")
         srs = []
+    listed = [sr.get("species") for sr in srs if isinstance(sr, dict)]
+    if len(listed) != len(set(listed)):
+        report.error(where, "duplicate species in speciesRisks")
+    if kind == "toxin":
+        # Audit rule: standard toxin entries cover all 5 species. Informational
+        # entries may have none. Diseases list only susceptible species.
+        covered = set(listed)
+        if entry.get("entrySeverity") is not None and covered != SPECIES:
+            missing = sorted(SPECIES - covered)
+            report.error(where, f"non-informational entry must cover all 5 species; missing: {missing}")
+        elif entry.get("entrySeverity") is None and covered and covered != SPECIES:
+            report.error(where, "informational entry speciesRisks must be empty or cover all 5 species")
     for i, sr in enumerate(srs):
         if not isinstance(sr, dict):
             report.error(where, f"speciesRisks[{i}] must be an object")
@@ -235,19 +257,25 @@ def check_entry(entry, kind, filename, report):
                 if not (is_str(r) and UUID_ANYCASE_RE.match(r)):
                     report.error(where, f"relatedEntries value '{r}' is not a valid UUID")
 
-    # Text formatting rules (CLAUDE.md: Content Formatting Gotchas)
+    # Text formatting rules (CLAUDE.md: Content Formatting Gotchas).
+    # The [content:HASH] suffix ties a baselined error to the exact field text:
+    # ANY change to a broken field (including a new regression inside it)
+    # changes the hash, invalidating the baseline entry so it fails as new.
     for f in ("description", "toxicityInfo"):
         txt = entry.get(f)
         if not is_str(txt):
             continue
+        digest = hashlib.sha256(txt.encode("utf-8")).hexdigest()[:8]
         if MD_LIST_RE.search(txt):
             report.error(
                 where,
                 f"'{f}' contains markdown list syntax ('- ' line) — renders with no "
-                "separation in the app; use \\n\\n paragraphs with bold headers instead",
+                "separation in the app; use \\n\\n paragraphs with bold headers instead "
+                f"[content:{digest}]",
             )
         if txt.count("*") % 2 == 1:
-            report.error(where, f"'{f}' has an odd number of '*' — unbalanced markdown emphasis")
+            report.error(where, f"'{f}' has an odd number of '*' — unbalanced markdown "
+                                f"emphasis [content:{digest}]")
 
     # Editorial policy warnings (veterinary judgment required — never blocking)
     for fname, txt in text_fields(entry):
@@ -423,9 +451,13 @@ def _valid_toxin(**over):
         "onsetTime": {"early": "Soon.", "delayed": None},
         "symptoms": ["Vomiting"],
         "entrySeverity": "moderate",
-        "speciesRisks": [{"species": "dog", "severity": "high", "notes": None}],
+        "speciesRisks": [
+            {"species": s, "severity": "high", "notes": None}
+            for s in ("dog", "cat", "smallMammal", "bird", "reptile")
+        ],
         "preventionTips": ["Keep out of reach"],
-        "sources": ["ASPCA Animal Poison Control Center"],
+        "sources": ["ASPCA Animal Poison Control Center", "Pet Poison Helpline",
+                    "Merck Veterinary Manual"],
         "relatedEntries": None,
     }
     e.update(over)
@@ -445,7 +477,8 @@ def _valid_disease(**over):
         "symptoms": ["Lethargy"],
         "speciesRisks": [{"species": "cat", "severity": "low", "notes": "Rare."}],
         "preventionTips": None,
-        "sources": ["Merck Veterinary Manual"],
+        "sources": ["Merck Veterinary Manual", "Veterinary Partner",
+                    "Cornell University College of Veterinary Medicine"],
         "relatedEntries": None,
     }
     e.update(over)
@@ -475,6 +508,10 @@ def self_test():
     expect("symptom spacers ok", r.errors, "'symptoms'", should_fire=False)
     r = run_case([_valid_toxin(toxicityInfo="Key differences:\n\n- single seed\n\n- no tendrils")], [_valid_disease()])
     expect("double-newline bullets ok", r.errors, "markdown list", should_fire=False)
+    r = run_case([_valid_toxin(categories=["informational"], entrySeverity=None, speciesRisks=[])], [_valid_disease()])
+    expect("informational empty species ok", r.errors, "species", should_fire=False)
+    r = run_case([_valid_toxin(sources=["Veterinary Partner (VIN): Chocolate", "A", "B"])], [_valid_disease()])
+    expect("Veterinary Partner ok", r.errors, "VIN monograph", should_fire=False)
 
     cases = [
         ("bad uuid", [_valid_toxin(id="GYMNOCLA-DUS0-0000-0000-000000000001")], [], "not a valid UUID"),
@@ -488,7 +525,11 @@ def self_test():
         ("md list", [_valid_toxin(toxicityInfo="Signs:\n- vomiting\n- drooling")], [], "markdown list syntax"),
         ("odd asterisks", [_valid_toxin(description="Bad *italic here")], [], "odd number of '*'"),
         ("empty onset", [_valid_toxin(onsetTime={"early": None, "delayed": None})], [], "both 'early' and 'delayed' are empty"),
-        ("empty sources", [_valid_toxin(sources=[])], [], "'sources' must be a non-empty list"),
+        ("empty sources", [_valid_toxin(sources=[])], [], "must list 3+"),
+        ("two sources", [_valid_toxin(sources=["A", "B"])], [], "must list 3+"),
+        ("VIN monograph", [_valid_toxin(sources=["VIN: Chocolate Toxicosis", "A", "B"])], [], "VIN monograph"),
+        ("missing species", [_valid_toxin(speciesRisks=[{"species": "dog", "severity": "high", "notes": None}])], [], "must cover all 5 species"),
+        ("dup species", [_valid_toxin(speciesRisks=_valid_toxin()["speciesRisks"] + [{"species": "dog", "severity": "low", "notes": None}])], [], "duplicate species"),
         ("dangling ref", [_valid_toxin(relatedEntries=["11111111-2222-4333-8444-555555555555"])], [], "does not exist in either file"),
         ("info cat with sev", [_valid_toxin(categories=["informational"], entrySeverity="low")], [], "informational-category entry must have null entrySeverity"),
         ("null sev not info", [_valid_toxin(entrySeverity=None)], [], "requires the 'informational' category"),
@@ -503,9 +544,30 @@ def self_test():
     r = run_case([_valid_toxin()], [_valid_disease(id=_valid_toxin()["id"])])
     expect("dup id", r.errors, "duplicate id")
 
-    # warnings
-    r = run_case([_valid_toxin(toxicityInfo="Doses above 2 mg/kg are dangerous.")], [_valid_disease()])
-    expect("mg/kg warn", r.warnings, "dosage threshold")
+    # warnings — one probe per policy pattern
+    for label, text in [
+        ("mg/kg warn", "Doses above 2 mg/kg are dangerous."),
+        ("g/kg warn", "Toxic at 1 g/kg body weight."),
+        ("mcg/kg warn", "Signs at 30 mcg/kg."),
+        ("mg per kg warn", "About 20 mg per kg causes signs."),
+    ]:
+        r = run_case([_valid_toxin(toxicityInfo=text)], [_valid_disease()])
+        expect(label, r.warnings, "dosage threshold")
+    for label, text, sub in [
+        ("LD50 warn", "The LD50 in rats is high.", "LD50 data"),
+        ("safe dose warn", "There is no safe dose for cats.", "safe amount/dose"),
+        ("well tolerated warn", "Generally well tolerated in dogs.", "well tolerated"),
+        ("prognosis warn", "The prognosis is excellent.", "prognosis statement"),
+    ]:
+        r = run_case([_valid_toxin(toxicityInfo=text)], [_valid_disease()])
+        expect(label, r.warnings, sub)
+
+    # content hash makes formatting errors content-specific (baseline can't
+    # mask a second regression in an already-baselined field)
+    e1 = run_case([_valid_toxin(toxicityInfo="Signs:\n- vomiting")], [_valid_disease()]).errors
+    e2 = run_case([_valid_toxin(toxicityInfo="Signs:\n- vomiting\n- drooling")], [_valid_disease()]).errors
+    if e1 == e2:
+        failures.append("md-list errors for different content should differ (hash suffix)")
     r = run_case([_valid_toxin(description="A plant with no scientific name.")], [_valid_disease()])
     expect("italics warn", r.warnings, "no italicized scientific name")
     tox2 = _valid_toxin(id="B1B2C3D4-0000-4000-8000-000000000009")
