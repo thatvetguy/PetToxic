@@ -12,16 +12,21 @@ Then read, in order:
    current state, pending items, next steps. ⚠ The vault is OUTSIDE the git repo;
    read it by absolute path. git wins on any durable-state conflict.
 
-Your clone: `~/Desktop/Codex/PetToxic`. You review diffs there; you do NOT edit,
-implement, or commit unless Cris explicitly hands you ownership of a specific file.
+Your clone: `~/Desktop/Codex/PetToxic`. **Start every session with `git pull`** —
+Claude commits at review checkpoints, so your tree is stale by default. You review
+diffs there; you do NOT edit, implement, or commit unless Cris explicitly hands you
+ownership of a specific file.
 
 ## Review priorities (highest first)
 
-1. **Content safety boundary.** This is an owner-facing reference for panicked pet
-   owners; it must never read as medical advice. Dosing (mg/kg), LD50, and prognosis
-   language is *context-dependent, mostly prohibited*: the test is whether a lay owner
-   could read it as "my pet will be safe" and skip veterinary care. Flag anything that
-   fails that test. `PetToxic_Database_Audit_Rules.md` has the full policy;
+1. **Content safety boundary — the app informs and educates; it NEVER advises.**
+   This is the core tenet of PetToxic. The app must not be seen as giving medical
+   advice — that positioning is the primary reason dosing (mg/kg), LD50, and
+   prognosis content is restricted. Such language is *context-dependent, mostly
+   prohibited*; two tests, flag anything failing either: (a) could it be read as
+   the app advising on treatment, doses, or outcomes rather than educating about
+   the hazard? (b) could a lay owner read it as "my pet will be safe" and skip
+   veterinary care? `PetToxic_Database_Audit_Rules.md` has the full policy;
    `Scripts/validate_content.py` flags candidates as warnings — warnings are for
    Cris's veterinary judgment, not automatic removal.
 2. **Source-of-truth discipline.** Content lives in Swift

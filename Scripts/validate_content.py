@@ -63,8 +63,9 @@ ONSET_KEYS = {"early", "delayed"}
 
 # Editorial policy patterns (PetToxic_Database_Audit_Rules.md, "Content to REMOVE").
 # All are warnings — flagged for veterinary review, never auto-blocked. Per Cris
-# (July 2026): dosing/prognosis language is context-dependent, mostly prohibited.
-# The test: could a lay owner read it as "my pet will be safe" and skip vet care?
+# (July 2026): the app informs and educates, never advises — dosing/prognosis
+# language is restricted primarily so the app cannot be seen as giving medical
+# advice, and secondarily so no owner reads it as "my pet is safe" and skips care.
 POLICY_PATTERNS = [
     (re.compile(r"mg/kg", re.I), "dosage threshold (mg/kg)"),
     (re.compile(r"\bLD-?50\b", re.I), "LD50 data"),
