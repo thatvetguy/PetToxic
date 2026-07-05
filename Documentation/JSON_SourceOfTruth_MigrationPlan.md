@@ -1,6 +1,6 @@
 # JSON as Single Source of Truth — Migration Spec
 
-## Status: ACTIVE — spec awaiting Codex spec-review (2026-07-05)
+## Status: ACTIVE — rev 2, Codex spec-review findings incorporated (2026-07-05)
 
 Supersedes the earlier "Future — revisit if app gains traction" plan. Activated as
 step 2 of the React Native consolidation plan (see the vault handoff): JSON-first
@@ -37,23 +37,35 @@ projects. The extraction script is deleted.
 1. **New `JSONContentLoader`** service: reads `toxins.json` / `diseases.json`
    from the app bundle at startup, decodes into the existing `ToxicItem` /
    `SpeciesRisk` models via `Codable`. Models and enums unchanged.
-2. **Disease loader constants** (per the Session-164 schema): adds
-   `categories = [.diseasesAndConditions]` and `entrySeverity = nil` to every
-   decoded disease entry; `toxicityInfoSectionTitle` stays a UI constant.
+2. **Disease decoding via `DiseaseEntryDTO`** (Codex P1). Disease JSON omits
+   the non-optional `categories` and adds `entryType`, so `ToxicItem` cannot
+   decode it directly. A `DiseaseEntryDTO: Codable` decodes the JSON shape
+   (including `entryType`), then constructs `ToxicItem` with
+   `categories = [.diseasesAndConditions]`, `entrySeverity = nil`, and
+   `toxicityInfoSectionTitle` derived from `entryType`:
+   `husbandry → "Husbandry Overview"`, otherwise `"What makes it harmful?"`
+   (matches current data exactly: 46 × harmful-title, 3 × husbandry-title).
+   The loader retains an `entryTypeByID: [UUID: EntryType]` map;
+   `isInfectious` / `isHusbandry` are rewritten to consult it, and the legacy
+   `nonInfectiousEntryIDs` / `husbandryEntryIDs` UUID sets are deleted —
+   entry classification becomes JSON-driven, per the schema doc's original
+   intent.
 3. **`DatabaseService` / `DiseasesConditionsService`** switch from hardcoded
    arrays to the loader's output. Public API unchanged — views, search (FTS5
    population), Pro-locking, and cross-reference resolution are untouched
    consumers.
-4. **Decode-failure policy (decision for spec review):** propose `fatalError`
-   with a descriptive message. Rationale: the JSON is bundled at build time and
-   gated by pre-commit + CI validation, so a decode failure is an unshippable
-   build, not a runtime condition; an offline emergency-reference app with
-   silently-missing entries is worse than a crash caught in development.
+4. **Decode-failure policy (settled after spec review):** `fatalError` in
+   DEBUG; in RELEASE, fail closed with a blocking full-screen "content
+   unavailable — reinstall the app" state instead of a blank or partial app
+   (a static SwiftUI view; low cost). Never degrade silently — an offline
+   emergency reference with invisibly missing entries is the worst outcome.
 5. **Cutover cleanup:** delete `Scripts/extract_content.swift`; update
    CLAUDE.md (extraction workflow → edit-JSON workflow), the `add-toxin-entry`
    skill (edit surface becomes the JSON; language/severity/species rules
-   unchanged), and the pre-commit hook (drop the Swift↔JSON drift guard for
-   toxins/diseases — the Swift no longer holds content; keep index validation).
+   unchanged), and the pre-commit hook: the Swift↔JSON drift guard INVERTS —
+   post-cutover it blocks any commit that reintroduces `ToxicItem(` content
+   blocks into `DatabaseService.swift` / `DiseasesConditionsService.swift`
+   (content belongs in JSON only); staged-JSON index validation stays.
 6. **Bundle target check:** both JSON files added to the Xcode target's Copy
    Bundle Resources; verify on the iOS 17.6 minimum target.
 
@@ -65,9 +77,14 @@ is now the source of truth, with the validator enforcing each edit.
 1. **22 single-`\n` bullet fields** → rewrite as `\n\n`-separated paragraphs
    with bold headers (formatting-only; no clinical wording changes). Cris
    reviews the diffs — it's clinical text presentation.
-2. **Dangling UUID** in "Heart & Blood Pressure Medications"
-   (`88990011-2233-4455-6677-8899AABBCCDD`) — Cris decides the intended target
-   or drops the reference.
+2. **Heart & Blood Pressure Medications `relatedEntries` (DECIDED by Cris
+   2026-07-05):** drop the three cleaning-product references (Soaps, Bleach,
+   Drain Cleaners — a sequential-UUID copy-paste slip; the only such case in
+   all 247 entries) and the dangling UUID
+   (`88990011-2233-4455-6677-8899AABBCCDD`, a near-miss of Asthma Inhalers'
+   UUID). Keep Asthma Inhalers. Optionally adding cardiovascular-active
+   medication cross-links (ADHD meds, decongestants, PPA, thyroid) stays open
+   to Cris's clinical judgment — not part of this pass.
 3. **UUID case normalization:** uppercase all 339 lowercase `relatedEntries`
    values (mechanical; validator's case-mismatch warnings go to zero; future
    platforms can use exact string matching).
@@ -76,19 +93,35 @@ is now the source of truth, with the validator enforcing each edit.
 5. **Copy to Android** (`app/src/main/assets/`) and commit both repos at the
    same content state.
 
-## Phase C — extend the pipeline to glossary / lab guide / breeds (own review unit)
+## Phase C — extend the pipeline to glossary / lab guide / breeds (own review unit, immediately after B)
 
-Bring `glossary.json`, `lab_parameters.json`, `breeds.json` into `Content/` as
-the source of truth for both platforms, closing the existing untracked-drift
-hole. Requires: one final extraction from Swift, a diff against Android's
-current assets to detect any drift that already happened, iOS loaders for the
-three files, validator schemas per file, and deletion of the Swift data.
-Scope, schemas, and the drift-diff result get their own spec addendum + review
+Split per Codex P3 — the three files are in two different situations:
+
+- **C1 — glossary + lab guide (Swift → JSON migration):** iOS content lives in
+  `GlossaryService.swift` / `LabWorkGuideService.swift`; Android ships one-off
+  `glossary.json` / `lab_parameters.json` extractions with no regeneration
+  path. One final extraction into `Content/`, drift-diff against Android's
+  current assets, iOS loaders, validator schemas per file, delete the Swift
+  data.
+- **C2 — breeds (consolidation + drift check):** iOS ALREADY loads
+  `PetToxic/Resources/breeds.json` from the bundle; Android has its own copy
+  in assets. No Swift migration needed — move the canonical file to
+  `Content/breeds.json`, diff the two existing copies, make both platforms
+  consume the one file, add a validator schema.
+
+Scope, schemas, and both drift-diff results get a spec addendum + review
 before implementation.
 
 ## Validation checklist (Phase A/B gate)
 
 - [ ] All 198 + 49 entries decode; counts asserted at startup in DEBUG
+- [ ] **Exact parity before deleting Swift content** (Codex P2): ID sets
+      identical pre/post cutover; per-entry category, severity, and
+      speciesRisk counts match; disease `entryType` counts stay
+      39 infectious / 7 medical / 3 husbandry
+- [ ] `toxicityInfoSectionTitle` behavior preserved: the 3 husbandry guides
+      show "Husbandry Overview", all other D&C show "What makes it harmful?"
+- [ ] D&C list ordering unchanged (husbandry guides grouped last)
 - [ ] `python3 Scripts/validate_content.py` — 0 new errors (Phase A), then
       0 errors + baseline deleted (Phase B)
 - [ ] FTS5 search returns identical results for a sampled query set (before
@@ -118,18 +151,19 @@ this spec → Codex spec-review → Phase A implement + Codex diff-review →
 Phase B content pass + Codex diff-review + Cris content review → device
 validation → handoff update. Phase C repeats the loop with its addendum.
 
-## Open questions for spec review
+## Spec-review resolutions (rev 2)
 
-1. `fatalError` on decode failure (proposed) vs. graceful degradation?
-2. Phase ordering: any argument for fixing content in Swift BEFORE cutover
-   (i.e., old plan's order) that outweighs the fix-once-in-JSON approach?
-3. Pre-commit after cutover: should the drift guard invert — i.e., block
-   commits that edit `DatabaseService.swift`/`DiseasesConditionsService.swift`
-   content arrays at all once they're supposed to be deleted/empty?
-4. Phase C priority: immediately after B, or parked until the RN monorepo
-   spec (which needs the same three files in JSON anyway)?
+All four open questions settled per Codex's spec-review + adopted here:
+
+1. **Decode failure:** DEBUG `fatalError`; RELEASE fail-closed blocking
+   "content unavailable" screen (see Phase A item 4).
+2. **Phase ordering:** cutover first, fix debt once in JSON — confirmed.
+3. **Pre-commit inversion:** yes — post-cutover guard blocks reintroducing
+   `ToxicItem(` blocks in the two services (see Phase A item 5).
+4. **Phase C timing:** immediately after B, as its own review unit, split C1/C2.
 
 ---
 
-*Spec activated 2026-07-05 (session: validator/workflow phase closed at
-`dde420a`). Original future-plan text superseded.*
+*Spec activated 2026-07-05 (validator/workflow phase closed at `dde420a`).
+Rev 2 same day: Codex spec-review (1 P1, 2 P2, 1 P3 — all incorporated) +
+Cris's related-entries decision. Original future-plan text superseded.*
