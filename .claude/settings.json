@@ -1,0 +1,26 @@
+{
+  "hooks": {
+    "PostToolUse": [
+      {
+        "matcher": "Bash",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "INPUT=$(cat); CMD=$(echo \"$INPUT\" | jq -r '.tool_input.command // empty'); if echo \"$CMD\" | grep -q 'git commit'; then MSG=$(echo \"$INPUT\" | jq -r '.tool_result.stdout // empty'); if echo \"$MSG\" | grep -q '^content:'; then echo '\\n-----\\nREMINDER: This was a content commit. Update EntryReferenceDocument.md with the new entry UUID, severity, and category.\\n-----'; fi; fi"
+          }
+        ]
+      },
+      {
+        "matcher": "Edit|Write",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "INPUT=$(cat); F=$(echo \"$INPUT\" | jq -r '.tool_input.file_path // empty'); case \"$F\" in *Content/toxins.json|*Content/diseases.json) OUT=$(python3 /Users/cristianofontes/Desktop/PetToxic/Scripts/validate_content.py --quiet 2>&1) || { echo \"$OUT\" | tail -40 >&2; exit 2; };; esac",
+            "timeout": 30,
+            "statusMessage": "Validating content JSON..."
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -78,7 +78,7 @@ If the `swiftc` compile fails, your Swift edit has an error — fix it there; a 
 ## 7. Verify before declaring done
 
 - **The Swift compiles** (the `swiftc` extract step above succeeds) and the extractor runs cleanly.
-- **The JSON regenerated** — `Content/toxins.json` / `diseases.json` reflect your change (parse-check: `python3 -m json.tool Content/toxins.json >/dev/null`).
+- **The JSON regenerated** — `Content/toxins.json` / `diseases.json` reflect your change, and the validator passes: `python3 Scripts/validate_content.py` (schema, UUIDs, enums, cross-references, markdown-list rendering rule; warnings flag editorial/policy issues for veterinary review). A git pre-commit hook runs the same check, so a failing entry cannot be committed.
 - **Android got the copy** — after the `cp`, `diff Content/toxins.json ~/Desktop/PetToxicAndroid/app/src/main/assets/toxins.json` prints nothing (same for `diseases.json`). A drift here means the two platforms ship different clinical content.
 - **The entry passes the audit checklist** — 5 species present, VIN removed / 3+ sources, no "safe amount" language, cross-references bidirectional, nothing that reads as medical advice.
 - **If feasible, build/run the iOS app** so a runtime schema/rendering issue surfaces before commit.

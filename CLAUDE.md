@@ -7,6 +7,15 @@ Native iOS reference app for pet owners to quickly look up toxicity information.
 - `~/Desktop/SASI_Projects/CLAUDE.md` — portfolio context, accounts, git conventions, **Core Principles for Veterinary Reference Apps** (shared across all PetToxic apps).
 - `~/Desktop/SASI_Projects/Gotchas_CrossApp.md` — cross-app store submission, tooling, content-safety landmines. Each entry has a stable ID (e.g. `GC-APPL-002`, `GC-SAFE-001`); cite by ID rather than restating. See the top of that file for the promotion rule (when a gotcha belongs here vs. in the hub).
 
+## Multi-AI Review Workflow
+
+This app follows the SASI **Claude implements / Codex reviews** workflow — full definition in `~/Desktop/SASI_Projects/MultiAI_Workflow_Convention.md` (roles, P1/P2/P3 findings, cadence, OUT-OF-PROCESS marker). PetToxic specifics:
+
+- **Vault handoff:** `~/Documents/Dev_Projects/PetToxic/PetToxic_Handoff.md` — read at session start, update at session end for non-trivial work. Outside the git repo; git wins on conflicts.
+- **Codex reads `AGENTS.md`** (repo root) and reviews from its clone at `~/Desktop/Codex/PetToxic`.
+- **Commit + push at review checkpoints** (spec, implementation slice, refinement) so Codex can pull — this overrides the default "only commit when asked" habit for checkpoints. Keep commits scoped; ask before bundling unrelated work.
+- **Cadence dial:** full cadence (spec → Codex spec-review → implement → Codex diff-review) for content/clinical changes, paywall/billing, and store config; light cadence (implement → post-hoc review) for small low-risk changes; skip for trivial mechanical edits.
+
 ## Technical Stack
 - **Language:** Swift 5.9+
 - **UI:** SwiftUI
@@ -29,6 +38,7 @@ Native iOS reference app for pet owners to quickly look up toxicity information.
 - **Working directory assumptions:** Session instruction documents may assume a different working directory than the actual one. Always confirm the real working directory with `pwd` or check the environment context before running any script verbatim from session instructions.
 - **Edit tool requires Read first:** The Edit tool will fail with "File must be read first" if a file hasn't been read in the current session. When doing batch edits across many files, **read all target files before starting any edits**. If editing N files in parallel, issue N Read calls first, then N Edit calls. Sibling Edit calls also fail if one in the batch errors, so read everything upfront to avoid cascading failures.
 - **SwiftData relationship inserts:** When adding a child record to a parent's relationship array (e.g., `pet.vaccinationRecords.append(newRecord)`), do NOT also call `modelContext.insert(newRecord)`. SwiftData handles the insert through the relationship — calling both causes a double-insert bug with duplicate records.
+- **Content JSON validator:** `python3 Scripts/validate_content.py` checks `Content/toxins.json` + `diseases.json` against the Session-164 schema and the content rules below (UUID format, enums, cross-reference resolution, markdown-list rendering rule, editorial policy warnings). Run `--self-test` after modifying the script. Enforced automatically two ways: a PostToolUse hook in `.claude/settings.json` (fires when Claude edits the JSON) and a git pre-commit hook (blocks commits of failing content; source copy in `Scripts/hooks/pre-commit`, reinstall with `cp Scripts/hooks/pre-commit .git/hooks/ && chmod +x .git/hooks/pre-commit`).
 - **Glossary extraction — multi-line fields:** Fields in `GlossaryService.swift` (`definition`, `searchKeywords`, `relatedTerms`) can span multiple lines. Single-line awk/sed patterns will silently miss entries with wrapped fields. **Always** use a block-based approach: accumulate lines between `GlossaryTerm(` and the closing `),`, then parse the full block. Prefer `perl -ne` with a line-by-line accumulator over awk for glossary extraction. Never assume all fields fit on one line.
 
 ### Content Formatting Gotchas
@@ -127,6 +137,7 @@ Open the project in Xcode (or `ls PetToxic/` from the repo root). Swift sources 
 | Severity explainer entry | `Services/DatabaseService.swift` (UUID: `B3F1A2D4-E5C6-47F8-9A0B-1C2D3E4F5A6B`) |
 | JSON content (shared) | `Content/toxins.json`, `Content/diseases.json` |
 | Re-extract JSON from Swift | `Scripts/extract_content.swift` — compile & run (see header comment for usage) |
+| Validate content JSON | `Scripts/validate_content.py` — run after any content change or re-extraction |
 
 ---
 

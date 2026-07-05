@@ -1,0 +1,18 @@
+#!/bin/sh
+# PetToxic pre-commit hook: validate content JSON before it can be committed.
+# Installed copy lives at .git/hooks/pre-commit (git does not version hooks).
+# Reinstall after cloning:  cp Scripts/hooks/pre-commit .git/hooks/pre-commit && chmod +x .git/hooks/pre-commit
+# Bypass in an emergency:   git commit --no-verify
+
+REPO_ROOT="$(git rev-parse --show-toplevel)"
+
+if git diff --cached --name-only | grep -qE '^Content/(toxins|diseases)\.json$'; then
+    echo "Content JSON staged — running validator..."
+    if ! python3 "$REPO_ROOT/Scripts/validate_content.py" --quiet; then
+        echo ""
+        echo "Commit blocked: content validation failed (see errors above)."
+        echo "Fix the entries, or bypass with: git commit --no-verify"
+        exit 1
+    fi
+fi
+exit 0
