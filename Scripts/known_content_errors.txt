@@ -1,0 +1,26 @@
+# Known pre-existing content errors, accepted until the JSON source-of-truth
+# migration fixes them in the Swift source. The validator fails only on errors
+# NOT listed here. Remove lines as they're fixed; delete this file when empty.
+toxins.json · Insoluble Calcium Oxalate Plants: 'description' contains markdown list syntax ('- ' line) — renders with no separation in the app; use \n\n paragraphs with bold headers instead
+toxins.json · Soluble Calcium Oxalate Plants: 'description' contains markdown list syntax ('- ' line) — renders with no separation in the app; use \n\n paragraphs with bold headers instead
+toxins.json · Cyanogenic Glycoside Plants: 'description' contains markdown list syntax ('- ' line) — renders with no separation in the app; use \n\n paragraphs with bold headers instead
+toxins.json · GI Irritant Plants: 'description' contains markdown list syntax ('- ' line) — renders with no separation in the app; use \n\n paragraphs with bold headers instead
+toxins.json · Cannabis / Marijuana: 'toxicityInfo' contains markdown list syntax ('- ' line) — renders with no separation in the app; use \n\n paragraphs with bold headers instead
+toxins.json · Pokeweed: 'toxicityInfo' contains markdown list syntax ('- ' line) — renders with no separation in the app; use \n\n paragraphs with bold headers instead
+toxins.json · Nicotine & Tobacco Products: 'toxicityInfo' contains markdown list syntax ('- ' line) — renders with no separation in the app; use \n\n paragraphs with bold headers instead
+toxins.json · Moonseed: 'toxicityInfo' contains markdown list syntax ('- ' line) — renders with no separation in the app; use \n\n paragraphs with bold headers instead
+toxins.json · Lead (Batteries, Paint, Fishing Weights): 'description' contains markdown list syntax ('- ' line) — renders with no separation in the app; use \n\n paragraphs with bold headers instead
+toxins.json · Lead (Batteries, Paint, Fishing Weights): 'toxicityInfo' contains markdown list syntax ('- ' line) — renders with no separation in the app; use \n\n paragraphs with bold headers instead
+toxins.json · Organophosphates & Carbamates: 'toxicityInfo' contains markdown list syntax ('- ' line) — renders with no separation in the app; use \n\n paragraphs with bold headers instead
+toxins.json · DEET (Insect Repellent): 'description' contains markdown list syntax ('- ' line) — renders with no separation in the app; use \n\n paragraphs with bold headers instead
+toxins.json · Ant & Roach Bait Stations: 'description' contains markdown list syntax ('- ' line) — renders with no separation in the app; use \n\n paragraphs with bold headers instead
+toxins.json · Ant & Roach Bait Stations: 'toxicityInfo' contains markdown list syntax ('- ' line) — renders with no separation in the app; use \n\n paragraphs with bold headers instead
+toxins.json · Pesticides & Insecticides: 'toxicityInfo' contains markdown list syntax ('- ' line) — renders with no separation in the app; use \n\n paragraphs with bold headers instead
+toxins.json · Heat Stroke & Hot Surfaces: 'toxicityInfo' contains markdown list syntax ('- ' line) — renders with no separation in the app; use \n\n paragraphs with bold headers instead
+toxins.json · Hypothermia & Frostbite: 'toxicityInfo' contains markdown list syntax ('- ' line) — renders with no separation in the app; use \n\n paragraphs with bold headers instead
+toxins.json · Porcupine Quills: 'toxicityInfo' contains markdown list syntax ('- ' line) — renders with no separation in the app; use \n\n paragraphs with bold headers instead
+diseases.json · GI Stasis in Rabbits (Gut Shutdown): 'toxicityInfo' contains markdown list syntax ('- ' line) — renders with no separation in the app; use \n\n paragraphs with bold headers instead
+diseases.json · Hypovitaminosis A (Vitamin A Deficiency): 'toxicityInfo' contains markdown list syntax ('- ' line) — renders with no separation in the app; use \n\n paragraphs with bold headers instead
+diseases.json · Shell Rot (Ulcerative Shell Disease): 'toxicityInfo' contains markdown list syntax ('- ' line) — renders with no separation in the app; use \n\n paragraphs with bold headers instead
+diseases.json · Stomatitis / Mouth Rot (Infectious Stomatitis): 'toxicityInfo' contains markdown list syntax ('- ' line) — renders with no separation in the app; use \n\n paragraphs with bold headers instead
+toxins.json · Heart & Blood Pressure Medications: relatedEntries UUID 88990011-2233-4455-6677-8899aabbccdd does not exist in either file

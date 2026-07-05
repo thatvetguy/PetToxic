@@ -1,0 +1,16 @@
+name: Validate content
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Validator self-test
+        run: python3 Scripts/validate_content.py --self-test
+      - name: Validate content JSON
+        run: python3 Scripts/validate_content.py --quiet

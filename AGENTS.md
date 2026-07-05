@@ -26,9 +26,11 @@ ownership of a specific file.
    prohibited*; two tests, flag anything failing either: (a) could it be read as
    the app advising on treatment, doses, or outcomes rather than educating about
    the hazard? (b) could a lay owner read it as "my pet will be safe" and skip
-   veterinary care? `PetToxic_Database_Audit_Rules.md` has the full policy;
-   `Scripts/validate_content.py` flags candidates as warnings — warnings are for
-   Cris's veterinary judgment, not automatic removal.
+   veterinary care? The ONLY advice the app ever gives: practical, commonly
+   accepted first aid, and "seek veterinary care / contact poison control" —
+   anything beyond that scope is a flag. `PetToxic_Database_Audit_Rules.md` has
+   the full policy; `Scripts/validate_content.py` flags candidates as warnings —
+   warnings are for Cris's veterinary judgment, not automatic removal.
 2. **Source-of-truth discipline.** Content lives in Swift
    (`PetToxic/Services/DatabaseService.swift`, `DiseasesConditionsService.swift`).
    `Content/*.json` is GENERATED — hand-edits there get clobbered on re-extraction.

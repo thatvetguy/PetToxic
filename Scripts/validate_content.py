@@ -66,6 +66,8 @@ ONSET_KEYS = {"early", "delayed"}
 # (July 2026): the app informs and educates, never advises — dosing/prognosis
 # language is restricted primarily so the app cannot be seen as giving medical
 # advice, and secondarily so no owner reads it as "my pet is safe" and skips care.
+# The ONLY advice the app ever gives: practical, commonly accepted first aid,
+# and "seek veterinary care / contact poison control".
 POLICY_PATTERNS = [
     (re.compile(r"mg/kg", re.I), "dosage threshold (mg/kg)"),
     (re.compile(r"\bLD-?50\b", re.I), "LD50 data"),
@@ -338,7 +340,22 @@ def validate(toxins_data, diseases_data, report):
                 report.warn(where, "entry references itself in relatedEntries")
 
 
-def run(content_dir, strict, quiet):
+def apply_baseline(errors, baseline_lines):
+    """Split errors into (new, known, stale_baseline_entries).
+
+    The baseline holds pre-existing errors accepted until the JSON
+    source-of-truth migration fixes them in the Swift source. Only NEW errors
+    fail the run; stale entries (fixed but still listed) are reported so the
+    baseline file shrinks over time. Delete the file once it's empty.
+    """
+    baseline = {ln.strip() for ln in baseline_lines if ln.strip() and not ln.startswith("#")}
+    new = [e for e in errors if e not in baseline]
+    known = [e for e in errors if e in baseline]
+    stale = sorted(baseline - set(errors))
+    return new, known, stale
+
+
+def run(content_dir, strict, quiet, baseline_path):
     report = Report()
     files = {}
     for name in ("toxins.json", "diseases.json"):
@@ -359,17 +376,33 @@ def run(content_dir, strict, quiet):
     n_tox = len(files["toxins.json"].get("entries", [])) if isinstance(files["toxins.json"], dict) else 0
     n_dis = len(files["diseases.json"].get("entries", [])) if isinstance(files["diseases.json"], dict) else 0
 
-    if report.errors:
-        print(f"❌ {len(report.errors)} error(s):")
-        for e in report.errors:
+    known, stale = [], []
+    new_errors = report.errors
+    if baseline_path and Path(baseline_path).exists():
+        new_errors, known, stale = apply_baseline(
+            report.errors, Path(baseline_path).read_text(encoding="utf-8").splitlines()
+        )
+
+    if new_errors:
+        print(f"❌ {len(new_errors)} NEW error(s):")
+        for e in new_errors:
             print(f"  ERROR   {e}")
+    if known:
+        print(f"ℹ️  {len(known)} known baselined error(s) (fix planned in the JSON "
+              "source-of-truth migration; see Scripts/known_content_errors.txt)")
+    if stale:
+        print(f"🧹 {len(stale)} stale baseline entr{'y' if len(stale)==1 else 'ies'} "
+              "(fixed — remove from Scripts/known_content_errors.txt):")
+        for s in stale:
+            print(f"  STALE   {s}")
     if report.warnings and not quiet:
         print(f"⚠️  {len(report.warnings)} warning(s) (editorial review, non-blocking):")
         for w in report.warnings:
             print(f"  WARN    {w}")
-    status = "FAIL" if report.errors or (strict and report.warnings) else "OK"
+    status = "FAIL" if new_errors or (strict and report.warnings) else "OK"
     print(f"{status}: {n_tox} toxin entries, {n_dis} disease entries · "
-          f"{len(report.errors)} errors, {len(report.warnings)} warnings")
+          f"{len(new_errors)} new errors, {len(known)} baselined, "
+          f"{len(report.warnings)} warnings")
     return 1 if status == "FAIL" else 0
 
 
@@ -481,12 +514,19 @@ def self_test():
     r = run_case([_valid_toxin(relatedEntries=[_valid_toxin()["id"]])], [_valid_disease()])
     expect("self-ref warn", r.warnings, "references itself")
 
+    # baseline partitioning
+    new, known, stale = apply_baseline(
+        ["errA", "errB"], ["# comment", "errB", "errGone", ""]
+    )
+    if new != ["errA"] or known != ["errB"] or stale != ["errGone"]:
+        failures.append(f"baseline partition wrong: {new} {known} {stale}")
+
     if failures:
         print("❌ self-test FAILED:")
         for f in failures:
             print("  " + f)
         return 1
-    print(f"✅ self-test passed ({1 + len(cases) + 5} cases)")
+    print("✅ self-test passed (all cases)")
     return 0
 
 
@@ -497,10 +537,14 @@ def main():
     ap.add_argument("--strict", action="store_true", help="warnings also cause failure (for CI)")
     ap.add_argument("--quiet", action="store_true", help="suppress warning listing")
     ap.add_argument("--self-test", action="store_true", help="run the built-in test suite")
+    ap.add_argument("--baseline", default=str(Path(__file__).resolve().parent / "known_content_errors.txt"),
+                    help="file of accepted pre-existing errors (only NEW errors fail)")
+    ap.add_argument("--no-baseline", action="store_true", help="ignore the baseline file")
     args = ap.parse_args()
     if args.self_test:
         sys.exit(self_test())
-    sys.exit(run(args.content_dir, args.strict, args.quiet))
+    sys.exit(run(args.content_dir, args.strict, args.quiet,
+                 None if args.no_baseline else args.baseline))
 
 
 if __name__ == "__main__":
