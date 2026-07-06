@@ -231,3 +231,18 @@ enum MatchType: String, Codable {
     case fuzzy
     case synonym
 }
+
+// MARK: - Disease Entry Type
+
+/// Classification of Diseases & Conditions entries, carried per-entry in
+/// diseases.json (`entryType`). Replaces the legacy UUID-set classification.
+enum DiseaseEntryType: String, Codable {
+    case infectious   // Type 1
+    case husbandry    // Type 2: husbandry guides
+    case medical      // Type 3: medical/metabolic
+
+    /// Article section title shown above `toxicityInfo` for this entry type.
+    var toxicityInfoSectionTitle: String {
+        self == .husbandry ? "Husbandry Overview" : "What makes it harmful?"
+    }
+}

@@ -17,3 +17,4 @@ Scripts/extract_content
 # Sensitive
 *.p12
 *.mobileprovision
+Scripts/parity_check
