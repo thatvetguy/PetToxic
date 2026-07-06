@@ -14,6 +14,8 @@ struct LoadedContent {
 enum ContentLoadError: Error, CustomStringConvertible {
     case missingResource(String)
     case decodeFailure(String, Error)
+    case unsupportedVersion(String, Int)
+    case emptyContent(String)
 
     var description: String {
         switch self {
@@ -21,6 +23,10 @@ enum ContentLoadError: Error, CustomStringConvertible {
             return "Bundled content file '\(name)' not found — check Copy Bundle Resources."
         case .decodeFailure(let name, let error):
             return "Failed to decode '\(name)': \(error)"
+        case .unsupportedVersion(let name, let version):
+            return "'\(name)' has schema version \(version); this build supports version \(JSONContentLoader.supportedSchemaVersion)."
+        case .emptyContent(let name):
+            return "'\(name)' decoded to zero entries — refusing to run with empty content."
         }
     }
 }
@@ -34,9 +40,24 @@ enum ContentLoadError: Error, CustomStringConvertible {
 /// copy without touching the decode path.
 enum JSONContentLoader {
 
+    /// The schema version this build understands (root `version` field in
+    /// both content files — see ClaudeCode_Session164_AndroidJSONSchema.md).
+    static let supportedSchemaVersion = 1
+
     private struct ContentFile<Entry: Decodable>: Decodable {
         let version: Int
         let entries: [Entry]
+    }
+
+    /// Rejects unsupported schema versions and empty entry arrays — both
+    /// must fail loudly rather than produce a hollow "working" app.
+    private static func vet<E>(_ file: ContentFile<E>, name: String) throws {
+        guard file.version == supportedSchemaVersion else {
+            throw ContentLoadError.unsupportedVersion(name, file.version)
+        }
+        guard !file.entries.isEmpty else {
+            throw ContentLoadError.emptyContent(name)
+        }
     }
 
     /// Decodes the diseases.json entry shape, which differs from ToxicItem:
@@ -100,6 +121,9 @@ enum JSONContentLoader {
             throw ContentLoadError.decodeFailure("diseases.json", error)
         }
 
+        try vet(toxinsFile, name: "toxins.json")
+        try vet(diseasesFile, name: "diseases.json")
+
         return LoadedContent(
             toxins: toxinsFile.entries,
             diseases: diseasesFile.entries.map { $0.toToxicItem() },
@@ -122,10 +146,9 @@ enum JSONContentLoader {
             guard let diseasesURL = Bundle.main.url(forResource: "diseases", withExtension: "json") else {
                 throw ContentLoadError.missingResource("diseases.json")
             }
-            let content = try load(toxinsURL: toxinsURL, diseasesURL: diseasesURL)
-            assert(!content.toxins.isEmpty && !content.diseases.isEmpty,
-                   "Bundled content decoded but is empty")
-            return content
+            // load() itself rejects unsupported versions and empty entries,
+            // so a non-nil return here is guaranteed non-hollow in RELEASE too.
+            return try load(toxinsURL: toxinsURL, diseasesURL: diseasesURL)
         } catch {
             #if DEBUG
             fatalError("Content load failed: \(error)")

@@ -297,16 +297,23 @@ def check_entry(entry, kind, filename, report):
                                    "(*Genus species*) in description or toxicityInfo")
 
 
+SCHEMA_VERSION = 1  # keep in step with JSONContentLoader.supportedSchemaVersion
+
+
 def check_file_root(data, filename, report):
     if not isinstance(data, dict):
         report.error(filename, "root must be an object with 'version' and 'entries'")
         return []
-    if not isinstance(data.get("version"), int):
-        report.error(filename, "'version' must be an integer")
+    if data.get("version") != SCHEMA_VERSION:
+        report.error(filename, f"'version' must be {SCHEMA_VERSION} (supported schema version), "
+                               f"got {data.get('version')!r}")
     entries = data.get("entries")
     if not isinstance(entries, list):
         report.error(filename, "'entries' must be a list")
         return []
+    if len(entries) == 0:
+        report.error(filename, "'entries' must not be empty — an empty content file "
+                               "would ship a hollow app")
     return entries
 
 
@@ -579,6 +586,16 @@ def self_test():
     expect("case-mismatch warn", r.warnings, "resolves only case-insensitively")
     r = run_case([_valid_toxin(relatedEntries=[_valid_toxin()["id"]])], [_valid_disease()])
     expect("self-ref warn", r.warnings, "references itself")
+
+    # root-level gates: schema version and non-empty entries
+    r = Report()
+    validate({"version": 2, "entries": [_valid_toxin()]},
+             {"version": 1, "entries": [_valid_disease()]}, r)
+    expect("bad schema version", r.errors, "'version' must be 1")
+    r = Report()
+    validate({"version": 1, "entries": []},
+             {"version": 1, "entries": [_valid_disease()]}, r)
+    expect("empty entries", r.errors, "must not be empty")
 
     # baseline partitioning
     new, known, stale = apply_baseline(
