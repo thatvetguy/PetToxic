@@ -12326,7 +12326,7 @@ Geographic location matters most. Outside Arizona bark scorpion range, severe sy
                 categories: [.outdoorHazards],
                 imageAsset: "black_widow_thumb",
                 description: """
-Widow spiders (Latrodectus spp.) are the most medically significant spiders worldwide. Five species are found in the United States, with the black widow (Latrodectus mactans) being most common. Female black widows are identified by their shiny black color and distinctive red or orange hourglass marking on the underside of their globular abdomen. Males are much smaller and not considered a significant bite risk.
+Widow spiders (Latrodectus spp.) are the most medically significant spiders worldwide. Five species are found in the United States, with the black widow (Latrodectus mactans) being most common. They are found throughout the continental United States but are most prevalent in southern and western states. Bites typically occur when pets disturb spiders hiding in dark, sheltered areas—sniffing around woodpiles, reaching under porches, or investigating garage corners.
 
 **Identification:**
 
