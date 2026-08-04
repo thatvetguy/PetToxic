@@ -129,7 +129,7 @@ before implementation.
       vs after cutover)
 - [ ] Cross-references resolve on-device; severity explainer reachable
 - [ ] Pro-locking: D&C entries locked for free users, unlocked for Pro
-- [ ] `diff Content/*.json ~/Desktop/PetToxicAndroid/app/src/main/assets/`
+- [ ] `diff Content/*.json ~/Developer/PetToxicAndroid/app/src/main/assets/`
       clean for toxins + diseases
 - [ ] Build + run on iOS 17.6-min simulator; Cris on-device pass (per the
       multi-AI convention: bedside/device validation is Cris's)

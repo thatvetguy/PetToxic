@@ -57,7 +57,7 @@ onsetTime, symptoms, entrySeverity, speciesRisks, preventionTips, sources, relat
 
 After editing the Swift, the JSON isn't updated until you regenerate it, and Android isn't updated until you copy it. Run this from the repo root (it compiles the content sources + the extractor, runs it, then copies both files to the Android repo).
 
-⚠ **These paths are PetToxic-specific — confirm which app you're in before running.** The command below copies to `~/Desktop/PetToxicAndroid`. If you're working on **PetToxic Equine**, do NOT run this block verbatim: it would push equine content into the small-animal Android project. Use the Equine repo's own Swift services and `~/Desktop/PetToxicEquineAndroid` instead (see §8), or confirm the correct source repo + Android target with the user first.
+⚠ **These paths are PetToxic-specific — confirm which app you're in before running.** The command below copies to `~/Developer/PetToxicAndroid`. If you're working on **PetToxic Equine**, do NOT run this block verbatim: it would push equine content into the small-animal Android project. Use the Equine repo's own Swift services and `~/Developer/PetToxicEquineAndroid` instead (see §8), or confirm the correct source repo + Android target with the user first.
 
 ```bash
 swiftc -framework SwiftUI \
@@ -70,7 +70,7 @@ swiftc -framework SwiftUI \
   -o Scripts/extract_content
 ./Scripts/extract_content
 # then copy the regenerated JSON into the Android project:
-cp Content/toxins.json Content/diseases.json ~/Desktop/PetToxicAndroid/app/src/main/assets/
+cp Content/toxins.json Content/diseases.json ~/Developer/PetToxicAndroid/app/src/main/assets/
 ```
 
 If the `swiftc` compile fails, your Swift edit has an error — fix it there; a broken content source means neither platform builds. (Check `PetToxic/Services/` for the current command if the file list drifts; `CLAUDE.md` documents it too.)
@@ -79,14 +79,14 @@ If the `swiftc` compile fails, your Swift edit has an error — fix it there; a 
 
 - **The Swift compiles** (the `swiftc` extract step above succeeds) and the extractor runs cleanly.
 - **The JSON regenerated** — `Content/toxins.json` / `diseases.json` reflect your change, and the validator passes: `python3 Scripts/validate_content.py` (schema, UUIDs, enums, cross-references, markdown-list rendering rule; warnings flag editorial/policy issues for veterinary review). A git pre-commit hook runs the same check, so a failing entry cannot be committed.
-- **Android got the copy** — after the `cp`, `diff Content/toxins.json ~/Desktop/PetToxicAndroid/app/src/main/assets/toxins.json` prints nothing (same for `diseases.json`). A drift here means the two platforms ship different clinical content.
+- **Android got the copy** — after the `cp`, `diff Content/toxins.json ~/Developer/PetToxicAndroid/app/src/main/assets/toxins.json` prints nothing (same for `diseases.json`). A drift here means the two platforms ship different clinical content.
 - **The entry passes the audit checklist** — 5 species present, VIN removed / 3+ sources, no "safe amount" language, cross-references bidirectional, nothing that reads as medical advice.
 - **If feasible, build/run the iOS app** so a runtime schema/rendering issue surfaces before commit.
 
 ## 8. Scope notes
 
 - **Diseases/conditions** are Pro-locked and live in `DiseasesConditionsService.swift`; same content boundary, same regenerate-and-sync pipeline.
-- **PetToxic Equine** (`~/Desktop/PetToxicEquine` + `~/Desktop/PetToxicEquineAndroid`) follows this same Swift-source → extract → copy *discipline*, but every concrete path in this skill is for the small-animal app and must be re-pointed: edit the Equine repo's own Swift services, and the final `cp` must target `~/Desktop/PetToxicEquineAndroid/app/src/main/assets/`, NOT `~/Desktop/PetToxicAndroid`. Confirm the Equine repo's exact service filenames + extract command (they may differ) and read that app's own rules doc for equine species scope before running anything. When in doubt, treat this as a PetToxic-only skill and adapt deliberately.
+- **PetToxic Equine** (`~/Developer/PetToxicEquine` + `~/Developer/PetToxicEquineAndroid`) follows this same Swift-source → extract → copy *discipline*, but every concrete path in this skill is for the small-animal app and must be re-pointed: edit the Equine repo's own Swift services, and the final `cp` must target `~/Developer/PetToxicEquineAndroid/app/src/main/assets/`, NOT `~/Developer/PetToxicAndroid`. Confirm the Equine repo's exact service filenames + extract command (they may differ) and read that app's own rules doc for equine species scope before running anything. When in doubt, treat this as a PetToxic-only skill and adapt deliberately.
 - Follow the repo's multi-AI workflow (see `CLAUDE.md` / the SASI `MultiAI_Workflow_Convention.md`): a content change of any size is a natural Codex-review checkpoint.
 
 ## Quick checklist

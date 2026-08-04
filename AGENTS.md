@@ -12,7 +12,7 @@ Then read, in order:
    current state, pending items, next steps. ⚠ The vault is OUTSIDE the git repo;
    read it by absolute path. git wins on any durable-state conflict.
 
-Your clone: `~/Desktop/Codex/PetToxic`. **Start every session with `git pull`** —
+Your clone: `~/Developer/Codex/PetToxic`. **Start every session with `git pull`** —
 Claude commits at review checkpoints, so your tree is stale by default. You review
 diffs there; you do NOT edit, implement, or commit unless Cris explicitly hands you
 ownership of a specific file.
@@ -36,7 +36,7 @@ ownership of a specific file.
    `Content/*.json` is GENERATED — hand-edits there get clobbered on re-extraction.
    Flag any diff that edits the JSON without a corresponding Swift change, and any
    Swift content change whose regenerated JSON wasn't copied to
-   `~/Desktop/PetToxicAndroid/app/src/main/assets/` (platform drift = different
+   `~/Developer/PetToxicAndroid/app/src/main/assets/` (platform drift = different
    clinical content shipping on iOS vs Android).
 3. **Validator green.** `python3 Scripts/validate_content.py` must pass with **0 NEW
    errors** on any content-touching diff — pre-existing errors are acceptable only
@@ -56,7 +56,7 @@ ownership of a specific file.
 ## Out of scope
 
 Clinical correctness judgments (Cris), store actions and on-device validation (Cris),
-UI aesthetics unless egregious. The Equine repos (`~/Desktop/PetToxicEquine*`) follow
+UI aesthetics unless egregious. The Equine repos (`~/Developer/PetToxicEquine*`) follow
 the same discipline but have their own paths — never assume this repo's paths apply.
 
 ## Verify

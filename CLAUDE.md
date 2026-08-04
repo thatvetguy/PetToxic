@@ -12,17 +12,12 @@ Native iOS reference app for pet owners to quickly look up toxicity information.
 This app follows the SASI **Claude implements / Codex reviews** workflow — full definition in `~/Desktop/SASI_Projects/MultiAI_Workflow_Convention.md` (roles, P1/P2/P3 findings, cadence, OUT-OF-PROCESS marker). PetToxic specifics:
 
 - **Vault handoff:** `~/Documents/Dev_Projects/PetToxic/PetToxic_Handoff.md` — read at session start, update at session end for non-trivial work. Outside the git repo; git wins on conflicts.
-- **Codex reads `AGENTS.md`** (repo root) and reviews from its clone at `~/Desktop/Codex/PetToxic`.
+- **Codex reads `AGENTS.md`** (repo root) and reviews from its clone at `~/Developer/Codex/PetToxic`.
 - **Commit + push at review checkpoints** (spec, implementation slice, refinement) so Codex can pull — this overrides the default "only commit when asked" habit for checkpoints. Keep commits scoped; ask before bundling unrelated work.
 - **Cadence dial:** full cadence (spec → Codex spec-review → implement → Codex diff-review) for content/clinical changes, paywall/billing, and store config; light cadence (implement → post-hoc review) for small low-risk changes; skip for trivial mechanical edits.
 
 ## Technical Stack
-- **Language:** Swift 5.9+
-- **UI:** SwiftUI
-- **iOS Target:** 17.6+
-- **Architecture:** MVVM
-- **Database:** SQLite with FTS5 for search
-- **Dependencies:** Minimize; prefer native frameworks
+- **Dependencies:** Minimize; prefer native frameworks.
 
 ---
 
@@ -30,13 +25,11 @@ This app follows the SASI **Claude implements / Codex reviews** workflow — ful
 
 - **SourceKit false positives:** After file edits, SourceKit diagnostics may report errors like "Cannot find type in scope" or "Ambiguous use of init." These are false positives caused by SourceKit analyzing files in isolation without full project context. **Ignore these.** Always verify with an actual `xcodebuild` build.
 - **Build command:** `xcodebuild -scheme PetToxic -destination 'platform=iOS Simulator,name=iPhone 17 Pro' build`
-- **Available simulators (iOS 26.1):** iPhone 17, iPhone 17 Pro, iPhone 17 Pro Max, iPhone Air, iPhone 16e, iPad Air/Pro/mini variants
 - **macOS awk:** macOS ships with BSD `awk`, which does NOT support `match()` with capture groups (3rd argument). Use `gsub()` to extract values instead, or use `gawk` if installed. Never use `match($0, /pattern/, arr)` in scripts — it will fail silently or error on macOS.
 - **Self-healing documentation:** When you encounter a platform-specific error, tool incompatibility, or unexpected gotcha during a session, **add a note to this CLAUDE.md file** under the appropriate section so future sessions don't repeat the same mistake. Treat this file as a living knowledge base.
-- **Source root path:** The project working directory is `/Users/cristianofontes/Desktop/PetToxic/`, but Swift source files live under the `PetToxic/` subdirectory. When running scripts from the project root, always prefix source paths with `PetToxic/` (e.g., `PetToxic/Services/GlossaryService.swift`, not `Services/GlossaryService.swift`). Session instructions may omit this prefix — verify paths before running.
+- **Source root path:** The project working directory is `/Users/cristianofontes/Developer/PetToxic/`, but Swift source files live under the `PetToxic/` subdirectory. When running scripts from the project root, always prefix source paths with `PetToxic/` (e.g., `PetToxic/Services/GlossaryService.swift`, not `Services/GlossaryService.swift`). Session instructions may omit this prefix — verify paths before running.
 - **Script output validation:** After running extraction or audit scripts, always compare the actual output count against the expected count (e.g., `grep -c` the source, then count entries in the output file). Silent partial failures — where a script produces results but misses entries — are common with multi-line awk/sed patterns. Flag any mismatch immediately.
 - **Working directory assumptions:** Session instruction documents may assume a different working directory than the actual one. Always confirm the real working directory with `pwd` or check the environment context before running any script verbatim from session instructions.
-- **Edit tool requires Read first:** The Edit tool will fail with "File must be read first" if a file hasn't been read in the current session. When doing batch edits across many files, **read all target files before starting any edits**. If editing N files in parallel, issue N Read calls first, then N Edit calls. Sibling Edit calls also fail if one in the batch errors, so read everything upfront to avoid cascading failures.
 - **SwiftData relationship inserts:** When adding a child record to a parent's relationship array (e.g., `pet.vaccinationRecords.append(newRecord)`), do NOT also call `modelContext.insert(newRecord)`. SwiftData handles the insert through the relationship — calling both causes a double-insert bug with duplicate records.
 - **Content JSON validator:** `python3 Scripts/validate_content.py` checks `Content/toxins.json` + `diseases.json` against the Session-164 schema and the content rules below (UUID format, enums, cross-reference resolution, markdown-list rendering rule, editorial policy warnings). Run `--self-test` after modifying the script. Pre-existing errors are baselined in `Scripts/known_content_errors.txt` (only NEW errors fail; remove lines as fixes land, delete when empty — planned during the JSON source-of-truth migration). Enforced three ways: a PostToolUse hook in `.claude/settings.json` (fires when Claude edits the JSON), a git pre-commit hook (source copy in `Scripts/hooks/pre-commit`, reinstall with `cp Scripts/hooks/pre-commit .git/hooks/ && chmod +x .git/hooks/pre-commit`), and GitHub Actions on every push/PR (`.github/workflows/validate-content.yml`).
 - **Glossary extraction — multi-line fields:** Fields in `GlossaryService.swift` (`definition`, `searchKeywords`, `relatedTerms`) can span multiple lines. Single-line awk/sed patterns will silently miss entries with wrapped fields. **Always** use a block-based approach: accumulate lines between `GlossaryTerm(` and the closing `),`, then parse the full block. Prefer `perl -ne` with a line-by-line accumulator over awk for glossary extraction. Never assume all fields fit on one line.
@@ -99,11 +92,6 @@ See **Core Principles for Veterinary Reference Apps** in `~/Desktop/SASI_Project
 
 ---
 
-## Project Structure
-Open the project in Xcode (or `ls PetToxic/` from the repo root). Swift sources live under `PetToxic/` with conventional MVVM folders: `App/`, `Components/`, `Models/`, `Services/`, `ViewModels/`, `Views/`, `Utilities/`, `Resources/`. Cross-platform JSON lives under `Content/`. Extraction script under `Scripts/`. Design/data docs under `Documentation/`. For "where do I edit X?" see the Common File Locations table below.
-
----
-
 ## Common File Locations
 
 | Task | File(s) |
@@ -143,26 +131,9 @@ Open the project in Xcode (or `ls PetToxic/` from the repo root). Swift sources 
 
 ## Android App
 
-The Android version lives in a **separate repo** at `~/Desktop/PetToxicAndroid/` (Kotlin + Jetpack Compose, package `com.pettoxic.android`).
+The Android version lives in a **separate repo** at `~/Developer/PetToxicAndroid/` (Kotlin + Jetpack Compose, package `com.pettoxic.android`). Content is shared via the JSON files in `Content/`, which are **generated from the Swift** — after any content edit you must re-extract and copy to Android, or the two platforms ship different clinical content.
 
-Content is shared via the JSON files in `Content/`. After editing entries in `DatabaseService.swift` or `DiseasesConditionsService.swift`, re-run the extraction script to regenerate the JSON files, then copy them to the Android project's `app/src/main/assets/`.
-
-**Extraction workflow:**
-```bash
-# From this repo's root:
-swiftc -framework SwiftUI \
-  PetToxic/Models/Enums.swift \
-  PetToxic/Models/ToxicItem.swift \
-  PetToxic/Models/SpeciesRisk.swift \
-  PetToxic/Services/DatabaseService.swift \
-  PetToxic/Services/DiseasesConditionsService.swift \
-  Scripts/extract_content.swift \
-  -o Scripts/extract_content
-./Scripts/extract_content
-
-# Then copy to Android:
-cp Content/toxins.json Content/diseases.json ~/Desktop/PetToxicAndroid/app/src/main/assets/
-```
+The exact extraction + sync commands, the verification steps, and the Equine-repo caveats live in the `add-toxin-entry` skill (`.claude/skills/add-toxin-entry/SKILL.md`, §6–§8). Invoke that skill for any content change.
 
 ---
 
