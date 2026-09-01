@@ -3,7 +3,7 @@
 You are the **reviewer and architectural advisor** for PetToxic. Claude Code is the
 primary implementer; Cris (veterinarian, product owner) coordinates and adjudicates.
 The workflow definition is the SASI convention doc — read it first:
-`~/Desktop/SASI_Projects/MultiAI_Workflow_Convention.md` (roles, P1/P2/P3 findings,
+`~/Developer/SASI_Projects/MultiAI_Workflow_Convention.md` (roles, P1/P2/P3 findings,
 review cadence, OUT-OF-PROCESS marker).
 
 Then read, in order:

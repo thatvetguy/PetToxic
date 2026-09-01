@@ -4,12 +4,12 @@
 Native iOS reference app for pet owners to quickly look up toxicity information. Works offline. Never provides medical advice.
 
 ## Reference Hubs
-- `~/Desktop/SASI_Projects/CLAUDE.md` — portfolio context, accounts, git conventions, **Core Principles for Veterinary Reference Apps** (shared across all PetToxic apps).
-- `~/Desktop/SASI_Projects/Gotchas_CrossApp.md` — cross-app store submission, tooling, content-safety landmines. Each entry has a stable ID (e.g. `GC-APPL-002`, `GC-SAFE-001`); cite by ID rather than restating. See the top of that file for the promotion rule (when a gotcha belongs here vs. in the hub).
+- `~/Developer/SASI_Projects/CLAUDE.md` — portfolio context, accounts, git conventions, **Core Principles for Veterinary Reference Apps** (shared across all PetToxic apps).
+- `~/Developer/SASI_Projects/Gotchas_CrossApp.md` — cross-app store submission, tooling, content-safety landmines. Each entry has a stable ID (e.g. `GC-APPL-002`, `GC-SAFE-001`); cite by ID rather than restating. See the top of that file for the promotion rule (when a gotcha belongs here vs. in the hub).
 
 ## Multi-AI Review Workflow
 
-This app follows the SASI **Claude implements / Codex reviews** workflow — full definition in `~/Desktop/SASI_Projects/MultiAI_Workflow_Convention.md` (roles, P1/P2/P3 findings, cadence, OUT-OF-PROCESS marker). PetToxic specifics:
+This app follows the SASI **Claude implements / Codex reviews** workflow — full definition in `~/Developer/SASI_Projects/MultiAI_Workflow_Convention.md` (roles, P1/P2/P3 findings, cadence, OUT-OF-PROCESS marker). PetToxic specifics:
 
 - **Vault handoff:** `~/Documents/Dev_Projects/PetToxic/PetToxic_Handoff.md` — read at session start, update at session end for non-trivial work. Outside the git repo; git wins on conflicts.
 - **Codex reads `AGENTS.md`** (repo root) and reviews from its clone at `~/Developer/Codex/PetToxic`.
@@ -62,7 +62,7 @@ This app follows the SASI **Claude implements / Codex reviews** workflow — ful
 ---
 
 ## Core Principles
-See **Core Principles for Veterinary Reference Apps** in `~/Desktop/SASI_Projects/CLAUDE.md` (offline-first, no medical advice, always-visible disclaimer, speed, accessibility, authoritative content).
+See **Core Principles for Veterinary Reference Apps** in `~/Developer/SASI_Projects/CLAUDE.md` (offline-first, no medical advice, always-visible disclaimer, speed, accessibility, authoritative content).
 
 **PetToxic-specific additions:**
 - Information accessible within 2-3 taps — users may be panicked.
