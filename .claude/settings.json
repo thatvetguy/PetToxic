@@ -5,7 +5,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "F=\"$HOME/Documents/Dev_Projects/PetToxic/PetToxic_Handoff.md\"; if [ -f \"$F\" ]; then head -c 8000 \"$F\" | jq -Rs '{hookSpecificOutput:{hookEventName:\"SessionStart\",additionalContext:(\"VAULT HANDOFF (~/Documents/Dev_Projects/PetToxic/PetToxic_Handoff.md — multi-AI workflow; git wins on any durable-state conflict):\\n\\n\"+.)}}'; fi",
+            "command": "bash ~/Developer/SASI_Projects/scripts/vault-handoff-hook.sh \"$HOME/Documents/Dev_Projects/PetToxic/PetToxic_Handoff.md\"",
             "timeout": 10,
             "statusMessage": "Loading vault handoff..."
           }
