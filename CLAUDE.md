@@ -14,7 +14,7 @@ This app follows the SASI **Claude implements / Codex reviews** workflow — ful
 - **Vault handoff:** `~/Documents/Dev_Projects/PetToxic/PetToxic_Handoff.md` — read at session start, update at session end for non-trivial work. Outside the git repo; git wins on conflicts.
 - **Codex reads `AGENTS.md`** (repo root) and reviews from its clone at `~/Developer/Codex/PetToxic`.
 - **Commit + push at review checkpoints** (spec, implementation slice, refinement) so Codex can pull — this overrides the default "only commit when asked" habit for checkpoints. Keep commits scoped; ask before bundling unrelated work.
-- **Cadence dial:** full cadence (spec → Codex spec-review → implement → Codex diff-review) for content/clinical changes, paywall/billing, and store config; light cadence (implement → post-hoc review) for small low-risk changes; skip for trivial mechanical edits.
+- **Cadence dial (this app):** full cadence for content/clinical changes, paywall/billing, and store config; light cadence for small low-risk changes; skip for trivial mechanical edits. Definitions: the convention → "Scale the workflow to the risk".
 
 ## Technical Stack
 - **Dependencies:** Minimize; prefer native frameworks.
